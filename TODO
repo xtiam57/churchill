@@ -1,0 +1,25 @@
+
+Sección Biblia
+--------------
+* Barra de búsqueda de versículo (libro, capítulo, versículo)
+* Búsqueda de palabras
+* Al usar <= y => del teclado debe ir al versiculo anterior/siguiente
+* Adaptarse  la pantalla
+* Mostra cita
+* Configuración: color de texto, margenes, posición de la cita, color de la cita, color de fondo
+* Palabra de Jesús en rojo
+
+Sección Himnos
+--------------
+* Barra de búsqueda de himno
+* Busqueda de palabras
+* Al usar <= y => del teclado debe ir a la estrofa anterior/siguiente
+* Pausar/reporducir audio
+* Configuracion de audio: volumen, velocidad, deshabilitar
+* Configuración: color de texto, margenes, color de fondo, color de coro
+
+Resto
+-----
+* Pantalla negra/blanca
+* Pantalla de logo
+* Avisos
