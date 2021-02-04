@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Typeahead } from 'react-bootstrap-typeahead';
+import { Button, ButtonGroup } from 'react-bootstrap';
+
+import { ImArrowLeft2, ImArrowRight2 } from 'react-icons/im';
+import { MdCast, MdCastConnected } from 'react-icons/md';
 
 import { Wrapper } from 'components/wrapper';
-import { Preview } from 'components/preview';
+import { Presenter } from 'components/presenter';
 import { Controls } from 'components/controls';
 import { Sidebar } from 'components/sidebar';
 import {
@@ -12,15 +16,20 @@ import {
   useMoveVerse,
   useBroadcastChannel,
 } from 'hooks';
+import { CAST_VIEW_PATH } from 'values';
 
 function ScripturesView() {
   const verses = useScriptures();
   const { verse, setVerse } = useVerse();
   const { verseSelection, setVerseSelection } = useVerseSelection();
   const { nextChapter, prevChapter, nextVerse, prevVerse } = useMoveVerse();
-  const [cast, setCast] = useBroadcastChannel('cast', verse);
+  const [cast, setCast] = useBroadcastChannel(verse);
 
   const [win, setWin] = useState(null);
+
+  // useEffect(() => {
+  //   setCast(verse);
+  // }, []);
 
   const onTypeaheadChange = (event) => {
     setVerseSelection(event);
@@ -30,25 +39,25 @@ function ScripturesView() {
     }
   };
 
-  const onLeft = () => {
+  const onPrevVerse = () => {
     const verse = prevVerse();
     setVerseSelection([verse]);
     setCast(verse);
   };
 
-  const onRight = () => {
+  const onNextVerse = () => {
     const verse = nextVerse();
     setVerseSelection([verse]);
     setCast(verse);
   };
 
-  const onUp = () => {
+  const onNextChapter = () => {
     const verse = nextChapter();
     setVerseSelection([verse]);
     setCast(verse);
   };
 
-  const onDown = () => {
+  const onPrevChapter = () => {
     const verse = prevChapter();
     setVerseSelection([verse]);
     setCast(verse);
@@ -56,6 +65,8 @@ function ScripturesView() {
 
   const open = () => {
     if (win) {
+      win.close();
+      setWin(null);
       return;
     }
 
@@ -81,7 +92,7 @@ function ScripturesView() {
           parent,
         });
 
-        win.loadURL(url.replace(/#.*$/, '#/proyeccion'));
+        win.loadURL(url.replace(/#.*$/, `#${CAST_VIEW_PATH}`));
         win.once('ready-to-show', () => win.show());
 
         setWin(win);
@@ -114,19 +125,35 @@ function ScripturesView() {
           emptyLabel="No existe esa opcion."
           selected={verseSelection}
         />
-
-        <button onClick={open}>Abrir</button>
-        <button onClick={close}>Cerrar</button>
       </Sidebar>
 
-      <Preview text={verse.text} cite={verse.cite}>
+      <Wrapper direction="column">
+        <Presenter cite={verse.cite} live={win}>
+          {verse.text}
+        </Presenter>
+
         <Controls
-          onLeft={onLeft}
-          onRight={onRight}
-          onUp={onUp}
-          onDown={onDown}
-        />
-      </Preview>
+          onKeyLeft={onPrevVerse}
+          onKeyRight={onNextVerse}
+          onKeyUp={onNextChapter}
+          onKeyDown={onPrevChapter}
+          onKeyEscape={close}
+        >
+          <ButtonGroup className="mr-2">
+            <Button onClick={onPrevVerse} variant="secondary" className="">
+              <ImArrowLeft2 />
+            </Button>
+
+            <Button onClick={onNextVerse} variant="secondary" className="">
+              <ImArrowRight2 />
+            </Button>
+          </ButtonGroup>
+
+          <Button onClick={open} variant={win ? 'warning' : 'secondary'}>
+            {win ? <MdCastConnected /> : <MdCast />}
+          </Button>
+        </Controls>
+      </Wrapper>
     </Wrapper>
   );
 }

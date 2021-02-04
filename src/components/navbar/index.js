@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { ToggleButton, ButtonGroup } from 'react-bootstrap';
 import { BsMusicNoteList, BsBook } from 'react-icons/bs';
+import { ANTHEMNS_VIEW_PATH, BIBLE_VIEW_PATH, CAST_VIEW_PATH } from 'values';
 
 export function Navbar() {
-  const [radioValue, setRadioValue] = useState(1);
   const location = useLocation();
+  const [radioValue, setRadioValue] = useState(1);
 
-  if (location.pathname === '/proyeccion') {
+  if (location.pathname === CAST_VIEW_PATH) {
     return null;
   }
 
@@ -22,7 +23,7 @@ export function Navbar() {
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
               <NavLink
-                to="/biblia"
+                to={BIBLE_VIEW_PATH}
                 className="nav-link"
                 activeClassName="active"
               >
@@ -31,7 +32,7 @@ export function Navbar() {
             </li>
             <li className="nav-item">
               <NavLink
-                to="/himnos"
+                to={ANTHEMNS_VIEW_PATH}
                 className="nav-link"
                 activeClassName="active"
               >
@@ -40,7 +41,7 @@ export function Navbar() {
             </li>
           </ul>
 
-          <ButtonGroup toggle>
+          {/* <ButtonGroup toggle>
             <ToggleButton
               type="radio"
               name="radio"
@@ -61,7 +62,7 @@ export function Navbar() {
             >
               Proyectar
             </ToggleButton>
-          </ButtonGroup>
+          </ButtonGroup> */}
         </div>
       </nav>
     </>

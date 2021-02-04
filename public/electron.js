@@ -16,6 +16,7 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 1024,
     height: 768,
+    show: false,
     webPreferences: {
       nodeIntegration: true,
       enableRemoteModule: true,
@@ -38,7 +39,10 @@ function createWindow() {
   mainWindow.webContents.openDevTools();
 
   // Hide menu
-  mainWindow.removeMenu();
+  // mainWindow.removeMenu();
+
+  // Show window when everything is loaded
+  mainWindow.once('ready-to-show', () => mainWindow.show());
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {

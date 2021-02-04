@@ -1,26 +1,26 @@
 import { useEffect, useState } from 'react';
 
-export const useBroadcastChannel = (channelName, defaultValue) => {
+export const useBroadcastChannel = (defaultValue = {}) => {
   // Initialize state
   const [value, setValue] = useState(defaultValue);
-  const [channel, setChannel] = useState(new BroadcastChannel(channelName));
+  const [channel, setChannel] = useState(new BroadcastChannel('cast'));
 
   // Channel setup
   useEffect(() => {
     let curChannel = channel;
 
-    // A different channel was requested at runtime
-    if (curChannel.name !== channelName) {
-      curChannel = new BroadcastChannel(channelName);
-      setChannel(curChannel);
-    }
+    // // A different channel was requested at runtime
+    // if (curChannel.name !== channelName) {
+    //   curChannel = new BroadcastChannel(channelName);
+    //   setChannel(curChannel);
+    // }
 
     // Request current state from peers
     curChannel.postMessage({ type: 'NEW_CONNECTION' });
 
     // Cleanup function for unmount
     // return () => curChannel.close();
-  }, [channel, channelName]);
+  }, [channel]);
 
   // Handle new messages
   useEffect(() => {

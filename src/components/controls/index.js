@@ -1,28 +1,24 @@
 import React, { useEffect, useCallback } from 'react';
-import { Button, ButtonGroup } from 'react-bootstrap';
-import {
-  BsArrowBarLeft,
-  BsArrowBarRight,
-  BsBoxArrowInLeft,
-  BsBoxArrowInRight,
-} from 'react-icons/bs';
-
-import { BiLeftArrow, BiRightArrow } from 'react-icons/bi';
 
 import { isFunction } from 'utils/isFunction';
-
-const LEFT_ARROW = 37;
-const UP_ARROW = 38;
-const RIGHT_ARROW = 39;
-const DOWN_ARROW = 40;
+import {
+  DOWN_ARROW_KEY,
+  LEFT_ARROW_KEY,
+  RIGHT_ARROW_KEY,
+  UP_ARROW_KEY,
+  SPACE_BAR_KEY,
+  ESCAPE_KEY,
+} from 'values';
 
 export function Controls({
   children,
-  onUp,
-  onDown,
-  onLeft,
-  onRight,
-  ...props
+  onKeyUp,
+  onKeyDown,
+  onKeyLeft,
+  onKeyRight,
+  onKeySpace,
+  onKeyEscape,
+  ...rest
 }) {
   const handleKeyDown = useCallback(
     (event) => {
@@ -34,23 +30,31 @@ export function Controls({
         return;
       }
 
-      if (key === DOWN_ARROW && isFunction(onDown)) {
-        onDown();
+      if (key === ESCAPE_KEY && isFunction(onKeyEscape)) {
+        onKeyEscape();
       }
 
-      if (key === UP_ARROW && isFunction(onUp)) {
-        onUp();
+      if (key === SPACE_BAR_KEY && isFunction(onKeySpace)) {
+        onKeySpace();
       }
 
-      if (key === RIGHT_ARROW && isFunction(onRight)) {
-        onRight();
+      if (key === DOWN_ARROW_KEY && isFunction(onKeyDown)) {
+        onKeyDown();
       }
 
-      if (key === LEFT_ARROW && isFunction(onLeft)) {
-        onLeft();
+      if (key === UP_ARROW_KEY && isFunction(onKeyUp)) {
+        onKeyUp();
+      }
+
+      if (key === RIGHT_ARROW_KEY && isFunction(onKeyRight)) {
+        onKeyRight();
+      }
+
+      if (key === LEFT_ARROW_KEY && isFunction(onKeyLeft)) {
+        onKeyLeft();
       }
     },
-    [onUp, onDown, onLeft, onRight]
+    [onKeyUp, onKeyDown, onKeyLeft, onKeyRight, onKeySpace, onKeyEscape]
   );
 
   useEffect(() => {
@@ -62,43 +66,9 @@ export function Controls({
 
   return (
     <>
-      <ButtonGroup size="lg">
-        {isFunction(onDown) ? (
-          <Button onClick={onDown} variant="secondary" className="">
-            <BsBoxArrowInLeft />
-          </Button>
-        ) : null}
-
-        {isFunction(onDown) ? (
-          <Button onClick={onDown} variant="secondary" className="">
-            <BsArrowBarLeft />
-          </Button>
-        ) : null}
-
-        {isFunction(onLeft) ? (
-          <Button onClick={onLeft} variant="secondary" className="">
-            <BiLeftArrow />
-          </Button>
-        ) : null}
-
-        {isFunction(onRight) ? (
-          <Button onClick={onRight} variant="secondary" className="">
-            <BiRightArrow />
-          </Button>
-        ) : null}
-
-        {isFunction(onUp) ? (
-          <Button onClick={onUp} variant="secondary" className="">
-            <BsArrowBarRight />
-          </Button>
-        ) : null}
-
-        {isFunction(onUp) ? (
-          <Button onClick={onUp} variant="secondary" className="">
-            <BsBoxArrowInRight />
-          </Button>
-        ) : null}
-      </ButtonGroup>
+      <nav className="navbar navbar-dark bg-secondary" {...rest}>
+        <div className="container-fluid justify-content-space">{children}</div>
+      </nav>
     </>
   );
 }
