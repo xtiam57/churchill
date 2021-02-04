@@ -1,3 +1,1 @@
-import { Sidebar } from './style';
-
-export { Sidebar };
+export { SidebarStyled as Sidebar } from './style';

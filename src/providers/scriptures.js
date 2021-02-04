@@ -14,45 +14,52 @@ function ScripturesProvider({ children }) {
       };
     });
 
-    return data.reduce((result, book) => {
-      const chapters = book.content.map((chapter, chapterIndex) => {
-        const verses = chapter.map((verse, verseIndex) => {
+    return data.reduce((verses, book) => {
+      const chaptersExpanded = book.content.map((chapter, chapterIndex) => {
+        return chapter.map((verse, verseIndex) => {
           return {
+            // Verse data
             index: index++,
             cite: `${book.shortTitle} ${chapterIndex + 1}:${verseIndex + 1}`,
             text: verse.replaceAll('/n', '<br/>'),
-
+            // Metadata
             bookNumber: book.number,
             chapterNumber: chapterIndex + 1,
             verseNumber: verseIndex + 1,
             chaptersCount: book.chapters,
             versesCount: book.verses,
-
+            // Next and prev data
             nextBookNumber: Math.min(book.number + 1, 66),
             prevBookNumber: Math.max(book.number - 1, 1),
             nextChapterNumber: chapterIndex + 2,
             prevChapterNumber: chapterIndex,
           };
         });
-
-        return verses;
       });
 
-      chapters.forEach((chapter) => {
-        result.push(...chapter);
+      chaptersExpanded.forEach((chapterExpanded) => {
+        verses.push(...chapterExpanded);
       });
 
-      return result;
+      return verses;
     }, []);
   });
 
   const totalVerses = scriptures.length;
   const [first] = scriptures;
   const [verse, setVerse] = useState(first);
+  const [verseSelection, setVerseSelection] = useState([first]);
 
   return (
     <ScripturesContext.Provider
-      value={{ scriptures, verse, setVerse, totalVerses }}
+      value={{
+        scriptures,
+        verse,
+        setVerse,
+        verseSelection,
+        setVerseSelection,
+        totalVerses,
+      }}
     >
       {children}
     </ScripturesContext.Provider>

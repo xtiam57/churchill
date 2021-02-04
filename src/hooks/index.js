@@ -1,6 +1,6 @@
-import { useScriptures } from './useScriptures';
-import { useVerse } from './useVerse';
-import { useMoveVerse } from './useMoveVerse';
-import { useVerseSelection } from './useVerseSelection';
-
-export { useScriptures, useVerse, useMoveVerse, useVerseSelection };
+export { useScriptures } from './useScriptures';
+export { useVerse } from './useVerse';
+export { useMoveVerse } from './useMoveVerse';
+export { useVerseSelection } from './useVerseSelection';
+export { useView } from './useView';
+export { useBroadcastChannel } from './useBroadcastChannel';

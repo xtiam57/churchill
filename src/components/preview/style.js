@@ -5,15 +5,14 @@ const PreviewStyled = {};
 PreviewStyled.Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
   flex: 1 0;
+  height: ${({ neat }) => (neat ? '100vh' : 'calc(100vh - 56px)')};
 `;
 
 PreviewStyled.Main = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #fff;
   color: black;
   overflow: hidden;
   height: 100%;
@@ -22,9 +21,10 @@ PreviewStyled.Main = styled.section`
   padding-right: 5em;
   padding-bottom: 0;
   padding-left: 5em;
+  text-align: center;
 
   div {
-    color: var(--primary);
+    color: var(--danger);
     font-size: calc(1.2em + 1vh);
   }
 
@@ -36,13 +36,15 @@ PreviewStyled.Main = styled.section`
 `;
 
 PreviewStyled.Navigation = styled.div`
-  background-color: var(--primary);
+  background-color: var(--secondary);
   width: 100%;
-  min-height: 65px;
+  min-height: 70px;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
 `;
 
 export { PreviewStyled };

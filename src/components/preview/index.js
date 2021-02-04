@@ -1,22 +1,17 @@
 import React from 'react';
-import Controls from 'components/scripturesControls';
 import { PreviewStyled } from './style';
-import { FaChevronCircleLeft, FaChevronCircleRight } from 'react-icons/fa';
 
-export function Preview({ children, cite, type = 'scriptures', ...props }) {
+export function Preview({ children, text, cite, neat = false, ...props }) {
   return (
-    <PreviewStyled.Wrapper>
+    <PreviewStyled.Wrapper neat={neat}>
       <PreviewStyled.Main {...props}>
-        <p dangerouslySetInnerHTML={{ __html: children }} />
+        <p dangerouslySetInnerHTML={{ __html: text }} />
         {cite ? <div>{cite}</div> : null}
       </PreviewStyled.Main>
 
-      <PreviewStyled.Navigation>
-        <FaChevronCircleLeft />
-        <FaChevronCircleRight />
-
-        <Controls />
-      </PreviewStyled.Navigation>
+      {neat ? null : (
+        <PreviewStyled.Navigation>{children}</PreviewStyled.Navigation>
+      )}
     </PreviewStyled.Wrapper>
   );
 }

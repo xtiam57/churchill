@@ -1,9 +1,7 @@
 import { useContext } from 'react';
-import { VerseSelectionContext } from 'providers/verseSelection';
+import { ScripturesContext } from 'providers/scriptures';
 
 export function useVerseSelection() {
-  const { verseSelection, setVerseSelection } = useContext(
-    VerseSelectionContext
-  );
+  const { verseSelection, setVerseSelection } = useContext(ScripturesContext);
   return { verseSelection, setVerseSelection };
 }

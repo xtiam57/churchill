@@ -1,8 +1,17 @@
 {
   "name": "churchchill",
   "version": "0.1.0",
+  "description": "Churchill description...",
+  "author": "xtiam57",
   "private": true,
-  "main": "electron-starter.js",
+  "main": "./public/electron.js",
+  "build": {
+    "appId": "churchill.app",
+    "win": {
+      "icon": "build/icon.png"
+    }
+  },
+  "homepage": "./",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -26,7 +35,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron-dev": "set ELECTRON_START_URL=http://localhost:3000 && electron ."
+    "electron-build": "rimraf dist && yarn build && electron-builder",
+    "electron-dev": "concurrently \"set BROWSER=none && yarn run start\" \"wait-on http://localhost:3000 && set ELECTRON_START_URL=http://localhost:3000 && electron .\""
   },
   "eslintConfig": {
     "extends": [
@@ -47,6 +57,9 @@
     ]
   },
   "devDependencies": {
-    "electron": "^11.1.1"
+    "concurrently": "^5.3.0",
+    "electron": "^11.2.2",
+    "electron-builder": "^22.9.1",
+    "wait-on": "^5.2.1"
   }
 }
