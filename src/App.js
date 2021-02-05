@@ -1,20 +1,22 @@
 import React from 'react';
-import { HashRouter as Router, Switch, Route } from 'react-router-dom';
-
-import HomeView from 'views/home';
-import ScripturesView from 'views/scriptures';
-import AnthemnsView from 'views/anthemns';
-import CastView from 'views/cast';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { PresenterProvider } from 'providers/presenter';
 import { ScripturesProvider } from 'providers/scriptures';
+import { AnthemnsProvider } from 'providers';
 
 import { Navbar } from 'components/navbar';
+
+import AnthemnsView from 'views/anthemns';
+import CastView from 'views/cast';
+import HomeView from 'views/home';
+import ScripturesView from 'views/scriptures';
+
+import { ANTHEMNS_VIEW_PATH, BIBLE_VIEW_PATH, CAST_VIEW_PATH } from 'values';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'react-bootstrap-typeahead/css/Typeahead.css';
 import './index.css';
-import { ANTHEMNS_VIEW_PATH, BIBLE_VIEW_PATH, CAST_VIEW_PATH } from 'values';
 
 function App() {
   return (
@@ -30,7 +32,9 @@ function App() {
           </Route>
 
           <Route path={ANTHEMNS_VIEW_PATH}>
-            <AnthemnsView />
+            <AnthemnsProvider>
+              <AnthemnsView />
+            </AnthemnsProvider>
           </Route>
 
           <Route path={CAST_VIEW_PATH}>

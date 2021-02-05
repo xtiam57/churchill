@@ -28,8 +28,6 @@ export function Controls({
       const inputs = document.querySelectorAll('input');
       const isFocused = [...inputs].some((el) => el === document.activeElement);
 
-      console.log(key);
-
       if (isFocused) {
         return;
       }

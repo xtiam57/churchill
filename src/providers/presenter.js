@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { CAST_VIEW_PATH } from 'values';
 import { useChannel } from 'hooks';
 
@@ -6,6 +6,7 @@ const PresenterContext = React.createContext({});
 
 const PresenterProvider = ({ children }) => {
   const [presenter, setPresenter] = useState(null);
+  const [presenting, setPresenting] = useState(false);
   const [lastBroadcast, setLastBroadcast] = useState(null);
   const channel = useChannel();
 
@@ -24,8 +25,8 @@ const PresenterProvider = ({ children }) => {
     let url = parent.webContents.getURL();
 
     if (presenter) {
-      presenter.close();
-      setPresenter(null);
+      presenter.isVisible() ? presenter.hide() : presenter.show();
+      setPresenting(presenter.isVisible());
       return;
     }
 
@@ -51,7 +52,8 @@ const PresenterProvider = ({ children }) => {
         win.loadURL(url.replace(/#.*$/, `#${CAST_VIEW_PATH}`));
         win.once('ready-to-show', () => {
           win.show();
-          setTimeout(() => channel.postMessage(lastBroadcast), 500);
+          setPresenting(true);
+          setTimeout(() => channel.postMessage(lastBroadcast), 1000);
         });
 
         setPresenter(win);
@@ -62,6 +64,7 @@ const PresenterProvider = ({ children }) => {
   const close = useCallback(() => {
     if (presenter) {
       presenter.close();
+      setPresenting(false);
       setPresenter(null);
     }
   }, [presenter]);
@@ -72,6 +75,7 @@ const PresenterProvider = ({ children }) => {
         toggle,
         close,
         presenter,
+        presenting,
         setLastBroadcast,
       }}
     >

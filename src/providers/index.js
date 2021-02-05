@@ -1,2 +1,3 @@
 export { ScripturesProvider, ScripturesContext } from './scriptures';
-export { ViewProvider, ViewContext } from './view';
+export { PresenterProvider, PresenterContext } from './presenter';
+export { AnthemnsProvider, AnthemnsContext } from './anthemns';

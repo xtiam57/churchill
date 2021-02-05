@@ -6,18 +6,22 @@ import { Logo } from 'components/logo';
 
 export default function Cast() {
   const channel = useChannel();
-  const [cast, setCast] = useState(null);
+  const [message, setMessage] = useState(null);
 
   useEffect(() => {
-    channel.onmessage = (message) => setCast(message.data);
+    channel.onmessage = (message) => setMessage(message.data);
     return () => channel.close();
   }, [channel]);
 
-  console.log(cast);
+  console.log(message);
 
   return (
     <Wrapper bare centered>
-      {cast ? <Presenter cite={cast.cite}>{cast.text}</Presenter> : <Logo />}
+      {message ? (
+        <Presenter cite={message.cite}>{message.text}</Presenter>
+      ) : (
+        <Logo width="65%" height="65%" />
+      )}
     </Wrapper>
   );
 }

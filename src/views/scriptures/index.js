@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Typeahead } from 'react-bootstrap-typeahead';
-import { Button, ButtonGroup, Alert } from 'react-bootstrap';
+import { Button, ButtonGroup, Alert, Form } from 'react-bootstrap';
 
 import { ImArrowLeft2, ImArrowRight2 } from 'react-icons/im';
-import { MdCast, MdCastConnected } from 'react-icons/md';
 
 import { Wrapper } from 'components/wrapper';
 import { Presenter } from 'components/presenter';
@@ -18,14 +17,16 @@ import {
 } from 'hooks';
 
 function ScripturesView() {
-  const ref = useRef();
-  const [showingLogo, setShowingLogo] = useState(true);
   const verses = useScriptures();
   const { verse, setVerse } = useVerse();
-  const [verseSelection, setVerseSelection] = useState([verse]);
-  const { nextChapter, prevChapter, nextVerse, prevVerse } = useMoveVerse();
+  const { moveChapter, moveVerse } = useMoveVerse();
   const { setLastBroadcast } = usePresenter();
+
+  const [showLogo, setShowLogo] = useState(true);
+  const [verseSelection, setVerseSelection] = useState([verse]);
+  const [backgroundColor, setBackgroundColor] = useState('#ffffff');
   const channel = useChannel();
+  const ref = useRef();
 
   useEffect(() => {
     return () => {
@@ -36,9 +37,11 @@ function ScripturesView() {
   }, [channel, setLastBroadcast]);
 
   useEffect(() => {
-    channel.postMessage(showingLogo ? null : verse);
-    setLastBroadcast(showingLogo ? null : verse);
-  }, [verse, channel, setLastBroadcast, showingLogo]);
+    const value = showLogo ? null : verse;
+
+    setLastBroadcast(value);
+    channel.postMessage(value);
+  }, [verse, channel, setLastBroadcast, showLogo]);
 
   function onTypeaheadChange(event) {
     setVerseSelection(event);
@@ -50,22 +53,22 @@ function ScripturesView() {
   }
 
   const onPrevVerse = () => {
-    const verse = prevVerse();
+    const verse = moveVerse(-1);
     setVerseSelection([verse]);
   };
 
   const onNextVerse = () => {
-    const verse = nextVerse();
-    setVerseSelection([verse]);
-  };
-
-  const onNextChapter = () => {
-    const verse = nextChapter();
+    const verse = moveVerse(1);
     setVerseSelection([verse]);
   };
 
   const onPrevChapter = () => {
-    const verse = prevChapter();
+    const verse = moveChapter(-1);
+    setVerseSelection([verse]);
+  };
+
+  const onNextChapter = () => {
+    const verse = moveChapter(1);
     setVerseSelection([verse]);
   };
 
@@ -74,34 +77,44 @@ function ScripturesView() {
   };
 
   const toggleLogo = () => {
-    setShowingLogo((value) => !value);
+    setShowLogo((value) => !value);
   };
 
   return (
     <Wrapper>
       <Sidebar>
         <Typeahead
+          emptyLabel="No existe esa opcion."
+          highlightOnlyResult={true}
           id="combo"
+          labelKey="cite"
+          minLength={0}
+          onChange={onTypeaheadChange}
+          onFocus={(e) => e.target.select()}
           options={verses}
           paginate={false}
-          labelKey="cite"
-          onFocus={(e) => e.target.select()}
-          placeholder="Selecciona un versículo..."
-          size="large"
-          minLength={0}
-          highlightOnlyResult={true}
-          onChange={onTypeaheadChange}
           paginationText="Ver más opciones..."
-          emptyLabel="No existe esa opcion."
-          selected={verseSelection}
+          placeholder="Selecciona un versículo..."
           ref={ref}
+          selected={verseSelection}
+          size="large"
         />
+
+        {/* <div className="mt-4">
+          <Form.Control
+            type="color"
+            placeholder="Enter email"
+            value={backgroundColor}
+            onChange={(e) => setBackgroundColor(e.target.value)}
+          />
+          {backgroundColor}
+        </div> */}
       </Sidebar>
 
       <Wrapper direction="column">
-        <Alert className="m-0" variant={showingLogo ? 'secondary ' : 'warning'}>
+        <Alert className="m-0" variant={showLogo ? 'secondary ' : 'warning'}>
           <div className="d-flex align-items-center justify-content-between">
-            {showingLogo ? (
+            {showLogo ? (
               <span>
                 Actualmente <strong>NO</strong> se está mostrando el versículo
                 al público.
@@ -114,15 +127,15 @@ function ScripturesView() {
             )}
             <Button
               size="sm"
-              variant={showingLogo ? 'secondary' : 'warning'}
+              variant={showLogo ? 'secondary' : 'warning'}
               onClick={toggleLogo}
             >
-              {showingLogo ? 'Mostrar' : 'Mostrar Logo'}
+              {showLogo ? 'Mostrar' : 'No Mostrar'}
             </Button>
           </div>
         </Alert>
 
-        <Presenter live={!showingLogo} cite={verse.cite}>
+        <Presenter live={!showLogo} cite={verse.cite} bg={backgroundColor}>
           {verse.text}
         </Presenter>
 
@@ -133,12 +146,12 @@ function ScripturesView() {
           onKeyDown={onPrevChapter}
           onKeyF1={onFocusTypeahead}
         >
-          <ButtonGroup className="mr-2">
-            <Button onClick={onPrevVerse} variant="secondary" className="">
+          <ButtonGroup>
+            <Button onClick={onPrevVerse} variant="secondary">
               <ImArrowLeft2 />
             </Button>
 
-            <Button onClick={onNextVerse} variant="secondary" className="">
+            <Button onClick={onNextVerse} variant="secondary">
               <ImArrowRight2 />
             </Button>
           </ButtonGroup>

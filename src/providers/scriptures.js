@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import json from 'assets/data/bible/_index';
 
 const ScripturesContext = React.createContext({});
 
 function ScripturesProvider({ children }) {
-  const [scriptures] = useState(() => {
+  const scriptures = useMemo(() => {
     let index = 0;
 
     const data = json.map((entry) => {
@@ -43,9 +43,9 @@ function ScripturesProvider({ children }) {
 
       return verses;
     }, []);
-  });
+  }, []);
 
-  const totalVerses = scriptures.length;
+  const total = scriptures.length;
   const [first] = scriptures;
   const [verse, setVerse] = useState(first);
 
@@ -55,7 +55,7 @@ function ScripturesProvider({ children }) {
         scriptures,
         verse,
         setVerse,
-        totalVerses,
+        total,
       }}
     >
       {children}

@@ -2,9 +2,7 @@ import { useContext } from 'react';
 import { ScripturesContext } from 'providers/scriptures';
 
 export function useMoveVerse() {
-  const { scriptures, verse, setVerse, totalVerses } = useContext(
-    ScripturesContext
-  );
+  const { scriptures, verse, setVerse, total } = useContext(ScripturesContext);
 
   const {
     index,
@@ -16,7 +14,7 @@ export function useMoveVerse() {
     prevChapterNumber,
   } = verse;
 
-  const nextBook = () => {
+  const moveToNextBook = () => {
     const verseToGo = scriptures.find((v) => v.bookNumber === nextBookNumber);
 
     setVerse(verseToGo);
@@ -24,7 +22,7 @@ export function useMoveVerse() {
     return verseToGo;
   };
 
-  const prevBook = () => {
+  const moveToPrevBook = () => {
     const verseToGo = scriptures.find((v) => v.bookNumber === prevBookNumber);
 
     setVerse(verseToGo);
@@ -32,7 +30,7 @@ export function useMoveVerse() {
     return verseToGo;
   };
 
-  const nextChapter = () => {
+  const moveToNextChapter = () => {
     let verseToGo;
 
     // Paso a otro libro
@@ -56,7 +54,7 @@ export function useMoveVerse() {
     return verseToGo;
   };
 
-  const prevChapter = () => {
+  const moveToPrevChapter = () => {
     let verseToGo;
 
     // Paso a otro libro
@@ -82,8 +80,8 @@ export function useMoveVerse() {
     return verseToGo;
   };
 
-  const nextVerse = () => {
-    const i = Math.min(index + 1, totalVerses - 1);
+  const moveToNextVerse = () => {
+    const i = Math.min(index + 1, total - 1);
     const verseToGo = scriptures[i];
 
     setVerse(verseToGo);
@@ -91,7 +89,7 @@ export function useMoveVerse() {
     return verseToGo;
   };
 
-  const prevVerse = () => {
+  const moveToPrevVerse = () => {
     const i = Math.max(index - 1, 0);
     const verseToGo = scriptures[i];
 
@@ -100,5 +98,27 @@ export function useMoveVerse() {
     return verseToGo;
   };
 
-  return { nextBook, nextChapter, nextVerse, prevBook, prevChapter, prevVerse };
+  const moveBook = (inc = 1) => {
+    return inc > 0 ? moveToNextBook() : moveToPrevBook();
+  };
+
+  const moveChapter = (inc = 1) => {
+    return inc > 0 ? moveToNextChapter() : moveToPrevChapter();
+  };
+
+  const moveVerse = (inc = 1) => {
+    return inc > 0 ? moveToNextVerse() : moveToPrevVerse();
+  };
+
+  return {
+    moveToNextBook,
+    moveToNextChapter,
+    moveToNextVerse,
+    moveToPrevBook,
+    moveToPrevChapter,
+    moveToPrevVerse,
+    moveBook,
+    moveChapter,
+    moveVerse,
+  };
 }

@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
-import { ToggleButton, ButtonGroup, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { BsMusicNoteList, BsBook } from 'react-icons/bs';
-import { MdCast, MdCastConnected } from 'react-icons/md';
+import { RiSlideshow2Fill, RiStopFill } from 'react-icons/ri';
 import { ANTHEMNS_VIEW_PATH, BIBLE_VIEW_PATH, CAST_VIEW_PATH } from 'values';
 import { usePresenter } from 'hooks';
 
 export function Navbar() {
   const location = useLocation();
-  const { toggle, presenter } = usePresenter();
-
-  const [radioValue, setRadioValue] = useState(1);
+  const { toggle, presenting } = usePresenter();
 
   if (location.pathname === CAST_VIEW_PATH) {
     return null;
@@ -31,7 +29,7 @@ export function Navbar() {
                 className="nav-link"
                 activeClassName="active"
               >
-                <BsBook />
+                <BsBook /> Escrituras
               </NavLink>
             </li>
             <li className="nav-item">
@@ -40,40 +38,17 @@ export function Navbar() {
                 className="nav-link"
                 activeClassName="active"
               >
-                <BsMusicNoteList />
+                <BsMusicNoteList /> Himnos
               </NavLink>
             </li>
           </ul>
 
           <Button
             onClick={toggle}
-            variant={presenter ? 'warning' : 'outline-light'}
+            variant={presenting ? 'warning' : 'outline-light'}
           >
-            {presenter ? <MdCastConnected /> : <MdCast />}
+            {presenting ? <RiStopFill /> : <RiSlideshow2Fill />}
           </Button>
-
-          {/* <ButtonGroup toggle>
-            <ToggleButton
-              type="radio"
-              name="radio"
-              variant="outline-light"
-              value={1}
-              checked={radioValue === 1}
-              onChange={(e) => setRadioValue(+e.currentTarget.value)}
-            >
-              Logo
-            </ToggleButton>
-            <ToggleButton
-              type="radio"
-              name="radio"
-              variant="outline-light"
-              value={2}
-              checked={radioValue === 2}
-              onChange={(e) => setRadioValue(+e.currentTarget.value)}
-            >
-              Proyectar
-            </ToggleButton>
-          </ButtonGroup> */}
         </div>
       </nav>
     </>

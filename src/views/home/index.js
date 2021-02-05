@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
-import { usePresenter } from 'hooks';
+import React from 'react';
 
-export default function Home({ children, ...rest }) {
+export default function Home({ children }) {
   return <>Home!</>;
 }
