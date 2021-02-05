@@ -48,7 +48,6 @@ function ScripturesProvider({ children }) {
   const totalVerses = scriptures.length;
   const [first] = scriptures;
   const [verse, setVerse] = useState(first);
-  const [verseSelection, setVerseSelection] = useState([first]);
 
   return (
     <ScripturesContext.Provider
@@ -56,8 +55,6 @@ function ScripturesProvider({ children }) {
         scriptures,
         verse,
         setVerse,
-        verseSelection,
-        setVerseSelection,
         totalVerses,
       }}
     >

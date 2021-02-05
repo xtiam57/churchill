@@ -5,4 +5,6 @@ export const WrapperStyled = styled.main`
   flex-direction: ${({ direction }) => direction || 'row'};
   height: ${({ bare }) => (bare ? '100vh' : 'calc(100vh - 56px)')};
   width: 100%;
+  ${({ centered }) =>
+    centered ? 'justify-content: center; align-items: center;' : null}
 `;

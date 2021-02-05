@@ -9,3 +9,6 @@ export const RIGHT_ARROW_KEY = 39;
 export const DOWN_ARROW_KEY = 40;
 export const SPACE_BAR_KEY = 32;
 export const ESCAPE_KEY = 27;
+export const F1_KEY = 112;
+
+export const CHANNEL_NAME = 'broadcasting';

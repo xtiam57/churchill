@@ -1,14 +1,14 @@
 
 Sección Biblia
 --------------
-* Barra de búsqueda de versículo (libro, capítulo, versículo)
+* (done) Barra de búsqueda de versículo (libro, capítulo, versículo)
+* (done) Atajo para enfocar buscador
+* (done) Al usar <= y => del teclado debe ir al versiculo anterior/siguiente
+* (done) Mostra cita
 * Búsqueda de palabras
-* Al usar <= y => del teclado debe ir al versiculo anterior/siguiente
 * Adaptarse  la pantalla
-* Mostra cita
 * Configuración: color de texto, margenes, posición de la cita, color de la cita, color de fondo
 * Palabra de Jesús en rojo
-* Atajo para enfocar buscador
 * Marcar lectura del servicio
 
 Sección Himnos
@@ -22,7 +22,6 @@ Sección Himnos
 
 Resto
 -----
-* Pantalla negra/blanca
-* Pantalla de logo
+* (done) Pantalla de logo
 * Avisos
 * Cumpleaños

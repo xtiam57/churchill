@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
-import { ToggleButton, ButtonGroup } from 'react-bootstrap';
+import { ToggleButton, ButtonGroup, Button } from 'react-bootstrap';
 import { BsMusicNoteList, BsBook } from 'react-icons/bs';
+import { MdCast, MdCastConnected } from 'react-icons/md';
 import { ANTHEMNS_VIEW_PATH, BIBLE_VIEW_PATH, CAST_VIEW_PATH } from 'values';
+import { usePresenter } from 'hooks';
 
 export function Navbar() {
   const location = useLocation();
+  const { toggle, presenter } = usePresenter();
+
   const [radioValue, setRadioValue] = useState(1);
 
   if (location.pathname === CAST_VIEW_PATH) {
@@ -40,6 +44,13 @@ export function Navbar() {
               </NavLink>
             </li>
           </ul>
+
+          <Button
+            onClick={toggle}
+            variant={presenter ? 'warning' : 'outline-light'}
+          >
+            {presenter ? <MdCastConnected /> : <MdCast />}
+          </Button>
 
           {/* <ButtonGroup toggle>
             <ToggleButton

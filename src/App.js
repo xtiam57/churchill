@@ -6,7 +6,7 @@ import ScripturesView from 'views/scriptures';
 import AnthemnsView from 'views/anthemns';
 import CastView from 'views/cast';
 
-import { ViewProvider } from 'providers/view';
+import { PresenterProvider } from 'providers/presenter';
 import { ScripturesProvider } from 'providers/scriptures';
 
 import { Navbar } from 'components/navbar';
@@ -19,7 +19,7 @@ import { ANTHEMNS_VIEW_PATH, BIBLE_VIEW_PATH, CAST_VIEW_PATH } from 'values';
 function App() {
   return (
     <Router>
-      <ViewProvider>
+      <PresenterProvider>
         <Navbar />
 
         <Switch>
@@ -41,7 +41,7 @@ function App() {
             <HomeView />
           </Route>
         </Switch>
-      </ViewProvider>
+      </PresenterProvider>
     </Router>
   );
 }

@@ -8,6 +8,7 @@ import {
   UP_ARROW_KEY,
   SPACE_BAR_KEY,
   ESCAPE_KEY,
+  F1_KEY,
 } from 'values';
 
 export function Controls({
@@ -18,6 +19,7 @@ export function Controls({
   onKeyRight,
   onKeySpace,
   onKeyEscape,
+  onKeyF1,
   ...rest
 }) {
   const handleKeyDown = useCallback(
@@ -26,12 +28,18 @@ export function Controls({
       const inputs = document.querySelectorAll('input');
       const isFocused = [...inputs].some((el) => el === document.activeElement);
 
+      console.log(key);
+
       if (isFocused) {
         return;
       }
 
       if (key === ESCAPE_KEY && isFunction(onKeyEscape)) {
         onKeyEscape();
+      }
+
+      if (key === F1_KEY && isFunction(onKeyF1)) {
+        onKeyF1();
       }
 
       if (key === SPACE_BAR_KEY && isFunction(onKeySpace)) {
@@ -67,7 +75,7 @@ export function Controls({
   return (
     <>
       <nav className="navbar navbar-dark bg-secondary" {...rest}>
-        <div className="container-fluid justify-content-space">{children}</div>
+        <div className="container-fluid justify-content-center">{children}</div>
       </nav>
     </>
   );
