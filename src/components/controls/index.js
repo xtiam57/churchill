@@ -20,6 +20,7 @@ export function Controls({
   onKeySpace,
   onKeyEscape,
   onKeyF1,
+  centered = false,
   ...rest
 }) {
   const handleKeyDown = useCallback(
@@ -60,7 +61,15 @@ export function Controls({
         onKeyLeft();
       }
     },
-    [onKeyUp, onKeyDown, onKeyLeft, onKeyRight, onKeySpace, onKeyEscape]
+    [
+      onKeyEscape,
+      onKeyF1,
+      onKeySpace,
+      onKeyDown,
+      onKeyUp,
+      onKeyRight,
+      onKeyLeft,
+    ]
   );
 
   useEffect(() => {
@@ -70,10 +79,14 @@ export function Controls({
     };
   }, [handleKeyDown]);
 
+  const alignment = `container-fluid justify-content-${
+    centered ? 'center' : 'between'
+  }`;
+
   return (
     <>
-      <nav className="navbar navbar-dark bg-secondary" {...rest}>
-        <div className="container-fluid justify-content-center">{children}</div>
+      <nav className="navbar navbar-dark bg-secondary text-light" {...rest}>
+        <div className={alignment}>{children}</div>
       </nav>
     </>
   );

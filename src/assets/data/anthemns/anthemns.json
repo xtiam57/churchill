@@ -2741,7 +2741,7 @@
     "title": "MARAVILLOSO ES",
     "chorus": "Maravilloso es, maravilloso es/nCuando pienso que Dios me ama a mí./nMaravilloso es, maravilloso es/nCuando pienso que Dios me ama a mí.",
     "stanzas": [
-      "1) Qué grandiosa es la puesta del sol /nAdmirable cual amanecer,/nPero es más grandioso y conmovedor/nEl amor que me tiene el Señor.",
+      "1) Qué grandiosa es la puesta del sol/nAdmirable cual amanecer,/nPero es más grandioso y conmovedor/nEl amor que me tiene el Señor.",
       "2) Maravilla de un sol que se oculta;/nMaravilla aurora que vi./nMaravilla que en mi alma resulta hoy/nCuando pienso que Dios me ama a mí.",
       "3) Qué grandioso el verano copioso;/nLos cielos, la luna y el sol,/nPero es más grandioso y conmovedor/nEl amor que me tiene el Señor."
     ],
@@ -6310,10 +6310,10 @@
     "chorus": "¡Feliz, feliz cumpleaños! Que Dios en su bondad/nTe dé muy larga vida, salud, felicidad.",
     "stanzas": [
       "1) Feliz, feliz cumpleaños deseamos para ti,/nQue el Dios omnipotente te quiera bendecir.",
-      "2) A Dios le damos gracias que con amor sin par,/nAl fin de otro año hermoso te permitió llegar./n@TAGS/ncumpleaños"
+      "2) A Dios le damos gracias que con amor sin par,/nAl fin de otro año hermoso te permitió llegar."
     ],
     "startsWithChorus": false,
-    "tags": null
+    "tags": "cumpleaños"
   },
   {
     "number": 510,

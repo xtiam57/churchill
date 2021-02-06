@@ -14,9 +14,13 @@ export function Navbar() {
     return null;
   }
 
+  const navbarStyle = `navbar navbar-expand-lg sticky-top ${
+    presenting ? 'navbar-light bg-warning' : 'navbar-dark bg-primary'
+  }`;
+
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+      <nav className={navbarStyle}>
         <div className="container-fluid">
           <Link to="/" className="navbar-brand">
             Churchill
@@ -45,7 +49,7 @@ export function Navbar() {
 
           <Button
             onClick={toggle}
-            variant={presenting ? 'warning' : 'outline-light'}
+            variant={presenting ? 'outline-dark' : 'outline-light'}
           >
             {presenting ? <RiStopFill /> : <RiSlideshow2Fill />}
           </Button>

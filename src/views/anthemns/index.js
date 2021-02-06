@@ -1,7 +1,21 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Typeahead } from 'react-bootstrap-typeahead';
-import { Button, ButtonGroup, Alert, Form } from 'react-bootstrap';
-import { ImArrowLeft2, ImArrowRight2 } from 'react-icons/im';
+import {
+  Button,
+  ButtonGroup,
+  Alert,
+  ButtonToolbar,
+  Form,
+} from 'react-bootstrap';
+import {
+  ImArrowLeft2,
+  ImArrowRight2,
+  ImPlay3,
+  ImStop2,
+  ImVolumeHigh,
+  ImMinus,
+  ImVolumeMute,
+} from 'react-icons/im';
 import useSound from 'use-sound';
 
 import { Presenter } from 'components/presenter';
@@ -17,6 +31,9 @@ import {
   useChannel,
 } from 'hooks';
 import { Controls } from 'components/controls';
+import { msToTime } from 'utils';
+
+const createAnthemnPath = (number) => `himnos/${number}.mp3`;
 
 export default function AnthemnsView() {
   const { anthemns } = useAnthemns();
@@ -27,45 +44,48 @@ export default function AnthemnsView() {
 
   const [showLogo, setShowLogo] = useState(true);
   const [anthemnSelection, setAnthemnSelection] = useState([anthemn]);
-  const [backgroundColor, setBackgroundColor] = useState('#ffffff');
   const channel = useChannel();
   const ref = useRef();
 
-  const [url, setUrl] = useState(`himnos/${anthemn.number}.mp3`);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [play, { stop, pause, sound }] = useSound(url, {
-    interrupt: false,
-    onload: () => {
-      console.log('loaded', sound);
-    },
+  const [url, setUrl] = useState(createAnthemnPath(anthemn.number));
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [playbackRate, setPlaybackRate] = React.useState(1);
+  const [volume, setVolume] = useState(1);
+  const [play, { stop, duration, isPlaying }] = useSound(url, {
+    volume,
+    playbackRate,
+    interrupt: true,
+    onload: () => setIsLoaded(true),
+    onloaderror: () => setIsLoaded(false),
   });
+
+  useEffect(() => {
+    stop();
+    setUrl(createAnthemnPath(anthemn.number));
+    setSlide(anthemn.slides[0]);
+  }, [anthemn, setSlide, stop]);
 
   useEffect(() => {
     return () => {
       setLastBroadcast(null);
+    };
+  }, [setLastBroadcast]);
+
+  useEffect(() => {
+    return () => {
       channel.postMessage(null);
       channel.close();
     };
-  }, [channel, setLastBroadcast]);
+  }, [channel]);
 
   useEffect(() => {
     const value = showLogo ? null : slide;
-
     setLastBroadcast(value);
     channel.postMessage(value);
   }, [slide, channel, setLastBroadcast, showLogo]);
 
   useEffect(() => {
-    sound?.on('play', () => setIsPlaying(true));
-    sound?.on('stop', () => setIsPlaying(false));
-    sound?.on('end', () => setIsPlaying(false));
-    sound?.on('pause', () => setIsPlaying(false));
-  }, [sound]);
-
-  useEffect(() => {
-    return () => {
-      stop();
-    };
+    return () => stop();
   }, [stop]);
 
   function onTypeaheadChange(event) {
@@ -74,55 +94,37 @@ export default function AnthemnsView() {
     if (event.length) {
       const [anthemn] = event;
       setAnthemn(anthemn);
-      setSlide(anthemn.slides[0]);
-      stop();
-      setUrl(`himnos/${anthemn.number}.mp3`);
       ref.current.blur();
     }
   }
 
-  const onPrevVerse = () => {
-    const slide = moveSlide(-1);
-  };
+  const onPrevSlide = () => moveSlide(-1);
 
-  const onNextVerse = () => {
-    const slide = moveSlide(1);
-  };
+  const onNextSlide = () => moveSlide(1);
 
   const onPrevAnthemn = () => {
     const anthemn = moveAnthemn(-1);
     setAnthemnSelection([anthemn]);
-    stop();
-    setUrl(`himnos/${anthemn.number}.mp3`);
   };
 
   const onNextAnthemn = () => {
     const anthemn = moveAnthemn(1);
     setAnthemnSelection([anthemn]);
-    stop();
-    setUrl(`himnos/${anthemn.number}.mp3`);
   };
 
-  const onFocusTypeahead = () => {
-    ref.current.focus();
+  const onTogglePlay = () => {
+    if (isLoaded) {
+      isPlaying ? stop() : play();
+    }
   };
 
-  const toggleLogo = () => {
-    setShowLogo((value) => !value);
-  };
+  const onFocusTypeahead = () => ref.current.focus();
+
+  const toggleLogo = () => setShowLogo((value) => !value);
 
   return (
     <Wrapper>
       <Sidebar>
-        {sound ? 'cancion' : 'no cancion'}
-        {isPlaying ? (
-          <>
-            <Button onClick={() => pause()}>Pause</Button>
-            <Button onClick={() => stop()}>Stop</Button>
-          </>
-        ) : (
-          <Button onClick={() => play()}>Play</Button>
-        )}
         <Typeahead
           emptyLabel="No existe esa opcion."
           highlightOnlyResult={true}
@@ -168,21 +170,96 @@ export default function AnthemnsView() {
         <Presenter live={!showLogo}>{slide.text}</Presenter>
 
         <Controls
-          onKeyLeft={onPrevVerse}
-          onKeyRight={onNextVerse}
+          onKeyLeft={onPrevSlide}
+          onKeyRight={onNextSlide}
           onKeyUp={onNextAnthemn}
           onKeyDown={onPrevAnthemn}
           onKeyF1={onFocusTypeahead}
+          onKeySpace={onTogglePlay}
         >
-          <ButtonGroup>
-            <Button onClick={onPrevVerse} variant="secondary">
-              <ImArrowLeft2 />
-            </Button>
+          {isLoaded ? (
+            <div className="d-flex">
+              <ImVolumeMute />
+              <Form.Control
+                type="range"
+                value={volume}
+                min="0"
+                max="1"
+                step="0.05"
+                className="mx-2"
+                onChange={(e) => setVolume(+e.target.value)}
+              />
+              <ImVolumeHigh />
+            </div>
+          ) : null}
 
-            <Button onClick={onNextVerse} variant="secondary">
-              <ImArrowRight2 />
-            </Button>
-          </ButtonGroup>
+          {isLoaded ? null : (
+            <small>
+              <span className="text-warning">
+                Este himno <strong>NO</strong> dispone de pista.
+              </span>{' '}
+              Puedes agregar un archivo <i>.mp3</i> en la carpeta{' '}
+              <strong>/himnos</strong>.
+            </small>
+          )}
+
+          <div className="d-flex">
+            {isLoaded ? (
+              <>
+                {/* <small className="navbar-text text-light">
+                  Duración: {msToTime(duration)}
+                </small> */}
+
+                <ButtonGroup className="mx-2">
+                  {isPlaying ? (
+                    <Button onClick={() => stop()} variant="light">
+                      <ImStop2 />
+                    </Button>
+                  ) : (
+                    <Button onClick={() => play()} variant="secondary">
+                      <ImPlay3 />
+                    </Button>
+                  )}
+                </ButtonGroup>
+              </>
+            ) : null}
+
+            <ButtonGroup>
+              <Button onClick={onPrevSlide} variant="secondary">
+                <ImArrowLeft2 />
+              </Button>
+
+              <Button onClick={onNextSlide} variant="secondary">
+                <ImArrowRight2 />
+              </Button>
+            </ButtonGroup>
+          </div>
+
+          {isLoaded ? (
+            <>
+              {' '}
+              <div className="d-flex">
+                <Form.Control
+                  type="range"
+                  value={playbackRate}
+                  min="0.5"
+                  max="2"
+                  step="0.1"
+                  className="mx-2"
+                  style={{ width: '80px' }}
+                  onChange={(e) => {
+                    setPlaybackRate(+e.target.value);
+                    if (isPlaying) {
+                      play();
+                    }
+                  }}
+                />
+                <small className="navbar-text">
+                  x{Number.parseFloat(playbackRate).toFixed(1)}
+                </small>
+              </div>
+            </>
+          ) : null}
         </Controls>
       </Wrapper>
     </Wrapper>

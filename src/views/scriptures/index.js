@@ -24,21 +24,24 @@ function ScripturesView() {
 
   const [showLogo, setShowLogo] = useState(true);
   const [verseSelection, setVerseSelection] = useState([verse]);
-  const [backgroundColor, setBackgroundColor] = useState('#ffffff');
   const channel = useChannel();
   const ref = useRef();
 
   useEffect(() => {
     return () => {
       setLastBroadcast(null);
+    };
+  }, [setLastBroadcast]);
+
+  useEffect(() => {
+    return () => {
       channel.postMessage(null);
       channel.close();
     };
-  }, [channel, setLastBroadcast]);
+  }, [channel]);
 
   useEffect(() => {
     const value = showLogo ? null : verse;
-
     setLastBroadcast(value);
     channel.postMessage(value);
   }, [verse, channel, setLastBroadcast, showLogo]);
@@ -72,13 +75,9 @@ function ScripturesView() {
     setVerseSelection([verse]);
   };
 
-  const onFocusTypeahead = () => {
-    ref.current.focus();
-  };
+  const onFocusTypeahead = () => ref.current.focus();
 
-  const toggleLogo = () => {
-    setShowLogo((value) => !value);
-  };
+  const toggleLogo = () => setShowLogo((value) => !value);
 
   return (
     <Wrapper>
@@ -135,7 +134,7 @@ function ScripturesView() {
           </div>
         </Alert>
 
-        <Presenter live={!showLogo} cite={verse.cite} bg={backgroundColor}>
+        <Presenter live={!showLogo} cite={verse.cite}>
           {verse.text}
         </Presenter>
 
@@ -145,6 +144,7 @@ function ScripturesView() {
           onKeyUp={onNextChapter}
           onKeyDown={onPrevChapter}
           onKeyF1={onFocusTypeahead}
+          centered
         >
           <ButtonGroup>
             <Button onClick={onPrevVerse} variant="secondary">

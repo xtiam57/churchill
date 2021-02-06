@@ -13,11 +13,14 @@ Sección Biblia
 
 Sección Himnos
 --------------
-* Barra de búsqueda de himno
+* (done) Barra de búsqueda de himno
 * Busqueda de palabras
-* Al usar <= y => del teclado debe ir a la estrofa anterior/siguiente
-* Pausar/reporducir audio
-* Configuracion de audio: volumen, velocidad, deshabilitar
+* Etiquetas
+* Crear programa
+* Guardar configuracion de audio para cada himno
+* (done) Al usar <= y => del teclado debe ir a la estrofa anterior/siguiente
+* (done) Pausar/reporducir audio
+* (done) Configuracion de audio: volumen, velocidad, deshabilitar
 * Configuración: color de texto, margenes, color de fondo, color de coro
 
 Resto
