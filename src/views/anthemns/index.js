@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Typeahead } from 'react-bootstrap-typeahead';
 import { Button, ButtonGroup, Alert, Form } from 'react-bootstrap';
 import { ImArrowLeft2, ImArrowRight2 } from 'react-icons/im';
+import useSound from 'use-sound';
 
 import { Presenter } from 'components/presenter';
 import { Sidebar } from 'components/sidebar';
@@ -30,6 +31,15 @@ export default function AnthemnsView() {
   const channel = useChannel();
   const ref = useRef();
 
+  const [url, setUrl] = useState(`himnos/${anthemn.number}.mp3`);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [play, { stop, pause, sound }] = useSound(url, {
+    interrupt: false,
+    onload: () => {
+      console.log('loaded', sound);
+    },
+  });
+
   useEffect(() => {
     return () => {
       setLastBroadcast(null);
@@ -45,14 +55,28 @@ export default function AnthemnsView() {
     channel.postMessage(value);
   }, [slide, channel, setLastBroadcast, showLogo]);
 
+  useEffect(() => {
+    sound?.on('play', () => setIsPlaying(true));
+    sound?.on('stop', () => setIsPlaying(false));
+    sound?.on('end', () => setIsPlaying(false));
+    sound?.on('pause', () => setIsPlaying(false));
+  }, [sound]);
+
+  useEffect(() => {
+    return () => {
+      stop();
+    };
+  }, [stop]);
+
   function onTypeaheadChange(event) {
     setAnthemnSelection(event);
 
     if (event.length) {
       const [anthemn] = event;
       setAnthemn(anthemn);
-      console.log(anthemn);
       setSlide(anthemn.slides[0]);
+      stop();
+      setUrl(`himnos/${anthemn.number}.mp3`);
       ref.current.blur();
     }
   }
@@ -68,11 +92,15 @@ export default function AnthemnsView() {
   const onPrevAnthemn = () => {
     const anthemn = moveAnthemn(-1);
     setAnthemnSelection([anthemn]);
+    stop();
+    setUrl(`himnos/${anthemn.number}.mp3`);
   };
 
   const onNextAnthemn = () => {
     const anthemn = moveAnthemn(1);
     setAnthemnSelection([anthemn]);
+    stop();
+    setUrl(`himnos/${anthemn.number}.mp3`);
   };
 
   const onFocusTypeahead = () => {
@@ -86,6 +114,15 @@ export default function AnthemnsView() {
   return (
     <Wrapper>
       <Sidebar>
+        {sound ? 'cancion' : 'no cancion'}
+        {isPlaying ? (
+          <>
+            <Button onClick={() => pause()}>Pause</Button>
+            <Button onClick={() => stop()}>Stop</Button>
+          </>
+        ) : (
+          <Button onClick={() => play()}>Play</Button>
+        )}
         <Typeahead
           emptyLabel="No existe esa opcion."
           highlightOnlyResult={true}
