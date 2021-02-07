@@ -8,6 +8,7 @@ import { Wrapper } from 'components/wrapper';
 import { Presenter } from 'components/presenter';
 import { Controls } from 'components/controls';
 import { Sidebar } from 'components/sidebar';
+import { Bookmark } from 'components/bookmark';
 import {
   useScriptures,
   useVerse,
@@ -15,6 +16,13 @@ import {
   usePresenter,
   useChannel,
 } from 'hooks';
+import { getAllItems } from 'utils';
+
+const getBookmarkedItems = () => {
+  return getAllItems().filter(
+    ({ key }) => key.includes('verse') && key.includes('bookmarked')
+  );
+};
 
 function ScripturesView() {
   const verses = useScriptures();
@@ -24,6 +32,8 @@ function ScripturesView() {
 
   const [showLogo, setShowLogo] = useState(true);
   const [verseSelection, setVerseSelection] = useState([verse]);
+  const [bookmarkedItems, setBookmarkedItems] = useState(getBookmarkedItems());
+
   const channel = useChannel();
   const ref = useRef();
 
@@ -45,6 +55,8 @@ function ScripturesView() {
     setLastBroadcast(value);
     channel.postMessage(value);
   }, [verse, channel, setLastBroadcast, showLogo]);
+
+  useEffect(() => {}, [bookmarkedItems]);
 
   function onTypeaheadChange(event) {
     setVerseSelection(event);
@@ -99,18 +111,24 @@ function ScripturesView() {
           size="large"
         />
 
-        {/* <div className="mt-4">
-          <Form.Control
-            type="color"
-            placeholder="Enter email"
-            value={backgroundColor}
-            onChange={(e) => setBackgroundColor(e.target.value)}
-          />
-          {backgroundColor}
-        </div> */}
+        {bookmarkedItems.map(({ value }) => (
+          <div key={value.index} className="text-light">
+            {value.cite}{' '}
+            <Bookmark
+              icon
+              element={value}
+              onRefresh={() => setBookmarkedItems(getBookmarkedItems())}
+            />
+          </div>
+        ))}
       </Sidebar>
 
       <Wrapper direction="column">
+        <Bookmark
+          element={verse}
+          onRefresh={() => setBookmarkedItems(getBookmarkedItems())}
+        />
+
         <Alert className="m-0" variant={showLogo ? 'secondary ' : 'warning'}>
           <div className="d-flex align-items-center justify-content-between">
             {showLogo ? (
@@ -133,11 +151,9 @@ function ScripturesView() {
             </Button>
           </div>
         </Alert>
-
         <Presenter live={!showLogo} cite={verse.cite}>
           {verse.text}
         </Presenter>
-
         <Controls
           onKeyLeft={onPrevVerse}
           onKeyRight={onNextVerse}

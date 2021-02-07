@@ -1,19 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Typeahead } from 'react-bootstrap-typeahead';
-import {
-  Button,
-  ButtonGroup,
-  Alert,
-  ButtonToolbar,
-  Form,
-} from 'react-bootstrap';
+import { Button, ButtonGroup, Alert, Form } from 'react-bootstrap';
 import {
   ImArrowLeft2,
   ImArrowRight2,
   ImPlay3,
   ImStop2,
   ImVolumeHigh,
-  ImMinus,
   ImVolumeMute,
 } from 'react-icons/im';
 import useSound from 'use-sound';
@@ -21,6 +14,8 @@ import useSound from 'use-sound';
 import { Presenter } from 'components/presenter';
 import { Sidebar } from 'components/sidebar';
 import { Wrapper } from 'components/wrapper';
+import { Controls } from 'components/controls';
+import { Bookmark } from 'components/bookmark';
 
 import {
   useAnthemns,
@@ -30,10 +25,15 @@ import {
   usePresenter,
   useChannel,
 } from 'hooks';
-import { Controls } from 'components/controls';
-import { msToTime } from 'utils';
+import { getAllItems } from 'utils';
 
 const createAnthemnPath = (number) => `himnos/${number}.mp3`;
+
+const getBookmarkedItems = () => {
+  return getAllItems().filter(
+    ({ key }) => key.includes('anthemn') && key.includes('bookmarked')
+  );
+};
 
 export default function AnthemnsView() {
   const { anthemns } = useAnthemns();
@@ -44,6 +44,7 @@ export default function AnthemnsView() {
 
   const [showLogo, setShowLogo] = useState(true);
   const [anthemnSelection, setAnthemnSelection] = useState([anthemn]);
+  const [bookmarkedItems, setBookmarkedItems] = useState(getBookmarkedItems());
   const channel = useChannel();
   const ref = useRef();
 
@@ -51,7 +52,7 @@ export default function AnthemnsView() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [playbackRate, setPlaybackRate] = React.useState(1);
   const [volume, setVolume] = useState(1);
-  const [play, { stop, duration, isPlaying }] = useSound(url, {
+  const [play, { stop, isPlaying }] = useSound(url, {
     volume,
     playbackRate,
     interrupt: true,
@@ -63,6 +64,7 @@ export default function AnthemnsView() {
     stop();
     setUrl(createAnthemnPath(anthemn.number));
     setSlide(anthemn.slides[0]);
+    setPlaybackRate(1);
   }, [anthemn, setSlide, stop]);
 
   useEffect(() => {
@@ -141,9 +143,25 @@ export default function AnthemnsView() {
           selected={anthemnSelection}
           size="large"
         />
+
+        {bookmarkedItems.map(({ value }) => (
+          <div key={value.index} className="text-light">
+            {value.title}{' '}
+            <Bookmark
+              icon
+              element={value}
+              onRefresh={() => setBookmarkedItems(getBookmarkedItems())}
+            />
+          </div>
+        ))}
       </Sidebar>
 
       <Wrapper direction="column">
+        <Bookmark
+          element={anthemn}
+          onRefresh={() => setBookmarkedItems(getBookmarkedItems())}
+        />
+
         <Alert className="m-0" variant={showLogo ? 'secondary ' : 'warning'}>
           <div className="d-flex align-items-center justify-content-between">
             {showLogo ? (

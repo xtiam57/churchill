@@ -39,6 +39,7 @@ function AnthemnsProvider({ children }) {
           index,
           number,
           title: `#${number} ${title}`,
+          type: 'anthemn',
           slides,
           tags,
           length: slides.length,

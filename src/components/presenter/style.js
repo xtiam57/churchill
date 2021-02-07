@@ -13,7 +13,7 @@ const PresenterStyled = styled.section`
   padding-bottom: 0;
   padding-left: 5em;
   text-align: center;
-  border: ${({ live }) => (live ? 'solid 5px var(--warning)' : 'none')};
+  border: ${({ live }) => (live ? 'solid 4px var(--warning)' : 'none')};
   background-color: ${({ bg }) => bg || '#ffffff'};
 
   p {
