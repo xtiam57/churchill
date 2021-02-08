@@ -12,12 +12,14 @@ import CastView from 'views/cast';
 import HomeView from 'views/home';
 import ScripturesView from 'views/scriptures';
 import BirthdaysView from 'views/birthdays';
+import SettingsView from 'views/settings';
 
 import {
   ANTHEMNS_VIEW_PATH,
   BIBLE_VIEW_PATH,
   BIRTHDAYS_VIEW_PATH,
   CAST_VIEW_PATH,
+  SETTINGS_VIEW_PATH,
 } from 'values';
 
 import 'bootstrap/dist/css/bootstrap.css';
@@ -51,6 +53,10 @@ function App() {
 
           <Route path={CAST_VIEW_PATH}>
             <CastView />
+          </Route>
+
+          <Route path={SETTINGS_VIEW_PATH}>
+            <SettingsView />
           </Route>
 
           <Route path="/">

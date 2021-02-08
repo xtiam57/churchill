@@ -2,6 +2,7 @@ export const HOME_VIEW_PATH = '/';
 export const BIBLE_VIEW_PATH = '/bible';
 export const ANTHEMNS_VIEW_PATH = '/anthemns';
 export const BIRTHDAYS_VIEW_PATH = '/birthdays';
+export const SETTINGS_VIEW_PATH = '/settings';
 export const CAST_VIEW_PATH = '/cast-screen';
 
 export const LEFT_ARROW_KEY = 37;
@@ -13,8 +14,54 @@ export const ESCAPE_KEY = 27;
 export const F1_KEY = 112;
 
 export const CHANNEL_NAME = 'BROADCASTING_MESSAGE';
+export const SETTINGS_NAME = 'SETTINGS';
 
 export const ITEMS_PER_LIST = 12;
 
 export const BIRTHDAY_FRAME = 7;
 export const BIRTHDAY_ANTHEMN_INDEX = 508;
+
+export const THEMES = {
+  default: {
+    background: '#ffffff',
+    textColor: '#000000',
+    titleColor: '#007bff',
+    subtextColor: '#007bff',
+    mode: 'default',
+  },
+  cobalt: {
+    background: '#192841',
+    textColor: '#ffff00',
+    titleColor: '#ffa200',
+    subtextColor: '#ffffff',
+    mode: 'negative',
+  },
+  dracula: {
+    background: '#000000',
+    textColor: '#ffffff',
+    titleColor: '#ffa200',
+    subtextColor: '#ffff00',
+    mode: 'negative',
+  },
+  calvario: {
+    background: '#ffffff',
+    textColor: '#000000',
+    titleColor: '#023060',
+    subtextColor: '#0E96D1',
+    mode: 'default',
+  },
+  female: {
+    background: '#ED2079',
+    textColor: '#ffffff',
+    titleColor: '#20ED94',
+    subtextColor: '#F9AAD0',
+    mode: 'negative',
+  },
+  fun: {
+    background: '#72BE44',
+    textColor: '#000000',
+    titleColor: '#ffffff',
+    subtextColor: '#ffff00',
+    mode: 'negative',
+  },
+};

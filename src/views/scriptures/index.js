@@ -13,7 +13,7 @@ import { List } from 'components/list';
 
 import { useVerse, useMoveVerse } from 'hooks';
 import { Storage } from 'utils';
-import { ITEMS_PER_LIST, CHANNEL_NAME } from 'values';
+import { ITEMS_PER_LIST, CHANNEL_NAME, SETTINGS_NAME, THEMES } from 'values';
 
 const getBookmarkedItems = () => {
   return Storage.getAll('desc')
@@ -22,12 +22,14 @@ const getBookmarkedItems = () => {
 };
 
 const useBroadcast = createPersistedState(CHANNEL_NAME);
+const useSettings = createPersistedState(SETTINGS_NAME);
 
 function ScripturesView() {
   const { scriptures, verse, setVerse } = useVerse();
   const { moveChapter, moveVerse } = useMoveVerse();
 
   const [message, setMessage] = useBroadcast(null);
+  const [settings] = useSettings(THEMES['default']);
   const [showLogo, setShowLogo] = useState(true);
   const [search, setSearch] = useState([verse]);
   const [bookmarkedItems, setBookmarkedItems] = useState(getBookmarkedItems());
@@ -139,13 +141,17 @@ function ScripturesView() {
         </List>
       </Sidebar>
 
-      <Wrapper direction="column">
+      <Wrapper direction="column" {...settings}>
         <Bookmark
           element={verse}
           onRefresh={() => setBookmarkedItems(getBookmarkedItems())}
         />
 
-        <Alert className="m-0" variant={showLogo ? 'secondary ' : 'warning'}>
+        <Alert
+          className="m-0"
+          variant={showLogo ? 'secondary ' : 'warning'}
+          style={{ borderRadius: 0 }}
+        >
           <div className="d-flex align-items-center justify-content-between">
             {showLogo ? (
               <span>
@@ -168,7 +174,7 @@ function ScripturesView() {
           </div>
         </Alert>
 
-        <Presenter live={!showLogo} subtext={verse.cite}>
+        <Presenter live={!showLogo} subtext={verse.cite} {...settings}>
           {verse.text}
         </Presenter>
 
@@ -176,7 +182,7 @@ function ScripturesView() {
           className="text-muted position-absolute"
           style={{
             bottom: '65px',
-            left: '340px',
+            left: '315px',
           }}
         >
           Usa las teclas <strong className="text-primary">&larr;</strong> y{' '}

@@ -21,11 +21,12 @@ import { List } from 'components/list';
 
 import { useAnthemn, useMoveAnthemn, useMoveSlide, useBirthday } from 'hooks';
 import { Storage } from 'utils';
-import { ITEMS_PER_LIST, CHANNEL_NAME } from 'values';
+import { ITEMS_PER_LIST, CHANNEL_NAME, SETTINGS_NAME, THEMES } from 'values';
 
 const getMP3Path = (number) => `himnos/${number}.mp3`;
 
 const useBroadcast = createPersistedState(CHANNEL_NAME);
+const useSettings = createPersistedState(SETTINGS_NAME);
 
 const getBookmarkedItems = () => {
   return Storage.getAll('desc')
@@ -40,6 +41,7 @@ export default function AnthemnsView() {
   const { birthdays, birthdayAnthemn } = useBirthday();
 
   const [message, setMessage] = useBroadcast(null);
+  const [settings] = useSettings(THEMES['default']);
   const [showLogo, setShowLogo] = useState(true);
   const [search, setSearch] = useState([song]);
   const [bookmarkedItems, setBookmarkedItems] = useState(getBookmarkedItems());
@@ -195,13 +197,17 @@ export default function AnthemnsView() {
         </List>
       </Sidebar>
 
-      <Wrapper direction="column">
+      <Wrapper direction="column" {...settings}>
         <Bookmark
           element={song}
           onRefresh={() => setBookmarkedItems(getBookmarkedItems())}
         />
 
-        <Alert className="m-0" variant={showLogo ? 'secondary ' : 'warning'}>
+        <Alert
+          className="m-0"
+          variant={showLogo ? 'secondary ' : 'warning'}
+          style={{ borderRadius: 0 }}
+        >
           <div className="d-flex align-items-center justify-content-between">
             {showLogo ? (
               <span>
@@ -224,13 +230,15 @@ export default function AnthemnsView() {
           </div>
         </Alert>
 
-        <Presenter live={!showLogo}>{slide.text}</Presenter>
+        <Presenter live={!showLogo} {...settings}>
+          {slide.text}
+        </Presenter>
 
         <small
           className="text-muted position-absolute"
           style={{
             bottom: '65px',
-            left: '340px',
+            left: '315px',
           }}
         >
           Usa las teclas <strong className="text-primary">&larr;</strong> y{' '}
@@ -247,7 +255,7 @@ export default function AnthemnsView() {
             right: '15px',
           }}
         >
-          ({slide.index + 1}/{song.slides.length})
+          {slide.index + 1}/{song.length}
         </small>
 
         <Controls
@@ -276,10 +284,11 @@ export default function AnthemnsView() {
           {isMP3Loaded ? null : (
             <small>
               <span className="text-warning">
-                Este himno <strong>NO</strong> dispone de pista.
+                Este himno <strong>NO</strong> tiene pista.
               </span>{' '}
-              Puedes agregar un archivo <i>.mp3</i> en la carpeta{' '}
-              <strong>/himnos</strong>.
+              Agrégalo en formato <i>.mp3</i> en la carpeta{' '}
+              <strong>/himnos</strong> con el nombre{' '}
+              <strong>{song.number}.mp3</strong>.
             </small>
           )}
           <div className="d-flex">

@@ -4,7 +4,7 @@ import json from 'assets/data/anthemns';
 const AnthemnsContext = React.createContext({});
 
 function makeSlide(title = null, text, index = 0) {
-  title = title ? `<strong class="text-primary">${title}</strong>/n` : '';
+  title = title ? `<strong>${title}</strong>/n` : '';
   text = `${title}${text}`.replaceAll('/n', '<br/>');
   return {
     index,
@@ -18,8 +18,16 @@ function AnthemnsProvider({ children }) {
       ({ number, title, startsWithChorus, chorus, stanzas, tags }, index) => {
         const slides = [];
         let slideIndex = 0;
+        const isNotAnthemn = tags?.includes('coro');
+        const isExtra = tags?.includes('extra');
 
-        slides.push(makeSlide(`Himno #${number}`, title, slideIndex++));
+        slides.push(
+          makeSlide(
+            `${isNotAnthemn ? 'Coro' : `Himno${isExtra ? '' : ` #${number}`}`}`,
+            title,
+            slideIndex++
+          )
+        );
 
         if (startsWithChorus) {
           slides.push(makeSlide('Coro', chorus, slideIndex++));
@@ -38,7 +46,7 @@ function AnthemnsProvider({ children }) {
         return {
           index,
           number,
-          title: `#${number} ${title}`,
+          title: `${isNotAnthemn || isExtra ? '' : `#${number} `}${title}`,
           type: 'anthemn',
           slides,
           tags,

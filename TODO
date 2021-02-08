@@ -6,9 +6,9 @@ Sección Biblia
 * (done) Al usar <= y => del teclado debe ir al versiculo anterior/siguiente
 * (done) Mostra cita
 * (done) Marcar lectura del servicio
+* (done) Configuración: color de texto, margenes, posición de la cita, color de la cita, color de fondo
 * Búsqueda de palabras
 * Adaptarse  la pantalla
-* Configuración: color de texto, margenes, posición de la cita, color de la cita, color de fondo
 * Palabra de Jesús en rojo
 
 Sección Himnos
@@ -18,15 +18,16 @@ Sección Himnos
 * (done) Al usar <= y => del teclado debe ir a la estrofa anterior/siguiente
 * (done) Pausar/reporducir audio
 * (done) Configuracion de audio: volumen, velocidad, deshabilitar
+* (done) Configuración: color de texto, margenes, color de fondo, color de coro
 * Busqueda de palabras
 * Etiquetas
 * Guardar configuracion de audio para cada himno
-* Configuración: color de texto, margenes, color de fondo, color de coro
 
 Resto
 -----
 * (done) Pantalla de logo
-* Avisos
+* (done) Distinguir entre coro e himno
 * (done) Cumpleaños
+* Avisos
 * Temporizador de predica
-* Distinguir entre coro e himno
+* Semáforo de predica

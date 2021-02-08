@@ -7,5 +7,5 @@ export const WrapperStyled = styled.main`
   width: 100%;
   ${({ centered }) =>
     centered ? 'justify-content: center; align-items: center;' : null}
-  background-color: ${({ type }) => (type === 'birthday' ? '#f00' : '#fff')};
+  background-color: ${({ background }) => background || '#fff'};
 `;

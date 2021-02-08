@@ -13,10 +13,11 @@ import { List } from 'components/list';
 
 import { useBirthday } from 'hooks';
 import { Time, Storage } from 'utils';
-import { CHANNEL_NAME } from 'values';
+import { CHANNEL_NAME, SETTINGS_NAME, THEMES } from 'values';
 import { BirthdayModal } from './modal';
 
 const useBroadcast = createPersistedState(CHANNEL_NAME);
+const useSettings = createPersistedState(SETTINGS_NAME);
 
 const getBirthdayItems = () => {
   return Storage.getAll('desc')
@@ -26,6 +27,7 @@ const getBirthdayItems = () => {
 
 function BirthdaysView() {
   const [message, setMessage] = useBroadcast(null);
+  const [settings] = useSettings(THEMES['default']);
 
   const [show, setShow] = useState(false);
   const [showLogo, setShowLogo] = useState(true);
@@ -91,8 +93,12 @@ function BirthdaysView() {
         </List>
       </Sidebar>
 
-      <Wrapper direction="column">
-        <Alert className="m-0" variant={showLogo ? 'secondary ' : 'warning'}>
+      <Wrapper direction="column" {...settings}>
+        <Alert
+          className="m-0"
+          variant={showLogo ? 'secondary ' : 'warning'}
+          style={{ borderRadius: 0 }}
+        >
           <div className="d-flex align-items-center justify-content-between">
             {showLogo ? (
               <span>
@@ -114,7 +120,7 @@ function BirthdaysView() {
           </div>
         </Alert>
 
-        <Presenter subtext={slide.subtext} type={slide.type}>
+        <Presenter subtext={slide.subtext} type={slide.type} {...settings}>
           {slide.text}
         </Presenter>
 

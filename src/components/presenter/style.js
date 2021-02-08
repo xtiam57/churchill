@@ -4,7 +4,6 @@ const PresenterStyled = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: black;
   overflow: hidden;
   height: 100%;
   width: 100%;
@@ -14,16 +13,19 @@ const PresenterStyled = styled.section`
   padding-left: 5em;
   text-align: center;
   border: ${({ live }) => (live ? 'solid 4px var(--warning)' : 'none')};
-  background-color: ${({ bg }) => bg || '#ffffff'};
 
   p {
-    /* font-style: italic; */
     font-size: calc(1.2em + 3vh);
     margin: 0 0 0.5em;
+    color: ${({ textColor }) => textColor || '#000'};
+
+    strong {
+      color: ${({ titleColor }) => titleColor || '#007bff'} !important;
+    }
   }
 
   cite {
-    color: var(--primary);
+    color: ${({ subtextColor }) => subtextColor || '#007bff'};
     font-size: calc(1.2em + 1vh);
   }
 `;

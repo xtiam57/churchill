@@ -36,10 +36,7 @@ function getSlide(birthdays) {
     text: `<strong class="text-primary">¡Feliz Cumpleaños!</strong><br/>
           ${birthdays
             .map(({ name, day, month }) => {
-              return `${name} <span class="text-muted">(${Time.formatBirthday(
-                day,
-                month
-              )})</span>`;
+              return `${name} <i>(${Time.formatBirthday(day, month)})</i>`;
             })
             .join('<br/>')}`,
     subtext: `Deseamos que Dios le${birthdays.length > 1 ? 's' : ''} bendiga.`,

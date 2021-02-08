@@ -2,7 +2,12 @@ import React, { useState, useEffect } from 'react';
 import createPersistedState from 'use-persisted-state';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Button, Tooltip } from 'react-bootstrap';
-import { BsMusicNoteList, BsBook, BsGift } from 'react-icons/bs';
+import {
+  BsMusicNoteList,
+  BsBook,
+  BsGift,
+  BsFillGearFill,
+} from 'react-icons/bs';
 import { RiSlideshow2Fill, RiStopFill } from 'react-icons/ri';
 import {
   ANTHEMNS_VIEW_PATH,
@@ -10,6 +15,7 @@ import {
   BIRTHDAYS_VIEW_PATH,
   CAST_VIEW_PATH,
   CHANNEL_NAME,
+  SETTINGS_VIEW_PATH,
 } from 'values';
 import { usePresenter } from 'hooks';
 
@@ -42,6 +48,15 @@ export function Navbar() {
           </Link>
 
           <ul className="navbar-nav mr-auto">
+            <li className="nav-item">
+              <NavLink
+                to={SETTINGS_VIEW_PATH}
+                className="nav-link"
+                activeClassName="active"
+              >
+                <BsFillGearFill />
+              </NavLink>
+            </li>
             <li className="nav-item">
               <NavLink
                 to={BIBLE_VIEW_PATH}
