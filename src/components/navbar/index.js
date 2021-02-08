@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import createPersistedState from 'use-persisted-state';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Button, Tooltip } from 'react-bootstrap';
@@ -18,6 +18,12 @@ const useBroadcast = createPersistedState(CHANNEL_NAME);
 export function Navbar() {
   const location = useLocation();
   const { toggle, presenting } = usePresenter();
+  const [date, setDate] = useState(new Date());
+
+  useEffect(() => {
+    let timer = setInterval(() => setDate(new Date()), 1000);
+    return () => clearInterval(timer);
+  }, []);
 
   if (location.pathname === CAST_VIEW_PATH) {
     return null;
@@ -64,6 +70,10 @@ export function Navbar() {
               </NavLink>
             </li>
           </ul>
+
+          <span className="navbar-text d-block mr-3">
+            {date.toLocaleTimeString()}
+          </span>
 
           <Button
             onClick={toggle}

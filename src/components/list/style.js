@@ -39,6 +39,7 @@ const ActionStyled = styled.button`
   overflow: hidden;
   font-size: 0.9em;
   padding: 5px 0 5px 0;
+  min-width: 16px;
 
   &:hover {
     color: var(--light);
@@ -55,6 +56,10 @@ const TextStyled = styled.span`
   overflow: hidden;
   font-size: 0.9em;
   padding: 5px 0 5px 0;
+
+  & + button {
+    flex: inherit;
+  }
 `;
 
 export { ListStyled, TitleStyled, ItemStyled, ActionStyled, TextStyled };

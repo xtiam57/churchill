@@ -11,7 +11,7 @@ import { Sidebar } from 'components/sidebar';
 import { Bookmark, createStorageKey } from 'components/bookmark';
 import { List } from 'components/list';
 
-import { useScriptures, useVerse, useMoveVerse } from 'hooks';
+import { useVerse, useMoveVerse } from 'hooks';
 import { Storage } from 'utils';
 import { ITEMS_PER_LIST, CHANNEL_NAME } from 'values';
 
@@ -24,8 +24,7 @@ const getBookmarkedItems = () => {
 const useBroadcast = createPersistedState(CHANNEL_NAME);
 
 function ScripturesView() {
-  const verses = useScriptures();
-  const { verse, setVerse } = useVerse();
+  const { scriptures, verse, setVerse } = useVerse();
   const { moveChapter, moveVerse } = useMoveVerse();
 
   const [message, setMessage] = useBroadcast(null);
@@ -91,7 +90,7 @@ function ScripturesView() {
           minLength={0}
           onChange={onSearch}
           onFocus={(e) => e.target.select()}
-          options={verses}
+          options={scriptures}
           paginate={false}
           paginationText="Ver más opciones..."
           placeholder="Selecciona un versículo..."
@@ -172,6 +171,20 @@ function ScripturesView() {
         <Presenter live={!showLogo} subtext={verse.cite}>
           {verse.text}
         </Presenter>
+
+        <small
+          className="text-muted position-absolute"
+          style={{
+            bottom: '65px',
+            left: '340px',
+          }}
+        >
+          Usa las teclas <strong className="text-primary">&larr;</strong> y{' '}
+          <strong className="text-primary">&rarr;</strong> para cambiar de
+          versículo, y <strong className="text-primary">&uarr;</strong> y{' '}
+          <strong className="text-primary">&darr;</strong> para cambiar de
+          capítulo.
+        </small>
 
         <Controls
           onKeyLeft={onPrevVerse}

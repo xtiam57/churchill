@@ -19,13 +19,7 @@ import { Controls } from 'components/controls';
 import { Bookmark, createStorageKey } from 'components/bookmark';
 import { List } from 'components/list';
 
-import {
-  useAnthemns,
-  useAnthemn,
-  useMoveAnthemn,
-  useMoveSlide,
-  useBirthday,
-} from 'hooks';
+import { useAnthemn, useMoveAnthemn, useMoveSlide, useBirthday } from 'hooks';
 import { Storage } from 'utils';
 import { ITEMS_PER_LIST, CHANNEL_NAME } from 'values';
 
@@ -40,18 +34,17 @@ const getBookmarkedItems = () => {
 };
 
 export default function AnthemnsView() {
-  const { anthemns } = useAnthemns();
-  const { anthemn, setAnthemn } = useAnthemn();
+  const { anthemns, song, setSong } = useAnthemn();
   const { moveSlide, slide, setSlide } = useMoveSlide();
   const { moveAnthemn } = useMoveAnthemn();
   const { birthdays, birthdayAnthemn } = useBirthday();
 
   const [message, setMessage] = useBroadcast(null);
   const [showLogo, setShowLogo] = useState(true);
-  const [search, setSearch] = useState([anthemn]);
+  const [search, setSearch] = useState([song]);
   const [bookmarkedItems, setBookmarkedItems] = useState(getBookmarkedItems());
 
-  const [url, setUrl] = useState(getMP3Path(anthemn.number));
+  const [url, setUrl] = useState(getMP3Path(song.number));
   const [isMP3Loaded, setIsMP3Loaded] = useState(false);
   const [playbackRate, setPlaybackRate] = React.useState(1);
   const [volume, setVolume] = useState(1);
@@ -67,10 +60,10 @@ export default function AnthemnsView() {
 
   useEffect(() => {
     stop();
-    setUrl(getMP3Path(anthemn.number));
-    setSlide(anthemn.slides[0]);
+    setUrl(getMP3Path(song.number));
+    setSlide(song.slides[0]);
     setPlaybackRate(1);
-  }, [anthemn, setSlide, stop]);
+  }, [song, setSlide, stop]);
 
   useEffect(() => {
     setMessage(showLogo ? null : slide);
@@ -89,7 +82,7 @@ export default function AnthemnsView() {
 
     if (event.length) {
       const [anthemn] = event;
-      setAnthemn(anthemn);
+      setSong(anthemn);
       typeaheadRef.current.blur();
     }
   }
@@ -150,7 +143,7 @@ export default function AnthemnsView() {
             <List.Item>
               {bookmarkedItems.length ? (
                 <>
-                  <List.Title>
+                  <List.Title className="text-warning">
                     Cumpleaños detectados ({birthdays.length})
                   </List.Title>
                 </>
@@ -204,7 +197,7 @@ export default function AnthemnsView() {
 
       <Wrapper direction="column">
         <Bookmark
-          element={anthemn}
+          element={song}
           onRefresh={() => setBookmarkedItems(getBookmarkedItems())}
         />
 
@@ -218,7 +211,7 @@ export default function AnthemnsView() {
             ) : (
               <span>
                 Actualmente se está mostrando el himno{' '}
-                <strong>{anthemn.title}</strong> al público.
+                <strong>{song.title}</strong> al público.
               </span>
             )}
             <Button
@@ -232,6 +225,30 @@ export default function AnthemnsView() {
         </Alert>
 
         <Presenter live={!showLogo}>{slide.text}</Presenter>
+
+        <small
+          className="text-muted position-absolute"
+          style={{
+            bottom: '65px',
+            left: '340px',
+          }}
+        >
+          Usa las teclas <strong className="text-primary">&larr;</strong> y{' '}
+          <strong className="text-primary">&rarr;</strong> para cambiar de
+          lámina, y <strong className="text-primary">&uarr;</strong> y{' '}
+          <strong className="text-primary">&darr;</strong> para cambiar de
+          himno.
+        </small>
+
+        <small
+          className="text-muted position-absolute"
+          style={{
+            bottom: '65px',
+            right: '15px',
+          }}
+        >
+          ({slide.index + 1}/{song.slides.length})
+        </small>
 
         <Controls
           onKeyLeft={onPrevSlide}
@@ -256,7 +273,6 @@ export default function AnthemnsView() {
               <ImVolumeHigh />
             </div>
           ) : null}
-
           {isMP3Loaded ? null : (
             <small>
               <span className="text-warning">
@@ -266,7 +282,6 @@ export default function AnthemnsView() {
               <strong>/himnos</strong>.
             </small>
           )}
-
           <div className="d-flex">
             {isMP3Loaded ? (
               <>
@@ -287,18 +302,15 @@ export default function AnthemnsView() {
                 </ButtonGroup>
               </>
             ) : null}
-
             <ButtonGroup>
               <Button onClick={onPrevSlide} variant="secondary">
                 <ImArrowLeft2 />
               </Button>
-
               <Button onClick={onNextSlide} variant="secondary">
                 <ImArrowRight2 />
               </Button>
             </ButtonGroup>
           </div>
-
           {isMP3Loaded ? (
             <>
               {' '}

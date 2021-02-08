@@ -13,5 +13,5 @@ export const generateGUID = (isTrimmed = false) => {
       return (digit === 'x' ? r : (r & 0x3) | 0x8).toString(16);
     }
   );
-  return isTrimmed ? this.replaceAll(uuid, '-', '') : uuid;
+  return isTrimmed ? uuid.replaceAll('-', '') : uuid;
 };

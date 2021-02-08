@@ -2,8 +2,8 @@ import { useContext } from 'react';
 import { AnthemnsContext } from 'providers/anthemns';
 
 export function useMoveSlide() {
-  const { anthemn, slide, setSlide } = useContext(AnthemnsContext);
-  const { slides, length } = anthemn;
+  const { song, slide, setSlide } = useContext(AnthemnsContext);
+  const { slides, length } = song;
 
   const moveToNextSlide = () => {
     const index = Math.min(slide.index + 1, length - 1);

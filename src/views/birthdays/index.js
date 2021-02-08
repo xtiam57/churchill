@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Button, ButtonGroup, Alert, Form } from 'react-bootstrap';
+import { Button, Alert } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
 
-import { ImPlus } from 'react-icons/im';
+import { ImUserPlus } from 'react-icons/im';
+import { RiCloseFill } from 'react-icons/ri';
 
 import { Wrapper } from 'components/wrapper';
 import { Presenter } from 'components/presenter';
@@ -11,27 +12,43 @@ import { Sidebar } from 'components/sidebar';
 import { List } from 'components/list';
 
 import { useBirthday } from 'hooks';
-import { Time } from 'utils';
-import { ITEMS_PER_LIST, CHANNEL_NAME } from 'values';
+import { Time, Storage } from 'utils';
+import { CHANNEL_NAME } from 'values';
+import { BirthdayModal } from './modal';
 
 const useBroadcast = createPersistedState(CHANNEL_NAME);
+
+const getBirthdayItems = () => {
+  return Storage.getAll('desc')
+    .filter(({ key }) => key.includes('birthday'))
+    .map((item) => item.value);
+};
 
 function BirthdaysView() {
   const [message, setMessage] = useBroadcast(null);
 
+  const [show, setShow] = useState(false);
   const [showLogo, setShowLogo] = useState(true);
-  const { birthdays, slide } = useBirthday();
+  const { birthdays, add, remove, slide } = useBirthday();
+  const [birthdayItems, setBirthdayItems] = useState(getBirthdayItems());
 
   useEffect(() => {
-    const value = showLogo ? null : slide;
-    setMessage(value);
+    setMessage(showLogo ? null : slide);
   }, [slide, showLogo, setMessage]);
 
   useEffect(() => {
     return () => setMessage(null);
   }, []);
 
-  const onAdd = () => {};
+  const onSave = (data) => {
+    add(data);
+    setShow(false);
+    setBirthdayItems(getBirthdayItems());
+  };
+  const onDelete = (index) => {
+    remove(index);
+    setBirthdayItems(getBirthdayItems());
+  };
 
   return (
     <Wrapper>
@@ -49,6 +66,26 @@ function BirthdaysView() {
             <List.Item key={index}>
               <List.Text className="text-light">{name}</List.Text>
               <List.Text>{Time.formatBirthday(day, month)}</List.Text>
+            </List.Item>
+          ))}
+        </List>
+
+        <List>
+          {birthdayItems.length ? (
+            <List.Item>
+              <List.Title className="text-warning">listado completo</List.Title>
+            </List.Item>
+          ) : null}
+
+          {birthdayItems.map(({ index, name, day, month }) => (
+            <List.Item key={index}>
+              <List.Text>
+                <span className="text-light">{name}</span> (
+                {Time.formatBirthday(day, month)})
+              </List.Text>
+              <List.Action onClick={() => onDelete(index)}>
+                <RiCloseFill />
+              </List.Action>
             </List.Item>
           ))}
         </List>
@@ -82,9 +119,15 @@ function BirthdaysView() {
         </Presenter>
 
         <Controls centered>
-          <Button onClick={onAdd} variant="secondary">
-            <ImPlus />
+          <Button onClick={() => setShow(true)} variant="secondary">
+            <ImUserPlus />
           </Button>
+
+          <BirthdayModal
+            show={show}
+            handleClose={() => setShow(false)}
+            handleSave={onSave}
+          />
         </Controls>
       </Wrapper>
     </Wrapper>

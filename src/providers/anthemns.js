@@ -50,15 +50,15 @@ function AnthemnsProvider({ children }) {
 
   const total = anthemns.length;
   const [first] = anthemns;
-  const [anthemn, setAnthemn] = useState(first);
-  const [slide, setSlide] = useState(anthemn.slides[0]);
+  const [song, setSong] = useState(first);
+  const [slide, setSlide] = useState(song.slides[0]);
 
   return (
     <AnthemnsContext.Provider
       value={{
         anthemns,
-        anthemn,
-        setAnthemn,
+        song,
+        setSong,
         total,
         slide,
         setSlide,

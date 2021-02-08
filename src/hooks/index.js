@@ -1,8 +1,6 @@
-export { useScriptures } from './useScriptures';
 export { useVerse } from './useVerse';
 export { useMoveVerse } from './useMoveVerse';
 export { usePresenter } from './usePresenter';
-export { useAnthemns } from './useAnthemns';
 export { useAnthemn } from './useAnthemn';
 export { useMoveSlide } from './useMoveSlide';
 export { useMoveAnthemn } from './useMoveAnthemn';

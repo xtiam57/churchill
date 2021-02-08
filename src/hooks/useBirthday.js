@@ -1,45 +1,13 @@
-import { useContext, useMemo, useState, useEffect } from 'react';
+import { useContext, useState, useMemo } from 'react';
 import { AnthemnsContext } from 'providers/anthemns';
 import { BIRTHDAY_ANTHEMN_INDEX, BIRTHDAY_FRAME } from 'values';
 import { Storage, generateGUID, Time } from 'utils';
 
-// const brothers = [
-//   {
-//     index: generateGUID(),
-//     name: 'Hno. Christiam Mena',
-//     day: 9,
-//     month: 2,
-//     birthday: '09/Feb',
-//     type: 'birthday',
-//   },
-//   {
-//     index: generateGUID(),
-//     name: 'Hno. José Perales',
-//     day: 3,
-//     month: 2,
-//     birthday: '03/Feb',
-//     type: 'birthday',
-//   },
-//   {
-//     index: generateGUID(),
-//     name: 'Hna. Pepita Espinales',
-//     day: 7,
-//     month: 2,
-//     birthday: '07/Feb',
-//     type: 'birthday',
-//   },
-//   {
-//     index: generateGUID(),
-//     name: 'Hna. Susana Rodriguez',
-//     day: 27,
-//     month: 2,
-//     birthday: '27/Feb',
-//     type: 'birthday',
-//   },
-// ];
+function createStorageKey(index) {
+  return `${index}_birthday`;
+}
 
 function getBirthdays(now) {
-  // TODO get brothers from storage
   return Storage.getAll()
     .filter(({ key }) => key.includes('birthday'))
     .map((item) => item.value)
@@ -79,23 +47,37 @@ function getSlide(birthdays) {
   };
 }
 
-export function useBirthday(now = new Date()) {
-  const { anthemns } = useContext(AnthemnsContext);
-
+export function useBirthday() {
+  const [now, setNow] = useState(new Date());
   const birthdays = getBirthdays(now);
-  const slide = useMemo(() => getSlide(birthdays), [birthdays]);
+  const [slide, setSlide] = useState(getSlide(birthdays));
 
-  // useEffect(() => {
-  //   // setBirthdays(() => {
-  //   //   const birthdays = getBirthdays(now);
-  //   //   // setSlide(getSlide(birthdays));
-  //   //   return birthdays;
-  //   // });
-  // }, [now]);
-
+  const { anthemns } = useContext(AnthemnsContext);
   const birthdayAnthemn = useMemo(() => anthemns[BIRTHDAY_ANTHEMN_INDEX], [
     anthemns,
   ]);
 
-  return { birthdays, slide, birthdayAnthemn };
+  const add = (data) => {
+    data.index = generateGUID(true);
+    data.type = 'birthday';
+    data.birthday = Time.formatBirthday(data.day, data.month);
+
+    Storage.set(createStorageKey(data.index), data);
+
+    const birthdays = getBirthdays(now);
+    const slide = getSlide(birthdays);
+
+    setSlide(slide);
+  };
+
+  const remove = (index) => {
+    Storage.remove(createStorageKey(index));
+
+    const birthdays = getBirthdays(now);
+    const slide = getSlide(birthdays);
+
+    setSlide(slide);
+  };
+
+  return { birthdays, slide, setSlide, add, remove, birthdayAnthemn };
 }
