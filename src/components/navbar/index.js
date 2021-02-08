@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import createPersistedState from 'use-persisted-state';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Button, Tooltip } from 'react-bootstrap';
 import { BsMusicNoteList, BsBook, BsGift } from 'react-icons/bs';
@@ -8,8 +9,11 @@ import {
   BIBLE_VIEW_PATH,
   BIRTHDAYS_VIEW_PATH,
   CAST_VIEW_PATH,
+  CHANNEL_NAME,
 } from 'values';
 import { usePresenter } from 'hooks';
+
+const useBroadcast = createPersistedState(CHANNEL_NAME);
 
 export function Navbar() {
   const location = useLocation();

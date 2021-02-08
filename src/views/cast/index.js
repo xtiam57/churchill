@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import createPersistedState from 'use-persisted-state';
+
 import { useChannel } from 'hooks';
 import { Presenter } from 'components/presenter';
 import { Wrapper } from 'components/wrapper';
 import { Logo } from 'components/logo';
 
-export default function Cast() {
-  const channel = useChannel();
-  const [message, setMessage] = useState(null);
+import { CHANNEL_NAME } from 'values';
 
-  useEffect(() => {
-    channel.onmessage = (message) => setMessage(message.data);
-    return () => channel.close();
-  }, [channel]);
+const useBroadcast = createPersistedState(CHANNEL_NAME);
+
+export default function CastView() {
+  const [message, setMessage] = useBroadcast(null);
 
   console.log(message);
 

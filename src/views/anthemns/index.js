@@ -10,6 +10,7 @@ import {
   ImVolumeMute,
 } from 'react-icons/im';
 import useSound from 'use-sound';
+import createPersistedState from 'use-persisted-state';
 
 import { Presenter } from 'components/presenter';
 import { Sidebar } from 'components/sidebar';
@@ -23,14 +24,14 @@ import {
   useAnthemn,
   useMoveAnthemn,
   useMoveSlide,
-  usePresenter,
-  useChannel,
   useBirthday,
 } from 'hooks';
 import { Storage } from 'utils';
-import { ITEMS_PER_LIST } from 'values';
+import { ITEMS_PER_LIST, CHANNEL_NAME } from 'values';
 
-const createAnthemnPath = (number) => `himnos/${number}.mp3`;
+const getMP3Path = (number) => `himnos/${number}.mp3`;
+
+const useBroadcast = createPersistedState(CHANNEL_NAME);
 
 const getBookmarkedItems = () => {
   return Storage.getAll('desc')
@@ -43,64 +44,53 @@ export default function AnthemnsView() {
   const { anthemn, setAnthemn } = useAnthemn();
   const { moveSlide, slide, setSlide } = useMoveSlide();
   const { moveAnthemn } = useMoveAnthemn();
-  const { setLastBroadcast } = usePresenter();
   const { birthdays, birthdayAnthemn } = useBirthday();
 
+  const [message, setMessage] = useBroadcast(null);
   const [showLogo, setShowLogo] = useState(true);
-  const [anthemnSelection, setAnthemnSelection] = useState([anthemn]);
+  const [search, setSearch] = useState([anthemn]);
   const [bookmarkedItems, setBookmarkedItems] = useState(getBookmarkedItems());
-  const channel = useChannel();
-  const ref = useRef();
 
-  const [url, setUrl] = useState(createAnthemnPath(anthemn.number));
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [url, setUrl] = useState(getMP3Path(anthemn.number));
+  const [isMP3Loaded, setIsMP3Loaded] = useState(false);
   const [playbackRate, setPlaybackRate] = React.useState(1);
   const [volume, setVolume] = useState(1);
   const [play, { stop, isPlaying }] = useSound(url, {
     volume,
     playbackRate,
     interrupt: true,
-    onload: () => setIsLoaded(true),
-    onloaderror: () => setIsLoaded(false),
+    onload: () => setIsMP3Loaded(true),
+    onloaderror: () => setIsMP3Loaded(false),
   });
+
+  const typeaheadRef = useRef();
 
   useEffect(() => {
     stop();
-    setUrl(createAnthemnPath(anthemn.number));
+    setUrl(getMP3Path(anthemn.number));
     setSlide(anthemn.slides[0]);
     setPlaybackRate(1);
   }, [anthemn, setSlide, stop]);
 
   useEffect(() => {
-    return () => {
-      setLastBroadcast(null);
-    };
-  }, [setLastBroadcast]);
-
-  useEffect(() => {
-    return () => {
-      channel.postMessage(null);
-      channel.close();
-    };
-  }, [channel]);
-
-  useEffect(() => {
-    const value = showLogo ? null : slide;
-    setLastBroadcast(value);
-    channel.postMessage(value);
-  }, [slide, channel, setLastBroadcast, showLogo]);
+    setMessage(showLogo ? null : slide);
+  }, [slide, showLogo, setMessage]);
 
   useEffect(() => {
     return () => stop();
   }, [stop]);
 
-  function onTypeaheadChange(event) {
-    setAnthemnSelection(event);
+  useEffect(() => {
+    return () => setMessage(null);
+  }, []);
+
+  function onSearch(event) {
+    setSearch(event);
 
     if (event.length) {
       const [anthemn] = event;
       setAnthemn(anthemn);
-      ref.current.blur();
+      typeaheadRef.current.blur();
     }
   }
 
@@ -110,23 +100,19 @@ export default function AnthemnsView() {
 
   const onPrevAnthemn = () => {
     const anthemn = moveAnthemn(-1);
-    setAnthemnSelection([anthemn]);
+    setSearch([anthemn]);
   };
 
   const onNextAnthemn = () => {
     const anthemn = moveAnthemn(1);
-    setAnthemnSelection([anthemn]);
+    setSearch([anthemn]);
   };
 
   const onTogglePlay = () => {
-    if (isLoaded) {
+    if (isMP3Loaded) {
       isPlaying ? stop() : play();
     }
   };
-
-  const onFocusTypeahead = () => ref.current.focus();
-
-  const toggleLogo = () => setShowLogo((value) => !value);
 
   const removeBookmarks = () => {
     bookmarkedItems.forEach((item) => {
@@ -145,14 +131,14 @@ export default function AnthemnsView() {
           id="combo"
           labelKey="title"
           minLength={0}
-          onChange={onTypeaheadChange}
+          onChange={onSearch}
           onFocus={(e) => e.target.select()}
           options={anthemns}
           paginate={true}
           paginationText="Ver más opciones..."
           placeholder="Selecciona un versículo..."
-          ref={ref}
-          selected={anthemnSelection}
+          ref={typeaheadRef}
+          selected={search}
           size="large"
         />
         <div className="small text-muted d-block mt-1">
@@ -172,7 +158,7 @@ export default function AnthemnsView() {
             </List.Item>
 
             <List.Item>
-              <List.Action onClick={() => onTypeaheadChange([birthdayAnthemn])}>
+              <List.Action onClick={() => onSearch([birthdayAnthemn])}>
                 {birthdayAnthemn.title}
               </List.Action>
             </List.Item>
@@ -194,7 +180,7 @@ export default function AnthemnsView() {
           {bookmarkedItems.map((item, index) => {
             return index < ITEMS_PER_LIST ? (
               <List.Item key={item.index}>
-                <List.Action onClick={() => onTypeaheadChange([item])}>
+                <List.Action onClick={() => onSearch([item])}>
                   {item.title}
                 </List.Action>
                 <Bookmark
@@ -238,7 +224,7 @@ export default function AnthemnsView() {
             <Button
               size="sm"
               variant={showLogo ? 'secondary' : 'warning'}
-              onClick={toggleLogo}
+              onClick={() => setShowLogo((value) => !value)}
             >
               {showLogo ? 'Mostrar' : 'No Mostrar'}
             </Button>
@@ -252,10 +238,10 @@ export default function AnthemnsView() {
           onKeyRight={onNextSlide}
           onKeyUp={onNextAnthemn}
           onKeyDown={onPrevAnthemn}
-          onKeyF1={onFocusTypeahead}
+          onKeyF1={() => typeaheadRef.current.focus()}
           onKeySpace={onTogglePlay}
         >
-          {isLoaded ? (
+          {isMP3Loaded ? (
             <div className="d-flex">
               <ImVolumeMute />
               <Form.Control
@@ -271,7 +257,7 @@ export default function AnthemnsView() {
             </div>
           ) : null}
 
-          {isLoaded ? null : (
+          {isMP3Loaded ? null : (
             <small>
               <span className="text-warning">
                 Este himno <strong>NO</strong> dispone de pista.
@@ -282,7 +268,7 @@ export default function AnthemnsView() {
           )}
 
           <div className="d-flex">
-            {isLoaded ? (
+            {isMP3Loaded ? (
               <>
                 {/* <small className="navbar-text text-light">
                   Duración: {msToTime(duration)}
@@ -313,7 +299,7 @@ export default function AnthemnsView() {
             </ButtonGroup>
           </div>
 
-          {isLoaded ? (
+          {isMP3Loaded ? (
             <>
               {' '}
               <div className="d-flex">

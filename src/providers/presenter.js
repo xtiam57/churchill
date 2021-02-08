@@ -1,21 +1,11 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import { CAST_VIEW_PATH } from 'values';
-import { useChannel } from 'hooks';
 
 const PresenterContext = React.createContext({});
 
 const PresenterProvider = ({ children }) => {
   const [presenter, setPresenter] = useState(null);
   const [presenting, setPresenting] = useState(false);
-  const [lastBroadcast, setLastBroadcast] = useState(null);
-  const channel = useChannel();
-
-  useEffect(() => {
-    return () => {
-      setLastBroadcast(null);
-      channel.close();
-    };
-  }, [channel]);
 
   const toggle = useCallback(() => {
     const electron = window.require('electron');
@@ -53,13 +43,12 @@ const PresenterProvider = ({ children }) => {
         win.once('ready-to-show', () => {
           win.show();
           setPresenting(true);
-          setTimeout(() => channel.postMessage(lastBroadcast), 1000);
         });
 
         setPresenter(win);
       }
     });
-  }, [channel, lastBroadcast, presenter]);
+  }, [presenter]);
 
   const close = useCallback(() => {
     if (presenter) {
@@ -76,7 +65,6 @@ const PresenterProvider = ({ children }) => {
         close,
         presenter,
         presenting,
-        setLastBroadcast,
       }}
     >
       {children}

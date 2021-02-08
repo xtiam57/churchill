@@ -12,7 +12,7 @@ export const SPACE_BAR_KEY = 32;
 export const ESCAPE_KEY = 27;
 export const F1_KEY = 112;
 
-export const CHANNEL_NAME = 'broadcasting';
+export const CHANNEL_NAME = 'BROADCASTING_MESSAGE';
 
 export const ITEMS_PER_LIST = 12;
 

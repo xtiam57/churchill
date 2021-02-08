@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button, ButtonGroup, Alert, Form } from 'react-bootstrap';
+import createPersistedState from 'use-persisted-state';
 
 import { ImPlus } from 'react-icons/im';
 
@@ -9,35 +10,26 @@ import { Controls } from 'components/controls';
 import { Sidebar } from 'components/sidebar';
 import { List } from 'components/list';
 
-import { usePresenter, useChannel, useBirthday } from 'hooks';
+import { useBirthday } from 'hooks';
 import { Time } from 'utils';
+import { ITEMS_PER_LIST, CHANNEL_NAME } from 'values';
+
+const useBroadcast = createPersistedState(CHANNEL_NAME);
 
 function BirthdaysView() {
+  const [message, setMessage] = useBroadcast(null);
+
   const [showLogo, setShowLogo] = useState(true);
-  const { setLastBroadcast } = usePresenter();
-  const channel = useChannel();
   const { birthdays, slide } = useBirthday();
 
   useEffect(() => {
-    return () => {
-      setLastBroadcast(null);
-    };
-  }, [setLastBroadcast]);
+    const value = showLogo ? null : slide;
+    setMessage(value);
+  }, [slide, showLogo, setMessage]);
 
   useEffect(() => {
-    return () => {
-      channel.postMessage(null);
-      channel.close();
-    };
-  }, [channel]);
-
-  // useEffect(() => {
-  //   const value = showLogo ? null : slide;
-  //   setLastBroadcast(value);
-  //   channel.postMessage(value);
-  // }, [channel, setLastBroadcast, showLogo, slide]);
-
-  const toggleLogo = () => setShowLogo((value) => !value);
+    return () => setMessage(null);
+  }, []);
 
   const onAdd = () => {};
 
@@ -78,7 +70,7 @@ function BirthdaysView() {
             <Button
               size="sm"
               variant={showLogo ? 'secondary' : 'warning'}
-              onClick={toggleLogo}
+              onClick={() => setShowLogo((value) => !value)}
             >
               {showLogo ? 'Mostrar' : 'No Mostrar'}
             </Button>

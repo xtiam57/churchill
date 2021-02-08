@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Typeahead } from 'react-bootstrap-typeahead';
-import { Button, ButtonGroup, Alert, Form } from 'react-bootstrap';
-
+import { Button, ButtonGroup, Alert } from 'react-bootstrap';
+import createPersistedState from 'use-persisted-state';
 import { ImArrowLeft2, ImArrowRight2 } from 'react-icons/im';
 
 import { Wrapper } from 'components/wrapper';
@@ -11,15 +11,9 @@ import { Sidebar } from 'components/sidebar';
 import { Bookmark, createStorageKey } from 'components/bookmark';
 import { List } from 'components/list';
 
-import {
-  useScriptures,
-  useVerse,
-  useMoveVerse,
-  usePresenter,
-  useChannel,
-} from 'hooks';
+import { useScriptures, useVerse, useMoveVerse } from 'hooks';
 import { Storage } from 'utils';
-import { ITEMS_PER_LIST } from 'values';
+import { ITEMS_PER_LIST, CHANNEL_NAME } from 'values';
 
 const getBookmarkedItems = () => {
   return Storage.getAll('desc')
@@ -27,70 +21,56 @@ const getBookmarkedItems = () => {
     .map((item) => item.value);
 };
 
+const useBroadcast = createPersistedState(CHANNEL_NAME);
+
 function ScripturesView() {
   const verses = useScriptures();
   const { verse, setVerse } = useVerse();
   const { moveChapter, moveVerse } = useMoveVerse();
-  const { setLastBroadcast } = usePresenter();
 
+  const [message, setMessage] = useBroadcast(null);
   const [showLogo, setShowLogo] = useState(true);
-  const [verseSelection, setVerseSelection] = useState([verse]);
+  const [search, setSearch] = useState([verse]);
   const [bookmarkedItems, setBookmarkedItems] = useState(getBookmarkedItems());
 
-  const channel = useChannel();
-  const ref = useRef();
+  const typeaheadRef = useRef();
 
   useEffect(() => {
-    return () => {
-      setLastBroadcast(null);
-    };
-  }, [setLastBroadcast]);
+    setMessage(showLogo ? null : verse);
+  }, [verse, showLogo, setMessage]);
 
   useEffect(() => {
-    return () => {
-      channel.postMessage(null);
-      channel.close();
-    };
-  }, [channel]);
+    return () => setMessage(null);
+  }, []);
 
-  useEffect(() => {
-    const value = showLogo ? null : verse;
-    setLastBroadcast(value);
-    channel.postMessage(value);
-  }, [verse, channel, setLastBroadcast, showLogo]);
-
-  function onTypeaheadChange(event) {
-    setVerseSelection(event);
+  function onSearch(event) {
+    setSearch(event);
 
     if (event.length) {
       setVerse(...event);
-      ref.current.blur();
+      typeaheadRef.current.blur();
     }
   }
 
   const onPrevVerse = () => {
     const verse = moveVerse(-1);
-    setVerseSelection([verse]);
+    setSearch([verse]);
   };
 
   const onNextVerse = () => {
     const verse = moveVerse(1);
-    setVerseSelection([verse]);
+    setSearch([verse]);
   };
 
   const onPrevChapter = () => {
     const verse = moveChapter(-1);
-    setVerseSelection([verse]);
+    setSearch([verse]);
   };
 
   const onNextChapter = () => {
     const verse = moveChapter(1);
-    setVerseSelection([verse]);
+    setSearch([verse]);
   };
-
-  const onFocusTypeahead = () => ref.current.focus();
-
-  const toggleLogo = () => setShowLogo((value) => !value);
 
   const removeBookmarks = () => {
     bookmarkedItems.forEach((item) => {
@@ -109,14 +89,14 @@ function ScripturesView() {
           id="combo"
           labelKey="cite"
           minLength={0}
-          onChange={onTypeaheadChange}
+          onChange={onSearch}
           onFocus={(e) => e.target.select()}
           options={verses}
           paginate={false}
           paginationText="Ver más opciones..."
           placeholder="Selecciona un versículo..."
-          ref={ref}
-          selected={verseSelection}
+          ref={typeaheadRef}
+          selected={search}
           size="large"
         />
         <div className="small text-muted d-block mt-1">
@@ -138,7 +118,7 @@ function ScripturesView() {
           {bookmarkedItems.map((item, index) => {
             return index < ITEMS_PER_LIST ? (
               <List.Item key={item.index}>
-                <List.Action onClick={() => onTypeaheadChange([item])}>
+                <List.Action onClick={() => onSearch([item])}>
                   {item.cite}
                 </List.Action>
                 <Bookmark
@@ -182,7 +162,7 @@ function ScripturesView() {
             <Button
               size="sm"
               variant={showLogo ? 'secondary' : 'warning'}
-              onClick={toggleLogo}
+              onClick={() => setShowLogo((value) => !value)}
             >
               {showLogo ? 'Mostrar' : 'No Mostrar'}
             </Button>
@@ -198,7 +178,7 @@ function ScripturesView() {
           onKeyRight={onNextVerse}
           onKeyUp={onNextChapter}
           onKeyDown={onPrevChapter}
-          onKeyF1={onFocusTypeahead}
+          onKeyF1={() => typeaheadRef.current.focus()}
           centered
         >
           <ButtonGroup>
