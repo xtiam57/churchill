@@ -28,16 +28,17 @@
     "react-scripts": "4.0.0",
     "styled-components": "^5.2.1",
     "styled-system": "^5.1.5",
+    "use-persisted-state": "^0.3.3",
     "use-sound": "^2.0.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "electron-build": "rimraf dist && yarn build && electron-builder",
-    "electron-dev": "concurrently \"set BROWSER=none && yarn run start\" \"wait-on http://localhost:3000 && set ELECTRON_START_URL=http://localhost:3000 && electron .\""
+    "react-start": "react-scripts start",
+    "react-build": "react-scripts build",
+    "react-test": "react-scripts test",
+    "react-eject": "react-scripts eject",
+    "build": "rimraf dist && yarn react-build && electron-builder",
+    "start": "concurrently \"set BROWSER=none && yarn run react-start\" \"wait-on http://localhost:3000 && set ELECTRON_START_URL=http://localhost:3000 && electron .\""
   },
   "eslintConfig": {
     "extends": [
@@ -61,6 +62,7 @@
     "concurrently": "^5.3.0",
     "electron": "^11.2.2",
     "electron-builder": "^22.9.1",
+    "rimraf": "^3.0.2",
     "wait-on": "^5.2.1"
   }
 }

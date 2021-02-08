@@ -5,22 +5,22 @@ Sección Biblia
 * (done) Atajo para enfocar buscador
 * (done) Al usar <= y => del teclado debe ir al versiculo anterior/siguiente
 * (done) Mostra cita
+* (done) Marcar lectura del servicio
 * Búsqueda de palabras
 * Adaptarse  la pantalla
 * Configuración: color de texto, margenes, posición de la cita, color de la cita, color de fondo
 * Palabra de Jesús en rojo
-* Marcar lectura del servicio
 
 Sección Himnos
 --------------
 * (done) Barra de búsqueda de himno
-* Busqueda de palabras
-* Etiquetas
-* Crear programa
-* Guardar configuracion de audio para cada himno
+* (done) Crear programa
 * (done) Al usar <= y => del teclado debe ir a la estrofa anterior/siguiente
 * (done) Pausar/reporducir audio
 * (done) Configuracion de audio: volumen, velocidad, deshabilitar
+* Busqueda de palabras
+* Etiquetas
+* Guardar configuracion de audio para cada himno
 * Configuración: color de texto, margenes, color de fondo, color de coro
 
 Resto

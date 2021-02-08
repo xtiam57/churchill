@@ -17,7 +17,7 @@ const PresenterStyled = styled.section`
   background-color: ${({ bg }) => bg || '#ffffff'};
 
   p {
-    font-style: italic;
+    /* font-style: italic; */
     font-size: calc(1.2em + 3vh);
     margin: 0 0 0.5em;
   }

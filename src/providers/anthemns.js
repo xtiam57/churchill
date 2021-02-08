@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import json from 'assets/data/anthemns/anthemns';
+import json from 'assets/data/anthemns';
 
 const AnthemnsContext = React.createContext({});
 

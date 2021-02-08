@@ -8,7 +8,9 @@ import { Wrapper } from 'components/wrapper';
 import { Presenter } from 'components/presenter';
 import { Controls } from 'components/controls';
 import { Sidebar } from 'components/sidebar';
-import { Bookmark } from 'components/bookmark';
+import { Bookmark, createStorageKey } from 'components/bookmark';
+import { List } from 'components/list';
+
 import {
   useScriptures,
   useVerse,
@@ -16,12 +18,13 @@ import {
   usePresenter,
   useChannel,
 } from 'hooks';
-import { getAllItems } from 'utils';
+import { Storage } from 'utils';
+import { ITEMS_PER_LIST } from 'values';
 
 const getBookmarkedItems = () => {
-  return getAllItems().filter(
-    ({ key }) => key.includes('verse') && key.includes('bookmarked')
-  );
+  return Storage.getAll('desc')
+    .filter(({ key }) => key.includes('verse') && key.includes('bookmarked'))
+    .map((item) => item.value);
 };
 
 function ScripturesView() {
@@ -56,8 +59,6 @@ function ScripturesView() {
     channel.postMessage(value);
   }, [verse, channel, setLastBroadcast, showLogo]);
 
-  useEffect(() => {}, [bookmarkedItems]);
-
   function onTypeaheadChange(event) {
     setVerseSelection(event);
 
@@ -91,9 +92,17 @@ function ScripturesView() {
 
   const toggleLogo = () => setShowLogo((value) => !value);
 
+  const removeBookmarks = () => {
+    bookmarkedItems.forEach((item) => {
+      Storage.remove(createStorageKey(item));
+    });
+    setBookmarkedItems(getBookmarkedItems());
+  };
+
   return (
     <Wrapper>
       <Sidebar>
+        <h1 className="text-light display-4">Escrituras</h1>
         <Typeahead
           emptyLabel="No existe esa opcion."
           highlightOnlyResult={true}
@@ -110,17 +119,45 @@ function ScripturesView() {
           selected={verseSelection}
           size="large"
         />
+        <div className="small text-muted d-block mt-1">
+          Presiona <strong>F1</strong> para buscar.
+        </div>
 
-        {bookmarkedItems.map(({ value }) => (
-          <div key={value.index} className="text-light">
-            {value.cite}{' '}
-            <Bookmark
-              icon
-              element={value}
-              onRefresh={() => setBookmarkedItems(getBookmarkedItems())}
-            />
-          </div>
-        ))}
+        <List>
+          <List.Item>
+            {bookmarkedItems.length ? (
+              <>
+                <List.Title>Marcadores</List.Title>
+                <List.Action className="text-right" onClick={removeBookmarks}>
+                  (Borrar)
+                </List.Action>
+              </>
+            ) : null}
+          </List.Item>
+
+          {bookmarkedItems.map((item, index) => {
+            return index < ITEMS_PER_LIST ? (
+              <List.Item key={item.index}>
+                <List.Action onClick={() => onTypeaheadChange([item])}>
+                  {item.cite}
+                </List.Action>
+                <Bookmark
+                  icon
+                  element={item}
+                  onRefresh={() => setBookmarkedItems(getBookmarkedItems())}
+                />
+              </List.Item>
+            ) : null;
+          })}
+
+          {bookmarkedItems.length > ITEMS_PER_LIST ? (
+            <List.Item>
+              <List.Text>
+                +{bookmarkedItems.length - ITEMS_PER_LIST} marcadores
+              </List.Text>
+            </List.Item>
+          ) : null}
+        </List>
       </Sidebar>
 
       <Wrapper direction="column">
@@ -151,9 +188,11 @@ function ScripturesView() {
             </Button>
           </div>
         </Alert>
-        <Presenter live={!showLogo} cite={verse.cite}>
+
+        <Presenter live={!showLogo} subtext={verse.cite}>
           {verse.text}
         </Presenter>
+
         <Controls
           onKeyLeft={onPrevVerse}
           onKeyRight={onNextVerse}

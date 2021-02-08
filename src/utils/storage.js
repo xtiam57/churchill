@@ -1,4 +1,6 @@
-export const getAllItems = () => {
+const Storage = {};
+
+Storage.getAll = (order = 'asc') => {
   const values = [];
   const keys = Object.keys(localStorage);
   let i = keys.length;
@@ -12,36 +14,40 @@ export const getAllItems = () => {
   }
 
   return values
-    .sort((a, b) => a.timestamp - b.timestamp)
+    .sort((a, b) => (a.timestamp - b.timestamp) * (order === 'asc' ? 1 : -1))
     .map((item) => {
       delete item['timestamp'];
       return item;
     });
 };
 
-export const setItem = (key, value) => {
-  localStorage.setItem(
-    key,
-    JSON.stringify({ value, timestamp: new Date().getTime() })
-  );
+Storage.set = (key, value) => {
+  const item = {
+    value,
+    timestamp: new Date().getTime(),
+  };
+
+  localStorage.setItem(key, JSON.stringify(item));
 };
 
-export const getItem = (key) => {
-  const item = localStorage.getItem(key);
+Storage.get = (key) => {
+  let item = localStorage.getItem(key);
 
   if (item) {
-    delete item['timestamp'];
+    item = JSON.parse(item);
+    item = item.value;
   }
 
-  return item ? JSON.parse(item) : null;
+  return item;
 };
 
-export const removeItem = (key) => {
+Storage.remove = (key) => {
   localStorage.removeItem(key);
 };
 
-export const hasItem = (key) => {
+Storage.has = (key) => {
   const item = localStorage.getItem(key);
-
   return item !== null;
 };
+
+export { Storage };

@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { BsBookmarkPlus, BsBookmarkFill } from 'react-icons/bs';
 
 import { BookmarkStyled } from './style';
-import { setItem, hasItem, removeItem } from 'utils';
+import { Storage } from 'utils';
 
-const createStorageKey = ({ index, type }) => `${type}_${index}_bookmarked`;
+export const createStorageKey = ({ index, type }) =>
+  `${type}_${index}_bookmarked`;
 
 export function Bookmark({
   element,
@@ -13,10 +14,10 @@ export function Bookmark({
   ...rest
 }) {
   const [bookmarked, setBookmarked] = useState(false);
-  const inStorage = hasItem(createStorageKey(element));
+  const inStorage = Storage.has(createStorageKey(element));
 
   useEffect(() => {
-    setBookmarked(hasItem(createStorageKey(element)));
+    setBookmarked(Storage.has(createStorageKey(element)));
   }, [element, inStorage]);
 
   return (
@@ -24,7 +25,7 @@ export function Bookmark({
       {bookmarked ? (
         <BsBookmarkFill
           onClick={() => {
-            removeItem(createStorageKey(element));
+            Storage.remove(createStorageKey(element));
             setBookmarked((state) => !state);
             onRefresh();
           }}
@@ -32,7 +33,7 @@ export function Bookmark({
       ) : (
         <BsBookmarkPlus
           onClick={() => {
-            setItem(createStorageKey(element), element);
+            Storage.set(createStorageKey(element), element);
             setBookmarked((state) => !state);
             onRefresh();
           }}

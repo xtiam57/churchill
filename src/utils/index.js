@@ -1,3 +1,4 @@
 export { isFunction } from './isFunction';
-export { msToTime } from './msToTime';
-export { getAllItems, setItem, getItem, removeItem, hasItem } from './storage';
+export { Time } from './time';
+export { Storage } from './storage';
+export { generateGUID } from './generateGUID';

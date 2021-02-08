@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import json from 'assets/data/bible/_index';
+import json from 'assets/data/bible';
 
 const ScripturesContext = React.createContext({});
 

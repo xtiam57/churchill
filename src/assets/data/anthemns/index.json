@@ -5877,7 +5877,8 @@
     "stanzas": [
       "1) He decidido seguir a Cristo,/nHe decidido seguir a Cristo,/nHe decidido seguir a Cristo;/nNo vuelvo atrás, no vuelvo atrás.",
       "2) El Rey de gloria me ha transformado,/nEl Rey de gloria me ha transformado,/nEl Rey de gloria me ha transformado;/nNo vuelvo atrás, no vuelvo atrás.",
-      "3) La vida vieja ya he dejado,/nLa vida vieja ya he dejado,/nLa vida vieja ya he dejado;/nNo vuelvo atrás, no vuelvo atrás."
+      "3) La vida vieja ya he dejado,/nLa vida vieja ya he dejado,/nLa vida vieja ya he dejado;/nNo vuelvo atrás, no vuelvo atrás.",
+      "4) He decidido seguir a Cristo,/nHe decidido seguir a Cristo,/nHe decidido seguir a Cristo;/nNo vuelvo atrás, no vuelvo atrás."
     ],
     "startsWithChorus": false,
     "tags": null
@@ -6560,5 +6561,16 @@
     ],
     "startsWithChorus": false,
     "tags": null
+  },
+  {
+    "number": 531,
+    "title": "LA IGLESIA SIGUE CAMINANDO",
+    "chorus": null,
+    "stanzas": [
+      "1) ¡Oh, Gloria, Aleluya!/nLa Iglesia sigue caminando,/n¡Oh, Gloria, Aleluya!/nLa Iglesia sigue caminando,/nSolo se detiene para predicar.",
+      "2) En las luchas y en las pruebas,/nLa Iglesia sigue caminando,/nPor lo montes y los valles,/nLa Iglesia sigue caminando,/nSolo se detiene para predicar."
+    ],
+    "startsWithChorus": false,
+    "tags": "corito"
   }
 ]

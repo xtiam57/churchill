@@ -11,8 +11,14 @@ import AnthemnsView from 'views/anthemns';
 import CastView from 'views/cast';
 import HomeView from 'views/home';
 import ScripturesView from 'views/scriptures';
+import BirthdaysView from 'views/birthdays';
 
-import { ANTHEMNS_VIEW_PATH, BIBLE_VIEW_PATH, CAST_VIEW_PATH } from 'values';
+import {
+  ANTHEMNS_VIEW_PATH,
+  BIBLE_VIEW_PATH,
+  BIRTHDAYS_VIEW_PATH,
+  CAST_VIEW_PATH,
+} from 'values';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'react-bootstrap-typeahead/css/Typeahead.css';
@@ -34,6 +40,12 @@ function App() {
           <Route path={ANTHEMNS_VIEW_PATH}>
             <AnthemnsProvider>
               <AnthemnsView />
+            </AnthemnsProvider>
+          </Route>
+
+          <Route path={BIRTHDAYS_VIEW_PATH}>
+            <AnthemnsProvider>
+              <BirthdaysView />
             </AnthemnsProvider>
           </Route>
 

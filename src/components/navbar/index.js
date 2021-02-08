@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
-import { BsMusicNoteList, BsBook } from 'react-icons/bs';
+import { Button, Tooltip } from 'react-bootstrap';
+import { BsMusicNoteList, BsBook, BsGift } from 'react-icons/bs';
 import { RiSlideshow2Fill, RiStopFill } from 'react-icons/ri';
-import { ANTHEMNS_VIEW_PATH, BIBLE_VIEW_PATH, CAST_VIEW_PATH } from 'values';
+import {
+  ANTHEMNS_VIEW_PATH,
+  BIBLE_VIEW_PATH,
+  BIRTHDAYS_VIEW_PATH,
+  CAST_VIEW_PATH,
+} from 'values';
 import { usePresenter } from 'hooks';
 
 export function Navbar() {
@@ -43,6 +48,15 @@ export function Navbar() {
                 activeClassName="active"
               >
                 <BsMusicNoteList /> Himnos
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                to={BIRTHDAYS_VIEW_PATH}
+                className="nav-link"
+                activeClassName="active"
+              >
+                <BsGift /> Cumpleaños
               </NavLink>
             </li>
           </ul>

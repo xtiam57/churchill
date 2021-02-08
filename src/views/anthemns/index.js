@@ -15,7 +15,8 @@ import { Presenter } from 'components/presenter';
 import { Sidebar } from 'components/sidebar';
 import { Wrapper } from 'components/wrapper';
 import { Controls } from 'components/controls';
-import { Bookmark } from 'components/bookmark';
+import { Bookmark, createStorageKey } from 'components/bookmark';
+import { List } from 'components/list';
 
 import {
   useAnthemns,
@@ -24,15 +25,17 @@ import {
   useMoveSlide,
   usePresenter,
   useChannel,
+  useBirthday,
 } from 'hooks';
-import { getAllItems } from 'utils';
+import { Storage } from 'utils';
+import { ITEMS_PER_LIST } from 'values';
 
 const createAnthemnPath = (number) => `himnos/${number}.mp3`;
 
 const getBookmarkedItems = () => {
-  return getAllItems().filter(
-    ({ key }) => key.includes('anthemn') && key.includes('bookmarked')
-  );
+  return Storage.getAll('desc')
+    .filter(({ key }) => key.includes('anthemn') && key.includes('bookmarked'))
+    .map((item) => item.value);
 };
 
 export default function AnthemnsView() {
@@ -41,6 +44,7 @@ export default function AnthemnsView() {
   const { moveSlide, slide, setSlide } = useMoveSlide();
   const { moveAnthemn } = useMoveAnthemn();
   const { setLastBroadcast } = usePresenter();
+  const { birthdays, birthdayAnthemn } = useBirthday();
 
   const [showLogo, setShowLogo] = useState(true);
   const [anthemnSelection, setAnthemnSelection] = useState([anthemn]);
@@ -124,9 +128,17 @@ export default function AnthemnsView() {
 
   const toggleLogo = () => setShowLogo((value) => !value);
 
+  const removeBookmarks = () => {
+    bookmarkedItems.forEach((item) => {
+      Storage.remove(createStorageKey(item));
+    });
+    setBookmarkedItems(getBookmarkedItems());
+  };
+
   return (
     <Wrapper>
       <Sidebar>
+        <h1 className="text-light display-4">Himnos</h1>
         <Typeahead
           emptyLabel="No existe esa opcion."
           highlightOnlyResult={true}
@@ -143,17 +155,65 @@ export default function AnthemnsView() {
           selected={anthemnSelection}
           size="large"
         />
+        <div className="small text-muted d-block mt-1">
+          Presiona <strong>F1</strong> para buscar.
+        </div>
 
-        {bookmarkedItems.map(({ value }) => (
-          <div key={value.index} className="text-light">
-            {value.title}{' '}
-            <Bookmark
-              icon
-              element={value}
-              onRefresh={() => setBookmarkedItems(getBookmarkedItems())}
-            />
-          </div>
-        ))}
+        {birthdays.length ? (
+          <List>
+            <List.Item>
+              {bookmarkedItems.length ? (
+                <>
+                  <List.Title>
+                    Cumpleaños detectados ({birthdays.length})
+                  </List.Title>
+                </>
+              ) : null}
+            </List.Item>
+
+            <List.Item>
+              <List.Action onClick={() => onTypeaheadChange([birthdayAnthemn])}>
+                {birthdayAnthemn.title}
+              </List.Action>
+            </List.Item>
+          </List>
+        ) : null}
+
+        <List>
+          <List.Item>
+            {bookmarkedItems.length ? (
+              <>
+                <List.Title>Marcadores</List.Title>
+                <List.Action className="text-right" onClick={removeBookmarks}>
+                  (Borrar)
+                </List.Action>
+              </>
+            ) : null}
+          </List.Item>
+
+          {bookmarkedItems.map((item, index) => {
+            return index < ITEMS_PER_LIST ? (
+              <List.Item key={item.index}>
+                <List.Action onClick={() => onTypeaheadChange([item])}>
+                  {item.title}
+                </List.Action>
+                <Bookmark
+                  icon
+                  element={item}
+                  onRefresh={() => setBookmarkedItems(getBookmarkedItems())}
+                />
+              </List.Item>
+            ) : null;
+          })}
+
+          {bookmarkedItems.length > ITEMS_PER_LIST ? (
+            <List.Item>
+              <List.Text>
+                +{bookmarkedItems.length - ITEMS_PER_LIST} marcadores
+              </List.Text>
+            </List.Item>
+          ) : null}
+        </List>
       </Sidebar>
 
       <Wrapper direction="column">

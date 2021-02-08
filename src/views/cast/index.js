@@ -16,9 +16,11 @@ export default function Cast() {
   console.log(message);
 
   return (
-    <Wrapper bare centered>
+    <Wrapper bare centered type={message?.type}>
       {message ? (
-        <Presenter cite={message.cite}>{message.text}</Presenter>
+        <Presenter subtext={message.subtext || message.cite}>
+          {message.text}
+        </Presenter>
       ) : (
         <Logo width="65%" height="65%" />
       )}
