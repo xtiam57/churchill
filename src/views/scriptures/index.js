@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Typeahead } from 'react-bootstrap-typeahead';
+import { Typeahead, Highlighter } from 'react-bootstrap-typeahead';
 import { Button, ButtonGroup, Alert } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
 import { ImArrowLeft2, ImArrowRight2 } from 'react-icons/im';
@@ -13,7 +13,12 @@ import { List } from 'components/list';
 
 import { useVerse, useMoveVerse } from 'hooks';
 import { Storage } from 'utils';
-import { ITEMS_PER_LIST, CHANNEL_NAME, SETTINGS_NAME, THEMES } from 'values';
+import {
+  ITEMS_PER_LIST,
+  CHANNEL_NAME,
+  SETTINGS_NAME,
+  SETTINGS_INITIAL_STATE,
+} from 'values';
 
 const getBookmarkedItems = () => {
   return Storage.getAll('desc')
@@ -28,8 +33,8 @@ function ScripturesView() {
   const { scriptures, verse, setVerse } = useVerse();
   const { moveChapter, moveVerse } = useMoveVerse();
 
-  const [message, setMessage] = useBroadcast(null);
-  const [settings] = useSettings(THEMES['default']);
+  const [, setMessage] = useBroadcast(null);
+  const [settings] = useSettings(SETTINGS_INITIAL_STATE);
   const [showLogo, setShowLogo] = useState(true);
   const [search, setSearch] = useState([verse]);
   const [bookmarkedItems, setBookmarkedItems] = useState(getBookmarkedItems());
@@ -42,7 +47,7 @@ function ScripturesView() {
 
   useEffect(() => {
     return () => setMessage(null);
-  }, []);
+  }, [setMessage]);
 
   function onSearch(event) {
     setSearch(event);
@@ -99,6 +104,18 @@ function ScripturesView() {
           ref={typeaheadRef}
           selected={search}
           size="large"
+          renderMenuItemChildren={(option, { text }) => (
+            <>
+              <Highlighter search={text}>{option.cite}</Highlighter>
+              <small
+                className="d-block overflow-hidden font-italic"
+                style={{ textOverflow: 'ellipsis' }}
+                title={option.text.replaceAll('<br/>', '\n')}
+              >
+                {option.text.replaceAll('<br/>', ' ')}
+              </small>
+            </>
+          )}
         />
         <div className="small text-muted d-block mt-1">
           Presiona <strong>F1</strong> para buscar.
@@ -178,19 +195,15 @@ function ScripturesView() {
           {verse.text}
         </Presenter>
 
-        <small
-          className="text-muted position-absolute"
-          style={{
-            bottom: '65px',
-            left: '315px',
-          }}
-        >
-          Usa las teclas <strong className="text-primary">&larr;</strong> y{' '}
-          <strong className="text-primary">&rarr;</strong> para cambiar de
-          versículo, y <strong className="text-primary">&uarr;</strong> y{' '}
-          <strong className="text-primary">&darr;</strong> para cambiar de
-          capítulo.
-        </small>
+        <div className="text-muted bg-white py-2 px-3 d-flex justify-content-between">
+          <small>
+            Usa las teclas <strong className="text-primary">&larr;</strong> y{' '}
+            <strong className="text-primary">&rarr;</strong> para cambiar de
+            versículo, y <strong className="text-primary">&uarr;</strong> y{' '}
+            <strong className="text-primary">&darr;</strong> para cambiar de
+            capítulo.
+          </small>
+        </div>
 
         <Controls
           onKeyLeft={onPrevVerse}

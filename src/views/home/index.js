@@ -7,22 +7,14 @@ import { Presenter } from 'components/presenter';
 import { Controls } from 'components/controls';
 import { Sidebar } from 'components/sidebar';
 
-import { CHANNEL_NAME, SETTINGS_NAME } from 'values';
+import { CHANNEL_NAME, SETTINGS_NAME, SETTINGS_INITIAL_STATE } from 'values';
 
 const useBroadcast = createPersistedState(CHANNEL_NAME);
 const useSettings = createPersistedState(SETTINGS_NAME);
 
 function HomeView() {
   const [message, setMessage] = useBroadcast(null);
-  const [settings, setSettings] = useSettings({
-    logo: 'default', // jovenes | damas | rondalla | niños
-    mode: 'default', // negative
-    theme: 'default', // cobalto | dracula
-    background: '#fff',
-    textColor: '#000',
-    titleColor: '#007bff',
-    subtextColor: '#007bff',
-  });
+  const [settings] = useSettings(SETTINGS_INITIAL_STATE);
 
   return (
     <Wrapper>

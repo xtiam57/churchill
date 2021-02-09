@@ -13,7 +13,7 @@ import { List } from 'components/list';
 
 import { useBirthday } from 'hooks';
 import { Time, Storage } from 'utils';
-import { CHANNEL_NAME, SETTINGS_NAME, THEMES } from 'values';
+import { CHANNEL_NAME, SETTINGS_NAME, SETTINGS_INITIAL_STATE } from 'values';
 import { BirthdayModal } from './modal';
 
 const useBroadcast = createPersistedState(CHANNEL_NAME);
@@ -26,8 +26,8 @@ const getBirthdayItems = () => {
 };
 
 function BirthdaysView() {
-  const [message, setMessage] = useBroadcast(null);
-  const [settings] = useSettings(THEMES['default']);
+  const [, setMessage] = useBroadcast(null);
+  const [settings] = useSettings(SETTINGS_INITIAL_STATE);
 
   const [show, setShow] = useState(false);
   const [showLogo, setShowLogo] = useState(true);
@@ -40,7 +40,7 @@ function BirthdaysView() {
 
   useEffect(() => {
     return () => setMessage(null);
-  }, []);
+  }, [setMessage]);
 
   const onSave = (data) => {
     add(data);

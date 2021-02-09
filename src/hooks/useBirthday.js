@@ -32,20 +32,27 @@ function getBirthdays(now) {
 }
 
 function getSlide(birthdays) {
-  return {
-    text: `<strong class="text-primary">¡Feliz Cumpleaños!</strong><br/>
+  return birthdays.length
+    ? {
+        text: `<strong class="text-primary">¡Feliz Cumpleaños!</strong><br/>
           ${birthdays
             .map(({ name, day, month }) => {
               return `${name} <i>(${Time.formatBirthday(day, month)})</i>`;
             })
             .join('<br/>')}`,
-    subtext: `Deseamos que Dios le${birthdays.length > 1 ? 's' : ''} bendiga.`,
-    type: 'birthday',
-  };
+        subtext: `Deseamos que Dios le${
+          birthdays.length > 1 ? 's' : ''
+        } bendiga.`,
+        type: 'birthday',
+      }
+    : {
+        text: `No hay cumpleaños que mostrar.`,
+        type: 'birthday',
+      };
 }
 
 export function useBirthday() {
-  const [now, setNow] = useState(new Date());
+  const [now] = useState(new Date());
   const birthdays = getBirthdays(now);
   const [slide, setSlide] = useState(getSlide(birthdays));
 

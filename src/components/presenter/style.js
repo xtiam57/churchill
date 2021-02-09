@@ -17,15 +17,15 @@ const PresenterStyled = styled.section`
   p {
     font-size: calc(1.2em + 3vh);
     margin: 0 0 0.5em;
-    color: ${({ textColor }) => textColor || '#000'};
+    color: ${({ textcolor }) => textcolor || '#000'};
 
     strong {
-      color: ${({ titleColor }) => titleColor || '#007bff'} !important;
+      color: ${({ titlecolor }) => titlecolor || '#007bff'} !important;
     }
   }
 
   cite {
-    color: ${({ subtextColor }) => subtextColor || '#007bff'};
+    color: ${({ subtextcolor }) => subtextcolor || '#007bff'};
     font-size: calc(1.2em + 1vh);
   }
 `;

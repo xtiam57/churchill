@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Typeahead } from 'react-bootstrap-typeahead';
+import { Typeahead, Highlighter } from 'react-bootstrap-typeahead';
 import { Button, ButtonGroup, Alert, Form } from 'react-bootstrap';
 import {
   ImArrowLeft2,
@@ -20,8 +20,13 @@ import { Bookmark, createStorageKey } from 'components/bookmark';
 import { List } from 'components/list';
 
 import { useAnthemn, useMoveAnthemn, useMoveSlide, useBirthday } from 'hooks';
-import { Storage } from 'utils';
-import { ITEMS_PER_LIST, CHANNEL_NAME, SETTINGS_NAME, THEMES } from 'values';
+import { Storage, Time } from 'utils';
+import {
+  ITEMS_PER_LIST,
+  CHANNEL_NAME,
+  SETTINGS_NAME,
+  SETTINGS_INITIAL_STATE,
+} from 'values';
 
 const getMP3Path = (number) => `himnos/${number}.mp3`;
 
@@ -40,8 +45,8 @@ export default function AnthemnsView() {
   const { moveAnthemn } = useMoveAnthemn();
   const { birthdays, birthdayAnthemn } = useBirthday();
 
-  const [message, setMessage] = useBroadcast(null);
-  const [settings] = useSettings(THEMES['default']);
+  const [, setMessage] = useBroadcast(null);
+  const [settings] = useSettings(SETTINGS_INITIAL_STATE);
   const [showLogo, setShowLogo] = useState(true);
   const [search, setSearch] = useState([song]);
   const [bookmarkedItems, setBookmarkedItems] = useState(getBookmarkedItems());
@@ -77,7 +82,7 @@ export default function AnthemnsView() {
 
   useEffect(() => {
     return () => setMessage(null);
-  }, []);
+  }, [setMessage]);
 
   function onSearch(event) {
     setSearch(event);
@@ -135,6 +140,27 @@ export default function AnthemnsView() {
           ref={typeaheadRef}
           selected={search}
           size="large"
+          renderMenuItemChildren={(option, { text }) => (
+            <>
+              <Highlighter search={text}>{option.title}</Highlighter>
+              <small
+                className="d-block overflow-hidden font-italic"
+                style={{ textOverflow: 'ellipsis' }}
+                title={option.slides[1].text
+                  .replaceAll('<br/>', '\n')
+                  .replaceAll('1)', '')}
+              >
+                {option.slides[1].text
+                  .replaceAll('<br/>', ' ')
+                  .replaceAll('1)', '')}
+              </small>
+              {option.tags ? (
+                <small class="badge bg-secondary text-light">
+                  ({option.tags})
+                </small>
+              ) : null}
+            </>
+          )}
         />
         <div className="small text-muted d-block mt-1">
           Presiona <strong>F1</strong> para buscar.
@@ -143,13 +169,16 @@ export default function AnthemnsView() {
         {birthdays.length ? (
           <List>
             <List.Item>
-              {bookmarkedItems.length ? (
-                <>
-                  <List.Title className="text-warning">
-                    Cumpleaños detectados ({birthdays.length})
-                  </List.Title>
-                </>
-              ) : null}
+              <List.Title
+                className="text-warning"
+                title={birthdays.reduce(
+                  (res, { name, day, month }) =>
+                    `${res}${name} (${Time.formatBirthday(day, month)})\n`,
+                  ''
+                )}
+              >
+                Cumpleaños detectados ({birthdays.length})
+              </List.Title>
             </List.Item>
 
             <List.Item>
@@ -234,29 +263,18 @@ export default function AnthemnsView() {
           {slide.text}
         </Presenter>
 
-        <small
-          className="text-muted position-absolute"
-          style={{
-            bottom: '65px',
-            left: '315px',
-          }}
-        >
-          Usa las teclas <strong className="text-primary">&larr;</strong> y{' '}
-          <strong className="text-primary">&rarr;</strong> para cambiar de
-          lámina, y <strong className="text-primary">&uarr;</strong> y{' '}
-          <strong className="text-primary">&darr;</strong> para cambiar de
-          himno.
-        </small>
-
-        <small
-          className="text-muted position-absolute"
-          style={{
-            bottom: '65px',
-            right: '15px',
-          }}
-        >
-          {slide.index + 1}/{song.length}
-        </small>
+        <div className="text-muted bg-white py-2 px-3 d-flex justify-content-between">
+          <small>
+            Usa las teclas <strong className="text-primary">&larr;</strong> y{' '}
+            <strong className="text-primary">&rarr;</strong> para cambiar de
+            lámina, y <strong className="text-primary">&uarr;</strong> y{' '}
+            <strong className="text-primary">&darr;</strong> para cambiar de
+            himno.
+          </small>
+          <small>
+            {slide.index + 1}/{song.length}
+          </small>
+        </div>
 
         <Controls
           onKeyLeft={onPrevSlide}

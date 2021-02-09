@@ -4,7 +4,6 @@ import { Button, Form, Col, InputGroup } from 'react-bootstrap';
 
 import { Wrapper } from 'components/wrapper';
 import { Presenter } from 'components/presenter';
-import { Controls } from 'components/controls';
 import { Sidebar } from 'components/sidebar';
 import { Logo } from 'components/logo';
 
@@ -16,7 +15,10 @@ const useSettings = createPersistedState(SETTINGS_NAME);
 function SettingsView() {
   const [showLogo, setShowLogo] = useState(false);
   const [message, setMessage] = useBroadcast(null);
-  const [settings, setSettings] = useSettings(THEMES['default']);
+  const [settings, setSettings] = useSettings({
+    logo: 'default',
+    ...THEMES['default'],
+  });
 
   const onChangeColor = ({ target }) => {
     const { name, value } = target;
@@ -25,8 +27,8 @@ function SettingsView() {
 
   const onChangeTheme = ({ target }) => {
     const { value } = target;
-    const colors = value !== 'custom' ? THEMES[value] : {};
-    setSettings((state) => ({ ...state, theme: value, ...colors }));
+    const data = value !== 'custom' ? THEMES[value] : {};
+    setSettings((state) => ({ ...state, theme: value, ...data }));
   };
 
   return (
@@ -52,7 +54,7 @@ function SettingsView() {
               <Form.Control
                 as="select"
                 size="sm"
-                value={settings.logo}
+                value={settings?.logo}
                 onChange={({ target }) =>
                   setSettings((state) => ({ ...state, logo: target.value }))
                 }
@@ -68,7 +70,7 @@ function SettingsView() {
               <Form.Control
                 as="select"
                 size="sm"
-                value={settings.mode}
+                value={settings?.mode}
                 onChange={({ target }) =>
                   setSettings((state) => ({ ...state, mode: target.value }))
                 }
@@ -86,7 +88,7 @@ function SettingsView() {
             <Form.Control
               size="sm"
               as="select"
-              value={settings.theme}
+              value={settings?.theme}
               onChange={onChangeTheme}
             >
               <option value="default">Predeterminado</option>
@@ -100,7 +102,7 @@ function SettingsView() {
           </Form.Group>
         </Form.Row>
 
-        {settings.theme === 'custom' ? (
+        {settings?.theme === 'custom' ? (
           <>
             <Form.Row>
               <Form.Group as={Col} className="mb-1">
@@ -109,9 +111,9 @@ function SettingsView() {
                   size="sm"
                   type="color"
                   name="background"
-                  value={settings.background}
+                  value={settings?.background}
                   onChange={onChangeColor}
-                  disabled={settings.theme !== 'custom'}
+                  disabled={settings?.theme !== 'custom'}
                 />
               </Form.Group>
               <Form.Group as={Col} className="mb-1">
@@ -119,10 +121,10 @@ function SettingsView() {
                 <Form.Control
                   type="color"
                   size="sm"
-                  name="textColor"
-                  value={settings.textColor}
+                  name="textcolor"
+                  value={settings?.textcolor}
                   onChange={onChangeColor}
-                  disabled={settings.theme !== 'custom'}
+                  disabled={settings?.theme !== 'custom'}
                 />
               </Form.Group>
             </Form.Row>
@@ -133,10 +135,10 @@ function SettingsView() {
                 <Form.Control
                   size="sm"
                   type="color"
-                  name="subtextColor"
-                  value={settings.subtextColor}
+                  name="subtextcolor"
+                  value={settings?.subtextcolor}
                   onChange={onChangeColor}
-                  disabled={settings.theme !== 'custom'}
+                  disabled={settings?.theme !== 'custom'}
                 />
               </Form.Group>
               <Form.Group as={Col} className="mb-1">
@@ -146,10 +148,10 @@ function SettingsView() {
                 <Form.Control
                   size="sm"
                   type="color"
-                  name="titleColor"
-                  value={settings.titleColor}
+                  name="titlecolor"
+                  value={settings?.titlecolor}
                   onChange={onChangeColor}
-                  disabled={settings.theme !== 'custom'}
+                  disabled={settings?.theme !== 'custom'}
                 />
               </Form.Group>
             </Form.Row>
@@ -161,13 +163,13 @@ function SettingsView() {
         {showLogo ? (
           <Logo width="65%" height="65%" {...settings} />
         ) : (
-          <Presenter subtext="Fusce lectus libero" {...settings}>{`
-            <strong>Nulla bibendum dignissim</strong>
-            <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare
-            metus dignissim augue fermentum dictum. Mauris facilisis ultrices
-            nibh, ut convallis felis placerat non.
-          `}</Presenter>
+          <Presenter subtext="Fusce lectus libero" {...settings}>
+            {`<strong>Nulla bibendum dignissim</strong>
+              <br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare
+              metus dignissim augue fermentum dictum. Mauris facilisis ultrices
+              nibh, ut convallis felis placerat non.`}
+          </Presenter>
         )}
       </Wrapper>
     </Wrapper>

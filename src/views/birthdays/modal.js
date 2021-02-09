@@ -5,7 +5,7 @@ export function BirthdayModal({ show, handleClose, handleSave }) {
   const [name, setName] = useState(null);
   const [month, setMonth] = useState(1);
   const [day, setDay] = useState(1);
-  const [validated, setValidated] = useState(true);
+  const [validated] = useState(true);
 
   const save = () => {
     handleSave({

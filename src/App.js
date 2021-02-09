@@ -30,39 +30,37 @@ function App() {
   return (
     <Router>
       <PresenterProvider>
-        <Navbar />
+        <ScripturesProvider>
+          <AnthemnsProvider>
+            <Navbar />
 
-        <Switch>
-          <Route path={BIBLE_VIEW_PATH}>
-            <ScripturesProvider>
-              <ScripturesView />
-            </ScripturesProvider>
-          </Route>
+            <Switch>
+              <Route path={BIBLE_VIEW_PATH}>
+                <ScripturesView />
+              </Route>
 
-          <Route path={ANTHEMNS_VIEW_PATH}>
-            <AnthemnsProvider>
-              <AnthemnsView />
-            </AnthemnsProvider>
-          </Route>
+              <Route path={ANTHEMNS_VIEW_PATH}>
+                <AnthemnsView />
+              </Route>
 
-          <Route path={BIRTHDAYS_VIEW_PATH}>
-            <AnthemnsProvider>
-              <BirthdaysView />
-            </AnthemnsProvider>
-          </Route>
+              <Route path={BIRTHDAYS_VIEW_PATH}>
+                <BirthdaysView />
+              </Route>
 
-          <Route path={CAST_VIEW_PATH}>
-            <CastView />
-          </Route>
+              <Route path={CAST_VIEW_PATH}>
+                <CastView />
+              </Route>
 
-          <Route path={SETTINGS_VIEW_PATH}>
-            <SettingsView />
-          </Route>
+              <Route path={SETTINGS_VIEW_PATH}>
+                <SettingsView />
+              </Route>
 
-          <Route path="/">
-            <HomeView />
-          </Route>
-        </Switch>
+              <Route path="/">
+                <HomeView />
+              </Route>
+            </Switch>
+          </AnthemnsProvider>
+        </ScripturesProvider>
       </PresenterProvider>
     </Router>
   );
