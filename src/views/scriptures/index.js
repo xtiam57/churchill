@@ -192,7 +192,12 @@ function ScripturesView() {
           </div>
         </Alert>
 
-        <Presenter live={!showLogo} subtext={verse.cite} {...settings}>
+        <Presenter
+          live={!showLogo}
+          subtext={verse.cite}
+          size={verse.size}
+          {...settings}
+        >
           {verse.text}
         </Presenter>
 

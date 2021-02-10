@@ -4,6 +4,34 @@ import { Slide } from 'utils';
 
 const AnthemnsContext = React.createContext({});
 
+function splitLines(title, text, array, index) {
+  const lines = text.split('/n');
+
+  if (lines.length > 5) {
+    const divider = lines.length > 10 ? 3 : 2;
+    const size = Math.ceil(lines.length / divider);
+
+    [...Array(divider).keys()].forEach((i) => {
+      array.push(
+        Slide.create({
+          title: i === 0 ? title : null,
+          text: lines.slice(i * size, (1 + i) * size).join('/n'),
+          index: index++,
+        })
+      );
+    });
+  } else {
+    array.push(
+      Slide.create({
+        title,
+        text: text,
+        index: index++,
+      })
+    );
+  }
+  return index;
+}
+
 function AnthemnsProvider({ children }) {
   const anthemns = useMemo(() => {
     return json.map(
@@ -24,56 +52,18 @@ function AnthemnsProvider({ children }) {
         );
 
         if (startsWithChorus) {
-          slides.push(
-            Slide.create({
-              title: 'Coro',
-              text: chorus,
-              index: slideIndex++,
-            })
-          );
+          slideIndex = splitLines('Coro', chorus, slides, slideIndex);
         }
 
         stanzas.forEach((stanza) => {
-          const lines = stanza.split('/n');
-
-          if (lines.length > 5) {
-            const divider = lines.length > 10 ? 3 : 2;
-            const size = Math.ceil(lines.length / divider);
-
-            [...Array(divider).keys()].forEach((i) => {
-              slides.push(
-                Slide.create({
-                  text: lines.slice(i * size, (1 + i) * size).join('/n'),
-                  index: slideIndex++,
-                })
-              );
-            });
-          } else {
-            slides.push(
-              Slide.create({
-                text: stanza,
-                index: slideIndex++,
-              })
-            );
-          }
+          slideIndex = splitLines(null, stanza, slides, slideIndex);
 
           if (chorus) {
-            slides.push(
-              Slide.create({
-                title: 'Coro',
-                text: chorus,
-                index: slideIndex++,
-              })
-            );
+            slideIndex = splitLines('Coro', chorus, slides, slideIndex);
           }
         });
 
-        slides.push(
-          Slide.create({
-            text: '&#119070;',
-            index: slideIndex++,
-          })
-        );
+        slides.push(Slide.create({ text: '&#119070;', index: slideIndex }));
 
         return {
           index,

@@ -3,6 +3,22 @@ import json from 'assets/data/bible';
 
 const ScripturesContext = React.createContext({});
 
+function getSize(length) {
+  if (length > 360) {
+    return 'xl';
+  }
+  if (length > 300 && length <= 360) {
+    return 'lg';
+  }
+  if (length > 50 && length <= 100) {
+    return 'sm';
+  }
+  if (length <= 50) {
+    return 'xs';
+  }
+  return null;
+}
+
 function ScripturesProvider({ children }) {
   const scriptures = useMemo(() => {
     let index = 0;
@@ -14,25 +30,9 @@ function ScripturesProvider({ children }) {
       };
     });
 
-    let meta = { vmin: null, vmax: null, max: 0, min: 99999 };
-
     return data.reduce((verses, book) => {
       const chaptersExpanded = book.content.map((chapter, chapterIndex) => {
         return chapter.map((verse, verseIndex) => {
-          let l = verse.length;
-          if (l <= meta.min) {
-            meta.min = l;
-            meta.vmin = `${book.shortTitle} ${chapterIndex + 1}:${
-              verseIndex + 1
-            }`;
-          }
-          if (l > meta.max) {
-            meta.max = l;
-            meta.vmax = `${book.shortTitle} ${chapterIndex + 1}:${
-              verseIndex + 1
-            }`;
-          }
-
           return {
             // Verse data
             index: index++,
@@ -45,6 +45,7 @@ function ScripturesProvider({ children }) {
             verseNumber: verseIndex + 1,
             chaptersCount: book.chapters,
             versesCount: book.verses,
+            size: getSize(verse.length),
             // Next and prev data
             nextBookNumber: Math.min(book.number + 1, 66),
             prevBookNumber: Math.max(book.number - 1, 1),
@@ -53,8 +54,6 @@ function ScripturesProvider({ children }) {
           };
         });
       });
-
-      // console.log(meta);
 
       chaptersExpanded.forEach((chapterExpanded) => {
         verses.push(...chapterExpanded);
