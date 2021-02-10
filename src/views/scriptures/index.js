@@ -12,19 +12,13 @@ import { Bookmark, createStorageKey } from 'components/bookmark';
 import { List } from 'components/list';
 
 import { useVerse, useMoveVerse } from 'hooks';
-import { Storage } from 'utils';
+import { Storage, getBookmarkedItems } from 'utils';
 import {
   ITEMS_PER_LIST,
   CHANNEL_NAME,
   SETTINGS_NAME,
   SETTINGS_INITIAL_STATE,
 } from 'values';
-
-const getBookmarkedItems = () => {
-  return Storage.getAll('desc')
-    .filter(({ key }) => key.includes('verse') && key.includes('bookmarked'))
-    .map((item) => item.value);
-};
 
 const useBroadcast = createPersistedState(CHANNEL_NAME);
 const useSettings = createPersistedState(SETTINGS_NAME);
@@ -37,7 +31,9 @@ function ScripturesView() {
   const [settings] = useSettings(SETTINGS_INITIAL_STATE);
   const [showLogo, setShowLogo] = useState(true);
   const [search, setSearch] = useState([verse]);
-  const [bookmarkedItems, setBookmarkedItems] = useState(getBookmarkedItems());
+  const [bookmarkedItems, setBookmarkedItems] = useState(
+    getBookmarkedItems('verse')
+  );
 
   const typeaheadRef = useRef();
 
@@ -82,7 +78,7 @@ function ScripturesView() {
     bookmarkedItems.forEach((item) => {
       Storage.remove(createStorageKey(item));
     });
-    setBookmarkedItems(getBookmarkedItems());
+    setBookmarkedItems(getBookmarkedItems('verse'));
   };
 
   return (
@@ -142,7 +138,9 @@ function ScripturesView() {
                 <Bookmark
                   icon
                   element={item}
-                  onRefresh={() => setBookmarkedItems(getBookmarkedItems())}
+                  onRefresh={() =>
+                    setBookmarkedItems(getBookmarkedItems('verse'))
+                  }
                 />
               </List.Item>
             ) : null;
@@ -161,7 +159,7 @@ function ScripturesView() {
       <Wrapper direction="column" {...settings}>
         <Bookmark
           element={verse}
-          onRefresh={() => setBookmarkedItems(getBookmarkedItems())}
+          onRefresh={() => setBookmarkedItems(getBookmarkedItems('verse'))}
         />
 
         <Alert

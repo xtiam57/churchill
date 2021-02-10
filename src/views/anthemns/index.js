@@ -20,7 +20,7 @@ import { Bookmark, createStorageKey } from 'components/bookmark';
 import { List } from 'components/list';
 
 import { useAnthemn, useMoveAnthemn, useMoveSlide, useBirthday } from 'hooks';
-import { Storage, Time } from 'utils';
+import { Storage, Time, getBookmarkedItems } from 'utils';
 import {
   ITEMS_PER_LIST,
   CHANNEL_NAME,
@@ -28,18 +28,24 @@ import {
   SETTINGS_INITIAL_STATE,
 } from 'values';
 
-const getMP3Path = (number) => `himnos/${number}.mp3`;
+const getMP3Path = (path, number) => `${path}\\${number}.mp3`;
 
 const useBroadcast = createPersistedState(CHANNEL_NAME);
 const useSettings = createPersistedState(SETTINGS_NAME);
 
-const getBookmarkedItems = () => {
-  return Storage.getAll('desc')
-    .filter(({ key }) => key.includes('anthemn') && key.includes('bookmarked'))
-    .map((item) => item.value);
-};
-
 export default function AnthemnsView() {
+  const [folder] = useState(() => {
+    const { app, shell } = window.require('electron').remote;
+    const { protocol } = window.location;
+    const path = `${
+      protocol === 'file:' ? app.getPath('userData') : ''
+    }\\himnos`;
+    return {
+      open: () => shell.openPath(path),
+      path,
+    };
+  });
+
   const { anthemns, song, setSong } = useAnthemn();
   const { moveSlide, slide, setSlide } = useMoveSlide();
   const { moveAnthemn } = useMoveAnthemn();
@@ -49,9 +55,11 @@ export default function AnthemnsView() {
   const [settings] = useSettings(SETTINGS_INITIAL_STATE);
   const [showLogo, setShowLogo] = useState(true);
   const [search, setSearch] = useState([song]);
-  const [bookmarkedItems, setBookmarkedItems] = useState(getBookmarkedItems());
+  const [bookmarkedItems, setBookmarkedItems] = useState(
+    getBookmarkedItems('anthemn')
+  );
 
-  const [url, setUrl] = useState(getMP3Path(song.number));
+  const [url, setUrl] = useState(getMP3Path(folder.path, song.number));
   const [isMP3Loaded, setIsMP3Loaded] = useState(false);
   const [playbackRate, setPlaybackRate] = React.useState(1);
   const [volume, setVolume] = useState(1);
@@ -67,10 +75,10 @@ export default function AnthemnsView() {
 
   useEffect(() => {
     stop();
-    setUrl(getMP3Path(song.number));
+    setUrl(getMP3Path(folder.path, song.number));
     setSlide(song.slides[0]);
     setPlaybackRate(1);
-  }, [song, setSlide, stop]);
+  }, [song, setSlide, stop, folder.path]);
 
   useEffect(() => {
     setMessage(showLogo ? null : slide);
@@ -118,7 +126,12 @@ export default function AnthemnsView() {
     bookmarkedItems.forEach((item) => {
       Storage.remove(createStorageKey(item));
     });
-    setBookmarkedItems(getBookmarkedItems());
+    setBookmarkedItems(getBookmarkedItems('anthemn'));
+  };
+
+  const onOpenPath = (e) => {
+    e.preventDefault();
+    folder.open();
   };
 
   return (
@@ -155,7 +168,7 @@ export default function AnthemnsView() {
                   .replaceAll('1)', '')}
               </small>
               {option.tags ? (
-                <small class="badge bg-secondary text-light">
+                <small className="badge bg-secondary text-light">
                   ({option.tags})
                 </small>
               ) : null}
@@ -210,7 +223,9 @@ export default function AnthemnsView() {
                 <Bookmark
                   icon
                   element={item}
-                  onRefresh={() => setBookmarkedItems(getBookmarkedItems())}
+                  onRefresh={() =>
+                    setBookmarkedItems(getBookmarkedItems('anthemn'))
+                  }
                 />
               </List.Item>
             ) : null;
@@ -229,7 +244,7 @@ export default function AnthemnsView() {
       <Wrapper direction="column" {...settings}>
         <Bookmark
           element={song}
-          onRefresh={() => setBookmarkedItems(getBookmarkedItems())}
+          onRefresh={() => setBookmarkedItems(getBookmarkedItems('anthemn'))}
         />
 
         <Alert
@@ -304,18 +319,16 @@ export default function AnthemnsView() {
               <span className="text-warning">
                 Este himno <strong>NO</strong> tiene pista.
               </span>{' '}
-              Agrégalo en formato <i>.mp3</i> en la carpeta{' '}
-              <strong>/himnos</strong> con el nombre{' '}
-              <strong>{song.number}.mp3</strong>.
+              Agrégala en formato <i>.mp3</i> en la carpeta{' '}
+              <strong className="pointer text-underline" onClick={onOpenPath}>
+                /himnos
+              </strong>{' '}
+              con el nombre <strong>{song.number}.mp3</strong>.
             </small>
           )}
           <div className="d-flex">
             {isMP3Loaded ? (
               <>
-                {/* <small className="navbar-text text-light">
-                  Duración: {msToTime(duration)}
-                </small> */}
-
                 <ButtonGroup className="mx-2">
                   {isPlaying ? (
                     <Button onClick={() => stop()} variant="light">

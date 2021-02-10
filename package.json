@@ -6,10 +6,17 @@
   "private": true,
   "main": "./public/electron.js",
   "build": {
-    "appId": "churchill.app",
+    "appId": "com.churchill.app",
     "win": {
       "icon": "build/icon.png"
-    }
+    },
+    "asarUnpack": [
+
+    ],
+    "files":[
+      "!node_modules/**/*",
+      "!build/himnos/**/*"
+    ]
   },
   "homepage": "./",
   "dependencies": {
