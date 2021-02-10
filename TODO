@@ -8,7 +8,6 @@ Sección Biblia
 * (done) Marcar lectura del servicio
 * (done) Configuración: color de texto, margenes, posición de la cita, color de la cita, color de fondo
 * Búsqueda de palabras
-* Adaptarse  la pantalla
 * Palabra de Jesús en rojo
 
 Sección Himnos
@@ -32,3 +31,4 @@ Resto
 * Temporizador de predica
 * Semáforo de predica
 * Contar caracteres para determinar un mejor tamaño de texto
+* Exportar e importar storage

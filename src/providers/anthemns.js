@@ -10,8 +10,8 @@ function AnthemnsProvider({ children }) {
       ({ number, title, startsWithChorus, chorus, stanzas, tags }, index) => {
         const slides = [];
         let slideIndex = 0;
-        const isNotAnthemn = tags?.includes('coro');
-        const isExtra = tags?.includes('extra');
+        const isNotAnthemn = tags?.toLowerCase().includes('coro');
+        const isExtra = tags?.toLowerCase().includes('extra');
 
         slides.push(
           Slide.create({

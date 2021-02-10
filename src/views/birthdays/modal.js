@@ -2,29 +2,26 @@ import React, { useState } from 'react';
 import { Button, Form, Modal, Col } from 'react-bootstrap';
 
 export function BirthdayModal({ show, handleClose, handleSave }) {
+  const now = new Date();
   const [name, setName] = useState(null);
-  const [month, setMonth] = useState(1);
-  const [day, setDay] = useState(1);
+  const [month, setMonth] = useState(now.getMonth() + 1);
+  const [day, setDay] = useState(now.getDate());
   const [validated] = useState(true);
 
   const save = () => {
-    handleSave({
-      name: name,
-      month: month,
-      day: day,
-    });
+    handleSave({ name, month, day });
 
     setName(null);
-    setMonth(1);
-    setDay(1);
+    setMonth(now.getMonth() + 1);
+    setDay(now.getDate());
   };
 
   const close = () => {
-    setName(null);
-    setMonth(1);
-    setDay(1);
-
     handleClose();
+
+    setName(null);
+    setMonth(now.getMonth() + 1);
+    setDay(now.getDate());
   };
 
   return (
@@ -49,7 +46,7 @@ export function BirthdayModal({ show, handleClose, handleSave }) {
                   type="text"
                   placeholder="e.j. Pedro Quispe"
                   value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  onChange={({ target }) => setName(target.value)}
                   required
                   isInvalid
                 />
@@ -64,7 +61,7 @@ export function BirthdayModal({ show, handleClose, handleSave }) {
                 <Form.Control
                   as="select"
                   value={month}
-                  onChange={(e) => setMonth(+e.target.value)}
+                  onChange={({ target }) => setMonth(+target.value)}
                 >
                   <option value={1}>Enero</option>
                   <option value={2}>Febrero</option>
@@ -86,7 +83,7 @@ export function BirthdayModal({ show, handleClose, handleSave }) {
                 <Form.Control
                   as="select"
                   value={day}
-                  onChange={(e) => setDay(+e.target.value)}
+                  onChange={({ target }) => setDay(+target.value)}
                 >
                   {[...Array.from({ length: 31 }, (_, i) => i + 1)].map(
                     (item) => (

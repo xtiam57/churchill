@@ -19,7 +19,7 @@ const useBroadcast = createPersistedState(CHANNEL_NAME);
 const useSettings = createPersistedState(SETTINGS_NAME);
 
 function SettingsView() {
-  const [showLogo, setShowLogo] = useState(false);
+  const [showLogo, setShowLogo] = useState(true);
   const [, setMessage] = useBroadcast(null);
   const [settings, setSettings] = useSettings(SETTINGS_INITIAL_STATE);
 
