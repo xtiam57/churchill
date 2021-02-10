@@ -14,9 +14,25 @@ function ScripturesProvider({ children }) {
       };
     });
 
+    let meta = { vmin: null, vmax: null, max: 0, min: 99999 };
+
     return data.reduce((verses, book) => {
       const chaptersExpanded = book.content.map((chapter, chapterIndex) => {
         return chapter.map((verse, verseIndex) => {
+          let l = verse.length;
+          if (l <= meta.min) {
+            meta.min = l;
+            meta.vmin = `${book.shortTitle} ${chapterIndex + 1}:${
+              verseIndex + 1
+            }`;
+          }
+          if (l > meta.max) {
+            meta.max = l;
+            meta.vmax = `${book.shortTitle} ${chapterIndex + 1}:${
+              verseIndex + 1
+            }`;
+          }
+
           return {
             // Verse data
             index: index++,
@@ -37,6 +53,8 @@ function ScripturesProvider({ children }) {
           };
         });
       });
+
+      // console.log(meta);
 
       chaptersExpanded.forEach((chapterExpanded) => {
         verses.push(...chapterExpanded);

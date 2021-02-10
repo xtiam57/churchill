@@ -34,12 +34,28 @@ function AnthemnsProvider({ children }) {
         }
 
         stanzas.forEach((stanza) => {
-          slides.push(
-            Slide.create({
-              text: stanza,
-              index: slideIndex++,
-            })
-          );
+          const lines = stanza.split('/n');
+
+          if (lines.length > 5) {
+            const divider = lines.length > 10 ? 3 : 2;
+            const size = Math.ceil(lines.length / divider);
+
+            [...Array(divider).keys()].forEach((i) => {
+              slides.push(
+                Slide.create({
+                  text: lines.slice(i * size, (1 + i) * size).join('/n'),
+                  index: slideIndex++,
+                })
+              );
+            });
+          } else {
+            slides.push(
+              Slide.create({
+                text: stanza,
+                index: slideIndex++,
+              })
+            );
+          }
 
           if (chorus) {
             slides.push(
@@ -54,7 +70,7 @@ function AnthemnsProvider({ children }) {
 
         slides.push(
           Slide.create({
-            text: 'AMÉN.',
+            text: '&#119070;',
             index: slideIndex++,
           })
         );

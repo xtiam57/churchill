@@ -790,11 +790,11 @@
   {
     "number": 64,
     "title": "SE OYE UN SON EN ALTA ESFERA",
-    "chorus": null,
+    "chorus": "Canta la celeste voz:/n\"¡En los cielos gloria a Dios!\"",
     "stanzas": [
-      "1) Se oye un son en alta esfera:/n\"¡En los cielos gloria a Dios!/n¡Al mortal paz en la tierra!\"/nCanta la celeste voz./nCon los cielos alabemos,/nAl eterno Rey cantemos,/nA Jesús, que es nuestro bien,/nCon el coro de Belén;/nCanta la celeste voz:/n\"¡En los cielos gloria a Dios!\"",
-      "2) El Señor de los señores,/nEl Ungido celestial,/nA salvar los pecadores/nVino al mundo terrenal./nGloria al Verbo encarnado,/nEn humanidad velado;/nGloria al Santo de Israel,/nCuyo nombre es Emanuel;/nCanta la celeste voz:/n\"¡En los cielos gloria a Dios!\"",
-      "3) Príncipe de paz eterna,/nGloria a ti, Señor Jesús;/nEntregando el alma tierna,/nTú nos traes vida y luz./nHas tu majestad dejado,/nY buscarnos te has dignado;/nPara darnos el vivir,/nA la muerte quieres ir./nCanta la celeste voz:/n\"¡En los cielos gloria a Dios!\""
+      "1) Se oye un son en alta esfera:/n\"¡En los cielos gloria a Dios!/n¡Al mortal paz en la tierra!\"/nCanta la celeste voz./nCon los cielos alabemos,/nAl eterno Rey cantemos,/nA Jesús, que es nuestro bien,/nCon el coro de Belén;",
+      "2) El Señor de los señores,/nEl Ungido celestial,/nA salvar los pecadores/nVino al mundo terrenal./nGloria al Verbo encarnado,/nEn humanidad velado;/nGloria al Santo de Israel,/nCuyo nombre es Emanuel;",
+      "3) Príncipe de paz eterna,/nGloria a ti, Señor Jesús;/nEntregando el alma tierna,/nTú nos traes vida y luz./nHas tu majestad dejado,/nY buscarnos te has dignado;/nPara darnos el vivir,/nA la muerte quieres ir."
     ],
     "startsWithChorus": false,
     "tags": "Navidad"
@@ -1574,7 +1574,7 @@
   },
   {
     "number": 127,
-    "title": "VI ENE OTRA VEZ",
+    "title": "VIENE OTRA VEZ",
     "chorus": "¡Gloria! ¡gloria! gozo sin fin traerá,/n¡Gloria! ¡gloria! al coronarle Rey;/n¡Gloria! ¡gloria! la senda preparad,/n¡Gloria! ¡gloria! Cristo viene otra vez.",
     "stanzas": [
       "1) Viene otra vez nuestro Salvador,/n¡Oh que si fuera hoy!/nPara reinar con poder y amor,/n¡Oh que si fuera hoy!/nEl por su iglesia viene esta vez,/nPurificada en su grande amor./nDel mundo por la redondez,/n¡Oh que si fuera hoy!",
@@ -5023,12 +5023,12 @@
   {
     "number": 405,
     "title": "DANOS UN BELLO HOGAR",
-    "chorus": null,
+    "chorus": "¡Danos un bello hogar!/n¡Danos un bello hogar!",
     "stanzas": [
-      "1) Danos un bello hogar:/nDonde la Biblia se pueda ver;/nDonde tu amor bienestar nos dé;/nDonde en ti todos tengan fe./n¡Danos un bello hogar!/n¡Danos un bello hogar!",
-      "2) Danos un bello hogar:/nDonde el padre es fuerte y fiel;/nDonde no haya el sabor a hiel,/nDonde en su ambiente haya sólo miel./n¡Danos un bello hogar!/n¡Danos un bello hogar!",
-      "3) Danos un bello hogar:/nDonde la madre con devoción,/nSepa mostrarnos tu compasión./nDonde tú habites con santa unción./n¡Danos un bello hogar!/n¡Danos un bello hogar!",
-      "4) Danos un bello hogar:/nDonde los hijos podrán saber/nCómo Jesús los quiere ver/nA su amparo y así vencer./n¡Danos un bello hogar!/n¡Danos un bello hogar!"
+      "1) Danos un bello hogar:/nDonde la Biblia se pueda ver;/nDonde tu amor bienestar nos dé;/nDonde en ti todos tengan fe.",
+      "2) Danos un bello hogar:/nDonde el padre es fuerte y fiel;/nDonde no haya el sabor a hiel,/nDonde en su ambiente haya sólo miel.",
+      "3) Danos un bello hogar:/nDonde la madre con devoción,/nSepa mostrarnos tu compasión./nDonde tú habites con santa unción.",
+      "4) Danos un bello hogar:/nDonde los hijos podrán saber/nCómo Jesús los quiere ver/nA su amparo y así vencer."
     ],
     "startsWithChorus": false,
     "tags": "Madre"
@@ -5717,7 +5717,9 @@
     "chorus": null,
     "stanzas": [
       "1) En el firmamento veo a Dios,/nEn el viento Él habla en majestad,/nAunque reina sobre tierra y mar,/n¿Qué es eso para mí?",
-      "2) Yo creeré en su natividad/nQue en la historia es una realidad/nAunque Él vino para liberar,/n¿Qué es eso para mí?/nHasta que por fe le conocí,/nY su gran poder en mí sentí,/nNo sabía que era un Dios de amor/nQue vino desde allá para salvarme a mí./nYo ahora pertenezco a Él,/nÉl me ayuda con su gran poder,/nMe conduce siempre a la verdad, Es todo para mí."
+      "2) Yo creeré en su natividad/nQue en la historia es una realidad/nAunque Él vino para liberar,/n¿Qué es eso para mí?",
+      "3) Hasta que por fe le conocí,/nY su gran poder en mí sentí,/nNo sabía que era un Dios de amor/nQue vino desde allá para salvarme a mí.",
+      "4) Yo ahora pertenezco a Él,/nÉl me ayuda con su gran poder,/nMe conduce siempre a la verdad,/nEs todo para mí."
     ],
     "startsWithChorus": false,
     "tags": null
@@ -6062,7 +6064,9 @@
     "chorus": null,
     "stanzas": [
       "1) La vida se va como el viento,/nSe va como se va la niebla./nFugaz es cual ñor de la hierba,/nQue en la mañana es/nY en la tarde ha muerto.",
-      "2) Jamás puede el hombre saber/nLos días que Dios le concederá./nJamás puede el hombre saber,/nEn cual amanecer/nYa sus ojos no se abrirán./nEs por eso que el hombre ha de buscar/nEl sendero que a Dios le ha de llevar./nA Jesús quien es el camino,/nQuien es el camino, verdad y la vida, La vida eterna./nEs por eso que el hombre ha de buscar/nEl sendero que a Dios le ha de llevar./nA Jesús quien es el camino,/nQuien es el camino, verdad y la vida, La vida eterna."
+      "2) Jamás puede el hombre saber/nLos días que Dios le concederá./nJamás puede el hombre saber,/nEn cual amanecer/nYa sus ojos no se abrirán.",
+      "3) Es por eso que el hombre ha de buscar/nEl sendero que a Dios le ha de llevar./nA Jesús quien es el camino,/nQuien es el camino, verdad y la vida,/nLa vida eterna.",
+      "4) Es por eso que el hombre ha de buscar/nEl sendero que a Dios le ha de llevar./nA Jesús quien es el camino,/nQuien es el camino, verdad y la vida,/nLa vida eterna."
     ],
     "startsWithChorus": false,
     "tags": null
