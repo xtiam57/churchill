@@ -1,16 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import json from 'assets/data/anthemns';
+import { Slide } from 'utils';
 
 const AnthemnsContext = React.createContext({});
-
-function makeSlide(title = null, text, index = 0) {
-  title = title ? `<strong>${title}</strong>/n` : '';
-  text = `${title}${text}`.replaceAll('/n', '<br/>');
-  return {
-    index,
-    text,
-  };
-}
 
 function AnthemnsProvider({ children }) {
   const anthemns = useMemo(() => {
@@ -22,26 +14,50 @@ function AnthemnsProvider({ children }) {
         const isExtra = tags?.includes('extra');
 
         slides.push(
-          makeSlide(
-            `${isNotAnthemn ? 'Coro' : `Himno${isExtra ? '' : ` #${number}`}`}`,
-            title,
-            slideIndex++
-          )
+          Slide.create({
+            title: `${
+              isNotAnthemn ? 'Coro' : `Himno${isExtra ? '' : ` #${number}`}`
+            }`,
+            text: title,
+            index: slideIndex++,
+          })
         );
 
         if (startsWithChorus) {
-          slides.push(makeSlide('Coro', chorus, slideIndex++));
+          slides.push(
+            Slide.create({
+              title: 'Coro',
+              text: chorus,
+              index: slideIndex++,
+            })
+          );
         }
 
         stanzas.forEach((stanza) => {
-          slides.push(makeSlide(null, stanza, slideIndex++));
+          slides.push(
+            Slide.create({
+              text: stanza,
+              index: slideIndex++,
+            })
+          );
 
           if (chorus) {
-            slides.push(makeSlide('Coro', chorus, slideIndex++));
+            slides.push(
+              Slide.create({
+                title: 'Coro',
+                text: chorus,
+                index: slideIndex++,
+              })
+            );
           }
         });
 
-        slides.push(makeSlide(null, 'AMÉN.', slideIndex++));
+        slides.push(
+          Slide.create({
+            text: 'AMÉN.',
+            index: slideIndex++,
+          })
+        );
 
         return {
           index,

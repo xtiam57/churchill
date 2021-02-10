@@ -40,7 +40,7 @@ function BirthdaysView() {
 
   useEffect(() => {
     return () => setMessage(null);
-  }, [setMessage]);
+  }, []);
 
   const onSave = (data) => {
     add(data);
@@ -56,6 +56,16 @@ function BirthdaysView() {
     <Wrapper>
       <Sidebar>
         <h1 className="text-light display-4">Cumpleaños</h1>
+
+        <Button
+          className="mt-3"
+          block
+          size="lg"
+          variant={showLogo ? 'secondary' : 'warning'}
+          onClick={() => setShowLogo((value) => !value)}
+        >
+          {showLogo ? 'Mostrar Cumpleaños' : 'Mostrar Logo'}
+        </Button>
 
         <List>
           {birthdays.length ? (
@@ -110,13 +120,6 @@ function BirthdaysView() {
                 Actualmente se están mostrando los cumpleañeros al público.
               </span>
             )}
-            <Button
-              size="sm"
-              variant={showLogo ? 'secondary' : 'warning'}
-              onClick={() => setShowLogo((value) => !value)}
-            >
-              {showLogo ? 'Mostrar' : 'No Mostrar'}
-            </Button>
           </div>
         </Alert>
 

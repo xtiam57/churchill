@@ -90,7 +90,7 @@ export default function AnthemnsView() {
 
   useEffect(() => {
     return () => setMessage(null);
-  }, [setMessage]);
+  }, []);
 
   function onSearch(event) {
     setSearch(event);
@@ -179,6 +179,16 @@ export default function AnthemnsView() {
           Presiona <strong>F1</strong> para buscar.
         </div>
 
+        <Button
+          className="mt-3"
+          block
+          size="lg"
+          variant={showLogo ? 'secondary' : 'warning'}
+          onClick={() => setShowLogo((value) => !value)}
+        >
+          {showLogo ? 'Mostrar Himno' : 'Mostrar Logo'}
+        </Button>
+
         {birthdays.length ? (
           <List>
             <List.Item>
@@ -264,13 +274,6 @@ export default function AnthemnsView() {
                 <strong>{song.title}</strong> al público.
               </span>
             )}
-            <Button
-              size="sm"
-              variant={showLogo ? 'secondary' : 'warning'}
-              onClick={() => setShowLogo((value) => !value)}
-            >
-              {showLogo ? 'Mostrar' : 'No Mostrar'}
-            </Button>
           </div>
         </Alert>
 

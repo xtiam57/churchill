@@ -43,7 +43,7 @@ function ScripturesView() {
 
   useEffect(() => {
     return () => setMessage(null);
-  }, [setMessage]);
+  }, []);
 
   function onSearch(event) {
     setSearch(event);
@@ -117,6 +117,16 @@ function ScripturesView() {
           Presiona <strong>F1</strong> para buscar.
         </div>
 
+        <Button
+          className="mt-3"
+          block
+          size="lg"
+          variant={showLogo ? 'secondary' : 'warning'}
+          onClick={() => setShowLogo((value) => !value)}
+        >
+          {showLogo ? 'Mostrar Versículo' : 'Mostrar Logo'}
+        </Button>
+
         <List>
           <List.Item>
             {bookmarkedItems.length ? (
@@ -179,13 +189,6 @@ function ScripturesView() {
                 <strong>{verse.cite}</strong> al público.
               </span>
             )}
-            <Button
-              size="sm"
-              variant={showLogo ? 'secondary' : 'warning'}
-              onClick={() => setShowLogo((value) => !value)}
-            >
-              {showLogo ? 'Mostrar' : 'No Mostrar'}
-            </Button>
           </div>
         </Alert>
 

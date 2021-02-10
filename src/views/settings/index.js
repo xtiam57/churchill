@@ -7,28 +7,48 @@ import { Presenter } from 'components/presenter';
 import { Sidebar } from 'components/sidebar';
 import { Logo } from 'components/logo';
 
-import { CHANNEL_NAME, SETTINGS_NAME, THEMES } from 'values';
+import {
+  CHANNEL_NAME,
+  SETTINGS_NAME,
+  THEMES,
+  TEST_SLIDE,
+  SETTINGS_INITIAL_STATE,
+} from 'values';
 
 const useBroadcast = createPersistedState(CHANNEL_NAME);
 const useSettings = createPersistedState(SETTINGS_NAME);
 
 function SettingsView() {
   const [showLogo, setShowLogo] = useState(false);
-  const [message, setMessage] = useBroadcast(null);
-  const [settings, setSettings] = useSettings({
-    logo: 'default',
-    ...THEMES['default'],
-  });
+  const [, setMessage] = useBroadcast(null);
+  const [settings, setSettings] = useSettings(SETTINGS_INITIAL_STATE);
+
+  useEffect(() => {
+    setMessage(showLogo ? null : TEST_SLIDE);
+  }, [showLogo, setMessage]);
+
+  useEffect(() => {
+    return () => setMessage(null);
+  }, []);
 
   const onChangeColor = ({ target }) => {
     const { name, value } = target;
-    setSettings((state) => ({ ...state, [name]: value }));
+
+    setSettings((state) => ({
+      ...state,
+      [name]: value,
+    }));
   };
 
   const onChangeTheme = ({ target }) => {
     const { value } = target;
     const data = value !== 'custom' ? THEMES[value] : {};
-    setSettings((state) => ({ ...state, theme: value, ...data }));
+
+    setSettings((state) => ({
+      ...state,
+      theme: value,
+      ...data,
+    }));
   };
 
   return (
@@ -159,16 +179,14 @@ function SettingsView() {
         ) : null}
       </Sidebar>
 
-      <Wrapper centered direction="column" {...settings}>
+      <Wrapper direction="column" {...settings}>
         {showLogo ? (
-          <Logo width="65%" height="65%" {...settings} />
+          <Wrapper centered {...settings}>
+            <Logo width="65%" height="65%" {...settings} />
+          </Wrapper>
         ) : (
-          <Presenter subtext="Fusce lectus libero" {...settings}>
-            {`<strong>Nulla bibendum dignissim</strong>
-              <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare
-              metus dignissim augue fermentum dictum. Mauris facilisis ultrices
-              nibh, ut convallis felis placerat non.`}
+          <Presenter subtext={TEST_SLIDE.subtext} {...settings}>
+            {TEST_SLIDE.text}
           </Presenter>
         )}
       </Wrapper>

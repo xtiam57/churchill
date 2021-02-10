@@ -1,3 +1,5 @@
+import { Slide } from 'utils';
+
 export const HOME_VIEW_PATH = '/';
 export const BIBLE_VIEW_PATH = '/bible';
 export const ANTHEMNS_VIEW_PATH = '/anthemns';
@@ -70,3 +72,10 @@ export const SETTINGS_INITIAL_STATE = {
   logo: 'default',
   ...THEMES['default'],
 };
+
+export const TEST_SLIDE = Slide.create({
+  title: 'Nulla bibendum dignissim',
+  text:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare metus dignissim augue fermentum dictum. Mauris facilisis ultrices nibh, ut convallis felis placerat non.',
+  subtext: 'Fusce lectus libero',
+});

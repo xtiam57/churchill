@@ -7,7 +7,7 @@ const BookmarkStyled = styled.div`
     icon
       ? 'display: inline-block;'
       : 'position: absolute;  right: 15px; font-size: 3em;'}
-  top: ${({ bookmarked }) => (bookmarked ? '86px' : '108px')};
+  top: ${({ bookmarked }) => (bookmarked ? '80px' : '108px')};
   transition: transform 0.3s ease;
 
   &:hover {
