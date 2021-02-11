@@ -15,3 +15,8 @@
 .text-underline {
   text-decoration: underline;
 }
+
+.border-radius-0,
+.br-0 {
+  border-radius: 0;
+}

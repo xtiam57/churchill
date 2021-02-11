@@ -7,6 +7,8 @@ import { Presenter } from 'components/presenter';
 import { Controls } from 'components/controls';
 import { Sidebar } from 'components/sidebar';
 
+import { useKeyDown } from 'hooks';
+
 import { CHANNEL_NAME, SETTINGS_NAME, SETTINGS_INITIAL_STATE } from 'values';
 
 const useBroadcast = createPersistedState(CHANNEL_NAME);

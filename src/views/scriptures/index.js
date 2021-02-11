@@ -11,7 +11,7 @@ import { Sidebar } from 'components/sidebar';
 import { Bookmark, createStorageKey } from 'components/bookmark';
 import { List } from 'components/list';
 
-import { useVerse, useMoveVerse } from 'hooks';
+import { useVerse, useMoveVerse, useKeyDown } from 'hooks';
 import { Storage, getBookmarkedItems } from 'utils';
 import {
   ITEMS_PER_LIST,
@@ -24,9 +24,9 @@ const useBroadcast = createPersistedState(CHANNEL_NAME);
 const useSettings = createPersistedState(SETTINGS_NAME);
 
 function ScripturesView() {
+  const typeaheadRef = useRef();
   const { scriptures, verse, setVerse } = useVerse();
   const { moveChapter, moveVerse } = useMoveVerse();
-
   const [, setMessage] = useBroadcast(null);
   const [settings] = useSettings(SETTINGS_INITIAL_STATE);
   const [showLogo, setShowLogo] = useState(true);
@@ -34,8 +34,6 @@ function ScripturesView() {
   const [bookmarkedItems, setBookmarkedItems] = useState(
     getBookmarkedItems('verse')
   );
-
-  const typeaheadRef = useRef();
 
   useEffect(() => {
     setMessage(showLogo ? null : verse);
@@ -80,6 +78,12 @@ function ScripturesView() {
     });
     setBookmarkedItems(getBookmarkedItems('verse'));
   };
+
+  useKeyDown('ArrowLeft', onPrevVerse);
+  useKeyDown('ArrowRight', onNextVerse);
+  useKeyDown('ArrowUp', onNextChapter);
+  useKeyDown('ArrowDown', onPrevChapter);
+  useKeyDown('F1', () => typeaheadRef.current.focus());
 
   return (
     <Wrapper>
@@ -173,23 +177,20 @@ function ScripturesView() {
         />
 
         <Alert
-          className="m-0"
+          className="m-0 br-0"
           variant={showLogo ? 'secondary ' : 'warning'}
-          style={{ borderRadius: 0 }}
         >
-          <div className="d-flex align-items-center justify-content-between">
-            {showLogo ? (
-              <span>
-                Actualmente <strong>NO</strong> se está mostrando el versículo
-                al público.
-              </span>
-            ) : (
-              <span>
-                Actualmente se está mostrando el versículo{' '}
-                <strong>{verse.cite}</strong> al público.
-              </span>
-            )}
-          </div>
+          {showLogo ? (
+            <>
+              Actualmente <strong>NO</strong> se está mostrando el versículo al
+              público.
+            </>
+          ) : (
+            <>
+              Actualmente se está mostrando el versículo{' '}
+              <strong>{verse.cite}</strong> al público.
+            </>
+          )}
         </Alert>
 
         <Presenter
@@ -203,22 +204,13 @@ function ScripturesView() {
 
         <div className="text-muted bg-white py-2 px-3 d-flex justify-content-between">
           <small>
-            Usa las teclas <strong className="text-primary">&larr;</strong> y{' '}
-            <strong className="text-primary">&rarr;</strong> para cambiar de
-            versículo, y <strong className="text-primary">&uarr;</strong> y{' '}
-            <strong className="text-primary">&darr;</strong> para cambiar de
-            capítulo.
+            Usa las teclas <strong>&larr;</strong> y <strong>&rarr;</strong>{' '}
+            para cambiar de versículo, y <strong>&uarr;</strong> y{' '}
+            <strong>&darr;</strong> para cambiar de capítulo.
           </small>
         </div>
 
-        <Controls
-          onKeyLeft={onPrevVerse}
-          onKeyRight={onNextVerse}
-          onKeyUp={onNextChapter}
-          onKeyDown={onPrevChapter}
-          onKeyF1={() => typeaheadRef.current.focus()}
-          centered
-        >
+        <Controls centered>
           <ButtonGroup>
             <Button onClick={onPrevVerse} variant="secondary">
               <ImArrowLeft2 />

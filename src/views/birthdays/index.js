@@ -19,17 +19,16 @@ import { BirthdayModal } from './modal';
 const useBroadcast = createPersistedState(CHANNEL_NAME);
 const useSettings = createPersistedState(SETTINGS_NAME);
 
-const getBirthdayItems = () => {
+function getBirthdayItems() {
   return Storage.getAll('desc')
     .filter(({ key }) => key.includes('birthday'))
     .map((item) => item.value);
-};
+}
 
 function BirthdaysView() {
   const [, setMessage] = useBroadcast(null);
   const [settings] = useSettings(SETTINGS_INITIAL_STATE);
-
-  const [show, setShow] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const [showLogo, setShowLogo] = useState(true);
   const { birthdays, add, remove, slide } = useBirthday();
   const [birthdayItems, setBirthdayItems] = useState(getBirthdayItems());
@@ -44,9 +43,10 @@ function BirthdaysView() {
 
   const onSave = (data) => {
     add(data);
-    setShow(false);
+    setShowModal(false);
     setBirthdayItems(getBirthdayItems());
   };
+
   const onDelete = (index) => {
     remove(index);
     setBirthdayItems(getBirthdayItems());
@@ -105,36 +105,31 @@ function BirthdaysView() {
 
       <Wrapper direction="column" {...settings}>
         <Alert
-          className="m-0"
+          className="m-0 br-0"
           variant={showLogo ? 'secondary ' : 'warning'}
-          style={{ borderRadius: 0 }}
         >
-          <div className="d-flex align-items-center justify-content-between">
-            {showLogo ? (
-              <span>
-                Actualmente <strong>NO</strong> se están mostrando los
-                cumpleañeros al público.
-              </span>
-            ) : (
-              <span>
-                Actualmente se están mostrando los cumpleañeros al público.
-              </span>
-            )}
-          </div>
+          {showLogo ? (
+            <>
+              Actualmente <strong>NO</strong> se están mostrando los
+              cumpleañeros al público.
+            </>
+          ) : (
+            <>Actualmente se están mostrando los cumpleañeros al público.</>
+          )}
         </Alert>
 
-        <Presenter subtext={slide.subtext} type={slide.type} {...settings}>
+        <Presenter live={!showLogo} subtext={slide.subtext} {...settings}>
           {slide.text}
         </Presenter>
 
         <Controls centered>
-          <Button onClick={() => setShow(true)} variant="secondary">
+          <Button onClick={() => setShowModal(true)} variant="secondary">
             <ImUserPlus />
           </Button>
 
           <BirthdayModal
-            show={show}
-            handleClose={() => setShow(false)}
+            show={showModal}
+            handleClose={() => setShowModal(false)}
             handleSave={onSave}
           />
         </Controls>

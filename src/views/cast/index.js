@@ -15,7 +15,7 @@ export default function CastView() {
   const [settings] = useSettings(SETTINGS_INITIAL_STATE);
 
   return (
-    <Wrapper bare centered type={message?.type} {...settings}>
+    <Wrapper bare centered {...settings}>
       {message ? (
         <Presenter
           subtext={message.subtext || message.cite}

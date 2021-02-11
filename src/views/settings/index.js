@@ -179,11 +179,9 @@ function SettingsView() {
         ) : null}
       </Sidebar>
 
-      <Wrapper direction="column" {...settings}>
+      <Wrapper centered direction="column" {...settings}>
         {showLogo ? (
-          <Wrapper centered {...settings}>
-            <Logo width="65%" height="65%" {...settings} />
-          </Wrapper>
+          <Logo width="65%" height="65%" {...settings} />
         ) : (
           <Presenter subtext={TEST_SLIDE.subtext} {...settings}>
             {TEST_SLIDE.text}

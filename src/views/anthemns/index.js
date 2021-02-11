@@ -19,7 +19,13 @@ import { Controls } from 'components/controls';
 import { Bookmark, createStorageKey } from 'components/bookmark';
 import { List } from 'components/list';
 
-import { useAnthemn, useMoveAnthemn, useMoveSlide, useBirthday } from 'hooks';
+import {
+  useAnthemn,
+  useMoveAnthemn,
+  useMoveSlide,
+  useBirthday,
+  useKeyDown,
+} from 'hooks';
 import { Storage, Time, getBookmarkedItems } from 'utils';
 import {
   ITEMS_PER_LIST,
@@ -34,6 +40,7 @@ const useBroadcast = createPersistedState(CHANNEL_NAME);
 const useSettings = createPersistedState(SETTINGS_NAME);
 
 export default function AnthemnsView() {
+  const typeaheadRef = useRef();
   const [folder] = useState(() => {
     const { app, shell } = window.require('electron').remote;
     const { protocol } = window.location;
@@ -45,12 +52,10 @@ export default function AnthemnsView() {
       path,
     };
   });
-
   const { anthemns, song, setSong } = useAnthemn();
   const { moveSlide, slide, setSlide } = useMoveSlide();
   const { moveAnthemn } = useMoveAnthemn();
   const { birthdays, birthdayAnthemn } = useBirthday();
-
   const [, setMessage] = useBroadcast(null);
   const [settings] = useSettings(SETTINGS_INITIAL_STATE);
   const [showLogo, setShowLogo] = useState(true);
@@ -58,7 +63,6 @@ export default function AnthemnsView() {
   const [bookmarkedItems, setBookmarkedItems] = useState(
     getBookmarkedItems('anthemn')
   );
-
   const [url, setUrl] = useState(getMP3Path(folder.path, song.number));
   const [isMP3Loaded, setIsMP3Loaded] = useState(false);
   const [playbackRate, setPlaybackRate] = React.useState(1);
@@ -70,8 +74,6 @@ export default function AnthemnsView() {
     onload: () => setIsMP3Loaded(true),
     onloaderror: () => setIsMP3Loaded(false),
   });
-
-  const typeaheadRef = useRef();
 
   useEffect(() => {
     stop();
@@ -133,6 +135,13 @@ export default function AnthemnsView() {
     e.preventDefault();
     folder.open();
   };
+
+  useKeyDown('ArrowLeft', onPrevSlide);
+  useKeyDown('ArrowRight', onNextSlide);
+  useKeyDown('ArrowUp', onNextAnthemn);
+  useKeyDown('ArrowDown', onPrevAnthemn);
+  useKeyDown('F1', () => typeaheadRef.current.focus());
+  useKeyDown('Space', onTogglePlay);
 
   return (
     <Wrapper>
@@ -258,23 +267,20 @@ export default function AnthemnsView() {
         />
 
         <Alert
-          className="m-0"
+          className="m-0 br-0"
           variant={showLogo ? 'secondary ' : 'warning'}
-          style={{ borderRadius: 0 }}
         >
-          <div className="d-flex align-items-center justify-content-between">
-            {showLogo ? (
-              <span>
-                Actualmente <strong>NO</strong> se está mostrando el himno al
-                público.
-              </span>
-            ) : (
-              <span>
-                Actualmente se está mostrando el himno{' '}
-                <strong>{song.title}</strong> al público.
-              </span>
-            )}
-          </div>
+          {showLogo ? (
+            <>
+              Actualmente <strong>NO</strong> se está mostrando el himno al
+              público.
+            </>
+          ) : (
+            <>
+              Actualmente se está mostrando el himno{' '}
+              <strong>{song.title}</strong> al público.
+            </>
+          )}
         </Alert>
 
         <Presenter live={!showLogo} {...settings}>
@@ -283,25 +289,16 @@ export default function AnthemnsView() {
 
         <div className="text-muted bg-white py-2 px-3 d-flex justify-content-between">
           <small>
-            Usa las teclas <strong className="text-primary">&larr;</strong> y{' '}
-            <strong className="text-primary">&rarr;</strong> para cambiar de
-            lámina, y <strong className="text-primary">&uarr;</strong> y{' '}
-            <strong className="text-primary">&darr;</strong> para cambiar de
-            himno.
+            Usa las teclas <strong>&larr;</strong> y <strong>&rarr;</strong>{' '}
+            para cambiar de lámina, y <strong>&uarr;</strong> y{' '}
+            <strong>&darr;</strong> para cambiar de himno.
           </small>
           <small>
             {slide.index + 1}/{song.length}
           </small>
         </div>
 
-        <Controls
-          onKeyLeft={onPrevSlide}
-          onKeyRight={onNextSlide}
-          onKeyUp={onNextAnthemn}
-          onKeyDown={onPrevAnthemn}
-          onKeyF1={() => typeaheadRef.current.focus()}
-          onKeySpace={onTogglePlay}
-        >
+        <Controls>
           {isMP3Loaded ? (
             <div className="d-flex">
               <ImVolumeMute />
@@ -356,7 +353,6 @@ export default function AnthemnsView() {
           </div>
           {isMP3Loaded ? (
             <>
-              {' '}
               <div className="d-flex">
                 <Form.Control
                   type="range"
