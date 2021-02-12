@@ -10,9 +10,8 @@ import {
   ImVolumeMute,
 } from 'react-icons/im';
 import useSound from 'use-sound';
-import createPersistedState from 'use-persisted-state';
 
-import { Presenter } from 'components/presenter';
+import { Slider } from 'components/slider';
 import { Sidebar } from 'components/sidebar';
 import { Wrapper } from 'components/wrapper';
 import { Controls } from 'components/controls';
@@ -27,17 +26,9 @@ import {
   useKeyDown,
 } from 'hooks';
 import { Storage, Time, getBookmarkedItems } from 'utils';
-import {
-  ITEMS_PER_LIST,
-  CHANNEL_NAME,
-  SETTINGS_NAME,
-  SETTINGS_INITIAL_STATE,
-} from 'values';
+import { ITEMS_PER_LIST } from 'values';
 
 const getMP3Path = (path, number) => `${path}\\${number}.mp3`;
-
-const useBroadcast = createPersistedState(CHANNEL_NAME);
-const useSettings = createPersistedState(SETTINGS_NAME);
 
 export default function AnthemnsView() {
   const typeaheadRef = useRef();
@@ -53,11 +44,11 @@ export default function AnthemnsView() {
     };
   });
   const { anthemns, song, setSong } = useAnthemn();
-  const { moveSlide, slide, setSlide } = useMoveSlide();
+  const [slide, setSlide] = useState(song.slides[0]);
+  const { moveSlide } = useMoveSlide(slide, song.slides);
   const { moveAnthemn } = useMoveAnthemn();
   const { birthdays, birthdayAnthemn } = useBirthday();
-  const [, setMessage] = useBroadcast(null);
-  const [settings] = useSettings(SETTINGS_INITIAL_STATE);
+
   const [showLogo, setShowLogo] = useState(true);
   const [search, setSearch] = useState([song]);
   const [bookmarkedItems, setBookmarkedItems] = useState(
@@ -78,21 +69,12 @@ export default function AnthemnsView() {
   useEffect(() => {
     stop();
     setUrl(getMP3Path(folder.path, song.number));
-    setSlide(song.slides[0]);
     setPlaybackRate(1);
-  }, [song, setSlide, stop, folder.path]);
-
-  useEffect(() => {
-    setMessage(showLogo ? null : slide);
-  }, [slide, showLogo, setMessage]);
+  }, [song, stop, folder.path]);
 
   useEffect(() => {
     return () => stop();
   }, [stop]);
-
-  useEffect(() => {
-    return () => setMessage(null);
-  }, []);
 
   function onSearch(event) {
     setSearch(event);
@@ -104,9 +86,14 @@ export default function AnthemnsView() {
     }
   }
 
-  const onPrevSlide = () => moveSlide(-1);
-
-  const onNextSlide = () => moveSlide(1);
+  const onPrevSlide = () => {
+    const slide = moveSlide(-1);
+    setSlide(slide);
+  };
+  const onNextSlide = () => {
+    const slide = moveSlide(1);
+    setSlide(slide);
+  };
 
   const onPrevAnthemn = () => {
     const anthemn = moveAnthemn(-1);
@@ -136,8 +123,6 @@ export default function AnthemnsView() {
     folder.open();
   };
 
-  useKeyDown('ArrowLeft', onPrevSlide);
-  useKeyDown('ArrowRight', onNextSlide);
   useKeyDown('ArrowUp', onNextAnthemn);
   useKeyDown('ArrowDown', onPrevAnthemn);
   useKeyDown('F1', () => typeaheadRef.current.focus());
@@ -239,13 +224,7 @@ export default function AnthemnsView() {
                 <List.Action onClick={() => onSearch([item])}>
                   {item.title}
                 </List.Action>
-                <Bookmark
-                  icon
-                  element={item}
-                  onRefresh={() =>
-                    setBookmarkedItems(getBookmarkedItems('anthemn'))
-                  }
-                />
+                <Bookmark icon element={item} onRefresh={setBookmarkedItems} />
               </List.Item>
             ) : null;
           })}
@@ -260,16 +239,10 @@ export default function AnthemnsView() {
         </List>
       </Sidebar>
 
-      <Wrapper direction="column" {...settings}>
-        <Bookmark
-          element={song}
-          onRefresh={() => setBookmarkedItems(getBookmarkedItems('anthemn'))}
-        />
+      <Wrapper direction="column">
+        <Bookmark element={song} onRefresh={setBookmarkedItems} />
 
-        <Alert
-          className="m-0 br-0"
-          variant={showLogo ? 'secondary ' : 'warning'}
-        >
+        <Alert className="m-0 br-0" variant="secondary">
           {showLogo ? (
             <>
               Actualmente <strong>NO</strong> se está mostrando el himno al
@@ -283,20 +256,11 @@ export default function AnthemnsView() {
           )}
         </Alert>
 
-        <Presenter live={!showLogo} {...settings}>
-          {slide.text}
-        </Presenter>
-
-        <div className="text-muted bg-white py-2 px-3 d-flex justify-content-between">
-          <small>
-            Usa las teclas <strong>&larr;</strong> y <strong>&rarr;</strong>{' '}
-            para cambiar de lámina, y <strong>&uarr;</strong> y{' '}
-            <strong>&darr;</strong> para cambiar de himno.
-          </small>
-          <small>
-            {slide.index + 1}/{song.length}
-          </small>
-        </div>
+        <Slider live={!showLogo} wrapper={song} extSlide={[slide, setSlide]}>
+          Usa las teclas <strong>&larr;</strong> y <strong>&rarr;</strong> para
+          cambiar de lámina, y <strong>&uarr;</strong> y <strong>&darr;</strong>{' '}
+          para cambiar de himno.
+        </Slider>
 
         <Controls>
           {isMP3Loaded ? (

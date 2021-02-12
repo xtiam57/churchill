@@ -149,13 +149,7 @@ function ScripturesView() {
                 <List.Action onClick={() => onSearch([item])}>
                   {item.cite}
                 </List.Action>
-                <Bookmark
-                  icon
-                  element={item}
-                  onRefresh={() =>
-                    setBookmarkedItems(getBookmarkedItems('verse'))
-                  }
-                />
+                <Bookmark icon element={item} onRefresh={setBookmarkedItems} />
               </List.Item>
             ) : null;
           })}
@@ -170,16 +164,10 @@ function ScripturesView() {
         </List>
       </Sidebar>
 
-      <Wrapper direction="column" {...settings}>
-        <Bookmark
-          element={verse}
-          onRefresh={() => setBookmarkedItems(getBookmarkedItems('verse'))}
-        />
+      <Wrapper direction="column">
+        <Bookmark element={verse} onRefresh={setBookmarkedItems} />
 
-        <Alert
-          className="m-0 br-0"
-          variant={showLogo ? 'secondary ' : 'warning'}
-        >
+        <Alert className="m-0 br-0" variant="secondary">
           {showLogo ? (
             <>
               Actualmente <strong>NO</strong> se está mostrando el versículo al

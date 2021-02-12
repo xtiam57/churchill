@@ -66,6 +66,7 @@ function AnthemnsProvider({ children }) {
         slides.push(Slide.create({ text: '&#119070;', index: slideIndex }));
 
         return {
+          id: `Himno_${number}`,
           index,
           number,
           title: `${isNotAnthemn || isExtra ? '' : `#${number} `}${title}`,

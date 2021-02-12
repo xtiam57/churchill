@@ -1,24 +1,14 @@
-import { useContext } from 'react';
-import { AnthemnsContext } from 'providers/anthemns';
-
-export function useMoveSlide() {
-  const { song, slide, setSlide } = useContext(AnthemnsContext);
-  const { slides, length } = song;
-
+export function useMoveSlide(current, slides) {
   const moveToNextSlide = () => {
-    const index = Math.min(slide.index + 1, length - 1);
+    const index = Math.min(current.index + 1, slides.length - 1);
     const slideToGo = slides[index];
-
-    setSlide(slideToGo);
 
     return slideToGo;
   };
 
   const moveToPrevSlide = () => {
-    const index = Math.max(slide.index - 1, 0);
+    const index = Math.max(current.index - 1, 0);
     const slideToGo = slides[index];
-
-    setSlide(slideToGo);
 
     return slideToGo;
   };
@@ -31,7 +21,5 @@ export function useMoveSlide() {
     moveToNextSlide,
     moveToPrevSlide,
     moveSlide,
-    setSlide,
-    slide,
   };
 }

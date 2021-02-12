@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BsBookmarkPlus, BsBookmarkFill } from 'react-icons/bs';
 
 import { BookmarkStyled } from './style';
-import { Storage } from 'utils';
+import { Storage, getBookmarkedItems } from 'utils';
 
 export const createStorageKey = ({ index, type }) =>
   `${type}_${index}_bookmarked`;
@@ -27,7 +27,7 @@ export function Bookmark({
           onClick={() => {
             Storage.remove(createStorageKey(element));
             setBookmarked((state) => !state);
-            onRefresh();
+            onRefresh(getBookmarkedItems(element.type));
           }}
         />
       ) : (
@@ -35,7 +35,7 @@ export function Bookmark({
           onClick={() => {
             Storage.set(createStorageKey(element), element);
             setBookmarked((state) => !state);
-            onRefresh();
+            onRefresh(getBookmarkedItems(element.type));
           }}
         />
       )}

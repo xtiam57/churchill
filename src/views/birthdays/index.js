@@ -104,10 +104,7 @@ function BirthdaysView() {
       </Sidebar>
 
       <Wrapper direction="column" {...settings}>
-        <Alert
-          className="m-0 br-0"
-          variant={showLogo ? 'secondary ' : 'warning'}
-        >
+        <Alert className="m-0 br-0" variant="secondary">
           {showLogo ? (
             <>
               Actualmente <strong>NO</strong> se están mostrando los
