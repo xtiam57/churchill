@@ -8,32 +8,25 @@ import { Wrapper } from 'components/wrapper';
 import { Presenter } from 'components/presenter';
 import { Controls } from 'components/controls';
 import { Sidebar } from 'components/sidebar';
-import { Bookmark, createStorageKey } from 'components/bookmark';
-import { List } from 'components/list';
+import { Bookmark } from 'components/bookmark';
+import { BookmarkList } from 'components/bookmarkList';
 
-import { useVerse, useMoveVerse, useKeyDown } from 'hooks';
-import { Storage, getBookmarkedItems } from 'utils';
-import {
-  ITEMS_PER_LIST,
-  CHANNEL_NAME,
-  SETTINGS_NAME,
-  SETTINGS_INITIAL_STATE,
-} from 'values';
+import { useScriptures, useMoveVerse, useKeyDown } from 'hooks';
+import { getBookmarkedItems } from 'utils';
+import { CHANNEL_NAME, SETTINGS_NAME, SETTINGS_INITIAL_STATE } from 'values';
 
 const useBroadcast = createPersistedState(CHANNEL_NAME);
 const useSettings = createPersistedState(SETTINGS_NAME);
 
 function ScripturesView() {
   const typeaheadRef = useRef();
-  const { scriptures, verse, setVerse } = useVerse();
+  const { scriptures, verse, setVerse } = useScriptures();
   const { moveChapter, moveVerse } = useMoveVerse();
   const [, setMessage] = useBroadcast(null);
   const [settings] = useSettings(SETTINGS_INITIAL_STATE);
   const [showLogo, setShowLogo] = useState(true);
   const [search, setSearch] = useState([verse]);
-  const [bookmarkedItems, setBookmarkedItems] = useState(
-    getBookmarkedItems('verse')
-  );
+  const [bookmarks, setBookmarks] = useState(getBookmarkedItems('verse'));
 
   useEffect(() => {
     setMessage(showLogo ? null : verse);
@@ -70,13 +63,6 @@ function ScripturesView() {
   const onNextChapter = () => {
     const verse = moveChapter(1);
     setSearch([verse]);
-  };
-
-  const removeBookmarks = () => {
-    bookmarkedItems.forEach((item) => {
-      Storage.remove(createStorageKey(item));
-    });
-    setBookmarkedItems(getBookmarkedItems('verse'));
   };
 
   useKeyDown('ArrowLeft', onPrevVerse);
@@ -131,41 +117,16 @@ function ScripturesView() {
           {showLogo ? 'Mostrar Versículo' : 'Mostrar Logo'}
         </Button>
 
-        <List>
-          <List.Item>
-            {bookmarkedItems.length ? (
-              <>
-                <List.Title>Marcadores</List.Title>
-                <List.Action className="text-right" onClick={removeBookmarks}>
-                  (Borrar)
-                </List.Action>
-              </>
-            ) : null}
-          </List.Item>
-
-          {bookmarkedItems.map((item, index) => {
-            return index < ITEMS_PER_LIST ? (
-              <List.Item key={item.index}>
-                <List.Action onClick={() => onSearch([item])}>
-                  {item.cite}
-                </List.Action>
-                <Bookmark icon element={item} onRefresh={setBookmarkedItems} />
-              </List.Item>
-            ) : null;
-          })}
-
-          {bookmarkedItems.length > ITEMS_PER_LIST ? (
-            <List.Item>
-              <List.Text>
-                +{bookmarkedItems.length - ITEMS_PER_LIST} marcadores
-              </List.Text>
-            </List.Item>
-          ) : null}
-        </List>
+        <BookmarkList
+          type="verse"
+          items={bookmarks}
+          onChange={setBookmarks}
+          onClick={(item) => onSearch([item])}
+        />
       </Sidebar>
 
       <Wrapper direction="column">
-        <Bookmark element={verse} onRefresh={setBookmarkedItems} />
+        <Bookmark element={verse} onRefresh={setBookmarks} />
 
         <Alert className="m-0 br-0" variant="secondary">
           {showLogo ? (

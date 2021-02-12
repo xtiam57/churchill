@@ -1,18 +1,31 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import createPersistedState from 'use-persisted-state';
 
 import { Presenter } from 'components/presenter';
 import { useMoveSlide, useKeyDown } from 'hooks';
-import { CHANNEL_NAME, SETTINGS_NAME, SETTINGS_INITIAL_STATE } from 'values';
+import {
+  CHANNEL_NAME,
+  SETTINGS_NAME,
+  SETTINGS_INITIAL_STATE,
+  LOOP_INTERVAL,
+} from 'values';
 
 const useBroadcast = createPersistedState(CHANNEL_NAME);
 const useSettings = createPersistedState(SETTINGS_NAME);
 
 export function Slider({
-  children,
+  children = (
+    <span>
+      Usa las teclas <strong>&larr;</strong> y <strong>&rarr;</strong> para
+      cambiar de lámina.
+    </span>
+  ),
   wrapper,
-  extSlide = [null, () => {}],
+  value = null,
+  onChange = () => {},
   live = false,
+  autoplay = false,
+  loop = false,
   ...rest
 }) {
   const [, setMessage] = useBroadcast(null);
@@ -22,7 +35,15 @@ export function Slider({
   const [slide, setSlide] = useState(slides[0]);
   const { moveSlide } = useMoveSlide(slide, slides);
 
-  const [outSlide, setOutSlide] = extSlide;
+  const onNextSlide = () => {
+    const slideToGo = moveSlide(1, loop);
+    setSlide(slideToGo);
+  };
+
+  const onPrevSlide = () => {
+    const slideToGo = moveSlide(-1, loop);
+    setSlide(slideToGo);
+  };
 
   useEffect(() => {
     setSlides(wrapper?.slides);
@@ -30,14 +51,14 @@ export function Slider({
   }, [wrapper]);
 
   useEffect(() => {
-    setOutSlide(slide);
-  }, [slide, setOutSlide]);
+    onChange(slide);
+  }, [slide, onChange]);
 
   useEffect(() => {
-    if (outSlide) {
-      setSlide(outSlide);
+    if (value) {
+      setSlide(value);
     }
-  }, [outSlide]);
+  }, [value]);
 
   useEffect(() => {
     setMessage(live ? slide : null);
@@ -47,22 +68,29 @@ export function Slider({
     return () => setMessage(null);
   }, []);
 
-  const onNextSlide = () => {
-    const slideToGo = moveSlide(1);
-    setSlide(slideToGo);
-  };
-
-  const onPrevSlide = () => {
-    const slideToGo = moveSlide(-1);
-    setSlide(slideToGo);
-  };
+  useEffect(() => {
+    let interval = null;
+    if (autoplay) {
+      interval = setInterval(() => {
+        console.log('autoplay');
+        const slideToGo = moveSlide(1, loop);
+        setSlide(slideToGo);
+      }, LOOP_INTERVAL);
+    }
+    return () => clearInterval(interval);
+  }, [autoplay, loop, moveSlide]);
 
   useKeyDown('ArrowLeft', onPrevSlide);
   useKeyDown('ArrowRight', onNextSlide);
 
   return (
     <>
-      <Presenter live={live} subtext={slide?.subtext} {...settings}>
+      <Presenter
+        live={live}
+        subtext={slide?.subtext}
+        size={slide?.size}
+        {...settings}
+      >
         {slide?.text}
       </Presenter>
 

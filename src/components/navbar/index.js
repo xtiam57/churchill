@@ -23,7 +23,7 @@ export function Navbar() {
   const [date, setDate] = useState(new Date());
 
   useEffect(() => {
-    let timer = setInterval(() => setDate(new Date()), 1000);
+    const timer = setInterval(() => setDate(new Date()), 1000);
     return () => clearInterval(timer);
   }, []);
 

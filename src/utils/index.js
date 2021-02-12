@@ -1,4 +1,3 @@
-export { isFunction } from './isFunction';
 export { Time } from './time';
 export { Storage } from './storage';
 export { Slide } from './slide';

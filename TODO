@@ -32,3 +32,7 @@ Resto
 * Semáforo de predica
 * Contar caracteres para determinar un mejor tamaño de texto
 * Exportar e importar storage
+* Cronometro
+* useMove para mover cualquier cosa dentro de un array
+* Contexto para anuncios
+* Bug en folder del contexto de himnos

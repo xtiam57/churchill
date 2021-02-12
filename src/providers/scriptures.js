@@ -38,6 +38,7 @@ function ScripturesProvider({ children }) {
             // Verse data
             index: index++,
             cite: `${book.shortTitle} ${chapterIndex + 1}:${verseIndex + 1}`,
+            title: `${book.shortTitle} ${chapterIndex + 1}:${verseIndex + 1}`,
             text: verse.replaceAll('/n', '<br/>'),
             type: 'verse',
             // Metadata

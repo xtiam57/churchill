@@ -15,8 +15,9 @@ import { Slider } from 'components/slider';
 import { Sidebar } from 'components/sidebar';
 import { Wrapper } from 'components/wrapper';
 import { Controls } from 'components/controls';
-import { Bookmark, createStorageKey } from 'components/bookmark';
+import { Bookmark } from 'components/bookmark';
 import { List } from 'components/list';
+import { BookmarkList } from 'components/bookmarkList';
 
 import {
   useAnthemn,
@@ -25,36 +26,19 @@ import {
   useBirthday,
   useKeyDown,
 } from 'hooks';
-import { Storage, Time, getBookmarkedItems } from 'utils';
-import { ITEMS_PER_LIST } from 'values';
-
-const getMP3Path = (path, number) => `${path}\\${number}.mp3`;
+import { Time, getBookmarkedItems } from 'utils';
 
 export default function AnthemnsView() {
   const typeaheadRef = useRef();
-  const [folder] = useState(() => {
-    const { app, shell } = window.require('electron').remote;
-    const { protocol } = window.location;
-    const path = `${
-      protocol === 'file:' ? app.getPath('userData') : ''
-    }\\himnos`;
-    return {
-      open: () => shell.openPath(path),
-      path,
-    };
-  });
-  const { anthemns, song, setSong } = useAnthemn();
+  const { anthemns, song, setSong, folder } = useAnthemn();
   const [slide, setSlide] = useState(song.slides[0]);
   const { moveSlide } = useMoveSlide(slide, song.slides);
   const { moveAnthemn } = useMoveAnthemn();
   const { birthdays, birthdayAnthemn } = useBirthday();
-
   const [showLogo, setShowLogo] = useState(true);
   const [search, setSearch] = useState([song]);
-  const [bookmarkedItems, setBookmarkedItems] = useState(
-    getBookmarkedItems('anthemn')
-  );
-  const [url, setUrl] = useState(getMP3Path(folder.path, song.number));
+  const [bookmarks, setBookmarks] = useState(getBookmarkedItems('anthemn'));
+  const [url, setUrl] = useState(folder.getPath(song.number));
   const [isMP3Loaded, setIsMP3Loaded] = useState(false);
   const [playbackRate, setPlaybackRate] = React.useState(1);
   const [volume, setVolume] = useState(1);
@@ -68,9 +52,9 @@ export default function AnthemnsView() {
 
   useEffect(() => {
     stop();
-    setUrl(getMP3Path(folder.path, song.number));
+    setUrl(folder.getPath(song.number));
     setPlaybackRate(1);
-  }, [song, stop, folder.path]);
+  }, [song, stop, folder]);
 
   useEffect(() => {
     return () => stop();
@@ -109,13 +93,6 @@ export default function AnthemnsView() {
     if (isMP3Loaded) {
       isPlaying ? stop() : play();
     }
-  };
-
-  const removeBookmarks = () => {
-    bookmarkedItems.forEach((item) => {
-      Storage.remove(createStorageKey(item));
-    });
-    setBookmarkedItems(getBookmarkedItems('anthemn'));
   };
 
   const onOpenPath = (e) => {
@@ -206,41 +183,16 @@ export default function AnthemnsView() {
           </List>
         ) : null}
 
-        <List>
-          <List.Item>
-            {bookmarkedItems.length ? (
-              <>
-                <List.Title>Marcadores</List.Title>
-                <List.Action className="text-right" onClick={removeBookmarks}>
-                  (Borrar)
-                </List.Action>
-              </>
-            ) : null}
-          </List.Item>
-
-          {bookmarkedItems.map((item, index) => {
-            return index < ITEMS_PER_LIST ? (
-              <List.Item key={item.index}>
-                <List.Action onClick={() => onSearch([item])}>
-                  {item.title}
-                </List.Action>
-                <Bookmark icon element={item} onRefresh={setBookmarkedItems} />
-              </List.Item>
-            ) : null;
-          })}
-
-          {bookmarkedItems.length > ITEMS_PER_LIST ? (
-            <List.Item>
-              <List.Text>
-                +{bookmarkedItems.length - ITEMS_PER_LIST} marcadores
-              </List.Text>
-            </List.Item>
-          ) : null}
-        </List>
+        <BookmarkList
+          type="anthemn"
+          items={bookmarks}
+          onChange={setBookmarks}
+          onClick={(item) => onSearch([item])}
+        />
       </Sidebar>
 
       <Wrapper direction="column">
-        <Bookmark element={song} onRefresh={setBookmarkedItems} />
+        <Bookmark element={song} onRefresh={setBookmarks} />
 
         <Alert className="m-0 br-0" variant="secondary">
           {showLogo ? (
@@ -256,7 +208,12 @@ export default function AnthemnsView() {
           )}
         </Alert>
 
-        <Slider live={!showLogo} wrapper={song} extSlide={[slide, setSlide]}>
+        <Slider
+          live={!showLogo}
+          wrapper={song}
+          value={slide}
+          onChange={setSlide}
+        >
           Usa las teclas <strong>&larr;</strong> y <strong>&rarr;</strong> para
           cambiar de lámina, y <strong>&uarr;</strong> y <strong>&darr;</strong>{' '}
           para cambiar de himno.

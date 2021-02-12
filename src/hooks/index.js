@@ -1,4 +1,4 @@
-export { useVerse } from './useVerse';
+export { useScriptures } from './useScriptures';
 export { useMoveVerse } from './useMoveVerse';
 export { usePresenter } from './usePresenter';
 export { useAnthemn } from './useAnthemn';

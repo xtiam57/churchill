@@ -23,6 +23,8 @@ export const ITEMS_PER_LIST = 12;
 export const BIRTHDAY_FRAME = 7;
 export const BIRTHDAY_ANTHEMN_INDEX = 508;
 
+export const LOOP_INTERVAL = 5000;
+
 export const THEMES = {
   default: {
     background: '#ffffff',

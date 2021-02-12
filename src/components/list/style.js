@@ -40,9 +40,10 @@ const ActionStyled = styled.button`
   font-size: 0.9em;
   padding: 5px 0 5px 0;
   min-width: 16px;
+  color: ${({ active }) => (active ? 'var(--warning)' : 'var(--secondary)')};
 
   &:hover {
-    color: var(--light);
+    color: ${({ active }) => (active ? 'var(--warning)' : 'var(--light)')};
   }
 `;
 
