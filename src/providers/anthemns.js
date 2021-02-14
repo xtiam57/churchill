@@ -79,22 +79,8 @@ function AnthemnsProvider({ children }) {
     );
   }, []);
 
-  const folder = useMemo(() => {
-    const { app, shell } = window.require('electron').remote;
-    const { protocol } = window.location;
-    const path = `${
-      protocol === 'file:' ? app.getPath('userData') : ''
-    }\\himnos`;
-    return {
-      open: () => shell.openPath(path),
-      getPath: (file) => `${path}\\${file}.mp3`,
-    };
-  }, []);
-
-  const total = anthemns.length;
   const [first] = anthemns;
   const [song, setSong] = useState(first);
-  const [slide, setSlide] = useState(song.slides[0]);
 
   return (
     <AnthemnsContext.Provider
@@ -102,10 +88,6 @@ function AnthemnsProvider({ children }) {
         anthemns,
         song,
         setSong,
-        total,
-        slide,
-        setSlide,
-        folder,
       }}
     >
       {children}

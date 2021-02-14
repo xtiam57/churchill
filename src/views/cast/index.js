@@ -17,11 +17,7 @@ export default function CastView() {
   return (
     <Wrapper bare centered {...settings}>
       {message ? (
-        <Presenter
-          subtext={message.subtext || message.cite}
-          size={message?.size}
-          {...settings}
-        >
+        <Presenter subtext={message.subtext || message.cite} {...settings}>
           {message.text}
         </Presenter>
       ) : (

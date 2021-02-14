@@ -22,17 +22,24 @@ Sección Himnos
 * Etiquetas
 * Guardar configuracion de audio para cada himno
 
+Avisos
+------
+* Agregar anuncios
+* Fondo para anuncios
+* Manejo de imagenes para anuncios
+*
+
 Resto
 -----
 * (done) Pantalla de logo
 * (done) Distinguir entre coro e himno
 * (done) Cumpleaños
-* Avisos
+* (done) useMove para mover cualquier cosa dentro de un array
+* (done) Bug en folder del contexto de himnos
+* (done) Avisos
+* (done) Contar caracteres para determinar un mejor tamaño de texto
 * Temporizador de predica
 * Semáforo de predica
-* Contar caracteres para determinar un mejor tamaño de texto
 * Exportar e importar storage
 * Cronometro
-* useMove para mover cualquier cosa dentro de un array
 * Contexto para anuncios
-* Bug en folder del contexto de himnos

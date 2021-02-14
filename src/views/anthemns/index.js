@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { Typeahead, Highlighter } from 'react-bootstrap-typeahead';
 import { Button, ButtonGroup, Alert, Form } from 'react-bootstrap';
 import {
@@ -22,17 +22,28 @@ import { BookmarkList } from 'components/bookmarkList';
 import {
   useAnthemn,
   useMoveAnthemn,
-  useMoveSlide,
+  useIterate,
   useBirthday,
   useKeyDown,
 } from 'hooks';
 import { Time, getBookmarkedItems } from 'utils';
 
 export default function AnthemnsView() {
+  const folder = useMemo(() => {
+    const { app, shell } = window.require('electron').remote;
+    const { protocol } = window.location;
+    const path = `${
+      protocol === 'file:' ? app.getPath('userData') : ''
+    }\\himnos`;
+    return {
+      open: () => shell.openPath(path),
+      getPath: (file) => `${path}\\${file}.mp3`,
+    };
+  }, []);
   const typeaheadRef = useRef();
-  const { anthemns, song, setSong, folder } = useAnthemn();
+  const { anthemns, song, setSong } = useAnthemn();
   const [slide, setSlide] = useState(song.slides[0]);
-  const { moveSlide } = useMoveSlide(slide, song.slides);
+  const [moveSlide] = useIterate(slide, song.slides);
   const { moveAnthemn } = useMoveAnthemn();
   const { birthdays, birthdayAnthemn } = useBirthday();
   const [showLogo, setShowLogo] = useState(true);
@@ -215,7 +226,7 @@ export default function AnthemnsView() {
           onChange={setSlide}
         >
           Usa las teclas <strong>&larr;</strong> y <strong>&rarr;</strong> para
-          cambiar de lámina, y <strong>&uarr;</strong> y <strong>&darr;</strong>{' '}
+          cambiar de página, y <strong>&uarr;</strong> y <strong>&darr;</strong>{' '}
           para cambiar de himno.
         </Slider>
 

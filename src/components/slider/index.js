@@ -1,14 +1,9 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import createPersistedState from 'use-persisted-state';
 
 import { Presenter } from 'components/presenter';
-import { useMoveSlide, useKeyDown } from 'hooks';
-import {
-  CHANNEL_NAME,
-  SETTINGS_NAME,
-  SETTINGS_INITIAL_STATE,
-  LOOP_INTERVAL,
-} from 'values';
+import { useIterate, useKeyDown } from 'hooks';
+import { CHANNEL_NAME, SETTINGS_NAME, SETTINGS_INITIAL_STATE } from 'values';
 
 const useBroadcast = createPersistedState(CHANNEL_NAME);
 const useSettings = createPersistedState(SETTINGS_NAME);
@@ -17,7 +12,7 @@ export function Slider({
   children = (
     <span>
       Usa las teclas <strong>&larr;</strong> y <strong>&rarr;</strong> para
-      cambiar de lámina.
+      cambiar de página.
     </span>
   ),
   wrapper,
@@ -33,7 +28,7 @@ export function Slider({
 
   const [slides, setSlides] = useState(wrapper?.slides || []);
   const [slide, setSlide] = useState(slides[0]);
-  const { moveSlide } = useMoveSlide(slide, slides);
+  const [moveSlide] = useIterate(slide, slides);
 
   const onNextSlide = () => {
     const slideToGo = moveSlide(1, loop);
@@ -72,25 +67,19 @@ export function Slider({
     let interval = null;
     if (autoplay) {
       interval = setInterval(() => {
-        console.log('autoplay');
         const slideToGo = moveSlide(1, loop);
         setSlide(slideToGo);
-      }, LOOP_INTERVAL);
+      }, settings.interval || 1000);
     }
     return () => clearInterval(interval);
-  }, [autoplay, loop, moveSlide]);
+  }, [autoplay, loop, moveSlide, settings.interval]);
 
   useKeyDown('ArrowLeft', onPrevSlide);
   useKeyDown('ArrowRight', onNextSlide);
 
   return (
     <>
-      <Presenter
-        live={live}
-        subtext={slide?.subtext}
-        size={slide?.size}
-        {...settings}
-      >
+      <Presenter live={live} subtext={slide?.subtext} {...settings}>
         {slide?.text}
       </Presenter>
 

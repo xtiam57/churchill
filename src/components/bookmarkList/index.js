@@ -34,7 +34,16 @@ export function BookmarkList({
       {items.map((item, index) => {
         return index < ITEMS_PER_LIST ? (
           <List.Item key={index}>
-            <List.Action onClick={() => onClick(item)}>
+            <List.Action
+              onClick={() => onClick(item)}
+              title={
+                type === 'verse'
+                  ? item?.text.replaceAll('<br/>', '\n')
+                  : item?.slides[1].text
+                      .replaceAll('<br/>', '\n')
+                      .replaceAll('1)', '')
+              }
+            >
               {item.title}
             </List.Action>
             <Bookmark icon element={item} onRefresh={onChange} />
@@ -44,7 +53,10 @@ export function BookmarkList({
 
       {items.length > ITEMS_PER_LIST ? (
         <List.Item>
-          <List.Text>+{items.length - ITEMS_PER_LIST} marcadores</List.Text>
+          <List.Text>
+            +{items.length - ITEMS_PER_LIST} marcador
+            {items.length - ITEMS_PER_LIST > 1 ? 'es' : ''}
+          </List.Text>
         </List.Item>
       ) : null}
     </List>

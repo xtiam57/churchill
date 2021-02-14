@@ -71,6 +71,9 @@ export const THEMES = {
 };
 
 export const SETTINGS_INITIAL_STATE = {
+  interval: LOOP_INTERVAL,
+  font: '',
+  fontscale: 1,
   logo: 'default',
   ...THEMES['default'],
 };

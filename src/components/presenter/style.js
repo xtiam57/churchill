@@ -14,22 +14,13 @@ const PresenterStyled = styled.section`
   text-align: center;
   border: ${({ live }) => (live ? 'solid 4px var(--warning)' : 'none')};
   background-color: ${({ background }) => background || '#fff'};
+  font-family: ${({ font }) =>
+    font ||
+    '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"'};
 
   p {
-    font-size: ${({ size }) => {
-      if (size === 'xl') {
-        return 'calc(1em + 2.5vh)';
-      }
-      if (size === 'lg') {
-        return 'calc(1.1em + 2.8vh)';
-      }
-      if (size === 'sm') {
-        return 'calc(1.6em + 3vh)';
-      }
-      if (size === 'xs') {
-        return 'calc(2em + 3vh)';
-      }
-      return 'calc(1.4em + 3vh)';
+    font-size: ${({ size = 1.0, fontscale = 1.0 }) => {
+      return `calc(${1.4 * size * fontscale}em + 3vh)`;
     }};
     margin: 0 0 0.5em;
     color: ${({ textcolor }) => textcolor || '#000'};

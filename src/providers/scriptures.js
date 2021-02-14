@@ -3,22 +3,6 @@ import json from 'assets/data/bible';
 
 const ScripturesContext = React.createContext({});
 
-function getSize(length) {
-  if (length > 360) {
-    return 'xl';
-  }
-  if (length > 300 && length <= 360) {
-    return 'lg';
-  }
-  if (length > 50 && length <= 100) {
-    return 'sm';
-  }
-  if (length <= 50) {
-    return 'xs';
-  }
-  return null;
-}
-
 function ScripturesProvider({ children }) {
   const scriptures = useMemo(() => {
     let index = 0;
@@ -33,6 +17,12 @@ function ScripturesProvider({ children }) {
     return data.reduce((verses, book) => {
       const chaptersExpanded = book.content.map((chapter, chapterIndex) => {
         return chapter.map((verse, verseIndex) => {
+          if (verse.length > 0 && verse.length <= 50) {
+            console.log(
+              `${book.shortTitle} ${chapterIndex + 1}:${verseIndex + 1}!`,
+              verse.length
+            );
+          }
           return {
             id: `${book.shortTitle}_${chapterIndex + 1}_${verseIndex + 1}`,
             // Verse data
@@ -47,7 +37,6 @@ function ScripturesProvider({ children }) {
             verseNumber: verseIndex + 1,
             chaptersCount: book.chapters,
             versesCount: book.verses,
-            size: getSize(verse.length),
             // Next and prev data
             nextBookNumber: Math.min(book.number + 1, 66),
             prevBookNumber: Math.max(book.number - 1, 1),
@@ -65,7 +54,6 @@ function ScripturesProvider({ children }) {
     }, []);
   }, []);
 
-  const total = scriptures.length;
   const [first] = scriptures;
   const [verse, setVerse] = useState(first);
 
@@ -75,7 +63,6 @@ function ScripturesProvider({ children }) {
         scriptures,
         verse,
         setVerse,
-        total,
       }}
     >
       {children}

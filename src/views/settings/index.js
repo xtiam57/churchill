@@ -31,12 +31,21 @@ function SettingsView() {
     return () => setMessage(null);
   }, []);
 
-  const onChangeColor = ({ target }) => {
+  const onChangeValue = ({ target }) => {
     const { name, value } = target;
 
     setSettings((state) => ({
       ...state,
       [name]: value,
+    }));
+  };
+
+  const onChangeNumericValue = ({ target }) => {
+    const { name, value } = target;
+
+    setSettings((state) => ({
+      ...state,
+      [name]: +value,
     }));
   };
 
@@ -66,6 +75,79 @@ function SettingsView() {
         </Button>
 
         <Form.Row>
+          <Form.Group as={Col} xs={8} className="mb-1">
+            <Form.Label className="text-muted small mb-0">Fuente</Form.Label>
+            <Form.Control
+              size="sm"
+              as="select"
+              name="font"
+              value={settings?.font}
+              onChange={onChangeValue}
+            >
+              <option value="">Predeterminada</option>
+              <option value="Arial">Arial</option>
+              <option value="Arial Black">Arial Black</option>
+              <option value="Courier New">Courier New</option>
+              <option value="Garamond">Garamond</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Helvetica">Helvetica</option>
+              <option value="Tahoma">Tahoma</option>
+              <option value="Times New Roman">Times New Roman</option>
+            </Form.Control>
+          </Form.Group>
+
+          <Form.Group as={Col} xs={4} className="mb-1">
+            <Form.Label className="text-muted small mb-0">Escala</Form.Label>
+            <Form.Control
+              size="sm"
+              as="select"
+              name="fontscale"
+              value={settings?.fontscale}
+              onChange={onChangeNumericValue}
+            >
+              <option value="0.3">x0.3</option>
+              <option value="0.5">x0.5</option>
+              <option value="0.6">x0.6</option>
+              <option value="0.7">x0.7</option>
+              <option value="0.8">x0.8</option>
+              <option value="0.9">x0.9</option>
+              <option value="1">x1</option>
+              <option value="1.1">x1.1</option>
+              <option value="1.15">x1.15</option>
+              <option value="1.2">x1.2</option>
+              <option value="1.25">x1.25</option>
+              <option value="1.5">x1.5</option>
+              <option value="1.75">x1.75</option>
+              <option value="2">x2</option>
+            </Form.Control>
+          </Form.Group>
+        </Form.Row>
+
+        <Form.Row>
+          <Form.Group as={Col} className="mb-1">
+            <Form.Label className="text-muted small mb-0">
+              Intervalo para Autoplay
+            </Form.Label>
+            <Form.Control
+              size="sm"
+              as="select"
+              name="interval"
+              value={settings?.interval}
+              onChange={onChangeNumericValue}
+            >
+              <option value="1000">1 segundo</option>
+              <option value="2000">2 segundos</option>
+              <option value="3000">3 segundos</option>
+              <option value="5000">5 segundos</option>
+              <option value="10000">10 segundos</option>
+              <option value="15000">15 segundos</option>
+              <option value="20000">20 segundos</option>
+              <option value="60000">1 minuto</option>
+            </Form.Control>
+          </Form.Group>
+        </Form.Row>
+
+        <Form.Row>
           <Form.Group as={Col} className="mb-1">
             <Form.Label className="text-muted small mb-0">
               Logo / Modo
@@ -74,10 +156,9 @@ function SettingsView() {
               <Form.Control
                 as="select"
                 size="sm"
+                name="logo"
                 value={settings?.logo}
-                onChange={({ target }) =>
-                  setSettings((state) => ({ ...state, logo: target.value }))
-                }
+                onChange={onChangeValue}
               >
                 <option value="default">Iglesia</option>
                 <option value="jovenes">Jóvenes</option>
@@ -91,9 +172,8 @@ function SettingsView() {
                 as="select"
                 size="sm"
                 value={settings?.mode}
-                onChange={({ target }) =>
-                  setSettings((state) => ({ ...state, mode: target.value }))
-                }
+                name="mode"
+                onChange={onChangeValue}
               >
                 <option value="default">Normal</option>
                 <option value="negative">Negativo</option>
@@ -109,6 +189,7 @@ function SettingsView() {
               size="sm"
               as="select"
               value={settings?.theme}
+              name="theme"
               onChange={onChangeTheme}
             >
               <option value="default">Predeterminado</option>
@@ -132,7 +213,7 @@ function SettingsView() {
                   type="color"
                   name="background"
                   value={settings?.background}
-                  onChange={onChangeColor}
+                  onChange={onChangeValue}
                   disabled={settings?.theme !== 'custom'}
                 />
               </Form.Group>
@@ -143,7 +224,7 @@ function SettingsView() {
                   size="sm"
                   name="textcolor"
                   value={settings?.textcolor}
-                  onChange={onChangeColor}
+                  onChange={onChangeValue}
                   disabled={settings?.theme !== 'custom'}
                 />
               </Form.Group>
@@ -157,7 +238,7 @@ function SettingsView() {
                   type="color"
                   name="subtextcolor"
                   value={settings?.subtextcolor}
-                  onChange={onChangeColor}
+                  onChange={onChangeValue}
                   disabled={settings?.theme !== 'custom'}
                 />
               </Form.Group>
@@ -170,7 +251,7 @@ function SettingsView() {
                   type="color"
                   name="titlecolor"
                   value={settings?.titlecolor}
-                  onChange={onChangeColor}
+                  onChange={onChangeValue}
                   disabled={settings?.theme !== 'custom'}
                 />
               </Form.Group>

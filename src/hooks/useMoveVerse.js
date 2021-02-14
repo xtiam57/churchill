@@ -1,11 +1,11 @@
 import { useContext } from 'react';
 import { ScripturesContext } from 'providers/scriptures';
+import { useIterate } from 'hooks';
 
 export function useMoveVerse() {
-  const { scriptures, verse, setVerse, total } = useContext(ScripturesContext);
+  const { scriptures, verse, setVerse } = useContext(ScripturesContext);
 
   const {
-    index,
     bookNumber,
     chaptersCount,
     nextBookNumber,
@@ -13,6 +13,8 @@ export function useMoveVerse() {
     nextChapterNumber,
     prevChapterNumber,
   } = verse;
+
+  const [move] = useIterate(verse, scriptures);
 
   const moveToNextBook = () => {
     const verseToGo = scriptures.find((v) => v.bookNumber === nextBookNumber);
@@ -81,8 +83,7 @@ export function useMoveVerse() {
   };
 
   const moveToNextVerse = () => {
-    const i = Math.min(index + 1, total - 1);
-    const verseToGo = scriptures[i];
+    const verseToGo = move(1);
 
     setVerse(verseToGo);
 
@@ -90,8 +91,7 @@ export function useMoveVerse() {
   };
 
   const moveToPrevVerse = () => {
-    const i = Math.max(index - 1, 0);
-    const verseToGo = scriptures[i];
+    const verseToGo = move(-1);
 
     setVerse(verseToGo);
 
