@@ -41,7 +41,7 @@ export default function AnthemnsView() {
     };
   }, []);
   const typeaheadRef = useRef();
-  const { anthemns, song, setSong } = useAnthemn();
+  const { anthemns, song, setSong, tags } = useAnthemn();
   const [slide, setSlide] = useState(song.slides[0]);
   const [moveSlide] = useIterate(slide, song.slides);
   const { moveAnthemn } = useMoveAnthemn();
@@ -60,6 +60,8 @@ export default function AnthemnsView() {
     onload: () => setIsMP3Loaded(true),
     onloaderror: () => setIsMP3Loaded(false),
   });
+  const [tagSelected, setTagSelected] = useState(null);
+  const [anthemnsWithTags, setAnthemnsWithTags] = useState([]);
 
   useEffect(() => {
     stop();
@@ -109,6 +111,13 @@ export default function AnthemnsView() {
   const onOpenPath = (e) => {
     e.preventDefault();
     folder.open();
+  };
+
+  const onShowSongsWithTags = (tag) => {
+    setTagSelected(tag);
+    setAnthemnsWithTags(() =>
+      anthemns.filter((song) => song.tags?.toLowerCase() === tag)
+    );
   };
 
   useKeyDown('ArrowUp', onNextAnthemn);
@@ -187,7 +196,12 @@ export default function AnthemnsView() {
             </List.Item>
 
             <List.Item>
-              <List.Action onClick={() => onSearch([birthdayAnthemn])}>
+              <List.Action
+                onClick={() => onSearch([birthdayAnthemn])}
+                title={birthdayAnthemn?.slides[1].text
+                  .replaceAll('<br/>', '\n')
+                  .replaceAll('1)', '')}
+              >
                 {birthdayAnthemn.title}
               </List.Action>
             </List.Item>
@@ -200,6 +214,49 @@ export default function AnthemnsView() {
           onChange={setBookmarks}
           onClick={(item) => onSearch([item])}
         />
+
+        <div className="mt-5">
+          {tags.map((tag, index) => (
+            <span
+              key={index}
+              onClick={() => onShowSongsWithTags(tag)}
+              className={`badge mr-1 pointer ${
+                tag === tagSelected ? 'bg-warning' : 'bg-secondary text-light'
+              }`}
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        {anthemnsWithTags.length ? (
+          <List>
+            <List.Item>
+              <List.Title
+                title={birthdays.reduce(
+                  (res, { name, day, month }) =>
+                    `${res}${name} (${Time.formatBirthday(day, month)})\n`,
+                  ''
+                )}
+              >
+                Etiqueta: <span className="text-light">{tagSelected}</span>
+              </List.Title>
+            </List.Item>
+
+            {anthemnsWithTags.map((item) => (
+              <List.Item>
+                <List.Action
+                  onClick={() => onSearch([item])}
+                  title={item?.slides[1].text
+                    .replaceAll('<br/>', '\n')
+                    .replaceAll('1)', '')}
+                >
+                  {item.title}
+                </List.Action>
+              </List.Item>
+            ))}
+          </List>
+        ) : null}
       </Sidebar>
 
       <Wrapper direction="column">

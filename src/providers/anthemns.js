@@ -33,6 +33,8 @@ function splitLines(title, text, array, index) {
 }
 
 function AnthemnsProvider({ children }) {
+  const tagsSet = new Set();
+
   const anthemns = useMemo(() => {
     return json.map(
       ({ number, title, startsWithChorus, chorus, stanzas, tags }, index) => {
@@ -40,6 +42,10 @@ function AnthemnsProvider({ children }) {
         let slideIndex = 0;
         const isNotAnthemn = tags?.toLowerCase().includes('coro');
         const isExtra = tags?.toLowerCase().includes('extra');
+
+        if (tags) {
+          tagsSet.add(tags?.toLowerCase());
+        }
 
         slides.push(
           Slide.create({
@@ -81,6 +87,7 @@ function AnthemnsProvider({ children }) {
 
   const [first] = anthemns;
   const [song, setSong] = useState(first);
+  const [tags] = useState(Array.from(tagsSet));
 
   return (
     <AnthemnsContext.Provider
@@ -88,6 +95,7 @@ function AnthemnsProvider({ children }) {
         anthemns,
         song,
         setSong,
+        tags,
       }}
     >
       {children}

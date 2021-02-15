@@ -2,8 +2,8 @@ import React from 'react';
 import { PresenterStyled } from './style';
 import { useTransition, animated } from 'react-spring';
 
-function getSize(length, hasStrong = false, lineBreakCount = 0) {
-  length = length - (hasStrong ? 17 : 0) - lineBreakCount * 5;
+function getScale(length, strongCount = false, lineBreakCount = 0) {
+  length = length - strongCount * 17 - lineBreakCount * 5;
   if (length > 400) {
     return 0.7;
   }
@@ -46,9 +46,9 @@ export function Presenter({ children, subtext = null, ...rest }) {
     leave: { opacity: 0, display: 'none' },
   });
 
-  const size = getSize(
+  const size = getScale(
     children.length,
-    children.includes('<strong>') || subtext?.includes('<strong>'),
+    (children.match(/<strong>/g) || []).length,
     (children.match(/<br\/>/g) || []).length
   );
 

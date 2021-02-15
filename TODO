@@ -18,8 +18,8 @@ Sección Himnos
 * (done) Pausar/reporducir audio
 * (done) Configuracion de audio: volumen, velocidad, deshabilitar
 * (done) Configuración: color de texto, margenes, color de fondo, color de coro
+* (done) Etiquetas
 * Busqueda de palabras
-* Etiquetas
 * Guardar configuracion de audio para cada himno
 
 Avisos
@@ -27,7 +27,6 @@ Avisos
 * Agregar anuncios
 * Fondo para anuncios
 * Manejo de imagenes para anuncios
-*
 
 Resto
 -----

@@ -17,12 +17,6 @@ function ScripturesProvider({ children }) {
     return data.reduce((verses, book) => {
       const chaptersExpanded = book.content.map((chapter, chapterIndex) => {
         return chapter.map((verse, verseIndex) => {
-          if (verse.length > 0 && verse.length <= 50) {
-            console.log(
-              `${book.shortTitle} ${chapterIndex + 1}:${verseIndex + 1}!`,
-              verse.length
-            );
-          }
           return {
             id: `${book.shortTitle}_${chapterIndex + 1}_${verseIndex + 1}`,
             // Verse data

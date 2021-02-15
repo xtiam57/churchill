@@ -75,7 +75,7 @@ function SettingsView() {
         </Button>
 
         <Form.Row>
-          <Form.Group as={Col} xs={8} className="mb-1">
+          <Form.Group as={Col} className="mb-1">
             <Form.Label className="text-muted small mb-0">Fuente</Form.Label>
             <Form.Control
               size="sm"
@@ -95,31 +95,23 @@ function SettingsView() {
               <option value="Times New Roman">Times New Roman</option>
             </Form.Control>
           </Form.Group>
+        </Form.Row>
 
-          <Form.Group as={Col} xs={4} className="mb-1">
-            <Form.Label className="text-muted small mb-0">Escala</Form.Label>
+        <Form.Row>
+          <Form.Group as={Col} className="mb-1">
+            <Form.Label className="text-muted small mb-0">
+              Escala ({Number.parseFloat(settings?.fontscale * 100).toFixed(0)}
+              %)
+            </Form.Label>
             <Form.Control
-              size="sm"
-              as="select"
+              type="range"
+              min="0.05"
+              max="2"
+              step="0.05"
               name="fontscale"
               value={settings?.fontscale}
               onChange={onChangeNumericValue}
-            >
-              <option value="0.3">x0.3</option>
-              <option value="0.5">x0.5</option>
-              <option value="0.6">x0.6</option>
-              <option value="0.7">x0.7</option>
-              <option value="0.8">x0.8</option>
-              <option value="0.9">x0.9</option>
-              <option value="1">x1</option>
-              <option value="1.1">x1.1</option>
-              <option value="1.15">x1.15</option>
-              <option value="1.2">x1.2</option>
-              <option value="1.25">x1.25</option>
-              <option value="1.5">x1.5</option>
-              <option value="1.75">x1.75</option>
-              <option value="2">x2</option>
-            </Form.Control>
+            />
           </Form.Group>
         </Form.Row>
 
