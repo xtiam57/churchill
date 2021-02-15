@@ -114,9 +114,11 @@ export default function AnthemnsView() {
   };
 
   const onShowSongsWithTags = (tag) => {
-    setTagSelected(tag);
+    setTagSelected(tag === tagSelected ? null : tag);
     setAnthemnsWithTags(() =>
-      anthemns.filter((song) => song.tags?.toLowerCase() === tag)
+      tag === tagSelected
+        ? []
+        : anthemns.filter((song) => song.tags?.toLowerCase() === tag)
     );
   };
 
@@ -159,9 +161,7 @@ export default function AnthemnsView() {
                   .replaceAll('1)', '')}
               </small>
               {option.tags ? (
-                <small className="badge bg-secondary text-light">
-                  ({option.tags})
-                </small>
+                <small className="tag">{option.tags.toLowerCase()}</small>
               ) : null}
             </>
           )}
@@ -220,8 +220,8 @@ export default function AnthemnsView() {
             <span
               key={index}
               onClick={() => onShowSongsWithTags(tag)}
-              className={`badge mr-1 pointer ${
-                tag === tagSelected ? 'bg-warning' : 'bg-secondary text-light'
+              className={`tag mr-1 mb-1 pointer ${
+                tag === tagSelected ? 'active' : ''
               }`}
             >
               {tag}
@@ -244,7 +244,7 @@ export default function AnthemnsView() {
             </List.Item>
 
             {anthemnsWithTags.map((item) => (
-              <List.Item>
+              <List.Item key={item.index}>
                 <List.Action
                   onClick={() => onSearch([item])}
                   title={item?.slides[1].text
@@ -260,7 +260,7 @@ export default function AnthemnsView() {
       </Sidebar>
 
       <Wrapper direction="column">
-        <Bookmark element={song} onRefresh={setBookmarks} />
+        <Bookmark element={song} onChange={setBookmarks} />
 
         <Alert className="m-0 br-0" variant="secondary">
           {showLogo ? (

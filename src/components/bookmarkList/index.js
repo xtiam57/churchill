@@ -46,7 +46,7 @@ export function BookmarkList({
             >
               {item.title}
             </List.Action>
-            <Bookmark icon element={item} onRefresh={onChange} />
+            <Bookmark icon element={item} onChange={onChange} />
           </List.Item>
         ) : null;
       })}

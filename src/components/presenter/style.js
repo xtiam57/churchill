@@ -32,7 +32,7 @@ const PresenterStyled = styled.section`
 
   cite {
     color: ${({ subtextcolor }) => subtextcolor || '#007bff'};
-    font-size: calc(1.2em + 1vh);
+    font-size: calc(1.3em + 1vh);
   }
 `;
 

@@ -40,7 +40,7 @@ function createWindow() {
   mainWindow.webContents.openDevTools();
 
   // Hide menu
-  // mainWindow.removeMenu();
+  mainWindow.removeMenu();
 
   // Show window when everything is loaded
   mainWindow.once('ready-to-show', () => mainWindow.show());

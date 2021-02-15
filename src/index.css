@@ -20,3 +20,42 @@
 .br-0 {
   border-radius: 0;
 }
+
+.tag {
+  border: solid 1px var(--secondary);
+  color: var(--secondary);
+  background-color: transparent;
+  font-weight: normal;
+  padding: 4px 10px 6px;
+  transition: all 0.3 ease;
+  display: inline-block;
+  font-size: 75%;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+}
+
+.tag:not(.active):hover {
+  border: solid 1px var(--light);
+  color: var(--light);
+}
+
+.tag.active {
+  border: solid 1px var(--warning);
+  color: var(--warning);
+}
+
+.dropdown-menu.show .dropdown-item.active .tag {
+  border: solid 1px var(--white);
+  color: var(--white);
+  cursor: inherit;
+}
+
+.dropdown-menu.show .dropdown-item .tag {
+  border: solid 1px #212529;
+  color: #212529;
+  cursor: inherit;
+  margin: 5px 0;
+}

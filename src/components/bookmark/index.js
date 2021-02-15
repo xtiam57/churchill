@@ -10,7 +10,7 @@ export const createStorageKey = ({ index, type }) =>
 export function Bookmark({
   element,
   icon = false,
-  onRefresh = () => {},
+  onChange = () => {},
   ...rest
 }) {
   const [bookmarked, setBookmarked] = useState(false);
@@ -27,7 +27,7 @@ export function Bookmark({
           onClick={() => {
             Storage.remove(createStorageKey(element));
             setBookmarked((state) => !state);
-            onRefresh(getBookmarkedItems(element.type));
+            onChange(getBookmarkedItems(element.type));
           }}
         />
       ) : (
@@ -35,7 +35,7 @@ export function Bookmark({
           onClick={() => {
             Storage.set(createStorageKey(element), element);
             setBookmarked((state) => !state);
-            onRefresh(getBookmarkedItems(element.type));
+            onChange(getBookmarkedItems(element.type));
           }}
         />
       )}

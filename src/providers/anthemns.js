@@ -41,7 +41,7 @@ function AnthemnsProvider({ children }) {
         const slides = [];
         let slideIndex = 0;
         const isNotAnthemn = tags?.toLowerCase().includes('coro');
-        const isExtra = tags?.toLowerCase().includes('extra');
+        const isExtra = tags?.toLowerCase().includes('apéndice');
 
         if (tags) {
           tagsSet.add(tags?.toLowerCase());
@@ -50,7 +50,9 @@ function AnthemnsProvider({ children }) {
         slides.push(
           Slide.create({
             title: `${
-              isNotAnthemn ? 'Coro' : `Himno${isExtra ? '' : ` #${number}`}`
+              isNotAnthemn
+                ? 'Coro'
+                : `${isExtra ? 'Apéndice' : `Himno #${number}`}`
             }`,
             text: title,
             index: slideIndex++,
@@ -87,7 +89,7 @@ function AnthemnsProvider({ children }) {
 
   const [first] = anthemns;
   const [song, setSong] = useState(first);
-  const [tags] = useState(Array.from(tagsSet));
+  const [tags] = useState(Array.from(tagsSet).sort());
 
   return (
     <AnthemnsContext.Provider

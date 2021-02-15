@@ -126,7 +126,7 @@ function ScripturesView() {
       </Sidebar>
 
       <Wrapper direction="column">
-        <Bookmark element={verse} onRefresh={setBookmarks} />
+        <Bookmark element={verse} onChange={setBookmarks} />
 
         <Alert className="m-0 br-0" variant="secondary">
           {showLogo ? (
