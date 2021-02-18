@@ -58,7 +58,7 @@ function BirthdaysView() {
         <h1 className="text-light display-4">Cumpleaños</h1>
 
         <Button
-          className="mt-3"
+          className="my-3"
           block
           size="lg"
           variant={showLogo ? 'secondary' : 'warning'}
@@ -67,7 +67,7 @@ function BirthdaysView() {
           {showLogo ? 'Mostrar Cumpleaños' : 'Mostrar Logo'}
         </Button>
 
-        <List>
+        <List className="mb-4">
           {birthdays.length ? (
             <List.Item>
               <List.Title>recientes/próximos</List.Title>

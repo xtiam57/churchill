@@ -1,4 +1,3 @@
-
 Sección Biblia
 --------------
 * (done) Barra de búsqueda de versículo (libro, capítulo, versículo)
@@ -7,7 +6,7 @@ Sección Biblia
 * (done) Mostra cita
 * (done) Marcar lectura del servicio
 * (done) Configuración: color de texto, margenes, posición de la cita, color de la cita, color de fondo
-* Búsqueda de palabras
+* (done) Búsqueda de palabras
 * Palabra de Jesús en rojo
 
 Sección Himnos
@@ -19,7 +18,7 @@ Sección Himnos
 * (done) Configuracion de audio: volumen, velocidad, deshabilitar
 * (done) Configuración: color de texto, margenes, color de fondo, color de coro
 * (done) Etiquetas
-* Busqueda de palabras
+* (done) Busqueda de palabras
 * Guardar configuracion de audio para cada himno
 
 Avisos

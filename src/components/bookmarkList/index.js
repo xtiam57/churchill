@@ -10,6 +10,7 @@ export function BookmarkList({
   items = [],
   onChange = () => {},
   onClick = () => {},
+  ...rest
 }) {
   const removeBookmarks = () => {
     items.forEach((item) => {
@@ -19,11 +20,11 @@ export function BookmarkList({
   };
 
   return (
-    <List>
+    <List {...rest}>
       <List.Item>
         {items.length ? (
           <>
-            <List.Title>Marcadores</List.Title>
+            <List.Title>Marcadores ({items.length})</List.Title>
             <List.Action className="text-right" onClick={removeBookmarks}>
               (Borrar)
             </List.Action>

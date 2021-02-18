@@ -187,6 +187,7 @@ function SettingsView() {
               <option value="default">Predeterminado</option>
               <option value="calvario">Monte Calvario</option>
               <option value="cobalt">Cobalto</option>
+              <option value="dark">Dark</option>
               <option value="dracula">Drácula</option>
               <option value="female">Femenino</option>
               <option value="fun">Divertido</option>

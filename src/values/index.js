@@ -1,5 +1,8 @@
 import { Slide } from 'utils';
 
+export const CHANNEL_NAME = 'BROADCASTING_MESSAGE';
+export const SETTINGS_NAME = 'BROADCASTING_SETTINGS';
+
 export const HOME_VIEW_PATH = '/';
 export const BIBLE_VIEW_PATH = '/bible';
 export const ANTHEMNS_VIEW_PATH = '/anthemns';
@@ -15,14 +18,9 @@ export const SPACE_BAR_KEY = 32;
 export const ESCAPE_KEY = 27;
 export const F1_KEY = 112;
 
-export const CHANNEL_NAME = 'BROADCASTING_MESSAGE';
-export const SETTINGS_NAME = 'SETTINGS';
-
-export const ITEMS_PER_LIST = 12;
-
 export const BIRTHDAY_FRAME = 7;
 export const BIRTHDAY_ANTHEMN_INDEX = 508;
-
+export const ITEMS_PER_LIST = 12;
 export const LOOP_INTERVAL = 5000;
 
 export const THEMES = {
@@ -34,9 +32,9 @@ export const THEMES = {
     mode: 'default',
   },
   cobalt: {
-    background: '#192841',
-    textcolor: '#ffff00',
-    titlecolor: '#ffa200',
+    background: '#19354A',
+    textcolor: '#FFC603',
+    titlecolor: '#ff9900',
     subtextcolor: '#ffffff',
     mode: 'negative',
   },
@@ -45,6 +43,13 @@ export const THEMES = {
     textcolor: '#ffffff',
     titlecolor: '#ffa200',
     subtextcolor: '#ffff00',
+    mode: 'negative',
+  },
+  dark: {
+    background: '#202124',
+    textcolor: '#bcc0c3',
+    titlecolor: '#c58af9',
+    subtextcolor: '#688dee',
     mode: 'negative',
   },
   calvario: {

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { Typeahead, Highlighter } from 'react-bootstrap-typeahead';
-import { Button, ButtonGroup, Alert, Form } from 'react-bootstrap';
+import { Button, ButtonGroup, Alert, Form, Modal } from 'react-bootstrap';
 import {
   ImArrowLeft2,
   ImArrowRight2,
@@ -8,6 +8,7 @@ import {
   ImStop2,
   ImVolumeHigh,
   ImVolumeMute,
+  ImSearch,
 } from 'react-icons/im';
 import useSound from 'use-sound';
 
@@ -41,6 +42,7 @@ export default function AnthemnsView() {
     };
   }, []);
   const typeaheadRef = useRef();
+  const typeaheadModalRef = useRef();
   const { anthemns, song, setSong, tags } = useAnthemn();
   const [slide, setSlide] = useState(song.slides[0]);
   const [moveSlide] = useIterate(slide, song.slides);
@@ -62,6 +64,7 @@ export default function AnthemnsView() {
   });
   const [tagSelected, setTagSelected] = useState(null);
   const [anthemnsWithTags, setAnthemnsWithTags] = useState([]);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     stop();
@@ -131,47 +134,55 @@ export default function AnthemnsView() {
     <Wrapper>
       <Sidebar>
         <h1 className="text-light display-4">Himnos</h1>
-        <Typeahead
-          emptyLabel="No existe esa opcion."
-          highlightOnlyResult={true}
-          id="combo"
-          labelKey="title"
-          minLength={0}
-          onChange={onSearch}
-          onFocus={(e) => e.target.select()}
-          options={anthemns}
-          paginate={true}
-          paginationText="Ver más opciones..."
-          placeholder="Selecciona un versículo..."
-          ref={typeaheadRef}
-          selected={search}
-          size="large"
-          renderMenuItemChildren={(option, { text }) => (
-            <>
-              <Highlighter search={text}>{option.title}</Highlighter>
-              <small
-                className="d-block overflow-hidden font-italic"
-                style={{ textOverflow: 'ellipsis' }}
-                title={option.slides[1].text
-                  .replaceAll('<br/>', '\n')
-                  .replaceAll('1)', '')}
-              >
-                {option.slides[1].text
-                  .replaceAll('<br/>', ' ')
-                  .replaceAll('1)', '')}
-              </small>
-              {option.tags ? (
-                <small className="tag">{option.tags.toLowerCase()}</small>
-              ) : null}
-            </>
-          )}
-        />
-        <div className="small text-muted d-block mt-1">
+
+        <div className="d-flex">
+          <Typeahead
+            emptyLabel="No existe esa opcion."
+            highlightOnlyResult={true}
+            id="combo"
+            labelKey="title"
+            minLength={0}
+            onChange={onSearch}
+            onFocus={(e) => e.target.select()}
+            options={anthemns}
+            paginate={true}
+            paginationText="Ver más opciones..."
+            placeholder="Selecciona un versículo..."
+            ref={typeaheadRef}
+            selected={search}
+            size="large"
+            renderMenuItemChildren={(option, { text }) => (
+              <>
+                <Highlighter search={text}>{option.title}</Highlighter>
+                <small
+                  className="d-block overflow-hidden font-italic"
+                  style={{ textOverflow: 'ellipsis' }}
+                  title={option.text.replaceAll('/n', '\n')}
+                >
+                  {option.text.replaceAll('1)', '').replaceAll('/n', ' ')}
+                </small>
+                {option.tags ? (
+                  <small className="tag">{option.tags.toLowerCase()}</small>
+                ) : null}
+              </>
+            )}
+          />
+
+          <Button
+            className="ml-2"
+            onClick={() => setShowModal(true)}
+            variant="outline-light"
+          >
+            <ImSearch />
+          </Button>
+        </div>
+
+        <div className="small text-muted d-block mt-1 mb-3">
           Presiona <strong>F1</strong> para buscar.
         </div>
 
         <Button
-          className="mt-3"
+          className="mb-4"
           block
           size="lg"
           variant={showLogo ? 'secondary' : 'warning'}
@@ -181,7 +192,7 @@ export default function AnthemnsView() {
         </Button>
 
         {birthdays.length ? (
-          <List>
+          <List className="mb-4">
             <List.Item>
               <List.Title
                 className="text-warning"
@@ -209,54 +220,48 @@ export default function AnthemnsView() {
         ) : null}
 
         <BookmarkList
+          className="mb-4"
           type="anthemn"
           items={bookmarks}
           onChange={setBookmarks}
           onClick={(item) => onSearch([item])}
         />
 
-        <div className="mt-5">
-          {tags.map((tag, index) => (
-            <span
-              key={index}
-              onClick={() => onShowSongsWithTags(tag)}
-              className={`tag mr-1 mb-1 pointer ${
-                tag === tagSelected ? 'active' : ''
-              }`}
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
+        <List>
+          <List.Item>
+            <List.Title>Etiquetas</List.Title>
+          </List.Item>
 
-        {anthemnsWithTags.length ? (
-          <List>
-            <List.Item>
-              <List.Title
-                title={birthdays.reduce(
-                  (res, { name, day, month }) =>
-                    `${res}${name} (${Time.formatBirthday(day, month)})\n`,
-                  ''
-                )}
+          <List.Item
+            className="my-2"
+            style={{ flexWrap: 'wrap', justifyContent: 'start' }}
+          >
+            {tags.map((tag, index) => (
+              <span
+                key={index}
+                onClick={() => onShowSongsWithTags(tag)}
+                className={`tag mr-1 mb-1 pointer ${
+                  tag === tagSelected ? 'active' : ''
+                }`}
               >
-                Etiqueta: <span className="text-light">{tagSelected}</span>
-              </List.Title>
-            </List.Item>
-
-            {anthemnsWithTags.map((item) => (
-              <List.Item key={item.index}>
-                <List.Action
-                  onClick={() => onSearch([item])}
-                  title={item?.slides[1].text
-                    .replaceAll('<br/>', '\n')
-                    .replaceAll('1)', '')}
-                >
-                  {item.title}
-                </List.Action>
-              </List.Item>
+                {tag}
+              </span>
             ))}
-          </List>
-        ) : null}
+          </List.Item>
+
+          {anthemnsWithTags.map((item) => (
+            <List.Item key={item.index}>
+              <List.Action
+                onClick={() => onSearch([item])}
+                title={item?.slides[1].text
+                  .replaceAll('<br/>', '\n')
+                  .replaceAll('1)', '')}
+              >
+                {item.title}
+              </List.Action>
+            </List.Item>
+          ))}
+        </List>
       </Sidebar>
 
       <Wrapper direction="column">
@@ -366,6 +371,44 @@ export default function AnthemnsView() {
           ) : null}
         </Controls>
       </Wrapper>
+
+      <Modal
+        size="xl"
+        show={showModal}
+        onHide={() => setShowModal(false)}
+        onShow={() => typeaheadModalRef.current.focus()}
+      >
+        <Modal.Body>
+          <Typeahead
+            emptyLabel="No hay resultados."
+            className="custom-typeahead"
+            id="combo"
+            labelKey="text"
+            minLength={0}
+            onChange={(event) => {
+              if (event.length) {
+                onSearch(event);
+                setShowModal(false);
+              }
+            }}
+            onFocus={(e) => e.target.select()}
+            options={anthemns}
+            paginate={true}
+            paginationText="Ver más resultados..."
+            placeholder="Buscar una palabra..."
+            ref={typeaheadModalRef}
+            highlightOnlyResult={true}
+            renderMenuItemChildren={(option, { text }) => (
+              <>
+                <small className="d-block text-primary">{option.title}</small>
+                <Highlighter search={text}>
+                  {option.text.replaceAll('/n', ' ')}
+                </Highlighter>
+              </>
+            )}
+          />
+        </Modal.Body>
+      </Modal>
     </Wrapper>
   );
 }

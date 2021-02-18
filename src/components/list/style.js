@@ -3,19 +3,17 @@ import styled from 'styled-components';
 const ListStyled = styled.ul`
   list-style: none;
   padding: 0;
-  margin: 2em 0 0;
+  margin: 0;
 `;
 
 const TitleStyled = styled.span`
-  color: var(--secondary);
+  color: var(--light);
   text-transform: uppercase;
   font-size: 0.7em;
   letter-spacing: 2px;
-
   background-color: transparent;
   border: none;
   text-align: left;
-
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;

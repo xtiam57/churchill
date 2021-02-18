@@ -59,3 +59,15 @@
   cursor: inherit;
   margin: 5px 0;
 }
+
+.custom-typeahead .dropdown-item {
+  white-space: normal;
+}
+
+.custom-typeahead .dropdown-item.active .text-primary {
+  color: #fff !important;
+}
+
+.custom-typeahead .dropdown-menu.show {
+  min-height: 50vh;
+}

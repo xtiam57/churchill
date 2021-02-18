@@ -39,6 +39,7 @@ function AnthemnsProvider({ children }) {
     return json.map(
       ({ number, title, startsWithChorus, chorus, stanzas, tags }, index) => {
         const slides = [];
+        let text = '';
         let slideIndex = 0;
         const isNotAnthemn = tags?.toLowerCase().includes('coro');
         const isExtra = tags?.toLowerCase().includes('apéndice');
@@ -63,11 +64,16 @@ function AnthemnsProvider({ children }) {
           slideIndex = splitLines('Coro', chorus, slides, slideIndex);
         }
 
-        stanzas.forEach((stanza) => {
+        stanzas.forEach((stanza, i) => {
           slideIndex = splitLines(null, stanza, slides, slideIndex);
+          text += `${stanza} /n/n`;
 
           if (chorus) {
             slideIndex = splitLines('Coro', chorus, slides, slideIndex);
+
+            if (i === 0) {
+              text += `(CORO) /n${chorus} /n/n`;
+            }
           }
         });
 
@@ -80,6 +86,7 @@ function AnthemnsProvider({ children }) {
           title: `${isNotAnthemn || isExtra ? '' : `#${number} `}${title}`,
           type: 'anthemn',
           slides,
+          text,
           tags,
           length: slides.length,
         };

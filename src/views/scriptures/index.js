@@ -1,8 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Typeahead, Highlighter } from 'react-bootstrap-typeahead';
-import { Button, ButtonGroup, Alert } from 'react-bootstrap';
+import {
+  Button,
+  ButtonGroup,
+  Alert,
+  Form,
+  InputGroup,
+  Modal,
+  Row,
+  Col,
+} from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
-import { ImArrowLeft2, ImArrowRight2 } from 'react-icons/im';
+import { ImArrowLeft2, ImArrowRight2, ImSearch } from 'react-icons/im';
 
 import { Wrapper } from 'components/wrapper';
 import { Presenter } from 'components/presenter';
@@ -20,6 +29,7 @@ const useSettings = createPersistedState(SETTINGS_NAME);
 
 function ScripturesView() {
   const typeaheadRef = useRef();
+  const typeaheadModalRef = useRef();
   const { scriptures, verse, setVerse } = useScriptures();
   const { moveChapter, moveVerse } = useMoveVerse();
   const [, setMessage] = useBroadcast(null);
@@ -27,6 +37,7 @@ function ScripturesView() {
   const [showLogo, setShowLogo] = useState(true);
   const [search, setSearch] = useState([verse]);
   const [bookmarks, setBookmarks] = useState(getBookmarkedItems('verse'));
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     setMessage(showLogo ? null : verse);
@@ -75,40 +86,52 @@ function ScripturesView() {
     <Wrapper>
       <Sidebar>
         <h1 className="text-light display-4">Escrituras</h1>
-        <Typeahead
-          emptyLabel="No existe esa opcion."
-          highlightOnlyResult={true}
-          id="combo"
-          labelKey="cite"
-          minLength={0}
-          onChange={onSearch}
-          onFocus={(e) => e.target.select()}
-          options={scriptures}
-          paginate={false}
-          paginationText="Ver más opciones..."
-          placeholder="Selecciona un versículo..."
-          ref={typeaheadRef}
-          selected={search}
-          size="large"
-          renderMenuItemChildren={(option, { text }) => (
-            <>
-              <Highlighter search={text}>{option.cite}</Highlighter>
-              <small
-                className="d-block overflow-hidden font-italic"
-                style={{ textOverflow: 'ellipsis' }}
-                title={option.text.replaceAll('<br/>', '\n')}
-              >
-                {option.text.replaceAll('<br/>', ' ')}
-              </small>
-            </>
-          )}
-        />
-        <div className="small text-muted d-block mt-1">
+
+        <div className="d-flex">
+          <Typeahead
+            emptyLabel="No existe esa opcion."
+            highlightOnlyResult={true}
+            id="combo"
+            labelKey="cite"
+            minLength={0}
+            onChange={onSearch}
+            onFocus={(e) => e.target.select()}
+            options={scriptures}
+            paginate={false}
+            paginationText="Ver más opciones..."
+            placeholder="Selecciona un versículo..."
+            ref={typeaheadRef}
+            selected={search}
+            size="large"
+            renderMenuItemChildren={(option, { text }) => (
+              <>
+                <Highlighter search={text}>{option.cite}</Highlighter>
+                <small
+                  className="d-block overflow-hidden font-italic"
+                  style={{ textOverflow: 'ellipsis' }}
+                  title={option.text.replaceAll('<br/>', '\n')}
+                >
+                  {option.text.replaceAll('<br/>', ' ')}
+                </small>
+              </>
+            )}
+          />
+
+          <Button
+            className="ml-2"
+            onClick={() => setShowModal(true)}
+            variant="outline-light"
+          >
+            <ImSearch />
+          </Button>
+        </div>
+
+        <div className="small text-muted d-block mt-1 mb-3">
           Presiona <strong>F1</strong> para buscar.
         </div>
 
         <Button
-          className="mt-3"
+          className="mb-4"
           block
           size="lg"
           variant={showLogo ? 'secondary' : 'warning'}
@@ -118,6 +141,7 @@ function ScripturesView() {
         </Button>
 
         <BookmarkList
+          className="mb-4"
           type="verse"
           items={bookmarks}
           onChange={setBookmarks}
@@ -166,6 +190,44 @@ function ScripturesView() {
           </ButtonGroup>
         </Controls>
       </Wrapper>
+
+      <Modal
+        size="xl"
+        show={showModal}
+        onHide={() => setShowModal(false)}
+        onShow={() => typeaheadModalRef.current.focus()}
+      >
+        <Modal.Body>
+          <Typeahead
+            emptyLabel="No hay resultados."
+            className="custom-typeahead"
+            id="combo"
+            labelKey="text"
+            minLength={0}
+            onChange={(event) => {
+              if (event.length) {
+                onSearch(event);
+                setShowModal(false);
+              }
+            }}
+            onFocus={(e) => e.target.select()}
+            options={scriptures}
+            paginate={true}
+            paginationText="Ver más resultados..."
+            placeholder="Buscar una palabra..."
+            ref={typeaheadModalRef}
+            highlightOnlyResult={true}
+            renderMenuItemChildren={(option, { text }) => (
+              <>
+                <Highlighter search={text}>
+                  {option.text.replaceAll('<br/>', '\n')}
+                </Highlighter>
+                <small className="d-block text-primary">{option.cite}</small>
+              </>
+            )}
+          />
+        </Modal.Body>
+      </Modal>
     </Wrapper>
   );
 }

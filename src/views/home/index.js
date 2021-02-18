@@ -140,7 +140,7 @@ function HomeView() {
         <h1 className="text-light display-4">Inicio</h1>
 
         <Button
-          className="mt-3"
+          className="my-3"
           block
           size="lg"
           variant={showLogo ? 'secondary' : 'warning'}
@@ -149,7 +149,7 @@ function HomeView() {
           {showLogo ? 'Mostrar Anuncio' : 'Mostrar Logo'}
         </Button>
 
-        <List>
+        <List className="mb-4">
           <List.Item>
             <List.Title>Anuncios</List.Title>
           </List.Item>
@@ -171,12 +171,12 @@ function HomeView() {
         <Alert className="m-0 br-0" variant="secondary">
           {showLogo ? (
             <>
-              Actualmente <strong>NO</strong> se está mostrando el himno al
+              Actualmente <strong>NO</strong> se está mostrando el anuncio al
               público.
             </>
           ) : (
             <>
-              Actualmente se está mostrando el himno{' '}
+              Actualmente se está mostrando el anuncio{' '}
               <strong>{notice.title}</strong> al público.
             </>
           )}
