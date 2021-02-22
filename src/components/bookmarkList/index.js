@@ -40,9 +40,7 @@ export function BookmarkList({
               title={
                 type === 'verse'
                   ? item?.text.replaceAll('<br/>', '\n')
-                  : item?.slides[1].text
-                      .replaceAll('<br/>', '\n')
-                      .replaceAll('1)', '')
+                  : item?.text?.replaceAll('/n', '\n')
               }
             >
               {item.title}

@@ -73,13 +73,22 @@ export const THEMES = {
     subtextcolor: '#ffff00',
     mode: 'negative',
   },
+  xmas: {
+    background: '#7b0410',
+    textcolor: '#ffffff',
+    titlecolor: '#27cd16',
+    subtextcolor: '#ffff00',
+    mode: 'negative',
+  },
 };
 
 export const SETTINGS_INITIAL_STATE = {
   interval: LOOP_INTERVAL,
   font: '',
   fontscale: 1,
+  blur: 0,
   logo: 'default',
+  image: '/christmas.jpg',
   ...THEMES['default'],
 };
 

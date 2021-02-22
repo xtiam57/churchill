@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
+import createPersistedState from 'use-persisted-state';
 import { Typeahead, Highlighter } from 'react-bootstrap-typeahead';
 import { Button, ButtonGroup, Alert, Form, Modal } from 'react-bootstrap';
 import {
@@ -29,7 +30,12 @@ import {
 } from 'hooks';
 import { Time, getBookmarkedItems } from 'utils';
 
+import { SETTINGS_NAME, SETTINGS_INITIAL_STATE } from 'values';
+
+const useSettings = createPersistedState(SETTINGS_NAME);
+
 export default function AnthemnsView() {
+  const [settings] = useSettings(SETTINGS_INITIAL_STATE);
   const folder = useMemo(() => {
     const { app, shell } = window.require('electron').remote;
     const { protocol } = window.location;
@@ -129,56 +135,58 @@ export default function AnthemnsView() {
   useKeyDown('ArrowDown', onPrevAnthemn);
   useKeyDown('F1', () => typeaheadRef.current.focus());
   useKeyDown('Space', onTogglePlay);
+  useKeyDown('KeyB', () => setShowModal(true), { ctrl: true });
 
   return (
     <Wrapper>
       <Sidebar>
         <h1 className="text-light display-4">Himnos</h1>
 
-        <div className="d-flex">
-          <Typeahead
-            emptyLabel="No existe esa opcion."
-            highlightOnlyResult={true}
-            id="combo"
-            labelKey="title"
-            minLength={0}
-            onChange={onSearch}
-            onFocus={(e) => e.target.select()}
-            options={anthemns}
-            paginate={true}
-            paginationText="Ver más opciones..."
-            placeholder="Selecciona un versículo..."
-            ref={typeaheadRef}
-            selected={search}
-            size="large"
-            renderMenuItemChildren={(option, { text }) => (
-              <>
-                <Highlighter search={text}>{option.title}</Highlighter>
-                <small
-                  className="d-block overflow-hidden font-italic"
-                  style={{ textOverflow: 'ellipsis' }}
-                  title={option.text.replaceAll('/n', '\n')}
-                >
-                  {option.text.replaceAll('1)', '').replaceAll('/n', ' ')}
-                </small>
-                {option.tags ? (
-                  <small className="tag">{option.tags.toLowerCase()}</small>
-                ) : null}
-              </>
-            )}
-          />
+        <Typeahead
+          emptyLabel="No existe esa opcion."
+          highlightOnlyResult={true}
+          id="combo"
+          labelKey="title"
+          minLength={0}
+          onChange={onSearch}
+          onFocus={(e) => e.target.select()}
+          options={anthemns}
+          paginate={true}
+          paginationText="Ver más opciones..."
+          placeholder="Selecciona un versículo..."
+          ref={typeaheadRef}
+          selected={search}
+          size="large"
+          renderMenuItemChildren={(option, { text }) => (
+            <>
+              <Highlighter search={text}>{option.title}</Highlighter>
+              <small
+                className="d-block overflow-hidden font-italic"
+                style={{ textOverflow: 'ellipsis' }}
+                title={option.text.replaceAll('/n', '\n')}
+              >
+                {option.text.replaceAll('1)', '').replaceAll('/n', ' ')}
+              </small>
+              {option.tags ? (
+                <small className="tag">{option.tags.toLowerCase()}</small>
+              ) : null}
+            </>
+          )}
+        />
+
+        <div className="small d-flex justify-content-between mt-1 mb-3">
+          <div className="text-muted">
+            Presiona <strong>F1</strong> para buscar.
+          </div>
 
           <Button
-            className="ml-2"
-            onClick={() => setShowModal(true)}
-            variant="outline-light"
+            variant="link"
+            className="text-light p-0 m-0"
+            style={{ fontSize: '95%' }}
+            onClick={(e) => setShowModal(true)}
           >
-            <ImSearch />
+            <ImSearch /> Avanzado
           </Button>
-        </div>
-
-        <div className="small text-muted d-block mt-1 mb-3">
-          Presiona <strong>F1</strong> para buscar.
         </div>
 
         <Button
@@ -209,9 +217,7 @@ export default function AnthemnsView() {
             <List.Item>
               <List.Action
                 onClick={() => onSearch([birthdayAnthemn])}
-                title={birthdayAnthemn?.slides[1].text
-                  .replaceAll('<br/>', '\n')
-                  .replaceAll('1)', '')}
+                title={birthdayAnthemn?.text.replaceAll('/n', '\n')}
               >
                 {birthdayAnthemn.title}
               </List.Action>
@@ -229,7 +235,12 @@ export default function AnthemnsView() {
 
         <List>
           <List.Item>
-            <List.Title>Etiquetas</List.Title>
+            <List.Title>
+              Etiquetas{' '}
+              {anthemnsWithTags.length ? (
+                <span>({anthemnsWithTags.length})</span>
+              ) : null}
+            </List.Title>
           </List.Item>
 
           <List.Item
@@ -253,9 +264,7 @@ export default function AnthemnsView() {
             <List.Item key={item.index}>
               <List.Action
                 onClick={() => onSearch([item])}
-                title={item?.slides[1].text
-                  .replaceAll('<br/>', '\n')
-                  .replaceAll('1)', '')}
+                title={item?.text.replaceAll('/n', '\n')}
               >
                 {item.title}
               </List.Action>
@@ -264,7 +273,7 @@ export default function AnthemnsView() {
         </List>
       </Sidebar>
 
-      <Wrapper direction="column">
+      <Wrapper direction="column" {...settings}>
         <Bookmark element={song} onChange={setBookmarks} />
 
         <Alert className="m-0 br-0" variant="secondary">
@@ -398,13 +407,22 @@ export default function AnthemnsView() {
             placeholder="Buscar una palabra..."
             ref={typeaheadModalRef}
             highlightOnlyResult={true}
+            size="large"
             renderMenuItemChildren={(option, { text }) => (
-              <>
-                <small className="d-block text-primary">{option.title}</small>
+              <div className="my-2">
+                <div className="d-flex">
+                  <div className="text-primary fs-lg ">{option.title}</div>
+                  {option.tags ? (
+                    <small className="tag mb-0 ml-2">
+                      {option.tags.toLowerCase()}
+                    </small>
+                  ) : null}
+                </div>
+
                 <Highlighter search={text}>
                   {option.text.replaceAll('/n', ' ')}
                 </Highlighter>
-              </>
+              </div>
             )}
           />
         </Modal.Body>

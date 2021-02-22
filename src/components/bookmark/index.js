@@ -3,6 +3,7 @@ import { BsBookmarkPlus, BsBookmarkFill } from 'react-icons/bs';
 
 import { BookmarkStyled } from './style';
 import { Storage, getBookmarkedItems } from 'utils';
+import { useKeyDown } from 'hooks';
 
 export const createStorageKey = ({ index, type }) =>
   `${type}_${index}_bookmarked`;
@@ -20,24 +21,28 @@ export function Bookmark({
     setBookmarked(Storage.has(createStorageKey(element)));
   }, [element, inStorage]);
 
+  const add = () => {
+    if (!Storage.has(createStorageKey(element))) {
+      Storage.set(createStorageKey(element), element);
+      setBookmarked(true);
+      onChange(getBookmarkedItems(element.type));
+    }
+  };
+
+  const remove = () => {
+    Storage.remove(createStorageKey(element));
+    setBookmarked(false);
+    onChange(getBookmarkedItems(element.type));
+  };
+
+  useKeyDown('KeyS', add, { ctrl: true });
+
   return (
     <BookmarkStyled bookmarked={bookmarked} icon={icon} {...rest}>
       {bookmarked ? (
-        <BsBookmarkFill
-          onClick={() => {
-            Storage.remove(createStorageKey(element));
-            setBookmarked((state) => !state);
-            onChange(getBookmarkedItems(element.type));
-          }}
-        />
+        <BsBookmarkFill onClick={remove} />
       ) : (
-        <BsBookmarkPlus
-          onClick={() => {
-            Storage.set(createStorageKey(element), element);
-            setBookmarked((state) => !state);
-            onChange(getBookmarkedItems(element.type));
-          }}
-        />
+        <BsBookmarkPlus onClick={add} />
       )}
     </BookmarkStyled>
   );

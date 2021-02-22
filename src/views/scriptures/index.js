@@ -81,53 +81,55 @@ function ScripturesView() {
   useKeyDown('ArrowUp', onNextChapter);
   useKeyDown('ArrowDown', onPrevChapter);
   useKeyDown('F1', () => typeaheadRef.current.focus());
+  useKeyDown('KeyB', () => setShowModal(true), { ctrl: true });
 
   return (
     <Wrapper>
       <Sidebar>
         <h1 className="text-light display-4">Escrituras</h1>
 
-        <div className="d-flex">
-          <Typeahead
-            emptyLabel="No existe esa opcion."
-            highlightOnlyResult={true}
-            id="combo"
-            labelKey="cite"
-            minLength={0}
-            onChange={onSearch}
-            onFocus={(e) => e.target.select()}
-            options={scriptures}
-            paginate={false}
-            paginationText="Ver más opciones..."
-            placeholder="Selecciona un versículo..."
-            ref={typeaheadRef}
-            selected={search}
-            size="large"
-            renderMenuItemChildren={(option, { text }) => (
-              <>
-                <Highlighter search={text}>{option.cite}</Highlighter>
-                <small
-                  className="d-block overflow-hidden font-italic"
-                  style={{ textOverflow: 'ellipsis' }}
-                  title={option.text.replaceAll('<br/>', '\n')}
-                >
-                  {option.text.replaceAll('<br/>', ' ')}
-                </small>
-              </>
-            )}
-          />
+        <Typeahead
+          emptyLabel="No existe esa opcion."
+          highlightOnlyResult={true}
+          id="combo"
+          labelKey="cite"
+          minLength={0}
+          onChange={onSearch}
+          onFocus={(e) => e.target.select()}
+          options={scriptures}
+          paginate={false}
+          paginationText="Ver más opciones..."
+          placeholder="Selecciona un versículo..."
+          ref={typeaheadRef}
+          selected={search}
+          size="large"
+          renderMenuItemChildren={(option, { text }) => (
+            <>
+              <Highlighter search={text}>{option.cite}</Highlighter>
+              <small
+                className="d-block overflow-hidden font-italic"
+                style={{ textOverflow: 'ellipsis' }}
+                title={option.text.replaceAll('<br/>', '\n')}
+              >
+                {option.text.replaceAll('<br/>', ' ')}
+              </small>
+            </>
+          )}
+        />
+
+        <div className="small d-flex justify-content-between mt-1 mb-3">
+          <div className="text-muted">
+            Presiona <strong>F1</strong> para buscar.
+          </div>
 
           <Button
-            className="ml-2"
-            onClick={() => setShowModal(true)}
-            variant="outline-light"
+            variant="link"
+            className="text-light p-0 m-0"
+            style={{ fontSize: '95%' }}
+            onClick={(e) => setShowModal(true)}
           >
-            <ImSearch />
+            <ImSearch /> Avanzado
           </Button>
-        </div>
-
-        <div className="small text-muted d-block mt-1 mb-3">
-          Presiona <strong>F1</strong> para buscar.
         </div>
 
         <Button
@@ -149,7 +151,7 @@ function ScripturesView() {
         />
       </Sidebar>
 
-      <Wrapper direction="column">
+      <Wrapper direction="column" {...settings}>
         <Bookmark element={verse} onChange={setBookmarks} />
 
         <Alert className="m-0 br-0" variant="secondary">
@@ -217,13 +219,14 @@ function ScripturesView() {
             placeholder="Buscar una palabra..."
             ref={typeaheadModalRef}
             highlightOnlyResult={true}
+            size="large"
             renderMenuItemChildren={(option, { text }) => (
-              <>
+              <div className="my-1">
                 <Highlighter search={text}>
                   {option.text.replaceAll('<br/>', '\n')}
                 </Highlighter>
                 <small className="d-block text-primary">{option.cite}</small>
-              </>
+              </div>
             )}
           />
         </Modal.Body>

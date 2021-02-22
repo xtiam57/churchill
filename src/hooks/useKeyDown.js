@@ -1,8 +1,12 @@
 import { useCallback, useEffect } from 'react';
 
-export function useKeyDown(keyCode, action = () => {}, disableInInputs = true) {
+export function useKeyDown(
+  keyCode,
+  action = () => {},
+  { ctrl = false, disableInInputs = true } = {}
+) {
   const handleEvent = useCallback(
-    ({ code }) => {
+    ({ code, ctrlKey }) => {
       if (disableInInputs) {
         const inputs = document.querySelectorAll('input');
         const isFocus = [...inputs].some((el) => el === document.activeElement);
@@ -12,11 +16,11 @@ export function useKeyDown(keyCode, action = () => {}, disableInInputs = true) {
         }
       }
 
-      if (code.toLowerCase() === keyCode.toLowerCase()) {
+      if (code.toLowerCase() === keyCode.toLowerCase() && ctrl === ctrlKey) {
         action();
       }
     },
-    [disableInInputs, keyCode, action]
+    [disableInInputs, keyCode, ctrl, action]
   );
 
   useEffect(() => {

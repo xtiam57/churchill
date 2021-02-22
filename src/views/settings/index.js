@@ -76,7 +76,7 @@ function SettingsView() {
 
         <Form.Row>
           <Form.Group as={Col} className="mb-1">
-            <Form.Label className="text-muted small mb-0">Fuente</Form.Label>
+            <Form.Label className="text-muted small mb-1">Fuente</Form.Label>
             <Form.Control
               size="sm"
               as="select"
@@ -99,8 +99,9 @@ function SettingsView() {
 
         <Form.Row>
           <Form.Group as={Col} className="mb-1">
-            <Form.Label className="text-muted small mb-0">
-              Escala ({Number.parseFloat(settings?.fontscale * 100).toFixed(0)}
+            <Form.Label className="text-muted small mb-1">
+              Escala del Texto (
+              {Number.parseFloat(settings?.fontscale * 100).toFixed(0)}
               %)
             </Form.Label>
             <Form.Control
@@ -117,8 +118,8 @@ function SettingsView() {
 
         <Form.Row>
           <Form.Group as={Col} className="mb-1">
-            <Form.Label className="text-muted small mb-0">
-              Intervalo para Autoplay
+            <Form.Label className="text-muted small mb-1">
+              Intervalo entre Anuncios
             </Form.Label>
             <Form.Control
               size="sm"
@@ -141,7 +142,7 @@ function SettingsView() {
 
         <Form.Row>
           <Form.Group as={Col} className="mb-1">
-            <Form.Label className="text-muted small mb-0">
+            <Form.Label className="text-muted small mb-1">
               Logo / Modo
             </Form.Label>
             <InputGroup>
@@ -176,7 +177,7 @@ function SettingsView() {
 
         <Form.Row>
           <Form.Group as={Col} className="mb-1">
-            <Form.Label className="text-muted small mb-0">Tema</Form.Label>
+            <Form.Label className="text-muted small mb-1">Tema</Form.Label>
             <Form.Control
               size="sm"
               as="select"
@@ -191,6 +192,7 @@ function SettingsView() {
               <option value="dracula">Drácula</option>
               <option value="female">Femenino</option>
               <option value="fun">Divertido</option>
+              <option value="xmas">Navidad</option>
               <option value="custom">Personalizado</option>
             </Form.Control>
           </Form.Group>
@@ -200,7 +202,7 @@ function SettingsView() {
           <>
             <Form.Row>
               <Form.Group as={Col} className="mb-1">
-                <Form.Label className="text-muted small mb-0">Fondo</Form.Label>
+                <Form.Label className="text-muted small mb-1">Fondo</Form.Label>
                 <Form.Control
                   size="sm"
                   type="color"
@@ -211,7 +213,7 @@ function SettingsView() {
                 />
               </Form.Group>
               <Form.Group as={Col} className="mb-1">
-                <Form.Label className="text-muted small mb-0">Texto</Form.Label>
+                <Form.Label className="text-muted small mb-1">Texto</Form.Label>
                 <Form.Control
                   type="color"
                   size="sm"
@@ -225,7 +227,7 @@ function SettingsView() {
 
             <Form.Row>
               <Form.Group as={Col} className="mb-1">
-                <Form.Label className="text-muted small mb-0">Citas</Form.Label>
+                <Form.Label className="text-muted small mb-1">Citas</Form.Label>
                 <Form.Control
                   size="sm"
                   type="color"
@@ -236,7 +238,7 @@ function SettingsView() {
                 />
               </Form.Group>
               <Form.Group as={Col} className="mb-1">
-                <Form.Label className="text-muted small mb-0">
+                <Form.Label className="text-muted small mb-1">
                   Títulos
                 </Form.Label>
                 <Form.Control
@@ -250,6 +252,59 @@ function SettingsView() {
               </Form.Group>
             </Form.Row>
           </>
+        ) : null}
+
+        <Form.Row>
+          <Form.Group as={Col} className="mb-1">
+            <Form.Label className="text-muted small mb-1">Fondo</Form.Label>
+            <Form.Control
+              size="sm"
+              as="select"
+              value={settings?.image}
+              name="image"
+              onChange={onChangeValue}
+            >
+              <option value="">Color Sólido</option>
+              <option value="/christmas.jpg">Arbol de Navidad</option>
+              <option value="/dawn.jpg">Amanecer</option>
+              <option value="/dusk.jpg">Atardecer</option>
+              <option value="/heart.jpg">Corazones</option>
+              <option value="/cross.jpg">Cruz</option>
+              <option value="/fun.jpg">Divertido</option>
+              <option value="/celebration.jpg">Fiesta</option>
+              <option value="/wall.jpg">Ladrillos</option>
+              <option value="/wood.jpg">Madera</option>
+              <option value="/wood-lights.jpg">Madera con luces</option>
+              <option value="/green-wood.jpg">Madera Verde</option>
+              <option value="/xmas.jpg">Navidad Colorida</option>
+              <option value="/blue.jpg">Patrón Azul</option>
+              <option value="/black.jpg">Patrón Negro</option>
+              <option value="/paper3.jpg">Papel 1</option>
+              <option value="/paper2.jpg">Papel 2</option>
+              <option value="/paper1.jpg">Papel 3</option>
+              <option value="/peru.jpg">Perú</option>
+            </Form.Control>
+          </Form.Group>
+        </Form.Row>
+
+        {settings?.image ? (
+          <Form.Row>
+            <Form.Group as={Col} className="mb-1">
+              <Form.Label className="text-muted small mb-1">
+                Difuminado de Fondo (
+                {Number.parseFloat(settings?.blur).toFixed(1)})
+              </Form.Label>
+              <Form.Control
+                type="range"
+                min="0"
+                max="20"
+                step="1"
+                name="blur"
+                value={settings?.blur}
+                onChange={onChangeNumericValue}
+              />
+            </Form.Group>
+          </Form.Row>
         ) : null}
       </Sidebar>
 

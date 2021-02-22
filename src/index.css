@@ -3,6 +3,10 @@
   box-shadow: none;
 }
 
+input, select {
+  box-shadow: none !important;
+}
+
 .display-4 {
   font-size: 2.8rem;
   margin-bottom: 1rem;
@@ -21,6 +25,14 @@
   border-radius: 0;
 }
 
+.alert {
+  z-index: 2;
+}
+
+.fs-lg {
+  font-size: 1.25em;
+}
+
 .tag {
   border: solid 1px var(--secondary);
   color: var(--secondary);
@@ -35,6 +47,7 @@
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: 0.25rem;
+  border-radius: 0;
 }
 
 .tag:not(.active):hover {
@@ -69,5 +82,5 @@
 }
 
 .custom-typeahead .dropdown-menu.show {
-  min-height: 50vh;
+  min-height: 70vh;
 }

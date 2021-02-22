@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import createPersistedState from 'use-persisted-state';
 import { Button, ButtonGroup, Alert } from 'react-bootstrap';
 import {
   ImArrowLeft2,
@@ -16,6 +17,9 @@ import { List } from 'components/list';
 
 import { useKeyDown, useIterate } from 'hooks';
 import { Slide } from 'utils';
+import { SETTINGS_NAME, SETTINGS_INITIAL_STATE } from 'values';
+
+const useSettings = createPersistedState(SETTINGS_NAME);
 
 const notices = [
   {
@@ -98,6 +102,7 @@ const notices = [
 ];
 
 function HomeView() {
+  const [settings] = useSettings(SETTINGS_INITIAL_STATE);
   const [showLogo, setShowLogo] = useState(true);
   const [notice, setNotice] = useState(notices[0]);
   const [slide, setSlide] = useState(notice.slides[0]);
@@ -167,7 +172,7 @@ function HomeView() {
         </List>
       </Sidebar>
 
-      <Wrapper direction="column">
+      <Wrapper direction="column" {...settings}>
         <Alert className="m-0 br-0" variant="secondary">
           {showLogo ? (
             <>

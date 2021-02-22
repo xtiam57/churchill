@@ -8,4 +8,8 @@ export const WrapperStyled = styled.main`
   ${({ centered }) =>
     centered ? 'justify-content: center; align-items: center;' : null}
   background-color: ${({ background }) => background || '#fff'};
+  background-image: ${({ image }) => (image ? `url(${image})` : 'none')};
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
 `;
