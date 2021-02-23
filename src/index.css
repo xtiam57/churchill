@@ -84,3 +84,9 @@ input, select {
 .custom-typeahead .dropdown-menu.show {
   min-height: 70vh;
 }
+
+.modal-backdrop.show {
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+}

@@ -6,3 +6,4 @@ export { useMoveAnthemn } from './useMoveAnthemn';
 export { useBirthday } from './useBirthday';
 export { useKeyDown } from './useKeyDown';
 export { useIterate } from './useIterate';
+export { useSettings } from './useSettings';

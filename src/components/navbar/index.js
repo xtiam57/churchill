@@ -6,6 +6,7 @@ import {
   BsBook,
   BsGift,
   BsFillGearFill,
+  BsHouseFill,
 } from 'react-icons/bs';
 import { RiSlideshow2Fill, RiStopFill } from 'react-icons/ri';
 import {
@@ -15,10 +16,11 @@ import {
   CAST_VIEW_PATH,
   SETTINGS_VIEW_PATH,
 } from 'values';
-import { usePresenter } from 'hooks';
+import { usePresenter, useSettings } from 'hooks';
 
 export function Navbar() {
   const location = useLocation();
+  const { toggleSettings, showingSettings } = useSettings();
   const { toggle, presenting } = usePresenter();
   const [date, setDate] = useState(new Date());
 
@@ -39,18 +41,17 @@ export function Navbar() {
     <>
       <nav className={navbarStyle}>
         <div className="container-fluid">
-          <Link to="/" className="navbar-brand">
-            Churchill
-          </Link>
+          <span className="navbar-brand">Churchill</span>
 
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
               <NavLink
-                to={SETTINGS_VIEW_PATH}
+                exact
+                to="/"
                 className="nav-link"
                 activeClassName="active"
               >
-                <BsFillGearFill />
+                <BsHouseFill />
               </NavLink>
             </li>
             <li className="nav-item">
@@ -82,15 +83,24 @@ export function Navbar() {
             </li>
           </ul>
 
-          <span className="navbar-text d-block mr-3">
+          {/* <span className="navbar-text d-block mr-3">
             {date.toLocaleTimeString()}
-          </span>
+          </span> */}
 
           <Button
+            className="mr-3"
             onClick={toggle}
             variant={presenting ? 'outline-dark' : 'outline-light'}
           >
             {presenting ? <RiStopFill /> : <RiSlideshow2Fill />}
+          </Button>
+
+          <Button
+            onClick={toggleSettings}
+            className={presenting ? 'text-dark px-0' : 'text-light px-0'}
+            variant={presenting ? 'link' : 'link'}
+          >
+            <BsFillGearFill />
           </Button>
         </div>
       </nav>

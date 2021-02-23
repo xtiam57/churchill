@@ -63,13 +63,11 @@ export function Presenter({ children, subtext = null, ...rest }) {
         />
       ))}
       {subtextTransitions.map(({ key, props }) => (
-        <>
+        <div key={key}>
           {subtext ? (
-            <animated.cite key={key} style={props}>
-              {subtext}
-            </animated.cite>
+            <animated.cite style={props}>{subtext}</animated.cite>
           ) : null}
-        </>
+        </div>
       ))}
     </PresenterStyled>
   );

@@ -7,7 +7,6 @@ export const HOME_VIEW_PATH = '/';
 export const BIBLE_VIEW_PATH = '/bible';
 export const ANTHEMNS_VIEW_PATH = '/anthemns';
 export const BIRTHDAYS_VIEW_PATH = '/birthdays';
-export const SETTINGS_VIEW_PATH = '/settings';
 export const CAST_VIEW_PATH = '/cast-screen';
 
 export const LEFT_ARROW_KEY = 37;
@@ -18,9 +17,9 @@ export const SPACE_BAR_KEY = 32;
 export const ESCAPE_KEY = 27;
 export const F1_KEY = 112;
 
-export const BIRTHDAY_FRAME = 7;
+export const BIRTHDAY_FRAME = 6;
 export const BIRTHDAY_ANTHEMN_INDEX = 508;
-export const ITEMS_PER_LIST = 12;
+export const ITEMS_PER_LIST = 15;
 export const LOOP_INTERVAL = 5000;
 
 export const THEMES = {
@@ -88,7 +87,8 @@ export const SETTINGS_INITIAL_STATE = {
   fontscale: 1,
   blur: 0,
   logo: 'default',
-  image: '/christmas.jpg',
+  image: '',
+  theme: 'default',
   ...THEMES['default'],
 };
 

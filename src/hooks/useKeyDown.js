@@ -8,7 +8,7 @@ export function useKeyDown(
   const handleEvent = useCallback(
     ({ code, ctrlKey }) => {
       if (disableInInputs) {
-        const inputs = document.querySelectorAll('input');
+        const inputs = document.querySelectorAll('input,select');
         const isFocus = [...inputs].some((el) => el === document.activeElement);
 
         if (isFocus) {
