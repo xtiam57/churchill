@@ -9,7 +9,16 @@ import { Preview } from 'components/preview';
 
 import { useSettingsSidebar } from 'hooks';
 
-import { SETTINGS_NAME, THEMES, SETTINGS_INITIAL_STATE } from 'values';
+import {
+  SETTINGS_NAME,
+  THEMES,
+  SETTINGS_INITIAL_STATE,
+  FONT_FAMILIES_OPTIONS,
+  THEMES_OPTIONS,
+  BACKGROUNDS_OPTIONS,
+  LOGO_OPTIONS,
+  TIME_INTERVAL_OPTIONS,
+} from 'values';
 
 const useSettings = createPersistedState(SETTINGS_NAME);
 
@@ -69,15 +78,11 @@ export function Settings() {
             value={settings?.font}
             onChange={onChangeValue}
           >
-            <option value="">Predeterminada</option>
-            <option value="Arial">Arial</option>
-            <option value="Arial Black">Arial Black</option>
-            <option value="Courier New">Courier New</option>
-            <option value="Garamond">Garamond</option>
-            <option value="Georgia">Georgia</option>
-            <option value="Helvetica">Helvetica</option>
-            <option value="Tahoma">Tahoma</option>
-            <option value="Times New Roman">Times New Roman</option>
+            {FONT_FAMILIES_OPTIONS.map(({ value, label }) => (
+              <option key={value} value={value}>
+                {label}
+              </option>
+            ))}
           </Form.Control>
         </Form.Group>
       </Form.Row>
@@ -111,15 +116,11 @@ export function Settings() {
             name="theme"
             onChange={onChangeTheme}
           >
-            <option value="default">Predeterminado</option>
-            <option value="calvario">Monte Calvario</option>
-            <option value="cobalt">Cobalto</option>
-            <option value="dark">Dark</option>
-            <option value="pinguin">Pingüino Emperador</option>
-            <option value="female">Femenino</option>
-            <option value="fun">Divertido</option>
-            <option value="xmas">Navidad</option>
-            <option value="custom">Personalizado</option>
+            {THEMES_OPTIONS.map(({ value, label }) => (
+              <option key={value} value={value}>
+                {label}
+              </option>
+            ))}
           </Form.Control>
         </Form.Group>
       </Form.Row>
@@ -186,26 +187,11 @@ export function Settings() {
             name="image"
             onChange={onChangeValue}
           >
-            <option value="">Color Sólido</option>
-            <option value="/christmas.jpg">Arbol de Navidad</option>
-            <option value="/dawn.jpg">Amanecer</option>
-            <option value="/dusk.jpg">Atardecer</option>
-            <option value="/heart.jpg">Corazones</option>
-            <option value="/cross.jpg">Cruz</option>
-            <option value="/fun.jpg">Divertido</option>
-            <option value="/celebration.jpg">Fiesta</option>
-            <option value="/wall.jpg">Ladrillos</option>
-            <option value="/wood.jpg">Madera</option>
-            <option value="/wood-lights.jpg">Madera con luces</option>
-            <option value="/green-wood.jpg">Madera Verde</option>
-            <option value="/xmas.jpg">Navidad Colorida</option>
-            <option value="/blue.jpg">Patrón Azul</option>
-            <option value="/black.jpg">Patrón Negro</option>
-            <option value="/paper3.jpg">Papel 1</option>
-            <option value="/paper2.jpg">Papel 2</option>
-            <option value="/paper1.jpg">Papel 3</option>
-            <option value="/peru.jpg">Perú</option>
-            <option value="/resurrection.jpg">Resurreción</option>
+            {BACKGROUNDS_OPTIONS.map(({ value, label }) => (
+              <option key={value} value={value}>
+                {label}
+              </option>
+            ))}
           </Form.Control>
         </Form.Group>
       </Form.Row>
@@ -240,12 +226,11 @@ export function Settings() {
             value={settings?.logo}
             onChange={onChangeValue}
           >
-            <option value="default">Iglesia</option>
-            <option value="jovenes">Jóvenes</option>
-            <option value="damas">Damas</option>
-            <option value="ninos">Niños</option>
-            <option value="rondalla">Rondalla</option>
-            <option value="instituto">Instituto</option>
+            {LOGO_OPTIONS.map(({ value, label }) => (
+              <option key={value} value={value}>
+                {label}
+              </option>
+            ))}
           </Form.Control>
         </Form.Group>
 
@@ -280,14 +265,11 @@ export function Settings() {
             value={settings?.interval}
             onChange={onChangeNumericValue}
           >
-            <option value="1000">1 segundo</option>
-            <option value="2000">2 segundos</option>
-            <option value="3000">3 segundos</option>
-            <option value="5000">5 segundos</option>
-            <option value="10000">10 segundos</option>
-            <option value="15000">15 segundos</option>
-            <option value="20000">20 segundos</option>
-            <option value="60000">1 minuto</option>
+            {TIME_INTERVAL_OPTIONS.map(({ value, label }) => (
+              <option key={value} value={value}>
+                {label}
+              </option>
+            ))}
           </Form.Control>
         </Form.Group>
       </Form.Row>
