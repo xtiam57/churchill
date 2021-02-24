@@ -4,7 +4,7 @@ export const CHANNEL_NAME = 'BROADCASTING_MESSAGE';
 export const SETTINGS_NAME = 'BROADCASTING_SETTINGS';
 
 export const HOME_VIEW_PATH = '/';
-export const BIBLE_VIEW_PATH = '/bible';
+export const BIBLE_VIEW_PATH = '/scriptures';
 export const ANTHEMNS_VIEW_PATH = '/anthemns';
 export const BIRTHDAYS_VIEW_PATH = '/birthdays';
 export const CAST_VIEW_PATH = '/cast-screen';
@@ -35,21 +35,21 @@ export const THEMES = {
     textcolor: '#FFC603',
     titlecolor: '#ff9900',
     subtextcolor: '#ffffff',
-    mode: 'negative',
+    mode: '#ffffff',
   },
-  dracula: {
+  pinguin: {
     background: '#000000',
     textcolor: '#ffffff',
     titlecolor: '#ffa200',
     subtextcolor: '#ffff00',
-    mode: 'negative',
+    mode: '#ffffff',
   },
   dark: {
     background: '#202124',
     textcolor: '#bcc0c3',
     titlecolor: '#c58af9',
     subtextcolor: '#688dee',
-    mode: 'negative',
+    mode: '#ffffff',
   },
   calvario: {
     background: '#ffffff',
@@ -63,21 +63,21 @@ export const THEMES = {
     textcolor: '#ffffff',
     titlecolor: '#20ED94',
     subtextcolor: '#F9AAD0',
-    mode: 'negative',
+    mode: '#ffffff',
   },
   fun: {
     background: '#72BE44',
     textcolor: '#000000',
     titlecolor: '#ffffff',
     subtextcolor: '#ffff00',
-    mode: 'negative',
+    mode: '#ffffff',
   },
   xmas: {
     background: '#7b0410',
     textcolor: '#ffffff',
     titlecolor: '#27cd16',
     subtextcolor: '#ffff00',
-    mode: 'negative',
+    mode: '#ffffff',
   },
 };
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink, Link, useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import {
   BsMusicNoteList,
@@ -14,20 +14,19 @@ import {
   BIBLE_VIEW_PATH,
   BIRTHDAYS_VIEW_PATH,
   CAST_VIEW_PATH,
-  SETTINGS_VIEW_PATH,
 } from 'values';
-import { usePresenter, useSettings } from 'hooks';
+import { usePresenter, useSettingsSidebar } from 'hooks';
 
 export function Navbar() {
   const location = useLocation();
-  const { toggleSettings, showingSettings } = useSettings();
+  const { toggleSettings } = useSettingsSidebar();
   const { toggle, presenting } = usePresenter();
-  const [date, setDate] = useState(new Date());
+  // const [date, setDate] = useState(new Date());
 
-  useEffect(() => {
-    const timer = setInterval(() => setDate(new Date()), 1000);
-    return () => clearInterval(timer);
-  }, []);
+  // useEffect(() => {
+  //   const timer = setInterval(() => setDate(new Date()), 1000);
+  //   return () => clearInterval(timer);
+  // }, []);
 
   if (location.pathname === CAST_VIEW_PATH) {
     return null;

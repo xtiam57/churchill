@@ -1,32 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import createPersistedState from 'use-persisted-state';
-import { Button, Form, Col, InputGroup } from 'react-bootstrap';
-import { useLocation } from 'react-router-dom';
+import { Button, Form, Col } from 'react-bootstrap';
 import { MdClose } from 'react-icons/md';
 
 import { Sidebar } from 'components/sidebar';
 import { Logo } from 'components/logo';
 import { Preview } from 'components/preview';
 
-import { useSettings } from 'hooks';
+import { useSettingsSidebar } from 'hooks';
 
-import {
-  SETTINGS_NAME,
-  THEMES,
-  SETTINGS_INITIAL_STATE,
-  CAST_VIEW_PATH,
-} from 'values';
+import { SETTINGS_NAME, THEMES, SETTINGS_INITIAL_STATE } from 'values';
 
-const useSettingsBroadcast = createPersistedState(SETTINGS_NAME);
+const useSettings = createPersistedState(SETTINGS_NAME);
 
-export function Configuration() {
-  const location = useLocation();
-  const { toggleSettings, showingSettings } = useSettings();
-  const [settings, setSettings] = useSettingsBroadcast(SETTINGS_INITIAL_STATE);
-
-  if (location.pathname === CAST_VIEW_PATH) {
-    return null;
-  }
+export function Settings() {
+  const { toggleSettings, showingSettings } = useSettingsSidebar();
+  const [settings, setSettings] = useSettings(SETTINGS_INITIAL_STATE);
 
   const onChangeValue = ({ target }) => {
     const { name, value } = target;
@@ -58,7 +47,7 @@ export function Configuration() {
   };
 
   return (
-    <Sidebar closable className={`bg-white ${showingSettings ? '' : 'closed'}`}>
+    <Sidebar closable className={`bg-light ${showingSettings ? '' : 'closed'}`}>
       <h1 className="display-4">Opciones</h1>
 
       <Button
@@ -126,7 +115,7 @@ export function Configuration() {
             <option value="calvario">Monte Calvario</option>
             <option value="cobalt">Cobalto</option>
             <option value="dark">Dark</option>
-            <option value="dracula">Drácula</option>
+            <option value="pinguin">Pingüino Emperador</option>
             <option value="female">Femenino</option>
             <option value="fun">Divertido</option>
             <option value="xmas">Navidad</option>
@@ -242,34 +231,36 @@ export function Configuration() {
 
       <Form.Row>
         <Form.Group as={Col} className="mb-1">
-          <Form.Label className=" small mb-1">Logo / Modo</Form.Label>
-          <InputGroup>
-            <Form.Control
-              as="select"
-              size="sm"
-              name="logo"
-              value={settings?.logo}
-              onChange={onChangeValue}
-            >
-              <option value="default">Iglesia</option>
-              <option value="jovenes">Jóvenes</option>
-              <option value="damas">Damas</option>
-              <option value="ninos">Niños</option>
-              <option value="rondalla">Rondalla</option>
-              <option value="instituto">Instituto</option>
-            </Form.Control>
+          <Form.Label className=" small mb-1">Logo </Form.Label>
 
-            <Form.Control
-              as="select"
-              size="sm"
-              value={settings?.mode}
-              name="mode"
-              onChange={onChangeValue}
-            >
-              <option value="default">Normal</option>
-              <option value="negative">Negativo</option>
-            </Form.Control>
-          </InputGroup>
+          <Form.Control
+            as="select"
+            size="sm"
+            name="logo"
+            value={settings?.logo}
+            onChange={onChangeValue}
+          >
+            <option value="default">Iglesia</option>
+            <option value="jovenes">Jóvenes</option>
+            <option value="damas">Damas</option>
+            <option value="ninos">Niños</option>
+            <option value="rondalla">Rondalla</option>
+            <option value="instituto">Instituto</option>
+          </Form.Control>
+        </Form.Group>
+
+        <Form.Group as={Col} className="mb-1">
+          <Form.Label className=" small mb-1">Modo</Form.Label>
+          <Form.Control
+            as="select"
+            size="sm"
+            value={settings?.mode}
+            name="mode"
+            onChange={onChangeValue}
+          >
+            <option value="default">Normal</option>
+            <option value="#ffffff">Negativo</option>
+          </Form.Control>
         </Form.Group>
       </Form.Row>
 

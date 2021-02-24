@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { PresenterProvider } from 'providers/presenter';
@@ -6,7 +6,7 @@ import { ScripturesProvider } from 'providers/scriptures';
 import { AnthemnsProvider, AppProvider } from 'providers';
 
 import { Navbar } from 'components/navbar';
-import { Configuration } from 'components/configuration';
+import { Settings } from 'components/settings';
 
 import AnthemnsView from 'views/anthemns';
 import CastView from 'views/cast';
@@ -56,7 +56,7 @@ function App() {
                 </Route>
               </Switch>
 
-              <Configuration />
+              <Settings />
             </AnthemnsProvider>
           </ScripturesProvider>
         </PresenterProvider>

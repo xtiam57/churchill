@@ -37,7 +37,10 @@ function AnthemnsProvider({ children }) {
 
   const anthemns = useMemo(() => {
     return json.map(
-      ({ number, title, startsWithChorus, chorus, stanzas, tags }, index) => {
+      (
+        { number, title, startsWithChorus, chorus, stanzas, tags, authors },
+        index
+      ) => {
         const slides = [];
         let text = '';
         let slideIndex = 0;
@@ -56,6 +59,7 @@ function AnthemnsProvider({ children }) {
                 : `${isExtra ? 'Apéndice' : `Himno #${number}`}`
             }`,
             text: title,
+            subtext: authors,
             index: slideIndex++,
           })
         );
@@ -88,6 +92,7 @@ function AnthemnsProvider({ children }) {
           slides,
           text,
           tags,
+          authors,
           length: slides.length,
         };
       }
