@@ -59,12 +59,12 @@ export function Configuration() {
 
   return (
     <Sidebar closable className={`bg-white ${showingSettings ? '' : 'closed'}`}>
-      <h1 className="text-dark display-4">Opciones</h1>
+      <h1 className="display-4">Opciones</h1>
 
       <Button
         className="p-0 text-dark"
         variant="link"
-        style={{ position: 'absolute', top: 15, right: 15 }}
+        style={{ position: 'absolute', top: 13, right: 15 }}
         onClick={toggleSettings}
       >
         <MdClose />
@@ -216,6 +216,7 @@ export function Configuration() {
             <option value="/paper2.jpg">Papel 2</option>
             <option value="/paper1.jpg">Papel 3</option>
             <option value="/peru.jpg">Perú</option>
+            <option value="/resurrection.jpg">Resurreción</option>
           </Form.Control>
         </Form.Group>
       </Form.Row>
