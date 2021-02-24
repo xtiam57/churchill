@@ -2,6 +2,7 @@ import React from 'react';
 import createPersistedState from 'use-persisted-state';
 import { Button, Form, Col } from 'react-bootstrap';
 import { MdClose } from 'react-icons/md';
+import { BsHeartFill } from 'react-icons/bs';
 
 import { Sidebar } from 'components/sidebar';
 import { Logo } from 'components/logo';
@@ -281,6 +282,11 @@ export function Settings() {
       >
         Reiniciar
       </Button>
+
+      <small className="d-block text-center text-muted mt-4">
+        Hecho con <BsHeartFill className="text-danger" /> por Christiam Mena
+        (@xtiam57).
+      </small>
     </Sidebar>
   );
 }
