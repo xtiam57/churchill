@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import createPersistedState from 'use-persisted-state';
 import { Typeahead, Highlighter } from 'react-bootstrap-typeahead';
-import { Button, ButtonGroup, Alert, Form, Modal } from 'react-bootstrap';
+import { Button, ButtonGroup, Alert, Form } from 'react-bootstrap';
 import {
   ImArrowLeft2,
   ImArrowRight2,
@@ -20,6 +20,7 @@ import { Controls } from 'components/controls';
 import { Bookmark } from 'components/bookmark';
 import { List } from 'components/list';
 import { BookmarkList } from 'components/bookmarkList';
+import { Finder } from 'components/finder';
 
 import {
   useAnthemn,
@@ -30,12 +31,11 @@ import {
 } from 'hooks';
 import { Time, getBookmarkedItems } from 'utils';
 
-import { SETTINGS_NAME, SETTINGS_INITIAL_STATE } from 'values';
+import { BROADCAST } from 'values';
 
-const useSettings = createPersistedState(SETTINGS_NAME);
+const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
 export default function AnthemnsView() {
-  const [settings] = useSettings(SETTINGS_INITIAL_STATE);
   const folder = useMemo(() => {
     const { app, shell } = window.require('electron').remote;
     const { protocol } = window.location;
@@ -47,8 +47,9 @@ export default function AnthemnsView() {
       getPath: (file) => `${path}\\${file}.mp3`,
     };
   }, []);
+
   const typeaheadRef = useRef();
-  const typeaheadModalRef = useRef();
+  const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const { anthemns, song, setSong, tags } = useAnthemn();
   const [slide, setSlide] = useState(song.slides[0]);
   const [moveSlide] = useIterate(slide, song.slides);
@@ -378,58 +379,39 @@ export default function AnthemnsView() {
         </Controls>
       </Wrapper>
 
-      <Modal
-        size="xl"
+      <Finder
         show={showModal}
         onHide={() => setShowModal(false)}
-        onShow={() => typeaheadModalRef.current.focus()}
-      >
-        <Modal.Body>
-          <Typeahead
-            emptyLabel="No hay resultados."
-            className="custom-typeahead"
-            id="combo"
-            labelKey="text"
-            minLength={0}
-            onChange={(event) => {
-              if (event.length) {
-                onSearch(event);
-                setShowModal(false);
-              }
-            }}
-            onFocus={(e) => e.target.select()}
-            options={anthemns}
-            paginate={true}
-            paginationText="Ver más resultados..."
-            placeholder="Buscar una palabra..."
-            ref={typeaheadModalRef}
-            highlightOnlyResult={true}
-            size="large"
-            renderMenuItemChildren={(option, { text }) => (
-              <div className="my-2">
-                <div className="d-flex">
-                  <div className="text-primary fs-lg ">{option.title}</div>
-                  {option.tags ? (
-                    <small className="tag mb-0 ml-2">
-                      {option.tags.toLowerCase()}
-                    </small>
-                  ) : null}
-                </div>
+        options={anthemns}
+        onChange={(event) => {
+          if (event.length) {
+            onSearch(event);
+            setShowModal(false);
+          }
+        }}
+        render={(option, { text }) => (
+          <div className="my-2">
+            <div className="d-flex">
+              <div className="text-primary fs-lg ">{option.title}</div>
+              {option.tags ? (
+                <small className="tag mb-0 ml-2">
+                  {option.tags.toLowerCase()}
+                </small>
+              ) : null}
+            </div>
 
-                <Highlighter search={text}>
-                  {option.text.replaceAll('/n', ' ')}
-                </Highlighter>
+            <Highlighter search={text}>
+              {option.text.replaceAll('/n', ' ')}
+            </Highlighter>
 
-                {option.authors ? (
-                  <div className="small font-italic mt-2">
-                    Autor(es): {option.authors}
-                  </div>
-                ) : null}
+            {option.authors ? (
+              <div className="small font-italic mt-2">
+                Autor(es): {option.authors}
               </div>
-            )}
-          />
-        </Modal.Body>
-      </Modal>
+            ) : null}
+          </div>
+        )}
+      />
     </Wrapper>
   );
 }

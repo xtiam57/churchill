@@ -5,14 +5,14 @@ import { Presenter } from 'components/presenter';
 import { Wrapper } from 'components/wrapper';
 import { Logo } from 'components/logo';
 
-import { CHANNEL_NAME, SETTINGS_NAME, SETTINGS_INITIAL_STATE } from 'values';
+import { BROADCAST } from 'values';
 
-const useBroadcast = createPersistedState(CHANNEL_NAME);
-const useSettings = createPersistedState(SETTINGS_NAME);
+const useBroadcast = createPersistedState(BROADCAST.CHANNEL);
+const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
 export default function CastView() {
-  const [message] = useBroadcast(null);
-  const [settings] = useSettings(SETTINGS_INITIAL_STATE);
+  const [message] = useBroadcast(BROADCAST.INITIAL_CHANNEL);
+  const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
 
   return (
     <Wrapper bare centered {...settings}>

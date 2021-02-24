@@ -13,11 +13,11 @@ import { List } from 'components/list';
 
 import { useBirthday } from 'hooks';
 import { Time, Storage } from 'utils';
-import { CHANNEL_NAME, SETTINGS_NAME, SETTINGS_INITIAL_STATE } from 'values';
+import { BROADCAST } from 'values';
 import { BirthdayModal } from './modal';
 
-const useBroadcast = createPersistedState(CHANNEL_NAME);
-const useSettings = createPersistedState(SETTINGS_NAME);
+const useBroadcast = createPersistedState(BROADCAST.CHANNEL);
+const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
 function getBirthdayItems() {
   return Storage.getAll('desc')
@@ -26,8 +26,8 @@ function getBirthdayItems() {
 }
 
 function BirthdaysView() {
-  const [, setMessage] = useBroadcast(null);
-  const [settings] = useSettings(SETTINGS_INITIAL_STATE);
+  const [, setMessage] = useBroadcast(BROADCAST.INITIAL_CHANNEL);
+  const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const [showModal, setShowModal] = useState(false);
   const [showLogo, setShowLogo] = useState(true);
   const { birthdays, add, remove, slide } = useBirthday();

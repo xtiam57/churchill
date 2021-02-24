@@ -1,6 +1,6 @@
 import { useContext, useState, useMemo } from 'react';
 import { AnthemnsContext } from 'providers/anthemns';
-import { BIRTHDAY_ANTHEMN_INDEX, BIRTHDAY_FRAME } from 'values';
+import { BIRTHDAY } from 'values';
 import { Storage, generateGUID, Time } from 'utils';
 
 function createStorageKey(index) {
@@ -22,7 +22,7 @@ function getBirthdays(now) {
         Math.abs(Time.diff(next, now))
       );
 
-      return remaining <= BIRTHDAY_FRAME;
+      return remaining <= BIRTHDAY.TIME_FRAME;
     })
     .sort(
       (a, b) =>
@@ -57,7 +57,7 @@ export function useBirthday() {
   const [slide, setSlide] = useState(getSlide(birthdays));
 
   const { anthemns } = useContext(AnthemnsContext);
-  const birthdayAnthemn = useMemo(() => anthemns[BIRTHDAY_ANTHEMN_INDEX], [
+  const birthdayAnthemn = useMemo(() => anthemns[BIRTHDAY.ANTHEMN_INDEX], [
     anthemns,
   ]);
 

@@ -1,15 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Typeahead, Highlighter } from 'react-bootstrap-typeahead';
-import {
-  Button,
-  ButtonGroup,
-  Alert,
-  Form,
-  InputGroup,
-  Modal,
-  Row,
-  Col,
-} from 'react-bootstrap';
+import { Button, ButtonGroup, Alert } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
 import { ImArrowLeft2, ImArrowRight2, ImSearch } from 'react-icons/im';
 
@@ -19,21 +10,21 @@ import { Controls } from 'components/controls';
 import { Sidebar } from 'components/sidebar';
 import { Bookmark } from 'components/bookmark';
 import { BookmarkList } from 'components/bookmarkList';
+import { Finder } from 'components/finder';
 
 import { useScriptures, useMoveVerse, useKeyDown } from 'hooks';
 import { getBookmarkedItems } from 'utils';
-import { CHANNEL_NAME, SETTINGS_NAME, SETTINGS_INITIAL_STATE } from 'values';
+import { BROADCAST } from 'values';
 
-const useBroadcast = createPersistedState(CHANNEL_NAME);
-const useSettings = createPersistedState(SETTINGS_NAME);
+const useBroadcast = createPersistedState(BROADCAST.CHANNEL);
+const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
 function ScripturesView() {
   const typeaheadRef = useRef();
-  const typeaheadModalRef = useRef();
   const { scriptures, verse, setVerse } = useScriptures();
   const { moveChapter, moveVerse } = useMoveVerse();
-  const [, setMessage] = useBroadcast(null);
-  const [settings] = useSettings(SETTINGS_INITIAL_STATE);
+  const [, setMessage] = useBroadcast(BROADCAST.INITIAL_CHANNEL);
+  const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const [showLogo, setShowLogo] = useState(true);
   const [search, setSearch] = useState([verse]);
   const [bookmarks, setBookmarks] = useState(getBookmarkedItems('verse'));
@@ -193,44 +184,25 @@ function ScripturesView() {
         </Controls>
       </Wrapper>
 
-      <Modal
-        size="xl"
+      <Finder
         show={showModal}
         onHide={() => setShowModal(false)}
-        onShow={() => typeaheadModalRef.current.focus()}
-      >
-        <Modal.Body>
-          <Typeahead
-            emptyLabel="No hay resultados."
-            className="custom-typeahead"
-            id="combo"
-            labelKey="text"
-            minLength={0}
-            onChange={(event) => {
-              if (event.length) {
-                onSearch(event);
-                setShowModal(false);
-              }
-            }}
-            onFocus={(e) => e.target.select()}
-            options={scriptures}
-            paginate={true}
-            paginationText="Ver más resultados..."
-            placeholder="Buscar una palabra..."
-            ref={typeaheadModalRef}
-            highlightOnlyResult={true}
-            size="large"
-            renderMenuItemChildren={(option, { text }) => (
-              <div className="my-1">
-                <Highlighter search={text}>
-                  {option.text.replaceAll('<br/>', '\n')}
-                </Highlighter>
-                <small className="d-block text-primary">{option.cite}</small>
-              </div>
-            )}
-          />
-        </Modal.Body>
-      </Modal>
+        options={scriptures}
+        onChange={(event) => {
+          if (event.length) {
+            onSearch(event);
+            setShowModal(false);
+          }
+        }}
+        render={(option, { text }) => (
+          <div className="my-1">
+            <Highlighter search={text}>
+              {option.text.replaceAll('<br/>', '\n')}
+            </Highlighter>
+            <small className="d-block text-primary">{option.cite}</small>
+          </div>
+        )}
+      />
     </Wrapper>
   );
 }

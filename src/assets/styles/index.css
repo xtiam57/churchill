@@ -1,9 +1,12 @@
+/* Reset */
+
 .btn:focus {
   outline: none;
   box-shadow: none;
 }
 
-input, select {
+input,
+select {
   box-shadow: none !important;
 }
 
@@ -11,6 +14,12 @@ input, select {
   font-size: 2.8rem;
   margin-bottom: 1rem;
 }
+
+.alert {
+  z-index: 2;
+}
+
+/* Utilities */
 
 .pointer {
   cursor: pointer;
@@ -25,13 +34,11 @@ input, select {
   border-radius: 0;
 }
 
-.alert {
-  z-index: 2;
-}
-
 .fs-lg {
   font-size: 1.25em;
 }
+
+/* Tags */
 
 .tag {
   border: solid 1px var(--secondary);
@@ -66,6 +73,8 @@ input, select {
   cursor: inherit;
 }
 
+/* Typeahead and dropdowns */
+
 .dropdown-menu.show .dropdown-item .tag {
   border: solid 1px #212529;
   color: #212529;
@@ -73,17 +82,19 @@ input, select {
   margin: 5px 0;
 }
 
-.custom-typeahead .dropdown-item {
+.search-typeahead .dropdown-item {
   white-space: normal;
 }
 
-.custom-typeahead .dropdown-item.active .text-primary {
+.search-typeahead .dropdown-item.active .text-primary {
   color: #fff !important;
 }
 
-.custom-typeahead .dropdown-menu.show {
+.search-typeahead .dropdown-menu.show {
   min-height: 70vh;
 }
+
+/* Modals */
 
 .modal-backdrop.show {
   backdrop-filter: blur(4px);

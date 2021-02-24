@@ -3,7 +3,7 @@ import React from 'react';
 import { Bookmark, createStorageKey } from 'components/bookmark';
 import { List } from 'components/list';
 import { Storage, getBookmarkedItems } from 'utils';
-import { ITEMS_PER_LIST } from 'values';
+import { MAX_BOOKMARKS } from 'values';
 
 export function BookmarkList({
   type = '',
@@ -33,7 +33,7 @@ export function BookmarkList({
       </List.Item>
 
       {items.map((item, index) => {
-        return index < ITEMS_PER_LIST ? (
+        return index < MAX_BOOKMARKS ? (
           <List.Item key={index}>
             <List.Action
               onClick={() => onClick(item)}
@@ -50,11 +50,11 @@ export function BookmarkList({
         ) : null;
       })}
 
-      {items.length > ITEMS_PER_LIST ? (
+      {items.length > MAX_BOOKMARKS ? (
         <List.Item>
           <List.Text>
-            +{items.length - ITEMS_PER_LIST} marcador
-            {items.length - ITEMS_PER_LIST > 1 ? 'es' : ''}
+            +{items.length - MAX_BOOKMARKS} marcador
+            {items.length - MAX_BOOKMARKS > 1 ? 'es' : ''}
           </List.Text>
         </List.Item>
       ) : null}

@@ -17,9 +17,9 @@ import { List } from 'components/list';
 
 import { useKeyDown, useIterate } from 'hooks';
 import { Slide } from 'utils';
-import { SETTINGS_NAME, SETTINGS_INITIAL_STATE } from 'values';
+import { BROADCAST } from 'values';
 
-const useSettings = createPersistedState(SETTINGS_NAME);
+const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
 const notices = [
   {
@@ -102,7 +102,7 @@ const notices = [
 ];
 
 function HomeView() {
-  const [settings] = useSettings(SETTINGS_INITIAL_STATE);
+  const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const [showLogo, setShowLogo] = useState(true);
   const [notice, setNotice] = useState(notices[0]);
   const [slide, setSlide] = useState(notice.slides[0]);

@@ -3,10 +3,10 @@ import createPersistedState from 'use-persisted-state';
 
 import { Presenter } from 'components/presenter';
 import { useIterate, useKeyDown } from 'hooks';
-import { CHANNEL_NAME, SETTINGS_NAME, SETTINGS_INITIAL_STATE } from 'values';
+import { BROADCAST } from 'values';
 
-const useBroadcast = createPersistedState(CHANNEL_NAME);
-const useSettings = createPersistedState(SETTINGS_NAME);
+const useBroadcast = createPersistedState(BROADCAST.CHANNEL);
+const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
 export function Slider({
   children = (
@@ -23,8 +23,8 @@ export function Slider({
   loop = false,
   ...rest
 }) {
-  const [, setMessage] = useBroadcast(null);
-  const [settings] = useSettings(SETTINGS_INITIAL_STATE);
+  const [, setMessage] = useBroadcast(BROADCAST.INITIAL_CHANNEL);
+  const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
 
   const [slides, setSlides] = useState(wrapper?.slides || []);
   const [slide, setSlide] = useState(slides[0]);

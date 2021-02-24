@@ -9,23 +9,13 @@ import { Logo } from 'components/logo';
 import { Preview } from 'components/preview';
 
 import { useSettingsSidebar } from 'hooks';
+import { BROADCAST, THEMES, SETTINGS_OPTIONS } from 'values';
 
-import {
-  SETTINGS_NAME,
-  THEMES,
-  SETTINGS_INITIAL_STATE,
-  FONT_FAMILIES_OPTIONS,
-  THEMES_OPTIONS,
-  BACKGROUNDS_OPTIONS,
-  LOGO_OPTIONS,
-  TIME_INTERVAL_OPTIONS,
-} from 'values';
-
-const useSettings = createPersistedState(SETTINGS_NAME);
+const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
 export function Settings() {
   const { toggleSettings, showingSettings } = useSettingsSidebar();
-  const [settings, setSettings] = useSettings(SETTINGS_INITIAL_STATE);
+  const [settings, setSettings] = useSettings(BROADCAST.INITIAL_SETTINGS);
 
   const onChangeValue = ({ target }) => {
     const { name, value } = target;
@@ -79,7 +69,7 @@ export function Settings() {
             value={settings?.font}
             onChange={onChangeValue}
           >
-            {FONT_FAMILIES_OPTIONS.map(({ value, label }) => (
+            {SETTINGS_OPTIONS.FONT_FAMILIES.map(({ value, label }) => (
               <option key={value} value={value}>
                 {label}
               </option>
@@ -117,7 +107,7 @@ export function Settings() {
             name="theme"
             onChange={onChangeTheme}
           >
-            {THEMES_OPTIONS.map(({ value, label }) => (
+            {SETTINGS_OPTIONS.THEMES.map(({ value, label }) => (
               <option key={value} value={value}>
                 {label}
               </option>
@@ -188,7 +178,7 @@ export function Settings() {
             name="image"
             onChange={onChangeValue}
           >
-            {BACKGROUNDS_OPTIONS.map(({ value, label }) => (
+            {SETTINGS_OPTIONS.BACKGROUNDS.map(({ value, label }) => (
               <option key={value} value={value}>
                 {label}
               </option>
@@ -227,7 +217,7 @@ export function Settings() {
             value={settings?.logo}
             onChange={onChangeValue}
           >
-            {LOGO_OPTIONS.map(({ value, label }) => (
+            {SETTINGS_OPTIONS.LOGOS.map(({ value, label }) => (
               <option key={value} value={value}>
                 {label}
               </option>
@@ -266,7 +256,7 @@ export function Settings() {
             value={settings?.interval}
             onChange={onChangeNumericValue}
           >
-            {TIME_INTERVAL_OPTIONS.map(({ value, label }) => (
+            {SETTINGS_OPTIONS.TIME_INTERVALS.map(({ value, label }) => (
               <option key={value} value={value}>
                 {label}
               </option>
@@ -278,7 +268,7 @@ export function Settings() {
       <Button
         block
         className="mt-3"
-        onClick={() => setSettings(SETTINGS_INITIAL_STATE)}
+        onClick={() => setSettings(BROADCAST.INITIAL_SETTINGS)}
       >
         Reiniciar
       </Button>
