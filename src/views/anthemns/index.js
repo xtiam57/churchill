@@ -167,9 +167,6 @@ export default function AnthemnsView() {
               >
                 {option.text.replaceAll('1)', '').replaceAll('/n', ' ')}
               </small>
-              {option.tags ? (
-                <small className="tag">{option.tags.toLowerCase()}</small>
-              ) : null}
             </>
           )}
         />
@@ -422,6 +419,12 @@ export default function AnthemnsView() {
                 <Highlighter search={text}>
                   {option.text.replaceAll('/n', ' ')}
                 </Highlighter>
+
+                {option.authors ? (
+                  <div className="small font-italic mt-2">
+                    Autor(es): {option.authors}
+                  </div>
+                ) : null}
               </div>
             )}
           />
