@@ -22,16 +22,10 @@ import { List } from 'components/list';
 import { BookmarkList } from 'components/bookmarkList';
 import { Finder } from 'components/finder';
 
-import {
-  useAnthemn,
-  useMoveAnthemn,
-  useIterate,
-  useBirthday,
-  useKeyDown,
-} from 'hooks';
+import { useAnthemn, useIterate, useBirthday, useKeyUp } from 'hooks';
 import { Time, getBookmarkedItems } from 'utils';
 
-import { BROADCAST } from 'values';
+import { BROADCAST, MOVEMENT } from 'values';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
@@ -50,15 +44,14 @@ export default function AnthemnsView() {
 
   const typeaheadRef = useRef();
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
-  const { anthemns, song, setSong, tags } = useAnthemn();
-  const [slide, setSlide] = useState(song.slides[0]);
-  const [moveSlide] = useIterate(slide, song.slides);
-  const { moveAnthemn } = useMoveAnthemn();
+  const { anthemns, current, setCurrent, tags, moveAnthemn } = useAnthemn();
+  const [slide, setSlide] = useState(current.firstSlide);
+  const [moveSlide] = useIterate(slide, current.slides);
   const { birthdays, birthdayAnthemn } = useBirthday();
   const [showLogo, setShowLogo] = useState(true);
-  const [search, setSearch] = useState([song]);
+  const [search, setSearch] = useState([current]);
   const [bookmarks, setBookmarks] = useState(getBookmarkedItems('anthemn'));
-  const [url, setUrl] = useState(folder.getPath(song.number));
+  const [url, setUrl] = useState(folder.getPath(current.number));
   const [isMP3Loaded, setIsMP3Loaded] = useState(false);
   const [playbackRate, setPlaybackRate] = React.useState(1);
   const [volume, setVolume] = useState(1);
@@ -75,9 +68,9 @@ export default function AnthemnsView() {
 
   useEffect(() => {
     stop();
-    setUrl(folder.getPath(song.number));
+    setUrl(folder.getPath(current.number));
     setPlaybackRate(1);
-  }, [song, stop, folder]);
+  }, [current, stop, folder]);
 
   useEffect(() => {
     return () => stop();
@@ -88,27 +81,27 @@ export default function AnthemnsView() {
 
     if (event.length) {
       const [anthemn] = event;
-      setSong(anthemn);
+      setCurrent(anthemn);
       typeaheadRef.current.blur();
     }
   }
 
   const onPrevSlide = () => {
-    const slide = moveSlide(-1);
+    const slide = moveSlide(MOVEMENT.PREV);
     setSlide(slide);
   };
   const onNextSlide = () => {
-    const slide = moveSlide(1);
+    const slide = moveSlide(MOVEMENT.NEXT);
     setSlide(slide);
   };
 
   const onPrevAnthemn = () => {
-    const anthemn = moveAnthemn(-1);
+    const anthemn = moveAnthemn(MOVEMENT.PREV);
     setSearch([anthemn]);
   };
 
   const onNextAnthemn = () => {
-    const anthemn = moveAnthemn(1);
+    const anthemn = moveAnthemn(MOVEMENT.NEXT);
     setSearch([anthemn]);
   };
 
@@ -132,11 +125,11 @@ export default function AnthemnsView() {
     );
   };
 
-  useKeyDown('ArrowUp', onNextAnthemn);
-  useKeyDown('ArrowDown', onPrevAnthemn);
-  useKeyDown('F1', () => typeaheadRef.current.focus());
-  useKeyDown('Space', onTogglePlay);
-  useKeyDown('KeyB', () => setShowModal(true), { ctrl: true });
+  useKeyUp('ArrowUp', onNextAnthemn);
+  useKeyUp('ArrowDown', onPrevAnthemn);
+  useKeyUp('F1', () => typeaheadRef.current.focus());
+  useKeyUp('Space', onTogglePlay);
+  useKeyUp('KeyB', () => setShowModal(true), { ctrl: true });
 
   return (
     <Wrapper>
@@ -162,8 +155,7 @@ export default function AnthemnsView() {
             <>
               <Highlighter search={text}>{option.title}</Highlighter>
               <small
-                className="d-block overflow-hidden font-italic"
-                style={{ textOverflow: 'ellipsis' }}
+                className="more font-italic"
                 title={option.text.replaceAll('/n', '\n')}
               >
                 {option.text.replaceAll('1)', '').replaceAll('/n', ' ')}
@@ -179,8 +171,7 @@ export default function AnthemnsView() {
 
           <Button
             variant="link"
-            className="text-light p-0 m-0"
-            style={{ fontSize: '95%' }}
+            className="text-light p-0 text-small"
             onClick={(e) => setShowModal(true)}
           >
             <ImSearch /> Avanzado
@@ -272,7 +263,7 @@ export default function AnthemnsView() {
       </Sidebar>
 
       <Wrapper direction="column" {...settings}>
-        <Bookmark element={song} onChange={setBookmarks} />
+        <Bookmark element={current} onChange={setBookmarks} />
 
         <Alert className="m-0 br-0" variant="secondary">
           {showLogo ? (
@@ -283,14 +274,14 @@ export default function AnthemnsView() {
           ) : (
             <>
               Actualmente se está mostrando el himno{' '}
-              <strong>{song.title}</strong> al público.
+              <strong>{current.title}</strong> al público.
             </>
           )}
         </Alert>
 
         <Slider
           live={!showLogo}
-          wrapper={song}
+          wrapper={current}
           value={slide}
           onChange={setSlide}
         >
@@ -324,7 +315,7 @@ export default function AnthemnsView() {
               <strong className="pointer text-underline" onClick={onOpenPath}>
                 /himnos
               </strong>{' '}
-              con el nombre <strong>{song.number}.mp3</strong>.
+              con el nombre <strong>{current.number}.mp3</strong>.
             </small>
           )}
           <div className="d-flex">

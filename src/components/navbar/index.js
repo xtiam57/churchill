@@ -10,7 +10,7 @@ import {
 } from 'react-icons/bs';
 import { RiSlideshow2Fill, RiStopFill } from 'react-icons/ri';
 
-import { PATHS } from 'values';
+import { ROUTES } from 'values';
 import { usePresenter, useSettingsSidebar } from 'hooks';
 
 export function Navbar() {
@@ -24,7 +24,7 @@ export function Navbar() {
   //   return () => clearInterval(timer);
   // }, []);
 
-  if (location.pathname === PATHS.CAST_VIEW) {
+  if (location.pathname === ROUTES.CAST_PAGE) {
     return null;
   }
 
@@ -51,7 +51,7 @@ export function Navbar() {
             </li>
             <li className="nav-item">
               <NavLink
-                to={PATHS.BIBLE_VIEW}
+                to={ROUTES.SCRIPTURES_PAGE}
                 className="nav-link"
                 activeClassName="active"
               >
@@ -60,7 +60,7 @@ export function Navbar() {
             </li>
             <li className="nav-item">
               <NavLink
-                to={PATHS.ANTHEMNS_VIEW}
+                to={ROUTES.ANTHEMNS_PAGE}
                 className="nav-link"
                 activeClassName="active"
               >
@@ -69,7 +69,7 @@ export function Navbar() {
             </li>
             <li className="nav-item">
               <NavLink
-                to={PATHS.BIRTHDAYS_VIEW}
+                to={ROUTES.BIRTHDAYS_PAGE}
                 className="nav-link"
                 activeClassName="active"
               >

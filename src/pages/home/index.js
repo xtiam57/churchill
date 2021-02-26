@@ -15,7 +15,7 @@ import { Wrapper } from 'components/wrapper';
 import { Controls } from 'components/controls';
 import { List } from 'components/list';
 
-import { useKeyDown, useIterate } from 'hooks';
+import { useKeyUp, useIterate } from 'hooks';
 import { Slide } from 'utils';
 import { BROADCAST } from 'values';
 
@@ -135,9 +135,9 @@ function HomeView() {
     setNotice(notice);
   };
 
-  useKeyDown('ArrowUp', onNextNotice);
-  useKeyDown('ArrowDown', onPrevNotice);
-  useKeyDown('Space', () => setAutoplay((state) => !state));
+  useKeyUp('ArrowUp', onNextNotice);
+  useKeyUp('ArrowDown', onPrevNotice);
+  useKeyUp('Space', () => setAutoplay((state) => !state));
 
   return (
     <Wrapper>

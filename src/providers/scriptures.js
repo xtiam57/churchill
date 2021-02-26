@@ -49,14 +49,14 @@ function ScripturesProvider({ children }) {
   }, []);
 
   const [first] = scriptures;
-  const [verse, setVerse] = useState(first);
+  const [current, setCurrent] = useState(first);
 
   return (
     <ScripturesContext.Provider
       value={{
         scriptures,
-        verse,
-        setVerse,
+        current,
+        setCurrent,
       }}
     >
       {children}

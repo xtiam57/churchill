@@ -1,9 +1,14 @@
-export const PATHS = {
+export const ROUTES = {
   ROOT: '/',
-  BIBLE_VIEW: '/scriptures',
-  ANTHEMNS_VIEW: '/anthemns',
-  BIRTHDAYS_VIEW: '/birthdays',
-  CAST_VIEW: '/cast-screen',
+  SCRIPTURES_PAGE: '/scriptures',
+  ANTHEMNS_PAGE: '/anthemns',
+  BIRTHDAYS_PAGE: '/birthdays',
+  CAST_PAGE: '/cast-screen',
+};
+
+export const MOVEMENT = {
+  NEXT: '>',
+  PREV: '<',
 };
 
 export const BIRTHDAY = {
@@ -12,6 +17,33 @@ export const BIRTHDAY = {
 };
 
 export const MAX_BOOKMARKS = 15;
+
+export const TRANSITIONS = {
+  upDown: {
+    text: {
+      initial: { opacity: 0, y: '-100%' },
+      animate: { opacity: 1, y: 0 },
+      exit: { opacity: 0, y: '-100%' },
+    },
+    subtext: {
+      initial: { opacity: 0, y: '100%' },
+      animate: { opacity: 1, y: 0 },
+      exit: { opacity: 0, y: '100%' },
+    },
+  },
+  fade: {
+    text: {},
+    subtext: {},
+  },
+  leftRight: {
+    text: {},
+    subtext: {},
+  },
+  zoom: {
+    text: {},
+    subtext: {},
+  },
+};
 
 export const THEMES = {
   default: {

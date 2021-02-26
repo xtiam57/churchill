@@ -94,21 +94,23 @@ function AnthemnsProvider({ children }) {
           tags,
           authors,
           length: slides.length,
+          firstSlide: slides[0],
+          lastSlide: slides[slides.length - 1],
         };
       }
     );
-  }, []);
+  }, [tagsSet]);
 
   const [first] = anthemns;
-  const [song, setSong] = useState(first);
+  const [current, setCurrent] = useState(first);
   const [tags] = useState(Array.from(tagsSet).sort());
 
   return (
     <AnthemnsContext.Provider
       value={{
         anthemns,
-        song,
-        setSong,
+        current,
+        setCurrent,
         tags,
       }}
     >

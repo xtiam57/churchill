@@ -12,27 +12,32 @@ import { Bookmark } from 'components/bookmark';
 import { BookmarkList } from 'components/bookmarkList';
 import { Finder } from 'components/finder';
 
-import { useScriptures, useMoveVerse, useKeyDown } from 'hooks';
+import { useScriptures, useKeyUp } from 'hooks';
 import { getBookmarkedItems } from 'utils';
-import { BROADCAST } from 'values';
+import { BROADCAST, MOVEMENT } from 'values';
 
 const useBroadcast = createPersistedState(BROADCAST.CHANNEL);
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
 function ScripturesView() {
   const typeaheadRef = useRef();
-  const { scriptures, verse, setVerse } = useScriptures();
-  const { moveChapter, moveVerse } = useMoveVerse();
+  const {
+    scriptures,
+    current,
+    setCurrent,
+    moveChapter,
+    moveVerse,
+  } = useScriptures();
   const [, setMessage] = useBroadcast(BROADCAST.INITIAL_CHANNEL);
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const [showLogo, setShowLogo] = useState(true);
-  const [search, setSearch] = useState([verse]);
+  const [search, setSearch] = useState([current]);
   const [bookmarks, setBookmarks] = useState(getBookmarkedItems('verse'));
-  const [showModal, setShowModal] = useState(false);
+  const [showFinder, setShowFinder] = useState(false);
 
   useEffect(() => {
-    setMessage(showLogo ? null : verse);
-  }, [verse, showLogo, setMessage]);
+    setMessage(showLogo ? null : current);
+  }, [current, showLogo, setMessage]);
 
   useEffect(() => {
     return () => setMessage(null);
@@ -42,37 +47,37 @@ function ScripturesView() {
     setSearch(event);
 
     if (event.length) {
-      setVerse(...event);
+      setCurrent(...event);
       typeaheadRef.current.blur();
     }
   }
 
   const onPrevVerse = () => {
-    const verse = moveVerse(-1);
+    const verse = moveVerse(MOVEMENT.PREV);
     setSearch([verse]);
   };
 
   const onNextVerse = () => {
-    const verse = moveVerse(1);
+    const verse = moveVerse(MOVEMENT.NEXT);
     setSearch([verse]);
   };
 
   const onPrevChapter = () => {
-    const verse = moveChapter(-1);
+    const verse = moveChapter(MOVEMENT.PREV);
     setSearch([verse]);
   };
 
   const onNextChapter = () => {
-    const verse = moveChapter(1);
+    const verse = moveChapter(MOVEMENT.NEXT);
     setSearch([verse]);
   };
 
-  useKeyDown('ArrowLeft', onPrevVerse);
-  useKeyDown('ArrowRight', onNextVerse);
-  useKeyDown('ArrowUp', onNextChapter);
-  useKeyDown('ArrowDown', onPrevChapter);
-  useKeyDown('F1', () => typeaheadRef.current.focus());
-  useKeyDown('KeyB', () => setShowModal(true), { ctrl: true });
+  useKeyUp('ArrowLeft', onPrevVerse);
+  useKeyUp('ArrowRight', onNextVerse);
+  useKeyUp('ArrowUp', onNextChapter);
+  useKeyUp('ArrowDown', onPrevChapter);
+  useKeyUp('F1', () => typeaheadRef.current.focus());
+  useKeyUp('KeyB', () => setShowFinder(true), { ctrl: true });
 
   return (
     <Wrapper>
@@ -98,8 +103,7 @@ function ScripturesView() {
             <>
               <Highlighter search={text}>{option.cite}</Highlighter>
               <small
-                className="d-block overflow-hidden font-italic"
-                style={{ textOverflow: 'ellipsis' }}
+                className="more font-italic"
                 title={option.text.replaceAll('<br/>', '\n')}
               >
                 {option.text.replaceAll('<br/>', ' ')}
@@ -115,9 +119,8 @@ function ScripturesView() {
 
           <Button
             variant="link"
-            className="text-light p-0 m-0"
-            style={{ fontSize: '95%' }}
-            onClick={(e) => setShowModal(true)}
+            className="text-light p-0 text-small"
+            onClick={(e) => setShowFinder(true)}
           >
             <ImSearch /> Avanzado
           </Button>
@@ -143,7 +146,7 @@ function ScripturesView() {
       </Sidebar>
 
       <Wrapper direction="column" {...settings}>
-        <Bookmark element={verse} onChange={setBookmarks} />
+        <Bookmark element={current} onChange={setBookmarks} />
 
         <Alert className="m-0 br-0" variant="secondary">
           {showLogo ? (
@@ -154,13 +157,13 @@ function ScripturesView() {
           ) : (
             <>
               Actualmente se está mostrando el versículo{' '}
-              <strong>{verse.cite}</strong> al público.
+              <strong>{current.cite}</strong> al público.
             </>
           )}
         </Alert>
 
-        <Presenter live={!showLogo} subtext={verse.cite} {...settings}>
-          {verse.text}
+        <Presenter live={!showLogo} subtext={current.cite} {...settings}>
+          {current.text}
         </Presenter>
 
         <div className="text-muted bg-white py-2 px-3 d-flex justify-content-between">
@@ -185,13 +188,13 @@ function ScripturesView() {
       </Wrapper>
 
       <Finder
-        show={showModal}
-        onHide={() => setShowModal(false)}
+        show={showFinder}
+        onHide={() => setShowFinder(false)}
         options={scriptures}
         onChange={(event) => {
           if (event.length) {
             onSearch(event);
-            setShowModal(false);
+            setShowFinder(false);
           }
         }}
         render={(option, { text }) => (

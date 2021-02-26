@@ -38,6 +38,16 @@ select {
   font-size: 1.25em;
 }
 
+.more {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.text-small {
+  font-size: 95%;
+}
+
 /* Tags */
 
 .tag {

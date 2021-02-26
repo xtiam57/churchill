@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import createPersistedState from 'use-persisted-state';
 import { Button, Form, Col } from 'react-bootstrap';
 import { MdClose } from 'react-icons/md';
@@ -8,13 +8,18 @@ import { Sidebar } from 'components/sidebar';
 import { Logo } from 'components/logo';
 import { Preview } from 'components/preview';
 
-import { useSettingsSidebar } from 'hooks';
+import { useSettingsSidebar, useClickOutside } from 'hooks';
 import { BROADCAST, THEMES, SETTINGS_OPTIONS } from 'values';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
 export function Settings() {
-  const { toggleSettings, showingSettings } = useSettingsSidebar();
+  const ref = useRef(null);
+  const {
+    toggleSettings,
+    showingSettings,
+    closeSettings,
+  } = useSettingsSidebar();
   const [settings, setSettings] = useSettings(BROADCAST.INITIAL_SETTINGS);
 
   const onChangeValue = ({ target }) => {
@@ -46,8 +51,18 @@ export function Settings() {
     }));
   };
 
+  // useClickOutside(ref, () => {
+  //   if (showingSettings) {
+  //     closeSettings();
+  //   }
+  // });
+
   return (
-    <Sidebar closable className={`bg-light ${showingSettings ? '' : 'closed'}`}>
+    <Sidebar
+      ref={ref}
+      closable
+      className={`bg-light ${showingSettings ? '' : 'closed'}`}
+    >
       <h1 className="display-4">Opciones</h1>
 
       <Button

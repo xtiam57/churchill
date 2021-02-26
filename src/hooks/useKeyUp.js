@@ -1,6 +1,6 @@
 import { useCallback, useEffect } from 'react';
 
-export function useKeyDown(
+export function useKeyUp(
   keyCode,
   action = () => {},
   { ctrl = false, disableInInputs = true } = {}
@@ -24,9 +24,9 @@ export function useKeyDown(
   );
 
   useEffect(() => {
-    document.body.addEventListener('keydown', handleEvent);
+    document.body.addEventListener('keyup', handleEvent);
     return () => {
-      document.body.removeEventListener('keydown', handleEvent);
+      document.body.removeEventListener('keyup', handleEvent);
     };
   }, [handleEvent]);
 

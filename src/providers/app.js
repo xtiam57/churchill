@@ -9,11 +9,21 @@ const AppProvider = ({ children }) => {
     setShowSettings((state) => !state);
   };
 
+  const openSettings = () => {
+    setShowSettings(true);
+  };
+
+  const closeSettings = () => {
+    setShowSettings(false);
+  };
+
   return (
     <AppContext.Provider
       value={{
         showingSettings: showSettings,
         toggleSettings,
+        openSettings,
+        closeSettings,
       }}
     >
       {children}

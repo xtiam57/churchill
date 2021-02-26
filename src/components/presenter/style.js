@@ -12,11 +12,12 @@ const PresenterStyled = styled.section`
   padding-bottom: 0;
   padding-left: 4em;
   text-align: center;
-  border: ${({ live }) => (live ? 'solid 4px var(--warning)' : 'none')};
+  border: ${({ live }) =>
+    live ? 'solid 4px var(--warning)' : 'solid 1px var(--dark)'};
+  backdrop-filter: ${({ blur }) => (blur ? `blur(${blur}px)` : 'none')};
   font-family: ${({ font }) =>
     font ||
     '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"'};
-  backdrop-filter: blur(${({ blur }) => blur || 0}px);
 
   p {
     font-size: ${({ size = 1.0, fontscale = 1.0 }) => {

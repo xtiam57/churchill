@@ -9,13 +9,13 @@ import { ScripturesProvider } from 'providers/scriptures';
 import { Navbar } from 'components/navbar';
 import { Settings } from 'components/settings';
 
-import AnthemnsView from 'views/anthemns';
-import BirthdaysView from 'views/birthdays';
-import CastView from 'views/cast';
-import HomeView from 'views/home';
-import ScripturesView from 'views/scriptures';
+import CastPage from 'pages/cast';
+import HomePage from 'pages/home';
+import ScripturesPage from 'pages/scriptures';
+import AnthemnsPage from 'pages/anthemns';
+import BirthdaysPage from 'pages/birthdays';
 
-import { PATHS } from 'values';
+import { ROUTES } from 'values';
 
 // CSS
 import 'bootstrap/dist/css/bootstrap.css';
@@ -32,24 +32,24 @@ function App() {
               <Navbar />
 
               <Switch>
-                <Route path={PATHS.BIBLE_VIEW}>
-                  <ScripturesView />
+                <Route path={ROUTES.SCRIPTURES_PAGE}>
+                  <ScripturesPage />
                 </Route>
 
-                <Route path={PATHS.ANTHEMNS_VIEW}>
-                  <AnthemnsView />
+                <Route path={ROUTES.ANTHEMNS_PAGE}>
+                  <AnthemnsPage />
                 </Route>
 
-                <Route path={PATHS.BIRTHDAYS_VIEW}>
-                  <BirthdaysView />
+                <Route path={ROUTES.BIRTHDAYS_PAGE}>
+                  <BirthdaysPage />
                 </Route>
 
-                <Route path={PATHS.CAST_VIEW}>
-                  <CastView />
+                <Route path={ROUTES.CAST_PAGE}>
+                  <CastPage />
                 </Route>
 
                 <Route path="/">
-                  <HomeView />
+                  <HomePage />
                 </Route>
               </Switch>
 

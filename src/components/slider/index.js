@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import createPersistedState from 'use-persisted-state';
 
 import { Presenter } from 'components/presenter';
-import { useIterate, useKeyDown } from 'hooks';
-import { BROADCAST } from 'values';
+import { useIterate, useKeyUp } from 'hooks';
+import { BROADCAST, MOVEMENT } from 'values';
 
 const useBroadcast = createPersistedState(BROADCAST.CHANNEL);
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
@@ -31,12 +31,12 @@ export function Slider({
   const [moveSlide] = useIterate(slide, slides);
 
   const onNextSlide = () => {
-    const slideToGo = moveSlide(1, loop);
+    const slideToGo = moveSlide(MOVEMENT.NEXT, loop);
     setSlide(slideToGo);
   };
 
   const onPrevSlide = () => {
-    const slideToGo = moveSlide(-1, loop);
+    const slideToGo = moveSlide(MOVEMENT.PREV, loop);
     setSlide(slideToGo);
   };
 
@@ -67,15 +67,15 @@ export function Slider({
     let interval = null;
     if (autoplay) {
       interval = setInterval(() => {
-        const slideToGo = moveSlide(1, loop);
+        const slideToGo = moveSlide(MOVEMENT.NEXT, loop);
         setSlide(slideToGo);
       }, settings.interval || 1000);
     }
     return () => clearInterval(interval);
   }, [autoplay, loop, moveSlide, settings.interval]);
 
-  useKeyDown('ArrowLeft', onPrevSlide);
-  useKeyDown('ArrowRight', onNextSlide);
+  useKeyUp('ArrowLeft', onPrevSlide);
+  useKeyUp('ArrowRight', onNextSlide);
 
   return (
     <>

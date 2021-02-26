@@ -1,32 +1,33 @@
-export function useIterate(current, pages) {
-  const next = (loop = false) => {
-    let index = Math.min(current.index + 1, pages.length - 1);
+import { MOVEMENT } from 'values';
 
-    if (loop) {
-      if (current.index + 1 >= pages.length) {
-        index = 0;
-      }
+export function useIterate(current, list) {
+  const len = list.length;
+  const lastIndex = len - 1;
+
+  const next = (loop = false) => {
+    let index = Math.min(current.index + 1, lastIndex);
+
+    if (loop && current.index + 1 >= len) {
+      index = 0;
     }
 
-    const page = pages[index];
-    return page;
+    const value = list[index];
+    return value;
   };
 
   const previous = (loop = false) => {
     let index = Math.max(current.index - 1, 0);
 
-    if (loop) {
-      if (current.index - 1 < 0) {
-        index = pages.length - 1;
-      }
+    if (loop && current.index - 1 < 0) {
+      index = lastIndex;
     }
 
-    const page = pages[index];
-    return page;
+    const value = list[index];
+    return value;
   };
 
-  const move = (inc = 1, loop = false) => {
-    return inc > 0 ? next(loop) : previous(loop);
+  const move = (action = MOVEMENT.NEXT, loop = false) => {
+    return action === MOVEMENT.NEXT ? next(loop) : previous(loop);
   };
 
   return [move, previous, next];

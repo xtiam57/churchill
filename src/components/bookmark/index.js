@@ -3,7 +3,7 @@ import { BsBookmarkPlus, BsBookmarkFill } from 'react-icons/bs';
 
 import { BookmarkStyled } from './style';
 import { Storage, getBookmarkedItems } from 'utils';
-import { useKeyDown } from 'hooks';
+import { useKeyUp } from 'hooks';
 
 export const createStorageKey = ({ index, type }) =>
   `${type}_${index}_bookmarked`;
@@ -35,7 +35,7 @@ export function Bookmark({
     onChange(getBookmarkedItems(element.type));
   };
 
-  useKeyDown('KeyS', add, { ctrl: true });
+  useKeyUp('KeyS', add, { ctrl: true });
 
   return (
     <BookmarkStyled bookmarked={bookmarked} icon={icon} {...rest}>

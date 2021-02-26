@@ -1,6 +1,6 @@
 import React from 'react';
 import { PresenterStyled } from './style';
-import { useTransition, animated } from 'react-spring';
+import { motion, AnimatePresence } from 'framer-motion';
 
 function getScale(length, strongCount = false, lineBreakCount = 0) {
   length = length - strongCount * 17 - lineBreakCount * 5;
@@ -34,39 +34,40 @@ function getScale(length, strongCount = false, lineBreakCount = 0) {
 }
 
 export function Presenter({ children, subtext = null, ...rest }) {
-  const textTransitions = useTransition(children, (el) => el, {
-    from: { opacity: 0, transform: 'translate3d(0, -100%, 0)' },
-    enter: { opacity: 1, transform: 'translate3d(0%, 0, 0)' },
-    leave: { opacity: 0, display: 'none' },
-  });
-
-  const subtextTransitions = useTransition(children, (el) => el, {
-    from: { opacity: 0, transform: 'translate3d(0, 100%, 0)' },
-    enter: { opacity: 1, transform: 'translate3d(0%, 0, 0)' },
-    leave: { opacity: 0, display: 'none' },
-  });
-
   const size = getScale(
     children.length,
     (children.match(/<strong>/g) || []).length,
     (children.match(/<br\/>/g) || []).length
   );
 
+  let textMotion = {
+    initial: { opacity: 0, y: '-100%' },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: '-100%' },
+  };
+
+  let subtextMotion = {
+    initial: { opacity: 0, y: '100%' },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: '100%' },
+  };
+
   return (
     <PresenterStyled size={size} {...rest}>
-      {textTransitions.map(({ key, props }) => (
-        <animated.p
-          key={key}
-          style={props}
+      <AnimatePresence exitBeforeEnter>
+        <motion.p
+          key={children}
           className={subtext ? '' : 'mb-0'}
           dangerouslySetInnerHTML={{ __html: children }}
+          {...textMotion}
         />
-      ))}
-      {subtextTransitions.map(({ key, props }) => (
-        <animated.div key={key} style={props}>
+      </AnimatePresence>
+
+      <AnimatePresence exitBeforeEnter>
+        <motion.div key={subtext} {...subtextMotion}>
           {subtext ? <cite>{subtext}</cite> : null}
-        </animated.div>
-      ))}
+        </motion.div>
+      </AnimatePresence>
     </PresenterStyled>
   );
 }
