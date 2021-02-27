@@ -162,7 +162,12 @@ function ScripturesView() {
           )}
         </Alert>
 
-        <Presenter live={!showLogo} subtext={current.cite} {...settings}>
+        <Presenter
+          live={!showLogo}
+          id={current.id}
+          subtext={current.cite}
+          {...settings}
+        >
           {current.text}
         </Presenter>
 

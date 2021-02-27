@@ -33,7 +33,7 @@ function splitLines(title, text, array, index) {
 }
 
 function AnthemnsProvider({ children }) {
-  const tagsSet = new Set();
+  const tagsSet = useMemo(() => new Set(), []);
 
   const anthemns = useMemo(() => {
     return json.map(
@@ -42,6 +42,7 @@ function AnthemnsProvider({ children }) {
         index
       ) => {
         const slides = [];
+        const id = `Himno_${number}`;
         let text = '';
         let slideIndex = 0;
         const isNotAnthemn = tags?.toLowerCase().includes('coro');
@@ -81,10 +82,17 @@ function AnthemnsProvider({ children }) {
           }
         });
 
-        slides.push(Slide.create({ text: '&#119070;', index: slideIndex }));
+        slides.push(
+          Slide.create({
+            text: '&#119070;',
+            index: slideIndex,
+          })
+        );
+
+        console.log('songs changed');
 
         return {
-          id: `Himno_${number}`,
+          id,
           index,
           number,
           title: `${isNotAnthemn || isExtra ? '' : `#${number} `}${title}`,

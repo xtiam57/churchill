@@ -2,15 +2,7 @@ import React, { useState, useRef, useEffect, useMemo } from 'react';
 import createPersistedState from 'use-persisted-state';
 import { Typeahead, Highlighter } from 'react-bootstrap-typeahead';
 import { Button, ButtonGroup, Alert, Form } from 'react-bootstrap';
-import {
-  ImArrowLeft2,
-  ImArrowRight2,
-  ImPlay3,
-  ImStop2,
-  ImVolumeHigh,
-  ImVolumeMute,
-  ImSearch,
-} from 'react-icons/im';
+import * as ImIcons from 'react-icons/im';
 import useSound from 'use-sound';
 
 import { Slider } from 'components/slider';
@@ -174,7 +166,7 @@ export default function AnthemnsView() {
             className="text-light p-0 text-small"
             onClick={(e) => setShowModal(true)}
           >
-            <ImSearch /> Avanzado
+            <ImIcons.ImSearch /> Avanzado
           </Button>
         </div>
 
@@ -293,7 +285,7 @@ export default function AnthemnsView() {
         <Controls>
           {isMP3Loaded ? (
             <div className="d-flex">
-              <ImVolumeMute />
+              <ImIcons.ImVolumeMute />
               <Form.Control
                 type="range"
                 value={volume}
@@ -303,7 +295,7 @@ export default function AnthemnsView() {
                 className="mx-2"
                 onChange={(e) => setVolume(+e.target.value)}
               />
-              <ImVolumeHigh />
+              <ImIcons.ImVolumeHigh />
             </div>
           ) : null}
           {isMP3Loaded ? null : (
@@ -324,11 +316,11 @@ export default function AnthemnsView() {
                 <ButtonGroup className="mx-2">
                   {isPlaying ? (
                     <Button onClick={() => stop()} variant="light">
-                      <ImStop2 />
+                      <ImIcons.ImStop2 />
                     </Button>
                   ) : (
                     <Button onClick={() => play()} variant="secondary">
-                      <ImPlay3 />
+                      <ImIcons.ImPlay3 />
                     </Button>
                   )}
                 </ButtonGroup>
@@ -336,10 +328,10 @@ export default function AnthemnsView() {
             ) : null}
             <ButtonGroup>
               <Button onClick={onPrevSlide} variant="secondary">
-                <ImArrowLeft2 />
+                <ImIcons.ImArrowLeft2 />
               </Button>
               <Button onClick={onNextSlide} variant="secondary">
-                <ImArrowRight2 />
+                <ImIcons.ImArrowRight2 />
               </Button>
             </ButtonGroup>
           </div>

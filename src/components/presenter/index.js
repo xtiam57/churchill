@@ -2,6 +2,8 @@ import React from 'react';
 import { PresenterStyled } from './style';
 import { motion, AnimatePresence } from 'framer-motion';
 
+import { generateGUID } from 'utils';
+
 function getScale(length, strongCount = false, lineBreakCount = 0) {
   length = length - strongCount * 17 - lineBreakCount * 5;
   if (length > 400) {
@@ -33,30 +35,35 @@ function getScale(length, strongCount = false, lineBreakCount = 0) {
   }
 }
 
-export function Presenter({ children, subtext = null, ...rest }) {
+const textMotion = {
+  initial: { opacity: 0, y: '-100%' },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, scale: 0.25 },
+};
+
+const subtextMotion = {
+  initial: { opacity: 0, y: '100%' },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: '100%' },
+};
+
+export function Presenter({
+  children,
+  subtext = null,
+  id = generateGUID(),
+  ...rest
+}) {
   const size = getScale(
     children.length,
     (children.match(/<strong>/g) || []).length,
     (children.match(/<br\/>/g) || []).length
   );
 
-  let textMotion = {
-    initial: { opacity: 0, y: '-100%' },
-    animate: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: '-100%' },
-  };
-
-  let subtextMotion = {
-    initial: { opacity: 0, y: '100%' },
-    animate: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: '100%' },
-  };
-
   return (
     <PresenterStyled size={size} {...rest}>
       <AnimatePresence exitBeforeEnter>
         <motion.p
-          key={children}
+          key={id}
           className={subtext ? '' : 'mb-0'}
           dangerouslySetInnerHTML={{ __html: children }}
           {...textMotion}
@@ -64,7 +71,7 @@ export function Presenter({ children, subtext = null, ...rest }) {
       </AnimatePresence>
 
       <AnimatePresence exitBeforeEnter>
-        <motion.div key={subtext} {...subtextMotion}>
+        <motion.div key={id} {...subtextMotion}>
           {subtext ? <cite>{subtext}</cite> : null}
         </motion.div>
       </AnimatePresence>

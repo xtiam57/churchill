@@ -1,13 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
-import {
-  BsMusicNoteList,
-  BsBook,
-  BsGift,
-  BsFillGearFill,
-  BsHouseFill,
-} from 'react-icons/bs';
+import * as BsIcons from 'react-icons/bs';
 import { RiSlideshow2Fill, RiStopFill } from 'react-icons/ri';
 
 import { ROUTES } from 'values';
@@ -46,7 +40,7 @@ export function Navbar() {
                 className="nav-link"
                 activeClassName="active"
               >
-                <BsHouseFill />
+                <BsIcons.BsHouseFill />
               </NavLink>
             </li>
             <li className="nav-item">
@@ -55,7 +49,7 @@ export function Navbar() {
                 className="nav-link"
                 activeClassName="active"
               >
-                <BsBook /> Escrituras
+                <BsIcons.BsBook /> Escrituras
               </NavLink>
             </li>
             <li className="nav-item">
@@ -64,7 +58,7 @@ export function Navbar() {
                 className="nav-link"
                 activeClassName="active"
               >
-                <BsMusicNoteList /> Himnos
+                <BsIcons.BsMusicNoteList /> Himnos
               </NavLink>
             </li>
             <li className="nav-item">
@@ -73,7 +67,7 @@ export function Navbar() {
                 className="nav-link"
                 activeClassName="active"
               >
-                <BsGift /> Cumpleaños
+                <BsIcons.BsGift /> Cumpleaños
               </NavLink>
             </li>
           </ul>
@@ -95,7 +89,7 @@ export function Navbar() {
             className={presenting ? 'text-dark px-0' : 'text-light px-0'}
             variant={presenting ? 'link' : 'link'}
           >
-            <BsFillGearFill />
+            <BsIcons.BsFillGearFill />
           </Button>
         </div>
       </nav>

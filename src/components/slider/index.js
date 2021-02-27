@@ -4,6 +4,7 @@ import createPersistedState from 'use-persisted-state';
 import { Presenter } from 'components/presenter';
 import { useIterate, useKeyUp } from 'hooks';
 import { BROADCAST, MOVEMENT } from 'values';
+import { generateGUID } from 'utils';
 
 const useBroadcast = createPersistedState(BROADCAST.CHANNEL);
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
@@ -79,7 +80,12 @@ export function Slider({
 
   return (
     <>
-      <Presenter live={live} subtext={slide?.subtext} {...settings}>
+      <Presenter
+        live={live}
+        id={slide?.id || slide?.index || generateGUID()}
+        subtext={slide?.subtext}
+        {...settings}
+      >
         {slide?.text}
       </Presenter>
 

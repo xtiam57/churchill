@@ -37,7 +37,7 @@ const PresenterProvider = ({ children }) => {
         });
 
         // Open the DevTools.
-        win.webContents.openDevTools();
+        // win.webContents.openDevTools();
 
         win.loadURL(url.replace(/#.*$/, `#${ROUTES.CAST_PAGE}`));
 

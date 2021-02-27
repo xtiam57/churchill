@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import json from 'assets/data/bible';
+import { generateGUID } from 'utils';
 
 const ScripturesContext = React.createContext({});
 
@@ -18,7 +19,7 @@ function ScripturesProvider({ children }) {
       const chaptersExpanded = book.content.map((chapter, chapterIndex) => {
         return chapter.map((verse, verseIndex) => {
           return {
-            id: `${book.shortTitle}_${chapterIndex + 1}_${verseIndex + 1}`,
+            id: generateGUID(),
             // Verse data
             index: index++,
             cite: `${book.shortTitle} ${chapterIndex + 1}:${verseIndex + 1}`,
