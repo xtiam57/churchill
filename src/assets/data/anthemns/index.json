@@ -7264,6 +7264,28 @@
   },
   {
     "number": 543,
+    "title": "HIMNO NACIONAL DEL PERÚ",
+    "chorus": "¡Somos libres! ¡Seámoslo siempre!/nY antes niegue sus luces el sol,/nQue faltemos al voto solemne/nQue la patria al eterno elevó.",
+    "stanzas": [
+      "En sus cima los Andes sostengan/nla bandera o pendón bicolor/nque a los siglos anuncie el esfuerzo/nque ser libres por siempre nos dio./nA su sombra posemos tranquilos/ny al nacer por sus cumbres el sol/nrenovemos el gran juramento/nque rendimos al Dios de Jacob."
+    ],
+    "startsWithChorus": true,
+    "authors": "José de la Torre Ugarte, José Bernardo Alcedo",
+    "tags": "Apéndice"
+  },
+  {
+    "number": 544,
+    "title": "DIOS ESTÁ AQUÍ",
+    "chorus": "// Dios esta aquí,/nTan cierto como el aire que respiro,/nTan cierto como la mañana se levanta el sol,/nTan cierto como que le hablo y me puede oir. //",
+    "stanzas": [
+      "1) Lo puedes sentir,/na tu lado en este mismo instante,/nLo puedes llevar,/nmuy dentro de tu corazón./nTe puede ayudar,/nen ese problema que tienes,/nJesús esta aquí,/nsi tu quieres lo puedes seguir."
+    ],
+    "startsWithChorus": true,
+    "authors": null,
+    "tags": "Coro"
+  },
+  {
+    "number": 545,
     "title": "CORITOS VARIOS",
     "chorus": null,
     "stanzas": [

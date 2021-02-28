@@ -39,10 +39,13 @@ function createWindow() {
   // mainWindow.webContents.openDevTools();
 
   // Hide menu
-  // mainWindow.removeMenu();
+  mainWindow.removeMenu();
 
   // Show window when everything is loaded
-  mainWindow.once('ready-to-show', () => mainWindow.show());
+  mainWindow.once('ready-to-show', () => {
+    mainWindow.maximize();
+    mainWindow.show();
+  });
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {

@@ -13,7 +13,7 @@ const PresenterStyled = styled.section`
   padding-left: 4em;
   text-align: center;
   border: ${({ live }) =>
-    live ? 'solid 4px var(--warning)' : 'solid 1px var(--dark)'};
+    live ? 'solid 4px var(--warning)' : 'solid 1px #fff'};
   backdrop-filter: ${({ blur }) => (blur ? `blur(${blur}px)` : 'none')};
   font-family: ${({ font }) =>
     font ||

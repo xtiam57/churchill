@@ -38,6 +38,10 @@ select {
   font-size: 1.25em;
 }
 
+.fs-xl {
+  font-size: 2em;
+}
+
 .more {
   overflow: hidden;
   text-overflow: ellipsis;

@@ -85,7 +85,7 @@ export const THEMES = {
 };
 
 const SETTINGS_INITIAL_STATE = {
-  interval: 5000,
+  interval: 10000,
   font: '',
   fontscale: 1,
   blur: 0,

@@ -19,7 +19,7 @@ function ScripturesProvider({ children }) {
       const chaptersExpanded = book.content.map((chapter, chapterIndex) => {
         return chapter.map((verse, verseIndex) => {
           return {
-            id: generateGUID(),
+            id: `${book.number}_${chapterIndex + 1}_${verseIndex + 1}`,
             // Verse data
             index: index++,
             cite: `${book.shortTitle} ${chapterIndex + 1}:${verseIndex + 1}`,

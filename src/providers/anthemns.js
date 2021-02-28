@@ -4,7 +4,7 @@ import { Slide } from 'utils';
 
 const AnthemnsContext = React.createContext({});
 
-function splitLines(title, text, array, index) {
+function splitLines(id, title, text, array, index) {
   const lines = text.split('/n');
 
   if (lines.length > 5) {
@@ -14,6 +14,7 @@ function splitLines(title, text, array, index) {
     [...Array(divider).keys()].forEach((i) => {
       array.push(
         Slide.create({
+          id: `${id}_${index}`,
           title: i === 0 ? title : null,
           text: lines.slice(i * size, (1 + i) * size).join('/n'),
           index: index++,
@@ -23,6 +24,7 @@ function splitLines(title, text, array, index) {
   } else {
     array.push(
       Slide.create({
+        id: `${id}_${index}`,
         title,
         text: text,
         index: index++,
@@ -42,7 +44,7 @@ function AnthemnsProvider({ children }) {
         index
       ) => {
         const slides = [];
-        const id = `Himno_${number}`;
+        const id = `${number}`;
         let text = '';
         let slideIndex = 0;
         const isNotAnthemn = tags?.toLowerCase().includes('coro');
@@ -54,6 +56,7 @@ function AnthemnsProvider({ children }) {
 
         slides.push(
           Slide.create({
+            id: `${id}_${slideIndex}`,
             title: `${
               isNotAnthemn
                 ? 'Coro'
@@ -66,15 +69,15 @@ function AnthemnsProvider({ children }) {
         );
 
         if (startsWithChorus) {
-          slideIndex = splitLines('Coro', chorus, slides, slideIndex);
+          slideIndex = splitLines(id, 'Coro', chorus, slides, slideIndex);
         }
 
         stanzas.forEach((stanza, i) => {
-          slideIndex = splitLines(null, stanza, slides, slideIndex);
+          slideIndex = splitLines(id, null, stanza, slides, slideIndex);
           text += `${stanza} /n/n`;
 
           if (chorus) {
-            slideIndex = splitLines('Coro', chorus, slides, slideIndex);
+            slideIndex = splitLines(id, 'Coro', chorus, slides, slideIndex);
 
             if (i === 0) {
               text += `(CORO) /n${chorus} /n/n`;
@@ -84,12 +87,11 @@ function AnthemnsProvider({ children }) {
 
         slides.push(
           Slide.create({
+            id: `${id}_${slideIndex}`,
             text: '&#119070;',
             index: slideIndex,
           })
         );
-
-        console.log('songs changed');
 
         return {
           id,

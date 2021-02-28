@@ -10,97 +10,102 @@ import { Controls } from 'components/controls';
 import { List } from 'components/list';
 
 import { useKeyUp, useIterate } from 'hooks';
-import { Slide } from 'utils';
+import { generateGUID, Slide } from 'utils';
 import { BROADCAST, MOVEMENT } from 'values';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
-const notices = [
-  {
-    id: 0,
-    index: 0,
-    type: 'notice',
-    title: 'Recomendaciones',
-    slides: [
-      Slide.create({
-        index: 0,
-        title: 'Recomendaciones',
-        text:
-          'Evite hablar o hacer ruido durante el culto. Dios quiere hablarle.',
-      }),
-      Slide.create({
-        index: 1,
-        title: 'Dios quiere hablarle',
-        text: 'Evite conversar o hacer ruido durante el culto.',
-      }),
-      Slide.create({
-        index: 2,
-        title: 'No se desconcentre',
-        text: 'Por favor apague su celular y evite usarlos durante el culto.',
-      }),
-      Slide.create({
-        index: 3,
-        title: 'Sea paciente',
-        text: 'No ingerir alimentos durante el culto.',
-      }),
-      Slide.create({
-        index: 4,
-        title: 'Espere',
-        text:
-          'No se levante durante el culto. Vaya al baño antes o después del mismo.',
-      }),
-      Slide.create({
-        index: 5,
-        title: 'Ellos necesitan a Dios también',
-        text:
-          'No deje que sus niños corran o jueguen durante el culto. Llévelos a sus salones.',
-      }),
-      Slide.create({
-        index: 6,
-        title: 'Importante',
-        text:
-          'Cuida tu Iglesia y sus instalaciones, recuerda que es la Casa de Dios.',
-      }),
-    ],
-  },
-  {
-    id: 1,
-    index: 1,
-    type: 'notice',
-    title: 'Prueba de anuncio',
-    slides: [
-      Slide.create({ index: 0, title: '#1', text: 'lamina 1' }),
-      Slide.create({
-        index: 1,
-        title: null,
-        text: '<img src="/corriente.jpg" />',
-      }),
-      Slide.create({ index: 2, title: '#3', text: 'lamina 3' }),
-    ],
-  },
-  {
-    id: 2,
-    index: 2,
-    type: 'notice',
-    title: 'Banquete de San Valentín',
-    slides: [
-      Slide.create({
-        index: 0,
-        title: 'Banquete de San Valentin',
-        text: 'Están todas las parejas invitadas al banquete de San Valentín.',
-        subtext: 'Sábado 14/Feb, 06:00 PM',
-      }),
-      Slide.create({
-        index: 1,
-        title: 'Costo',
-        text: 'S/50, incluye comida y transporte.',
-        subtext: 'Sábado 14/Feb, 06:00 PM',
-      }),
-    ],
-  },
-];
-
 function HomeView() {
+  const notices = [
+    {
+      id: 1,
+      index: 0,
+      type: 'notice',
+      title: 'Recomendaciones',
+      slides: [
+        Slide.create({
+          id: generateGUID(),
+          index: 0,
+          title: '<span class="fs-xl">📖</span>',
+          text:
+            'Cuando <strong>disfrutas</strong> algo no deseas <strong>interrupciones</strong>. La <strong>Palabra de Dios</strong> merece respeto.',
+        }),
+        Slide.create({
+          id: generateGUID(),
+          index: 1,
+          title: '<span class="fs-xl">🤫🙊🤐</span>',
+          text:
+            '<strong>Evite conversar</strong> o hacer ruido durante el culto. Dios quiere hablarle.',
+        }),
+        Slide.create({
+          id: generateGUID(),
+          index: 2,
+          title: '<span class="fs-xl">📱☎📣</span>',
+          text:
+            'Por favor <strong>apague su celular</strong> y evite usarlo durante el culto. Vino a ver a Dios no a su celular.',
+        }),
+        Slide.create({
+          id: generateGUID(),
+          index: 3,
+          title: '<span class="fs-xl">🍫🍔🍿</span>',
+          text:
+            'Espere un poco más y <strong>no ingiera alimentos</strong> durante el culto.',
+        }),
+        Slide.create({
+          id: generateGUID(),
+          index: 4,
+          title: '<span class="fs-xl">🪑🚶🪑</span>',
+          text:
+            'Permanezca en su lugar y <strong>no se levante durante el culto</strong>.',
+        }),
+        Slide.create({
+          id: generateGUID(),
+          index: 5,
+          title: '<span class="fs-xl">👦👶👧</span>',
+          text:
+            'No deje que sus niños corran o jueguen durante el culto. <strong>Llévelos a su clase</strong>. Ellos también necesitan a Dios.',
+        }),
+        Slide.create({
+          id: generateGUID(),
+          index: 6,
+          title: '<span class="fs-xl">🧻🧼🚽</span>',
+          text:
+            'Vaya a los servicios higiénicos <strong>antes o después</strong> del culto.',
+        }),
+        Slide.create({
+          id: generateGUID(),
+          index: 7,
+          title: '<span class="fs-xl">⛪</span>',
+          text:
+            'Recuerde <strong>cuidar la Iglesia y sus instalaciones</strong>. No olvides que es la Casa de Dios.',
+        }),
+      ],
+    },
+    {
+      id: 2,
+      index: 1,
+      type: 'notice',
+      title: '¡Bautizo!',
+      slides: [
+        Slide.create({
+          id: generateGUID(),
+          index: 0,
+          title: '<span class="fs-xl">🎉🥳🎉</span>/n¡Tenemos Bautizo!',
+          text:
+            '¡Hoy un pecador ha recibido a Cristo y <strong>ha decidido bautizarse</strong>!',
+          subtext: 'Mateo 28:19',
+        }),
+        Slide.create({
+          id: generateGUID(),
+          index: 1,
+          title: '<span class="fs-xl">🎉🥳🎉</span>',
+          text: '¡Felicidades por su decisión!',
+          subtext: 'Mateo 28:19',
+        }),
+      ],
+    },
+  ];
+
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const [showLogo, setShowLogo] = useState(true);
   const [notice, setNotice] = useState(notices[0]);
