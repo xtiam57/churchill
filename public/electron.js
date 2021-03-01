@@ -36,14 +36,14 @@ function createWindow() {
   mainWindow.loadURL(startUrl);
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools();
+  mainWindow.webContents.openDevTools();
 
   // Hide menu
-  mainWindow.removeMenu();
+  // mainWindow.removeMenu();
 
   // Show window when everything is loaded
   mainWindow.once('ready-to-show', () => {
-    mainWindow.maximize();
+    // mainWindow.maximize();
     mainWindow.show();
   });
 

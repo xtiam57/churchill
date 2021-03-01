@@ -90,7 +90,7 @@ function HomeView() {
         Slide.create({
           id: generateGUID(),
           index: 0,
-          title: '<span class="fs-xl">🎉🥳🎉</span>/n¡Tenemos Bautizo!',
+          title: '<span class="fs-xl">🥳</span>/n¡Tenemos Bautizo!',
           text:
             '¡Hoy un pecador ha recibido a Cristo y <strong>ha decidido bautizarse</strong>!',
           subtext: 'Mateo 28:19',
@@ -98,7 +98,7 @@ function HomeView() {
         Slide.create({
           id: generateGUID(),
           index: 1,
-          title: '<span class="fs-xl">🎉🥳🎉</span>',
+          title: '<span class="fs-xl">🎉</span>',
           text: '¡Felicidades por su decisión!',
           subtext: 'Mateo 28:19',
         }),
