@@ -16,7 +16,6 @@ Storage.getAll = (order = 'asc') => {
   return values
     .sort((a, b) => (a.timestamp - b.timestamp) * (order === 'asc' ? 1 : -1))
     .map((item) => {
-      delete item['timestamp'];
       return item;
     });
 };
@@ -43,6 +42,37 @@ Storage.get = (key) => {
 
 Storage.remove = (key) => {
   localStorage.removeItem(key);
+};
+
+Storage.clear = () => {
+  localStorage.clear();
+};
+
+Storage.upload = (file, cb = () => {}) => {
+  Storage.clear();
+
+  const reader = new FileReader();
+  reader.addEventListener('load', (ev) => {
+    const result = JSON.parse(reader.result);
+
+    result.forEach(({ key, ...rest }) => {
+      localStorage.setItem(key, JSON.stringify({ ...rest }));
+    });
+
+    cb(result);
+  });
+  reader.readAsText(file);
+};
+
+Storage.download = (fileName = 'data.json') => {
+  const content = Storage.getAll();
+  const a = document.createElement('a');
+  const file = new Blob([JSON.stringify(content, null, 2)], {
+    type: 'text/json',
+  });
+  a.href = URL.createObjectURL(file);
+  a.download = fileName;
+  a.click();
 };
 
 Storage.has = (key) => {

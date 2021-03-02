@@ -39,7 +39,7 @@ export default function AnthemnsView() {
   const { anthemns, current, setCurrent, tags, moveAnthemn } = useAnthemn();
   const [slide, setSlide] = useState(current.firstSlide);
   const [moveSlide] = useIterate(slide, current.slides);
-  const { birthdays, birthdayAnthemn } = useBirthday();
+  const { recent, birthdayAnthemn } = useBirthday();
   const [showLogo, setShowLogo] = useState(true);
   const [search, setSearch] = useState([current]);
   const [bookmarks, setBookmarks] = useState(getBookmarkedItems('anthemn'));
@@ -113,7 +113,7 @@ export default function AnthemnsView() {
     setAnthemnsWithTags(() =>
       tag === tagSelected
         ? []
-        : anthemns.filter((song) => song.tags?.toLowerCase() === tag)
+        : anthemns.filter((song) => song.tags?.split(',').includes(tag))
     );
   };
 
@@ -180,18 +180,18 @@ export default function AnthemnsView() {
           {showLogo ? 'Mostrar Himno' : 'Mostrar Logo'}
         </Button>
 
-        {birthdays.length ? (
+        {recent.length ? (
           <List className="mb-4">
             <List.Item>
               <List.Title
                 className="text-warning"
-                title={birthdays.reduce(
+                title={recent.reduce(
                   (res, { name, day, month }) =>
                     `${res}${name} (${Time.formatBirthday(day, month)})\n`,
                   ''
                 )}
               >
-                Cumpleaños detectados ({birthdays.length})
+                Cumpleaños detectados ({recent.length})
               </List.Title>
             </List.Item>
 
@@ -376,11 +376,9 @@ export default function AnthemnsView() {
           <div className="my-2">
             <div className="d-flex">
               <div className="text-primary fs-lg ">{option.title}</div>
-              {option.tags ? (
-                <small className="tag mb-0 ml-2">
-                  {option.tags.toLowerCase()}
-                </small>
-              ) : null}
+              {option?.tags?.split(',').map((tag) => (
+                <small className="tag mb-0 ml-2">{tag}</small>
+              ))}
             </div>
 
             <Highlighter search={text}>

@@ -44,14 +44,17 @@ function AnthemnsProvider({ children }) {
         index
       ) => {
         const slides = [];
-        const id = `${number}`;
+        const id = `A${number}`;
         let text = '';
         let slideIndex = 0;
         const isNotAnthemn = tags?.toLowerCase().includes('coro');
         const isExtra = tags?.toLowerCase().includes('apéndice');
 
         if (tags) {
-          tagsSet.add(tags?.toLowerCase());
+          tags
+            ?.toLowerCase()
+            .split(',')
+            .forEach((tag) => tagsSet.add(tag));
         }
 
         slides.push(
@@ -101,7 +104,7 @@ function AnthemnsProvider({ children }) {
           type: 'anthemn',
           slides,
           text,
-          tags,
+          tags: tags?.toLowerCase(),
           authors,
           length: slides.length,
           firstSlide: slides[0],

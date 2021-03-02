@@ -1,13 +1,13 @@
 import { useContext, useState, useMemo } from 'react';
 import { AnthemnsContext } from 'providers/anthemns';
 import { BIRTHDAY } from 'values';
-import { Storage, generateGUID, Time } from 'utils';
+import { Storage, generateGUID, Time, Slide } from 'utils';
 
-function createStorageKey(index) {
-  return `${index}_birthday`;
+function createKey({ id }) {
+  return `${id}_birthday`;
 }
 
-function getBirthdays(now) {
+function getRecentBDays(now) {
   return Storage.getAll()
     .filter(({ key }) => key.includes('birthday'))
     .map((item) => item.value)
@@ -31,30 +31,30 @@ function getBirthdays(now) {
     );
 }
 
-function getSlide(birthdays) {
+function createSlide(birthdays) {
   return birthdays.length
-    ? {
-        text: `<strong class="text-primary">¡Feliz Cumpleaños!</strong><br/>
-          ${birthdays
-            .map(({ name, day, month }) => {
-              return `${name} <i>(${Time.formatBirthday(day, month)})</i>`;
-            })
-            .join('<br/>')}`,
+    ? Slide.create({
+        title: '¡Feliz Cumpleaños!',
+        text: birthdays
+          .map(({ name, day, month }) => {
+            return `${name} <i>(${Time.formatBirthday(day, month)})</i>`;
+          })
+          .join('<br/>'),
         subtext: `Deseamos que Dios le${
           birthdays.length > 1 ? 's' : ''
         } bendiga.`,
         type: 'birthday',
-      }
-    : {
+      })
+    : Slide.create({
         text: `No hay cumpleaños que mostrar.`,
         type: 'birthday',
-      };
+      });
 }
 
 export function useBirthday() {
   const [now] = useState(new Date());
-  const birthdays = getBirthdays(now);
-  const [slide, setSlide] = useState(getSlide(birthdays));
+  const recent = getRecentBDays(now);
+  const [current, setCurrent] = useState(createSlide(recent));
 
   const { anthemns } = useContext(AnthemnsContext);
   const birthdayAnthemn = useMemo(() => anthemns[BIRTHDAY.ANTHEMN_INDEX], [
@@ -62,26 +62,33 @@ export function useBirthday() {
   ]);
 
   const add = (data) => {
-    data.index = generateGUID(true);
+    data.id = generateGUID();
     data.type = 'birthday';
     data.birthday = Time.formatBirthday(data.day, data.month);
 
-    Storage.set(createStorageKey(data.index), data);
+    Storage.set(createKey(data), data);
 
-    const birthdays = getBirthdays(now);
-    const slide = getSlide(birthdays);
+    const birthdays = getRecentBDays(now);
+    const slide = createSlide(birthdays);
 
-    setSlide(slide);
+    setCurrent(slide);
   };
 
-  const remove = (index) => {
-    Storage.remove(createStorageKey(index));
+  const remove = (item) => {
+    Storage.remove(createKey(item));
 
-    const birthdays = getBirthdays(now);
-    const slide = getSlide(birthdays);
+    const birthdays = getRecentBDays(now);
+    const slide = createSlide(birthdays);
 
-    setSlide(slide);
+    setCurrent(slide);
   };
 
-  return { birthdays, slide, setSlide, add, remove, birthdayAnthemn };
+  return {
+    recent,
+    current,
+    setCurrent,
+    add,
+    remove,
+    birthdayAnthemn,
+  };
 }

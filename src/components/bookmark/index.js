@@ -5,8 +5,7 @@ import { BookmarkStyled } from './style';
 import { Storage, getBookmarkedItems } from 'utils';
 import { useKeyUp } from 'hooks';
 
-export const createStorageKey = ({ index, type }) =>
-  `${type}_${index}_bookmarked`;
+export const createKey = ({ id, type }) => `${type}_${id}_bookmarked`;
 
 export function Bookmark({
   element,
@@ -15,22 +14,22 @@ export function Bookmark({
   ...rest
 }) {
   const [bookmarked, setBookmarked] = useState(false);
-  const inStorage = Storage.has(createStorageKey(element));
+  const inStorage = Storage.has(createKey(element));
 
   useEffect(() => {
-    setBookmarked(Storage.has(createStorageKey(element)));
+    setBookmarked(Storage.has(createKey(element)));
   }, [element, inStorage]);
 
   const add = () => {
-    if (!Storage.has(createStorageKey(element))) {
-      Storage.set(createStorageKey(element), element);
+    if (!Storage.has(createKey(element))) {
+      Storage.set(createKey(element), element);
       setBookmarked(true);
       onChange(getBookmarkedItems(element.type));
     }
   };
 
   const remove = () => {
-    Storage.remove(createStorageKey(element));
+    Storage.remove(createKey(element));
     setBookmarked(false);
     onChange(getBookmarkedItems(element.type));
   };

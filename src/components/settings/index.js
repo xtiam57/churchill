@@ -1,15 +1,16 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import createPersistedState from 'use-persisted-state';
-import { Button, Form, Col } from 'react-bootstrap';
+import { Button, Form, Col, InputGroup } from 'react-bootstrap';
 import { MdClose } from 'react-icons/md';
-import { BsHeartFill } from 'react-icons/bs';
+import { BsHeartFill, BsDownload, BsUpload } from 'react-icons/bs';
 
 import { Sidebar } from 'components/sidebar';
 import { Logo } from 'components/logo';
 import { Preview } from 'components/preview';
 
-import { useSettingsSidebar, useClickOutside } from 'hooks';
+import { useSettingsSidebar, useClickOutside, usePresenter } from 'hooks';
 import { BROADCAST, THEMES, SETTINGS_OPTIONS } from 'values';
+import { Storage } from 'utils';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
@@ -21,6 +22,8 @@ export function Settings() {
     closeSettings,
   } = useSettingsSidebar();
   const [settings, setSettings] = useSettings(BROADCAST.INITIAL_SETTINGS);
+  const [file, setFile] = useState(null);
+  const { reload } = usePresenter();
 
   const onChangeValue = ({ target }) => {
     const { name, value } = target;
@@ -51,6 +54,16 @@ export function Settings() {
     }));
   };
 
+  const onExport = () => {
+    Storage.download();
+  };
+
+  const onImport = () => {
+    Storage.upload(file, () => {
+      reload();
+    });
+  };
+
   // useClickOutside(ref, () => {
   //   if (showingSettings) {
   //     closeSettings();
@@ -64,7 +77,6 @@ export function Settings() {
       className={`bg-light ${showingSettings ? '' : 'closed'}`}
     >
       <h1 className="display-4">Opciones</h1>
-
       <Button
         className="p-0 text-dark"
         variant="link"
@@ -73,7 +85,6 @@ export function Settings() {
       >
         <MdClose />
       </Button>
-
       <Form.Row>
         <Form.Group as={Col} className="mb-1">
           <Form.Label className=" small mb-1">Fuente</Form.Label>
@@ -92,7 +103,6 @@ export function Settings() {
           </Form.Control>
         </Form.Group>
       </Form.Row>
-
       <Form.Row>
         <Form.Group as={Col} className="mb-1">
           <Form.Label className=" small mb-1">
@@ -111,7 +121,6 @@ export function Settings() {
           />
         </Form.Group>
       </Form.Row>
-
       <Form.Row>
         <Form.Group as={Col} className="mb-1">
           <Form.Label className=" small mb-1">Tema</Form.Label>
@@ -220,7 +229,6 @@ export function Settings() {
           </Form.Group>
         </Form.Row>
       ) : null}
-
       <Form.Row>
         <Form.Group as={Col} className="mb-1">
           <Form.Label className=" small mb-1">Logo </Form.Label>
@@ -254,11 +262,9 @@ export function Settings() {
           </Form.Control>
         </Form.Group>
       </Form.Row>
-
       <Preview className="my-2" {...settings}>
         <Logo width="80%" height="80%" {...settings} />
       </Preview>
-
       <Form.Row>
         <Form.Group as={Col} className="mb-1">
           <Form.Label className=" small mb-1">
@@ -280,14 +286,55 @@ export function Settings() {
         </Form.Group>
       </Form.Row>
 
-      <Button
+      <Form.Row className="mt-2">
+        <Form.Group as={Col} className="mb-1">
+          <Form.Label className=" small mb-1">
+            Exportar datos del usuario
+          </Form.Label>
+          <Button variant="outline-primary" block onClick={onExport}>
+            <BsDownload /> Exportar
+          </Button>
+        </Form.Group>
+      </Form.Row>
+
+      <Form.Row className="mt-2">
+        <Form.Group as={Col} className="mb-1">
+          <Form.Label className=" small mb-1">
+            Importar datos del usuario
+          </Form.Label>
+          <Form.File
+            id="import"
+            label={file ? file.name : 'Selecciona un archivo...'}
+            accept=".json"
+            custom
+            onChange={({ target }) => setFile(target.files[0])}
+          />
+          <InputGroup.Prepend></InputGroup.Prepend>
+        </Form.Group>
+      </Form.Row>
+
+      {file ? (
+        <Form.Row>
+          <Form.Group as={Col} className="mb-1">
+            <Button
+              variant="outline-primary"
+              block
+              onClick={onImport}
+              disabled={!file}
+            >
+              <BsUpload /> Importar
+            </Button>
+          </Form.Group>
+        </Form.Row>
+      ) : null}
+
+      {/* <Button
         block
         className="mt-3"
         onClick={() => setSettings(BROADCAST.INITIAL_SETTINGS)}
       >
         Reiniciar
-      </Button>
-
+      </Button> */}
       <small className="d-block text-center text-muted mt-4">
         Hecho con <BsHeartFill className="text-danger" /> por Christiam Mena
         (@xtiam57).

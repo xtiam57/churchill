@@ -30,12 +30,12 @@ function BirthdaysView() {
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const [showModal, setShowModal] = useState(false);
   const [showLogo, setShowLogo] = useState(true);
-  const { birthdays, add, remove, slide } = useBirthday();
+  const { current, recent, add, remove } = useBirthday();
   const [birthdayItems, setBirthdayItems] = useState(getBirthdayItems());
 
   useEffect(() => {
-    setMessage(showLogo ? null : slide);
-  }, [slide, showLogo, setMessage]);
+    setMessage(showLogo ? null : current);
+  }, [current, showLogo, setMessage]);
 
   useEffect(() => {
     return () => setMessage(null);
@@ -47,8 +47,8 @@ function BirthdaysView() {
     setBirthdayItems(getBirthdayItems());
   };
 
-  const onDelete = (index) => {
-    remove(index);
+  const onDelete = (item) => {
+    remove(item);
     setBirthdayItems(getBirthdayItems());
   };
 
@@ -68,13 +68,13 @@ function BirthdaysView() {
         </Button>
 
         <List className="mb-4">
-          {birthdays.length ? (
+          {recent.length ? (
             <List.Item>
               <List.Title>recientes/próximos</List.Title>
             </List.Item>
           ) : null}
 
-          {birthdays.map(({ name, day, month }, index) => (
+          {recent.map(({ name, day, month }, index) => (
             <List.Item key={index}>
               <List.Text className="text-light">{name}</List.Text>
               <List.Text>{Time.formatBirthday(day, month)}</List.Text>
@@ -89,13 +89,13 @@ function BirthdaysView() {
             </List.Item>
           ) : null}
 
-          {birthdayItems.map(({ index, name, day, month }) => (
-            <List.Item key={index}>
+          {birthdayItems.map((item) => (
+            <List.Item key={item.id}>
               <List.Text>
-                <span className="text-light">{name}</span> (
-                {Time.formatBirthday(day, month)})
+                <span className="text-light">{item.name}</span> (
+                {Time.formatBirthday(item.day, item.month)})
               </List.Text>
-              <List.Action onClick={() => onDelete(index)}>
+              <List.Action onClick={() => onDelete(item)}>
                 <RiCloseFill />
               </List.Action>
             </List.Item>
@@ -115,8 +115,8 @@ function BirthdaysView() {
           )}
         </Alert>
 
-        <Presenter live={!showLogo} subtext={slide.subtext} {...settings}>
-          {slide.text}
+        <Presenter live={!showLogo} subtext={current.subtext} {...settings}>
+          {current.text}
         </Presenter>
 
         <Controls centered>

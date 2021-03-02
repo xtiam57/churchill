@@ -24,57 +24,41 @@ function HomeView() {
       title: 'Recomendaciones',
       slides: [
         Slide.create({
-          id: generateGUID(),
-          index: 0,
           title: '<span class="fs-xl">📖</span>',
           text:
             'Cuando <strong>disfrutas</strong> algo no deseas <strong>interrupciones</strong>. La <strong>Palabra de Dios</strong> merece respeto.',
         }),
         Slide.create({
-          id: generateGUID(),
-          index: 1,
           title: '<span class="fs-xl">🤫🙊🤐</span>',
           text:
             '<strong>Evite conversar</strong> o hacer ruido durante el culto. Dios quiere hablarle.',
         }),
         Slide.create({
-          id: generateGUID(),
-          index: 2,
           title: '<span class="fs-xl">📱☎📣</span>',
           text:
             'Por favor <strong>apague su celular</strong> y evite usarlo durante el culto. Vino a ver a Dios no a su celular.',
         }),
         Slide.create({
-          id: generateGUID(),
-          index: 3,
           title: '<span class="fs-xl">🍫🍔🍿</span>',
           text:
             'Espere un poco más y <strong>no ingiera alimentos</strong> durante el culto.',
         }),
         Slide.create({
-          id: generateGUID(),
-          index: 4,
           title: '<span class="fs-xl">🪑🚶🪑</span>',
           text:
             'Permanezca en su lugar y <strong>no se levante durante el culto</strong>.',
         }),
         Slide.create({
-          id: generateGUID(),
-          index: 5,
           title: '<span class="fs-xl">👦👶👧</span>',
           text:
             'No deje que sus niños corran o jueguen durante el culto. <strong>Llévelos a su clase</strong>. Ellos también necesitan a Dios.',
         }),
         Slide.create({
-          id: generateGUID(),
-          index: 6,
           title: '<span class="fs-xl">🧻🧼🚽</span>',
           text:
             'Vaya a los servicios higiénicos <strong>antes o después</strong> del culto.',
         }),
         Slide.create({
-          id: generateGUID(),
-          index: 7,
           title: '<span class="fs-xl">⛪</span>',
           text:
             'Recuerde <strong>cuidar la Iglesia y sus instalaciones</strong>. No olvides que es la Casa de Dios.',
@@ -88,16 +72,12 @@ function HomeView() {
       title: '¡Bautizo!',
       slides: [
         Slide.create({
-          id: generateGUID(),
-          index: 0,
           title: '<span class="fs-xl">🥳</span>/n¡Tenemos Bautizo!',
           text:
             '¡Hoy un pecador ha recibido a Cristo y <strong>ha decidido bautizarse</strong>!',
           subtext: 'Mateo 28:19',
         }),
         Slide.create({
-          id: generateGUID(),
-          index: 1,
           title: '<span class="fs-xl">🎉</span>',
           text: '¡Felicidades por su decisión!',
           subtext: 'Mateo 28:19',
@@ -110,7 +90,7 @@ function HomeView() {
   const [showLogo, setShowLogo] = useState(true);
   const [notice, setNotice] = useState(notices[0]);
   const [slide, setSlide] = useState(notice.slides[0]);
-  const [autoplay, setAutoplay] = useState(false);
+  const [autoplay, setAutoplay] = useState(true);
   const [loop, setLoop] = useState(true);
   const [moveSlide] = useIterate(slide, notice.slides);
   const [moveNotice] = useIterate(notice, notices);

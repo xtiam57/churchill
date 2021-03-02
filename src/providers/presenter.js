@@ -7,6 +7,24 @@ const PresenterProvider = ({ children }) => {
   const [presenter, setPresenter] = useState(null);
   const [presenting, setPresenting] = useState(false);
 
+  const close = useCallback(() => {
+    if (presenter) {
+      presenter.close();
+      setPresenting(false);
+      setPresenter(null);
+    }
+  }, [presenter]);
+
+  const reload = useCallback(() => {
+    const electron = window.require('electron');
+    const remote = electron.remote;
+    const { BrowserWindow } = remote;
+    const main = BrowserWindow.getFocusedWindow();
+
+    close();
+    main.reload();
+  }, [close]);
+
   const toggle = useCallback(() => {
     const electron = window.require('electron');
     const remote = electron.remote;
@@ -51,19 +69,12 @@ const PresenterProvider = ({ children }) => {
     });
   }, [presenter]);
 
-  const close = useCallback(() => {
-    if (presenter) {
-      presenter.close();
-      setPresenting(false);
-      setPresenter(null);
-    }
-  }, [presenter]);
-
   return (
     <PresenterContext.Provider
       value={{
         toggle,
         close,
+        reload,
         presenter,
         presenting,
       }}

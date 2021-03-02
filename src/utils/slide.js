@@ -4,7 +4,7 @@ const Slide = {};
 
 Slide.create = ({
   id = generateGUID(),
-  index = 0,
+  index = null,
   title = '',
   text = '',
   subtext = null,

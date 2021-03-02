@@ -5,6 +5,10 @@ export function useIterate(current, list) {
   const lastIndex = len - 1;
 
   const next = (loop = false) => {
+    if (!current.hasOwnProperty('index') || current.index === null) {
+      current['index'] = list.findIndex(({ id }) => id === current.id);
+    }
+
     let index = Math.min(current.index + 1, lastIndex);
 
     if (loop && current.index + 1 >= len) {
@@ -12,10 +16,19 @@ export function useIterate(current, list) {
     }
 
     const value = list[index];
+
+    if (!value.hasOwnProperty('index') || value.index === null) {
+      value['index'] = index;
+    }
+
     return value;
   };
 
   const previous = (loop = false) => {
+    if (!current.hasOwnProperty('index') || current.index === null) {
+      current['index'] = list.findIndex(({ id }) => id === current.id);
+    }
+
     let index = Math.max(current.index - 1, 0);
 
     if (loop && current.index - 1 < 0) {
@@ -23,6 +36,11 @@ export function useIterate(current, list) {
     }
 
     const value = list[index];
+
+    if (!value.hasOwnProperty('index') || value.index === null) {
+      value['index'] = index;
+    }
+
     return value;
   };
 

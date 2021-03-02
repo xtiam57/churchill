@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Bookmark, createStorageKey } from 'components/bookmark';
+import { Bookmark, createKey } from 'components/bookmark';
 import { List } from 'components/list';
 import { Storage, getBookmarkedItems } from 'utils';
 import { MAX_BOOKMARKS } from 'values';
@@ -14,22 +14,20 @@ export function BookmarkList({
 }) {
   const removeBookmarks = () => {
     items.forEach((item) => {
-      Storage.remove(createStorageKey(item));
+      Storage.remove(createKey(item));
     });
     onChange(getBookmarkedItems(type));
   };
 
-  return (
+  return items.length ? (
     <List {...rest}>
       <List.Item>
-        {items.length ? (
-          <>
-            <List.Title>Marcadores ({items.length})</List.Title>
-            <List.Action className="text-right" onClick={removeBookmarks}>
-              (Borrar)
-            </List.Action>
-          </>
-        ) : null}
+        <>
+          <List.Title>Marcadores ({items.length})</List.Title>
+          <List.Action className="text-right" onClick={removeBookmarks}>
+            (Borrar)
+          </List.Action>
+        </>
       </List.Item>
 
       {items.map((item, index) => {
@@ -59,5 +57,5 @@ export function BookmarkList({
         </List.Item>
       ) : null}
     </List>
-  );
+  ) : null;
 }
