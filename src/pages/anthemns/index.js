@@ -15,11 +15,13 @@ import { BookmarkList } from 'components/bookmarkList';
 import { Finder } from 'components/finder';
 
 import { useAnthemn, useIterate, useBirthday, useKeyUp } from 'hooks';
-import { Time, getBookmarkedItems } from 'utils';
+import { Time, getBookmarkedItems, Storage } from 'utils';
 
 import { BROADCAST, MOVEMENT } from 'values';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
+
+export const createKey = ({ id, type }) => `${type}_${id}_config`;
 
 export default function AnthemnsView() {
   const folder = useMemo(() => {
@@ -61,8 +63,15 @@ export default function AnthemnsView() {
   useEffect(() => {
     stop();
     setUrl(folder.getPath(current.number));
-    setPlaybackRate(1);
-  }, [current, stop, folder]);
+
+    // Bug: delay to set config of the song
+    setTimeout(() => {
+      // Trying to get settings from storage
+      const config = Storage.get(createKey(current));
+      setPlaybackRate(config ? config.playbackRate : 1);
+      setVolume(config ? config.volume : 1);
+    });
+  }, [current, folder, stop]);
 
   useEffect(() => {
     return () => stop();
@@ -82,6 +91,7 @@ export default function AnthemnsView() {
     const slide = moveSlide(MOVEMENT.PREV);
     setSlide(slide);
   };
+
   const onNextSlide = () => {
     const slide = moveSlide(MOVEMENT.NEXT);
     setSlide(slide);
@@ -115,6 +125,14 @@ export default function AnthemnsView() {
         ? []
         : anthemns.filter((song) => song.tags?.split(',').includes(tag))
     );
+  };
+
+  const save = (target) => {
+    Storage.set(createKey(current), {
+      volume,
+      playbackRate,
+      [target.name]: +target.value,
+    });
   };
 
   useKeyUp('ArrowUp', onNextAnthemn);
@@ -276,6 +294,7 @@ export default function AnthemnsView() {
           wrapper={current}
           value={slide}
           onChange={setSlide}
+          zoom={0.7}
         >
           Usa las teclas <strong>&larr;</strong> y <strong>&rarr;</strong> para
           cambiar de página, y <strong>&uarr;</strong> y <strong>&darr;</strong>{' '}
@@ -288,12 +307,18 @@ export default function AnthemnsView() {
               <ImIcons.ImVolumeMute />
               <Form.Control
                 type="range"
+                name="volume"
                 value={volume}
                 min="0"
                 max="1"
                 step="0.05"
                 className="mx-2"
-                onChange={(e) => setVolume(+e.target.value)}
+                onChange={({ target }) => {
+                  setVolume(() => {
+                    save(target);
+                    return +target.value;
+                  });
+                }}
               />
               <ImIcons.ImVolumeHigh />
             </div>
@@ -340,21 +365,25 @@ export default function AnthemnsView() {
               <div className="d-flex">
                 <Form.Control
                   type="range"
+                  name="playbackRate"
                   value={playbackRate}
                   min="0.5"
                   max="2"
-                  step="0.1"
+                  step="0.05"
                   className="mx-2"
                   style={{ width: '80px' }}
-                  onChange={(e) => {
-                    setPlaybackRate(+e.target.value);
+                  onChange={({ target }) => {
+                    setPlaybackRate(() => {
+                      save(target);
+                      return +target.value;
+                    });
                     if (isPlaying) {
                       play();
                     }
                   }}
                 />
                 <small className="navbar-text">
-                  x{Number.parseFloat(playbackRate).toFixed(1)}
+                  x{Number.parseFloat(playbackRate).toFixed(2)}
                 </small>
               </div>
             </>

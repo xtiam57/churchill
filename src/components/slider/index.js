@@ -22,7 +22,7 @@ export function Slider({
   live = false,
   autoplay = false,
   loop = false,
-  ...rest
+  zoom = 1,
 }) {
   const [, setMessage] = useBroadcast(BROADCAST.INITIAL_CHANNEL);
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
@@ -84,6 +84,7 @@ export function Slider({
         live={live}
         id={slide?.id || slide?.index || generateGUID()}
         subtext={slide?.subtext}
+        zoom={zoom}
         {...settings}
       >
         {slide?.text}

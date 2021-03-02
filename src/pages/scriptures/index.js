@@ -166,6 +166,7 @@ function ScripturesView() {
           live={!showLogo}
           id={current.id}
           subtext={current.cite}
+          zoom={0.7}
           {...settings}
         >
           {current.text}

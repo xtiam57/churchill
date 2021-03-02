@@ -20,8 +20,8 @@ const PresenterStyled = styled.section`
     '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"'};
 
   p {
-    font-size: ${({ size = 1.0, fontscale = 1.0 }) => {
-      return `calc(${1.4 * size * fontscale}em + 3vh)`;
+    font-size: ${({ size = 1.0, fontscale = 1.0, zoom = 1 }) => {
+      return `calc(${1.4 * size * zoom * fontscale}em + 3vh)`;
     }};
     margin: 0 0 0.5em;
     color: ${({ textcolor }) => textcolor || '#000'};
@@ -33,7 +33,10 @@ const PresenterStyled = styled.section`
 
   cite {
     color: ${({ subtextcolor }) => subtextcolor || '#007bff'};
-    font-size: calc(1.3em + 1vh);
+    font-size: calc(1.3em + 1.1vh);
+    font-size: ${({ zoom = 1 }) => {
+      return `calc(${1.3 * zoom}em + 1.1vh)`;
+    }};
   }
 `;
 

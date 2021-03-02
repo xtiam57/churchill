@@ -121,6 +121,23 @@ export function Settings() {
           />
         </Form.Group>
       </Form.Row>
+      {/* <Form.Row>
+        <Form.Group as={Col} className="mb-1">
+          <Form.Label className=" small mb-1">
+            Zoom ({Number.parseFloat(settings?.zoom * 100).toFixed(0)}
+            %)
+          </Form.Label>
+          <Form.Control
+            type="range"
+            min="0.05"
+            max="2"
+            step="0.05"
+            name="zoom"
+            value={settings?.zoom}
+            onChange={onChangeNumericValue}
+          />
+        </Form.Group>
+      </Form.Row> */}
       <Form.Row>
         <Form.Group as={Col} className="mb-1">
           <Form.Label className=" small mb-1">Tema</Form.Label>

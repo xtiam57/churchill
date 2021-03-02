@@ -51,6 +51,7 @@ export function Presenter({
   children,
   subtext = null,
   id = generateGUID(),
+  zoom = 1,
   ...rest
 }) {
   const size = getScale(
@@ -60,7 +61,7 @@ export function Presenter({
   );
 
   return (
-    <PresenterStyled size={size} {...rest}>
+    <PresenterStyled size={size} zoom={zoom} {...rest}>
       <AnimatePresence exitBeforeEnter>
         <motion.p
           key={id}

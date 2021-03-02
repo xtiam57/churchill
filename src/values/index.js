@@ -90,6 +90,7 @@ const SETTINGS_INITIAL_STATE = {
   interval: 10000,
   font: '',
   fontscale: 1,
+  zoom: 0.8,
   blur: 0,
   logo: 'default',
   image: '',
