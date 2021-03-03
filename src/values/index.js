@@ -95,6 +95,7 @@ const SETTINGS_INITIAL_STATE = {
   logo: 'default',
   image: '',
   theme: 'default',
+  preview: true,
   ...THEMES['default'],
 };
 

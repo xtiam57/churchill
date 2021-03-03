@@ -362,8 +362,9 @@ export default function AnthemnsView() {
           </div>
           {isMP3Loaded ? (
             <>
-              <div className="d-flex">
+              <div className="d-flex align-items-center">
                 <Form.Control
+                  custom
                   type="range"
                   name="playbackRate"
                   value={playbackRate}

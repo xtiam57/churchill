@@ -99,6 +99,7 @@ export function Settings() {
           </Form.Control>
         </Form.Group>
       </Form.Row>
+
       <Form.Row>
         <Form.Group as={Col} className="mb-1">
           <Form.Label className=" small mb-1">
@@ -107,6 +108,7 @@ export function Settings() {
             %)
           </Form.Label>
           <Form.Control
+            custom
             type="range"
             min="0.05"
             max="2"
@@ -231,6 +233,7 @@ export function Settings() {
               {Number.parseFloat(settings?.blur).toFixed(1)})
             </Form.Label>
             <Form.Control
+              custom
               type="range"
               min="0"
               max="20"
@@ -296,6 +299,24 @@ export function Settings() {
               </option>
             ))}
           </Form.Control>
+        </Form.Group>
+      </Form.Row>
+
+      <Form.Row className="mt-3">
+        <Form.Group as={Col} className="mb-1">
+          <Form.Check
+            type="switch"
+            id="preview"
+            label="Mostrar miniatura de la siguiente página."
+            name="preview"
+            checked={settings?.preview}
+            onChange={() => {
+              setSettings((state) => ({
+                ...state,
+                preview: !state.preview,
+              }));
+            }}
+          />
         </Form.Group>
       </Form.Row>
 

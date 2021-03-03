@@ -24,7 +24,6 @@ export function Slider({
   live = false,
   autoplay = false,
   loop = false,
-  preview = true,
 }) {
   const [, setMessage] = useBroadcast(BROADCAST.INITIAL_CHANNEL);
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
@@ -92,7 +91,7 @@ export function Slider({
         {slide?.text}
       </Presenter>
 
-      {preview ? (
+      {settings?.preview ? (
         <SlidePreviewStyled>
           <Presenter
             id={next?.id || next?.index || generateGUID()}
