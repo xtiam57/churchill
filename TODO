@@ -19,7 +19,7 @@ Sección Himnos
 * (done) Configuración: color de texto, margenes, color de fondo, color de coro
 * (done) Etiquetas
 * (done) Busqueda de palabras
-* Guardar configuracion de audio para cada himno
+* (done) Guardar configuracion de audio para cada himno
 
 Avisos
 ------
@@ -37,6 +37,7 @@ Resto
 * (done) Avisos
 * (done) Contar caracteres para determinar un mejor tamaño de texto
 * (done) Exportar e importar storage
+* (done) Previsualización de la siguiente lamina
 * Temporizador de predica
 * Semáforo de predica
 * Cronometro

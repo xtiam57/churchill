@@ -5,6 +5,7 @@ import { AnthemnsProvider } from 'providers/anthemns';
 import { AppProvider } from 'providers/app';
 import { PresenterProvider } from 'providers/presenter';
 import { ScripturesProvider } from 'providers/scriptures';
+import { BirthdayProvider } from 'providers/birthdays';
 
 import { Navbar } from 'components/navbar';
 import { Settings } from 'components/settings';
@@ -29,31 +30,33 @@ function App() {
         <PresenterProvider>
           <ScripturesProvider>
             <AnthemnsProvider>
-              <Navbar />
+              <BirthdayProvider>
+                <Navbar />
 
-              <Switch>
-                <Route path={ROUTES.SCRIPTURES_PAGE}>
-                  <ScripturesPage />
-                </Route>
+                <Switch>
+                  <Route path={ROUTES.SCRIPTURES_PAGE}>
+                    <ScripturesPage />
+                  </Route>
 
-                <Route path={ROUTES.ANTHEMNS_PAGE}>
-                  <AnthemnsPage />
-                </Route>
+                  <Route path={ROUTES.ANTHEMNS_PAGE}>
+                    <AnthemnsPage />
+                  </Route>
 
-                <Route path={ROUTES.BIRTHDAYS_PAGE}>
-                  <BirthdaysPage />
-                </Route>
+                  <Route path={ROUTES.BIRTHDAYS_PAGE}>
+                    <BirthdaysPage />
+                  </Route>
 
-                <Route path={ROUTES.CAST_PAGE}>
-                  <CastPage />
-                </Route>
+                  <Route path={ROUTES.CAST_PAGE}>
+                    <CastPage />
+                  </Route>
 
-                <Route path="/">
-                  <HomePage />
-                </Route>
-              </Switch>
+                  <Route path="/">
+                    <HomePage />
+                  </Route>
+                </Switch>
 
-              <Settings />
+                <Settings />
+              </BirthdayProvider>
             </AnthemnsProvider>
           </ScripturesProvider>
         </PresenterProvider>

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const PreviewStyled = styled.div`
+export const LogoPreviewStyled = styled.div`
   border-radius: 0.2rem;
   display: flex;
   padding: 1em;

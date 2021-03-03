@@ -1,1 +1,1 @@
-export { PreviewStyled as Preview } from './style';
+export { LogoPreviewStyled as LogoPreview } from './style';

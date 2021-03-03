@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { zIndex } from 'styled-system';
 
 export const SidebarStyled = styled.aside`
   background-color: #20232a;
@@ -8,11 +7,12 @@ export const SidebarStyled = styled.aside`
   max-width: 300px;
   padding: 25px;
   overflow-y: auto;
-  box-shadow: -3px 0 10px 0 rgba(0, 0, 0, 0.2);
   z-index: 3;
 
   ${({ closable }) => {
-    return closable ? 'position: fixed; left: 0;bottom: 0;' : '';
+    return closable
+      ? 'position: fixed; left: 0;bottom: 0;box-shadow: -3px 0 10px 0 rgba(0, 0, 0, 0.2);'
+      : '';
   }}
 
   transform: translate3d(0px, 0px, 0px);

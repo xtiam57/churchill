@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import * as BsIcons from 'react-icons/bs';
@@ -43,6 +43,7 @@ export function Navbar() {
                 <BsIcons.BsHouseFill />
               </NavLink>
             </li>
+
             <li className="nav-item">
               <NavLink
                 to={ROUTES.SCRIPTURES_PAGE}
@@ -70,6 +71,15 @@ export function Navbar() {
                 <BsIcons.BsGift /> Cumpleaños
               </NavLink>
             </li>
+            <li className="nav-item">
+              <Button
+                onClick={toggleSettings}
+                className={presenting ? 'text-dark' : 'text-light'}
+                variant="link"
+              >
+                <BsIcons.BsFillGearFill />
+              </Button>
+            </li>
           </ul>
 
           {/* <span className="navbar-text d-block mr-3">
@@ -77,19 +87,10 @@ export function Navbar() {
           </span> */}
 
           <Button
-            className="mr-3"
             onClick={toggle}
             variant={presenting ? 'outline-dark' : 'outline-light'}
           >
             {presenting ? <RiStopFill /> : <RiSlideshow2Fill />}
-          </Button>
-
-          <Button
-            onClick={toggleSettings}
-            className={presenting ? 'text-dark px-0' : 'text-light px-0'}
-            variant={presenting ? 'link' : 'link'}
-          >
-            <BsIcons.BsFillGearFill />
           </Button>
         </div>
       </nav>

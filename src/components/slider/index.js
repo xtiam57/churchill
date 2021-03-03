@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import createPersistedState from 'use-persisted-state';
 
+import { SlidePreviewStyled } from './style';
+
 import { Presenter } from 'components/presenter';
 import { useIterate, useKeyUp } from 'hooks';
 import { BROADCAST, MOVEMENT } from 'values';
@@ -22,7 +24,7 @@ export function Slider({
   live = false,
   autoplay = false,
   loop = false,
-  zoom = 1,
+  preview = true,
 }) {
   const [, setMessage] = useBroadcast(BROADCAST.INITIAL_CHANNEL);
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
@@ -30,6 +32,7 @@ export function Slider({
   const [slides, setSlides] = useState(wrapper?.slides || []);
   const [slide, setSlide] = useState(slides[0]);
   const [moveSlide] = useIterate(slide, slides);
+  const next = moveSlide(MOVEMENT.NEXT, loop);
 
   const onNextSlide = () => {
     const slideToGo = moveSlide(MOVEMENT.NEXT, loop);
@@ -84,13 +87,23 @@ export function Slider({
         live={live}
         id={slide?.id || slide?.index || generateGUID()}
         subtext={slide?.subtext}
-        zoom={zoom}
         {...settings}
       >
         {slide?.text}
       </Presenter>
 
-      <div className="text-muted bg-white py-2 px-3 d-flex justify-content-between">
+      {preview ? (
+        <SlidePreviewStyled>
+          <Presenter
+            id={next?.id || next?.index || generateGUID()}
+            subtext={next?.subtext}
+          >
+            {next?.text}
+          </Presenter>
+        </SlidePreviewStyled>
+      ) : null}
+
+      <div className="text-light bg-dark py-2 px-3 d-flex justify-content-between">
         <small>{children}</small>
         <small>
           {slide?.index + 1}/{slides?.length}

@@ -6,9 +6,9 @@ import { BsHeartFill, BsDownload, BsUpload } from 'react-icons/bs';
 
 import { Sidebar } from 'components/sidebar';
 import { Logo } from 'components/logo';
-import { Preview } from 'components/preview';
+import { LogoPreview } from 'components/preview';
 
-import { useSettingsSidebar, useClickOutside, usePresenter } from 'hooks';
+import { useSettingsSidebar, usePresenter } from 'hooks';
 import { BROADCAST, THEMES, SETTINGS_OPTIONS } from 'values';
 import { Storage } from 'utils';
 
@@ -16,11 +16,7 @@ const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
 export function Settings() {
   const ref = useRef(null);
-  const {
-    toggleSettings,
-    showingSettings,
-    closeSettings,
-  } = useSettingsSidebar();
+  const { toggleSettings, showingSettings } = useSettingsSidebar();
   const [settings, setSettings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const [file, setFile] = useState(null);
   const { reload } = usePresenter();
@@ -279,9 +275,9 @@ export function Settings() {
           </Form.Control>
         </Form.Group>
       </Form.Row>
-      <Preview className="my-2" {...settings}>
+      <LogoPreview className="my-2" {...settings}>
         <Logo width="80%" height="80%" {...settings} />
-      </Preview>
+      </LogoPreview>
       <Form.Row>
         <Form.Group as={Col} className="mb-1">
           <Form.Label className=" small mb-1">

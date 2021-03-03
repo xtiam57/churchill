@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import createPersistedState from 'use-persisted-state';
-import { Button, ButtonGroup, Alert } from 'react-bootstrap';
+import { Button, ButtonGroup } from 'react-bootstrap';
 import * as ImIcons from 'react-icons/im';
 
 import { Slider } from 'components/slider';
@@ -8,9 +8,10 @@ import { Sidebar } from 'components/sidebar';
 import { Wrapper } from 'components/wrapper';
 import { Controls } from 'components/controls';
 import { List } from 'components/list';
+import { Info } from 'components/info';
 
 import { useKeyUp, useIterate } from 'hooks';
-import { generateGUID, Slide } from 'utils';
+import { Slide } from 'utils';
 import { BROADCAST, MOVEMENT } from 'values';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
@@ -157,7 +158,7 @@ function HomeView() {
       </Sidebar>
 
       <Wrapper direction="column" {...settings}>
-        <Alert className="m-0 br-0" variant="secondary">
+        <Info>
           {showLogo ? (
             <>
               Actualmente <strong>NO</strong> se está mostrando el anuncio al
@@ -169,7 +170,7 @@ function HomeView() {
               <strong>{notice.title}</strong> al público.
             </>
           )}
-        </Alert>
+        </Info>
 
         <Slider
           live={!showLogo}

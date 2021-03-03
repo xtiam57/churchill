@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Typeahead, Highlighter } from 'react-bootstrap-typeahead';
-import { Button, ButtonGroup, Alert } from 'react-bootstrap';
+import { Button, ButtonGroup } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
 import { ImArrowLeft2, ImArrowRight2, ImSearch } from 'react-icons/im';
 
@@ -11,6 +11,7 @@ import { Sidebar } from 'components/sidebar';
 import { Bookmark } from 'components/bookmark';
 import { BookmarkList } from 'components/bookmarkList';
 import { Finder } from 'components/finder';
+import { Info } from 'components/info';
 
 import { useScriptures, useKeyUp } from 'hooks';
 import { getBookmarkedItems } from 'utils';
@@ -148,7 +149,7 @@ function ScripturesView() {
       <Wrapper direction="column" {...settings}>
         <Bookmark element={current} onChange={setBookmarks} />
 
-        <Alert className="m-0 br-0" variant="secondary">
+        <Info>
           {showLogo ? (
             <>
               Actualmente <strong>NO</strong> se está mostrando el versículo al
@@ -160,19 +161,18 @@ function ScripturesView() {
               <strong>{current.cite}</strong> al público.
             </>
           )}
-        </Alert>
+        </Info>
 
         <Presenter
-          live={!showLogo}
           id={current.id}
+          live={!showLogo}
           subtext={current.cite}
-          zoom={0.7}
           {...settings}
         >
           {current.text}
         </Presenter>
 
-        <div className="text-muted bg-white py-2 px-3 d-flex justify-content-between">
+        <div className="text-light bg-dark py-2 px-3 d-flex justify-content-between">
           <small>
             Usa las teclas <strong>&larr;</strong> y <strong>&rarr;</strong>{' '}
             para cambiar de versículo, y <strong>&uarr;</strong> y{' '}

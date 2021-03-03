@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import createPersistedState from 'use-persisted-state';
 import { Typeahead, Highlighter } from 'react-bootstrap-typeahead';
-import { Button, ButtonGroup, Alert, Form } from 'react-bootstrap';
+import { Button, ButtonGroup, Form } from 'react-bootstrap';
 import * as ImIcons from 'react-icons/im';
 import useSound from 'use-sound';
 
@@ -13,6 +13,7 @@ import { Bookmark } from 'components/bookmark';
 import { List } from 'components/list';
 import { BookmarkList } from 'components/bookmarkList';
 import { Finder } from 'components/finder';
+import { Info } from 'components/info';
 
 import { useAnthemn, useIterate, useBirthday, useKeyUp } from 'hooks';
 import { Time, getBookmarkedItems, Storage } from 'utils';
@@ -41,7 +42,7 @@ export default function AnthemnsView() {
   const { anthemns, current, setCurrent, tags, moveAnthemn } = useAnthemn();
   const [slide, setSlide] = useState(current.firstSlide);
   const [moveSlide] = useIterate(slide, current.slides);
-  const { recent, birthdayAnthemn } = useBirthday();
+  const { recent, bDaySong } = useBirthday();
   const [showLogo, setShowLogo] = useState(true);
   const [search, setSearch] = useState([current]);
   const [bookmarks, setBookmarks] = useState(getBookmarkedItems('anthemn'));
@@ -215,10 +216,10 @@ export default function AnthemnsView() {
 
             <List.Item>
               <List.Action
-                onClick={() => onSearch([birthdayAnthemn])}
-                title={birthdayAnthemn?.text.replaceAll('/n', '\n')}
+                onClick={() => onSearch([bDaySong])}
+                title={bDaySong?.text.replaceAll('/n', '\n')}
               >
-                {birthdayAnthemn.title}
+                {bDaySong.title}
               </List.Action>
             </List.Item>
           </List>
@@ -275,7 +276,7 @@ export default function AnthemnsView() {
       <Wrapper direction="column" {...settings}>
         <Bookmark element={current} onChange={setBookmarks} />
 
-        <Alert className="m-0 br-0" variant="secondary">
+        <Info>
           {showLogo ? (
             <>
               Actualmente <strong>NO</strong> se está mostrando el himno al
@@ -287,14 +288,13 @@ export default function AnthemnsView() {
               <strong>{current.title}</strong> al público.
             </>
           )}
-        </Alert>
+        </Info>
 
         <Slider
           live={!showLogo}
           wrapper={current}
           value={slide}
           onChange={setSlide}
-          zoom={0.7}
         >
           Usa las teclas <strong>&larr;</strong> y <strong>&rarr;</strong> para
           cambiar de página, y <strong>&uarr;</strong> y <strong>&darr;</strong>{' '}
