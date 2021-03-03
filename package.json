@@ -43,8 +43,9 @@
     "react-build": "react-scripts build",
     "react-test": "react-scripts test",
     "react-eject": "react-scripts eject",
-    "build": "rimraf dist && yarn react-build && electron-builder",
-    "start": "concurrently \"set BROWSER=none && yarn run react-start\" \"wait-on http://localhost:3000 && set ELECTRON_START_URL=http://localhost:3000 && electron .\""
+    "generate": "node generate.js",
+    "build": "yarn generate && rimraf dist && yarn react-build && electron-builder",
+    "start": "concurrently \"yarn generate\" \"set BROWSER=none && yarn run react-start\" \"wait-on http://localhost:3000 && set ELECTRON_START_URL=http://localhost:3000 && electron .\""
   },
   "eslintConfig": {
     "extends": [
