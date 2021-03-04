@@ -320,6 +320,8 @@ export function Settings() {
         </Form.Group>
       </Form.Row>
 
+      <hr />
+
       <Form.Row className="mt-2">
         <Form.Group as={Col} className="mb-1">
           <Form.Label className=" small mb-1">

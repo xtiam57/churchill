@@ -115,3 +115,9 @@ select {
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 1;
 }
+
+/* Other */
+
+.custom-control-label {
+  font-size: 80%;
+}
