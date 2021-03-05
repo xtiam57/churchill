@@ -6,12 +6,12 @@ const SlidePreviewStyled = styled.div`
   border: 1px solid #ced4da;
   bottom: 100px;
   /* box-shadow: 0px 0 10px 0 rgba(0, 0, 0, 0.15); */
-  height: calc(768px * 0.18);
+  height: 138.234px;
   overflow: hidden;
   position: absolute;
   right: 10px;
-  width: calc(1024px * 0.18);
-  z-index: 3;
+  width: 184.312px;
+  z-index: 1;
   opacity: 0.75;
   transition: all 0.3s ease;
 
@@ -26,11 +26,19 @@ const SlidePreviewStyled = styled.div`
   }
 
   p {
-    font-size: 10px;
+    font-size: 10px !important;
   }
 
   cite {
-    font-size: 7px;
+    font-size: 7px !important;
+  }
+
+  transform: scale(1);
+  transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
+
+  &.hide {
+    transform: scale(0.3);
+    opacity: 0;
   }
 `;
 

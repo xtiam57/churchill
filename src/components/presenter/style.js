@@ -12,8 +12,8 @@ const PresenterStyled = styled.section`
   padding-bottom: 0;
   padding-left: 4em;
   text-align: center;
-  border: ${({ live }) =>
-    live ? 'solid 4px var(--warning)' : 'solid 1px #fff'};
+  border: ${({ live, background }) =>
+    live ? 'solid 4px var(--warning)' : `solid 1px ${background}`};
   backdrop-filter: ${({ blur }) => (blur ? `blur(${blur}px)` : 'none')};
   font-family: ${({ font }) =>
     font ||
@@ -29,13 +29,17 @@ const PresenterStyled = styled.section`
     strong {
       color: ${({ titlecolor }) => titlecolor || '#007bff'} !important;
     }
+
+    b {
+      font-weight: normal;
+      color: ${({ titlecolor }) => titlecolor || '#007bff'} !important;
+    }
   }
 
   cite {
     color: ${({ subtextcolor }) => subtextcolor || '#007bff'};
-    font-size: calc(1.3em + 1.1vh);
     font-size: ${({ zoom = 1 }) => {
-      return `calc(${1.3 * zoom}em + 1.1vh)`;
+      return `calc(${1.3 * zoom}em + 1.5vh)`;
     }};
   }
 `;

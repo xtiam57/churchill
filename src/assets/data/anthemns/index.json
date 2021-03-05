@@ -257,12 +257,12 @@
   {
     "number": 20,
     "title": "¡CUAN GRANDE ES ÉL!",
-    "chorus": "Mi corazón entona la canción,/n¡Cuan grande es Él! ¡Cuan grande es Él!/nMi corazón entona la canción,/n¡Cuan grande es Él! ¡Cuan grande es Él!",
+    "chorus": "// Mi corazón entona la canción,/n¡Cuan grande es Él!/n¡Cuan grande es Él! //",
     "stanzas": [
-      "1) Señor, mi Dios, al contemplar los cielos,/nEl firmamento y las estrellas mil;/nAl oír tu voz en los potentes truenos/nY ver brillar el sol en su cenit:",
-      "2) Al recorrer los montes y los valles/nY ver las bellas flores al pasar;/nAl escuchar el canto de las aves/nY el murmurar del claro manantial:",
-      "3) Cuando recuerdo del amor divino/nQue desde el cielo al Salvador envió;/nAquel Jesús que por salvarme vino/nY en una cruz sufrió por mí y murió:",
-      "4) Cuando el Señor me llame a su presencia,/nAl dulce hogar, al cielo de esplendor,/nLe adoraré cantando la grandeza/nDe su poder y su infinito amor:"
+      "1) Señor, mi Dios,/nal contemplar los cielos,/nEl firmamento y/nlas estrellas mil;/nAl oír tu voz/nen los potentes truenos/nY ver brillar/nel sol en su cenit:",
+      "2) Al recorrer/nlos montes y los valles/nY ver las bellas/nflores al pasar;/nAl escuchar/nel canto de las aves/nY el murmurar del/nclaro manantial:",
+      "3) Cuando recuerdo/ndel amor divino/nQue desde el cielo/nal Salvador envió;/nAquel Jesús que por/nsalvarme vino/nY en una cruz sufrió/npor mí y murió:",
+      "4) Cuando el Señor/nme llame a su presencia,/nAl dulce hogar,/nal cielo de esplendor,/nLe adoraré cantando/nla grandeza/nDe su poder y/nsu infinito amor:"
     ],
     "startsWithChorus": false,
     "authors": "Carl Boberg",
@@ -273,9 +273,9 @@
     "title": "ALABAD AL SEÑOR",
     "chorus": null,
     "stanzas": [
-      "1) Alabad al Señor porque Él es bueno,/nAlabad al Señor porque Él es bueno,/nAlabad al Señor porque Él es bueno,/nPorque para siempre es su misericordia.",
-      "2) Alabad al Dios soberano,/nAlabad al Dios soberano,/nAlabad al Dios soberano,/nPorque para siempre es su misericordia.",
-      "3) Alabad al Señor de los señores,/nAlabad al Señor de los señores,/nAlabad al Señor de los señores,/nPorque para siempre es su misericordia."
+      "1) Alabad al Señor/nporque Él es bueno,/nAlabad al Señor/nporque Él es bueno,/nAlabad al Señor/nporque Él es bueno,/nPorque para siempre/nes su misericordia.",
+      "2) Alabad al Dios soberano,/nAlabad al Dios soberano,/nAlabad al Dios soberano,/nPorque para siempre/nes su misericordia.",
+      "3) Alabad al Señor/nde los señores,/nAlabad al Señor/nde los señores,/nAlabad al Señor/nde los señores,/nPorque para siempre/nes su misericordia."
     ],
     "startsWithChorus": false,
     "authors": null,
@@ -6983,10 +6983,10 @@
     "title": "HIJOS DEL CELESTE REY",
     "chorus": null,
     "stanzas": [
-      "1) Hijos del celeste Rey, dulces cánticos hoy alzad./nAl Pastor de nuestra grey alabanzas entonad.",
-      "2) Sólo del benigno Dios viene la felicidad;/nSi marchamos de Él en pos, mostráramos su bondad.",
-      "3) Es Jesús el Sumo Bien; siempre en su favor confiad;/nOfreciónos en su Edén eternal felicidad.",
-      "3) Vuestros cantos, pues, alzad a su trono con fervor,/nY homenaje tributad a la gloria del Señor."
+      "1) Hijos del celeste Rey,/ndulces cánticos hoy alzad./nAl Pastor de nuestra grey/nalabanzas entonad.",
+      "2) Sólo del benigno Dios/nviene la felicidad;/nSi marchamos de Él en pos,/nmostráramos su bondad.",
+      "3) Es Jesús el Sumo Bien;/nsiempre en su favor confiad;/nOfreciónos en su Edén/neternal felicidad.",
+      "3) Vuestros cantos, pues,/nalzad a su trono con fervor,/nY homenaje tributad a/nla gloria del Señor."
     ],
     "startsWithChorus": false,
     "authors": null,
@@ -7019,11 +7019,11 @@
   {
     "number": 524,
     "title": "DA LO MEJOR AL MAESTRO",
-    "chorus": "Da lo mejor al Maestro; tu juventud, tu vigor;/nDale el ardor de tu alma, de la verdad lucha en pro.",
+    "chorus": "Da lo mejor al Maestro;/ntu juventud, tu vigor;/nDale el ardor de tu alma,/nde la verdad lucha en pro.",
     "stanzas": [
-      "1) Da lo mejor al Maestro; tu juventud, tu vigor;/nDale el ardor de tu alma, lucha del bien en favor./nCristo nos dio el ejemplo, en todo Él fue lo mejor;/nSéle devoto ferviente, dale de ti lo mejor.",
-      "2) Da lo mejor al Maestro; dale de tu alma el honor;/nQue sea Él en tu vida el Santo Confortador./nDale y te será dado el Hijo amado de Dios;/nSírvele día por día; dale de ti lo mejor.",
-      "3) Da lo mejor al Maestro; nada supera su amor;/nSe dio por ti a sí mismo dejando gloria y honor./nNo murmuró al dar su vida pues Él sufrió con valor;/nAmale más cada día; dale de ti lo mejor."
+      "1) Da lo mejor al Maestro;/ntu juventud, tu vigor;/nDale el ardor de tu alma,/nlucha del bien en favor./nCristo nos dio el ejemplo,/nen todo Él fue lo mejor;/nSéle devoto ferviente,/ndale de ti lo mejor.",
+      "2) Da lo mejor al Maestro;/ndale de tu alma el honor;/nQue sea Él en tu vida/nel Santo Confortador./nDale y te será dado/nel Hijo amado de Dios;/nSírvele día por día;/ndale de ti lo mejor.",
+      "3) Da lo mejor al Maestro;/nnada supera su amor;/nSe dio por ti a sí mismo/ndejando gloria y honor./nNo murmuró al dar su vida/npues Él sufrió con valor;/nAmale más cada día;/ndale de ti lo mejor."
     ],
     "startsWithChorus": false,
     "authors": null,
@@ -7058,7 +7058,7 @@
     "title": "GLORÍA PATRI",
     "chorus": null,
     "stanzas": [
-      "1) Gloria demos al Padre, al Hijo y al Santo Espíritu;/nComo eran al principio, son hoy y así serán Eternamente."
+      "1) Gloria demos al Padre,/nal Hijo y al Santo Espíritu;/nComo eran al principio,/nson hoy y así serán Eternamente."
     ],
     "startsWithChorus": false,
     "authors": null,
@@ -7069,7 +7069,7 @@
     "title": "GLORIA PATRI",
     "chorus": null,
     "stanzas": [
-      "1) Gloria demos al Padre, al Hijo y al Santo Espíritu;/nComo eran al principio, son hoy y así serán Eternamente."
+      "1) Gloria demos al Padre,/nal Hijo y al Santo Espíritu;/nComo eran al principio,/nson hoy y así serán Eternamente."
     ],
     "startsWithChorus": false,
     "authors": null,
@@ -7114,11 +7114,11 @@
   {
     "number": 601,
     "title": "HUBO QUIEN POR MIS CULPAS",
-    "chorus": "Mis pecados llevó, en la cruz do murió/nEl sublime, el tierno Jesús./nLos desprecios sufrió, y mi alma salvó./nÉl cambió mis tinieblas en luz.",
+    "chorus": "Mis pecados llevó,/nen la cruz do murió/nEl sublime, el tierno Jesús./nLos desprecios sufrió,/ny mi alma salvó./nÉl cambió mis tinieblas en luz.",
     "stanzas": [
-      "1) Hubo quien por mis culpas muriera en la cruz,/nAunque indigno y vil como soy./nSoy feliz, pues su sangre vertió me Jesús,/nY con ella mis culpas borró.",
-      "2) Él es tierno y amante cual nadie lo fue,/nPues convierte al infiel corazón./nY por esa paciencia y ternura yo sé/nQue soy libre de condenación.",
-      "3) Es mi anhelo constante a Cristo seguir./nMi camino su ejemplo marcó./nY por darme la vida Él quiso morir./nEn la cruz mi pecado clavó."
+      "1) Hubo quien por mis culpas/nmuriera en la cruz,/nAunque indigno/ny vil como soy./nSoy feliz, pues su sangre/nvertióme Jesús,/nY con ella mis culpas borró.",
+      "2) Él es tierno y amante/ncual nadie lo fue,/nPues convierte/nal infiel corazón./nY por esa paciencia/ny ternura yo sé/nQue soy libre de condenación.",
+      "3) Es mi anhelo constante/na Cristo seguir./nMi camino su/nejemplo marcó./nY por darme la vida/nÉl quiso morir./nEn la cruz mi pecado clavó."
     ],
     "startsWithChorus": false,
     "authors": null,
@@ -7272,7 +7272,7 @@
       "3) Sonará la trompeta en Sión,/n¡Sonará, sonará!/nSonará la trompeta en Sión,/ncuando venga el Salvador.",
       "4) Solamente en Cristo, solamente en Él,/nla salvación, se encuentra en Él,/nno hay otro nombre, dado a los hombres,/nsolamente en Cristo, solamente en Él.",
       "5) ¡Oh que regalo precioso! Cristo me dió,/nllenó mi alma de gozo y me salvó,/nahora puedo cantar en alta voz/ny puedo testificar de su amor",
-      "6) // No hay Dios tan grande como tú, no lo hay, no lo hay. ///n// No hay Dios que pueda hacer las obras, como las que haces tú. ///n// No es con espada, ni con ejército, más con tu Santo Espíritu. //"
+      "6) // No hay Dios tan grande como tú,/nno lo hay, no lo hay. ///n// No hay Dios que pueda hacer las obras,/ncomo las que haces tú. ///n// No es con espada, ni con ejército,/nmás con tu Santo Espíritu. //"
     ],
     "startsWithChorus": false,
     "authors": null,

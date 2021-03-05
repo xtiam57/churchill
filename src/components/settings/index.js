@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import createPersistedState from 'use-persisted-state';
 import { Button, Form, Col, InputGroup } from 'react-bootstrap';
 import { MdClose } from 'react-icons/md';
@@ -15,7 +15,6 @@ import { Storage } from 'utils';
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
 export function Settings() {
-  const ref = useRef(null);
   const { toggleSettings, showingSettings } = useSettingsSidebar();
   const [settings, setSettings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const [file, setFile] = useState(null);
@@ -67,11 +66,7 @@ export function Settings() {
   // });
 
   return (
-    <Sidebar
-      ref={ref}
-      closable
-      className={`bg-light ${showingSettings ? '' : 'closed'}`}
-    >
+    <Sidebar closable className={`bg-light ${showingSettings ? '' : 'closed'}`}>
       <h1 className="display-4">Opciones</h1>
       <Button
         className="p-0 text-dark"
@@ -371,6 +366,9 @@ export function Settings() {
       >
         Reiniciar
       </Button> */}
+
+      <hr />
+
       <small className="d-block text-center text-muted mt-4">
         Hecho con <BsHeartFill className="text-danger" /> por Christiam Mena
         (@xtiam57).

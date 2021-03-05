@@ -15,7 +15,7 @@ import { BookmarkList } from 'components/bookmarkList';
 import { Finder } from 'components/finder';
 import { Info } from 'components/info';
 
-import { useAnthemn, useIterate, useBirthday, useKeyUp } from 'hooks';
+import { useAnthemn, useBirthday, useKeyUp } from 'hooks';
 import { Time, getBookmarkedItems, Storage } from 'utils';
 
 import { BROADCAST, MOVEMENT } from 'values';
@@ -38,10 +38,9 @@ export default function AnthemnsView() {
   }, []);
 
   const typeaheadRef = useRef();
+  const sliderRef = useRef();
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const { anthemns, current, setCurrent, tags, moveAnthemn } = useAnthemn();
-  const [slide, setSlide] = useState(current.firstSlide);
-  const [moveSlide] = useIterate(slide, current.slides);
   const { recent, bDaySong } = useBirthday();
   const [showLogo, setShowLogo] = useState(true);
   const [search, setSearch] = useState([current]);
@@ -88,15 +87,9 @@ export default function AnthemnsView() {
     }
   }
 
-  const onPrevSlide = () => {
-    const slide = moveSlide(MOVEMENT.PREV);
-    setSlide(slide);
-  };
+  const onPrevSlide = () => sliderRef.current.prev();
 
-  const onNextSlide = () => {
-    const slide = moveSlide(MOVEMENT.NEXT);
-    setSlide(slide);
-  };
+  const onNextSlide = () => sliderRef.current.next();
 
   const onPrevAnthemn = () => {
     const anthemn = moveAnthemn(MOVEMENT.PREV);
@@ -290,12 +283,7 @@ export default function AnthemnsView() {
           )}
         </Info>
 
-        <Slider
-          live={!showLogo}
-          wrapper={current}
-          value={slide}
-          onChange={setSlide}
-        >
+        <Slider ref={sliderRef} live={!showLogo} wrapper={current}>
           Usa las teclas <strong>&larr;</strong> y <strong>&rarr;</strong> para
           cambiar de página, y <strong>&uarr;</strong> y <strong>&darr;</strong>{' '}
           para cambiar de himno.
@@ -359,6 +347,10 @@ export default function AnthemnsView() {
                 <ImIcons.ImArrowRight2 />
               </Button>
             </ButtonGroup>
+
+            <Button className="ml-2" variant="secondary" onClick={onOpenPath}>
+              <ImIcons.ImFolderOpen />
+            </Button>
           </div>
           {isMP3Loaded ? (
             <>
@@ -407,7 +399,9 @@ export default function AnthemnsView() {
             <div className="d-flex">
               <div className="text-primary fs-lg ">{option.title}</div>
               {option?.tags?.split(',').map((tag) => (
-                <small className="tag mb-0 ml-2">{tag}</small>
+                <small key={tag} className="tag mb-0 ml-2">
+                  {tag}
+                </small>
               ))}
             </div>
 

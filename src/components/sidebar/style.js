@@ -7,11 +7,11 @@ export const SidebarStyled = styled.aside`
   max-width: 300px;
   padding: 25px;
   overflow-y: auto;
-  z-index: 3;
+  z-index: 4;
 
   ${({ closable }) => {
     return closable
-      ? 'position: fixed; left: 0;bottom: 0;box-shadow: -3px 0 10px 0 rgba(0, 0, 0, 0.2);'
+      ? 'position: fixed; left: 0;bottom: 0;box-shadow: -2px 0 10px 0 rgba(0, 0, 0, 0.2);'
       : '';
   }}
 

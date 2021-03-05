@@ -66,7 +66,9 @@ export function Presenter({
         <motion.p
           key={id}
           className={subtext ? '' : 'mb-0'}
-          dangerouslySetInnerHTML={{ __html: children }}
+          dangerouslySetInnerHTML={{
+            __html: children.replaceAll('//', '<b>//</b>'),
+          }}
           {...textMotion}
         />
       </AnimatePresence>

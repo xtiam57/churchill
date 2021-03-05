@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import createPersistedState from 'use-persisted-state';
 import { Button, ButtonGroup } from 'react-bootstrap';
 import * as ImIcons from 'react-icons/im';
@@ -87,28 +87,17 @@ function HomeView() {
     },
   ];
 
+  const sliderRef = useRef();
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const [showLogo, setShowLogo] = useState(true);
   const [notice, setNotice] = useState(notices[0]);
-  const [slide, setSlide] = useState(notice.slides[0]);
   const [autoplay, setAutoplay] = useState(true);
   const [loop, setLoop] = useState(true);
-  const [moveSlide] = useIterate(slide, notice.slides);
   const [moveNotice] = useIterate(notice, notices);
 
-  useEffect(() => {
-    setSlide(notice.slides[0]);
-  }, [notice]);
+  const onPrevSlide = () => sliderRef.current.prev();
 
-  const onPrevSlide = () => {
-    const slide = moveSlide(MOVEMENT.PREV, loop);
-    setSlide(slide);
-  };
-
-  const onNextSlide = () => {
-    const slide = moveSlide(MOVEMENT.NEXT, loop);
-    setSlide(slide);
-  };
+  const onNextSlide = () => sliderRef.current.next();
 
   const onNextNotice = () => {
     const notice = moveNotice(MOVEMENT.NEXT);
@@ -173,12 +162,11 @@ function HomeView() {
         </Info>
 
         <Slider
+          ref={sliderRef}
           live={!showLogo}
           wrapper={notice}
           autoplay={autoplay}
           loop={loop}
-          value={slide}
-          onChange={setSlide}
         >
           Usa las teclas <strong>&larr;</strong> y <strong>&rarr;</strong> para
           cambiar de página, y <strong>&uarr;</strong> y <strong>&darr;</strong>{' '}
