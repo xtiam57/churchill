@@ -25,9 +25,14 @@ function HomeView() {
       title: 'Recomendaciones',
       slides: [
         Slide.create({
+          title: '',
+          text:
+            'Sea usted cordialmente/n<strong class="fs-xl" style="line-height:1">¡BIENVENIDO!</strong>/n a la Casa de Dios.',
+        }),
+        Slide.create({
           title: '<span class="fs-xl">📖</span>',
           text:
-            'Cuando <strong>disfrutas</strong> algo no deseas <strong>interrupciones</strong>. La <strong>Palabra de Dios</strong> merece respeto.',
+            'Cuando <strong>disfruta</strong> algo no desea <strong>interrupciones</strong>. La <strong>Palabra de Dios</strong> merece respeto.',
         }),
         Slide.create({
           title: '<span class="fs-xl">🤫🙊🤐</span>',
@@ -62,7 +67,7 @@ function HomeView() {
         Slide.create({
           title: '<span class="fs-xl">⛪</span>',
           text:
-            'Recuerde <strong>cuidar la Iglesia y sus instalaciones</strong>. No olvides que es la Casa de Dios.',
+            'Recuerde <strong>cuidar la Iglesia y sus instalaciones</strong>. No olvide que es la Casa de Dios.',
         }),
       ],
     },
@@ -73,15 +78,40 @@ function HomeView() {
       title: '¡Bautizo!',
       slides: [
         Slide.create({
-          title: '<span class="fs-xl">🥳</span>/n¡Tenemos Bautizo!',
           text:
-            '¡Hoy un pecador ha recibido a Cristo y <strong>ha decidido bautizarse</strong>!',
+            '<strong class="fs-xl" style="line-height:1">¡BAUTIZO!</strong>/n¡Hoy un pecador ha recibido a Cristo y <strong>ha decidido bautizarse</strong>!',
           subtext: 'Mateo 28:19',
         }),
         Slide.create({
           title: '<span class="fs-xl">🎉</span>',
           text: '¡Felicidades por su decisión!',
           subtext: 'Mateo 28:19',
+        }),
+      ],
+    },
+    {
+      id: 3,
+      index: 2,
+      type: 'notice',
+      title: 'Canto Especial',
+      slides: [
+        Slide.create({
+          text:
+            'Canto/n<strong class="fs-xl" style="line-height:1">ESPECIAL</strong>',
+          subtext: 'Por favor permanezca en silencio durante la presentación.',
+        }),
+      ],
+    },
+    {
+      id: 4,
+      index: 3,
+      type: 'notice',
+      title: 'Dedicación',
+      slides: [
+        Slide.create({
+          text:
+            'Hoy tenemos una bonita/n<strong class="fs-xl" style="line-height:1">DEDICACIÓN</strong>',
+          subtext: 'Felicidades a los padres por confiar su hijo(a) al Señor.',
         }),
       ],
     },
