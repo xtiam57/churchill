@@ -5,33 +5,35 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { generateGUID } from 'utils';
 
 function getScale(length, strongCount = false, lineBreakCount = 0) {
+  const FACTOR = 1.2;
   length = length - strongCount * 17 - lineBreakCount * 5;
+
   if (length > 400) {
-    return 0.7;
+    return 0.7 * FACTOR;
   }
   if (length > 350 && length <= 400) {
-    return 0.8;
+    return 0.8 * FACTOR;
   }
   if (length > 300 && length <= 350) {
-    return 0.85;
+    return 0.85 * FACTOR;
   }
   if (length > 250 && length <= 300) {
-    return 0.9;
+    return 0.9 * FACTOR;
   }
   if (length > 200 && length <= 250) {
-    return 1;
+    return 1 * FACTOR;
   }
   if (length > 150 && length <= 200) {
-    return 1.2;
+    return 1.2 * FACTOR;
   }
   if (length > 100 && length <= 150) {
-    return 1.4;
+    return 1.4 * FACTOR;
   }
   if (length > 50 && length <= 100) {
-    return 1.6;
+    return 1.6 * FACTOR;
   }
   if (length <= 50) {
-    return 1.8;
+    return 1.8 * FACTOR;
   }
 }
 
@@ -69,15 +71,16 @@ export function Presenter({
           dangerouslySetInnerHTML={{
             __html: children
               .replaceAll('//', '<b>//</b>')
-              .replaceAll('1)', '<b>1)</b>')
-              .replaceAll('2)', '<b>2)</b>')
-              .replaceAll('3)', '<b>3)</b>')
-              .replaceAll('4)', '<b>4)</b>')
-              .replaceAll('5)', '<b>5)</b>')
-              .replaceAll('6)', '<b>6)</b>')
-              .replaceAll('7)', '<b>7)</b>')
-              .replaceAll('8)', '<b>8)</b>')
-              .replaceAll('9)', '<b>9)</b>'),
+              .replace('1)', '<strong>(1)</strong><br/> ')
+              .replace('2)', '<strong>(2)</strong><br/> ')
+              .replace('3)', '<strong>(3)</strong><br/> ')
+              .replace('4)', '<strong>(4)</strong><br/> ')
+              .replace('5)', '<strong>(5)</strong><br/> ')
+              .replace('6)', '<strong>(6)</strong><br/> ')
+              .replace('7)', '<strong>(7)</strong><br/> ')
+              .replace('8)', '<strong>(8)</strong><br/> ')
+              .replace('9)', '<strong>(9)</strong><br/> ')
+              .replace('10)', '<strong>(10)</strong><br/> '),
           }}
           {...textMotion}
         />
