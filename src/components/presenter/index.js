@@ -67,7 +67,17 @@ export function Presenter({
           key={id}
           className={subtext ? '' : 'mb-0'}
           dangerouslySetInnerHTML={{
-            __html: children.replaceAll('//', '<b>//</b>'),
+            __html: children
+              .replaceAll('//', '<b>//</b>')
+              .replaceAll('1)', '<b>1)</b>')
+              .replaceAll('2)', '<b>2)</b>')
+              .replaceAll('3)', '<b>3)</b>')
+              .replaceAll('4)', '<b>4)</b>')
+              .replaceAll('5)', '<b>5)</b>')
+              .replaceAll('6)', '<b>6)</b>')
+              .replaceAll('7)', '<b>7)</b>')
+              .replaceAll('8)', '<b>8)</b>')
+              .replaceAll('9)', '<b>9)</b>'),
           }}
           {...textMotion}
         />
