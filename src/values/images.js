@@ -17,12 +17,20 @@ import bg16 from 'assets/images/bg/paper2.jpg';
 import bg17 from 'assets/images/bg/paper1.jpg';
 import bg18 from 'assets/images/bg/peru.jpg';
 import bg19 from 'assets/images/bg/resurrection.jpg';
+import bg20 from 'assets/images/bg/xmas2.jpg';
+import bg21 from 'assets/images/bg/xmas3.jpg';
+import bg22 from 'assets/images/bg/wedding.jpg';
+import bg23 from 'assets/images/bg/pray.jpg';
+import bg24 from 'assets/images/bg/peru2.jpg';
+import bg25 from 'assets/images/bg/sand.jpg';
+import bg26 from 'assets/images/bg/montains.jpg';
 
 export const BACKGROUNDS = [
   { value: '', label: 'Color Sólido' },
-  { value: bg01, label: 'Arbol de Navidad' },
   { value: bg02, label: 'Amanecer' },
+  { value: bg25, label: 'Arena' },
   { value: bg03, label: 'Atardecer' },
+  { value: bg22, label: 'Boda' },
   { value: bg04, label: 'Corazones' },
   { value: bg05, label: 'Cruz' },
   { value: bg06, label: 'Divertido' },
@@ -31,12 +39,18 @@ export const BACKGROUNDS = [
   { value: bg09, label: 'Madera' },
   { value: bg10, label: 'Madera con luces' },
   { value: bg11, label: 'Madera Verde' },
-  { value: bg12, label: 'Navidad Colorida' },
+  { value: bg26, label: 'Montañas' },
+  { value: bg01, label: 'Navidad 1' },
+  { value: bg12, label: 'Navidad 2' },
+  { value: bg20, label: 'Navidad 3' },
+  { value: bg21, label: 'Navidad 4' },
+  { value: bg23, label: 'Oración' },
   { value: bg13, label: 'Patrón Azul' },
   { value: bg14, label: 'Patrón Negro' },
   { value: bg15, label: 'Papel 1' },
   { value: bg16, label: 'Papel 2' },
   { value: bg17, label: 'Papel 3' },
-  { value: bg18, label: 'Perú' },
+  { value: bg18, label: 'Perú 1' },
+  { value: bg24, label: 'Perú 2' },
   { value: bg19, label: 'Resurreción' },
 ];
