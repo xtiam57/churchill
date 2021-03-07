@@ -6,31 +6,42 @@ const AnthemnsContext = React.createContext({});
 
 function splitLines(id, title, text, array, index) {
   const lines = text.split('/n');
+  const length = text.length - lines.length - 1 - 3;
 
-  if (lines.length > 5) {
-    const divider = lines.length > 10 ? 3 : 2;
-    const size = Math.ceil(lines.length / divider);
+  const DIVIDER = 2;
+  const THRESHOLD = 125;
+  let iteration = 0;
+  let count = 0;
 
-    [...Array(divider).keys()].forEach((i) => {
-      array.push(
-        Slide.create({
-          id: `${id}_${index}`,
-          title: i === 0 ? title : null,
-          text: lines.slice(i * size, (1 + i) * size).join('/n'),
-          index: index++,
-        })
-      );
+  if (length <= THRESHOLD) {
+    const slide = Slide.create({
+      id: `${id}_${index}`,
+      index: index++,
+      title,
+      text,
     });
-  } else {
-    array.push(
-      Slide.create({
-        id: `${id}_${index}`,
-        title,
-        text: text,
-        index: index++,
-      })
-    );
+
+    array.push(slide);
+
+    return index;
   }
+
+  while (count < lines.length) {
+    const from = iteration * DIVIDER;
+    const to = Math.min(from + DIVIDER, lines.length);
+
+    const slide = Slide.create({
+      id: `${id}_${index}`,
+      index: index++,
+      title: iteration === 0 ? title : null,
+      text: lines.slice(from, to).join('/n'),
+    });
+
+    array.push(slide);
+    iteration++;
+    count += to - from;
+  }
+
   return index;
 }
 
@@ -62,8 +73,8 @@ function AnthemnsProvider({ children }) {
             id: `${id}_${slideIndex}`,
             title: `${
               isNotAnthemn
-                ? 'Coro'
-                : `${isExtra ? 'Apéndice' : `Himno #${number}`}`
+                ? `Coro #${number}`
+                : `${isExtra ? `Apéndice #${number}` : `Himno #${number}`}`
             }`,
             text: title,
             subtext: authors,
@@ -72,7 +83,7 @@ function AnthemnsProvider({ children }) {
         );
 
         if (startsWithChorus) {
-          slideIndex = splitLines(id, 'Coro', chorus, slides, slideIndex);
+          slideIndex = splitLines(id, '(Coro)', chorus, slides, slideIndex);
         }
 
         stanzas.forEach((stanza, i) => {
@@ -80,7 +91,7 @@ function AnthemnsProvider({ children }) {
           text += `${stanza} /n/n`;
 
           if (chorus) {
-            slideIndex = splitLines(id, 'Coro', chorus, slides, slideIndex);
+            slideIndex = splitLines(id, '(Coro)', chorus, slides, slideIndex);
 
             if (i === 0) {
               text += `(CORO) /n${chorus} /n/n`;

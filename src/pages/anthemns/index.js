@@ -92,13 +92,17 @@ export default function AnthemnsView() {
   const onNextSlide = () => sliderRef.current.next();
 
   const onPrevAnthemn = () => {
-    const anthemn = moveAnthemn(MOVEMENT.PREV);
-    setSearch([anthemn]);
+    if (!isPlaying) {
+      const anthemn = moveAnthemn(MOVEMENT.PREV);
+      setSearch([anthemn]);
+    }
   };
 
   const onNextAnthemn = () => {
-    const anthemn = moveAnthemn(MOVEMENT.NEXT);
-    setSearch([anthemn]);
+    if (!isPlaying) {
+      const anthemn = moveAnthemn(MOVEMENT.NEXT);
+      setSearch([anthemn]);
+    }
   };
 
   const onTogglePlay = () => {
