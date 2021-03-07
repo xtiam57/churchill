@@ -14,6 +14,9 @@ export default function CastView() {
   const [message] = useBroadcast(BROADCAST.INITIAL_CHANNEL);
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
 
+  // Override zoom value
+  settings.zoom = 1;
+
   return (
     <Wrapper bare centered {...settings}>
       {message ? (
