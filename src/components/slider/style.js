@@ -26,7 +26,7 @@ const SlidePreviewStyled = styled.div`
   }
 
   p {
-    font-size: 12px !important;
+    font-size: 11px !important;
   }
 
   cite {

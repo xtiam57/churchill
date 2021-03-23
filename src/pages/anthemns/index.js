@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import createPersistedState from 'use-persisted-state';
-import { Typeahead, Highlighter } from 'react-bootstrap-typeahead';
+import { Typeahead } from 'react-bootstrap-typeahead';
 import { Button, ButtonGroup, Form } from 'react-bootstrap';
 import * as ImIcons from 'react-icons/im';
 import useSound from 'use-sound';
@@ -10,15 +10,16 @@ import { Sidebar } from 'components/sidebar';
 import { Wrapper } from 'components/wrapper';
 import { Controls } from 'components/controls';
 import { Bookmark } from 'components/bookmark';
-import { List } from 'components/list';
 import { BookmarkList } from 'components/bookmarkList';
 import { Finder } from 'components/finder';
 import { Info } from 'components/info';
+import { RecentBirthdays } from 'sections/recentBirthdays';
+import { AnthemnTags } from 'sections/anthemnTags';
 
-import { useAnthemn, useBirthday, useKeyUp } from 'hooks';
-import { Time, getBookmarkedItems, Storage } from 'utils';
-
+import { useAnthemn, useKeyUp } from 'hooks';
+import { getBookmarkedItems, Storage } from 'utils';
 import { BROADCAST, MOVEMENT } from 'values';
+import { typeaheadRender, finderRender } from './renders';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
@@ -40,9 +41,9 @@ export default function AnthemnsView() {
   const typeaheadRef = useRef();
   const sliderRef = useRef();
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
-  const { anthemns, current, setCurrent, tags, moveAnthemn } = useAnthemn();
-  const { recent, bDaySong } = useBirthday();
+  const { anthemns, current, setCurrent, moveAnthemn } = useAnthemn();
   const [showLogo, setShowLogo] = useState(true);
+  const [showModal, setShowModal] = useState(false);
   const [search, setSearch] = useState([current]);
   const [bookmarks, setBookmarks] = useState(getBookmarkedItems('anthemn'));
   const [url, setUrl] = useState(folder.getPath(current.number));
@@ -56,14 +57,10 @@ export default function AnthemnsView() {
     onload: () => setIsMP3Loaded(true),
     onloaderror: () => setIsMP3Loaded(false),
   });
-  const [tagSelected, setTagSelected] = useState(null);
-  const [anthemnsWithTags, setAnthemnsWithTags] = useState([]);
-  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     stop();
     setUrl(folder.getPath(current.number));
-
     // Bug: delay to set config of the song
     setTimeout(() => {
       // Trying to get settings from storage
@@ -116,15 +113,6 @@ export default function AnthemnsView() {
     folder.open();
   };
 
-  const onShowSongsWithTags = (tag) => {
-    setTagSelected(tag === tagSelected ? null : tag);
-    setAnthemnsWithTags(() =>
-      tag === tagSelected
-        ? []
-        : anthemns.filter((song) => song.tags?.split(',').includes(tag))
-    );
-  };
-
   const save = (target) => {
     Storage.set(createKey(current), {
       volume,
@@ -159,17 +147,7 @@ export default function AnthemnsView() {
           ref={typeaheadRef}
           selected={search}
           size="large"
-          renderMenuItemChildren={(option, { text }) => (
-            <>
-              <Highlighter search={text}>{option.title}</Highlighter>
-              <small
-                className="more font-italic"
-                title={option.text.replaceAll('/n', '\n')}
-              >
-                {option.text.replaceAll('1)', '').replaceAll('/n', ' ')}
-              </small>
-            </>
-          )}
+          renderMenuItemChildren={typeaheadRender}
         />
 
         <div className="small d-flex justify-content-between mt-1 mb-3">
@@ -182,12 +160,12 @@ export default function AnthemnsView() {
             className="text-light p-0 text-small"
             onClick={(e) => setShowModal(true)}
           >
-            <ImIcons.ImSearch /> Avanzado
+            <ImIcons.ImSearch />
           </Button>
         </div>
 
         <Button
-          className="mb-4"
+          className={showLogo ? 'mb-4 pulse' : 'mb-4'}
           block
           size="lg"
           variant={showLogo ? 'secondary' : 'warning'}
@@ -196,31 +174,7 @@ export default function AnthemnsView() {
           {showLogo ? 'Mostrar Himno' : 'Mostrar Logo'}
         </Button>
 
-        {recent.length ? (
-          <List className="mb-4">
-            <List.Item>
-              <List.Title
-                className="text-warning"
-                title={recent.reduce(
-                  (res, { name, day, month }) =>
-                    `${res}${name} (${Time.formatBirthday(day, month)})\n`,
-                  ''
-                )}
-              >
-                Cumpleaños detectados ({recent.length})
-              </List.Title>
-            </List.Item>
-
-            <List.Item>
-              <List.Action
-                onClick={() => onSearch([bDaySong])}
-                title={bDaySong?.text.replaceAll('/n', '\n')}
-              >
-                {bDaySong.title}
-              </List.Action>
-            </List.Item>
-          </List>
-        ) : null}
+        <RecentBirthdays className="mb-4" onClick={onSearch} />
 
         <BookmarkList
           className="mb-4"
@@ -230,50 +184,13 @@ export default function AnthemnsView() {
           onClick={(item) => onSearch([item])}
         />
 
-        <List>
-          <List.Item>
-            <List.Title>
-              Etiquetas{' '}
-              {anthemnsWithTags.length ? (
-                <span>({anthemnsWithTags.length})</span>
-              ) : null}
-            </List.Title>
-          </List.Item>
-
-          <List.Item
-            className="my-2"
-            style={{ flexWrap: 'wrap', justifyContent: 'start' }}
-          >
-            {tags.map((tag, index) => (
-              <span
-                key={index}
-                onClick={() => onShowSongsWithTags(tag)}
-                className={`tag mr-1 mb-1 pointer ${
-                  tag === tagSelected ? 'active' : ''
-                }`}
-              >
-                {tag}
-              </span>
-            ))}
-          </List.Item>
-
-          {anthemnsWithTags.map((item) => (
-            <List.Item key={item.index}>
-              <List.Action
-                onClick={() => onSearch([item])}
-                title={item?.text.replaceAll('/n', '\n')}
-              >
-                {item.title}
-              </List.Action>
-            </List.Item>
-          ))}
-        </List>
+        <AnthemnTags onClick={onSearch} />
       </Sidebar>
 
       <Wrapper direction="column" {...settings}>
         <Bookmark element={current} onChange={setBookmarks} />
 
-        <Info>
+        <Info live={!showLogo}>
           {showLogo ? (
             <>
               Actualmente <strong>NO</strong> se está mostrando el himno al
@@ -315,6 +232,7 @@ export default function AnthemnsView() {
               <ImIcons.ImVolumeHigh />
             </div>
           ) : null}
+
           {isMP3Loaded ? null : (
             <small>
               <span className="text-warning">
@@ -327,6 +245,7 @@ export default function AnthemnsView() {
               con el nombre <strong>{current.number}.mp3</strong>.
             </small>
           )}
+
           <div className="d-flex">
             {isMP3Loaded ? (
               <>
@@ -343,6 +262,7 @@ export default function AnthemnsView() {
                 </ButtonGroup>
               </>
             ) : null}
+
             <ButtonGroup>
               <Button onClick={onPrevSlide} variant="secondary">
                 <ImIcons.ImArrowLeft2 />
@@ -356,6 +276,7 @@ export default function AnthemnsView() {
               <ImIcons.ImFolderOpen />
             </Button>
           </div>
+
           {isMP3Loaded ? (
             <>
               <div className="d-flex align-items-center">
@@ -398,28 +319,7 @@ export default function AnthemnsView() {
             setShowModal(false);
           }
         }}
-        render={(option, { text }) => (
-          <div className="my-2">
-            <div className="d-flex">
-              <div className="text-primary fs-lg ">{option.title}</div>
-              {option?.tags?.split(',').map((tag) => (
-                <small key={tag} className="tag mb-0 ml-2">
-                  {tag}
-                </small>
-              ))}
-            </div>
-
-            <Highlighter search={text}>
-              {option.text.replaceAll('/n', ' ')}
-            </Highlighter>
-
-            {option.authors ? (
-              <div className="small font-italic mt-2">
-                Autor(es): {option.authors}
-              </div>
-            ) : null}
-          </div>
-        )}
+        render={finderRender}
       />
     </Wrapper>
   );

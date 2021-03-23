@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import * as BsIcons from 'react-icons/bs';
@@ -11,12 +11,12 @@ export function Navbar() {
   const location = useLocation();
   const { toggleSettings } = useSettingsSidebar();
   const { toggle, presenting } = usePresenter();
-  // const [date, setDate] = useState(new Date());
+  const [date, setDate] = useState(new Date());
 
-  // useEffect(() => {
-  //   const timer = setInterval(() => setDate(new Date()), 1000);
-  //   return () => clearInterval(timer);
-  // }, []);
+  useEffect(() => {
+    const timer = setInterval(() => setDate(new Date()), 1000);
+    return () => clearInterval(timer);
+  }, []);
 
   if (location.pathname === ROUTES.CAST_PAGE) {
     return null;
@@ -82,9 +82,9 @@ export function Navbar() {
             </li>
           </ul>
 
-          {/* <span className="navbar-text d-block mr-3">
+          <span className="navbar-text d-block mr-3">
             {date.toLocaleTimeString()}
-          </span> */}
+          </span>
 
           <Button
             onClick={toggle}

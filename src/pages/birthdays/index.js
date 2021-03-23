@@ -50,7 +50,7 @@ function BirthdaysView() {
         <h1 className="text-light display-4">Cumpleaños</h1>
 
         <Button
-          className="my-3"
+          className={showLogo ? 'my-3 pulse' : 'my-3'}
           block
           size="lg"
           variant={showLogo ? 'secondary' : 'warning'}
@@ -96,7 +96,7 @@ function BirthdaysView() {
       </Sidebar>
 
       <Wrapper direction="column" {...settings}>
-        <Info>
+        <Info live={!showLogo}>
           {showLogo ? (
             <>
               Actualmente <strong>NO</strong> se están mostrando los

@@ -67,7 +67,7 @@ export function Settings() {
 
   return (
     <Sidebar closable className={`bg-light ${showingSettings ? '' : 'closed'}`}>
-      <h1 className="display-4">Opciones</h1>
+      <h1 className="display-4">Ajustes</h1>
       <Button
         className="p-0 text-dark"
         variant="link"

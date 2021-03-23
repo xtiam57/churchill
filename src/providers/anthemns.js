@@ -72,9 +72,8 @@ function AnthemnsProvider({ children }) {
           Slide.create({
             id: `${id}_${slideIndex}`,
             title: `${
-              isNotAnthemn
-                ? `Coro #${number}`
-                : `${isExtra ? `Apéndice #${number}` : `Himno #${number}`}`
+              isNotAnthemn ? `Coro #${number}` : `Himno #${number}`
+              // : `${isExtra ? `Apéndice #${number}` : `Himno #${number}`}`
             }`,
             text: title,
             subtext: authors,
@@ -111,7 +110,7 @@ function AnthemnsProvider({ children }) {
           id,
           index,
           number,
-          title: `${isNotAnthemn || isExtra ? '' : `#${number} `}${title}`,
+          title: `#${number} ${title}`,
           type: 'anthemn',
           slides,
           text,

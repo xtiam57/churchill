@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Typeahead, Highlighter } from 'react-bootstrap-typeahead';
+import { Typeahead } from 'react-bootstrap-typeahead';
 import { Button, ButtonGroup } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
 import { ImArrowLeft2, ImArrowRight2, ImSearch } from 'react-icons/im';
@@ -16,6 +16,7 @@ import { Info } from 'components/info';
 import { useScriptures, useKeyUp } from 'hooks';
 import { getBookmarkedItems } from 'utils';
 import { BROADCAST, MOVEMENT } from 'values';
+import { finderRender, typeaheadRender } from './renders';
 
 const useBroadcast = createPersistedState(BROADCAST.CHANNEL);
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
@@ -92,6 +93,12 @@ function ScripturesView() {
           labelKey="cite"
           minLength={0}
           onChange={onSearch}
+          onKeyDown={(e) => {
+            if (e.key === '.') {
+              e.preventDefault();
+              e.currentTarget.value += ':';
+            }
+          }}
           onFocus={(e) => e.target.select()}
           options={scriptures}
           paginate={false}
@@ -100,17 +107,7 @@ function ScripturesView() {
           ref={typeaheadRef}
           selected={search}
           size="large"
-          renderMenuItemChildren={(option, { text }) => (
-            <>
-              <Highlighter search={text}>{option.cite}</Highlighter>
-              <small
-                className="more font-italic"
-                title={option.text.replaceAll('<br/>', '\n')}
-              >
-                {option.text.replaceAll('<br/>', ' ')}
-              </small>
-            </>
-          )}
+          renderMenuItemChildren={typeaheadRender}
         />
 
         <div className="small d-flex justify-content-between mt-1 mb-3">
@@ -123,12 +120,12 @@ function ScripturesView() {
             className="text-light p-0 text-small"
             onClick={(e) => setShowFinder(true)}
           >
-            <ImSearch /> Avanzado
+            <ImSearch />
           </Button>
         </div>
 
         <Button
-          className="mb-4"
+          className={showLogo ? 'mb-4 pulse' : 'mb-4'}
           block
           size="lg"
           variant={showLogo ? 'secondary' : 'warning'}
@@ -149,7 +146,7 @@ function ScripturesView() {
       <Wrapper direction="column" {...settings}>
         <Bookmark element={current} onChange={setBookmarks} />
 
-        <Info>
+        <Info live={!showLogo}>
           {showLogo ? (
             <>
               Actualmente <strong>NO</strong> se está mostrando el versículo al
@@ -203,14 +200,7 @@ function ScripturesView() {
             setShowFinder(false);
           }
         }}
-        render={(option, { text }) => (
-          <div className="my-1">
-            <Highlighter search={text}>
-              {option.text.replaceAll('<br/>', '\n')}
-            </Highlighter>
-            <small className="d-block text-primary">{option.cite}</small>
-          </div>
-        )}
+        render={finderRender}
       />
     </Wrapper>
   );

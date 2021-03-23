@@ -23,7 +23,7 @@ const PresenterStyled = styled.section`
     font-size: ${({ size = 1.0, fontscale = 1.0, zoom = 1 }) => {
       return `calc(${1.4 * size * zoom * fontscale}em + 3vh)`;
     }};
-    margin: 0 0 0.5em;
+    margin: 0 0 0.3em;
     color: ${({ textcolor }) => textcolor || '#000'};
 
     strong {
@@ -38,8 +38,9 @@ const PresenterStyled = styled.section`
 
   cite {
     color: ${({ subtextcolor }) => subtextcolor || '#007bff'};
+    font-style: normal;
     font-size: ${({ zoom = 1 }) => {
-      return `calc(${1.3 * zoom}em + 1.5vh)`;
+      return `calc(${1.3 * zoom}em + 1.65vh)`;
     }};
   }
 `;

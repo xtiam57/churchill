@@ -14,7 +14,7 @@ export const MOVEMENT = {
 };
 
 export const BIRTHDAY = {
-  TIME_FRAME: 6,
+  TIME_FRAME: 5,
   ANTHEMN_INDEX: 508,
 };
 

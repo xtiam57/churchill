@@ -7,14 +7,7 @@ import { BROADCAST } from 'values';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
-export function Zoom({
-  children,
-  value = 1,
-  variant = '',
-  size = '',
-  onChange = () => {},
-  ...rest
-}) {
+export function Zoom({ variant = '', size = '', ...rest }) {
   const [settings, setSettings] = useSettings(BROADCAST.INITIAL_SETTINGS);
 
   const onZoomIn = () => {
