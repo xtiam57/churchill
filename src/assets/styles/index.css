@@ -122,6 +122,17 @@ select {
   font-size: 80%;
 }
 
+/* Shortcuts */
+
+.shortcut {
+  border: solid 1px var(--secondary);
+  color: var(--secondary);
+  border-radius: 3px;
+  padding: 2px 4px;
+  font-size: 80%;
+  font-weight: bold;
+}
+
 /* Animations */
 
 :root {

@@ -4,7 +4,8 @@ import { useIterate } from 'hooks';
 import { MOVEMENT } from 'values';
 
 export function useScriptures() {
-  const { scriptures, current, setCurrent } = useContext(ScripturesContext);
+  const { scriptures, current, setCurrent, largerVerse } =
+    useContext(ScripturesContext);
 
   const {
     bookNumber,
@@ -118,5 +119,6 @@ export function useScriptures() {
     moveBook,
     moveChapter,
     moveVerse,
+    largerVerse,
   };
 }

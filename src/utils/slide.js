@@ -10,6 +10,7 @@ Slide.create = ({
   subtext = null,
   ...rest
 }) => {
+  const length = (title ? title.length : 0) + text.replaceAll('/n', '').length;
   title = title ? `<strong>${title}</strong>/n` : '';
   text = `${title}${text}`.replaceAll('/n', '<br/>');
 
@@ -18,6 +19,7 @@ Slide.create = ({
     index,
     text,
     subtext,
+    length,
     ...rest,
   };
 };

@@ -2286,7 +2286,7 @@
   {
     "number": 171,
     "title": "LA CRUZ SOLO ME GUIARÁ",
-    "chorus": "La cruz sólo me guiará,/nLa cruz sólo me guiará;/nA mi hogar de paz y eterno amor,/nLa cruz sólo me guiará.",
+    "chorus": "Jesús sólo me guiará,/nJesús sólo me guiará;/nA mi hogar de paz y eterno amor,/nJesús sólo me guiará.",
     "stanzas": [
       "1) Al Calvario solo Jesús ascendió/nLlevando pesada cruz,/nY al morir en ella al mortal dejó/nUn fanal de gloriosa luz.",
       "2) En la cruz el alma tan sólo hallará/nLa fuente de inspiración;/nNada grande y digno en el mundo habrá/nQue en la cruz no halle aprobación.",
@@ -7412,6 +7412,241 @@
       "1) Su gracia es mayor si las cargas aumentan,/nSu fuerza es mayor si la lucha es más cruel,/nSi más son las penas, mayor es su gracia,/nSi más son las penas, mayor es su paz.",
       "2) Si nuestros recursos se han agotado,/nSi fuerzas nos faltan para continuar,/nSi a punto ya estamos de desesperarnos,/nEl tiempo ha llegado en que Dios obrará.",
       "3) Pero aunque las luchas fatiguen mi alma/nEn nombre de Cristo las he de vencer,/nSu gracia constante me ayuda en la vida/nPues si Él es mi guía seguro estaré."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice"
+  },
+  {
+    "number": 624,
+    "title": "PÓSTRATE",
+    "chorus": null,
+    "stanzas": [
+      "1) Es un privilegio estar en Su presencia;/nMeditar en Él que proveyó mi fe/nAl mirarle veo Su asombrosa gloria,/nRecordando quien es Él me postraré.",
+      "2) Póstrate, Póstrate/nEs el Rey de las Edades, Póstrate/nEl Señor te salvó,/nAnte Su alto trono ve y postrate/nDe rodillas te humillas/nPara amarle más y más, póstrate.",
+      "3) En su mano está el poder que nos da vida;/nCon su voz toda creación apareció/nEs el Dios que mis plegarias siempre escucha,/nCuando humilde le venimos a adorar.",
+      "4) Adorad, Adorad/nAl Rey de las edades, Adorad/nA mi Dios mi Señor,/nExaltado en su trono, Adorad/nDe rodillas adoradle/nCon mi vida le amaré y le adoraré."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice"
+  },
+  {
+    "number": 625,
+    "title": "PERTENEZCO A MI REY",
+    "chorus": "Pertenezco a mi Rey,/nhijo soy de su amor,/na los suyos jamás olvidó./nEn su regia mansión he de ver al Señor,/ny a su lado, feliz, viviré.",
+    "stanzas": [
+      "1) Pertenezco a mi Rey,/nhijo soy de su amor,/ny a sus regias moradas iré./nSus delicias sin fin revelome el Señor,/ny un lugar con sus hijos tendré.",
+      "2) Pertenezco a mi Rey,/ny que me ama lo sé;/ny sus dones de amor celestial,/npor doquiera que voy sin cesar hallaré,/ncomo prueba de amor sin igual.",
+      "3) Pertenezco a mi Rey,/ny no dudo jamás que reunidos/nlos suyos serán, en la Sion celestial,/nque es morada de paz,/ndo pesares jamás se hallarán."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice"
+  },
+  {
+    "number": 626,
+    "title": "AMOR ES",
+    "chorus": "Amor, es entregarse/nen alma/ny cuerpo a la humanidad;/nvivir siempre sirviendo/nsin que tu esperes algo para ti.",
+    "stanzas": [
+      "1) La gente de nuestro tiempo/nno sabe lo que es el amor./nQue vive perdiendo el tiempo,/nbuscando y sin encontrar.",
+      "2) En Cristo yo he encontrado/nejemplo de paz y de amor./nLa muerte del crucificado/nme cuenta de su gran amor.",
+      "3) Y siempre debes hablar/nque en Cristo hay salvación,/nLlevando este mensaje de/nmuerte y resurrección."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice"
+  },
+  {
+    "number": 627,
+    "title": "CRISTO LA ROCA",
+    "chorus": "Es Cristo la Roca, el ancla de mi fe;/nlos males, lamentos, y halles de temor,/nterminan por siempre, con mi supremo Rey./nEs Jesucristo mi refugio.",
+    "stanzas": [
+      "1) En las olas inmensas de embravecido mar,/nque asaltan de mi alma la pobre embarcación./nDe rodillas a Cristo clamé y el huracán,/ndesecho fue al instante a la voz de Dios.",
+      "2) Me guarda de peligros, de prueba, de dolor./nÉl manda que los vientos no agiten tempestad./nLos mares se detienen, la ola reposó,/ny en Cristo fijo el ancla, confiando más.",
+      "3) Mi dulce Salvador, sí, mi hermoso amigo y Dios,/nque libra de tristeza y aleja amarga hiel./nPor fe yo iré al cielo, mansión del ser de amor,/nla fuente inagotable de dicha y bien."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice"
+  },
+  {
+    "number": 628,
+    "title": "YO IRÉ DE LA TIERRA HASTA EL FIN",
+    "chorus": "Yo iré, yo iré de la tierra hasta el fin,/nllevaré tu verdad de la tierra hasta el fin./nQue tu amor y tu paz des a la humanidad;/nyo iré de la tierra hasta el fin.",
+    "stanzas": [
+      "1) Escucho llantos de dolor,/nde niños el clamor,/nque hacen llorar,/nguerras mil contemplo por doquier./nY veo que la humanidad/nno ama el vivir;/ngentes sin la plenitud/ndel gozo del Señor.",
+      "2) Veo la desesperación del/nmundo en derredor;/ngentes que el amar de/nDios no gozan en su ser./nHoy sé que debo ministrar a/ntodos por doquier,/ny gozoso compartir/nla gracia del Señor."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice"
+  },
+  {
+    "number": 629,
+    "title": "HASTA ESE DÍA",
+    "chorus": "Mas siempre aquí yo seguiré cantando,/nsiempre así con gozo mi alma irá./nHasta ese día en que veré la gloria,/ncuando el Señor me lleve allá.",
+    "stanzas": [
+      "1) Puedo cantar, ¡sí!, cuando yo recuerdo/nque el dolor muy pronto ha de pasar;/nen el camino que va siempre arriba:/nNo puede ser el mundo mi hogar.",
+      "2) Lo terrenal habrá de disiparse,/nal recordar que nada nuestro es;/ny lo que aquí nos da dolor, tristeza:/nNo volveremos a sufrir después.",
+      "3) El mundo vil con su trabajo y lucha,/npuede traer miseria y pesar;/nel hombre es como el halcón que, libre,/nya listo está, y así podrá volar."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice"
+  },
+  {
+    "number": 630,
+    "title": "UN MANDAMIENTO NUEVO",
+    "chorus": null,
+    "stanzas": [
+      "1) //Un mandamiento nuevo os doy:/nque os améis unos a otros.///n//Como yo os he amado, como yo os he amado:/nque os améis también vosotros.//",
+      "2) //Amémonos de corazón,/nno de labios solamente///n//Para cuando Cristo venga, para cuando Cristo/nvenga nos encuentre bien unidos//",
+      "3) //¿Cómo puedo yo orar resentido/ncon mi hermano?///n//Dios no escucha la oración, Dios no/nescucha la oración si no estoy reconciliado//"
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice"
+  },
+  {
+    "number": 631,
+    "title": "ÉL VINO A MI CORAZÓN",
+    "chorus": "Él vino a mi corazón,/nÉl vino a mi corazón./nSoy feliz con la vida que Cristo me dio,/nÉl vino a mi corazón.",
+    "stanzas": [
+      "1) Cuán glorioso es el cambio/noperado en mi ser viniendo a mi vida el Señor./nHay en mi alma una paz que yo ansiaba tener:/nla paz que me trajo su amor.",
+      "2) Ya no voy por la senda que el mal me trazó,/ndo sólo encontré confusión./nMis errores pasados Jesús los borró,/ncuando Él vino a mi corazón.",
+      "3) Ni una sombra de duda oscurece su amor,/namor que me trajo el perdón./nla esperanza que aliento la debo al Señor,/nporque Él vino a mi corazón."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice"
+  },
+  {
+    "number": 632,
+    "title": "NO TEMERÉ CON CRISTO",
+    "chorus": "Con compasión y devoción,/n(con compasión y devoción)/nsiempre me cuida en su amor./n(siempre en su amor)/nRey de la paz, Él es capaz./n(rey de la paz, Él es capaz)/nNo temeré con Cristo.",
+    "stanzas": [
+      "1) La oscuridad abrigada en maldad/ny peligros que no puedo ver./nNo temo ya, pues conmigo Él está,/ny mora en mi ser.",
+      "2) Firme en la fe no pregunto el por qué,/nno hay nada que pueda pasar./nSu voluntad es mi seguridad,/nen Él hay bienestar.",
+      "3) Va por doquier vigilando mi ser,/ny conmigo está su solaz. Cuento con Él,/nes mi ayuda tan fiel,/nme da perfecta paz."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice"
+  },
+  {
+    "number": 633,
+    "title": "¡OH AMOR ES DIOS!",
+    "chorus": "Oh, amor de Dios, brotando está,/ninmensurable eternal;/npor las edades durará, inagotable raudal.",
+    "stanzas": [
+      "1) Oh, amor de Dios su inmensidad,/nel hombre no podría contar/nni comprender  la gran verdad/nque Dios al hombre pudo a amar./nCuando el pecar entró al hogar/nde Adán y Eva en Edén/nDios les sacó, más prometió/nun Salvador también.",
+      "2) Si fuera tinta todo el mar y todo el cielo/nun gran papel y cada hombre un escritor y cada hoja un pincel;/nnunca podrían describir el gran amor de Dios;/nque al hombre pudo redimir de su pecado atroz.",
+      "3) Y cuando el tiempo pasará con cada reino mundanal,/ny cada reino caerá con cada trama y plan carnal;/nel gran amor del Redentor por siempre durará/nla gran canción de salvación su pueblo cantará."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice"
+  },
+  {
+    "number": 634,
+    "title": "ÉL ME SOSTENDRÁ",
+    "chorus": "Él me sostendrá,/nÉl me sostendrá;/npues me ama tanto el Salvador,/nÉl me sostendrá.",
+    "stanzas": [
+      "1) Si mi fe ha de caer,  Él me sostendrá;/nen la tentación yo sé,  Él me sostendrá./nNo podría estar de pie, en la oscuridad;/npues mi amor muy frágil es, Él me sostendrá.",
+      "2) Él se goza en quien salvó,/nÉl me sostendrá; ante Él precioso soy,/nÉl me sostendrá./nSus promesas fieles son, mi alma guardará;/nalto precio Él pagó, Él me sostendrá.",
+      "3) Él sufrió y por mí murió, Él me sostendrá;/nla justicia Él cumplió, Él me sostendrá./nVida eterna tengo en Él, Él me sostendrá;/n hasta que le pueda ver ¡Él regresará!"
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice"
+  },
+  {
+    "number": 635,
+    "title": "ABBA PADRE",
+    "chorus": "Abba, Padre, mi protección,/neres mi fuerza y mi canción;/nAbba, Padre, eres mi fe,/nen confusión o aflicción,/na Ti iré, Abba Padre.",
+    "stanzas": [
+      "1) Padre, dame tu provisión,/noye, Padre, mi oración./nEcho mi carga en Ti,/nquiero confiar en Ti./nDame sólo tu bendición.",
+      "2) Padre, hazme verte a Ti/nen el valle o en la lid./nCalma mi ansiedad,/ndime tu voluntad,/ntenme siempre junto a Ti.",
+      "3) Padre, quiero ser como Tú,/nhaz que ande en rectitud,/npara que los demás vean tu luz y paz,/ndócil, útil con tu virtud."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice"
+  },
+  {
+    "number": 636,
+    "title": "GOZO, PAZ Y AMOR",
+    "chorus": "//Gozo, paz y amor, yo encuentro en Ti;/n(Gozo, paz y amor, yo encuentro en Ti)/nGozo, paz y amor, Tú me das a mí./n(Gozo, paz y amor... a mí)//",
+    "stanzas": [
+      "1) Yo vengo a Ti, mi Salvador,/npara entregarte todo mi ser.",
+      "2) Tú reinas en mí, y me das poder,/npara transformar al mundo del mal./nHoy yo tengo paz dentro de mi corazón,/nhallé esta paz en Cristo, mi Dios.",
+      "3) Gozo tengo yo, dentro de mi corazón,/nhallé este gozo en Cristo, mi Dios./nSiento el amor, dentro de mi corazón,/nhallé este amor en Cristo, mi Dios."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice"
+  },
+  {
+    "number": 637,
+    "title": "USA MI VIDA",
+    "chorus": "Usa mi vida, usa mi vida/npara tu gloria oh, Jesús./nTodos los días y hoy quiero ser,/ntestigo tuyo Señor por doquier.",
+    "stanzas": [
+      "1) Muchos que viven en tu derredor/ntristes, hambrientos están./nTú por tu vida les puedes llevar/ngozo, luz y bienestar.",
+      "2) Di a los tristes que Dios es amor/nÉl quiere darles perdón./nA los que vienen a Cristo Jesús/nbuscando paz, salvación.",
+      "3) Toda tu vida hoy rinde al Señor/ncada momento se fiel./nOtros que vean en ti Su amor/npronto se rindan a Él."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice"
+  },
+  {
+    "number": 638,
+    "title": "MAESTRO SE ENCRESPAN LAS AGUAS",
+    "chorus": "Los vientos, las ondas oirán/nsu voz: \"¡Sea la paz!\"/nCalmas las iras del negro mar,/nlas luchas del alma las haces cesar,/ny así la barquilla do va el Señor,/nhundirse no puede en el mar traidor./nDoquier se cumple su voluntad:/n\"¡Sea la paz!\" \"¡Sea la paz\"!/nTu voz resuena en la inmensidad:/n\"¡Sea la paz!\"",
+    "stanzas": [
+      "1) ¡Maestro se encrespan las aguas!/n¡Y ruge la tempestad!/nLos grandes abismos del cielo/nse llenan de oscuridad./n¿No ves que aquí perecemos?/n¿Puedes dormir así,/ncuando el mar agitado nos abre,/nprofundo sepulcro aquí?",
+      "2) Maestro mi ser agitado/nte busca con ansiedad./nDe mi alma en los antros profundos/nse libra cruel tempestad./nPasa el pecado a torrentes;/nsobre mi frágil ser./n¡Y perezco, Maestro bendito!/n¡oh, quiéreme socorrer!",
+      "3) Maestro, paso la tormenta,/nlos vientos no rugen ya./nY sobre el cristal de las aguas/nel sol resplandecerá./nMaestro, prolonga esta calma,/nno me abandones más./nCruzaré los abismos contigo,/ngozando bendita paz."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice"
+  },
+  {
+    "number": 639,
+    "title": "LO QUE RESPIRA",
+    "chorus": null,
+    "stanzas": [
+      "1) // Lo que respira alabe al Señor. ///nAlabad a nuestro Dios en su santuario./nPor la hermosura de su cielo./nPor sus proezas alabadle a Él.",
+      "2) Alabadle por la grandeza de su nombre./nCon el sonido de bocina./nSalterio y arpa, a la vez cantad.",
+      "3) Alabadle con el alegre pandero./nCon el candor de la danza./nCantad con gozo al Señor./nAlabadle con cuerdas, flautas y címbalos./nDe júbilos resonantes.",
+      "4) En su lenguaje todo:/nLo que respira alabe al Señor,/nLo que respira alabe al Señor./n¡Amen!"
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice"
+  },
+  {
+    "number": 640,
+    "title": "COMO EL CIERVO",
+    "chorus": "Solo Tú eres mi sostén,/n¿A quién iré si no sólo a Ti?/n Yo te rindo mi vida entera,/npara siempre a Ti Señor.",
+    "stanzas": [
+      "1) Como el ciervo clama por las aguas,/nmi alma anhela a Dios./nSolo Tú satisfaces mi ansiedad,/nllenándome de paz.",
+      "2) Cristo Tú eres mi amigo y mi hermano,/naunque eres rey también./nYo te amó por sobre todo,/ny te alabo mi Señor.",
+      "3) Mas que al oro te anhelo a Ti,/npues sólo Tú me podrás saciar./nSólo Tú eres mi alegría,/nla razón de mi existir."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice"
+  },
+  {
+    "number": 641,
+    "title": "NOBLE SOSTÉN",
+    "chorus": "Mi sostén es Jesús,/nnunca en la lucha desmayar podré./nMi sostén es Cristo Jesús,/nnunca en la lucha desmayar podré.",
+    "stanzas": [
+      "1) Noble sostén, de la esperanza mía/nfuente bendita de vida eterna./nTan sólo el alma que en sus fuerzas fía,/ntiene paz, sí, tiene paz.",
+      "2) Yo soy muy débil, pero en ti soy fuerte,/nnunca en la lucha desmayar podré./nSi Tú estás conmigo, ni a la misma muerte/ntemeré no temeré.",
+      "3) Dura es la lucha, difícil la tarea,/nmas Tú me dotas de tu gran poder./nMi espíritu renuevas con la idea nueva/nde vencer, sí, de vencer."
     ],
     "startsWithChorus": false,
     "authors": null,

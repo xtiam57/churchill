@@ -16,7 +16,7 @@ import { Info } from 'components/info';
 import { RecentBirthdays } from 'sections/recentBirthdays';
 import { AnthemnTags } from 'sections/anthemnTags';
 
-import { useAnthemn, useKeyUp } from 'hooks';
+import { useAnthemn, useKeyUp, usePresenter } from 'hooks';
 import { getBookmarkedItems, Storage } from 'utils';
 import { BROADCAST, MOVEMENT } from 'values';
 import { typeaheadRender, finderRender } from './renders';
@@ -41,6 +41,7 @@ export default function AnthemnsView() {
   const typeaheadRef = useRef();
   const sliderRef = useRef();
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
+  const { presenting } = usePresenter();
   const { anthemns, current, setCurrent, moveAnthemn } = useAnthemn();
   const [showLogo, setShowLogo] = useState(true);
   const [showModal, setShowModal] = useState(false);
@@ -73,6 +74,12 @@ export default function AnthemnsView() {
   useEffect(() => {
     return () => stop();
   }, [stop]);
+
+  useEffect(() => {
+    if (!presenting) {
+      setShowLogo(true);
+    }
+  }, [presenting]);
 
   function onSearch(event) {
     setSearch(event);
@@ -159,17 +166,19 @@ export default function AnthemnsView() {
             variant="link"
             className="text-light p-0 text-small"
             onClick={(e) => setShowModal(true)}
+            title="Búsqueda avanzada (Ctrl+B)"
           >
             <ImIcons.ImSearch />
           </Button>
         </div>
 
         <Button
-          className={showLogo ? 'mb-4 pulse' : 'mb-4'}
+          className={showLogo && presenting ? 'mb-4 pulse' : 'mb-4'}
           block
           size="lg"
           variant={showLogo ? 'secondary' : 'warning'}
           onClick={() => setShowLogo((value) => !value)}
+          disabled={!presenting}
         >
           {showLogo ? 'Mostrar Himno' : 'Mostrar Logo'}
         </Button>

@@ -37,7 +37,12 @@ export function Bookmark({
   useKeyUp('KeyS', add, { ctrl: true });
 
   return (
-    <BookmarkStyled bookmarked={bookmarked} icon={icon} {...rest}>
+    <BookmarkStyled
+      bookmarked={bookmarked}
+      title="Ctrl+S"
+      icon={icon}
+      {...rest}
+    >
       {bookmarked ? (
         <BsBookmarkFill onClick={remove} />
       ) : (

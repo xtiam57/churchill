@@ -12,7 +12,7 @@ import { Sidebar } from 'components/sidebar';
 import { List } from 'components/list';
 import { Info } from 'components/info';
 
-import { useBirthday } from 'hooks';
+import { useBirthday, usePresenter } from 'hooks';
 import { Time } from 'utils';
 import { BROADCAST } from 'values';
 import { BirthdayModal } from './modal';
@@ -26,6 +26,7 @@ function BirthdaysView() {
   const [showModal, setShowModal] = useState(false);
   const [showLogo, setShowLogo] = useState(true);
   const { current, recent, add, remove, birthdays } = useBirthday();
+  const { presenting } = usePresenter();
 
   useEffect(() => {
     setMessage(showLogo ? null : current);
@@ -34,6 +35,12 @@ function BirthdaysView() {
   useEffect(() => {
     return () => setMessage(null);
   }, []);
+
+  useEffect(() => {
+    if (!presenting) {
+      setShowLogo(true);
+    }
+  }, [presenting]);
 
   const onSave = (data) => {
     add(data);
@@ -50,11 +57,12 @@ function BirthdaysView() {
         <h1 className="text-light display-4">Cumpleaños</h1>
 
         <Button
-          className={showLogo ? 'my-3 pulse' : 'my-3'}
+          className={showLogo && presenting ? 'my-3 pulse' : 'my-3'}
           block
           size="lg"
           variant={showLogo ? 'secondary' : 'warning'}
           onClick={() => setShowLogo((value) => !value)}
+          disabled={!presenting}
         >
           {showLogo ? 'Mostrar Cumpleaños' : 'Mostrar Logo'}
         </Button>
@@ -118,7 +126,7 @@ function BirthdaysView() {
 
         <Controls centered>
           <Button onClick={() => setShowModal(true)} variant="secondary">
-            <ImUserPlus />
+            <ImUserPlus /> Agregar
           </Button>
 
           <BirthdayModal

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import createPersistedState from 'use-persisted-state';
 import { Button, ButtonGroup } from 'react-bootstrap';
 import * as ImIcons from 'react-icons/im';
@@ -10,7 +10,7 @@ import { Controls } from 'components/controls';
 import { List } from 'components/list';
 import { Info } from 'components/info';
 
-import { useKeyUp, useIterate } from 'hooks';
+import { useKeyUp, useIterate, usePresenter } from 'hooks';
 import { BROADCAST, MOVEMENT } from 'values';
 import { NOTICES } from './notices';
 
@@ -24,6 +24,13 @@ function HomeView() {
   const [autoplay, setAutoplay] = useState(true);
   const [loop, setLoop] = useState(true);
   const [moveNotice] = useIterate(notice, NOTICES);
+  const { presenting } = usePresenter();
+
+  useEffect(() => {
+    if (!presenting) {
+      setShowLogo(true);
+    }
+  }, [presenting]);
 
   const onPrevSlide = () => sliderRef.current.prev();
 
@@ -49,11 +56,12 @@ function HomeView() {
         <h1 className="text-light display-4">Inicio</h1>
 
         <Button
-          className={showLogo ? 'my-3 pulse' : 'my-3'}
+          className={showLogo && presenting ? 'my-3 pulse' : 'my-3'}
           block
           size="lg"
           variant={showLogo ? 'secondary' : 'warning'}
           onClick={() => setShowLogo((value) => !value)}
+          disabled={!presenting}
         >
           {showLogo ? 'Mostrar Anuncio' : 'Mostrar Logo'}
         </Button>

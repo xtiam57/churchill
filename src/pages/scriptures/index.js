@@ -13,7 +13,7 @@ import { BookmarkList } from 'components/bookmarkList';
 import { Finder } from 'components/finder';
 import { Info } from 'components/info';
 
-import { useScriptures, useKeyUp } from 'hooks';
+import { useScriptures, useKeyUp, usePresenter } from 'hooks';
 import { getBookmarkedItems } from 'utils';
 import { BROADCAST, MOVEMENT } from 'values';
 import { finderRender, typeaheadRender } from './renders';
@@ -36,6 +36,7 @@ function ScripturesView() {
   const [search, setSearch] = useState([current]);
   const [bookmarks, setBookmarks] = useState(getBookmarkedItems('verse'));
   const [showFinder, setShowFinder] = useState(false);
+  const { presenting } = usePresenter();
 
   useEffect(() => {
     setMessage(showLogo ? null : current);
@@ -44,6 +45,12 @@ function ScripturesView() {
   useEffect(() => {
     return () => setMessage(null);
   }, []);
+
+  useEffect(() => {
+    if (!presenting) {
+      setShowLogo(true);
+    }
+  }, [presenting]);
 
   function onSearch(event) {
     setSearch(event);
@@ -119,17 +126,19 @@ function ScripturesView() {
             variant="link"
             className="text-light p-0 text-small"
             onClick={(e) => setShowFinder(true)}
+            title="Búsqueda avanzada (Ctrl+B)"
           >
             <ImSearch />
           </Button>
         </div>
 
         <Button
-          className={showLogo ? 'mb-4 pulse' : 'mb-4'}
+          className={showLogo && presenting ? 'mb-4 pulse' : 'mb-4'}
           block
           size="lg"
           variant={showLogo ? 'secondary' : 'warning'}
           onClick={() => setShowLogo((value) => !value)}
+          disabled={!presenting}
         >
           {showLogo ? 'Mostrar Versículo' : 'Mostrar Logo'}
         </Button>

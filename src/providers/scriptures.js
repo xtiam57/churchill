@@ -36,6 +36,7 @@ function ScripturesProvider({ children }) {
             prevBookNumber: Math.max(book.number - 1, 1),
             nextChapterNumber: chapterIndex + 2,
             prevChapterNumber: chapterIndex,
+            length: verse.replaceAll('/n', '').length,
           };
         });
       });
@@ -50,6 +51,7 @@ function ScripturesProvider({ children }) {
 
   const [first] = scriptures;
   const [current, setCurrent] = useState(first);
+  const [largerVerse] = useState(scriptures[12825]); // Ester 8:9
 
   return (
     <ScripturesContext.Provider
@@ -57,6 +59,7 @@ function ScripturesProvider({ children }) {
         scriptures,
         current,
         setCurrent,
+        largerVerse,
       }}
     >
       {children}

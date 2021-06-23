@@ -1,8 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { PresenterStyled } from './style';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { generateGUID } from 'utils';
+
+const isOverflown = ({ clientHeight, scrollHeight }) =>
+  scrollHeight > clientHeight;
+
+const resizeText = ({
+  element,
+  minSize = 10,
+  maxSize = 512,
+  step = 1,
+  unit = 'px',
+}) => {
+  let i = minSize;
+  let overflow = false;
+
+  const parent = element.parentNode;
+
+  while (!overflow && i < maxSize) {
+    // el.style.fontSize = `${i}${unit}`;
+    element.style.fontSize = `calc(${i}${unit} + 3vh)`;
+    overflow = isOverflown(parent);
+
+    if (!overflow) i += step;
+  }
+
+  // revert to last state where no overflow happened
+  // el.style.fontSize = `${i - step}${unit}`;
+  element.style.fontSize = `calc(${i - step}${unit} + 3vh)`;
+  return `calc(${i - step}${unit} + 3vh)`;
+};
 
 function getScale(length, strongCount = false, lineBreakCount = 0) {
   const FACTOR = 1.2;
@@ -56,6 +85,18 @@ export function Presenter({
   zoom = 1,
   ...rest
 }) {
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     resizeText({
+  //       element: document.getElementById('presenter-p'),
+  //       step: 0.05,
+  //       minSize: 0.5,
+  //       maxSize: 3.2,
+  //       unit: 'em',
+  //     });
+  //   }, 100);
+  // }, [children]);
+
   const size = getScale(
     children.length,
     (children.match(/<strong>/g) || []).length,
@@ -63,9 +104,10 @@ export function Presenter({
   );
 
   return (
-    <PresenterStyled size={size} zoom={zoom} {...rest}>
+    <PresenterStyled id="presenter-section" size={size} zoom={zoom} {...rest}>
       <AnimatePresence exitBeforeEnter>
         <motion.p
+          id="presenter-p"
           key={id}
           className={subtext ? '' : 'mb-0'}
           dangerouslySetInnerHTML={{
@@ -83,11 +125,12 @@ export function Presenter({
               .replace('10)', '<strong>(10)</strong><br/> '),
           }}
           {...textMotion}
+          transition={{ duration: 0.25 }}
         />
       </AnimatePresence>
 
       <AnimatePresence exitBeforeEnter>
-        <motion.div key={id} {...subtextMotion}>
+        <motion.div id="presenter-cite" key={id} {...subtextMotion}>
           {subtext ? <cite>{subtext}</cite> : null}
         </motion.div>
       </AnimatePresence>

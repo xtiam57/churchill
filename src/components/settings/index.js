@@ -107,7 +107,7 @@ export function Settings() {
             type="range"
             min="0.05"
             max="2"
-            step="0.05"
+            step="0.01"
             name="fontscale"
             value={settings?.fontscale}
             onChange={onChangeNumericValue}
