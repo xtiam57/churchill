@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { ROUTES } from 'values';
+import { PATHS } from 'router';
 
 const PresenterContext = React.createContext({});
 
@@ -55,9 +55,9 @@ const PresenterProvider = ({ children }) => {
         });
 
         // Open the DevTools.
-        // win.webContents.openDevTools();
+        win.webContents.openDevTools();
 
-        win.loadURL(url.replace(/#.*$/, `#${ROUTES.CAST_PAGE}`));
+        win.loadURL(url.replace(/#.*$/, `#${PATHS.CAST_PAGE}`));
 
         win.once('ready-to-show', () => {
           win.show();

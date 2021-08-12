@@ -1,8 +1,6 @@
 import React from 'react';
 import { Alert } from 'react-bootstrap';
 
-import { Zoom } from 'components/zoom';
-
 export function Info({ children, live = false, ...rest }) {
   const variant = live ? 'warning' : 'secondary';
 
@@ -13,8 +11,6 @@ export function Info({ children, live = false, ...rest }) {
       {...rest}
     >
       <div>{children}</div>
-
-      <Zoom variant="outline-dark" size="sm" />
     </Alert>
   );
 }

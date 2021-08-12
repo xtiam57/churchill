@@ -1,13 +1,5 @@
 import { BACKGROUNDS } from './images';
 
-export const ROUTES = {
-  ROOT: '/',
-  SCRIPTURES_PAGE: '/scriptures',
-  ANTHEMNS_PAGE: '/anthemns',
-  BIRTHDAYS_PAGE: '/birthdays',
-  CAST_PAGE: '/cast-screen',
-};
-
 export const MOVEMENT = {
   NEXT: '>',
   PREV: '<',
@@ -89,8 +81,6 @@ export const THEMES = {
 const SETTINGS_INITIAL_STATE = {
   interval: 10000,
   font: '',
-  fontscale: 1,
-  zoom: 0.7,
   blur: 5,
   logo: 'default',
   image: '',

@@ -6,7 +6,7 @@ import React, {
 } from 'react';
 import createPersistedState from 'use-persisted-state';
 
-import { SlidePreviewStyled } from './style';
+import { SlidePreviewStyled } from './styled';
 
 import { Presenter } from 'components/presenter';
 import { useIterate, useKeyUp } from 'hooks';
@@ -29,6 +29,7 @@ export const Slider = forwardRef(
       live = false,
       autoplay = false,
       loop = false,
+      grayscale = false,
     },
     ref
   ) => {
@@ -88,6 +89,7 @@ export const Slider = forwardRef(
           live={live}
           id={slide?.id || slide?.index || generateGUID()}
           subtext={slide?.subtext}
+          grayscale={grayscale}
           {...settings}
         >
           {slide?.text}

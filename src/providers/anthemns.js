@@ -9,22 +9,22 @@ function splitLines(id, title, text, array, index) {
   const length = text.length - lines.length - 1 - 3;
 
   const DIVIDER = 2;
-  const THRESHOLD = 125;
+  const THRESHOLD = 999;
   let iteration = 0;
   let count = 0;
 
-  if (length <= THRESHOLD) {
-    const slide = Slide.create({
-      id: `${id}_${index}`,
-      index: index++,
-      title,
-      text,
-    });
+  // if (length <= THRESHOLD) {
+  //   const slide = Slide.create({
+  //     id: `${id}_${index}`,
+  //     index: index++,
+  //     title,
+  //     text,
+  //   });
 
-    array.push(slide);
+  //   array.push(slide);
 
-    return index;
-  }
+  //   return index;
+  // }
 
   while (count < lines.length) {
     const from = iteration * DIVIDER;
@@ -71,10 +71,7 @@ function AnthemnsProvider({ children }) {
         slides.push(
           Slide.create({
             id: `${id}_${slideIndex}`,
-            title: `${
-              isNotAnthemn ? `Coro #${number}` : `Himno #${number}`
-              // : `${isExtra ? `Apéndice #${number}` : `Himno #${number}`}`
-            }`,
+            title: `${isNotAnthemn ? `Coro #${number}` : `Himno #${number}`}`,
             text: title,
             subtext: authors,
             index: slideIndex++,

@@ -4,7 +4,7 @@ import {
   TitleStyled,
   ActionStyled,
   TextStyled,
-} from './style';
+} from './styled';
 
 export const List = {
   ...ListStyled,

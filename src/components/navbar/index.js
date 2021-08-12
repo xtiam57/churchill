@@ -1,34 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
-import * as BsIcons from 'react-icons/bs';
+import { BsHouseFill, BsFillGearFill } from 'react-icons/bs';
 import { RiSlideshow2Fill, RiStopFill } from 'react-icons/ri';
 
-import { ROUTES } from 'values';
-import { usePresenter, useSettingsSidebar } from 'hooks';
+import { usePresenter, useSettingsSidebar, useClock } from 'hooks';
+
+import { routes, PATHS } from 'router';
 
 export function Navbar() {
   const location = useLocation();
+  const time = useClock();
   const { toggleSettings } = useSettingsSidebar();
   const { toggle, presenting } = usePresenter();
-  const [date, setDate] = useState(new Date());
 
-  useEffect(() => {
-    const timer = setInterval(() => setDate(new Date()), 1000);
-    return () => clearInterval(timer);
-  }, []);
-
-  if (location.pathname === ROUTES.CAST_PAGE) {
+  if (location.pathname === PATHS.CAST_PAGE) {
     return null;
   }
 
-  const navbarStyle = `navbar navbar-expand-lg sticky-top ${
+  const styles = `navbar navbar-expand-lg sticky-top ${
     presenting ? 'navbar-light bg-warning' : 'navbar-dark bg-primary'
   }`;
 
   return (
     <>
-      <nav className={navbarStyle}>
+      <nav className={styles}>
         <div className="container-fluid">
           <span className="navbar-brand">Churchill</span>
 
@@ -40,35 +36,7 @@ export function Navbar() {
                 className="nav-link"
                 activeClassName="active"
               >
-                <BsIcons.BsHouseFill />
-              </NavLink>
-            </li>
-
-            <li className="nav-item">
-              <NavLink
-                to={ROUTES.SCRIPTURES_PAGE}
-                className="nav-link"
-                activeClassName="active"
-              >
-                <BsIcons.BsBook /> Escrituras
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                to={ROUTES.ANTHEMNS_PAGE}
-                className="nav-link"
-                activeClassName="active"
-              >
-                <BsIcons.BsMusicNoteList /> Himnos
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                to={ROUTES.BIRTHDAYS_PAGE}
-                className="nav-link"
-                activeClassName="active"
-              >
-                <BsIcons.BsGift /> Cumpleaños
+                <BsHouseFill />
               </NavLink>
             </li>
             <li className="nav-item">
@@ -77,14 +45,26 @@ export function Navbar() {
                 className={presenting ? 'text-dark' : 'text-light'}
                 variant="link"
               >
-                <BsIcons.BsFillGearFill />
+                <BsFillGearFill />
               </Button>
             </li>
+
+            {routes
+              .filter((route) => route.menu)
+              .map((route) => (
+                <li className="nav-item">
+                  <NavLink
+                    to={route.path}
+                    className="nav-link"
+                    activeClassName="active"
+                  >
+                    {route.icon} {route.label}
+                  </NavLink>
+                </li>
+              ))}
           </ul>
 
-          <span className="navbar-text d-block mr-3">
-            {date.toLocaleTimeString()}
-          </span>
+          <span className="navbar-text d-block mr-3">{time}</span>
 
           <Button
             onClick={toggle}

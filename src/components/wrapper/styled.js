@@ -12,4 +12,13 @@ export const WrapperStyled = styled.main`
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
+
+  .time {
+    font-size: calc(2em + 3vh);
+    color: ${({ titlecolor }) => titlecolor || '#007bff'} !important;
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    line-height: 1;
+  }
 `;

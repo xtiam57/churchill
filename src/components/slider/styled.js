@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const SlidePreviewStyled = styled.div`
+export const SlidePreviewStyled = styled.div`
   background-color: #fff;
   border-radius: 0.2rem;
   border: 1px solid #ced4da;
@@ -41,5 +41,3 @@ const SlidePreviewStyled = styled.div`
     opacity: 0;
   }
 `;
-
-export { SlidePreviewStyled };

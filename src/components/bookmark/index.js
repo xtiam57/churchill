@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BsBookmarkPlus, BsBookmarkFill } from 'react-icons/bs';
 
-import { BookmarkStyled } from './style';
+import { BookmarkStyled } from './styled';
 import { Storage, getBookmarkedItems } from 'utils';
 import { useKeyUp } from 'hooks';
 
