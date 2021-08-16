@@ -96,6 +96,15 @@ export const BROADCAST = {
   INITIAL_SETTINGS: SETTINGS_INITIAL_STATE,
 };
 
+export const CLOCK_POSITION = [
+  { value: '', label: 'Arriba-Izquierda' },
+  { value: '', label: 'Arriba-Centro' },
+  { value: '', label: 'Arriba-Derecha' },
+  { value: '', label: 'Abajo-Izquierda' },
+  { value: '', label: 'Abajo-Derecha' },
+  { value: '', label: 'Abajo-Centro' },
+];
+
 export const SETTINGS_OPTIONS = {
   FONT_FAMILIES: [
     { value: '', label: 'Predeterminada' },

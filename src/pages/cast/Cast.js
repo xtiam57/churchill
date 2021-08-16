@@ -25,7 +25,7 @@ export default function CastPage() {
         />
       ) : (
         <>
-          <Logo width="65%" height="65%" {...settings} />
+          <Logo width="60%" height="60%" {...settings} />
 
           {/* <div className="time">
             {new Date().toLocaleTimeString('en-us', {

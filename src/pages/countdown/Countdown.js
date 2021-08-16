@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import createPersistedState from 'use-persisted-state';
-import { Button } from 'react-bootstrap';
-import * as ImIcons from 'react-icons/im';
+import { Button, Form, Col } from 'react-bootstrap';
+import { ImStop2, ImPlay3 } from 'react-icons/im';
+import { BsClock } from 'react-icons/bs';
 
 import { Sidebar } from 'components/sidebar';
 import { Wrapper } from 'components/wrapper';
@@ -12,24 +13,20 @@ import { List } from 'components/list';
 import { useCountdown, usePresenter } from 'hooks';
 import { BROADCAST } from 'values';
 
-import { CountdonwModal } from './modal';
-
 const useBroadcast = createPersistedState(BROADCAST.CHANNEL);
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
 export default function StopwatchPage() {
   const [, setMessage] = useBroadcast(BROADCAST.INITIAL_CHANNEL);
   const [showLogo, setShowLogo] = useState(true);
-  const { time, start } = useCountdown((time) => {
-    setMessage({
-      id: 'TEMP',
-      text: `<strong class="fs-xxl">${time}</strong>`,
-      type: 'temp',
-    });
+  const { time, start, stop } = useCountdown(showLogo, (msg) => {
+    setMessage(msg);
   });
-  const [showModal, setShowModal] = useState(false);
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const { presenting } = usePresenter();
+  const [minutes, setMinutes] = useState(0);
+  const [seconds, setSeconds] = useState(0);
+  const [validated, setValidated] = useState(true);
 
   useEffect(() => {
     return () => setMessage(null);
@@ -41,15 +38,23 @@ export default function StopwatchPage() {
     }
   }, [presenting]);
 
-  const onSave = ({ minutes, seconds, formatted }) => {
-    setShowModal(false);
-    start(minutes, seconds);
+  const handleSubmit = (e) => {
+    const form = e.currentTarget;
+    if (form.checkValidity() === false) {
+      e.preventDefault();
+      e.stopPropagation();
+    } else {
+      console.log('form.checkValidity()', form.checkValidity());
+      start(minutes, seconds);
+    }
+
+    setValidated(true);
   };
 
   return (
     <Wrapper>
       <Sidebar>
-        <h1 className="text-light display-4">Temp</h1>
+        <h1 className="text-light display-4">Temp.</h1>
 
         <Button
           className={showLogo && presenting ? 'my-3 pulse' : 'my-3'}
@@ -62,25 +67,99 @@ export default function StopwatchPage() {
           {showLogo ? 'Mostrar Temporizador' : 'Mostrar Logo'}
         </Button>
 
+        <Form noValidate validated={validated} onSubmit={handleSubmit}>
+          <Form.Row>
+            <Form.Group hasValidation as={Col}>
+              <Form.Label className="text-warning text-small">
+                Minutos
+              </Form.Label>
+              <Form.Control
+                type="number"
+                value={minutes}
+                onChange={({ target }) => setMinutes(+target.value)}
+                required
+                min="0"
+                max="59"
+                step="1"
+              />
+            </Form.Group>
+
+            <Form.Group hasValidation as={Col}>
+              <Form.Label className="text-warning text-small">
+                Segundos
+              </Form.Label>
+              <Form.Control
+                type="number"
+                value={seconds}
+                onChange={({ target }) => setSeconds(+target.value)}
+                required
+                min="0"
+                max="59"
+              />
+            </Form.Group>
+          </Form.Row>
+          <Form.Row>
+            <Col>
+              <Button type="submit" className="mb-3" block variant="primary">
+                <ImPlay3 /> Iniciar
+              </Button>
+            </Col>
+          </Form.Row>
+        </Form>
+
         <List className="mb-4">
           <List.Item>
-            <List.Title>Predefinidos</List.Title>
+            <List.Title>predefinidos en segundos</List.Title>
           </List.Item>
 
           <List.Item>
-            <List.Action onClick={() => start(0, 30)}>00:30</List.Action>
+            <List.Action onClick={() => start(0, 11)}>
+              <BsClock /> 00:10
+            </List.Action>
           </List.Item>
           <List.Item>
-            <List.Action onClick={() => start(1, 0)}>01:00</List.Action>
+            <List.Action onClick={() => start(0, 31)}>
+              <BsClock /> 00:30
+            </List.Action>
           </List.Item>
           <List.Item>
-            <List.Action onClick={() => start(2, 0)}>02:00</List.Action>
+            <List.Action onClick={() => start(0, 46)}>
+              <BsClock /> 00:45
+            </List.Action>
+          </List.Item>
+
+          <List.Item className="mt-3">
+            <List.Title>predefinidos en minutos</List.Title>
           </List.Item>
           <List.Item>
-            <List.Action onClick={() => start(5, 0)}>05:00</List.Action>
+            <List.Action onClick={() => start(1, 1)}>
+              <BsClock /> 01:00
+            </List.Action>
           </List.Item>
           <List.Item>
-            <List.Action onClick={() => start(10, 0)}>10:00</List.Action>
+            <List.Action onClick={() => start(2, 1)}>
+              <BsClock /> 02:00
+            </List.Action>
+          </List.Item>
+          <List.Item>
+            <List.Action onClick={() => start(5, 1)}>
+              <BsClock /> 05:00
+            </List.Action>
+          </List.Item>
+          <List.Item>
+            <List.Action onClick={() => start(10, 1)}>
+              <BsClock /> 10:00
+            </List.Action>
+          </List.Item>
+          <List.Item>
+            <List.Action onClick={() => start(30, 1)}>
+              <BsClock /> 30:00
+            </List.Action>
+          </List.Item>
+          <List.Item>
+            <List.Action onClick={() => start(45, 1)}>
+              <BsClock /> 45:00
+            </List.Action>
           </List.Item>
         </List>
       </Sidebar>
@@ -95,19 +174,9 @@ export default function StopwatchPage() {
         />
 
         <Controls centered>
-          <Button onClick={() => setShowModal(true)} variant="secondary">
-            <ImIcons.ImPlus />
+          <Button onClick={() => stop()} variant="secondary">
+            <ImStop2 />
           </Button>
-
-          <Button onClick={() => start(0, 0)} variant="secondary">
-            <ImIcons.ImStop2 />
-          </Button>
-
-          <CountdonwModal
-            show={showModal}
-            handleClose={() => setShowModal(false)}
-            handleSave={onSave}
-          />
         </Controls>
       </Wrapper>
     </Wrapper>
