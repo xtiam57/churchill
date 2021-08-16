@@ -20,7 +20,7 @@ export function Settings() {
   const [file, setFile] = useState(null);
   const { reload } = usePresenter();
 
-  const onChangeValue = ({ target }) => {
+  const handleChangeValue = ({ target }) => {
     const { name, value } = target;
 
     setSettings((state) => ({
@@ -29,7 +29,7 @@ export function Settings() {
     }));
   };
 
-  const onChangeNumericValue = ({ target }) => {
+  const handleChangeNumericValue = ({ target }) => {
     const { name, value } = target;
 
     setSettings((state) => ({
@@ -38,7 +38,7 @@ export function Settings() {
     }));
   };
 
-  const onChangeTheme = ({ target }) => {
+  const handleChangeTheme = ({ target }) => {
     const { value } = target;
     const data = value !== 'custom' ? THEMES[value] : {};
 
@@ -49,14 +49,26 @@ export function Settings() {
     }));
   };
 
-  const onExport = () => {
+  const handleExport = () => {
     Storage.download();
   };
 
-  const onImport = () => {
+  const handleImport = () => {
     Storage.upload(file, () => {
       reload();
     });
+  };
+
+  const handleRandomBackground = (e) => {
+    e.preventDefault();
+    const min = 0;
+    const max = SETTINGS_OPTIONS.BACKGROUNDS.length;
+    const index = Math.floor(Math.random() * (max - min) + min);
+
+    setSettings((state) => ({
+      ...state,
+      image: SETTINGS_OPTIONS.BACKGROUNDS[index].value,
+    }));
   };
 
   // useClickOutside(ref, () => {
@@ -85,7 +97,7 @@ export function Settings() {
             as="select"
             name="font"
             value={settings?.font}
-            onChange={onChangeValue}
+            onChange={handleChangeValue}
           >
             {SETTINGS_OPTIONS.FONT_FAMILIES.map(({ value, label }) => (
               <option key={value} value={value}>
@@ -104,7 +116,7 @@ export function Settings() {
             as="select"
             value={settings?.theme}
             name="theme"
-            onChange={onChangeTheme}
+            onChange={handleChangeTheme}
           >
             {SETTINGS_OPTIONS.THEMES.map(({ value, label }) => (
               <option key={value} value={value}>
@@ -124,7 +136,7 @@ export function Settings() {
                 type="color"
                 name="background"
                 value={settings?.background}
-                onChange={onChangeValue}
+                onChange={handleChangeValue}
                 disabled={settings?.theme !== 'custom'}
               />
             </Form.Group>
@@ -135,7 +147,7 @@ export function Settings() {
                 size="sm"
                 name="textcolor"
                 value={settings?.textcolor}
-                onChange={onChangeValue}
+                onChange={handleChangeValue}
                 disabled={settings?.theme !== 'custom'}
               />
             </Form.Group>
@@ -149,7 +161,7 @@ export function Settings() {
                 type="color"
                 name="subtextcolor"
                 value={settings?.subtextcolor}
-                onChange={onChangeValue}
+                onChange={handleChangeValue}
                 disabled={settings?.theme !== 'custom'}
               />
             </Form.Group>
@@ -160,7 +172,7 @@ export function Settings() {
                 type="color"
                 name="titlecolor"
                 value={settings?.titlecolor}
-                onChange={onChangeValue}
+                onChange={handleChangeValue}
                 disabled={settings?.theme !== 'custom'}
               />
             </Form.Group>
@@ -168,14 +180,19 @@ export function Settings() {
         </>
       ) : null}
       <Form.Row>
-        <Form.Group as={Col} className="mb-1">
-          <Form.Label className=" small mb-1">Fondo</Form.Label>
+        <Form.Group as={Col} className="mb-2">
+          <Form.Label className="small my-2 d-flex justify-content-between">
+            Imagen de Fondo{' '}
+            <a href=" " onClick={handleRandomBackground}>
+              (Aleatorio)
+            </a>
+          </Form.Label>
           <Form.Control
             size="sm"
             as="select"
             value={settings?.image}
             name="image"
-            onChange={onChangeValue}
+            onChange={handleChangeValue}
           >
             {SETTINGS_OPTIONS.BACKGROUNDS.map(({ value, label }) => (
               <option key={value} value={value}>
@@ -185,6 +202,7 @@ export function Settings() {
           </Form.Control>
         </Form.Group>
       </Form.Row>
+
       {settings?.image ? (
         <Form.Row>
           <Form.Group as={Col} className="mb-1">
@@ -200,7 +218,7 @@ export function Settings() {
               step="1"
               name="blur"
               value={settings?.blur}
-              onChange={onChangeNumericValue}
+              onChange={handleChangeNumericValue}
             />
           </Form.Group>
         </Form.Row>
@@ -214,7 +232,7 @@ export function Settings() {
             size="sm"
             name="logo"
             value={settings?.logo}
-            onChange={onChangeValue}
+            onChange={handleChangeValue}
           >
             {SETTINGS_OPTIONS.LOGOS.map(({ value, label }) => (
               <option key={value} value={value}>
@@ -231,7 +249,7 @@ export function Settings() {
             size="sm"
             value={settings?.mode}
             name="mode"
-            onChange={onChangeValue}
+            onChange={handleChangeValue}
           >
             <option value="default">Normal</option>
             <option value="#ffffff">Negativo</option>
@@ -251,7 +269,7 @@ export function Settings() {
             as="select"
             name="interval"
             value={settings?.interval}
-            onChange={onChangeNumericValue}
+            onChange={handleChangeNumericValue}
           >
             {SETTINGS_OPTIONS.TIME_INTERVALS.map(({ value, label }) => (
               <option key={value} value={value}>
@@ -287,7 +305,7 @@ export function Settings() {
           <Form.Label className=" small mb-1">
             Exportar datos del usuario
           </Form.Label>
-          <Button variant="outline-primary" block onClick={onExport}>
+          <Button variant="outline-primary" block onClick={handleExport}>
             <BsDownload /> Exportar
           </Button>
         </Form.Group>
@@ -315,7 +333,7 @@ export function Settings() {
             <Button
               variant="outline-primary"
               block
-              onClick={onImport}
+              onClick={handleImport}
               disabled={!file}
             >
               <BsUpload /> Importar

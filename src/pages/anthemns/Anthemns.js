@@ -179,7 +179,7 @@ export default function AnthemnsPage() {
           onClick={() => setShowLogo((value) => !value)}
           disabled={!presenting}
         >
-          {showLogo ? 'Mostrar Himno' : 'Mostrar Logo'}
+          {showLogo ? 'Proyectar' : 'Mostrar Logo'}
         </Button>
 
         <RecentBirthdays className="mb-4" onClick={onSearch} />

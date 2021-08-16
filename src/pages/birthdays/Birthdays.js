@@ -64,7 +64,7 @@ export default function BirthdaysPage() {
           onClick={() => setShowLogo((value) => !value)}
           disabled={!presenting}
         >
-          {showLogo ? 'Mostrar Cumpleaños' : 'Mostrar Logo'}
+          {showLogo ? 'Proyectar' : 'Mostrar Logo'}
         </Button>
 
         <List className="mb-4">

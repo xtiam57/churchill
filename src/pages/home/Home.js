@@ -62,7 +62,7 @@ export default function HomePage() {
           onClick={() => setShowLogo((value) => !value)}
           disabled={!presenting}
         >
-          {showLogo ? 'Mostrar Anuncio' : 'Mostrar Logo'}
+          {showLogo ? 'Proyectar' : 'Mostrar Logo'}
         </Button>
 
         <List className="mb-4">

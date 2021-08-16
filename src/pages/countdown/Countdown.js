@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import createPersistedState from 'use-persisted-state';
-import { Button, Form, Col } from 'react-bootstrap';
+import { Button, Form, Col, Row } from 'react-bootstrap';
 import { ImStop2, ImPlay3 } from 'react-icons/im';
 import { BsClock } from 'react-icons/bs';
 
@@ -64,7 +64,7 @@ export default function StopwatchPage() {
           onClick={() => setShowLogo((value) => !value)}
           disabled={!presenting}
         >
-          {showLogo ? 'Mostrar Temporizador' : 'Mostrar Logo'}
+          {showLogo ? 'Proyectar' : 'Mostrar Logo'}
         </Button>
 
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
@@ -112,55 +112,67 @@ export default function StopwatchPage() {
             <List.Title>predefinidos en segundos</List.Title>
           </List.Item>
 
-          <List.Item>
-            <List.Action onClick={() => start(0, 11)}>
-              <BsClock /> 00:10
-            </List.Action>
-          </List.Item>
-          <List.Item>
-            <List.Action onClick={() => start(0, 31)}>
-              <BsClock /> 00:30
-            </List.Action>
-          </List.Item>
-          <List.Item>
-            <List.Action onClick={() => start(0, 46)}>
-              <BsClock /> 00:45
-            </List.Action>
-          </List.Item>
+          <Row>
+            <List.Item as={Col}>
+              <List.Action onClick={() => start(0, 11)}>
+                <BsClock /> 00:10
+              </List.Action>
+            </List.Item>
+
+            <List.Item as={Col}>
+              <List.Action onClick={() => start(0, 31)}>
+                <BsClock /> 00:30
+              </List.Action>
+            </List.Item>
+
+            <List.Item as={Col}>
+              <List.Action onClick={() => start(0, 46)}>
+                <BsClock /> 00:45
+              </List.Action>
+            </List.Item>
+          </Row>
 
           <List.Item className="mt-3">
             <List.Title>predefinidos en minutos</List.Title>
           </List.Item>
-          <List.Item>
-            <List.Action onClick={() => start(1, 1)}>
-              <BsClock /> 01:00
-            </List.Action>
-          </List.Item>
-          <List.Item>
-            <List.Action onClick={() => start(2, 1)}>
-              <BsClock /> 02:00
-            </List.Action>
-          </List.Item>
-          <List.Item>
-            <List.Action onClick={() => start(5, 1)}>
-              <BsClock /> 05:00
-            </List.Action>
-          </List.Item>
-          <List.Item>
-            <List.Action onClick={() => start(10, 1)}>
-              <BsClock /> 10:00
-            </List.Action>
-          </List.Item>
-          <List.Item>
-            <List.Action onClick={() => start(30, 1)}>
-              <BsClock /> 30:00
-            </List.Action>
-          </List.Item>
-          <List.Item>
-            <List.Action onClick={() => start(45, 1)}>
-              <BsClock /> 45:00
-            </List.Action>
-          </List.Item>
+
+          <Row>
+            <List.Item as={Col}>
+              <List.Action onClick={() => start(1, 1)}>
+                <BsClock /> 01:00
+              </List.Action>
+            </List.Item>
+
+            <List.Item as={Col}>
+              <List.Action onClick={() => start(2, 1)}>
+                <BsClock /> 02:00
+              </List.Action>
+            </List.Item>
+
+            <List.Item as={Col}>
+              <List.Action onClick={() => start(5, 1)}>
+                <BsClock /> 05:00
+              </List.Action>
+            </List.Item>
+          </Row>
+
+          <Row>
+            <List.Item as={Col}>
+              <List.Action onClick={() => start(10, 1)}>
+                <BsClock /> 10:00
+              </List.Action>
+            </List.Item>
+            <List.Item as={Col}>
+              <List.Action onClick={() => start(30, 1)}>
+                <BsClock /> 30:00
+              </List.Action>
+            </List.Item>
+            <List.Item as={Col}>
+              <List.Action onClick={() => start(45, 1)}>
+                <BsClock /> 45:00
+              </List.Action>
+            </List.Item>
+          </Row>
         </List>
       </Sidebar>
 

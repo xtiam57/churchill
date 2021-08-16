@@ -10,8 +10,9 @@ export const PresenterStyled = styled.section`
   width: 100%;
   padding: 4em;
   text-align: center;
-  border: ${({ live, background }) =>
-    live ? 'solid 4px var(--warning)' : `solid 1px ${background}`};
+  border: 1px solid var(--dark);
+  /* border: ${({ live, background }) =>
+    live ? 'solid 4px var(--warning)' : `solid 1px ${background}`}; */
   backdrop-filter: ${({ blur, grayscale }) =>
     blur
       ? `blur(${blur}px) grayscale(${grayscale ? 1 : 0})`

@@ -135,7 +135,7 @@ function ScripturesView() {
           onClick={() => setShowLogo((value) => !value)}
           disabled={!presenting}
         >
-          {showLogo ? 'Mostrar Versículo' : 'Mostrar Logo'}
+          {showLogo ? 'Proyectar' : 'Mostrar Logo'}
         </Button>
 
         <BookmarkList
