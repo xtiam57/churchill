@@ -93,7 +93,7 @@ export const Slider = forwardRef(
           {...settings}
         />
 
-        {settings?.preview ? (
+        {/* {settings?.preview ? (
           <SlidePreviewStyled className={next.id === slide.id ? 'hide' : ''}>
             <Presenter
               id={next?.id || next?.index}
@@ -101,7 +101,7 @@ export const Slider = forwardRef(
               subtext={next?.subtext}
             />
           </SlidePreviewStyled>
-        ) : null}
+        ) : null} */}
 
         <div className="text-light bg-dark py-2 px-3 d-flex justify-content-between">
           <small>{children}</small>

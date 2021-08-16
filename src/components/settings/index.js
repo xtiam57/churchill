@@ -280,7 +280,7 @@ export function Settings() {
         </Form.Group>
       </Form.Row>
 
-      <Form.Row className="mt-3">
+      {/* <Form.Row className="mt-3">
         <Form.Group as={Col} className="mb-1">
           <Form.Check
             type="switch"
@@ -296,7 +296,7 @@ export function Settings() {
             }}
           />
         </Form.Group>
-      </Form.Row>
+      </Form.Row> */}
 
       <hr />
 

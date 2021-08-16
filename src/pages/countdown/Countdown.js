@@ -26,7 +26,6 @@ export default function StopwatchPage() {
   const { presenting } = usePresenter();
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
-  const [validated, setValidated] = useState(true);
 
   useEffect(() => {
     return () => setMessage(null);
@@ -64,7 +63,7 @@ export default function StopwatchPage() {
           {showLogo ? 'Proyectar' : 'Mostrar Logo'}
         </Button>
 
-        <Form noValidate validated={validated} onSubmit={handleSubmit}>
+        <Form noValidate validated={true} onSubmit={handleSubmit}>
           <Form.Row>
             <Form.Group hasValidation as={Col}>
               <Form.Label className="text-warning text-small">

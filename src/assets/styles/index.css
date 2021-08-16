@@ -1,4 +1,7 @@
 /* Reset */
+body {
+  overflow: hidden;
+}
 
 .btn:focus {
   outline: none;
