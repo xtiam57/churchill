@@ -39,16 +39,13 @@ export default function StopwatchPage() {
   }, [presenting]);
 
   const handleSubmit = (e) => {
-    const form = e.currentTarget;
-    if (form.checkValidity() === false) {
-      e.preventDefault();
-      e.stopPropagation();
-    } else {
-      console.log('form.checkValidity()', form.checkValidity());
-      start(minutes, seconds);
-    }
+    e.preventDefault();
+    e.stopPropagation();
 
-    setValidated(true);
+    const form = e.currentTarget;
+    if (form.checkValidity()) {
+      start(minutes, seconds + 1);
+    }
   };
 
   return (

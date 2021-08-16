@@ -182,7 +182,7 @@ export function Settings() {
       <Form.Row>
         <Form.Group as={Col} className="mb-2">
           <Form.Label className="small my-2 d-flex justify-content-between">
-            Imagen de Fondo{' '}
+            Imagen de Fondo
             <a href=" " onClick={handleRandomBackground}>
               (Aleatorio)
             </a>
