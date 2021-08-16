@@ -11,7 +11,6 @@ import { SlidePreviewStyled } from './styled';
 import { Presenter } from 'components/presenter';
 import { useIterate, useKeyUp } from 'hooks';
 import { BROADCAST, MOVEMENT } from 'values';
-import { generateGUID } from 'utils';
 
 const useBroadcast = createPersistedState(BROADCAST.CHANNEL);
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
@@ -87,22 +86,20 @@ export const Slider = forwardRef(
       <>
         <Presenter
           live={live}
-          id={slide?.id || slide?.index || generateGUID()}
+          id={slide?.id || slide?.index}
+          text={slide?.text}
           subtext={slide?.subtext}
           grayscale={grayscale}
           {...settings}
-        >
-          {slide?.text}
-        </Presenter>
+        />
 
         {settings?.preview ? (
           <SlidePreviewStyled className={next.id === slide.id ? 'hide' : ''}>
             <Presenter
-              id={next?.id || next?.index || generateGUID()}
+              id={next?.id || next?.index}
+              text={next?.text}
               subtext={next?.subtext}
-            >
-              {next?.text}
-            </Presenter>
+            />
           </SlidePreviewStyled>
         ) : null}
 

@@ -19,11 +19,10 @@ export default function CastPage() {
       {message ? (
         <Presenter
           id={message.id}
-          subtext={message.subtext || message.cite}
+          text={message.text}
+          subtext={message.subtext}
           {...settings}
-        >
-          {message.text}
-        </Presenter>
+        />
       ) : (
         <>
           <Logo width="65%" height="65%" {...settings} />

@@ -22,7 +22,13 @@ export function Bookmark({
 
   const add = () => {
     if (!Storage.has(createKey(element))) {
-      Storage.set(createKey(element), element);
+      Storage.set(createKey(element), {
+        id: element.id,
+        title: element.title,
+        type: element.type,
+        index: element.index,
+        text: element.text,
+      });
       setBookmarked(true);
       onChange(getBookmarkedItems(element.type));
     }

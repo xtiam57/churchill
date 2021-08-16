@@ -54,7 +54,7 @@ export default function BirthdaysPage() {
   return (
     <Wrapper>
       <Sidebar>
-        <h1 className="text-light display-4">Cumpleaños</h1>
+        <h1 className="text-light display-4">Cumples</h1>
 
         <Button
           className={showLogo && presenting ? 'my-3 pulse' : 'my-3'}
@@ -118,12 +118,11 @@ export default function BirthdaysPage() {
         <Presenter
           id={current.id}
           live={!showLogo}
+          text={current.text}
           subtext={current.subtext}
           grayscale={presenting && showLogo}
           {...settings}
-        >
-          {current.text}
-        </Presenter>
+        />
 
         <Controls centered>
           <Button onClick={() => setShowModal(true)} variant="secondary">

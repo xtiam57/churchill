@@ -21,9 +21,9 @@ function ScripturesProvider({ children }) {
             id: `V${book.number}_${chapterIndex + 1}_${verseIndex + 1}`,
             // Verse data
             index: index++,
-            cite: `${book.shortTitle} ${chapterIndex + 1}:${verseIndex + 1}`,
             title: `${book.shortTitle} ${chapterIndex + 1}:${verseIndex + 1}`,
             text: verse.replaceAll('/n', '<br/>'),
+            subtext: `${book.shortTitle} ${chapterIndex + 1}:${verseIndex + 1}`,
             type: 'verse',
             // Metadata
             bookNumber: book.number,

@@ -8,7 +8,6 @@ import { Sidebar } from 'components/sidebar';
 import { Wrapper } from 'components/wrapper';
 import { Controls } from 'components/controls';
 import { List } from 'components/list';
-import { Info } from 'components/info';
 
 import { useKeyUp, useIterate, usePresenter } from 'hooks';
 import { BROADCAST, MOVEMENT } from 'values';
@@ -85,20 +84,6 @@ export default function HomePage() {
       </Sidebar>
 
       <Wrapper direction="column" {...settings}>
-        {/* <Info live={!showLogo}>
-          {showLogo ? (
-            <>
-              Actualmente <strong>NO</strong> se está mostrando el anuncio al
-              público.
-            </>
-          ) : (
-            <>
-              Actualmente se está mostrando el anuncio{' '}
-              <strong>{notice.title}</strong> al público.
-            </>
-          )}
-        </Info> */}
-
         <Slider
           ref={sliderRef}
           live={!showLogo}

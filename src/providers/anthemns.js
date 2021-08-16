@@ -99,6 +99,7 @@ function AnthemnsProvider({ children }) {
           Slide.create({
             id: `${id}_${slideIndex}`,
             text: '&#119070;',
+            subtext: '¡Amén!',
             index: slideIndex,
           })
         );

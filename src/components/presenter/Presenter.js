@@ -13,9 +13,9 @@ const textMotion = {
 };
 
 export function Presenter({
-  children,
-  subtext = null,
   id = generateGUID(),
+  text = '',
+  subtext = null,
   ...rest
 }) {
   const handleFontScale = () => {
@@ -30,7 +30,7 @@ export function Presenter({
     });
   };
 
-  useEffect(() => handleFontScale(), []);
+  useEffect(handleFontScale, []);
 
   const handleExitComplete = () => handleFontScale();
 
@@ -41,7 +41,7 @@ export function Presenter({
           key={id}
           id="presenter-text"
           dangerouslySetInnerHTML={{
-            __html: process(children, subtext),
+            __html: process(text, subtext),
           }}
           {...textMotion}
         />

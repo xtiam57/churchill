@@ -92,7 +92,7 @@ function ScripturesView() {
           emptyLabel="No existe esa opcion."
           highlightOnlyResult={true}
           id="combo"
-          labelKey="cite"
+          labelKey="subtext"
           minLength={0}
           onChange={onSearch}
           onKeyDown={(e) => {
@@ -150,29 +150,14 @@ function ScripturesView() {
       <Wrapper direction="column" {...settings}>
         <Bookmark element={current} onChange={setBookmarks} />
 
-        {/* <Info live={!showLogo}>
-          {showLogo ? (
-            <>
-              Actualmente <strong>NO</strong> se está mostrando el versículo al
-              público.
-            </>
-          ) : (
-            <>
-              Actualmente se está mostrando el versículo{' '}
-              <strong>{current.cite}</strong> al público.
-            </>
-          )}
-        </Info> */}
-
         <Presenter
           id={current.id}
           live={!showLogo}
-          subtext={current.cite}
+          text={current.text}
+          subtext={current.subtext}
           grayscale={presenting && showLogo}
           {...settings}
-        >
-          {current.text}
-        </Presenter>
+        />
 
         <div className="text-light bg-dark py-2 px-3 d-flex justify-content-between">
           <small>

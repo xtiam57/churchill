@@ -38,6 +38,14 @@ select {
   font-size: 1.25em;
 }
 
+.fs-xxl {
+  font-size: 4em;
+}
+
+.fs-xlg {
+  font-size: 1.7em;
+}
+
 .fs-xl {
   font-size: 2em;
 }

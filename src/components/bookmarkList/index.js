@@ -4,6 +4,7 @@ import { Bookmark, createKey } from 'components/bookmark';
 import { List } from 'components/list';
 import { Storage, getBookmarkedItems } from 'utils';
 import { MAX_BOOKMARKS } from 'values';
+import { useScriptures, useAnthemn } from 'hooks';
 
 export function BookmarkList({
   type = '',
@@ -12,6 +13,9 @@ export function BookmarkList({
   onClick = () => {},
   ...rest
 }) {
+  const { scriptures } = useScriptures();
+  const { anthemns } = useAnthemn();
+
   const removeBookmarks = () => {
     items.forEach((item) => {
       Storage.remove(createKey(item));
@@ -34,7 +38,13 @@ export function BookmarkList({
         return index < MAX_BOOKMARKS ? (
           <List.Item key={index}>
             <List.Action
-              onClick={() => onClick(item)}
+              onClick={() => {
+                if (type === 'verse') {
+                  onClick(scriptures[item.index]);
+                } else {
+                  onClick(anthemns[item.index]);
+                }
+              }}
               title={
                 type === 'verse'
                   ? item?.text.replaceAll('<br/>', '\n')
