@@ -13,6 +13,7 @@ export const PresenterStyled = styled.section`
   border: 1px solid var(--dark);
   /* border: ${({ live, background }) =>
     live ? 'solid 4px var(--warning)' : `solid 1px ${background}`}; */
+  filter: ${({ grayscale }) => `grayscale(${grayscale ? 1 : 0})`};
   backdrop-filter: ${({ blur, grayscale }) =>
     blur
       ? `blur(${blur}px) grayscale(${grayscale ? 1 : 0})`

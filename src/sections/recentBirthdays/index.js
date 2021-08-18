@@ -10,7 +10,7 @@ export function RecentBirthdays({ onClick = () => {}, ...rest }) {
   return (
     <>
       {recent.length ? (
-        <List {...rest}>
+        <List className="mb-4" {...rest}>
           <List.Item>
             <List.Title
               className="text-warning"

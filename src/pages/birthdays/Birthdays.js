@@ -10,12 +10,13 @@ import { Presenter } from 'components/presenter';
 import { Controls } from 'components/controls';
 import { Sidebar } from 'components/sidebar';
 import { List } from 'components/list';
-import { Info } from 'components/info';
 
 import { useBirthday, usePresenter } from 'hooks';
 import { Time } from 'utils';
 import { BROADCAST } from 'values';
 import { BirthdayModal } from './modal';
+import { Title } from 'components/title';
+import { DisplayButton } from 'components/displayButton';
 
 const useBroadcast = createPersistedState(BROADCAST.CHANNEL);
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
@@ -42,30 +43,25 @@ export default function BirthdaysPage() {
     }
   }, [presenting]);
 
-  const onSave = (data) => {
+  const handleSave = (data) => {
     add(data);
     setShowModal(false);
   };
 
-  const onDelete = (item) => {
+  const handleDelete = (item) => {
     remove(item);
   };
 
   return (
     <Wrapper>
       <Sidebar>
-        <h1 className="text-light display-4">Cumples</h1>
+        <Title>Cumples</Title>
 
-        <Button
-          className={showLogo && presenting ? 'my-3 pulse' : 'my-3'}
-          block
-          size="lg"
-          variant={showLogo ? 'secondary' : 'warning'}
-          onClick={() => setShowLogo((value) => !value)}
-          disabled={!presenting}
-        >
-          {showLogo ? 'Proyectar' : 'Mostrar Logo'}
-        </Button>
+        <DisplayButton
+          value={showLogo}
+          presenting={presenting}
+          onToggle={setShowLogo}
+        />
 
         <List className="mb-4">
           {recent.length ? (
@@ -95,7 +91,7 @@ export default function BirthdaysPage() {
                 <span className="text-light">{item.name}</span> (
                 {Time.formatBirthday(item.day, item.month)})
               </List.Text>
-              <List.Action onClick={() => onDelete(item)}>
+              <List.Action onClick={() => handleDelete(item)}>
                 <RiCloseFill />
               </List.Action>
             </List.Item>
@@ -104,17 +100,6 @@ export default function BirthdaysPage() {
       </Sidebar>
 
       <Wrapper direction="column" {...settings}>
-        {/* <Info live={!showLogo}>
-          {showLogo ? (
-            <>
-              Actualmente <strong>NO</strong> se están mostrando los
-              cumpleañeros al público.
-            </>
-          ) : (
-            <>Actualmente se están mostrando los cumpleañeros al público.</>
-          )}
-        </Info> */}
-
         <Presenter
           id={current.id}
           live={!showLogo}
@@ -132,7 +117,7 @@ export default function BirthdaysPage() {
           <BirthdayModal
             show={showModal}
             handleClose={() => setShowModal(false)}
-            handleSave={onSave}
+            handleSave={handleSave}
           />
         </Controls>
       </Wrapper>

@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { AnthemnsContext } from 'providers/anthemns';
+import { AnthemnsContext } from 'providers';
 import { useIterate } from 'hooks';
 import { MOVEMENT } from 'values';
 

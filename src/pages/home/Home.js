@@ -1,7 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
 import createPersistedState from 'use-persisted-state';
 import { Button, ButtonGroup } from 'react-bootstrap';
-import * as ImIcons from 'react-icons/im';
+import {
+  ImStop2,
+  ImPlay3,
+  ImArrowLeft2,
+  ImArrowRight2,
+  ImLoop,
+} from 'react-icons/im';
 
 import { Slider } from 'components/slider';
 import { Sidebar } from 'components/sidebar';
@@ -12,6 +18,8 @@ import { List } from 'components/list';
 import { useKeyUp, useIterate, usePresenter } from 'hooks';
 import { BROADCAST, MOVEMENT } from 'values';
 import { NOTICES } from './notices';
+import { Title } from 'components/title';
+import { DisplayButton } from 'components/displayButton';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
@@ -31,39 +39,34 @@ export default function HomePage() {
     }
   }, [presenting]);
 
-  const onPrevSlide = () => sliderRef.current.prev();
+  const handlePrevSlide = () => sliderRef.current.prev();
 
-  const onNextSlide = () => sliderRef.current.next();
+  const handleNextSlide = () => sliderRef.current.next();
 
-  const onNextNotice = () => {
+  const handleNextNotice = () => {
     const notice = moveNotice(MOVEMENT.NEXT);
     setNotice(notice);
   };
 
-  const onPrevNotice = () => {
+  const handlePrevNotice = () => {
     const notice = moveNotice(MOVEMENT.PREV);
     setNotice(notice);
   };
 
-  useKeyUp('ArrowUp', onPrevNotice);
-  useKeyUp('ArrowDown', onNextNotice);
+  useKeyUp('ArrowUp', handlePrevNotice);
+  useKeyUp('ArrowDown', handleNextNotice);
   useKeyUp('Space', () => setAutoplay((state) => !state));
 
   return (
     <Wrapper>
       <Sidebar>
-        <h1 className="text-light display-4">Inicio</h1>
+        <Title>Inicio</Title>
 
-        <Button
-          className={showLogo && presenting ? 'my-3 pulse' : 'my-3'}
-          block
-          size="lg"
-          variant={showLogo ? 'secondary' : 'warning'}
-          onClick={() => setShowLogo((value) => !value)}
-          disabled={!presenting}
-        >
-          {showLogo ? 'Proyectar' : 'Mostrar Logo'}
-        </Button>
+        <DisplayButton
+          value={showLogo}
+          presenting={presenting}
+          onToggle={setShowLogo}
+        />
 
         <List className="mb-4">
           <List.Item>
@@ -101,21 +104,21 @@ export default function HomePage() {
           <ButtonGroup className="mx-2">
             {autoplay ? (
               <Button onClick={() => setAutoplay(false)} variant="light">
-                <ImIcons.ImStop2 />
+                <ImStop2 />
               </Button>
             ) : (
               <Button onClick={() => setAutoplay(true)} variant="secondary">
-                <ImIcons.ImPlay3 />
+                <ImPlay3 />
               </Button>
             )}
           </ButtonGroup>
 
           <ButtonGroup>
-            <Button onClick={onPrevSlide} variant="secondary">
-              <ImIcons.ImArrowLeft2 />
+            <Button onClick={handlePrevSlide} variant="secondary">
+              <ImArrowLeft2 />
             </Button>
-            <Button onClick={onNextSlide} variant="secondary">
-              <ImIcons.ImArrowRight2 />
+            <Button onClick={handleNextSlide} variant="secondary">
+              <ImArrowRight2 />
             </Button>
           </ButtonGroup>
 
@@ -124,7 +127,7 @@ export default function HomePage() {
               onClick={() => setLoop((state) => !state)}
               variant={loop ? 'light' : 'secondary'}
             >
-              <ImIcons.ImLoop />
+              <ImLoop />
             </Button>
           </ButtonGroup>
         </Controls>

@@ -58,4 +58,19 @@ Time.msToTime = (duration) => {
   return `${minutes}:${seconds}`;
 };
 
+Time.formatTime = (minutes, seconds) => {
+  if (seconds > 0) {
+    return `${`${minutes}`.padStart(2, '0')}:${`${seconds - 1}`.padStart(
+      2,
+      '0'
+    )}`;
+  } else {
+    if (minutes === 0) {
+      return '00:00';
+    } else {
+      return `${`${minutes - 1}`.padStart(2, '0')}:59`;
+    }
+  }
+};
+
 export { Time };

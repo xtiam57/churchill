@@ -1,11 +1,10 @@
 import { useContext } from 'react';
 
-import { BirthdayContext } from 'providers/birthdays';
+import { BirthdaysContext } from 'providers';
 
 export function useBirthday() {
-  const { recent, current, birthdays, bDaySong, add, remove } = useContext(
-    BirthdayContext
-  );
+  const { recent, current, birthdays, bDaySong, add, remove } =
+    useContext(BirthdaysContext);
 
   return {
     recent,

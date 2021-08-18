@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Typeahead } from 'react-bootstrap-typeahead';
 import { Button, ButtonGroup } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
-import { ImArrowLeft2, ImArrowRight2, ImSearch } from 'react-icons/im';
+import { ImArrowLeft2, ImArrowRight2 } from 'react-icons/im';
 
 import { Wrapper } from 'components/wrapper';
 import { Presenter } from 'components/presenter';
@@ -11,12 +11,14 @@ import { Sidebar } from 'components/sidebar';
 import { Bookmark } from 'components/bookmark';
 import { BookmarkList } from 'components/bookmarkList';
 import { Finder } from 'components/finder';
-import { Info } from 'components/info';
 
 import { useScriptures, useKeyUp, usePresenter } from 'hooks';
 import { getBookmarkedItems } from 'utils';
 import { BROADCAST, MOVEMENT } from 'values';
 import { finderRender, typeaheadRender } from './renders';
+import { Title } from 'components/title';
+import { DisplayButton } from 'components/displayButton';
+import { FinderButton } from 'components/finderButton';
 
 const useBroadcast = createPersistedState(BROADCAST.CHANNEL);
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
@@ -30,7 +32,7 @@ function ScripturesView() {
   const [showLogo, setShowLogo] = useState(true);
   const [search, setSearch] = useState([current]);
   const [bookmarks, setBookmarks] = useState(getBookmarkedItems('verse'));
-  const [showFinder, setShowFinder] = useState(false);
+  const [openFinder, setOpenFinder] = useState(false);
   const { presenting } = usePresenter();
 
   useEffect(() => {
@@ -47,7 +49,7 @@ function ScripturesView() {
     }
   }, [presenting]);
 
-  function onSearch(event) {
+  function handleSearch(event) {
     setSearch(event);
 
     if (event.length) {
@@ -56,37 +58,37 @@ function ScripturesView() {
     }
   }
 
-  const onPrevVerse = () => {
+  const handlePrevVerse = () => {
     const verse = moveVerse(MOVEMENT.PREV);
     setSearch([verse]);
   };
 
-  const onNextVerse = () => {
+  const handleNextVerse = () => {
     const verse = moveVerse(MOVEMENT.NEXT);
     setSearch([verse]);
   };
 
-  const onPrevChapter = () => {
+  const handlePrevChapter = () => {
     const verse = moveChapter(MOVEMENT.PREV);
     setSearch([verse]);
   };
 
-  const onNextChapter = () => {
+  const handleNextChapter = () => {
     const verse = moveChapter(MOVEMENT.NEXT);
     setSearch([verse]);
   };
 
-  useKeyUp('ArrowLeft', onPrevVerse);
-  useKeyUp('ArrowRight', onNextVerse);
-  useKeyUp('ArrowUp', onNextChapter);
-  useKeyUp('ArrowDown', onPrevChapter);
+  useKeyUp('ArrowLeft', handlePrevVerse);
+  useKeyUp('ArrowRight', handleNextVerse);
+  useKeyUp('ArrowUp', handleNextChapter);
+  useKeyUp('ArrowDown', handlePrevChapter);
   useKeyUp('F1', () => typeaheadRef.current.focus());
-  useKeyUp('KeyB', () => setShowFinder(true), { ctrl: true });
+  useKeyUp('KeyB', () => setOpenFinder(true), { ctrl: true });
 
   return (
     <Wrapper>
       <Sidebar>
-        <h1 className="text-light display-4">Escrituras</h1>
+        <Title>Escrituras</Title>
 
         <Typeahead
           emptyLabel="No existe esa opcion."
@@ -94,7 +96,7 @@ function ScripturesView() {
           id="combo"
           labelKey="subtext"
           minLength={0}
-          onChange={onSearch}
+          onChange={handleSearch}
           onKeyDown={(e) => {
             if (e.key === '.') {
               e.preventDefault();
@@ -112,38 +114,20 @@ function ScripturesView() {
           renderMenuItemChildren={typeaheadRender}
         />
 
-        <div className="small d-flex justify-content-between mt-1 mb-3">
-          <div className="text-muted">
-            Presiona <strong>F1</strong> para buscar.
-          </div>
+        <FinderButton onOpen={setOpenFinder} />
 
-          <Button
-            variant="link"
-            className="text-light p-0 text-small"
-            onClick={(e) => setShowFinder(true)}
-            title="Búsqueda avanzada (Ctrl+B)"
-          >
-            <ImSearch />
-          </Button>
-        </div>
-
-        <Button
-          className={showLogo && presenting ? 'mb-4 pulse' : 'mb-4'}
-          block
-          size="lg"
-          variant={showLogo ? 'secondary' : 'warning'}
-          onClick={() => setShowLogo((value) => !value)}
-          disabled={!presenting}
-        >
-          {showLogo ? 'Proyectar' : 'Mostrar Logo'}
-        </Button>
+        <DisplayButton
+          value={showLogo}
+          presenting={presenting}
+          onToggle={setShowLogo}
+        />
 
         <BookmarkList
           className="mb-4"
           type="verse"
           items={bookmarks}
           onChange={setBookmarks}
-          onClick={(item) => onSearch([item])}
+          onClick={(item) => handleSearch([item])}
         />
       </Sidebar>
 
@@ -165,15 +149,29 @@ function ScripturesView() {
             para cambiar de versículo, y <strong>&uarr;</strong> y{' '}
             <strong>&darr;</strong> para cambiar de capítulo.
           </small>
+          <small>
+            Capítulo:{' '}
+            <strong>
+              {current.chapterNumber}/{current.chaptersCount}
+            </strong>{' '}
+            &middot; Libro: <strong>{current.bookNumber}/66</strong> &middot;{' '}
+            <strong className="text-warning">
+              {Math.round(
+                ((current.index / scriptures.length) * 100 + Number.EPSILON) *
+                  100
+              ) / 100}
+              %
+            </strong>
+          </small>
         </div>
 
         <Controls centered>
           <ButtonGroup>
-            <Button onClick={onPrevVerse} variant="secondary">
+            <Button onClick={handlePrevVerse} variant="secondary">
               <ImArrowLeft2 />
             </Button>
 
-            <Button onClick={onNextVerse} variant="secondary">
+            <Button onClick={handleNextVerse} variant="secondary">
               <ImArrowRight2 />
             </Button>
           </ButtonGroup>
@@ -181,13 +179,13 @@ function ScripturesView() {
       </Wrapper>
 
       <Finder
-        show={showFinder}
-        onHide={() => setShowFinder(false)}
+        show={openFinder}
+        onHide={() => setOpenFinder(false)}
         options={scriptures}
         onChange={(event) => {
           if (event.length) {
-            onSearch(event);
-            setShowFinder(false);
+            handleSearch(event);
+            setOpenFinder(false);
           }
         }}
         render={finderRender}

@@ -2,7 +2,15 @@ import React, { useState, useRef, useEffect, useMemo } from 'react';
 import createPersistedState from 'use-persisted-state';
 import { Typeahead } from 'react-bootstrap-typeahead';
 import { Button, ButtonGroup, Form } from 'react-bootstrap';
-import * as ImIcons from 'react-icons/im';
+import {
+  ImVolumeMute,
+  ImVolumeHigh,
+  ImStop2,
+  ImPlay3,
+  ImArrowLeft2,
+  ImArrowRight2,
+  ImFolderOpen,
+} from 'react-icons/im';
 import useSound from 'use-sound';
 
 import { Slider } from 'components/slider';
@@ -19,6 +27,9 @@ import { useAnthemn, useKeyUp, usePresenter } from 'hooks';
 import { getBookmarkedItems, Storage } from 'utils';
 import { BROADCAST, MOVEMENT } from 'values';
 import { typeaheadRender, finderRender } from './renders';
+import { DisplayButton } from 'components/displayButton';
+import { Title } from 'components/title';
+import { FinderButton } from 'components/finderButton';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
@@ -43,7 +54,7 @@ export default function AnthemnsPage() {
   const { presenting } = usePresenter();
   const { anthemns, current, setCurrent, moveAnthemn } = useAnthemn();
   const [showLogo, setShowLogo] = useState(true);
-  const [showModal, setShowModal] = useState(false);
+  const [openFinder, setOpenFinder] = useState(false);
   const [search, setSearch] = useState([current]);
   const [bookmarks, setBookmarks] = useState(getBookmarkedItems('anthemn'));
   const [url, setUrl] = useState(folder.getPath(current.number));
@@ -80,7 +91,7 @@ export default function AnthemnsPage() {
     }
   }, [presenting]);
 
-  function onSearch(event) {
+  function handleSearch(event) {
     setSearch(event);
 
     if (event.length) {
@@ -90,36 +101,36 @@ export default function AnthemnsPage() {
     }
   }
 
-  const onPrevSlide = () => sliderRef.current.prev();
+  const handlePrevSlide = () => sliderRef.current.prev();
 
-  const onNextSlide = () => sliderRef.current.next();
+  const handleNextSlide = () => sliderRef.current.next();
 
-  const onPrevAnthemn = () => {
+  const handlePrevAnthemn = () => {
     if (!isPlaying) {
       const anthemn = moveAnthemn(MOVEMENT.PREV);
       setSearch([anthemn]);
     }
   };
 
-  const onNextAnthemn = () => {
+  const handleNextAnthemn = () => {
     if (!isPlaying) {
       const anthemn = moveAnthemn(MOVEMENT.NEXT);
       setSearch([anthemn]);
     }
   };
 
-  const onTogglePlay = () => {
+  const handleTogglePlay = () => {
     if (isMP3Loaded) {
       isPlaying ? stop() : play();
     }
   };
 
-  const onOpenPath = (e) => {
+  const handleOpenPath = (e) => {
     e.preventDefault();
     folder.open();
   };
 
-  const save = (target) => {
+  const handleSave = (target) => {
     Storage.set(createKey(current), {
       volume,
       playbackRate,
@@ -127,16 +138,16 @@ export default function AnthemnsPage() {
     });
   };
 
-  useKeyUp('ArrowUp', onNextAnthemn);
-  useKeyUp('ArrowDown', onPrevAnthemn);
+  useKeyUp('ArrowUp', handleNextAnthemn);
+  useKeyUp('ArrowDown', handlePrevAnthemn);
   useKeyUp('F1', () => typeaheadRef.current.focus());
-  useKeyUp('Space', onTogglePlay);
-  useKeyUp('KeyB', () => setShowModal(true), { ctrl: true });
+  useKeyUp('Space', handleTogglePlay);
+  useKeyUp('KeyB', () => setOpenFinder(true), { ctrl: true });
 
   return (
     <Wrapper>
       <Sidebar>
-        <h1 className="text-light display-4">Himnos</h1>
+        <Title>Himnos</Title>
 
         <Typeahead
           emptyLabel="No existe esa opcion."
@@ -144,7 +155,7 @@ export default function AnthemnsPage() {
           id="combo"
           labelKey="title"
           minLength={0}
-          onChange={onSearch}
+          onChange={handleSearch}
           onFocus={(e) => e.target.select()}
           options={anthemns}
           paginate={true}
@@ -156,61 +167,28 @@ export default function AnthemnsPage() {
           renderMenuItemChildren={typeaheadRender}
         />
 
-        <div className="small d-flex justify-content-between mt-1 mb-3">
-          <div className="text-muted">
-            Presiona <strong>F1</strong> para buscar.
-          </div>
+        <FinderButton onOpen={setOpenFinder} />
 
-          <Button
-            variant="link"
-            className="text-light p-0 text-small"
-            onClick={(e) => setShowModal(true)}
-            title="Búsqueda avanzada (Ctrl+B)"
-          >
-            <ImIcons.ImSearch />
-          </Button>
-        </div>
+        <DisplayButton
+          value={showLogo}
+          presenting={presenting}
+          onToggle={setShowLogo}
+        />
 
-        <Button
-          className={showLogo && presenting ? 'mb-4 pulse' : 'mb-4'}
-          block
-          size="lg"
-          variant={showLogo ? 'secondary' : 'warning'}
-          onClick={() => setShowLogo((value) => !value)}
-          disabled={!presenting}
-        >
-          {showLogo ? 'Proyectar' : 'Mostrar Logo'}
-        </Button>
-
-        <RecentBirthdays className="mb-4" onClick={onSearch} />
+        <RecentBirthdays onClick={handleSearch} />
 
         <BookmarkList
-          className="mb-4"
           type="anthemn"
           items={bookmarks}
           onChange={setBookmarks}
-          onClick={(item) => onSearch([item])}
+          onClick={(item) => handleSearch([item])}
         />
 
-        <AnthemnTags onClick={onSearch} />
+        <AnthemnTags onClick={handleSearch} />
       </Sidebar>
 
       <Wrapper direction="column" {...settings}>
         <Bookmark element={current} onChange={setBookmarks} />
-
-        {/* <Info live={!showLogo}>
-          {showLogo ? (
-            <>
-              Actualmente <strong>NO</strong> se está mostrando el himno al
-              público.
-            </>
-          ) : (
-            <>
-              Actualmente se está mostrando el himno{' '}
-              <strong>{current.title}</strong> al público.
-            </>
-          )}
-        </Info> */}
 
         <Slider
           ref={sliderRef}
@@ -226,7 +204,7 @@ export default function AnthemnsPage() {
         <Controls>
           {isMP3Loaded ? (
             <div className="d-flex">
-              <ImIcons.ImVolumeMute />
+              <ImVolumeMute />
               <Form.Control
                 type="range"
                 name="volume"
@@ -237,12 +215,12 @@ export default function AnthemnsPage() {
                 className="mx-2"
                 onChange={({ target }) => {
                   setVolume(() => {
-                    save(target);
+                    handleSave(target);
                     return +target.value;
                   });
                 }}
               />
-              <ImIcons.ImVolumeHigh />
+              <ImVolumeHigh />
             </div>
           ) : null}
 
@@ -252,7 +230,10 @@ export default function AnthemnsPage() {
                 Este himno <strong>NO</strong> tiene pista.
               </span>{' '}
               Agrégala en formato <i>.mp3</i> en la carpeta{' '}
-              <strong className="pointer text-underline" onClick={onOpenPath}>
+              <strong
+                className="pointer text-underline"
+                onClick={handleOpenPath}
+              >
                 /himnos
               </strong>{' '}
               con el nombre <strong>{current.number}.mp3</strong>.
@@ -265,11 +246,11 @@ export default function AnthemnsPage() {
                 <ButtonGroup className="mx-2">
                   {isPlaying ? (
                     <Button onClick={() => stop()} variant="light">
-                      <ImIcons.ImStop2 />
+                      <ImStop2 />
                     </Button>
                   ) : (
                     <Button onClick={() => play()} variant="secondary">
-                      <ImIcons.ImPlay3 />
+                      <ImPlay3 />
                     </Button>
                   )}
                 </ButtonGroup>
@@ -277,16 +258,20 @@ export default function AnthemnsPage() {
             ) : null}
 
             <ButtonGroup>
-              <Button onClick={onPrevSlide} variant="secondary">
-                <ImIcons.ImArrowLeft2 />
+              <Button onClick={handlePrevSlide} variant="secondary">
+                <ImArrowLeft2 />
               </Button>
-              <Button onClick={onNextSlide} variant="secondary">
-                <ImIcons.ImArrowRight2 />
+              <Button onClick={handleNextSlide} variant="secondary">
+                <ImArrowRight2 />
               </Button>
             </ButtonGroup>
 
-            <Button className="ml-2" variant="secondary" onClick={onOpenPath}>
-              <ImIcons.ImFolderOpen />
+            <Button
+              className="ml-2"
+              variant="secondary"
+              onClick={handleOpenPath}
+            >
+              <ImFolderOpen />
             </Button>
           </div>
 
@@ -305,7 +290,7 @@ export default function AnthemnsPage() {
                   style={{ width: '80px' }}
                   onChange={({ target }) => {
                     setPlaybackRate(() => {
-                      save(target);
+                      handleSave(target);
                       return +target.value;
                     });
                     if (isPlaying) {
@@ -323,13 +308,13 @@ export default function AnthemnsPage() {
       </Wrapper>
 
       <Finder
-        show={showModal}
-        onHide={() => setShowModal(false)}
+        show={openFinder}
+        onHide={() => setOpenFinder(false)}
         options={anthemns}
         onChange={(event) => {
           if (event.length) {
-            onSearch(event);
-            setShowModal(false);
+            handleSearch(event);
+            setOpenFinder(false);
           }
         }}
         render={finderRender}

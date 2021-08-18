@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { ScripturesContext } from 'providers/scriptures';
+import { ScripturesContext } from 'providers';
 import { useIterate } from 'hooks';
 import { MOVEMENT } from 'values';
 

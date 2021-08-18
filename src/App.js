@@ -1,11 +1,13 @@
 import React from 'react';
 import { HashRouter as Router } from 'react-router-dom';
 
-import { AnthemnsProvider } from 'providers/anthemns';
-import { AppProvider } from 'providers/app';
-import { PresenterProvider } from 'providers/presenter';
-import { ScripturesProvider } from 'providers/scriptures';
-import { BirthdayProvider } from 'providers/birthdays';
+import {
+  AnthemnsProvider,
+  AppProvider,
+  PresenterProvider,
+  ScripturesProvider,
+  BirthdaysProvider,
+} from 'providers';
 
 import { Navbar } from 'components/navbar';
 import { Settings } from 'components/settings';
@@ -24,13 +26,13 @@ function App() {
         <PresenterProvider>
           <ScripturesProvider>
             <AnthemnsProvider>
-              <BirthdayProvider>
+              <BirthdaysProvider>
                 <Navbar />
 
                 <RouteMapper />
 
                 <Settings />
-              </BirthdayProvider>
+              </BirthdaysProvider>
             </AnthemnsProvider>
           </ScripturesProvider>
         </PresenterProvider>

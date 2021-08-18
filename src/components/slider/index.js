@@ -6,8 +6,6 @@ import React, {
 } from 'react';
 import createPersistedState from 'use-persisted-state';
 
-import { SlidePreviewStyled } from './styled';
-
 import { Presenter } from 'components/presenter';
 import { useIterate, useKeyUp } from 'hooks';
 import { BROADCAST, MOVEMENT } from 'values';

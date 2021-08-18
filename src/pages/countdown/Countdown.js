@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import createPersistedState from 'use-persisted-state';
-import { Button, Form, Col, Row } from 'react-bootstrap';
-import { ImStop2, ImPlay3 } from 'react-icons/im';
+import { Button, Col, Row } from 'react-bootstrap';
+import { ImStop2 } from 'react-icons/im';
 import { BsClock } from 'react-icons/bs';
 
 import { Sidebar } from 'components/sidebar';
@@ -12,6 +12,9 @@ import { List } from 'components/list';
 
 import { useCountdown, usePresenter } from 'hooks';
 import { BROADCAST } from 'values';
+import { Title } from 'components/title';
+import { DisplayButton } from 'components/displayButton';
+import { CountdownForm } from './CountdownForm';
 
 const useBroadcast = createPersistedState(BROADCAST.CHANNEL);
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
@@ -19,13 +22,11 @@ const useSettings = createPersistedState(BROADCAST.SETTINGS);
 export default function StopwatchPage() {
   const [, setMessage] = useBroadcast(BROADCAST.INITIAL_CHANNEL);
   const [showLogo, setShowLogo] = useState(true);
-  const { time, start, stop } = useCountdown(showLogo, (msg) => {
-    setMessage(msg);
-  });
+  const { time, start, stop } = useCountdown(showLogo, (msg) =>
+    setMessage(msg)
+  );
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const { presenting } = usePresenter();
-  const [minutes, setMinutes] = useState(0);
-  const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
     return () => setMessage(null);
@@ -37,71 +38,18 @@ export default function StopwatchPage() {
     }
   }, [presenting]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-
-    const form = e.currentTarget;
-    if (form.checkValidity()) {
-      start(minutes, seconds + 1);
-    }
-  };
-
   return (
     <Wrapper>
       <Sidebar>
-        <h1 className="text-light display-4">Temp.</h1>
+        <Title>Temp.</Title>
 
-        <Button
-          className={showLogo && presenting ? 'my-3 pulse' : 'my-3'}
-          block
-          size="lg"
-          variant={showLogo ? 'secondary' : 'warning'}
-          onClick={() => setShowLogo((value) => !value)}
-          disabled={!presenting}
-        >
-          {showLogo ? 'Proyectar' : 'Mostrar Logo'}
-        </Button>
+        <DisplayButton
+          value={showLogo}
+          presenting={presenting}
+          onToggle={setShowLogo}
+        />
 
-        <Form noValidate validated={true} onSubmit={handleSubmit}>
-          <Form.Row>
-            <Form.Group hasValidation as={Col}>
-              <Form.Label className="text-warning text-small">
-                Minutos
-              </Form.Label>
-              <Form.Control
-                type="number"
-                value={minutes}
-                onChange={({ target }) => setMinutes(+target.value)}
-                required
-                min="0"
-                max="59"
-                step="1"
-              />
-            </Form.Group>
-
-            <Form.Group hasValidation as={Col}>
-              <Form.Label className="text-warning text-small">
-                Segundos
-              </Form.Label>
-              <Form.Control
-                type="number"
-                value={seconds}
-                onChange={({ target }) => setSeconds(+target.value)}
-                required
-                min="0"
-                max="59"
-              />
-            </Form.Group>
-          </Form.Row>
-          <Form.Row>
-            <Col>
-              <Button type="submit" className="mb-3" block variant="primary">
-                <ImPlay3 /> Iniciar
-              </Button>
-            </Col>
-          </Form.Row>
-        </Form>
+        <CountdownForm onSubmit={start} />
 
         <List className="mb-4">
           <List.Item>

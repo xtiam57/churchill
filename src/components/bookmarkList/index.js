@@ -24,7 +24,7 @@ export function BookmarkList({
   };
 
   return items.length ? (
-    <List {...rest}>
+    <List className="mb-4" {...rest}>
       <List.Item>
         <>
           <List.Title>Marcadores ({items.length})</List.Title>

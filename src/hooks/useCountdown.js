@@ -1,30 +1,16 @@
 import { useEffect, useState, useCallback, useMemo } from 'react';
-
-const formatTime = (minutes, seconds) => {
-  if (seconds > 0) {
-    return `${`${minutes}`.padStart(2, '0')}:${`${seconds - 1}`.padStart(
-      2,
-      '0'
-    )}`;
-  } else {
-    if (minutes === 0) {
-      return '00:00';
-    } else {
-      return `${`${minutes - 1}`.padStart(2, '0')}:59`;
-    }
-  }
-};
+import { Time } from 'utils';
 
 export function useCountdown(showLogo, callback = () => {}) {
   const audio = useMemo(() => new Audio('/audio/beep.mp3'), []);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
-  const [time, setTime] = useState(formatTime(minutes, seconds));
+  const [time, setTime] = useState(Time.formatTime(minutes, seconds));
   const [running, setRunning] = useState(false);
 
   useEffect(() => {
     let interval = setInterval(() => {
-      setTime(formatTime(minutes, seconds));
+      setTime(Time.formatTime(minutes, seconds));
 
       if (seconds > 0) {
         setSeconds(seconds - 1);
@@ -32,7 +18,7 @@ export function useCountdown(showLogo, callback = () => {}) {
 
       if (seconds === 0) {
         if (minutes === 0) {
-          setTime(formatTime(0, 0));
+          setTime(Time.formatTime(0, 0));
           if (running) {
             audio.play();
             setRunning(false);
@@ -65,7 +51,7 @@ export function useCountdown(showLogo, callback = () => {}) {
 
     setMinutes(0);
     setSeconds(0);
-    setTime(formatTime(0, 0));
+    setTime(Time.formatTime(0, 0));
     setRunning(false);
   }, []);
 

@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useContext } from 'react';
 
-import { AnthemnsContext } from 'providers/anthemns';
+import { AnthemnsContext } from 'providers';
 import { BIRTHDAY } from 'values';
 import { Storage, generateGUID, Time, Slide } from 'utils';
 
@@ -65,9 +65,9 @@ function getAllBirthdays() {
     });
 }
 
-const BirthdayContext = React.createContext({});
+const BirthdaysContext = React.createContext({});
 
-const BirthdayProvider = ({ children }) => {
+const BirthdaysProvider = ({ children }) => {
   const [recent, setRecent] = useState(getRecent(new Date()));
   const [current, setCurrent] = useState(createSlide(recent));
   const [birthdays, setBirthdays] = useState(getAllBirthdays());
@@ -102,7 +102,7 @@ const BirthdayProvider = ({ children }) => {
   };
 
   return (
-    <BirthdayContext.Provider
+    <BirthdaysContext.Provider
       value={{
         recent,
         current,
@@ -113,8 +113,8 @@ const BirthdayProvider = ({ children }) => {
       }}
     >
       {children}
-    </BirthdayContext.Provider>
+    </BirthdaysContext.Provider>
   );
 };
 
-export { BirthdayContext, BirthdayProvider };
+export { BirthdaysContext, BirthdaysProvider };
