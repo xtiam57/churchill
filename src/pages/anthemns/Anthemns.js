@@ -29,9 +29,8 @@ import { useAnthemn, useFolder, useKeyUp, usePresenter } from 'hooks';
 import { getBookmarkedItems, Storage } from 'utils';
 import { BROADCAST, MOVEMENT } from 'values';
 
-import { RecentBirthdays } from 'sections/recentBirthdays';
-import { AnthemnTags } from 'sections/anthemnTags';
-
+import { RecentBirthdays } from './RecentBirthdays';
+import { AnthemnTags } from './AnthemnTags';
 import { typeaheadRender, finderRender } from './renders';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
@@ -175,9 +174,10 @@ export default function AnthemnsPage() {
           items={bookmarks}
           onChange={setBookmarks}
           onClick={(item) => handleSearch([item])}
+          current={current}
         />
 
-        <AnthemnTags onClick={handleSearch} />
+        <AnthemnTags onClick={handleSearch} current={current} />
       </Sidebar>
 
       <Wrapper direction="column" {...settings}>

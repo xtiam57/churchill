@@ -10,6 +10,7 @@ export function BookmarkList({
   items = [],
   onChange = () => {},
   onClick = () => {},
+  current,
   ...rest
 }) {
   const { scriptures } = useScriptures();
@@ -49,6 +50,7 @@ export function BookmarkList({
                   ? item?.text.replaceAll('<br/>', '\n')
                   : item?.text?.replaceAll('/n', '\n')
               }
+              className={current.id === item.id ? 'text-warning' : ''}
             >
               {item.title}
             </List.Action>

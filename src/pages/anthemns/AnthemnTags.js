@@ -3,7 +3,7 @@ import { List } from 'components';
 
 import { useAnthemn } from 'hooks';
 
-export function AnthemnTags({ onClick = () => {} }) {
+export function AnthemnTags({ onClick = () => {}, current }) {
   const { anthemns, tags } = useAnthemn();
   const [selected, setSelected] = useState(null);
   const [list, setList] = useState([]);
@@ -48,6 +48,7 @@ export function AnthemnTags({ onClick = () => {} }) {
             <List.Action
               onClick={() => onClick([item])}
               title={item?.text.replaceAll('/n', '\n')}
+              className={current.id === item.id ? 'text-warning' : ''}
             >
               {item.title}
             </List.Action>

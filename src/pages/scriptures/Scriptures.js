@@ -130,6 +130,7 @@ function ScripturesView() {
           items={bookmarks}
           onChange={setBookmarks}
           onClick={(item) => handleSearch([item])}
+          current={current}
         />
       </Sidebar>
 
