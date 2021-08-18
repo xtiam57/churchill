@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useMemo } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import createPersistedState from 'use-persisted-state';
 import { Typeahead } from 'react-bootstrap-typeahead';
 import { Button, ButtonGroup, Form } from 'react-bootstrap';
@@ -13,40 +13,33 @@ import {
 } from 'react-icons/im';
 import useSound from 'use-sound';
 
-import { Slider } from 'components/slider';
-import { Sidebar } from 'components/sidebar';
-import { Wrapper } from 'components/wrapper';
-import { Controls } from 'components/controls';
-import { Bookmark } from 'components/bookmark';
-import { BookmarkList } from 'components/bookmarkList';
-import { Finder } from 'components/finder';
+import {
+  Slider,
+  Sidebar,
+  Wrapper,
+  Controls,
+  Bookmark,
+  BookmarkList,
+  Finder,
+  DisplayButton,
+  Title,
+  FinderButton,
+} from 'components';
+import { useAnthemn, useFolder, useKeyUp, usePresenter } from 'hooks';
+import { getBookmarkedItems, Storage } from 'utils';
+import { BROADCAST, MOVEMENT } from 'values';
+
 import { RecentBirthdays } from 'sections/recentBirthdays';
 import { AnthemnTags } from 'sections/anthemnTags';
 
-import { useAnthemn, useKeyUp, usePresenter } from 'hooks';
-import { getBookmarkedItems, Storage } from 'utils';
-import { BROADCAST, MOVEMENT } from 'values';
 import { typeaheadRender, finderRender } from './renders';
-import { DisplayButton } from 'components/displayButton';
-import { Title } from 'components/title';
-import { FinderButton } from 'components/finderButton';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
 export const createKey = ({ id, type }) => `${type}_${id}_config`;
 
 export default function AnthemnsPage() {
-  const folder = useMemo(() => {
-    const { app, shell } = window.require('electron').remote;
-    const { protocol } = window.location;
-    const path = `${
-      protocol === 'file:' ? app.getPath('userData') : ''
-    }\\himnos`;
-    return {
-      open: () => shell.openPath(path),
-      getPath: (file) => `${path}\\${file}.mp3`,
-    };
-  }, []);
+  const folder = useFolder();
 
   const typeaheadRef = useRef();
   const sliderRef = useRef();

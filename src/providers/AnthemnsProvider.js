@@ -8,7 +8,7 @@ function splitLines(id, title, text, array, index) {
   const lines = text.split('/n');
   const length = text.length - lines.length - 1 - 3;
 
-  const DIVIDER = 2;
+  const DIVIDER = 4;
   const THRESHOLD = 999;
   let iteration = 0;
   let count = 0;

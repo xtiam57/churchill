@@ -1,3 +1,1 @@
-import { Presenter } from './Presenter';
-
-export { Presenter };
+export * from './Presenter';

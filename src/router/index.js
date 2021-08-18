@@ -1,4 +1,2 @@
-import { RouteMapper } from './RouteMapper';
-import { routes, PATHS } from './routes';
-
-export { RouteMapper, routes, PATHS };
+export { RouteMapper } from './RouteMapper';
+export { routes, PATHS } from './routes';

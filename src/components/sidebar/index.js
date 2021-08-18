@@ -1,1 +1,1 @@
-export { SidebarStyled as Sidebar } from './styled';
+export * from './Sidebar';

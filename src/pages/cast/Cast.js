@@ -1,10 +1,7 @@
 import React from 'react';
 import createPersistedState from 'use-persisted-state';
 
-import { Presenter } from 'components/presenter';
-import { Wrapper } from 'components/wrapper';
-import { Logo } from 'components/logo';
-
+import { Presenter, Wrapper, Logo } from 'components';
 import { BROADCAST } from 'values';
 
 const useBroadcast = createPersistedState(BROADCAST.CHANNEL);

@@ -4,21 +4,23 @@ import { Button, ButtonGroup } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
 import { ImArrowLeft2, ImArrowRight2 } from 'react-icons/im';
 
-import { Wrapper } from 'components/wrapper';
-import { Presenter } from 'components/presenter';
-import { Controls } from 'components/controls';
-import { Sidebar } from 'components/sidebar';
-import { Bookmark } from 'components/bookmark';
-import { BookmarkList } from 'components/bookmarkList';
-import { Finder } from 'components/finder';
-
+import {
+  Wrapper,
+  Presenter,
+  Controls,
+  Sidebar,
+  Bookmark,
+  BookmarkList,
+  Finder,
+  Title,
+  DisplayButton,
+  FinderButton,
+} from 'components';
 import { useScriptures, useKeyUp, usePresenter } from 'hooks';
 import { getBookmarkedItems } from 'utils';
 import { BROADCAST, MOVEMENT } from 'values';
+
 import { finderRender, typeaheadRender } from './renders';
-import { Title } from 'components/title';
-import { DisplayButton } from 'components/displayButton';
-import { FinderButton } from 'components/finderButton';
 
 const useBroadcast = createPersistedState(BROADCAST.CHANNEL);
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
@@ -150,11 +152,8 @@ function ScripturesView() {
             <strong>&darr;</strong> para cambiar de capítulo.
           </small>
           <small>
-            Capítulo:{' '}
-            <strong>
-              {current.chapterNumber}/{current.chaptersCount}
-            </strong>{' '}
-            &middot; Libro: <strong>{current.bookNumber}/66</strong> &middot;{' '}
+            Capítulo: {current.chapterNumber}/{current.chaptersCount} &middot;
+            Libro: {current.bookNumber}/66 &middot;{' '}
             <strong className="text-warning">
               {Math.round(
                 ((current.index / scriptures.length) * 100 + Number.EPSILON) *

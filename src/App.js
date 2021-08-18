@@ -8,10 +8,7 @@ import {
   ScripturesProvider,
   BirthdaysProvider,
 } from 'providers';
-
-import { Navbar } from 'components/navbar';
-import { Settings } from 'components/settings';
-
+import { Navbar, Settings } from 'components';
 import { RouteMapper } from 'router';
 
 // CSS
@@ -21,23 +18,24 @@ import './assets/styles/index.css';
 
 function App() {
   return (
-    <Router>
-      <AppProvider>
+    <AppProvider>
+      <Router>
         <PresenterProvider>
           <ScripturesProvider>
             <AnthemnsProvider>
               <BirthdaysProvider>
+                {/* Top navbar */}
                 <Navbar />
-
+                {/* Routes */}
                 <RouteMapper />
-
+                {/* Sidebar settings */}
                 <Settings />
               </BirthdaysProvider>
             </AnthemnsProvider>
           </ScripturesProvider>
         </PresenterProvider>
-      </AppProvider>
-    </Router>
+      </Router>
+    </AppProvider>
   );
 }
 

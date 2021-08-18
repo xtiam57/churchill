@@ -29,7 +29,7 @@ export const NOTICES = [
       }),
       Slide.create({
         title: '<span class="fs-xl">🪑🚶🪑</span>',
-        text: 'Permanezca en su lugar y <strong>no se levante durante el culto</strong>.',
+        text: 'Permanezca en su lugar y <strong>no se levante durante la predicación</strong>.',
       }),
       Slide.create({
         title: '<span class="fs-xl">👦👶👧</span>',
@@ -37,7 +37,7 @@ export const NOTICES = [
       }),
       Slide.create({
         title: '<span class="fs-xl">🧻🧼🚽</span>',
-        text: 'Vaya a los servicios higiénicos <strong>antes o después</strong> del culto.',
+        text: 'Vaya a los servicios higiénicos <strong>antes o después</strong> de la predicación.',
       }),
       Slide.create({
         title: '<span class="fs-xl">⛪</span>',

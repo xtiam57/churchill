@@ -1,3 +1,1 @@
-import { FinderButton } from './FinderButton';
-
-export { FinderButton };
+export * from './FinderButton';

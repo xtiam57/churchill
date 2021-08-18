@@ -8,3 +8,4 @@ export { useKeyUp } from './useKeyUp';
 export { usePresenter } from './usePresenter';
 export { useScriptures } from './useScriptures';
 export { useSettingsSidebar } from './useSettingsSidebar';
+export { useFolder } from './useFolder';

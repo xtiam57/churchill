@@ -9,17 +9,19 @@ import {
   ImLoop,
 } from 'react-icons/im';
 
-import { Slider } from 'components/slider';
-import { Sidebar } from 'components/sidebar';
-import { Wrapper } from 'components/wrapper';
-import { Controls } from 'components/controls';
-import { List } from 'components/list';
-
+import {
+  Slider,
+  Sidebar,
+  Wrapper,
+  Controls,
+  List,
+  Title,
+  DisplayButton,
+} from 'components';
 import { useKeyUp, useIterate, usePresenter } from 'hooks';
 import { BROADCAST, MOVEMENT } from 'values';
+
 import { NOTICES } from './notices';
-import { Title } from 'components/title';
-import { DisplayButton } from 'components/displayButton';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
 

@@ -4,16 +4,18 @@ import { Button, Col, Row } from 'react-bootstrap';
 import { ImStop2 } from 'react-icons/im';
 import { BsClock } from 'react-icons/bs';
 
-import { Sidebar } from 'components/sidebar';
-import { Wrapper } from 'components/wrapper';
-import { Controls } from 'components/controls';
-import { Presenter } from 'components/presenter';
-import { List } from 'components/list';
-
+import {
+  Sidebar,
+  Wrapper,
+  Title,
+  DisplayButton,
+  Controls,
+  Presenter,
+  List,
+} from 'components';
 import { useCountdown, usePresenter } from 'hooks';
 import { BROADCAST } from 'values';
-import { Title } from 'components/title';
-import { DisplayButton } from 'components/displayButton';
+
 import { CountdownForm } from './CountdownForm';
 
 const useBroadcast = createPersistedState(BROADCAST.CHANNEL);

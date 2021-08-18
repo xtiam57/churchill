@@ -1,3 +1,1 @@
-import { DisplayButton } from './DisplayButton';
-
-export { DisplayButton };
+export * from './DisplayButton';

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { List } from 'components/list';
+import { List } from 'components';
 
 import { useAnthemn } from 'hooks';
 

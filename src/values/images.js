@@ -86,7 +86,7 @@ export const BACKGROUNDS = [
   { label: 'Bosque 5', value: bg45 },
   { label: 'Cielo', value: bg59 },
   { label: 'Cruz', value: bg05 },
-  { label: 'cubes', value: bg36 },
+  { label: 'Cubos', value: bg36 },
   { label: 'Cueva', value: bg35 },
   { label: 'Cueva', value: bg55 },
   { label: 'Divertido', value: bg06 },

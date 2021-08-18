@@ -1,1 +1,1 @@
-export { WrapperStyled as Wrapper } from './styled';
+export * from './Wrapper';

@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
-
 import { ImUserPlus } from 'react-icons/im';
 import { RiCloseFill } from 'react-icons/ri';
 
-import { Wrapper } from 'components/wrapper';
-import { Presenter } from 'components/presenter';
-import { Controls } from 'components/controls';
-import { Sidebar } from 'components/sidebar';
-import { List } from 'components/list';
-
+import {
+  Wrapper,
+  Presenter,
+  Controls,
+  Sidebar,
+  List,
+  Title,
+  DisplayButton,
+} from 'components';
 import { useBirthday, usePresenter } from 'hooks';
 import { Time } from 'utils';
 import { BROADCAST } from 'values';
+
 import { BirthdayModal } from './modal';
-import { Title } from 'components/title';
-import { DisplayButton } from 'components/displayButton';
 
 const useBroadcast = createPersistedState(BROADCAST.CHANNEL);
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
