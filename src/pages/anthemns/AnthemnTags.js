@@ -47,7 +47,7 @@ export function AnthemnTags({ onClick = () => {}, current }) {
           <List.Item key={item.index}>
             <List.Action
               onClick={() => onClick([item])}
-              title={item?.text.replaceAll('/n', '\n')}
+              title={item?.text.replaceAll('/n', '\n').replaceAll('___', '')}
               className={current.id === item.id ? 'text-warning' : ''}
             >
               {item.title}

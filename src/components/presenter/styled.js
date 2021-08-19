@@ -40,7 +40,7 @@ export const PresenterStyled = styled.section`
     small {
       display: block;
       color: ${({ subtextcolor }) => subtextcolor || '#007bff'};
-      font-size: 0.65em;
+      font-size: 0.6em;
       margin-top: 1rem;
     }
   }

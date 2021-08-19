@@ -11,7 +11,9 @@ export const finderRender = (option, { text }) => (
       ))}
     </div>
 
-    <Highlighter search={text}>{option.text.replaceAll('/n', ' ')}</Highlighter>
+    <Highlighter search={text}>
+      {option.text.replaceAll('/n', ' ').replaceAll('___', '')}
+    </Highlighter>
 
     {option.authors ? (
       <div className="small font-italic mt-2">Autor(es): {option.authors}</div>
@@ -26,7 +28,10 @@ export const typeaheadRender = (option, { text }) => (
       className="more font-italic"
       title={option.text.replaceAll('/n', '\n')}
     >
-      {option.text.replaceAll('1)', '').replaceAll('/n', ' ')}
+      {option.text
+        .replaceAll('1)', '')
+        .replaceAll('/n', ' ')
+        .replaceAll('___', '')}
     </small>
   </>
 );

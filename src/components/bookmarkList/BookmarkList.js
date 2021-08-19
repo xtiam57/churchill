@@ -48,7 +48,7 @@ export function BookmarkList({
               title={
                 type === 'verse'
                   ? item?.text.replaceAll('<br/>', '\n')
-                  : item?.text?.replaceAll('/n', '\n')
+                  : item?.text?.replaceAll('/n', '\n').replaceAll('___', '')
               }
               className={current.id === item.id ? 'text-warning' : ''}
             >
