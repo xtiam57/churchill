@@ -463,9 +463,9 @@
     "title": "FUENTE DE LA VIDA ETERNA",
     "chorus": null,
     "stanzas": [
-      "1) Fuente de la vida eterna y de toda bendición;/nEnsalzar tu gracia tierna, debe cada corazón./nTu piedad inagotable, abundante en perdonar,/nÚnico Ser adorable, gloria a ti debemos dar.",
-      "2) De los cánticos celestes te quisiéramos cantar;/nEntonados por las huestes, que lograste rescatar./nAlmas que a buscar viniste, porque les tuviste amor,/nDe ellas te compadeciste, con ternísimo favor.",
-      "3) Toma nuestros corazones, llénalos de tu verdad;/nDe tu Espíritu los dones, y de toda santidad./nGuíanos en obediencia, humildad, amor y fe;/nNos ampare tu clemencia; Salvador, propicio sé."
+      "1) Fuente de la vida eterna/ny de toda bendición;/nEnsalzar tu gracia tierna,/ndebe cada corazón./nTu piedad inagotable,/nabundante en perdonar,/nÚnico Ser adorable,/ngloria a ti debemos dar.",
+      "2) De los cánticos celestes/nte quisiéramos cantar;/nEntonados por las huestes,/nque lograste rescatar./nAlmas que a buscar viniste,/nporque les tuviste amor,/nDe ellas te compadeciste,/ncon ternísimo favor.",
+      "3) Toma nuestros corazones,/nllénalos de tu verdad;/nDe tu Espíritu los dones,/ny de toda santidad./nGuíanos en obediencia,/nhumildad, amor y fe;/nNos ampare tu clemencia;/nSalvador, propicio sé."
     ],
     "startsWithChorus": false,
     "authors": "John Wyeth, Tomas M. Westrup",
@@ -474,12 +474,12 @@
   {
     "number": 36,
     "title": "GLORIA A TU NOMBRE",
-    "chorus": "Gloria, gloria, ¡gloria a tu nombre oh Dios!/nGloria, gloria, gloria a tu nombre, ¡Oh Dios!",
+    "chorus": "Gloria, gloria,/n¡gloria a tu nombre oh Dios!/nGloria, gloria,/ngloria a tu nombre, ¡Oh Dios!",
     "stanzas": [
-      "1) ¡Oh bendito Rey divino! Te adoramos con fervor./nPoderoso, admirable eres tú, ¡oh Salvador!",
-      "2) Redentor, Señor del cielo, Luz eterna, dulce bien;/nLas naciones de la tierra cantan gloria a su Rey.",
-      "3) De tu trono en los cielos a este mundo pecador,/nHas bajado para darte como nuestro Salvador.",
-      "4) Ven, oh ven, Señor eterno; ven con gloria divinal./nVen y lleva a tu iglesia a tu reino celestial."
+      "1) ¡Oh bendito Rey divino!/nTe adoramos con fervor./nPoderoso, admirable eres tú,/n¡oh Salvador!",
+      "2) Redentor, Señor del cielo,/nLuz eterna, dulce bien;/nLas naciones de la tierra/ncantan gloria a su Rey.",
+      "3) De tu trono en los cielos/na este mundo pecador,/nHas bajado para darte/ncomo nuestro Salvador.",
+      "4) Ven, oh ven, Señor eterno;/nven con gloria divinal./nVen y lleva a tu iglesia/na tu reino celestial."
     ],
     "startsWithChorus": false,
     "authors": null,
@@ -6820,10 +6820,10 @@
   {
     "number": 509,
     "title": "FELIZ CUMPLEAÑOS",
-    "chorus": "¡Feliz, feliz cumpleaños! Que Dios en su bondad/nTe dé muy larga vida, salud, felicidad.",
+    "chorus": "¡Feliz, feliz cumpleaños!/nQue Dios en su bondad/nTe dé muy larga vida,/nsalud, felicidad.",
     "stanzas": [
-      "1) Feliz, feliz cumpleaños deseamos para ti,/nQue el Dios omnipotente te quiera bendecir.",
-      "2) A Dios le damos gracias que con amor sin par,/nAl fin de otro año hermoso te permitió llegar."
+      "1) Feliz, feliz cumpleaños/ndeseamos para ti,/nQue el Dios omnipotente/nte quiera bendecir.",
+      "2) A Dios le damos gracias/nque con amor sin par,/nAl fin de otro año hermoso/nte permitió llegar."
     ],
     "startsWithChorus": false,
     "authors": null,
@@ -6832,11 +6832,11 @@
   {
     "number": 510,
     "title": "CON GRAN GOZO Y PLACER",
-    "chorus": "¡Bienvenidos! ¡Bienvenidos!/nLos hermanos hoy aquí nos gozamos en decir:/n¡Bienvenidos! ¡Bienvenidos!/nAl volvernos a reunir, ¡Bienvenidos!",
+    "chorus": "¡Bienvenidos! ¡Bienvenidos!/nLos hermanos hoy aquí/nnos gozamos en decir:/n¡Bienvenidos! ¡Bienvenidos!/nAl volvernos a reunir,/n¡Bienvenidos!",
     "stanzas": [
-      "1) Con gran gozo y placer nos volvemos hoy a ver;/nNuestras manos otra vez estrechamos./nSe contenta el corazón ensanchándose de amor:/nTodos a una voz a Dios gracias damos.",
-      "2) Dios a todos ayudó, ni un momento nos dejó,/nY otra vez nos reunió, ¡bienvenidos!/nEl Señor su amor nos dio, su poder nos amparó,/nDel peligro nos guardó, ¡bienvenidos!",
-      "3) Dios nos guarde en este amor, para que de corazón,/nConsagrados al Señor, le alabemos:/nEn la eterna reunión do no habrá separación,/nNi tristeza ni aflicción: ¡bienvenidos!"
+      "1) Con gran gozo y placer/nnos volvemos hoy a ver;/nNuestras manos otra vez/nestrechamos./nSe contenta el corazón/nensanchándose de amor:/nTodos a una voz a Dios/ngracias damos.",
+      "2) Dios a todos ayudó,/nni un momento nos dejó,/nY otra vez nos reunió,/n¡Bienvenidos!/nEl Señor su amor nos dio,/nsu poder nos amparó,/nDel peligro nos guardó,/n¡Bienvenidos!",
+      "3) Dios nos guarde en este amor,/npara que de corazón,/nConsagrados al Señor,/nle alabemos:/nEn la eterna reunión/ndo no habrá separación,/nNi tristeza ni aflicción:/n¡Bienvenidos!"
     ],
     "startsWithChorus": false,
     "authors": null,
@@ -6845,11 +6845,11 @@
   {
     "number": 511,
     "title": "CRISTO ME AMA",
-    "chorus": "Cristo me ama, Cristo me ama,/nCristo me ama, la Biblia dice así.",
+    "chorus": "Cristo me ama,/nCristo me ama,/nCristo me ama,/nla Biblia dice así.",
     "stanzas": [
-      "1) Cristo me ama, bien lo sé, su Palabra me hace ver,/nQue los niños son de aquél, quien es nuestro amigo fiel.",
-      "2) Cristo me ama, pues murió, y el cielo me abrió;/nÉl mis culpas quitará, y la entrada me dará.",
-      "3) Cristo me ama, es verdad, y me cuida en su bondad;/nCuando muera, bien lo sé: viviré allá con Él."
+      "1) Cristo me ama, bien lo sé,/nsu Palabra me hace ver,/nQue los niños son de aquél,/nquien es nuestro amigo fiel.",
+      "2) Cristo me ama, pues murió,/ny el cielo me abrió;/nÉl mis culpas quitará,/ny la entrada me dará.",
+      "3) Cristo me ama, es verdad,/ny me cuida en su bondad;/nCuando muera, bien lo sé:/nviviré allá con Él."
     ],
     "startsWithChorus": false,
     "authors": null,

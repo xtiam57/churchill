@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import createPersistedState from 'use-persisted-state';
-import { Button, Form, Col, InputGroup } from 'react-bootstrap';
+import { Button, Form, Col, InputGroup, Row } from 'react-bootstrap';
 import { MdClose } from 'react-icons/md';
 import { BsHeartFill, BsDownload, BsUpload } from 'react-icons/bs';
 
@@ -173,6 +173,21 @@ export function Settings() {
                 disabled={settings?.theme !== 'custom'}
               />
             </Form.Group>
+          </Form.Row>
+
+          <Form.Row>
+            <Form.Group as={Col} className="mb-1">
+              <Form.Label className=" small mb-1">Palabras de Jesús</Form.Label>
+              <Form.Control
+                size="sm"
+                type="color"
+                name="jesus"
+                value={settings?.jesus}
+                onChange={handleChangeValue}
+                disabled={settings?.theme !== 'custom'}
+              />
+            </Form.Group>
+            <Form.Group as={Col} className="mb-1"></Form.Group>
           </Form.Row>
         </>
       ) : null}

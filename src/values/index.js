@@ -18,6 +18,7 @@ export const THEMES = {
     textcolor: '#000000',
     titlecolor: '#007bff',
     subtextcolor: '#007bff',
+    jesus: '#ED2079',
     mode: 'default',
   },
   cobalt: {
@@ -25,6 +26,7 @@ export const THEMES = {
     textcolor: '#FFC603',
     titlecolor: '#ff9900',
     subtextcolor: '#ffffff',
+    jesus: '#ED2079',
     mode: '#ffffff',
   },
   pinguin: {
@@ -32,6 +34,7 @@ export const THEMES = {
     textcolor: '#ffffff',
     titlecolor: '#ffa200',
     subtextcolor: '#ffff00',
+    jesus: '#ffa200',
     mode: '#ffffff',
   },
   dark: {
@@ -39,6 +42,7 @@ export const THEMES = {
     textcolor: '#bcc0c3',
     titlecolor: '#c58af9',
     subtextcolor: '#688dee',
+    jesus: '#ED2079',
     mode: '#ffffff',
   },
   calvario: {
@@ -46,6 +50,7 @@ export const THEMES = {
     textcolor: '#000000',
     titlecolor: '#0E96D1',
     subtextcolor: '#023060',
+    jesus: '#16bcd4',
     mode: 'default',
   },
   calvarioDark: {
@@ -53,6 +58,7 @@ export const THEMES = {
     textcolor: '#ffffff',
     titlecolor: '#0E96D1',
     subtextcolor: '#1EC0C2',
+    jesus: '#ffff00',
     mode: '#ffffff',
   },
   female: {
@@ -60,6 +66,7 @@ export const THEMES = {
     textcolor: '#ffffff',
     titlecolor: '#20ED94',
     subtextcolor: '#F9AAD0',
+    jesus: '#20ED94',
     mode: '#ffffff',
   },
   fun: {
@@ -67,6 +74,7 @@ export const THEMES = {
     textcolor: '#000000',
     titlecolor: '#ffffff',
     subtextcolor: '#ffff00',
+    jesus: '#ffffff',
     mode: '#ffffff',
   },
   christmas: {
@@ -74,6 +82,7 @@ export const THEMES = {
     textcolor: '#ffffff',
     titlecolor: '#27cd16',
     subtextcolor: '#ffff00',
+    jesus: '#27cd16',
     mode: '#ffffff',
   },
 };

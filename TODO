@@ -20,6 +20,7 @@ Sección Himnos
 * (done) Etiquetas
 * (done) Busqueda de palabras
 * (done) Guardar configuracion de audio para cada himno
+* Editar himnos
 
 Avisos
 ------
@@ -39,7 +40,7 @@ Resto
 * (done) Exportar e importar storage
 * (done) Previsualización de la siguiente lamina
 * (done) Ver carpeta de cantos
+* (done) Cronometro
 * Temporizador de predica
 * Semáforo de predica
-* Cronometro
 * Contexto para anuncios

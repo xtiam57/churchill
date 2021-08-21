@@ -43,5 +43,9 @@ export const PresenterStyled = styled.section`
       font-size: 0.6em;
       margin-top: 1rem;
     }
+
+    i {
+      color: ${({ jesus }) => jesus || '#fff'};
+    }
   }
 `;
