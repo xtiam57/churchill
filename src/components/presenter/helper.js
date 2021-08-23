@@ -4,6 +4,7 @@ export function process(text, subtext) {
     .replaceAll('___', '<b>///</b>')
     .replaceAll('__', '</i>')
     .replaceAll('_', '<i>')
+    .replaceAll('**********', '<b>__________</b>')
     .replace('1)', '<strong>(1)</strong><br/> ')
     .replace('2)', '<strong>(2)</strong><br/> ')
     .replace('3)', '<strong>(3)</strong><br/> ')

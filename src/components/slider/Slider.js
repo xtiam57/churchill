@@ -30,13 +30,13 @@ export const Slider = forwardRef(
     },
     ref
   ) => {
+    const type = wrapper?.type;
     const [, setMessage] = useBroadcast(BROADCAST.INITIAL_CHANNEL);
     const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
 
     const [slides, setSlides] = useState(wrapper?.slides || []);
     const [slide, setSlide] = useState(slides[0]);
     const [moveSlide] = useIterate(slide, slides);
-    const next = moveSlide(MOVEMENT.NEXT, loop);
 
     const onNextSlide = () => {
       const slideToGo = moveSlide(MOVEMENT.NEXT, loop);
@@ -72,10 +72,17 @@ export const Slider = forwardRef(
         interval = setInterval(() => {
           const slideToGo = moveSlide(MOVEMENT.NEXT, loop);
           setSlide(slideToGo);
-        }, settings.interval || 1000);
+        }, (type === 'trivia' ? settings.triviainterval : settings.interval) || 1000);
       }
       return () => clearInterval(interval);
-    }, [autoplay, loop, moveSlide, settings.interval]);
+    }, [
+      autoplay,
+      loop,
+      moveSlide,
+      settings.interval,
+      settings.triviainterval,
+      type,
+    ]);
 
     useKeyUp('ArrowLeft', onPrevSlide);
     useKeyUp('ArrowRight', onNextSlide);
@@ -105,6 +112,20 @@ export const Slider = forwardRef(
           <small>{children}</small>
           <small>
             {slide?.index + 1}/{slides?.length}
+            {slides?.length > 1 ? (
+              <>
+                {' '}
+                &middot;{' '}
+                <strong className="text-warning">
+                  {Math.round(
+                    (((slide.index + 1) / slides.length) * 100 +
+                      Number.EPSILON) *
+                      100
+                  ) / 100}
+                  %
+                </strong>
+              </>
+            ) : null}
           </small>
         </div>
       </>

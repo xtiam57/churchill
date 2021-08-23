@@ -46,6 +46,11 @@ export const PresenterStyled = styled.section`
 
     i {
       color: ${({ jesus }) => jesus || '#fff'};
+
+      b {
+        font-weight: normal;
+        color: ${({ subtextcolor }) => subtextcolor || '#007bff'} !important;
+      }
     }
   }
 `;

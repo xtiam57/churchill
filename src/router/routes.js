@@ -4,6 +4,7 @@ import {
   BsMusicNoteList,
   BsGift,
   BsClock,
+  BsQuestionCircle,
 } from 'react-icons/bs';
 
 import AnthemnsPage from 'pages/anthemns';
@@ -12,6 +13,7 @@ import CastPage from 'pages/cast';
 import HomePage from 'pages/home';
 import ScripturesPage from 'pages/scriptures';
 import CountdownPage from 'pages/countdown';
+import TriviaPage from 'pages/trivia';
 
 export const PATHS = {
   ROOT: '/',
@@ -20,6 +22,7 @@ export const PATHS = {
   BIRTHDAYS_PAGE: '/birthdays',
   CAST_PAGE: '/cast-screen',
   COUNTDOWN_PAGE: '/countdown',
+  TRIVIA_PAGE: '/trivia',
 };
 
 export const routes = flatten([
@@ -64,6 +67,15 @@ export const routes = flatten([
     path: PATHS.CAST_PAGE,
     component: CastPage,
     label: 'Proyectar',
+  },
+  {
+    key: PATHS.TRIVIA_PAGE,
+    exact: true,
+    path: PATHS.TRIVIA_PAGE,
+    component: TriviaPage,
+    icon: <BsQuestionCircle />,
+    label: 'Trivia',
+    menu: true,
   },
   {
     key: PATHS.COUNTDOWN_PAGE,

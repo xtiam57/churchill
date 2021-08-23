@@ -26,7 +26,7 @@ export const THEMES = {
     textcolor: '#FFC603',
     titlecolor: '#ff9900',
     subtextcolor: '#ffffff',
-    jesus: '#ED2079',
+    jesus: '#ff9900',
     mode: '#ffffff',
   },
   pinguin: {
@@ -42,7 +42,7 @@ export const THEMES = {
     textcolor: '#bcc0c3',
     titlecolor: '#c58af9',
     subtextcolor: '#688dee',
-    jesus: '#ED2079',
+    jesus: '#c58af9',
     mode: '#ffffff',
   },
   calvario: {
@@ -58,7 +58,7 @@ export const THEMES = {
     textcolor: '#ffffff',
     titlecolor: '#0E96D1',
     subtextcolor: '#1EC0C2',
-    jesus: '#ffff00',
+    jesus: '#16bcd4',
     mode: '#ffffff',
   },
   female: {
@@ -95,6 +95,7 @@ const SETTINGS_INITIAL_STATE = {
   image: '',
   theme: 'default',
   preview: true,
+  triviainterval: 15000,
   ...THEMES['default'],
 };
 
@@ -155,6 +156,13 @@ export const SETTINGS_OPTIONS = {
     { value: 10000, label: '10 segundos' },
     { value: 15000, label: '15 segundos' },
     { value: 20000, label: '20 segundos' },
+    { value: 60000, label: '1 minuto' },
+  ],
+  TRIVIA_TIME_INTERVALS: [
+    { value: 15000, label: '15 segundos' },
+    { value: 20000, label: '20 segundos' },
+    { value: 25000, label: '25 segundos' },
+    { value: 30000, label: '30 segundos' },
     { value: 60000, label: '1 minuto' },
   ],
   BACKGROUNDS,
