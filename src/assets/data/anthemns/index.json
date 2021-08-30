@@ -25,7 +25,7 @@
     ],
     "startsWithChorus": false,
     "authors": "Felice de Giardini",
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 3,
@@ -72,8 +72,8 @@
     "title": "QUE TODO EL MUNDO CANTE AL SEÑOR",
     "chorus": null,
     "stanzas": [
-      "1) Que todo el mundo cante al Señor, mi Dios y Rey./nLos cielos ecos dan, que a todas partes van./nLa tierra en derredor proclama su loor;/nQue todo el mundo cante al Señor, mi Dios y Rey.",
-      "2) Que todo el mundo cante al Señor, mi Dios y Rey./nLa iglesia himnos da y nunca cesará;/nCon todo el corazón le alaben con tesón;/nQue todo el mundo cante al Señor, mi Dios y Rey."
+      "1) Que todo el mundo cante al Señor,/nmi Dios y Rey./nLos cielos ecos dan,/nque a todas partes van./nLa tierra en derredor/nproclama su loor;/nQue todo el mundo cante al Señor,/nmi Dios y Rey.",
+      "2) Que todo el mundo cante al Señor,/nmi Dios y Rey./nLa iglesia himnos da/ny nunca cesará;/nCon todo el corazón/nle alaben con tesón;/nQue todo el mundo cante al Señor,/nmi Dios y Rey."
     ],
     "startsWithChorus": false,
     "authors": null,
@@ -84,10 +84,10 @@
     "title": "SOLO A TI, DIOS Y SEÑOR",
     "chorus": null,
     "stanzas": [
-      "1) Sólo a ti, Dios y Señor, adoramos, adoramos,/nY la gloria y el honor tributamos, tributamos./nSólo a Cristo, nuestra Luz, acudimos, acudimos;/nPor su muerte en la cruz revivimos, revivimos.",
-      "2) Un Espíritu, no más, nos gobierna, nos gobierna,/nY con Él, Señor, nos das paz eterna, paz eterna;/nÉl es fuego celestial, cuya llama, cuya llama/nEn amor angelical nos inflama, nos inflama.",
-      "3) Disfrutamos tu favor solamente, solamente/nPor Jesús, fuente de amor permanente, permanente;/nSólo Él nos libertó de la muerte, de la muerte,/nSólo Él se declaró nuestro Fuerte, nuestro Fuerte.",
-      "4) Sólo tú, oh Creador, Dios eterno, Dios eterno,/nNos libraste del furor del infierno, del infierno;/nY por esto con placer proclamamos, proclamamos/nQue sólo en tu gran poder esperamos, esperamos."
+      "1) Sólo a ti, Dios y Señor,/nadoramos, adoramos,/nY la gloria y el honor/ntributamos, tributamos./nSólo a Cristo, nuestra Luz,/nacudimos, acudimos;/nPor su muerte en la cruz/nrevivimos, revivimos.",
+      "2) Un Espíritu, no más,/nnos gobierna, nos gobierna,/nY con Él, Señor, nos das/npaz eterna, paz eterna;/nÉl es fuego celestial,/ncuya llama, cuya llama/nEn amor angelical/nnos inflama, nos inflama.",
+      "3) Disfrutamos tu favor/nsolamente, solamente/nPor Jesús, fuente de amor/npermanente, permanente;/nSólo Él nos libertó/nde la muerte, de la muerte,/nSólo Él se declaró/nnuestro Fuerte, nuestro Fuerte.",
+      "4) Sólo tú, oh Creador,/nDios eterno, Dios eterno,/nNos libraste del furor/ndel infierno, del infierno;/nY por esto con placer/nproclamamos, proclamamos/nQue sólo en tu gran poder/nesperamos, esperamos."
     ],
     "startsWithChorus": false,
     "authors": null,
@@ -98,10 +98,10 @@
     "title": "ALABAD, OH LOS SIERVOS DEL SEÑOR",
     "chorus": null,
     "stanzas": [
-      "1) Alabad, oh los siervos del Señor, Alabad al Señor;/nBendecid el nombre de Dios, Bendecid el nombre de Dios,/nPor siempre y por siempre jamás,/n¡Alabad al Señor!",
-      "2) Alabad, cantad gracias al Señor. A Dios dadle loor;/nSoberano es el Señor, Soberano es el Señor,/nSu gloria reina en nuestro ser./n¡Alabad al Señor!",
-      "3) Alabad, honra y gloria dad a Él./n¿Quién es como Jehová? Grande y potente es Dios; Grande y potente es Dios,/nEs Rey de reyes, Señor y Dios./n¡Alabad al Señor!",
-      "4) ¡Alabad, oh los siervos del Señor, Dadle sumo loor;/nAl excelso y bendito Dios, Al excelso y bendito Dios;/nCantadle con gratitud y amor./n¡Alabad al Señor!"
+      "1) Alabad, oh los siervos del Señor,/nAlabad al Señor;/nBendecid el nombre de Dios,/nBendecid el nombre de Dios,/nPor siempre y por siempre jamás,/n¡Alabad al Señor!",
+      "2) Alabad, cantad gracias al Señor./nA Dios dadle loor;/nSoberano es el Señor,/nSoberano es el Señor,/nSu gloria reina en nuestro ser./n¡Alabad al Señor!",
+      "3) Alabad, honra y gloria dad a Él./n¿Quién es como Jehová?/nGrande y potente es Dios;/nGrande y potente es Dios,/nEs Rey de reyes, Señor y Dios./n¡Alabad al Señor!",
+      "4) ¡Alabad, oh los siervos del Señor,/nDadle sumo loor;/nAl excelso y bendito Dios,/nAl excelso y bendito Dios;/nCantadle con gratitud y amor./n¡Alabad al Señor!"
     ],
     "startsWithChorus": false,
     "authors": null,
@@ -112,12 +112,12 @@
     "title": "SEÑOR, ¿QUIEN ENTRARÁ?",
     "chorus": null,
     "stanzas": [
-      "1) Señor, ¿quién entrará en tu santuario para adorar?/nSeñor, ¿quién entrará en tu santuario para adorar?/nEl de manos limpias y un corazón puro, Y sin vanidades, que sepa amar;/nEl de manos limpias y un corazón puro, Y sin vanidades, que sepa amar.",
-      "2) Señor, yo quiero entrar en tu santuario para adorar./nSeñor, yo quiero entrar en tu santuario para adorar./nDame manos limpias y un corazón puro, y sin vanidades, enséñame a amar;/nDame manos limpias y un corazón puro, y sin vanidades, enséñame a amar."
+      "1) Señor, ¿quién entrará/nen tu santuario para adorar?/nSeñor, ¿quién entrará/nen tu santuario para adorar?/nEl de manos limpias/ny un corazón puro,/nY sin vanidades, que sepa amar;/nEl de manos limpias/ny un corazón puro,/nY sin vanidades, que sepa amar.",
+      "2) Señor, yo quiero entrar/nen tu santuario para adorar./nSeñor, yo quiero entrar/nen tu santuario para adorar./nDame manos limpias/ny un corazón puro,/ny sin vanidades, enséñame a amar;/nDame manos limpias/ny un corazón puro,/ny sin vanidades, enséñame a amar."
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 10,
@@ -135,12 +135,12 @@
   {
     "number": 11,
     "title": "BENDICE, OH ALMA A TU CREADOR",
-    "chorus": "Oh cantad, oh cantad al Señor con fervor;/nBendice, oh alma, a nuestro Rey y Salvador.",
+    "chorus": "Oh cantad, oh cantad/nal Señor con fervor;/nBendice, oh alma,/na nuestro Rey y Salvador.",
     "stanzas": [
-      "1) Bendice, oh alma a tu Creador con férvida canción;/nDespierta, y canta su loor tu ardiente corazón.",
-      "2) No olvides nunca su bondad mostrando ingratitud,/nPues Él perdona tu maldad, te salva y da salud.",
-      "3) De bien tu boca llena está; y nueva juventud./nA tu alma siempre le dará, calmando tu inquietud.",
-      "4) En ira es lento nuestro Rey, mas pronto es en su amor,/nNo quiere siempre contender ni dura su furor."
+      "1) Bendice, oh alma a tu Creador/ncon férvida canción;/nDespierta, y canta su loor/ntu ardiente corazón.",
+      "2) No olvides nunca su bondad/nmostrando ingratitud,/nPues Él perdona tu maldad,/nte salva y da salud.",
+      "3) De bien tu boca llena está;/ny nueva juventud./nA tu alma siempre le dará,/ncalmando tu inquietud.",
+      "4) En ira es lento nuestro Rey,/nmas pronto es en su amor,/nNo quiere siempre contender/nni dura su furor."
     ],
     "startsWithChorus": false,
     "authors": null,
@@ -164,7 +164,7 @@
     "title": "ENGRANDECIDO SEA JEHOVÁ",
     "chorus": null,
     "stanzas": [
-      "Engrandecido sea Jehová, nuestro Dios;/nPor todas las edades, por siempre."
+      "Engrandecido sea Jehová,/nnuestro Dios;/nPor todas las edades,/npor siempre."
     ],
     "startsWithChorus": false,
     "authors": null,
@@ -175,9 +175,9 @@
     "title": "DIOS ESTÁ PRESENTE",
     "chorus": null,
     "stanzas": [
-      "1) ¡Dios está presente! Vamos a postrarnos/nAnte Él con reverencia;/nEn silencio estemos frente a su grandeza,/nImplorando su clemencia./nQuien con Él quiera andar,/nSu mirada eleve; votos le renueve.",
-      "2) ¡Dios está presente! Y los serafines/nLo adoran reverentes;/n\"Santo, Santo, Santo,\" en su honor le cantan/nlos ejércitos celestes./n¡Oh buen Dios! nuestra voz/nComo humilde ofrenda a tu trono ascienda.",
-      "3) Como el sol irradia sobre el tierno lirio,/nQue contento se doblega,/nDios omnipresente,/nIlumina mi alma y feliz yo te obedezca;/nHaz que así, tú en mí/nSeas reflejado, y tu amor, probado."
+      "1) ¡Dios está presente!/nVamos a postrarnos/nAnte Él con reverencia;/nEn silencio estemos/nfrente a su grandeza,/nImplorando su clemencia./nQuien con Él quiera andar,/nSu mirada eleve;/nvotos le renueve.",
+      "2) ¡Dios está presente!/nY los serafines/nLo adoran reverentes;/n\"Santo, Santo, Santo,\"/nen su honor le cantan/nlos ejércitos celestes./n¡Oh buen Dios! nuestra voz/nComo humilde ofrenda/na tu trono ascienda.",
+      "3) Como el sol irradia sobre/nel tierno lirio,/nQue contento se doblega,/nDios omnipresente,/nIlumina mi alma/ny feliz yo te obedezca;/nHaz que así, tú en mí/nSeas reflejado,/ny tu amor, probado."
     ],
     "startsWithChorus": false,
     "authors": null,
@@ -188,11 +188,11 @@
     "title": "NUNCA, DIOS MÍO",
     "chorus": null,
     "stanzas": [
-      "1) Nunca, Dios mío, cesará mi labio/nDe bendecirte, de cantar tu gloria,/nPorque conservo de tu amor inmenso grata memoria.",
-      "2) Cuando perdido en mundanal sendero/nNo me cercaba sino niebla oscura,/nTú me miraste, y alumbróme un rayo de tu luz pura.",
-      "3) Cuando inclinaba mi abatida frente/nPor el pecado de mi necio yugo,/nDulce reposo, y eficaz alivio darme te plugo.",
-      "4) Cuando los dones malgasté a porfía,/nCon que a mi alma pródigo adornaste,/n\"Padre, he pecado\", con dolor te dije, y me abrazaste.",
-      "5) Cuando en sus propios méritos se fiaba,/nNunca mi pecho con amor latía;/nHoy de amor late, porque en tus bondades sólo confía."
+      "1) Nunca, Dios mío, cesará mi labio/nDe bendecirte, de cantar tu gloria,/nPorque conservo de tu amor/ninmenso grata memoria.",
+      "2) Cuando perdido en mundanal sendero/nNo me cercaba sino niebla oscura,/nTú me miraste,/ny alumbróme un rayo de tu luz pura.",
+      "3) Cuando inclinaba mi abatida frente/nPor el pecado de mi necio yugo,/nDulce reposo,/ny eficaz alivio darme te plugo.",
+      "4) Cuando los dones malgasté a porfía,/nCon que a mi alma pródigo adornaste,/n\"Padre, he pecado\",/ncon dolor te dije, y me abrazaste.",
+      "5) Cuando en sus propios méritos se fiaba,/nNunca mi pecho con amor latía;/nHoy de amor late,/nporque en tus bondades sólo confía."
     ],
     "startsWithChorus": false,
     "authors": null,
@@ -201,11 +201,11 @@
   {
     "number": 16,
     "title": "ENGRANDECIDO SEA DIOS",
-    "chorus": "¡Dad gloria, gloria, gloria, gloria,/nDad gloria a nuestro Dios!",
+    "chorus": "¡Dad gloria, gloria,/ngloria, gloria,/nDad gloria a nuestro Dios!",
     "stanzas": [
-      "1) Engrandecido sea Dios en esta reunión,/nEn esta reunión./nAlegres, juntos a una voz",
-      "2) Durante el día que pasó la mano del Señor,/nLa mano del Señor/nDe muchos males nos salvó:",
-      "3) Pues hasta aquí nos ayudó, y siempre proveerá./nY siempre proveerá./nCon gratitud, placer y amor:",
+      "1) Engrandecido sea Dios/nen esta reunión,/nEn esta reunión./nAlegres, juntos a una voz",
+      "2) Durante el día que pasó/nla mano del Señor,/nLa mano del Señor/nDe muchos males nos salvó:",
+      "3) Pues hasta aquí nos ayudó,/ny siempre proveerá./nY siempre proveerá./nCon gratitud, placer y amor:",
       "4) A otras almas ¡salva, oh Dios!/nDespiértalas, Señor,/nDespiértalas, Señor,/nEscucha nuestra petición,"
     ],
     "startsWithChorus": false,
@@ -215,11 +215,11 @@
   {
     "number": 17,
     "title": "TODOS JUNTOS TRIBUTEMOS",
-    "chorus": "¡Aleluya! ¡Aleluya! Proclamemos su loor.",
+    "chorus": "¡Aleluya! ¡Aleluya!/nProclamemos su loor.",
     "stanzas": [
-      "1) Todos juntos tributemos gracias al buen Salvador;/nGrande ha sido su paciencia y precioso su amor;",
-      "2) Nuestro Rey divino, eterno, nos rodea con favor;/nFortalece a los cansados y perdona al pecador.",
-      "3) En Él pongamos la confianza, en el santo Redentor;/nY en la gloria, redimidos, cantaremos su amor."
+      "1) Todos juntos tributemos/ngracias al buen Salvador;/nGrande ha sido su paciencia/ny precioso su amor;",
+      "2) Nuestro Rey divino,/neterno, nos rodea con favor;/nFortalece a los cansados/ny perdona al pecador.",
+      "3) En Él pongamos la confianza,/nen el santo Redentor;/nY en la gloria, redimidos,/ncantaremos su amor."
     ],
     "startsWithChorus": false,
     "authors": null,
@@ -469,7 +469,7 @@
     ],
     "startsWithChorus": false,
     "authors": "John Wyeth, Tomas M. Westrup",
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 36,
@@ -616,7 +616,7 @@
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 47,
@@ -698,7 +698,7 @@
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 53,
@@ -712,21 +712,21 @@
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 54,
     "title": "OH VEN, EMANUEL",
-    "chorus": "Vendrá, vendrá Rey Emanuel, Alégrate, oh Israel.",
+    "chorus": "Vendrá, vendrá Rey Emanuel,/nAlégrate, oh Israel.",
     "stanzas": [
-      "1) Oh ven, oh ven, Rey Emanuel, rescata ya a Israel,/nQue llora en su desolación y espera su liberación.",
-      "2) Sabiduría celestial, al mundo hoy ven a morar;/nCorrígenos y haznos ver en ti lo que podemos ser.",
-      "3) Anhelo de los pueblos, ven; en ti podremos paz tener;/nDe crueles guerras líbranos, y reine soberano Dios.",
-      "4) Ven tú, oh Hijo de David, tu trono establece aquí:/nDestruye el poder del mal. ¡Visítanos, Rey celestial!"
+      "1) Oh ven, oh ven, Rey Emanuel,/nrescata ya a Israel,/nQue llora en su desolación/ny espera su liberación.",
+      "2) Sabiduría celestial,/nal mundo hoy ven a morar;/nCorrígenos y haznos ver en ti/nlo que podemos ser.",
+      "3) Anhelo de los pueblos, ven;/nen ti podremos paz tener;/nDe crueles guerras líbranos,/ny reine soberano Dios.",
+      "4) Ven tú, oh Hijo de David,/ntu trono establece aquí:/nDestruye el poder del mal./n¡Visítanos, Rey celestial!"
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 55,
@@ -746,12 +746,12 @@
     "title": "VEN, JESÚS MUY ESPERADO",
     "chorus": null,
     "stanzas": [
-      "1) Ven, Jesús muy esperado,/nVen, y quita de tu grey sus temores y pecados,/nPues tú eres nuestro Rey./nEres fuerza y alegría, de la tierra y de Israel;/nY esperanza para aquellos,/nQue te esperan con gran fe.",
-      "2) Naces para bien de todos;/nAunque niño, eres Dios; naces para hacernos buenos;/nOh Jesús, ven pronto hoy./nCon tu Espíritu divino reina en todo corazón,/nY tu gracia nos conduzca/nA tu trono de esplendor."
+      "1) Ven, Jesús muy esperado,/nVen, y quita de tu grey/nsus temores y pecados,/nPues tú eres nuestro Rey./nEres fuerza y alegría,/nde la tierra y de Israel;/nY esperanza para aquellos,/nQue te esperan con gran fe.",
+      "2) Naces para bien de todos;/nAunque niño, eres Dios;/nnaces para hacernos buenos;/nOh Jesús, ven pronto hoy./nCon tu Espíritu divino/nreina en todo corazón,/nY tu gracia nos conduzca/nA tu trono de esplendor."
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 57,
@@ -1321,13 +1321,13 @@
     "title": "EN EL CALVARIO ESTUVE YO",
     "chorus": null,
     "stanzas": [
-      "1) En el Calvario estuve yo; Jesús allí murió./nYo no sabía que Él me amó: por mí Él fue a la cruz./nY al estar junto a Jesús su gran amor sentí./n¡Oh qué vergüenza tuve yo en el Calvario allí!",
-      "2) En el Calvario me postré y con dolor lloré./nTan gran amor yo rechacé por muchos años, sí;/nY al Señor decir le oí: \"Por ti yo fui a la cruz.\"/n¡Oh santo amor mi ser llenó en el Calvario allí!",
-      "3) En el Calvario un día oré: \"De ti, Señor, seré;/nPerdón te pido, pues pequé; restáurame, oh Dios.\"/nY al orar, Él me salvó, seguridad me dio./nY dulce paz yo recibí en el Calvario allí."
+      "1) En el Calvario estuve yo;/nJesús allí murió./nYo no sabía que Él me amó:/npor mí Él fue a la cruz./nY al estar junto a Jesús/nsu gran amor sentí./n¡Oh qué vergüenza tuve yo/nen el Calvario allí!",
+      "2) En el Calvario me postré/ny con dolor lloré./nTan gran amor yo rechacé/npor muchos años, sí;/nY al Señor decir le oí:/n\"Por ti yo fui a la cruz.\"/n¡Oh santo amor mi ser llenó/nen el Calvario allí!",
+      "3) En el Calvario un día oré:/n\"De ti, Señor, seré;/nPerdón te pido, pues pequé;/nrestáurame, oh Dios.\"/nY al orar, Él me salvó,/nseguridad me dio./nY dulce paz yo recibí/nen el Calvario allí."
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 100,
@@ -1341,7 +1341,7 @@
     ],
     "startsWithChorus": false,
     "authors": "George Bennard",
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 101,
@@ -1360,11 +1360,11 @@
   {
     "number": 102,
     "title": "JESUCRISTO FUE INMOLADO",
-    "chorus": "El tus culpas y desgracias las llevó con tanto amor./nNo desprecies su llamado, pecador.",
+    "chorus": "El tus culpas y desgracias/nlas llevó con tanto amor./nNo desprecies su llamado,/npecador.",
     "stanzas": [
-      "1) Jesucristo fue inmolado, por salvarte, pecador;/nDio su sangre en el Calvario, por brindarte salvación.",
-      "2) Cual cordero fue llevado, y sus labios/nÉl no abrió; Mansamente y con arrojo a la muerte se enfrentó.",
-      "3) Fue sin mancha y sin pecado, culpa nunca se le halló;/nSin embargo, se ensañaron con mi Cristo, con mi Dios."
+      "1) Jesucristo fue inmolado,/npor salvarte, pecador;/nDio su sangre en el Calvario,/npor brindarte salvación.",
+      "2) Cual cordero fue llevado,/ny sus labios/nÉl no abrió; Mansamente/ny con arrojo a la muerte se enfrentó.",
+      "3) Fue sin mancha y sin pecado,/nculpa nunca se le halló;/nSin embargo, se ensañaron/ncon mi Cristo, con mi Dios."
     ],
     "startsWithChorus": false,
     "authors": null,
@@ -1395,7 +1395,7 @@
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 105,
@@ -1462,7 +1462,7 @@
     ],
     "startsWithChorus": false,
     "authors": "Isaac Watts",
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 110,
@@ -1582,14 +1582,14 @@
     "title": "¿VISTE TU?",
     "chorus": null,
     "stanzas": [
-      "1) ¿Viste tú cuando en la cruz murió?/n¿Viste tú cuando en la cruz murió?/n¡Oh! hay veces que al pensarlo tiemblo, tiemblo, tiemblo./n¿Viste tú cuando en la cruz murió?",
-      "2) ¿Viste tú cuando expiró allí?/n¿Viste tú cuando expiró allí?/n¡Oh! hay veces que al pensarlo tiemblo, tiemblo, tiemblo./n¿Viste tú cuando expiró allí?",
-      "3) ¿Viste tú cuando enterrado fue?/n¿Viste tú cuando enterrado fue?/n¡Oh! hay veces que al pensarlo tiemblo, tiemblo, tiemblo./n¿Viste tú cuando enterrado fue?",
-      "4) ¿Viste tú cuando Él resucitó?/n¿Viste tú cuando Él resucitó?/n¡Oh! hay veces que al pensarlo tiemblo, tiemblo, tiemblo./n¿Viste tú cuando Él resucitó?"
+      "1) ¿Viste tú cuando en la cruz murió?/n¿Viste tú cuando en la cruz murió?/n¡Oh! hay veces que al pensarlo/ntiemblo, tiemblo, tiemblo./n¿Viste tú cuando en la cruz murió?",
+      "2) ¿Viste tú cuando expiró allí?/n¿Viste tú cuando expiró allí?/n¡Oh! hay veces que al pensarlo/ntiemblo, tiemblo, tiemblo./n¿Viste tú cuando expiró allí?",
+      "3) ¿Viste tú cuando enterrado fue?/n¿Viste tú cuando enterrado fue?/n¡Oh! hay veces que al pensarlo/ntiemblo, tiemblo, tiemblo./n¿Viste tú cuando enterrado fue?",
+      "4) ¿Viste tú cuando Él resucitó?/n¿Viste tú cuando Él resucitó?/n¡Oh! hay veces que al pensarlo/ntiemblo, tiemblo, tiemblo./n¿Viste tú cuando Él resucitó?"
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 119,
@@ -1780,11 +1780,11 @@
   {
     "number": 133,
     "title": "SANTO ESPÍRITU, SE MI GUÍA",
-    "chorus": "Santo Espíritu de amor, Hazme atento tu voz escuchar./nTe necesito, Trino Dios,/nEn mi ser ven a reinar.",
+    "chorus": "Santo Espíritu de amor,/nHazme atento tu voz escuchar./nTe necesito, Trino Dios,/nEn mi ser ven a reinar.",
     "stanzas": [
-      "1) Santo Espíritu de amor, ven a mí con prontitud:/nPurifícame, Señor, cúbreme con tu virtud.",
-      "2) Nunca aquí seré feliz, mientras cubra mi maldad;/nVen, Dios Santo, ven a mí, libra del innato mal.",
-      "3) Tú no engañas, oh Señor, al que clama en contrición,/nToma todo lo que soy, llena hoy mi corazón."
+      "1) Santo Espíritu de amor,/nven a mí con prontitud:/nPurifícame, Señor,/ncúbreme con tu virtud.",
+      "2) Nunca aquí seré feliz,/nmientras cubra mi maldad;/nVen, Dios Santo, ven a mí,/nlibra del innato mal.",
+      "3) Tú no engañas, oh Señor,/nal que clama en contrición,/nToma todo lo que soy,/nllena hoy mi corazón."
     ],
     "startsWithChorus": false,
     "authors": null,
@@ -1793,16 +1793,16 @@
   {
     "number": 134,
     "title": "¡SANTO ESPÍRITU, LLÉNAME!",
-    "chorus": "¡Lléname! ¡Lléname! Santo Espíritu de Dios./nMueve mi ser con tu poder, ¡Oh, Santo Espíritu, lléname!",
+    "chorus": "¡Lléname! ¡Lléname!/nSanto Espíritu de Dios./nMueve mi ser con tu poder,/n¡Oh, Santo Espíritu, lléname!",
     "stanzas": [
-      "1) ¡Oh, Santo Espíritu de Dios! unge mi corazón;/nTu luz divina brille en mí con todo su esplendor.",
-      "2) ¡Oh, Santo Espíritu de Dios! toma mi voluntad;/nHazme saber el gran poder de Cristo con claridad",
-      "3) ¡Oh, Santo Espíritu de Dios! dame tu gran poder/nEnciende el fuego de tu amor muy dentro de mi ser.",
-      "4) ¡Oh, Santo Espíritu de Dios! escucha mi oración/nMi vida entera te la doy en fiel consagración."
+      "1) ¡Oh, Santo Espíritu de Dios!/nunge mi corazón;/nTu luz divina brille en mí/ncon todo su esplendor.",
+      "2) ¡Oh, Santo Espíritu de Dios!/ntoma mi voluntad;/nHazme saber el gran poder/nde Cristo con claridad",
+      "3) ¡Oh, Santo Espíritu de Dios!/ndame tu gran poder/nEnciende el fuego de tu amor/nmuy dentro de mi ser.",
+      "4) ¡Oh, Santo Espíritu de Dios!/nescucha mi oración/nMi vida entera te la doy/nen fiel consagración."
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 135,
@@ -1899,16 +1899,16 @@
   {
     "number": 142,
     "title": "PADRE, TU PALABRA ES",
-    "chorus": "Es tu ley, Señor, faro celestial,/nQue en perenne resplandor, norte y guía da al mortal.",
+    "chorus": "Es tu ley, Señor,/nfaro celestial,/nQue en perenne resplandor,/nnorte y guía da al mortal.",
     "stanzas": [
-      "1) Padre, tu palabra es mi delicia y mi solaz;/nGuíe siempre aquí mis pies, y a mi alma traiga paz.",
-      "2) Si obediente oí tu voz, en tu gracia fuerza hallé/nY con firme pie y veloz, por tus sendas caminé.",
-      "3) Tu verdad es mi sostén, contra duda y tentación/nY destila calma y bien cuando asalta la aflicción",
-      "4) Son tus dichos para mí, prendas fieles de salud;/nDame, pues, que te oiga a ti, con filial solicitud"
+      "1) Padre, tu palabra/nes mi delicia y mi solaz;/nGuíe siempre aquí mis pies,/ny a mi alma traiga paz.",
+      "2) Si obediente oí tu voz,/nen tu gracia fuerza hallé/nY con firme pie y veloz,/npor tus sendas caminé.",
+      "3) Tu verdad es mi sostén,/ncontra duda y tentación/nY destila calma y bien/ncuando asalta la aflicción",
+      "4) Son tus dichos para mí,/nprendas fieles de salud;/nDame, pues, que te oiga a ti,/ncon filial solicitud"
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 143,
@@ -2250,21 +2250,21 @@
     "title": "SALVANTE AMOR",
     "chorus": "Salvante amor, amor que nunca cesa,/nSalvante amor, amor tan inmortal./nLo cantará mi alma por los siglos,/nRadiante unida al coro celestial.",
     "stanzas": [
-      "1) De los cielos a un pesebre, su riqueza abandonó,/nY el Hijo de Dios nos rescató./nDe las calles celestiales, a brutal y dura cruz,/nVino Cristo y con su sangre vida dio.",
-      "2) Lejos del amante Padre, a este mundo se acercó,/nY a la muerte fue Cristo el Señor;/nYo, perdido, Él encontróme, con su sangre me lavó,/nY me dio la paz que el mundo rechazó."
+      "1) De los cielos a un pesebre,/nsu riqueza abandonó,/nY el Hijo de Dios nos rescató./nDe las calles celestiales,/na brutal y dura cruz,/nVino Cristo y con su sangre vida dio.",
+      "2) Lejos del amante Padre,/na este mundo se acercó,/nY a la muerte fue Cristo el Señor;/nYo, perdido, Él encontróme,/ncon su sangre me lavó,/nY me dio la paz que el mundo rechazó."
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": "Navidad"
+    "tags": "Navidad,Suave"
   },
   {
     "number": 169,
     "title": "LEVANTADO FUE JESÚS",
     "chorus": null,
     "stanzas": [
-      "1) Levantado fue Jesús en la vergonzosa cruz/nPara darme la salud:/n¡Aleluya! ¡Gloria a Cristo!",
-      "2) Soy indigno pecador, Él es justo Salvador,/nDio su vida en mi favor:/n¡Aleluya! ¡Gloria a Cristo!",
-      "3) Por mis culpas yo me vi en peligro de morir,/nMas Jesús murió por mí:/n¡Aleluya! ¡Gloria a Cristo!"
+      "1) Levantado fue Jesús/nen la vergonzosa cruz/nPara darme la salud:/n¡Aleluya! ¡Gloria a Cristo!",
+      "2) Soy indigno pecador,/nÉl es justo Salvador,/nDio su vida en mi favor:/n¡Aleluya! ¡Gloria a Cristo!",
+      "3) Por mis culpas yo me vi/nen peligro de morir,/nMas Jesús murió por mí:/n¡Aleluya! ¡Gloria a Cristo!"
     ],
     "startsWithChorus": false,
     "authors": null,
@@ -2342,13 +2342,13 @@
     "title": "POR SU MISERICORDIA",
     "chorus": null,
     "stanzas": [
-      "1) Por su misericordia, a Cristo cantaré;/nCon mi copa rebosando yo le bendeciré;/nCordero de Dios santo: ¡Su vida entregó!/nPor mí pagó gran precio; su sangre me compró.",
-      "2) Por su misericordia, no me avergonzaré/nDe la historia redentora que a todos contaré./nSi vienen duras pruebas no hay nada que temer:/nEntonaré ese canto con gozo y con placer.",
-      "3) Por su misericordia, con gozo al cielo voy,/nHacia aquel hogar glorioso que mi alma anhela hoy./nMas cuando yo llegare a ver la gran mansión,/nEntonaré por siempre a Cristo mi canción."
+      "1) Por su misericordia,/na Cristo cantaré;/nCon mi copa rebosando/nyo le bendeciré;/nCordero de Dios santo:/n¡Su vida entregó!/nPor mí pagó gran precio;/nsu sangre me compró.",
+      "2) Por su misericordia,/nno me avergonzaré/nDe la historia redentora/nque a todos contaré./nSi vienen duras pruebas/nno hay nada que temer:/nEntonaré ese canto/ncon gozo y con placer.",
+      "3) Por su misericordia,/ncon gozo al cielo voy,/nHacia aquel hogar glorioso/nque mi alma anhela hoy./nMas cuando yo llegare/na ver la gran mansión,/nEntonaré por siempre/na Cristo mi canción."
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 176,
@@ -2367,7 +2367,7 @@
   {
     "number": 177,
     "title": "GRANDE AMOR, SUBLIME ETERNO",
-    "chorus": "El me abrirá la puerta y así entrar podré./nRedención Él ha comprado y perdón me da por fe.",
+    "chorus": "El me abrirá la puerta/ny así entrar podré./nRedención Él ha comprado/ny perdón me da por fe.",
     "stanzas": [
       "1) Grande amor, sublime, eterno,/nMás profundo es que la mar;/nY más alto que los cielos,/nInsondable es y sin par.",
       "2) Grande amor, sublime, eterno,/nEn la cruenta cruz murió/nMi bendito Jesucristo;/nMi castigo así llevó.",
@@ -2375,7 +2375,7 @@
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 178,
@@ -2460,7 +2460,7 @@
   {
     "number": 184,
     "title": "GRACIA ADMIRABLE DEL DIOS DE AMOR",
-    "chorus": "¡Gracia de Dios, que Él nos ofrece en su gran bondad!/n¡Gracia de Dios, que excede a toda mi maldad!",
+    "chorus": "¡Gracia de Dios,/nque Él nos ofrece en su gran bondad!/n¡Gracia de Dios,/nque excede a toda mi maldad!",
     "stanzas": [
       "1) ¡Gracia admirable del Dios de amor/nQue excede a todo nuestro pecar!/nCristo en la cruz por el pecador/nSu vida ha dado. ¡Qué amor sin par!",
       "2) Negras las olas de la maldad/nMe amenazaron con perdición;/nPudo en la gracia de Dios hallar/nDulce refugio mi corazón.",
@@ -2469,7 +2469,7 @@
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 185,
@@ -2525,13 +2525,13 @@
     "title": "YO ESCUCHO, BUEN JESÚS",
     "chorus": null,
     "stanzas": [
-      "1) Yo escucho, buen Jesús, tu dulce voz de amor,/nQue desde el árbol de la cruz, invita al pecador./nYo soy pecador, nada hay bueno en mí;/nSer objeto de tu amor deseo, y vengo a ti.",
-      "2) Tú ofreces el perdón de toda iniquidad,/nSi el llanto inunda el corazón que acude a tu piedad./nYo soy pecador, ten de mí piedad./nDame llanto de dolor y borra mi maldad.",
-      "3) Tú ofreces aumentar la fe del que creyó,/nY gracia sobre gracia dar a quien en ti esperó./nCreo en ti, Señor, sólo espero en ti;/nDame tu infinito amor, pues basta para mí."
+      "1) Yo escucho, buen Jesús,/ntu dulce voz de amor,/nQue desde el árbol de la cruz,/ninvita al pecador./nYo soy pecador,/nnada hay bueno en mí;/nSer objeto de tu amor deseo,/ny vengo a ti.",
+      "2) Tú ofreces el perdón/nde toda iniquidad,/nSi el llanto inunda el corazón/nque acude a tu piedad./nYo soy pecador,/nten de mí piedad./nDame llanto de dolor/ny borra mi maldad.",
+      "3) Tú ofreces aumentar/nla fe del que creyó,/nY gracia sobre gracia dar/na quien en ti esperó./nCreo en ti, Señor,/nsólo espero en ti;/nDame tu infinito amor,/npues basta para mí."
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 190,
@@ -2741,15 +2741,15 @@
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 206,
     "title": "VEN, AMIGO, A JESÚS",
-    "chorus": "Día fatal vendrá cuando no habrá lugar;/nLa puerta se abre hoy, y tú podrás entrar./nMas gracia ya no habrá, pues la desprecias hoy;/nAcepta, pecador, la salvación de Dios.",
+    "chorus": "Día fatal vendrá/ncuando no habrá lugar;/nLa puerta se abre hoy,/ny tú podrás entrar./nMas gracia ya no habrá,/npues la desprecias hoy;/nAcepta, pecador,/nla salvación de Dios.",
     "stanzas": [
-      "1) Ven, amigo, a Jesús, pues Él murió por ti;/nRecibirás la luz que quiere darte a ti./nMi buen Jesús murió y Él te dará el perdón;/nAbre tu corazón y dulce paz tendrás.",
-      "2) Las manos del Señor se abren hoy para ti;/nVen y confía en Él, y tú serás feliz./nTus penas pon en Dios, pues Él las llevará;/nY no tendrás pesar, sino consolación."
+      "1) Ven, amigo, a Jesús,/npues Él murió por ti;/nRecibirás la luz/nque quiere darte a ti./nMi buen Jesús murió/ny Él te dará el perdón;/nAbre tu corazón/ny dulce paz tendrás.",
+      "2) Las manos del Señor/nse abren hoy para ti;/nVen y confía en Él,/ny tú serás feliz./nTus penas pon en Dios,/npues Él las llevará;/nY no tendrás pesar,/nsino consolación."
     ],
     "startsWithChorus": false,
     "authors": null,
@@ -2855,12 +2855,12 @@
     "chorus": "Pon tus ojos en Cristo,/nTan lleno de gracia y amor,/nY lo terrenal sin valor será/nA la luz del glorioso Señor.",
     "stanzas": [
       "1) ¡Oh alma cansada y turbada!/n¿Sin luz en tu senda andarás?/nAl Salvador mira y vive;/nDel mundo la luz es su faz.",
-      "2) De muerte ávida eterna/nTe llama el Salvador fiel./nEn ti no domine el pecado;/nHay siempre victoria en Él.",
+      "2) De muerte a vida eterna/nTe llama el Salvador fiel./nEn ti no domine el pecado;/nHay siempre victoria en Él.",
       "3) Jamás faltará su promesa;/nÉl dijo: \"Contigo estoy.\"/nAl mundo perdido vé pronto/nY anuncia la salvación hoy."
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 215,
@@ -2941,7 +2941,7 @@
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 221,
@@ -2968,7 +2968,7 @@
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 223,
@@ -2981,7 +2981,7 @@
     ],
     "startsWithChorus": false,
     "authors": "Charles Austin Miles",
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 224,
@@ -3075,7 +3075,7 @@
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 231,
@@ -3880,9 +3880,9 @@
     "title": "CANTA A DIOS CON ALEGRÍA",
     "chorus": null,
     "stanzas": [
-      "1) Canta a Dios con alegría el mensaje del Señor,/nDe la verdadera vida que nos da con tanto amor./nCada historia de la Biblia nos relata su poder;/nDémosle nuestra alabanza, demos todo nuestro ser.",
-      "2) Nuestro Dios, te agradecemos tu sin par revelación;/nPrometemos ser testigos a nuestra generación./nTu evangelio anunciaremos a la inmensa humanidad;/nTu palabra llevaremos al hacer tu voluntad.",
-      "3) Cristo nos dejó un mandato en su hora de triunfar,/nY nos pide todavía ir al mundo y predicar./nQue los hombres todos sepan de Jesús y su bondad,/nQue su amor sincero y puro quiere darles libertad."
+      "1) Canta a Dios con alegría/nel mensaje del Señor,/nDe la verdadera vida/nque nos da con tanto amor./nCada historia de la Biblia/nnos relata su poder;/nDémosle nuestra alabanza,/ndemos todo nuestro ser.",
+      "2) Nuestro Dios, te agradecemos/ntu sin par revelación;/nPrometemos ser testigos/na nuestra generación./nTu evangelio anunciaremos/na la inmensa humanidad;/nTu palabra llevaremos/nal hacer tu voluntad.",
+      "3) Cristo nos dejó un mandato/nen su hora de triunfar,/nY nos pide todavía ir/nal mundo y predicar./nQue los hombres todos sepan/nde Jesús y su bondad,/nQue su amor sincero y puro/nquiere darles libertad."
     ],
     "startsWithChorus": false,
     "authors": null,
@@ -4116,7 +4116,7 @@
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 308,
@@ -4880,7 +4880,7 @@
     ],
     "startsWithChorus": false,
     "authors": "Karolina Wilhelmina Sandell-Berg",
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 365,
@@ -5436,7 +5436,7 @@
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": "Mujer"
+    "tags": "Suave"
   },
   {
     "number": 406,
@@ -5463,7 +5463,7 @@
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": "Mujer"
+    "tags": null
   },
   {
     "number": 408,
@@ -5476,7 +5476,7 @@
     ],
     "startsWithChorus": false,
     "authors": "George P. Simmonds",
-    "tags": "Mujer"
+    "tags": null
   },
   {
     "number": 409,
@@ -5721,10 +5721,10 @@
     "title": "MI VIDA DI POR TI",
     "chorus": null,
     "stanzas": [
-      "1) Mi vida di por ti, mi sangre derramé,/nLa muerte yo sufrí, por gracia te salvé;/nPor ti la muerte yo sufrí, ¿Qué has dado tú por mí?/nPor ti la muerte yo sufrí, ¿Qué has dado tú por mí?",
-      "2) Mi celestial mansión, mi trono de esplendor,/nDejé por rescatar al mundo pecador;/nSí, todo yo dejé por ti, ¿Qué dejas tú por mí?/nSí, todo yo dejé por ti, ¿Qué dejas tú por mí?",
-      "3) Reproches, aflicción, y angustia yo sufrí,/nLa copa amarga fue que yo por ti bebí;/nInsultos yo por ti sufrí, ¿Qué sufres tú por mí?/nInsultos yo por ti sufrí, ¿Qué sufres tú por mí?",
-      "4) De mi celeste hogar te traigo el rico don;/nDel Padre, Dios de amor, la plena salvación;/nMi don de amor te traigo a ti, ¿Qué ofreces tú por mí?/nMi don de amor te traigo a ti, ¿Qué ofreces tú por mí?"
+      "1) Mi vida di por ti,/nmi sangre derramé,/nLa muerte yo sufrí,/npor gracia te salvé;/n// Por ti la muerte yo sufrí,/n¿Qué has dado tú por mí? //",
+      "2) Mi celestial mansión,/nmi trono de esplendor,/nDejé por rescatar/nal mundo pecador;/n// Sí, todo yo dejé por ti,/n¿Qué dejas tú por mí? //",
+      "3) Reproches, aflicción,/ny angustia yo sufrí,/nLa copa amarga fue/nque yo por ti bebí;/n// Insultos yo por ti sufrí,/n¿Qué sufres tú por mí? //",
+      "4) De mi celeste hogar/nte traigo el rico don;/nDel Padre, Dios de amor,/nla plena salvación;/n// Mi don de amor te traigo a ti,/n¿Qué ofreces tú por mí?//"
     ],
     "startsWithChorus": false,
     "authors": null,
@@ -6350,10 +6350,10 @@
     "title": "HE DECIDIDO SEGUIR A CRISTO",
     "chorus": null,
     "stanzas": [
-      "1) ___ He decidido seguir a Cristo; ___/nNo vuelvo atrás, no vuelvo atrás.",
-      "2) ___ El Rey de gloria me ha transformado; ___/nNo vuelvo atrás, no vuelvo atrás.",
-      "3) ___ La vida vieja ya he dejado; ___/nNo vuelvo atrás, no vuelvo atrás.",
-      "4) ___ He decidido seguir a Cristo; ___/nNo vuelvo atrás, no vuelvo atrás."
+      "1) /// He decidido seguir a Cristo; ////nNo vuelvo atrás, no vuelvo atrás.",
+      "2) /// El Rey de gloria me ha transformado; ////nNo vuelvo atrás, no vuelvo atrás.",
+      "3) /// La vida vieja ya he dejado; ////nNo vuelvo atrás, no vuelvo atrás.",
+      "4) /// He decidido seguir a Cristo; ////nNo vuelvo atrás, no vuelvo atrás."
     ],
     "startsWithChorus": false,
     "authors": null,
@@ -6484,13 +6484,13 @@
     "title": "¿CÓMO PODRÉ ESTAR TRISTE?",
     "chorus": "¡Feliz, cantando alegre,/nyo vivo siempre aquí;/nSi Él cuida de las aves,/ncuidará también de mí!",
     "stanzas": [
-      "1) ¿Cómo podré estar triste?/n¿Cómo entre sombras ir?/n¿Cómo sentirme solo/ny en el dolor vivir?/nSi Cristo es mi consuelo,/nmi amigo siempre fiel,/nSi aun las aves tienen seguro asilo en Él,/nSi aun las aves tienen seguro asilo en Él.",
+      "1) ¿Cómo podré estar triste?/n¿Cómo entre sombras ir?/n¿Cómo sentirme solo/ny en el dolor vivir?/nSi Cristo es mi consuelo,/nmi amigo siempre fiel,/n// Si aun las aves tienen seguro asilo en Él //",
       "2) \"Nunca te desalientes,\"/noigo al Señor decir;/nY en su palabra fiado,/nhago al dolor huir./nA Cristo, paso a paso/nyo sigo sin cesar,/nY todas sus bondades me da sin limitar,/nY todas sus bondades por siempre me ha de dar.",
-      "3) Siempre que soy tentado,/no si en la prueba estoy,/nMás cerca de Él camino,/ny protegido voy;/nSi en mí la fe desmaya/ny sufro de ansiedad,/nTan sólo Él me levanta, me da seguridad,/nTan sólo Él me levanta, me da seguridad."
+      "3) Siempre que soy tentado,/no si en la prueba estoy,/nMás cerca de Él camino,/ny protegido voy;/nSi en mí la fe desmaya/ny sufro de ansiedad,/n// Tan sólo Él me levanta, me da seguridad //"
     ],
     "startsWithChorus": false,
     "authors": "Charles H. Gabriel",
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 485,
@@ -6747,7 +6747,7 @@
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 504,
@@ -7042,13 +7042,13 @@
     "title": "SE ACERCA UN AÑO NUEVO",
     "chorus": null,
     "stanzas": [
-      "1) Se acerca un año nuevo: tu voluntad será./nVelando o trabajando, tu mano nos guiará./nUn año de progreso, de prueba y bendición,/nMas cada día probando tu santa dirección.",
-      "2) Se acerca un año nuevo, de gracia y de bondad./nMirando hacia adelante dejamos la maldad./nUn año más confiando en tu divino amor;/n¡Que haya esperanza, sin pena ni temor!",
-      "3) Se acerca un año nuevo para testificar/nDe grandes bendiciones que tú nos quieres dar./nSe acerca un año nuevo; enséñanos así:/nDo quiera que nos lleves, el año es para ti!"
+      "1) Se acerca un año nuevo:/ntu voluntad será./nVelando o trabajando,/ntu mano nos guiará./nUn año de progreso,/nde prueba y bendición,/nMas cada día probando/ntu santa dirección.",
+      "2) Se acerca un año nuevo,/nde gracia y de bondad./nMirando hacia adelante/ndejamos la maldad./nUn año más confiando/nen tu divino amor;/n¡Que haya esperanza,/nsin pena ni temor!",
+      "3) Se acerca un año nuevo/npara testificar/nDe grandes bendiciones/nque tú nos quieres dar./nSe acerca un año nuevo;/nenséñanos así:/nDo quiera que nos lleves,/nel año es para ti!"
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 527,
@@ -7101,8 +7101,8 @@
     "title": "LA IGLESIA SIGUE CAMINANDO",
     "chorus": null,
     "stanzas": [
-      "1) ¡Oh, Gloria, Aleluya! La Iglesia sigue caminando,/n¡Oh, Gloria, Aleluya! La Iglesia sigue caminando,/nSolo se detiene para predicar.",
-      "2) En las luchas y en las pruebas, la Iglesia sigue caminando,/nPor lo montes y los valles, La Iglesia sigue caminando,/nSolo se detiene para predicar."
+      "1) ¡Oh, Gloria, Aleluya!/nLa Iglesia sigue caminando,/n¡Oh, Gloria, Aleluya!/nLa Iglesia sigue caminando,/nSolo se detiene para predicar.",
+      "2) En las luchas y en las pruebas,/nla Iglesia sigue caminando,/nPor lo montes y los valles,/nLa Iglesia sigue caminando,/nSolo se detiene para predicar."
     ],
     "startsWithChorus": false,
     "authors": null,
@@ -7111,15 +7111,15 @@
   {
     "number": 601,
     "title": "HUBO QUIEN POR MIS CULPAS",
-    "chorus": "Mis pecados llevó, en la cruz do murió/nEl sublime, el tierno Jesús./nLos desprecios sufrió, y mi alma salvó./nÉl cambió mis tinieblas en luz.",
+    "chorus": "Mis pecados llevó,/nen la cruz do murió/nEl sublime, el tierno Jesús./nLos desprecios sufrió,/ny mi alma salvó./nÉl cambió mis tinieblas en luz.",
     "stanzas": [
-      "1) Hubo quien por mis culpas muriera en la cruz,/nAunque indigno y vil como soy./nSoy feliz, pues su sangre vertióme Jesús,/nY con ella mis culpas borró.",
-      "2) Él es tierno y amante cual nadie lo fue,/nPues convierte al infiel corazón./nY por esa paciencia y ternura yo sé/nQue soy libre de condenación.",
-      "3) Es mi anhelo constante a Cristo seguir./nMi camino su ejemplo marcó./nY por darme la vida Él quiso morir./nEn la cruz mi pecado clavó."
+      "1) Hubo quien por mis culpas/nmuriera en la cruz,/nAunque indigno y vil como soy./nSoy feliz, pues su sangre/nvertióme Jesús,/nY con ella mis culpas borró.",
+      "2) Él es tierno y amante/ncual nadie lo fue,/nPues convierte al infiel corazón./nY por esa paciencia/ny ternura yo sé/nQue soy libre de condenación.",
+      "3) Es mi anhelo constante/na Cristo seguir./nMi camino su ejemplo marcó./nY por darme la vida/nÉl quiso morir./nEn la cruz mi pecado clavó."
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": "Apéndice"
+    "tags": "Apéndice,Suave"
   },
   {
     "number": 602,
@@ -7132,18 +7132,18 @@
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": "Apéndice"
+    "tags": "Apéndice,Suave"
   },
   {
     "number": 603,
     "title": "LÁVAME EN TU SANGRE SALVADOR",
-    "chorus": "¡Lávame en tu sangre, Salvador! Límpiame de toda mi maldad/ntraigo a ti mi vida, para ser señor, tuya por la eternidad.",
+    "chorus": "¡Lávame en tu sangre, Salvador!/nLímpiame de toda mi maldad/ntraigo a ti mi vida, para ser señor,/ntuya por la eternidad.",
     "stanzas": [
-      "1) Que mi vida entera esté consagrada a ti, Señor;/nque a mis manos pueda guiar el impulso de tu amor.",
-      "2) Que mis pies tan solo en pos de lo santo puedan ir,/ny que a ti, Señor, mi voz se complazca en bendecir.",
-      "3) Que mi tiempo todo esté consagrado a tu loor,/nque mis labios, al hablar hablen sólo de tu amor.",
-      "4) Toma ¡Oh Dios! Mi voluntad y hazla tuya nada más;/ntoma, sí, mi corazón; por tu trono lo tendrás.",
-      "5) Toma tú mi amor, que hoy a tus pies vengo a poner,/ntoma todo lo que soy, todo tuyo quiero ser."
+      "1) Que mi vida entera esté/nconsagrada a ti, Señor;/nque a mis manos pueda guiar/nel impulso de tu amor.",
+      "2) Que mis pies tan solo en pos/nde lo santo puedan ir,/ny que a ti, Señor, mi voz/nse complazca en bendecir.",
+      "3) Que mi tiempo todo esté/nconsagrado a tu loor,/nque mis labios, al hablar/nhablen sólo de tu amor.",
+      "4) Toma ¡Oh Dios! Mi voluntad/ny hazla tuya nada más;/ntoma, sí, mi corazón;/npor tu trono lo tendrás.",
+      "5) Toma tú mi amor, que hoy/na tus pies vengo a poner,/ntoma todo lo que soy,/ntodo tuyo quiero ser."
     ],
     "startsWithChorus": false,
     "authors": null,
@@ -7207,7 +7207,7 @@
     "title": "TE NECESITO CRISTO",
     "chorus": "Te necesito Cristo,/nsi te necesito,/nCon corazón contrito/nacudo a ti.",
     "stanzas": [
-      "1) Te necesito ya,/nbendito Salvador,/nMe infunde dulce paz,/n tu tierna voz de amor.",
+      "1) Te necesito ya,/nbendito Salvador,/nMe infunde dulce paz,/ntu tierna voz de amor.",
       "2) Te necesito ya,/ntu no me dejarás;/nYo siempre venceré/nsi tú conmigo estás.",
       "3) Te necesito ya,/ntu santa voluntad,/nY tus promesas mil/nen mí cumple en verdad.",
       "4) Te necesito ya,/nsantísimo Señor:/nTuyo hazme, nada más,/nbendito Salvador."
@@ -7239,12 +7239,12 @@
     "title": "ERES MI TODO",
     "chorus": "Cristo Salvador,/ndigno de adorar./nCristo Redentor,/ndigno de adorar.",
     "stanzas": [
-      "1) Eres mi fuerza y mi poder,/nel gran tesoro que busqué,/nEres mi todo,/nDios./nPerla de precio sin igual,/nnunca tu amor podré dejar,/nEres mi todo,/nDios.",
-      "2) Diste tu vida allá en la Cruz,/nresucitaste mi Jesús,/nEres mi todo,/nDios./nEn sequedad o en tentación,/ntu me sostienes mi Señor,/nEres mi todo,/nDios."
+      "1) Eres mi fuerza y mi poder,/nel gran tesoro que busqué,/nEres mi todo, Dios./nPerla de precio sin igual,/nnunca tu amor podré dejar,/nEres mi todo, Dios.",
+      "2) Diste tu vida allá en la Cruz,/nresucitaste mi Jesús,/nEres mi todo, Dios./nEn sequedad o en tentación,/ntu me sostienes mi Señor,/nEres mi todo, Dios."
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": "Apéndice"
+    "tags": "Apéndice,Suave"
   },
   {
     "number": 611,
@@ -7278,9 +7278,9 @@
   {
     "number": 613,
     "title": "DIOS ESTÁ AQUÍ",
-    "chorus": "Dios esta aquí, Tan cierto como el aire que respiro,/nTan cierto como la mañana se levanta el sol,/nTan cierto como que le hablo y me puede oir.",
+    "chorus": "Dios esta aquí,/nTan cierto como el aire que respiro,/nTan cierto como/nla mañana se levanta el sol,/nTan cierto como que/nle hablo y me puede oir.",
     "stanzas": [
-      "1) Lo puedes sentir, a tu lado en este mismo instante,/nLo puedes llevar, muy dentro de tu corazón./nTe puede ayudar, en ese problema que tienes,/nJesús esta aquí, si tu quieres lo puedes seguir."
+      "1) Lo puedes sentir,/na tu lado en este mismo instante,/nLo puedes llevar,/nmuy dentro de tu corazón./nTe puede ayudar,/nen ese problema que tienes,/nJesús esta aquí,/nsi tu quieres lo puedes seguir."
     ],
     "startsWithChorus": true,
     "authors": null,
@@ -7298,7 +7298,7 @@
     ],
     "startsWithChorus": false,
     "authors": "John Newton",
-    "tags": "Apéndice"
+    "tags": "Apéndice,Suave"
   },
   {
     "number": 615,
@@ -7342,7 +7342,7 @@
   {
     "number": 618,
     "title": "EL QUE HABITA AL ABRIGO DE DIOS",
-    "chorus": "Oh, yo quiero habitar al abrigo de Dios,/nsólo allí encontraré paz y profundo amor./nMi delicia es con Él comunión disfrutar/ny por siempre su nombre alabar.",
+    "chorus": "Oh, yo quiero habitar/nal abrigo de Dios,/nsólo allí encontraré/npaz y profundo amor./nMi delicia es con Él/ncomunión disfrutar/ny por siempre/nsu nombre alabar.",
     "stanzas": [
       "1) El que habita al abrigo de Dios/nmorará bajo sombras de amor;/nsobre Él no vendrá ningún mal/ny en sus alas feliz vivirá.",
       "2) El que habita al abrigo de Dios/nmuy feliz ciertamente será;/nángeles guardarán su salud/ny sus pies nunca resbalarán.",
@@ -7350,25 +7350,25 @@
     ],
     "startsWithChorus": false,
     "authors": "Salmo 91",
-    "tags": "Apéndice"
+    "tags": "Apéndice,Suave"
   },
   {
     "number": 619,
     "title": "SU GRACIA ES MAYOR",
     "chorus": "Gloria Dios, su gracia es mayor,/nSus misericordias hoy nuevas son,/nMis faltas son muchas;/nSu gracia es mayor.",
     "stanzas": [
-      "1) ¿Que amor mis pecados decide olvidar?/nLanzados al mar no los quiere contar,/nÉl siendo Omnisciente olvida mi error,/nMis faltas son muchas, su gracia es mayor.",
-      "2) Paciente me aguarda en mi desviar,/nUn padre que tierno me llama al hogar,/nRecibe al débil y vil pecador,/nMis faltas son muchas, su gracia es mayor.",
-      "3) Que grandes riquezas Él nos otorgó,/nSu sangre fue el pago, su vida entregó./nPago esa deuda y la canceló,/nMis faltas son muchas, su gracia es mayor."
+      "1) ¿Que amor mis pecados/ndecide olvidar?/nLanzados al mar no los quiere contar,/nÉl siendo Omnisciente/nolvida mi error,/nMis faltas son muchas, su gracia es mayor.",
+      "2) Paciente me aguarda/nen mi desviar,/nUn padre que tierno me llama al hogar,/nRecibe al débil/ny vil pecador,/nMis faltas son muchas, su gracia es mayor.",
+      "3) Que grandes riquezas/nÉl nos otorgó,/nSu sangre fue el pago, su vida entregó./nPago esa deuda/ny la canceló,/nMis faltas son muchas, su gracia es mayor."
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": "Apéndice"
+    "tags": "Apéndice,Suave"
   },
   {
     "number": 620,
     "title": "GOZO DA SERVIR A CRISTO",
-    "chorus": "Gozo hay, sí, en servir a Cristo,/nGozo en el corazón, cada día Él da poder,/nme ayuda a vencer, Y da gozo,/ngozo en el corazón.",
+    "chorus": "Gozo hay, sí, en servir a Cristo,/nGozo en el corazón,/ncada día Él da poder,/nme ayuda a vencer,/nY da gozo,gozo en el corazón.",
     "stanzas": [
       "1) Gozo da servir a Cristo,/nEn la vida diaria aquí;/nGozo y grande alegría,/nSiempre Él me da a mí.",
       "2) Gozo da servir a Cristo;/nGozo que triunfante está,/nEn la pena o tristeza,/nCristo en todo vence ya.",
@@ -7382,7 +7382,7 @@
   {
     "number": 621,
     "title": "DIOS DESCENDIÓ",
-    "chorus": "Dios descendió, la gloria me llenó,/ncuando Jesús por gracia me salvó;/nfui ciego, me hizo ver y en Él renacer./nDios descendió y de gloria me llenó.",
+    "chorus": "Dios descendió,/ny de gloria me llenó,/ncuando Jesús/npor gracia me salvó;/nfui ciego, me hizo ver/ny en Él renacer./nDios descendió/ny de gloria me llenó.",
     "stanzas": [
       "1) Día tan grande no puedo olvidar,/ndía de gloria sin par,/ncuando en tinieblas al verme andar/nvino a salvarme el Señor;/nGran compasión tuvo Cristo de mí,/nde gozo y paz me llenó;/nquitó las sombras, ¡oh, gloria a su nombre!,/nla noche en día cambió.",
       "2) Nací de nuevo, en virtud de Jesús,/na la familia de Dios,/njustificado por Cristo el Señor/ngozo la gran redención;/nBendito sea mi Padre y Dios/nque cuando vine con fe,/nfui adoptado por Cristo el amado,/nloores por siempre daré.",
@@ -7511,10 +7511,10 @@
   {
     "number": 631,
     "title": "ÉL VINO A MI CORAZÓN",
-    "chorus": "Él vino a mi corazón,/nÉl vino a mi corazón./nSoy feliz con la vida que Cristo me dio,/nÉl vino a mi corazón.",
+    "chorus": "Él vino a mi corazón,/nÉl vino a mi corazón./nSoy feliz con la vida/nque Cristo me dio,/nÉl vino a mi corazón.",
     "stanzas": [
       "1) Cuán glorioso es el cambio/noperado en mi ser viniendo/na mi vida el Señor./nHay en mi alma una paz que/nyo ansiaba tener:/nla paz que me trajo su amor.",
-      "2) Ya no voy por la senda/nque el mal me trazó,/ndo sólo encontré confusión./nMis errores pasados Jesús los borró,/ncuando Él vino a mi corazón.",
+      "2) Ya no voy por la senda/nque el mal me trazó,/ndo sólo encontré confusión./nMis errores pasados/nJesús los borró,/ncuando Él vino a mi corazón.",
       "3) Ni una sombra de duda/noscurece su amor,/namor que me trajo el perdón./nla esperanza que aliento/nla debo al Señor,/nporque Él vino a mi corazón."
     ],
     "startsWithChorus": false,
@@ -7558,7 +7558,7 @@
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": "Apéndice"
+    "tags": "Apéndice,Suave"
   },
   {
     "number": 635,
@@ -7602,7 +7602,7 @@
   {
     "number": 638,
     "title": "MAESTRO SE ENCRESPAN LAS AGUAS",
-    "chorus": "Los vientos, las ondas oirán/nsu voz: \"¡Sea la paz!\"/nCalmas las iras del negro mar,/nlas luchas del alma las haces cesar,/ny así la barquilla do va el Señor,/nhundirse no puede en el mar traidor./nDoquier se cumple su voluntad:/n\"¡Sea la paz!\" \"¡Sea la paz\"!/nTu voz resuena en la inmensidad:/n\"¡Sea la paz!\"",
+    "chorus": "Los vientos, las ondas oirán/nsu voz: \"¡Sea la paz!\"/nCalmas las iras del negro mar,/nlas luchas del alma las haces cesar,/ny así la barquilla do va el Señor,/nhundirse no puede en el mar traidor./nDoquier se cumple su voluntad:/n\"¡Sea la paz!\" \"¡Sea la paz!\"/nTu voz resuena en la inmensidad:/n\"¡Sea la paz!\"",
     "stanzas": [
       "1) ¡Maestro se encrespan las aguas!/n¡Y ruge la tempestad!/nLos grandes abismos del cielo/nse llenan de oscuridad./n¿No ves que aquí perecemos?/n¿Puedes dormir así,/ncuando el mar agitado nos abre,/nprofundo sepulcro aquí?",
       "2) Maestro mi ser agitado/nte busca con ansiedad./nDe mi alma en los antros profundos/nse libra cruel tempestad./nPasa el pecado a torrentes;/nsobre mi frágil ser./n¡Y perezco, Maestro bendito!/n¡oh, quiéreme socorrer!",
@@ -7620,7 +7620,7 @@
       "1) // Lo que respira alabe al Señor. ///nAlabad a nuestro Dios en su santuario./nPor la hermosura de su cielo./nPor sus proezas alabadle a Él.",
       "2) Alabadle por la/ngrandeza de su nombre./nCon el sonido de bocina./nSalterio y arpa, a la vez cantad.",
       "3) Alabadle con el alegre pandero./nCon el candor de la danza./nCantad con gozo al Señor./nAlabadle con cuerdas, flautas y címbalos./nDe júbilos resonantes.",
-      "4) En su lenguaje todo:/nLo que respira alabe al Señor,/nLo que respira alabe al Señor./n¡Amen!"
+      "4) En su lenguaje todo:/n// Lo que respira alabe al Señor. ///n¡Amén!"
     ],
     "startsWithChorus": false,
     "authors": null,
@@ -7629,7 +7629,7 @@
   {
     "number": 640,
     "title": "COMO EL CIERVO",
-    "chorus": "Solo Tú eres mi sostén,/n¿A quién iré si no sólo a Ti?/n Yo te rindo mi vida entera,/npara siempre a Ti Señor.",
+    "chorus": "Solo Tú eres mi sostén,/n¿A quién iré si no sólo a Ti?/nYo te rindo mi vida entera,/npara siempre a Ti Señor.",
     "stanzas": [
       "1) Como el ciervo clama por las aguas,/nmi alma anhela a Dios./nSolo Tú satisfaces mi ansiedad,/nllenándome de paz.",
       "2) Cristo Tú eres mi amigo y mi hermano,/naunque eres rey también./nYo te amó por sobre todo,/ny te alabo mi Señor.",
@@ -7644,13 +7644,13 @@
     "title": "NOBLE SOSTÉN",
     "chorus": "Mi sostén es Jesús,/nnunca en la lucha desmayar podré./nMi sostén es Cristo Jesús,/nnunca en la lucha desmayar podré.",
     "stanzas": [
-      "1) Noble sostén, de la esperanza mía/nfuente bendita de vida eterna./nTan sólo el alma que en sus fuerzas fía,/ntiene paz, sí, tiene paz.",
-      "2) Yo soy muy débil, pero en ti soy fuerte,/nnunca en la lucha desmayar podré./nSi Tú estás conmigo, ni a la misma muerte/ntemeré, no, temeré.",
-      "3) Dura es la lucha, difícil la tarea,/nmas Tú me dotas de tu gran poder./nMi espíritu renuevas con la idea nueva/nde vencer, sí, de vencer."
+      "1) Noble sostén,/nde la esperanza mía/nfuente bendita/nde vida eterna./nTan sólo el alma/nque en sus fuerzas fía,/ntiene paz, sí, tiene paz.",
+      "2) Yo soy muy débil,/npero en ti soy fuerte,/nnunca en la lucha/ndesmayar podré./nSi Tú estás conmigo,/nni a la misma muerte/ntemeré, no, temeré.",
+      "3) Dura es la lucha,/ndifícil la tarea,/nmas Tú me dotas/nde tu gran poder./nMi espíritu renuevas/ncon la idea nueva/nde vencer, sí, de vencer."
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": "Apéndice"
+    "tags": "Apéndice,Suave"
   },
   {
     "number": 999,

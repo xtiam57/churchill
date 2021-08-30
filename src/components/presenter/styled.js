@@ -44,6 +44,21 @@ export const PresenterStyled = styled.section`
       margin-top: 1rem;
     }
 
+    div.opts {
+      border: solid 1px ${({ textcolor }) => textcolor || '#000'};
+      border-radius: 10px;
+      padding: 10px 20px 15px;
+      text-align: left;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .opt-0,
+    .opt-1 {
+      margin-bottom: 20px;
+    }
+
     i {
       color: ${({ jesus }) => jesus || '#fff'};
 

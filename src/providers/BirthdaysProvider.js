@@ -1,14 +1,15 @@
 import React, { useState, useMemo, useContext } from 'react';
+import createPersistedState from 'use-persisted-state';
 
 import { AnthemnsContext } from 'providers';
-import { BIRTHDAY } from 'values';
+import { BIRTHDAY, BROADCAST } from 'values';
 import { Storage, generateGUID, Time, Slide } from 'utils';
 
 function createKey({ id }) {
   return `${id}_birthday`;
 }
 
-function getRecent(now) {
+function getRecent(now, frame = 3) {
   return Storage.getAll()
     .filter(({ key }) => key.includes('birthday'))
     .map((item) => item.value)
@@ -23,7 +24,7 @@ function getRecent(now) {
         Math.abs(Time.diff(next, now))
       );
 
-      return remaining <= BIRTHDAY.TIME_FRAME;
+      return remaining <= frame;
     })
     .sort(
       (a, b) =>
@@ -65,10 +66,15 @@ function getAllBirthdays() {
     });
 }
 
+const useSettings = createPersistedState(BROADCAST.SETTINGS);
+
 const BirthdaysContext = React.createContext({});
 
 const BirthdaysProvider = ({ children }) => {
-  const [recent, setRecent] = useState(getRecent(new Date()));
+  const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
+  const [recent, setRecent] = useState(
+    getRecent(new Date(), settings.birthdaytimeframe)
+  );
   const [current, setCurrent] = useState(createSlide(recent));
   const [birthdays, setBirthdays] = useState(getAllBirthdays());
 
@@ -82,7 +88,7 @@ const BirthdaysProvider = ({ children }) => {
 
     Storage.set(createKey(data), data);
 
-    const recent = getRecent(new Date());
+    const recent = getRecent(new Date(), settings.birthdaytimeframe);
     const slide = createSlide(recent);
 
     setCurrent(slide);
@@ -93,7 +99,7 @@ const BirthdaysProvider = ({ children }) => {
   const remove = (item) => {
     Storage.remove(createKey(item));
 
-    const recent = getRecent(new Date());
+    const recent = getRecent(new Date(), settings.birthdaytimeframe);
     const slide = createSlide(recent);
 
     setCurrent(slide);

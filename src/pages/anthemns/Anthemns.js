@@ -48,7 +48,10 @@ export default function AnthemnsPage() {
   const [showLogo, setShowLogo] = useState(true);
   const [openFinder, setOpenFinder] = useState(false);
   const [search, setSearch] = useState([current]);
-  const [bookmarks, setBookmarks] = useState(getBookmarkedItems('anthemn'));
+  const [bookmarkSort, setBookmarkSort] = useState('asc');
+  const [bookmarks, setBookmarks] = useState(
+    getBookmarkedItems('anthemn', bookmarkSort)
+  );
   const [url, setUrl] = useState(folder.getPath(current.number));
   const [isMP3Loaded, setIsMP3Loaded] = useState(false);
   const [playbackRate, setPlaybackRate] = React.useState(1);
@@ -130,6 +133,12 @@ export default function AnthemnsPage() {
     });
   };
 
+  const handleSort = () => {
+    const sort = bookmarkSort === 'desc' ? 'asc' : 'desc';
+    setBookmarkSort(sort);
+    setBookmarks(getBookmarkedItems('anthemn', sort));
+  };
+
   useKeyUp('ArrowUp', handleNextAnthemn);
   useKeyUp('ArrowDown', handlePrevAnthemn);
   useKeyUp('F1', () => typeaheadRef.current.focus());
@@ -174,6 +183,8 @@ export default function AnthemnsPage() {
           items={bookmarks}
           onChange={setBookmarks}
           onClick={(item) => handleSearch([item])}
+          onSort={handleSort}
+          sort={bookmarkSort}
           current={current}
         />
 
@@ -181,13 +192,18 @@ export default function AnthemnsPage() {
       </Sidebar>
 
       <Wrapper direction="column" {...settings}>
-        <Bookmark element={current} onChange={setBookmarks} />
+        <Bookmark
+          element={current}
+          onChange={setBookmarks}
+          sort={bookmarkSort}
+        />
 
         <Slider
           ref={sliderRef}
           live={!showLogo}
           wrapper={current}
           grayscale={presenting && showLogo}
+          marquee={isPlaying ? current?.title : null}
         >
           Usa las teclas <strong>&larr;</strong> y <strong>&rarr;</strong> para
           cambiar de página, y <strong>&uarr;</strong> y <strong>&darr;</strong>{' '}

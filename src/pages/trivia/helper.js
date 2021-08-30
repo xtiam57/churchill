@@ -13,7 +13,10 @@ export function get(list) {
         Slide.create({
           text: e.question,
           subtext: `<div class="row">${options
-            .map((o, i) => `<div class="col-6 ">${letters[i]} ${o}</div>`)
+            .map(
+              (o, i) =>
+                `<div class="col-6 opt-${i}"><div class="opts">${letters[i]} ${o}</div></div>`
+            )
             .join('')}</div>`,
         }),
         Slide.create({

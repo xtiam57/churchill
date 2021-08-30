@@ -24,7 +24,7 @@ export function Presenter({
         element: document.getElementById('presenter-text'),
         step: 5,
         minSize: 50,
-        maxSize: 300,
+        maxSize: 310,
         unit: '%',
       });
     });

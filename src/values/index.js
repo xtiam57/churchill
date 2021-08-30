@@ -6,7 +6,6 @@ export const MOVEMENT = {
 };
 
 export const BIRTHDAY = {
-  TIME_FRAME: 4,
   ANTHEMN_INDEX: 508,
 };
 
@@ -95,7 +94,8 @@ const SETTINGS_INITIAL_STATE = {
   image: '',
   theme: 'default',
   preview: true,
-  triviainterval: 15000,
+  triviainterval: 20000,
+  birthdaytimeframe: 3,
   ...THEMES['default'],
 };
 

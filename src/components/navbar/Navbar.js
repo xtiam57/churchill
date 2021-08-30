@@ -25,7 +25,9 @@ export function Navbar() {
     <>
       <nav className={styles}>
         <div className="container-fluid">
-          <span className="navbar-brand">Churchill</span>
+          <NavLink exact to="/">
+            <span className="navbar-brand">Churchill</span>
+          </NavLink>
 
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">

@@ -1073,7 +1073,7 @@ export const questions = [
     difficulty: 'MEDIUM',
     question:
       '¿En qué lugar Elías tuvo un enfrentamiento con los profetas de Baal?',
-    options: ['Monte Carmelo', 'Monte Sion', 'Monte Sinaí', 'Monte Ararat'],
+    options: ['Monte Carmelo', 'Monte Sión', 'Monte Sinaí', 'Monte Ararat'],
     reference: '1 Reyes 18:19-21',
   },
   {

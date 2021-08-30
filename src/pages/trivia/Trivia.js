@@ -22,6 +22,7 @@ import { useKeyUp, useIterate, usePresenter } from 'hooks';
 import { BROADCAST, MOVEMENT } from 'values';
 
 import { QUESTIONS } from './data';
+import { Spinner } from 'components/spinner';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
@@ -29,10 +30,13 @@ export default function TriviaPage() {
   const sliderRef = useRef();
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const [showLogo, setShowLogo] = useState(true);
-  const [notice, setNotice] = useState(QUESTIONS[0]);
+  const [current, setCurrent] = useState(() => {
+    QUESTIONS[0].shuffle();
+    return QUESTIONS[0];
+  });
   const [autoplay, setAutoplay] = useState(true);
   const [loop, setLoop] = useState(true);
-  const [moveNotice] = useIterate(notice, QUESTIONS);
+  const [moveNotice] = useIterate(current, QUESTIONS);
   const { presenting } = usePresenter();
 
   useEffect(() => {
@@ -46,13 +50,15 @@ export default function TriviaPage() {
   const handleNextSlide = () => sliderRef.current.next();
 
   const handleNextNotice = () => {
-    const notice = moveNotice(MOVEMENT.NEXT);
-    setNotice(notice);
+    const trivia = moveNotice(MOVEMENT.NEXT);
+    trivia.shuffle();
+    setCurrent(trivia);
   };
 
   const handlePrevNotice = () => {
-    const notice = moveNotice(MOVEMENT.PREV);
-    setNotice(notice);
+    const trivia = moveNotice(MOVEMENT.PREV);
+    trivia.shuffle();
+    setCurrent(trivia);
   };
 
   useKeyUp('ArrowUp', handlePrevNotice);
@@ -62,6 +68,8 @@ export default function TriviaPage() {
   return (
     <Wrapper>
       <Sidebar>
+        <Spinner />
+
         <Title>Trivia</Title>
 
         <DisplayButton
@@ -78,8 +86,11 @@ export default function TriviaPage() {
           {QUESTIONS.map((item) => (
             <List.Item key={item.id}>
               <List.Action
-                active={item.id === notice.id}
-                onClick={() => setNotice(item)}
+                active={item.id === current.id}
+                onClick={() => {
+                  item.shuffle();
+                  setCurrent(item);
+                }}
               >
                 {item.title}
               </List.Action>
@@ -92,7 +103,7 @@ export default function TriviaPage() {
         <Slider
           ref={sliderRef}
           live={!showLogo}
-          wrapper={notice}
+          wrapper={current}
           autoplay={autoplay}
           loop={loop}
           grayscale={presenting && showLogo}
@@ -101,7 +112,6 @@ export default function TriviaPage() {
           cambiar de página, y <strong>&uarr;</strong> y <strong>&darr;</strong>{' '}
           para cambiar de pregunta.
         </Slider>
-
         <Controls centered>
           <ButtonGroup className="mx-2">
             {autoplay ? (

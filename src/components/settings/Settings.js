@@ -292,7 +292,7 @@ export function Settings() {
         </Form.Group>
       </Form.Row>
       <Form.Row>
-        <Form.Group as={Col} className="mb-1">
+        <Form.Group as={Col} className="mb-2">
           <Form.Label className=" small mb-1">
             Intervalo entre Preguntas (Trivia)
           </Form.Label>
@@ -312,7 +312,25 @@ export function Settings() {
         </Form.Group>
       </Form.Row>
 
-      {/* <Form.Row className="mt-3">
+      <Form.Row>
+        <Form.Group as={Col} className="mb-1">
+          <Form.Label className=" small mb-1">
+            Días para filtrar cumpleaños ({settings?.birthdaytimeframe})
+          </Form.Label>
+          <Form.Control
+            custom
+            type="range"
+            min="1"
+            max="7"
+            step="1"
+            name="birthdaytimeframe"
+            value={settings?.birthdaytimeframe}
+            onChange={handleChangeNumericValue}
+          />
+        </Form.Group>
+      </Form.Row>
+
+      <Form.Row className="mt-3">
         <Form.Group as={Col} className="mb-1">
           <Form.Check
             type="switch"
@@ -328,7 +346,7 @@ export function Settings() {
             }}
           />
         </Form.Group>
-      </Form.Row> */}
+      </Form.Row>
 
       <hr />
 

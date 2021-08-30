@@ -6,12 +6,38 @@ const AnthemnsContext = React.createContext({});
 
 function splitLines(id, title, text, array, index) {
   const lines = text.split('/n');
-  const length = text.length - lines.length - 1 - 3;
 
-  const DIVIDER = 4;
-  const THRESHOLD = 999;
-  let iteration = 0;
-  let count = 0;
+  if (lines.length > 5) {
+    const divider = lines.length > 10 ? 3 : 2;
+    const size = Math.ceil(lines.length / divider);
+
+    [...Array(divider).keys()].forEach((i) => {
+      array.push(
+        Slide.create({
+          id: `${id}_${index}`,
+          title: i === 0 ? title : null,
+          text: lines.slice(i * size, (1 + i) * size).join('/n'),
+          index: index++,
+        })
+      );
+    });
+  } else {
+    array.push(
+      Slide.create({
+        id: `${id}_${index}`,
+        title,
+        text: text,
+        index: index++,
+      })
+    );
+  }
+
+  // const length = text.length - lines.length - 1 - 3;
+
+  // const DIVIDER = 4;
+  // const THRESHOLD = 999;
+  // let iteration = 0;
+  // let count = 0;
 
   // if (length <= THRESHOLD) {
   //   const slide = Slide.create({
@@ -26,21 +52,21 @@ function splitLines(id, title, text, array, index) {
   //   return index;
   // }
 
-  while (count < lines.length) {
-    const from = iteration * DIVIDER;
-    const to = Math.min(from + DIVIDER, lines.length);
+  // while (count < lines.length) {
+  //   const from = iteration * DIVIDER;
+  //   const to = Math.min(from + DIVIDER, lines.length);
 
-    const slide = Slide.create({
-      id: `${id}_${index}`,
-      index: index++,
-      title: iteration === 0 ? title : null,
-      text: lines.slice(from, to).join('/n'),
-    });
+  //   const slide = Slide.create({
+  //     id: `${id}_${index}`,
+  //     index: index++,
+  //     title: iteration === 0 ? title : null,
+  //     text: lines.slice(from, to).join('/n'),
+  //   });
 
-    array.push(slide);
-    iteration++;
-    count += to - from;
-  }
+  //   array.push(slide);
+  //   iteration++;
+  //   count += to - from;
+  // }
 
   return index;
 }

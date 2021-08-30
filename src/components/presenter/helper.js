@@ -1,7 +1,7 @@
 export function process(text, subtext) {
   const res = text
+    .replaceAll('///', '<b>///</b>')
     .replaceAll('//', '<b>//</b>')
-    .replaceAll('___', '<b>///</b>')
     .replaceAll('__', '</i>')
     .replaceAll('_', '<i>')
     .replaceAll('**********', '<b>__________</b>')

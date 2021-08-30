@@ -1,6 +1,6 @@
 const Storage = {};
 
-Storage.getAll = (order = 'asc') => {
+Storage.getAll = () => {
   const values = [];
   const keys = Object.keys(localStorage);
   let i = keys.length;
@@ -13,11 +13,9 @@ Storage.getAll = (order = 'asc') => {
     values.push(item);
   }
 
-  return values
-    .sort((a, b) => (a.timestamp - b.timestamp) * (order === 'asc' ? 1 : -1))
-    .map((item) => {
-      return item;
-    });
+  return values.map((item) => {
+    return item;
+  });
 };
 
 Storage.set = (key, value) => {

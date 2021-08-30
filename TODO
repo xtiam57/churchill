@@ -20,7 +20,14 @@ Sección Himnos
 * (done) Etiquetas
 * (done) Busqueda de palabras
 * (done) Guardar configuracion de audio para cada himno
+* (done) Himnos para orar (etiqueta nueva)
 * Editar himnos
+
+Cumpleaños
+----------
+* Desactivar cumpleaños visibles
+* Cambiar rango de dias por settings
+* Mostrar cumples en anuncios
 
 Avisos
 ------
@@ -44,3 +51,4 @@ Resto
 * Temporizador de predica
 * Semáforo de predica
 * Contexto para anuncios
+* Horarios

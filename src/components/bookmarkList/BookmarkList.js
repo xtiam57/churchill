@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaSortAmountDownAlt, FaSortAmountDown } from 'react-icons/fa';
 
 import { Bookmark, List, createKey } from 'components';
 import { Storage, getBookmarkedItems } from 'utils';
@@ -10,25 +11,32 @@ export function BookmarkList({
   items = [],
   onChange = () => {},
   onClick = () => {},
+  onSort = null,
   current,
+  sort = 'desc',
   ...rest
 }) {
   const { scriptures } = useScriptures();
   const { anthemns } = useAnthemn();
 
-  const removeBookmarks = () => {
+  const handleRemove = () => {
     items.forEach((item) => {
       Storage.remove(createKey(item));
     });
-    onChange(getBookmarkedItems(type));
+    onChange(getBookmarkedItems(type, sort));
   };
 
   return items.length ? (
     <List className="mb-4" {...rest}>
       <List.Item>
         <>
-          <List.Title>Marcadores ({items.length})</List.Title>
-          <List.Action className="text-right" onClick={removeBookmarks}>
+          <List.Title>Marcadores ({items.length}) </List.Title>
+          {onSort ? (
+            <List.Action className="text-center" onClick={onSort}>
+              {sort === 'desc' ? <FaSortAmountDownAlt /> : <FaSortAmountDown />}
+            </List.Action>
+          ) : null}
+          <List.Action className="text-right" onClick={handleRemove}>
             (Borrar)
           </List.Action>
         </>
@@ -54,7 +62,7 @@ export function BookmarkList({
             >
               {item.title}
             </List.Action>
-            <Bookmark icon element={item} onChange={onChange} />
+            <Bookmark icon element={item} onChange={onChange} sort={sort} />
           </List.Item>
         ) : null;
       })}

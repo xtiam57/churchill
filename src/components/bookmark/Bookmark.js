@@ -11,6 +11,7 @@ export function Bookmark({
   element,
   icon = false,
   onChange = () => {},
+  sort = 'desc',
   ...rest
 }) {
   const [bookmarked, setBookmarked] = useState(false);
@@ -30,14 +31,14 @@ export function Bookmark({
         text: element.text,
       });
       setBookmarked(true);
-      onChange(getBookmarkedItems(element.type));
+      onChange(getBookmarkedItems(element.type, sort));
     }
   };
 
   const remove = () => {
     Storage.remove(createKey(element));
     setBookmarked(false);
-    onChange(getBookmarkedItems(element.type));
+    onChange(getBookmarkedItems(element.type, sort));
   };
 
   useKeyUp('KeyS', add, { ctrl: true });

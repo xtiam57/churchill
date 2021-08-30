@@ -9,6 +9,7 @@ import createPersistedState from 'use-persisted-state';
 import { Presenter } from 'components';
 import { useIterate, useKeyUp } from 'hooks';
 import { BROADCAST, MOVEMENT } from 'values';
+import { SlidePreviewStyled } from './styled';
 
 const useBroadcast = createPersistedState(BROADCAST.CHANNEL);
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
@@ -27,6 +28,7 @@ export const Slider = forwardRef(
       autoplay = false,
       loop = false,
       grayscale = false,
+      marquee,
     },
     ref
   ) => {
@@ -37,6 +39,7 @@ export const Slider = forwardRef(
     const [slides, setSlides] = useState(wrapper?.slides || []);
     const [slide, setSlide] = useState(slides[0]);
     const [moveSlide] = useIterate(slide, slides);
+    const next = moveSlide(MOVEMENT.NEXT, loop);
 
     const onNextSlide = () => {
       const slideToGo = moveSlide(MOVEMENT.NEXT, loop);
@@ -109,8 +112,13 @@ export const Slider = forwardRef(
         ) : null} */}
 
         <div className="text-light bg-dark py-2 px-3 d-flex justify-content-between">
-          <small>{children}</small>
-          <small>
+          <small className="text-nowrap">{children}</small>
+          {marquee ? (
+            <div class="marquee small mx-3 text-warning">
+              <p className="m-0">{marquee}</p>
+            </div>
+          ) : null}
+          <small className="text-nowrap">
             {slide?.index + 1}/{slides?.length}
             {slides?.length > 1 ? (
               <>
