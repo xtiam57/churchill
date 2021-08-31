@@ -9,7 +9,7 @@ import createPersistedState from 'use-persisted-state';
 import { Presenter } from 'components';
 import { useIterate, useKeyUp } from 'hooks';
 import { BROADCAST, MOVEMENT } from 'values';
-import { SlidePreviewStyled } from './styled';
+import { SummaryStyled } from './styled';
 
 const useBroadcast = createPersistedState(BROADCAST.CHANNEL);
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
@@ -98,6 +98,8 @@ export const Slider = forwardRef(
           text={slide?.text}
           subtext={slide?.subtext}
           grayscale={grayscale}
+          leftshadow={loop ? true : slide?.index !== 0}
+          rightshadow={loop ? true : next.id !== slide.id}
           {...settings}
         />
 
@@ -111,14 +113,18 @@ export const Slider = forwardRef(
           </SlidePreviewStyled>
         ) : null} */}
 
-        <div className="text-light bg-dark py-2 px-3 d-flex justify-content-between">
+        <SummaryStyled className="text-light bg-dark py-2 px-3">
           <small className="text-nowrap">{children}</small>
+
           {marquee ? (
-            <div class="marquee small mx-3 text-warning">
+            <div class="marquee small">
               <p className="m-0">{marquee}</p>
             </div>
-          ) : null}
-          <small className="text-nowrap">
+          ) : (
+            <div />
+          )}
+
+          <small className="text-nowrap text-right">
             {slide?.index + 1}/{slides?.length}
             {slides?.length > 1 ? (
               <>
@@ -135,7 +141,7 @@ export const Slider = forwardRef(
               </>
             ) : null}
           </small>
-        </div>
+        </SummaryStyled>
       </>
     );
   }

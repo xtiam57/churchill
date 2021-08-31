@@ -20,28 +20,44 @@ export function AnthemnTags({ onClick = () => {}, current }) {
   return (
     <>
       <List>
-        <List.Item>
-          <List.Title>
-            Etiquetas {list.length ? <span>({list.length})</span> : null}
-          </List.Title>
-        </List.Item>
-
-        <List.Item
-          className="my-2"
-          style={{ flexWrap: 'wrap', justifyContent: 'start' }}
-        >
-          {tags.map((tag, index) => (
-            <span
-              key={index}
-              onClick={() => onChangeTag(tag)}
-              className={`tag mr-1 mb-1 pointer ${
-                tag === selected ? 'active' : ''
-              }`}
+        {!selected ? (
+          <List.Item>
+            <List.Title>Etiquetas</List.Title>
+          </List.Item>
+        ) : (
+          <List.Item>
+            <List.Title>
+              <span className="tag pointer active">
+                {selected} {list.length ? <span>({list.length})</span> : null}
+              </span>
+            </List.Title>
+            <List.Action
+              className="text-right"
+              onClick={() => onChangeTag(selected)}
             >
-              {tag}
-            </span>
-          ))}
-        </List.Item>
+              (Atrás)
+            </List.Action>
+          </List.Item>
+        )}
+
+        {!selected ? (
+          <List.Item
+            className="my-2"
+            style={{ flexWrap: 'wrap', justifyContent: 'start' }}
+          >
+            {tags.map((tag, index) => (
+              <span
+                key={index}
+                onClick={() => onChangeTag(tag)}
+                className={`tag mr-1 mb-1 pointer ${
+                  tag === selected ? 'active' : ''
+                }`}
+              >
+                {tag}
+              </span>
+            ))}
+          </List.Item>
+        ) : null}
 
         {list.map((item) => (
           <List.Item key={item.index}>

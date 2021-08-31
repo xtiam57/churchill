@@ -68,8 +68,6 @@ export default function TriviaPage() {
   return (
     <Wrapper>
       <Sidebar>
-        <Spinner />
-
         <Title>Trivia</Title>
 
         <DisplayButton

@@ -203,7 +203,16 @@ export default function AnthemnsPage() {
           live={!showLogo}
           wrapper={current}
           grayscale={presenting && showLogo}
-          marquee={isPlaying ? current?.title : null}
+          marquee={
+            isPlaying ? (
+              <>
+                <span className="text-warning">{current?.title}</span>
+                {current?.authors ? (
+                  <span> &mdash; {current?.authors}</span>
+                ) : null}
+              </>
+            ) : null
+          }
         >
           Usa las teclas <strong>&larr;</strong> y <strong>&rarr;</strong> para
           cambiar de página, y <strong>&uarr;</strong> y <strong>&darr;</strong>{' '}

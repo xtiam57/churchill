@@ -6,7 +6,7 @@ export const BookmarkStyled = styled.div`
   ${({ icon }) =>
     icon
       ? 'display: inline-block;'
-      : 'position: absolute;  right: 15px; font-size: 3em;'}
+      : 'position: absolute;  right: 40px; font-size: 3em;'}
   top: ${({ bookmarked }) => (bookmarked ? '30px' : '60px')};
   transition: transform 0.3s ease;
   z-index: 1;

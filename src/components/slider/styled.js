@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 
+export const SummaryStyled = styled.div`
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-gap: 10px;
+  grid-auto-rows: 1;
+`;
+
 export const SlidePreviewStyled = styled.div`
   background-color: #fff;
   border-radius: 0.2rem;

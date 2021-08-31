@@ -70,7 +70,7 @@ select {
   color: var(--secondary);
   background-color: transparent;
   font-weight: normal;
-  padding: 4px 10px 6px;
+  padding: 6px 10px;
   transition: all 0.3 ease;
   display: inline-block;
   font-size: 75%;
@@ -88,6 +88,7 @@ select {
 }
 
 .tag.active {
+  font-size: 90%;
   border: solid 1px var(--warning);
   color: var(--warning);
 }

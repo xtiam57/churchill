@@ -22,6 +22,27 @@ export const PresenterStyled = styled.section`
     font ||
     '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"'};
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+
+  /* &:before,
+  &:after {
+    content: ' ';
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 40px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &:before {
+    box-shadow: ${({ rightshadow }) =>
+    rightshadow ? 'inset -30px 0 30px -30px rgba(255, 255, 255, 0.8)' : 'none'};
+    left: calc(100% - 40px);
+  }
+  &:after {
+    box-shadow: ${({ leftshadow }) =>
+    leftshadow ? 'inset 30px 0 30px -30px rgba(255, 255, 255, 0.8)' : 'none'};
+    right: calc(100% - 40px);
+  } */
 
   p {
     font-size: calc(1.4em + 3vh);
@@ -45,10 +66,10 @@ export const PresenterStyled = styled.section`
     }
 
     div.opts {
-      border: solid 1px ${({ textcolor }) => textcolor || '#000'};
+      color: ${({ optionscolor }) => optionscolor || '#ffff00'};
+      background-color: rgba(0, 0, 0, 0.5);
       border-radius: 10px;
       padding: 10px 20px 15px;
-      text-align: left;
       height: 100%;
       display: flex;
       align-items: center;
@@ -56,6 +77,7 @@ export const PresenterStyled = styled.section`
 
     .opt-0,
     .opt-1 {
+      margin-top: 20px;
       margin-bottom: 20px;
     }
 

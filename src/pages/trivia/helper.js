@@ -20,8 +20,9 @@ export function get(list) {
             .join('')}</div>`,
         }),
         Slide.create({
-          title: 'Respuesta:',
-          text: `${letters[correct]} ${answer.toUpperCase()}`,
+          text: `<b>Respuesta:</b>/n${
+            letters[correct]
+          } ${answer.toUpperCase()}`,
           subtext: e.reference,
         }),
       ];

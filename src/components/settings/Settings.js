@@ -75,7 +75,7 @@ export function Settings() {
   // });
 
   return (
-    <Sidebar closable className={`bg-light ${showingSettings ? '' : 'closed'}`}>
+    <Sidebar light closable className={showingSettings ? '' : 'closed'}>
       <h1 className="display-4">Ajustes</h1>
       <Button
         className="p-0 text-dark"
@@ -187,7 +187,17 @@ export function Settings() {
                 disabled={settings?.theme !== 'custom'}
               />
             </Form.Group>
-            <Form.Group as={Col} className="mb-1"></Form.Group>
+            <Form.Group as={Col} className="mb-1">
+              <Form.Label className=" small mb-1">Opciones (Trivia)</Form.Label>
+              <Form.Control
+                size="sm"
+                type="color"
+                name="optionscolor"
+                value={settings?.optionscolor}
+                onChange={handleChangeValue}
+                disabled={settings?.theme !== 'custom'}
+              />
+            </Form.Group>
           </Form.Row>
         </>
       ) : null}
@@ -313,7 +323,7 @@ export function Settings() {
       </Form.Row>
 
       <Form.Row>
-        <Form.Group as={Col} className="mb-1">
+        <Form.Group as={Col} className="mb-0">
           <Form.Label className=" small mb-1">
             Días para filtrar cumpleaños ({settings?.birthdaytimeframe})
           </Form.Label>
@@ -330,7 +340,7 @@ export function Settings() {
         </Form.Group>
       </Form.Row>
 
-      <Form.Row className="mt-3">
+      {/* <Form.Row className="mt-3">
         <Form.Group as={Col} className="mb-1">
           <Form.Check
             type="switch"
@@ -346,7 +356,7 @@ export function Settings() {
             }}
           />
         </Form.Group>
-      </Form.Row>
+      </Form.Row> */}
 
       <hr />
 
@@ -403,8 +413,10 @@ export function Settings() {
       <hr />
 
       <small className="d-block text-center text-muted mt-4">
-        Hecho con <BsHeartFill className="text-danger pulse" /> por Christiam
-        Mena (@xtiam57).
+        Hecho con <BsHeartFill className="text-danger pulse" /> para Dios y su
+        Iglesia. <br />
+        Por Christiam Mena (@xtiam57). <br />
+        <a href="mailto:christiam.mena@gmail.com">christiam.mena@gmail.com</a>
       </small>
     </Sidebar>
   );
