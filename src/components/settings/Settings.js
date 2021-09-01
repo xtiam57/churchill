@@ -4,7 +4,7 @@ import { Button, Form, Col, InputGroup } from 'react-bootstrap';
 import { MdClose } from 'react-icons/md';
 import { BsHeartFill, BsDownload, BsUpload } from 'react-icons/bs';
 
-import { Sidebar, Logo, LogoPreview } from 'components';
+import { Sidebar, Logo, LogoPreview, TextPreview } from 'components';
 import { useSettingsSidebar, usePresenter } from 'hooks';
 import { BROADCAST, THEMES, SETTINGS_OPTIONS } from 'values';
 import { Storage } from 'utils';
@@ -201,6 +201,8 @@ export function Settings() {
           </Form.Row>
         </>
       ) : null}
+
+      <TextPreview className="my-2" {...settings}></TextPreview>
 
       <hr />
 

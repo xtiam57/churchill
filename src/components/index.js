@@ -12,5 +12,6 @@ export * from './presenter';
 export * from './settings';
 export * from './sidebar';
 export * from './slider';
+export * from './textPreview';
 export * from './title';
 export * from './wrapper';
