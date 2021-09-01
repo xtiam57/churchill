@@ -82,7 +82,11 @@ export const PresenterStyled = styled.section`
     }
 
     i {
-      color: ${({ jesus }) => jesus || '#fff'};
+      color: ${({ textcolor }) => textcolor || '#000'};
+
+      &.jesus {
+        color: ${({ jesus }) => jesus || '#fff'};
+      }
 
       b {
         font-weight: normal;

@@ -201,6 +201,9 @@ export function Settings() {
           </Form.Row>
         </>
       ) : null}
+
+      <hr />
+
       <Form.Row>
         <Form.Group as={Col} className="mb-2">
           <Form.Label className="small my-2 d-flex justify-content-between">
@@ -227,7 +230,7 @@ export function Settings() {
 
       {settings?.image ? (
         <Form.Row>
-          <Form.Group as={Col} className="mb-1">
+          <Form.Group as={Col} className="mb-0">
             <Form.Label className=" small mb-1">
               Difuminado del Fondo (
               {Number.parseFloat(settings?.blur).toFixed(1)})
@@ -245,6 +248,9 @@ export function Settings() {
           </Form.Group>
         </Form.Row>
       ) : null}
+
+      <hr />
+
       <Form.Row>
         <Form.Group as={Col} className="mb-1">
           <Form.Label className=" small mb-1">Logo </Form.Label>
@@ -281,6 +287,9 @@ export function Settings() {
       <LogoPreview className="my-2" {...settings}>
         <Logo width="80%" height="80%" {...settings} />
       </LogoPreview>
+
+      <hr />
+
       <Form.Row>
         <Form.Group as={Col} className="mb-1">
           <Form.Label className=" small mb-1">

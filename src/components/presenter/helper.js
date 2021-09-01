@@ -3,7 +3,7 @@ export function process(text, subtext) {
     .replaceAll('///', '<b>///</b>')
     .replaceAll('//', '<b>//</b>')
     .replaceAll('__', '</i>')
-    .replaceAll('_', '<i>')
+    .replaceAll('_', '<i class="jesus">')
     .replaceAll('**********', '<b>__________</b>')
     .replace('1)', '<strong>(1)</strong><br/> ')
     .replace('2)', '<strong>(2)</strong><br/> ')
