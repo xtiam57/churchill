@@ -2,7 +2,7 @@ import { useEffect, useState, useCallback, useMemo } from 'react';
 import { Time } from 'utils';
 
 export function useCountdown(showLogo, callback = () => {}) {
-  const audio = useMemo(() => new Audio('/audio/beep.mp3'), []);
+  const audio = useMemo(() => new Audio('./audio/beep.mp3'), []);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
   const [time, setTime] = useState(Time.formatTime(minutes, seconds));

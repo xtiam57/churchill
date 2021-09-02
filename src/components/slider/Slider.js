@@ -75,7 +75,7 @@ export const Slider = forwardRef(
         interval = setInterval(() => {
           const slideToGo = moveSlide(MOVEMENT.NEXT, loop);
           setSlide(slideToGo);
-        }, (type === 'trivia' ? settings.triviainterval : settings.interval) || 1000);
+        }, (type === 'trivia' ? settings.triviainterval : settings.interval) || 20000);
       }
       return () => clearInterval(interval);
     }, [
