@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
 import { ImUserPlus } from 'react-icons/im';
 import { RiCloseFill } from 'react-icons/ri';
@@ -25,9 +25,10 @@ const useSettings = createPersistedState(BROADCAST.SETTINGS);
 export default function BirthdaysPage() {
   const [, setMessage] = useBroadcast(BROADCAST.INITIAL_CHANNEL);
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
+  const { recent, current, birthdays, quantity, add, remove, toggle } =
+    useBirthday();
   const [showModal, setShowModal] = useState(false);
   const [showLogo, setShowLogo] = useState(true);
-  const { current, recent, add, remove, birthdays } = useBirthday();
   const { presenting } = usePresenter();
 
   useEffect(() => {
@@ -71,16 +72,28 @@ export default function BirthdaysPage() {
             </List.Item>
           ) : null}
 
-          {recent.map(({ id, name, day, month }) => (
-            <List.Item key={id}>
-              <List.Text className="text-light">{name}</List.Text>
-              <List.Text>{Time.formatBirthday(day, month)}</List.Text>
+          {recent.map((item) => (
+            <List.Item key={item.id}>
+              <List.Text className="text-light">
+                <Form.Check
+                  className="d-inline-block"
+                  type="switch"
+                  id={item.id}
+                  name="active"
+                  checked={item.active}
+                  onChange={() => {
+                    toggle(item);
+                  }}
+                />
+                {item.name}
+              </List.Text>
+              <List.Text>{Time.formatBirthday(item.day, item.month)}</List.Text>
             </List.Item>
           ))}
         </List>
 
         <List>
-          {birthdays.length ? (
+          {quantity ? (
             <List.Item>
               <List.Title className="text-warning">listado completo</List.Title>
             </List.Item>
@@ -89,6 +102,16 @@ export default function BirthdaysPage() {
           {birthdays.map((item) => (
             <List.Item key={item.id}>
               <List.Text>
+                <Form.Check
+                  className="d-inline-block"
+                  type="switch"
+                  id={item.id}
+                  name="active"
+                  checked={item.active}
+                  onChange={() => {
+                    toggle(item);
+                  }}
+                />
                 <span className="text-light">{item.name}</span> (
                 {Time.formatBirthday(item.day, item.month)})
               </List.Text>

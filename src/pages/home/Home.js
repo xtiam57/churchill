@@ -18,7 +18,7 @@ import {
   Title,
   DisplayButton,
 } from 'components';
-import { useKeyUp, useIterate, usePresenter } from 'hooks';
+import { useKeyUp, useIterate, usePresenter, useBirthday } from 'hooks';
 import { BROADCAST, MOVEMENT } from 'values';
 
 import { NOTICES } from './notices';
@@ -29,7 +29,14 @@ export default function HomePage() {
   const sliderRef = useRef();
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const [showLogo, setShowLogo] = useState(true);
-  const [notice, setNotice] = useState(NOTICES[0]);
+  // const { current, quantity } = useBirthday();
+  const [notice, setNotice] = useState(() => {
+    // const index = NOTICES[0].slides.findIndex((v) => v.type === 'birthday');
+    // if (index < 0 && quantity) {
+    //   NOTICES[0].slides.push(current);
+    // }
+    return NOTICES[0];
+  });
   const [autoplay, setAutoplay] = useState(true);
   const [loop, setLoop] = useState(true);
   const [moveNotice] = useIterate(notice, NOTICES);
