@@ -12,12 +12,12 @@ export function get(list) {
       return [
         Slide.create({
           text: e.question,
-          subtext: `<div class="row">${options
+          subtext: `<div class="container"><div class="row">${options
             .map(
               (o, i) =>
                 `<div class="col-6 opt-${i}"><div class="opts">${letters[i]} ${o}</div></div>`
             )
-            .join('')}</div>`,
+            .join('')}</div></div>`,
         }),
         Slide.create({
           text: `<b>Respuesta:</b>/n${

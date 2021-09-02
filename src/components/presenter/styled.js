@@ -66,6 +66,7 @@ export const PresenterStyled = styled.section`
     }
 
     div.opts {
+      font-size: 1.1em;
       color: ${({ optionscolor }) => optionscolor || '#ffff00'};
       background-color: rgba(0, 0, 0, 0.5);
       border-radius: 10px;
@@ -73,6 +74,7 @@ export const PresenterStyled = styled.section`
       height: 100%;
       display: flex;
       align-items: center;
+      text-align: left;
     }
 
     .opt-0,

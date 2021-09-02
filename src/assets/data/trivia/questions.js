@@ -280,7 +280,8 @@ export const questions = [
   },
   {
     difficulty: 'EASY',
-    question: '¿Cómo se llamaba la mujer que se dice tenía "ojos delicados"?',
+    question:
+      '¿Cómo se llamaba la mujer que se dice tenía <i>"ojos delicados"</i>?',
     options: ['Lea', 'Rebeca', 'Raquel', 'Ester'],
     reference: 'Génesis 29:17',
   },
@@ -807,7 +808,7 @@ export const questions = [
   {
     difficulty: 'MEDIUM_EASY',
     question:
-      '<i>"El hombre que tiene amigos ha de mostrarse amigo; y amigo hay más unido que..."</i>',
+      '<i>"El hombre que tiene amigos ha de mostrarse amigo; y amigo hay más unido que..."</i>?',
     options: ['Un hermano', 'Una esposa', 'Un rey', 'Un padre'],
     reference: 'Proverbios 18:24',
   },
@@ -1079,7 +1080,7 @@ export const questions = [
   {
     difficulty: 'MEDIUM',
     question:
-      '¿En qué lugar los creyentes fueron llamados "cristianos" por primera vez?',
+      '¿En qué lugar los creyentes fueron llamados <i>"cristianos"</i> por primera vez?',
     options: ['Antioquía', 'Corintos', 'Jerusalén', 'Éfeso'],
     reference: 'Hechos 11:26',
   },
@@ -1428,7 +1429,7 @@ export const questions = [
   {
     difficulty: 'HARD',
     question:
-      '¿En que libro del A.T. se encuentran las palabras "Dios mío, Dios mío, ¿por qué me has desamparado?"?',
+      '¿En que libro del A.T. se encuentran las palabras <i>"Dios mío, Dios mío, ¿por qué me has desamparado?"</i>?',
     options: ['Salmos', 'Jeremías', '1 Reyes', 'Eclesiastés'],
     reference: 'Salmos 22:1',
   },
@@ -1464,14 +1465,14 @@ export const questions = [
   },
   {
     difficulty: 'EASY',
-    question: '<i>"He aquí, yo estoy a la ********** y llamo"</i>',
+    question: '<i>"He aquí, yo estoy a la ********** y llamo"</i>?',
     options: ['Puerta', 'Ventana', 'Entrada', 'Espera'],
     reference: 'Apocalipsis 3:20',
   },
   {
     difficulty: 'EASY',
     question:
-      '<i>"Subió a un árbol para ver a Jesucristo que pasaba por allí"</i>',
+      '<i>"Subió a un árbol para ver a Jesucristo que pasaba por allí"</i>?',
     options: ['Zaqueo', 'Natanael', 'Mateo', 'Juan'],
     reference: 'Lucas 19:1-5',
   },
@@ -1496,13 +1497,13 @@ export const questions = [
   },
   {
     difficulty: 'EASY',
-    question: 'Su nombre significa <i>"risa"</i>',
+    question: 'Su nombre significa <i>"risa"</i>?',
     options: ['Isaac', 'Oseas', 'Jacob', 'Esaú'],
     reference: 'Génesis 17:19',
   },
   {
     difficulty: 'EASY',
-    question: '<i>"Porque la paga del ********** es muerte"</i>',
+    question: '<i>"Porque la paga del ********** es muerte"</i>?',
     options: ['Pecado', 'Alma', 'Pan', 'Sacrificio'],
     reference: 'Romanos 6:23',
   },
@@ -1515,34 +1516,34 @@ export const questions = [
   {
     difficulty: 'MEDIUM_EASY',
     question:
-      '<i>"¿quién es este filisteo incircunciso, para que provoque a los escuadrones del Dios viviente?"</i>',
+      '<i>"¿quién es este filisteo incircunciso, para que provoque a los escuadrones del Dios viviente?"</i>?',
     options: ['Goliat', 'Sansón', 'Artajerjes', 'Nabucodonosor'],
     reference: '1 Samuel 17:26',
   },
   {
     difficulty: 'MEDIUM',
-    question: 'Nombre hebreo de <i>"Zafnat-panea"</i>',
+    question: 'Nombre hebreo de <i>"Zafnat-panea"</i>?',
     options: ['José', 'Daniel', 'Josué', 'Nehemías'],
     reference: 'Génesis 41:45',
   },
   {
     difficulty: 'MEDIUM_EASY',
     question:
-      'Dijo: <i>"¿A quién queréis que os suelte: a Barrabás, o a Jesús, llamado el Cristo?"</i>',
+      'Dijo: <i>"¿A quién queréis que os suelte: a Barrabás, o a Jesús, llamado el Cristo?"</i>?',
     options: ['Pilato', 'Herodes', 'Faraón', 'Cesar'],
     reference: 'Mateo 27:17',
   },
   {
     difficulty: 'EASY',
     question:
-      '<i>"Porque con el corazón se cree para justicia, pero con la boca se confiesa para **********"</i>',
+      '<i>"Porque con el corazón se cree para justicia, pero con la boca se confiesa para **********"</i>?',
     options: ['Salvación', 'El Perdón', 'Redención', 'Chismear'],
     reference: 'Romanos 10:10',
   },
   {
     difficulty: 'MEDIUM_EASY',
     question:
-      '<i>"********** a tu padre y a tu madre, para que tus días se alarguen en la tierra que Jehová tu Dios te da"</i>',
+      '<i>"********** a tu padre y a tu madre, para que tus días se alarguen en la tierra que Jehová tu Dios te da"</i>?',
     options: ['Honra', 'Obedece', 'Ama', 'Respeta'],
     reference: 'Éxodo 20:12',
   },
