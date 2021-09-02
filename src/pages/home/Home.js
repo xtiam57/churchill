@@ -21,7 +21,7 @@ import {
 import { useKeyUp, useIterate, usePresenter, useBirthday } from 'hooks';
 import { BROADCAST, MOVEMENT } from 'values';
 
-import { NOTICES } from './notices';
+import { getNotices } from './data';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
@@ -29,18 +29,20 @@ export default function HomePage() {
   const sliderRef = useRef();
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const [showLogo, setShowLogo] = useState(true);
-  // const { current, quantity } = useBirthday();
-  const [notice, setNotice] = useState(() => {
-    // const index = NOTICES[0].slides.findIndex((v) => v.type === 'birthday');
-    // if (index < 0 && quantity) {
-    //   NOTICES[0].slides.push(current);
-    // }
-    return NOTICES[0];
-  });
+  const { current } = useBirthday();
+  const notices = getNotices(current);
+  const [notice, setNotice] = useState(notices[0]);
   const [autoplay, setAutoplay] = useState(true);
   const [loop, setLoop] = useState(true);
-  const [moveNotice] = useIterate(notice, NOTICES);
+  const [moveNotice] = useIterate(notice, notices);
   const { presenting } = usePresenter();
+
+  useEffect(() => {
+    if (notice.id === 1) {
+      const notices = getNotices(current);
+      setNotice(notices[0]);
+    }
+  }, [current]);
 
   useEffect(() => {
     if (!presenting) {
@@ -82,7 +84,7 @@ export default function HomePage() {
             <List.Title>Anuncios</List.Title>
           </List.Item>
 
-          {NOTICES.map((item) => (
+          {notices.map((item) => (
             <List.Item key={item.id}>
               <List.Action
                 active={item.id === notice.id}

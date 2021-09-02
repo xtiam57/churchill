@@ -25,7 +25,7 @@ const useSettings = createPersistedState(BROADCAST.SETTINGS);
 export default function BirthdaysPage() {
   const [, setMessage] = useBroadcast(BROADCAST.INITIAL_CHANNEL);
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
-  const { recent, current, birthdays, quantity, add, remove, toggle } =
+  const { recent, current, birthdays, count, add, remove, toggle } =
     useBirthday();
   const [showModal, setShowModal] = useState(false);
   const [showLogo, setShowLogo] = useState(true);
@@ -93,7 +93,7 @@ export default function BirthdaysPage() {
         </List>
 
         <List>
-          {quantity ? (
+          {count ? (
             <List.Item>
               <List.Title className="text-warning">listado completo</List.Title>
             </List.Item>

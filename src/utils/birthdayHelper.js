@@ -32,25 +32,26 @@ BirthdayHelper.getSlide = (
   frame = 3,
   suffix = ''
 ) => {
-  return birthdays.filter((item) => item.active).length
+  const bdays = birthdays.filter((item) => item.active);
+
+  return bdays.length
     ? Slide.create({
         id: `BS_${frame}_${now.getTime()}${suffix}`,
         title: '<span class="fs-lg">🥳</span>/n¡Feliz Cumpleaños!',
-        text: birthdays
-          .filter((item) => item.active)
+        text: bdays
           .map(({ name, day, month }) => {
             return `${name} <i>(${Time.formatBirthday(day, month)})</i>`;
           })
           .join('/n'),
-        subtext: `Deseamos que Dios le${
-          birthdays.length > 1 ? 's' : ''
-        } bendiga.`,
+        subtext: `Deseamos que Dios le${bdays.length > 1 ? 's' : ''} bendiga.`,
         type: 'birthday',
+        count: bdays.length,
       })
     : Slide.create({
         id: 'BS_404',
         text: `No hay cumpleaños que mostrar.`,
         type: 'birthday',
+        count: 0,
       });
 };
 

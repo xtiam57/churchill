@@ -3,7 +3,7 @@ import createPersistedState from 'use-persisted-state';
 
 import { BirthdaysContext } from 'providers';
 import { BROADCAST } from 'values';
-import { BirthdayHelper } from 'utils';
+import { BirthdayHelper as BH } from 'utils';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
@@ -12,13 +12,13 @@ export function useBirthday() {
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const { birthdaytimeframe: frame } = settings;
 
-  const [recent, setRecent] = useState([]);
-  const [current, setCurrent] = useState({});
-  const [birthdays, setBirthdays] = useState(BirthdayHelper.getAll());
+  const [recent, setRecent] = useState(BH.getRecent(now, frame));
+  const [current, setCurrent] = useState(BH.getSlide(recent, now, frame));
+  const [birthdays, setBirthdays] = useState(BH.getAll());
 
   useEffect(() => {
-    const recent = BirthdayHelper.getRecent(now, frame);
-    const slide = BirthdayHelper.getSlide(recent, now, frame);
+    const recent = BH.getRecent(now, frame);
+    const slide = BH.getSlide(recent, now, frame);
 
     setRecent(recent);
 
@@ -27,7 +27,7 @@ export function useBirthday() {
 
   const add = useCallback(
     (data) => {
-      const { slide, recent, birthdays } = BirthdayHelper.add(data, now, frame);
+      const { slide, recent, birthdays } = BH.add(data, now, frame);
 
       setCurrent(slide);
       setRecent(recent);
@@ -38,11 +38,7 @@ export function useBirthday() {
 
   const remove = useCallback(
     (item) => {
-      const { slide, recent, birthdays } = BirthdayHelper.remove(
-        item,
-        now,
-        frame
-      );
+      const { slide, recent, birthdays } = BH.remove(item, now, frame);
 
       setCurrent(slide);
       setRecent(recent);
@@ -53,11 +49,7 @@ export function useBirthday() {
 
   const toggle = useCallback(
     (item) => {
-      const { slide, recent, birthdays } = BirthdayHelper.toggle(
-        item,
-        now,
-        frame
-      );
+      const { slide, recent, birthdays } = BH.toggle(item, now, frame);
 
       setCurrent(slide);
       setRecent(recent);
@@ -70,7 +62,7 @@ export function useBirthday() {
     recent,
     current,
     birthdays,
-    quantity: birthdays.length,
+    count: birthdays.length,
     bDaySong,
     add,
     remove,

@@ -295,7 +295,7 @@ export function Settings() {
       <Form.Row>
         <Form.Group as={Col} className="mb-1">
           <Form.Label className=" small mb-1">
-            Intervalo entre Anuncios (Inicio)
+            Intervalo entre "Anuncios" (Inicio)
           </Form.Label>
           <Form.Control
             size="sm"
@@ -312,10 +312,11 @@ export function Settings() {
           </Form.Control>
         </Form.Group>
       </Form.Row>
+
       <Form.Row>
         <Form.Group as={Col} className="mb-2">
           <Form.Label className=" small mb-1">
-            Intervalo entre Preguntas (Trivia)
+            Intervalo entre "Preguntas" (Trivia)
           </Form.Label>
           <Form.Control
             size="sm"
@@ -336,18 +337,23 @@ export function Settings() {
       <Form.Row>
         <Form.Group as={Col} className="mb-0">
           <Form.Label className=" small mb-1">
-            Días para filtrar cumpleaños ({settings?.birthdaytimeframe})
+            Rango para detectar cumpleaños
           </Form.Label>
           <Form.Control
-            custom
-            type="range"
-            min="1"
-            max="7"
-            step="1"
+            size="sm"
+            as="select"
             name="birthdaytimeframe"
             value={settings?.birthdaytimeframe}
             onChange={handleChangeNumericValue}
-          />
+          >
+            {SETTINGS_OPTIONS.BIRTHDAYS_TIME_INTERVALS.map(
+              ({ value, label }) => (
+                <option key={value} value={value}>
+                  {label}
+                </option>
+              )
+            )}
+          </Form.Control>
         </Form.Group>
       </Form.Row>
 

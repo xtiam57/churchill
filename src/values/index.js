@@ -174,5 +174,15 @@ export const SETTINGS_OPTIONS = {
     { value: 30000, label: '30 segundos' },
     { value: 60000, label: '1 minuto' },
   ],
+  BIRTHDAYS_TIME_INTERVALS: [
+    { value: 0, label: 'Hoy' },
+    { value: 1, label: '1 día' },
+    { value: 2, label: '2 días' },
+    { value: 3, label: '3 días' },
+    { value: 4, label: '4 días' },
+    { value: 5, label: '5 días' },
+    { value: 6, label: '6 días' },
+    { value: 7, label: '1 semana' },
+  ],
   BACKGROUNDS,
 };

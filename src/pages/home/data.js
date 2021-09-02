@@ -1,6 +1,6 @@
 import { Slide } from 'utils';
 
-export const NOTICES = [
+const NOTICES = [
   {
     id: 1,
     index: 0,
@@ -233,3 +233,13 @@ export const NOTICES = [
   //   ],
   // },
 ];
+
+export function getNotices(birthdaySLide) {
+  const notices = JSON.parse(JSON.stringify(NOTICES));
+
+  if (birthdaySLide.count > 0) {
+    notices[0].slides.push(birthdaySLide);
+  }
+
+  return notices;
+}
