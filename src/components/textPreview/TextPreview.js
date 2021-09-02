@@ -5,9 +5,9 @@ export function TextPreview(props) {
     <TextPreviewWrapperStyled {...props}>
       <TextPreviewStyled {...props}>
         <p className="m-0">
-          <strong>Esto es un título</strong> <br />
+          <strong>Títulos</strong> <br />
           Texto normal. <i className="jesus">Palabras de Jesús.</i>{' '}
-          <i>Palabras en cursiva.</i> <b>Palabras en negritas.</b>
+          <i>Palabras en cursiva.</i> <b>Palabras resaltadas.</b>
           <small className="my-1">Citas</small>
           <div className="opts">Opción de Trivia.</div>
         </p>

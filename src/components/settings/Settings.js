@@ -202,7 +202,7 @@ export function Settings() {
         </>
       ) : null}
 
-      <TextPreview className="my-2" {...settings}></TextPreview>
+      <TextPreview className="my-2" {...settings} />
 
       <hr />
 
