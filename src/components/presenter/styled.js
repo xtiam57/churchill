@@ -7,7 +7,7 @@ export const PresenterStyled = styled.section`
   justify-content: center;
   overflow: hidden;
   height: 100%;
-  width: calc(100vw - 290px);
+  width: 100%;
   padding: 4em;
   text-align: center;
   border: 1px solid var(--dark);
