@@ -209,7 +209,7 @@ export function Settings() {
       <Form.Row>
         <Form.Group as={Col} className="mb-2">
           <Form.Label className="small my-2 d-flex justify-content-between">
-            Imagen de Fondo
+            Fondo
             <a href=" " onClick={handleRandomBackground}>
               (Aleatorio)
             </a>
@@ -233,7 +233,7 @@ export function Settings() {
       {settings?.image ? (
         <Form.Row>
           <Form.Group as={Col} className="mb-0">
-            <Form.Label className=" small mb-1">
+            <Form.Label className="small mb-1">
               Difuminado del Fondo (
               {Number.parseFloat(settings?.blur).toFixed(1)})
             </Form.Label>
@@ -249,7 +249,21 @@ export function Settings() {
             />
           </Form.Group>
         </Form.Row>
-      ) : null}
+      ) : (
+        <Form.Row>
+          <Form.Group as={Col} className="mb-0">
+            <Form.Label className=" small mb-1">Fondo</Form.Label>
+            <Form.Control
+              size="sm"
+              type="color"
+              name="background"
+              value={settings?.background}
+              onChange={handleChangeValue}
+            />
+          </Form.Group>
+          <Col />
+        </Form.Row>
+      )}
 
       <hr />
 
