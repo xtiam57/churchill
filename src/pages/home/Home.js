@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import createPersistedState from 'use-persisted-state';
 import { Button, ButtonGroup } from 'react-bootstrap';
 import {
-  ImStop2,
+  ImPause2,
   ImPlay3,
   ImArrowLeft2,
   ImArrowRight2,
@@ -42,6 +42,7 @@ export default function HomePage() {
       const notices = getNotices(current);
       setNotice(notices[0]);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [current]);
 
   useEffect(() => {
@@ -115,7 +116,7 @@ export default function HomePage() {
           <ButtonGroup className="mx-2">
             {autoplay ? (
               <Button onClick={() => setAutoplay(false)} variant="light">
-                <ImStop2 />
+                <ImPause2 />
               </Button>
             ) : (
               <Button onClick={() => setAutoplay(true)} variant="secondary">

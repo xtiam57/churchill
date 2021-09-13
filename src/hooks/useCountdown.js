@@ -35,7 +35,7 @@ export function useCountdown(showLogo, callback = () => {}) {
         ? null
         : {
             id: 'TEMP',
-            text: `<strong class="fs-xxl">${time}</strong>`,
+            text: `<strong class="fs-timer">${time}</strong>`,
             type: 'temp',
           }
     );
@@ -43,6 +43,7 @@ export function useCountdown(showLogo, callback = () => {}) {
     return () => {
       clearInterval(interval);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [minutes, seconds, showLogo, running]);
 
   const stop = useCallback(() => {
@@ -53,6 +54,7 @@ export function useCountdown(showLogo, callback = () => {}) {
     setSeconds(0);
     setTime(Time.formatTime(0, 0));
     setRunning(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const start = useCallback((initialMinutes = 0, initialSeconds = 0) => {
@@ -62,6 +64,7 @@ export function useCountdown(showLogo, callback = () => {}) {
     setMinutes(initialMinutes);
     setSeconds(initialSeconds);
     setRunning(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return { start, stop, time };

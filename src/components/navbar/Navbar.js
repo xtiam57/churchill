@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import { BsHouseFill, BsFillGearFill } from 'react-icons/bs';
-import { RiSlideshow2Fill, RiStopFill } from 'react-icons/ri';
+import { RiSlideshow2Fill, RiComputerLine } from 'react-icons/ri';
 
 import { usePresenter, useSettingsSidebar, useClock } from 'hooks';
 import { routes, PATHS } from 'router';
@@ -52,8 +52,8 @@ export function Navbar() {
 
             {routes
               .filter((route) => route.menu)
-              .map((route) => (
-                <li className="nav-item">
+              .map((route, index) => (
+                <li key={index} className="nav-item">
                   <NavLink
                     to={route.path}
                     className="nav-link"
@@ -71,7 +71,7 @@ export function Navbar() {
             onClick={toggle}
             variant={presenting ? 'outline-dark' : 'outline-light'}
           >
-            {presenting ? <RiStopFill /> : <RiSlideshow2Fill />}
+            {presenting ? <RiComputerLine /> : <RiSlideshow2Fill />}
           </Button>
         </div>
       </nav>

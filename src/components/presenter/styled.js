@@ -88,6 +88,7 @@ export const PresenterStyled = styled.section`
 
       &.jesus {
         color: ${({ jesus }) => jesus || '#fff'};
+        font-style: normal;
       }
 
       b {

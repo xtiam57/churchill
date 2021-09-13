@@ -5,16 +5,17 @@ export function process(text, subtext) {
     .replaceAll('__', '</i>')
     .replaceAll('_', '<i class="jesus">')
     .replaceAll('**********', '<b>__________</b>')
-    .replace('1)', '<strong>(1)</strong><br/> ')
-    .replace('2)', '<strong>(2)</strong><br/> ')
-    .replace('3)', '<strong>(3)</strong><br/> ')
-    .replace('4)', '<strong>(4)</strong><br/> ')
-    .replace('5)', '<strong>(5)</strong><br/> ')
-    .replace('6)', '<strong>(6)</strong><br/> ')
-    .replace('7)', '<strong>(7)</strong><br/> ')
-    .replace('8)', '<strong>(8)</strong><br/> ')
-    .replace('9)', '<strong>(9)</strong><br/> ')
-    .replace('10)', '<strong>(10)</strong><br/> ');
+    .replace('(Coro)', '<strong class="fs-title">(Coro)</strong>')
+    .replace('1)', '<strong class="fs-title">(1)</strong><br/> ')
+    .replace('2)', '<strong class="fs-title">(2)</strong><br/> ')
+    .replace('3)', '<strong class="fs-title">(3)</strong><br/> ')
+    .replace('4)', '<strong class="fs-title">(4)</strong><br/> ')
+    .replace('5)', '<strong class="fs-title">(5)</strong><br/> ')
+    .replace('6)', '<strong class="fs-title">(6)</strong><br/> ')
+    .replace('7)', '<strong class="fs-title">(7)</strong><br/> ')
+    .replace('8)', '<strong class="fs-title">(8)</strong><br/> ')
+    .replace('9)', '<strong class="fs-title">(9)</strong><br/> ')
+    .replace('10)', '<strong class="fs-title">(10)</strong><br/> ');
 
   return `${res}${subtext ? `<small>${subtext}</small>` : ''}`;
 }
@@ -29,6 +30,7 @@ export const resizeText = ({
   maxSize = 512,
   step = 1,
   unit = 'px',
+  vh = 3.065,
 }) => {
   element.style.opacity = 0;
 
@@ -38,7 +40,7 @@ export const resizeText = ({
   const parent = element.parentNode;
 
   while (!overflow && i < maxSize) {
-    element.style.fontSize = `calc(${i}${unit} + 3.05vh)`;
+    element.style.fontSize = `calc(${i}${unit} + ${vh}vh)`;
     overflow = isOverflown(parent);
 
     if (!overflow) {
@@ -47,6 +49,6 @@ export const resizeText = ({
   }
 
   // revert to last state where no overflow happened
-  element.style.fontSize = `calc(${i - step}${unit} + 3.05vh)`;
-  return `calc(${i - step}${unit} + 3.05vh)`;
+  element.style.fontSize = `calc(${i - step}${unit} + ${vh}vh)`;
+  return `calc(${i - step}${unit} + ${vh}vh)`;
 };

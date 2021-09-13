@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import createPersistedState from 'use-persisted-state';
 import { Button, ButtonGroup } from 'react-bootstrap';
 import {
-  ImStop2,
+  ImPause2,
   ImPlay3,
   ImArrowLeft2,
   ImArrowRight2,
@@ -22,7 +22,6 @@ import { useKeyUp, useIterate, usePresenter } from 'hooks';
 import { BROADCAST, MOVEMENT } from 'values';
 
 import { QUESTIONS } from './data';
-import { Spinner } from 'components/spinner';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
@@ -114,7 +113,7 @@ export default function TriviaPage() {
           <ButtonGroup className="mx-2">
             {autoplay ? (
               <Button onClick={() => setAutoplay(false)} variant="light">
-                <ImStop2 />
+                <ImPause2 />
               </Button>
             ) : (
               <Button onClick={() => setAutoplay(true)} variant="secondary">

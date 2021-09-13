@@ -32,6 +32,7 @@ export default function StopwatchPage() {
 
   useEffect(() => {
     return () => setMessage(null);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -127,7 +128,7 @@ export default function StopwatchPage() {
           id="TEMP"
           live={!showLogo}
           grayscale={presenting && showLogo}
-          text={`<strong class="fs-xxl">${time}</strong>`}
+          text={`<strong class="fs-timer">${time}</strong>`}
           {...settings}
         />
 

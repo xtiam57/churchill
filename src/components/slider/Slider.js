@@ -67,6 +67,7 @@ export const Slider = forwardRef(
 
     useEffect(() => {
       return () => setMessage(null);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {

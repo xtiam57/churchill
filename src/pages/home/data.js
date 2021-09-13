@@ -52,7 +52,7 @@ const NOTICES = [
     title: 'Horarios',
     slides: [
       Slide.create({
-        text: 'Cultos Generales:/n<b>Domingos</b>/n<strong class="fs-xl" style="line-height:1">11:00 AM</strong>/n<strong class="fs-xl" style="line-height:1">06:00 PM</strong>/nEscuela Dominical: <b>10:00 AM</b>',
+        text: 'Cultos Generales:/n<b>Domingos</b>/n<strong class="fs-xl" style="line-height:1">11:00 AM</strong>/n<strong class="fs-xl" style="line-height:1">06:30 PM</strong>/nEscuela Dominical: <b>10:00 AM</b>',
       }),
       Slide.create({
         text: 'Culto General:/n<b>Miércoles</b>/n<strong class="fs-xl" style="line-height:1">07:00 PM</strong>',

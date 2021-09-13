@@ -21,16 +21,7 @@ export default function CastPage() {
           {...settings}
         />
       ) : (
-        <>
-          <Logo width="60%" height="60%" {...settings} />
-
-          {/* <div className="time">
-            {new Date().toLocaleTimeString('en-us', {
-              hour: '2-digit',
-              minute: '2-digit',
-            })}
-          </div> */}
-        </>
+        <Logo width="70%" height="70%" {...settings} />
       )}
     </Wrapper>
   );
