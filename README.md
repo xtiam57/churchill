@@ -3,7 +3,7 @@
 # Churchill
 Sistema de proyección para Iglesias.
 
-**IMPORTANTE: Está versión de la aplicación aún está en fase desarrollo y pruebas.**
+**IMPORTANTE: Está aplicación aún está en fase desarrollo y pruebas.**
 
 La aplicación fue originalmente ideada para ser usada en la [Iglesia Bautista Fundamental Monte Calvario](https://www.facebook.com/IBFMonteCalvarioLima) (iglesia de la cual soy miembro). Sin embargo, en base a la necesidad que he visto en algunas iglesias, he decidido hacerla pública y, más importante aún, **gratuita**.
 
