@@ -9,7 +9,7 @@ La aplicación fue originalmente ideada para ser usada en la [Iglesia Bautista F
 
 Es un proyecto hecho con cariño y mucho esfuerzo para Dios y sus Iglesias. Te ruego, que si vas a usar la aplicación, **no pretendas lucrar con ella**.
 
-[Descargar Pistas para Himnos (216 pistas)](https://github.com/xtiam57/churchill/releases/download/untagged-584632e70985c222df32/himnos.zip)
+[Descargar](https://github.com/xtiam57/churchill/releases)
 
 Puedes hacer uso de las pistas de Himnos en el caso de que tu Iglesia no cuente con música en vivo.
 
