@@ -2,7 +2,7 @@
 
 El primer paso es decargar el archivo comprimido donde estarán los himnos:
 
-- [Descargar Pistas para Himnos (216 pistas)](https://github.com/xtiam57/churchill/releases/download/untagged-a377635c2b97a5b4072a/himnos.zip)
+- [Descargar Pistas para Himnos (216 pistas)](https://github.com/xtiam57/churchill/releases/download/v2.0.3-RC/himnos.zip)
 
 **NOTA: se irá actualizando la lista de descarga de arriba a medida que se agreguen más pistas.**
 
