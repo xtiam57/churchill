@@ -1,70 +1,17 @@
-# Getting Started with Create React App
+### Churchill
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Está versión de la aplicación aún está en fase desarrollo y pruebas.**
 
-## Available Scripts
+La aplicación fue originalmente ideada para ser usada en la [Iglesia Bautista Fundamental Monte Calvario](https://www.facebook.com/IBFMonteCalvarioLima) (iglesia de la cual soy miembro). Sin embargo, en base a la necesidad que he visto en algunas iglesias, he decidido hacerla pública y, más importante aún, **gratuita**. 
 
-In the project directory, you can run:
+Es un proyecto hecho con cariño y mucho esfuerzo para Dios y sus Iglesias. Te ruego, que si vas a usar la aplicación, **no pretendas lucrar con ella**.
 
-### `yarn start`
+[Descargar Pistas para Himnos (216 pistas)](https://github.com/xtiam57/churchill/releases/download/untagged-584632e70985c222df32/himnos.zip)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Puedes hacer uso de las pistas de Himnos en el caso de que tu Iglesia no cuente con música en vivo. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Agraceré que envíes tus comentarios, correcciones y sugerencias a: christiam.mena@gmail.com
+Si es una Iglesia, y desea personalizar Churchill con su logotipo, escribir a: christiam.mena@gmail.com
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**¡Dios te bendiga!**
+Espero que el trabajo sea de bendición para tu Iglesia.
