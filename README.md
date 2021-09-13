@@ -1,4 +1,4 @@
-![image](https://github.com/xtiam57/churchill/blob/86f41969389e802a7ce99dd2857cd5747047323a/public/cover.png)
+![Churchill](https://github.com/xtiam57/churchill/blob/86f41969389e802a7ce99dd2857cd5747047323a/public/cover.png)
 
 # Churchill
 Sistema de proyección para Iglesias.
