@@ -13,8 +13,10 @@ Es un proyecto hecho con cariño y mucho esfuerzo para Dios y sus Iglesias. Te r
 
 Puedes hacer uso de las pistas de Himnos en el caso de que tu Iglesia no cuente con música en vivo.
 
-Agraceré que envíes tus comentarios, correcciones y sugerencias a: christiam.mena@gmail.com
-Si es una Iglesia, y desea personalizar Churchill con su logotipo, escribir a: christiam.mena@gmail.com
+## Contácto
+- Agraceré que envíes tus comentarios, correcciones y sugerencias a: christiam.mena@gmail.com
+- Si es una Iglesia, y desea personalizar Churchill con su logotipo, escribir a: christiam.mena@gmail.com
+- Puedes reportar un error haciendo clic [aquí](https://github.com/xtiam57/churchill/issues/new)
 
 **¡Dios te bendiga!**
 Espero que el trabajo sea de bendición para tu Iglesia.
