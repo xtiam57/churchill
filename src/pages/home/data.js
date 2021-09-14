@@ -1,4 +1,6 @@
 import { Slide } from 'utils';
+import rondalla from 'assets/images/rondalla.png';
+import { Logo } from 'components';
 
 const NOTICES = [
   {
@@ -232,6 +234,20 @@ const NOTICES = [
   //     }),
   //   ],
   // },
+
+  {
+    id: 6,
+    index: 5,
+    type: 'notice',
+    title: 'Logo de la Rondalla',
+    slides: [
+      Slide.create({
+        title: '',
+        text: `<img src="${rondalla}" alt="rondalla" style="width: 100%"/>`,
+        // text: `---RONDALLA---`,
+      }),
+    ],
+  },
 ];
 
 export function getNotices(birthdaySLide) {
