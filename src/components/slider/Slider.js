@@ -118,7 +118,7 @@ export const Slider = forwardRef(
           <small className="text-nowrap">{children}</small>
 
           {marquee ? (
-            <div class="marquee small">
+            <div className="marquee small">
               <p className="m-0">{marquee}</p>
             </div>
           ) : (
