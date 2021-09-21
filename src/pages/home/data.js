@@ -52,22 +52,22 @@ const NOTICES = [
     title: 'Horarios',
     slides: [
       Slide.create({
-        text: 'Cultos Generales:/n<b>Domingos</b>/n<strong class="fs-xl" style="line-height:1">11:00 AM</strong>/n<strong class="fs-xl" style="line-height:1">06:30 PM</strong>/nEscuela Dominical: <b>10:00 AM</b>',
+        text: 'Cultos Generales:/n<b>Domingos</b>/n<strong class="fs-xl" style="line-height:1">10:20 AM</strong>/n<strong class="fs-xl" style="line-height:1">06:30 PM</strong>/nEscuela Dominical: <b>09:00 AM</b>',
       }),
       Slide.create({
-        text: 'Culto General:/n<b>Miércoles</b>/n<strong class="fs-xl" style="line-height:1">07:00 PM</strong>',
+        text: 'Oración:/n<b>Miércoles</b>/n<strong class="fs-xl" style="line-height:1">07:30 PM</strong>',
       }),
       Slide.create({
-        text: 'Reunión de "Ganar Almas":/n<b>Sábados</b>/n<strong class="fs-xl" style="line-height:1">10:00 AM</strong>',
+        text: 'Estudio Bíblico:/n<b>Jueves</b>/n<strong class="fs-xl" style="line-height:1">07:30 PM</strong>',
       }),
       Slide.create({
-        text: 'Reunión de Jóvenes:/n<b>Sábados</b>/n<strong class="fs-xl" style="line-height:1">04:30 PM</strong>',
+        text: 'Evangelización/n"Casa por casa":/n<b>Sábados</b>/n<strong class="fs-xl" style="line-height:1">09:00 AM</strong>',
       }),
       Slide.create({
-        text: 'Reunión de Coro:/n<b>Sábados</b>/n<strong class="fs-xl" style="line-height:1">08:30 AM</strong>',
+        text: 'Reunión de Adolescentes:/n<b>Sábados</b>/n<strong class="fs-xl" style="line-height:1">03:30 PM</strong>',
       }),
       Slide.create({
-        text: 'Reunión de Damas:/n<b>Sábados</b>/n<strong class="fs-xl" style="line-height:1">07:00 PM</strong>',
+        text: 'Reunión de Mayores:/n<b>Sábados</b>/n<strong class="fs-xl" style="line-height:1">06:00 PM</strong>',
       }),
     ],
   },
