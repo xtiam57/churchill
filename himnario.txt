@@ -26,7 +26,9 @@ Vemos en tus obras en cielo, tierra y mar.
 Dios en tres Personas, bendita Trinidad.
 ***
 @AUTHORS
-John Bacchus Dykes
+Letra por Reginal Heber, 1826
+Traducido por J. B. Cabrera
+Música por John B. Dykes, 1861
 
 ---
 
@@ -49,9 +51,7 @@ Para poder vivir en santidad.
 ***
 @TAGS
 Suave
-***
-@AUTHORS
-Felice de Giardini
+
 
 ---
 
@@ -84,9 +84,9 @@ Que es la fuente de gracia,
 poder y verdad.
 ***
 @AUTHORS
-John J. Husband
-William Mackay
-H. W. Cragin
+Letra por William P. Mackat, 1863
+Música por John J. Husband, 1820
+Traducción por H. W. Cragin
 
 ---
 
@@ -2432,7 +2432,7 @@ En la patria celestial.
 
 ---
 
-## 92. HIJO DE DIOS ES EL
+## 92. HIJO DE DIOS ES ÉL
 ***
 1) ¿Conoces a Cristo quien es el Señor?
 Hijo de Dios es Él.
@@ -6446,6 +6446,9 @@ mi cuerpo recordaréis, recordad.
 En memoria de mí, siempre amad.
 En memoria de mí, a Dios buscad,
 de corazón recordad.
+***
+@TAGS
+Suave
 
 ---
 
@@ -14859,3 +14862,472 @@ Stuart Townend
 Apéndice
 Suave
 
+---
+
+## 643. VEN ADOREMOS
+***
+1) Canta un himno al Salvador;
+ven adoremos a Dios.
+Puedes confiar en tu andar;
+ven adoremos a nuestro Dios.
+Sus obras muestran su esplendor;
+ven adoremos a Dios.
+Pronto vendrá y reinará;
+ven adoremos a nuestro Dios.
+***
+@CORO
+Adoremos a Dios, sólo a Dios.
+Ven, adoremos a Dios.
+A una voz, al Trino Dios;
+himnos cantemos de corazón
+Hijo del hombre, también de Dios;
+Es vencedor el que se humilló.
+Honra, gloria, ven adoremos a Dios por siempre.
+Honra, gloria, ven adoremos a Dios.
+***
+2) Canta al Dios de la eternidad;
+ven adoremos a Dios.
+Él es el Rey; canta oh grey;
+ven adoremos a nuestro Dios.
+Al victorioso de la maldad;
+ven adoremos a Dios.
+Honra a Jesús, Él es la luz;
+ven adoremos a nuestro Dios
+***
+@TAGS
+Apéndice
+
+---
+
+## 644. AL SEÑOR SEAMOS FIELES
+***
+1) No nos ha dado Dios sentir de temor,
+sino de poder cordura y amor.
+Y no me avergüenzo
+de dar testimonio de Él,
+pues quiero por siempre ser fiel.
+***
+@CORO
+Al Señor seamos fieles
+Levantando en alto su ley
+Al Señor seamos fieles
+Cada día sin falta al Rey.
+***
+2) Nadie que busca placer terrenal
+es premiado vencedor al final.
+Sé fiel trabajando
+sirviendo al Redentor,
+buscando de Dios lo mejor.
+***
+3) En vida o muerte la gloria te doy,
+pues me has dado amor
+y tu gran perdón.
+Un siervo ferviente de Cristo yo quiero ser,
+y leal siempre permanecer.
+***
+4) Al Señor seamos fieles
+Levantando en alto su ley
+Al Señor seamos fieles
+Cada día sin falta al Rey.
+Cada día sin falta al Rey.
+Cada día sin falta al Rey.
+***
+@TAGS
+Apéndice
+
+---
+
+## 645. REY EXALTADO
+***
+@CORO
+Rey exaltado en gloria
+es Cristo Jesús y le alabaré.
+Rey exaltado en gloria
+es Cristo y yo le alabaré.
+***
+1) Él es Señor y siempre le alabaré
+La creación su nombre proclamará
+Rey exaltado en gloria es Cristo Jesús.
+***
+2) Él me redimió, mis culpas su amor borró.
+Con su poder, mi vida Él transformó,
+Rey exaltado en gloria es Cristo Jesús.
+***
+@TAGS
+Apéndice
+Suave
+
+---
+
+## 646. REY EXALTADO
+***
+1) ¡Majestad, excelsa majestad!
+Tributadle la gloria y el honor.
+¡Majestad! Por siempre ensalzad
+al Salvador, digno Señor, el Vencedor.
+***
+@CORO
+Alabad, engrandecer su santo nombre
+Adorad, magnificad al gran Redentor.
+¡Majestad! La gloria celebrad
+del Salvador, Cristo Jesús, Rey y Señor.
+***
+2) ¡Majestad, divina majestad! Dios eterno
+es Jesucristo el Señor.
+¡Majestad! De su poder cantad
+es el Creador, Sustentador, Gobernador.
+***
+3) ¡Majestad, eterna majestad!
+Al que era, que es y siempre será.
+¡Majestad! Su triunfo proclamad
+pronto vendrá nos llevará y reinará.
+***
+@TAGS
+Apéndice
+Suave
+
+---
+
+## 647. CRISTO ES LA PEÑA
+***
+1) //Cristo es la peña de Horeb
+que está brotando,
+agua de vida saludable para ti.//
+***
+@CORO
+Ven a tomarla que es más dulce que la miel.
+Refresca el alma, refresca todo tu ser.
+Cristo es la peña de Horeb que está brotando,
+agua de vida saludable para ti.
+***
+2) Cristo es el lirio del valle de las flores.
+Él es la rosa blanca pura de Sarón.
+Cristo es la vida y amor de los amores.
+Él es la eterna fuente de la salvación.
+***
+@TAGS
+Apéndice
+
+---
+
+## 648. GRAN DÍA DE VICTORIA
+***
+1) Con mis ojos vi llegar la gloria de mi Salvador.
+Con sus pasos va exprimiendo el lagar del detractor.
+Con su espada como rayo cual terrible vengador.
+Conquista con verdad.
+***
+@CORO
+¡Gloria, gloria, aleluya!
+¡Gloria, gloria, aleluya!
+¡Gloria, gloria, aleluya!
+Dios es quien vencerá.
+***
+2) En los campamentos arden las fogatas de verdad,
+y se pueden ver las huestes adorando con lealtad.
+La sentencia es segura sobre toda la maldad.
+Conquista la verdad.
+***
+3) Su trompeta ha sonado y jamás se rendirá.
+Él separa corazones y su juicio premiará.
+¡Oh, mi alma, nunca dudes!
+La victoria nos dará. Conquista su verdad.
+***
+4) En lo hermoso de los lirios Cristo vino a Belén,
+con la gloria en su seño que transforma en Edén.
+Él la vida santifica, anunciad tan grande bien.
+Que hay en su verdad.
+***
+@TAGS
+Apéndice
+
+---
+
+## 649. MÁS ALLÁ DEL SOL
+***
+1) Aunque en esta vida no tengo riquezas;
+sé que allá en la gloria tengo una mansión.
+Cual alma perdida entre las pobrezas;
+de mí es Jesucristo tuvo compasión.
+***
+@CORO
+//Más allá del sol, más allá del sol,
+Yo tengo un hogar, hogar bello hogar,
+Mas allá del sol.//
+***
+2) Así, por el mundo, yo voy caminando;
+de pruebas rodeado, y de tentación.
+Pero a mi lado viene consolando;
+mi bendito Cristo en la turbación.
+***
+3) A los pueblos todos del linaje humano;
+Cristo quiere darles plena salvación.
+También una casa para cada hermano;
+fue a prepararle a la santa Sion.
+***
+@TAGS
+Apéndice
+
+
+---
+
+## 650. SANTA LA NOCHE
+***
+1) Santa la noche, hermosas las estrellas,
+La noche cuando nació el Señor.
+El mundo estaba envuelto en sus pecados.
+Hasta que Dios nos mandó al Salvador.
+***
+2) Una esperanza todo el mundo siente,
+la luz de un nuevo día sin igual.
+Con gratitud postrados adoradle.
+Oíd de lo alto la voz angelical;
+¡Oíd, cantad! Nació el Salvador.
+***
+3) Hoy por la fe llegamos al pesebre
+a contemplar al bendito Jesús.
+Como también los magos del oriente
+llegaron guiados por célica luz.
+***
+4) Fue por nacer así humildemente
+que nuestras pruebas sabe comprender;
+Hoy Emanuel es Dios ya con nosotros.
+Cantemos al Rey, a Jesús el Salvador;
+¡Regocijad! Nació el Redentor.
+***
+5) Nos enseñó a amarnos tiernamente;
+nos dio su ley de amor y su paz.
+Libra al esclavo que en cadenas gime.
+Y a su nombre huirá Satanás.
+***
+6) Con cánticos de gozo alabemos
+al Rey de reyes, nuestro Salvador.
+Hoy con amor cantemos reverentes,
+alcemos la voz proclamando  su poder.
+¡Dad gloria a Dios!
+Amén, por siempre amén.
+***
+@TAGS
+Apéndice
+Suave
+
+---
+
+## 651. CONTROLA MI VIDA SEÑOR
+***
+1) En humildad, Señor te rindo,
+mi obstinado corazón.
+Mi vida es tuya amado Dueño,
+Tus mandos sean mi misión.
+***
+@CORO
+Controla mi vida, Señor, anhelo tener tu favor.
+Tu gozo y gran perdón tesoros me son,
+Pon sabiduría en mí y hazme estar junto a Ti.
+Entonces al ver tu faz "Fiel siervo" dirás.
+***
+2) Me prometiste ser fiel guía,
+acompañando mí andar.
+Mi fuerza eres cada día,
+para ampararme y triunfar.
+***
+@TAGS
+Apéndice
+Suave
+
+---
+
+## 652. SOY SOLDADO DE JESÚS
+***
+1) Soy yo soldado de Jesús,
+y siervo del Señor.
+No temeré llevar su cruz
+sufriendo por su amor.
+***
+@CORO
+Después de la batalla nos coronará,
+//Dios nos coronará//
+Después de la batalla nos coronara,
+en aquella santa Sion.
+Más allá, más allá,
+en aquella santa Sion.
+Después de la batalla nos coronará,
+en aquella santa Sion.
+***
+2) Lucharon otros por la fe
+¿cobarde habré de ser?
+Por mi Señor yo pelearé
+confiando en su poder.
+***
+3) Es menester que sea fiel
+que nunca vuelva atrás;
+que siga siempre en pos de Él,
+y me guiará en paz.
+***
+@TAGS
+Apéndice
+
+---
+
+## 653. CRISTO MI ÍNTIMO AMIGO
+***
+1) Exaltado es Cristo,
+Rey de reyes de la eternidad;
+con los serafines, alabadle en su majestad.
+Reina en los cielos, el amado Creador;
+el que es la luz, nos sufrió la cruz,
+oh, ¡qué gran amor!
+***
+@CORO
+Cristo mi íntimo amigo;
+a mi lado siempre va.
+Cristo jamás me abandona;
+mis temores quitará.
+Cristo mi íntimo amigo;
+mi confianza está en Él.
+Mi gran Rey, mi Señor, Salvador;
+pero es más, es mi amigo más fiel.
+***
+2) Gloria doy a Cristo,
+sólo Él merece mi honor;
+es mi fortaleza, es mi roca y consolador.
+Es castillo fuerte, fundamento de mi fe;
+el que no pecó, se sacrificó, a su viña iré.
+***
+@TAGS
+Apéndice
+
+---
+
+## 654. UN DÍA CRISTO VOLVERÁ
+***
+1) Un día Cristo volverá
+es la promesa del Señor;
+tal como fue así vendrá,
+y su pueblo ha de ver al Salvador.
+***
+@CORO
+Muy pronto, sí, Jesús vendrá,
+y alegre le verá su pueblo;
+¡Velad! ¡Orad! el Rey vendrá,
+los suyos arrebatará.
+***
+2) Los mensajeros del Señor
+anuncian que vendrá Jesús;
+señales hay alrededor
+Él vendrá y a los suyos llevará.
+***
+3) En busca de su grey vendrá
+con toda gloria y honor;
+su iglesia esperando está,
+y aclamará con gozo a su Señor.
+***
+4) ¡Oh bienvenido Rey Jesús!
+tus hijos te esperan ya;
+muy pronto han de ver tu luz,
+y gozar en tu presencia siempre allá.
+***
+@TAGS
+Apéndice
+
+---
+
+## 655. A SU LEY
+***
+1) Cada estrella Dios ha hecho,
+Él creó la tierra y mar.
+Dueño es de toda ciencia,
+el pasado y lo que habrá...
+...Y su gran sabiduría
+es tu guía para ver;
+Es la lámpara siempre diáfana,
+para en ti su plan hacer.
+***
+@CORO
+¡A su Ley! ¡A su Ley!
+Sus promesas son verdad. ¡A su Ley!
+Si no hallas tu lugar,
+si tu gozo es llorar,
+si tú tiendes a dudar,
+¡A su Ley!
+***
+2) No es alguien alejado,
+quiere ser tu amigo fiel.
+Te escucha atentamente
+cuando en oración con Él...
+...Siempre anda a tu lado,
+no se apartará jamás.
+En debilidad y necesidad,
+te da fuerza y dulce paz.
+***
+@TAGS
+Apéndice
+Suave
+
+---
+
+## 656. ERES MI PROTECTOR
+***
+1) Eres mi protector,
+llenas mi corazón
+con cánticos de liberación;
+de angustias me guardarás.
+Confiaré en Ti.
+***
+@CORO
+Confiaré en Ti,
+El débil dirá fuerte soy,
+con poder del Señor.
+***
+@TAGS
+Apéndice
+Suave
+
+---
+
+## 657. VEN CONTEMPLA EL MISTERIO
+***
+1) Ven contempla el gran misterio,
+el amanecer del Rey;
+alabado en el cielo,
+se vistió de humanidad.
+A este mundo de tinieblas,
+esa luz de vida entró.
+Mira a Cristo, hecho hombre,
+para darnos redención.
+***
+2) Ven contempla el gran misterio,
+el perfecto Hijo de Dios;
+en su vida y sufrimiento,
+en pecado no cayó.
+Mira a Adán, el verdadero,
+Salvador del hombre infiel.
+Cristo el firme cumplimiento,
+de la ley; la roca es Él.
+***
+3) Ven contempla el gran misterio,
+Cristo alzado en una cruz;
+en lugar de pecadores,
+traspasado fue Jesús.
+Mira el precio por salvarnos,
+mira el plan de redención.
+Lleva a muchos a la gloria,
+oh cuán vasto inmenso amor.
+***
+4) Ven contempla el gran misterio,
+Dios de vida que murió;
+más la tumba fue vencida,
+gloria al Padre, Él vivo está.
+¡Oh, esperanza tan segura!
+Vida eterna nos dará.
+el Señor resucitado,
+cuando venga a reinar.
+***
+5) Ven contempla el gran misterio,
+el amanecer del Rey.
+Mira a Cristo, hecho hombre,
+para darnos redención.
+***
+@TAGS
+Apéndice
+Suave
