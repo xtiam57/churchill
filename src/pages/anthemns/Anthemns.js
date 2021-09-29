@@ -56,13 +56,17 @@ export default function AnthemnsPage() {
   const [isMP3Loaded, setIsMP3Loaded] = useState(false);
   const [playbackRate, setPlaybackRate] = React.useState(1);
   const [volume, setVolume] = useState(1);
-  const [play, { stop, isPlaying }] = useSound(url, {
+  const [play, { stop, isPlaying, sound }] = useSound(url, {
     volume,
     playbackRate,
     interrupt: true,
     onload: () => setIsMP3Loaded(true),
     onloaderror: () => setIsMP3Loaded(false),
   });
+  const [trackProgress, setTrackProgress] = useState(0);
+  const intervalRef = useRef();
+
+  console.log(sound);
 
   useEffect(() => {
     stop();
@@ -85,6 +89,22 @@ export default function AnthemnsPage() {
       setShowLogo(true);
     }
   }, [presenting]);
+
+  useEffect(() => {
+    if (!isPlaying) {
+      setTrackProgress(0);
+      clearInterval(intervalRef.current);
+    }
+  }, [isPlaying]);
+
+  const startTimer = () => {
+    // Clear any timers already running
+    clearInterval(intervalRef.current);
+
+    intervalRef.current = setInterval(() => {
+      setTrackProgress((state) => state + 1);
+    }, [1000]);
+  };
 
   function handleSearch(event) {
     setSearch(event);
@@ -219,6 +239,20 @@ export default function AnthemnsPage() {
           para cambiar de himno.
         </Slider>
 
+        <Form.Control
+          type="range"
+          name="position"
+          value={trackProgress}
+          min="0"
+          max={Math.floor(sound?.duration())}
+          step="1"
+          onChange={({ target }) => {
+            sound?.seek(+target.value);
+            setTrackProgress(+target.value);
+            // +target.value;
+          }}
+        />
+
         <Controls>
           {isMP3Loaded ? (
             <div className="d-flex">
@@ -267,7 +301,14 @@ export default function AnthemnsPage() {
                       <ImStop2 />
                     </Button>
                   ) : (
-                    <Button onClick={() => play()} variant="secondary">
+                    <Button
+                      onClick={() => {
+                        play();
+                        startTimer();
+                        sound?.seek(trackProgress);
+                      }}
+                      variant="secondary"
+                    >
                       <ImPlay3 />
                     </Button>
                   )}
@@ -313,6 +354,7 @@ export default function AnthemnsPage() {
                     });
                     if (isPlaying) {
                       play();
+                      setTrackProgress(0);
                     }
                   }}
                 />

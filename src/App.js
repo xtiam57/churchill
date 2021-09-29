@@ -8,7 +8,7 @@ import {
   ScripturesProvider,
   BirthdaysProvider,
 } from 'providers';
-import { Navbar, Settings } from 'components';
+import { Navbar, Settings, AudioPlayer } from 'components';
 import { RouteMapper } from 'router';
 
 // CSS
@@ -30,6 +30,8 @@ function App() {
                 <RouteMapper />
                 {/* Sidebar settings */}
                 <Settings />
+
+                <AudioPlayer />
               </BirthdaysProvider>
             </AnthemnsProvider>
           </ScripturesProvider>

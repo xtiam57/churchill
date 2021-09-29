@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const SidebarStyled = styled.aside`
   background-color: ${({ light }) => (light ? 'var(--light)' : '#20232a')};
-  height: calc(100vh - 56px);
+  height: calc(100vh - 141px); // 56
   min-width: 290px;
   max-width: 290px;
   padding: 25px;
