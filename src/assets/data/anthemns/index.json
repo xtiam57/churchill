@@ -11,7 +11,7 @@
       "5) ¡Santo! ¡Santo! ¡Santo! la gloria de tu nombre,/nVemos en tus obras en cielo, tierra y mar./n¡Santo! ¡Santo! ¡Santo! te adora todo hombre,/nDios en tres Personas, bendita Trinidad."
     ],
     "startsWithChorus": false,
-    "authors": "John Bacchus Dykes",
+    "authors": "Reginal Heber",
     "tags": null
   },
   {
@@ -24,7 +24,7 @@
       "3) ¡Espíritu de Dios!/nEscucha nuestra voz; y tu bondad/nDerrame en nuestro ser divina claridad,/nPara poder vivir en santidad."
     ],
     "startsWithChorus": false,
-    "authors": "Felice de Giardini",
+    "authors": null,
     "tags": "Suave"
   },
   {
@@ -38,7 +38,7 @@
       "4) Unidos load,/na la gran Trinidad,/nQue es la fuente de gracia,/npoder y verdad."
     ],
     "startsWithChorus": false,
-    "authors": "John J. Husband, William Mackay, H. W. Cragin",
+    "authors": "Letra por William P. Mackat, 1863, Música por John J. Husband, 1820, Traducción por H. W. Cragin",
     "tags": null
   },
   {
@@ -1226,7 +1226,7 @@
   },
   {
     "number": 92,
-    "title": "HIJO DE DIOS ES EL",
+    "title": "HIJO DE DIOS ES ÉL",
     "chorus": "¡Oh maravilla! ¡Oh maravilla!/nHijo de Dios es Él./nHoy yo le adoro y lo amo siempre,/nHijo de Dios es Él.",
     "stanzas": [
       "1) ¿Conoces a Cristo quien es el Señor?/nHijo de Dios es Él./n¿No sabes que te ama? ¿Acaso le has visto?/nHijo de Dios es Él.",
@@ -3350,7 +3350,7 @@
     ],
     "startsWithChorus": false,
     "authors": null,
-    "tags": null
+    "tags": "Suave"
   },
   {
     "number": 251,
@@ -7660,14 +7660,209 @@
   {
     "number": 642,
     "title": "MI SER DESCANSA EN ÉL",
-    "chorus": "Dios, Tú eres mi Dios; no seré removido, en Ti confío./nDios, renueva hoy un firme espíritu en mí;/nDescanso solo en Ti,/nDescanso solo en Ti.",
+    "chorus": "Dios, Tú eres mi Dios;/nno seré removido, en Ti confío./nDios, renueva hoy un firme espíritu en mí;/n//Descanso solo en Ti.//",
     "stanzas": [
-      "1) Mi ser, descansa en Él,/nNo dudes ya, aunque mañana haya tormentas;/nDios contigo está,/nNo temas más las llamas de dolor que asechan.",
-      "2) Mi ser, descansa en Dios,/nNo tiembles ya ante las sombras de peligro;/nPon tu fe en Él,/nTu escudo es que apaga el fuego del maligno.",
-      "3) Mi ser, descansa en Dios,/nAbraza fiel esta Verdad que es luz y vida;/nVen, espera en Él,/nVerás nacer con esperanza un nuevo día."
+      "1) Mi ser, descansa en Él, no dudes ya,/naunque mañana haya tormentas;/nDios contigo está, no temas más/nlas llamas de dolor que asechan.",
+      "2) Mi ser, descansa en Dios, no tiembles ya/nante las sombras de peligro;/nPon tu fe en Él, tu escudo es/nque apaga el fuego del maligno.",
+      "3) Mi ser, descansa en Dios, abraza fiel/nesta Verdad que es luz y vida;/nVen, espera en Él, verás nacer/ncon esperanza un nuevo día."
     ],
     "startsWithChorus": false,
     "authors": "Mateo 14:31, Keith Getty, Kristyn Getty, Stuart Townend",
+    "tags": "Apéndice,Suave"
+  },
+  {
+    "number": 643,
+    "title": "VEN ADOREMOS",
+    "chorus": "Adoremos a Dios, sólo a Dios./nVen, adoremos a Dios./nA una voz, al Trino Dios;/nhimnos cantemos de corazón./nHijo del hombre, también de Dios;/nEs vencedor el que se humilló./nHonra, gloria, ven adoremos a Dios por siempre./nHonra, gloria, ven adoremos a Dios.",
+    "stanzas": [
+      "1) Canta un himno al Salvador;/nven adoremos a Dios./nPuedes confiar en tu andar;/nven adoremos a nuestro Dios./nSus obras muestran su esplendor;/nven adoremos a Dios./nPronto vendrá y reinará;/nven adoremos a nuestro Dios.",
+      "2) Canta al Dios de la eternidad;/nven adoremos a Dios./nÉl es el Rey; canta oh grey;/nven adoremos a nuestro Dios./nAl victorioso de la maldad;/nven adoremos a Dios./nHonra a Jesús, Él es la luz;/nven adoremos a nuestro Dios."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice"
+  },
+  {
+    "number": 644,
+    "title": "AL SEÑOR SEAMOS FIELES",
+    "chorus": "Al Señor seamos fieles/nLevantando en alto su ley/nAl Señor seamos fieles/nCada día sin falta al Rey.",
+    "stanzas": [
+      "1) No nos ha dado Dios sentir de temor,/nsino de poder cordura y amor./nY no me avergüenzo de dar testimonio de Él,/npues quiero por siempre ser fiel.",
+      "2) Nadie que busca placer terrenal/nes premiado vencedor al final./nSé fiel trabajando sirviendo al Redentor,/nbuscando de Dios lo mejor.",
+      "3) En vida o muerte la gloria te doy,/npues me has dado amor y tu gran perdón./nUn siervo ferviente de Cristo yo quiero ser,/ny leal siempre permanecer.",
+      "4) Al Señor seamos fieles/nLevantando en alto su ley/nAl Señor seamos fieles/nCada día sin falta al Rey./nCada día sin falta al Rey./nCada día sin falta al Rey."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice"
+  },
+  {
+    "number": 645,
+    "title": "REY EXALTADO",
+    "chorus": "Rey exaltado en gloria/nes Cristo Jesús y le alabaré./nRey exaltado en gloria/nes Cristo y yo le alabaré.",
+    "stanzas": [
+      "1) Él es Señor y siempre le alabaré/nLa creación su nombre proclamará/nRey exaltado en gloria es Cristo Jesús.",
+      "2) Él me redimió, mis culpas su amor borró./nCon su poder, mi vida Él transformó,/nRey exaltado en gloria es Cristo Jesús."
+    ],
+    "startsWithChorus": true,
+    "authors": null,
+    "tags": "Apéndice,Suave"
+  },
+  {
+    "number": 646,
+    "title": "¡MAJESTAD!",
+    "chorus": "Alabad, engrandecer su santo nombre/nAdorad, magnificad al gran Redentor./n¡Majestad! La gloria celebrad/ndel Salvador, Cristo Jesús, Rey y Señor.",
+    "stanzas": [
+      "1) ¡Majestad, excelsa majestad!/nTributadle la gloria y el honor./n¡Majestad! Por siempre ensalzad/nal Salvador, digno Señor, el Vencedor.",
+      "2) ¡Majestad, divina majestad!/nDios eterno es Jesucristo el Señor./n¡Majestad! De su poder cantad/nes el Creador, Sustentador, Gobernador.",
+      "3) ¡Majestad, eterna majestad!/nAl que era, que es y siempre será./n¡Majestad! Su triunfo proclamad/npronto vendrá nos llevará y reinará."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice,Suave"
+  },
+  {
+    "number": 647,
+    "title": "CRISTO ES LA PEÑA",
+    "chorus": "Ven a tomarla que es más dulce que la miel./nRefresca el alma, refresca todo tu ser./nCristo es la peña de Horeb que está brotando,/nagua de vida saludable para ti.",
+    "stanzas": [
+      "1) //Cristo es la peña de Horeb que está brotando, agua de vida saludable para ti.//",
+      "2) Cristo es el lirio del valle de las flores./nÉl es la rosa blanca pura de Sarón./nCristo es la vida y amor de los amores./nÉl es la eterna fuente de la salvación."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice"
+  },
+  {
+    "number": 648,
+    "title": "GRAN DÍA DE VICTORIA",
+    "chorus": "¡Gloria, gloria, aleluya!/n¡Gloria, gloria, aleluya!/n¡Gloria, gloria, aleluya!/nDios es quien vencerá.",
+    "stanzas": [
+      "1) Con mis ojos vi llegar la gloria de mi Salvador./nCon sus pasos va exprimiendo el lagar del detractor./nCon su espada como rayo cual terrible vengador./nConquista con verdad.",
+      "2) En los campamentos arden las fogatas de verdad,/ny se pueden ver las huestes adorando con lealtad./nLa sentencia es segura sobre toda la maldad./nConquista la verdad.",
+      "3) Su trompeta ha sonado y jamás se rendirá./nÉl separa corazones y su juicio premiará./n¡Oh, mi alma, nunca dudes!/nLa victoria nos dará. Conquista su verdad.",
+      "4) En lo hermoso de los lirios Cristo vino a Belén,/ncon la gloria en su seño que transforma en Edén./nÉl la vida santifica, anunciad tan grande bien./nQue hay en su verdad."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice"
+  },
+  {
+    "number": 649,
+    "title": "MÁS ALLÁ DEL SOL",
+    "chorus": "//Más allá del sol, más allá del sol, yo tengo un hogar, hogar bello hogar, mas allá del sol.//",
+    "stanzas": [
+      "1) Aunque en esta vida no tengo riquezas;/nsé que allá en la gloria tengo una mansión./nCual alma perdida entre las pobrezas;/nde mí es Jesucristo tuvo compasión.",
+      "2) Así, por el mundo, yo voy caminando;/nde pruebas rodeado, y de tentación./nPero a mi lado viene consolando;/nmi bendito Cristo en la turbación.",
+      "3) A los pueblos todos del linaje humano;/nCristo quiere darles plena salvación./nTambién una casa para cada hermano;/nfue a prepararle a la santa Sion."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice"
+  },
+  {
+    "number": 650,
+    "title": "SANTA LA NOCHE",
+    "chorus": null,
+    "stanzas": [
+      "1) Santa la noche, hermosas las estrellas,/nLa noche cuando nació el Señor./nEl mundo estaba envuelto en sus pecados./nHasta que Dios nos mandó al Salvador.",
+      "2) Una esperanza todo el mundo siente,/nla luz de un nuevo día sin igual./nCon gratitud postrados adoradle./nOíd de lo alto la voz angelical;/n¡Oíd, cantad! Nació el Salvador.",
+      "3) Hoy por la fe llegamos al pesebre/na contemplar al bendito Jesús./nComo también los magos del oriente/nllegaron guiados por célica luz.",
+      "4) Fue por nacer así humildemente/nque nuestras pruebas sabe comprender;/nHoy Emanuel es Dios ya con nosotros./nCantemos al Rey, a Jesús el Salvador;/n¡Regocijad! Nació el Redentor.",
+      "5) Nos enseñó a amarnos tiernamente;/nnos dio su ley de amor y su paz./nLibra al esclavo que en cadenas gime./nY a su nombre huirá Satanás.",
+      "6) Con cánticos de gozo alabemos/nal Rey de reyes, nuestro Salvador./nHoy con amor cantemos reverentes,/nalcemos la voz proclamando su poder./n¡Dad gloria a Dios! Amén, por siempre amén."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice,Suave"
+  },
+  {
+    "number": 651,
+    "title": "CONTROLA MI VIDA SEÑOR",
+    "chorus": "Controla mi vida, Señor, anhelo tener tu favor./nTu gozo y gran perdón tesoros me son,/nPon sabiduría en mí y hazme estar junto a Ti./nEntonces al ver tu faz \"Fiel siervo\" dirás.",
+    "stanzas": [
+      "1) En humildad, Señor te rindo,/nmi obstinado corazón./nMi vida es tuya amado Dueño,/nTus mandos sean mi misión.",
+      "2) Me prometiste ser fiel guía,/nacompañando mí andar./nMi fuerza eres cada día,/npara ampararme y triunfar."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice,Suave"
+  },
+  {
+    "number": 652,
+    "title": "SOY SOLDADO DE JESÚS",
+    "chorus": "Después de la batalla nos coronará,/n//Dios nos coronará///nDespués de la batalla nos coronará,/nen aquella santa Sion./nMás allá, más allá,/nen aquella santa Sion./nDespués de la batalla nos coronará,/nen aquella santa Sion.",
+    "stanzas": [
+      "1) Soy yo soldado de Jesús,/ny siervo del Señor./nNo temeré llevar su cruz/nsufriendo por su amor.",
+      "2) Lucharon otros por la fe/n¿cobarde habré de ser?/nPor mi Señor yo pelearé/nconfiando en su poder.",
+      "3) Es menester que sea fiel/nque nunca vuelva atrás;/nque siga siempre en pos de Él,/ny me guiará en paz."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice"
+  },
+  {
+    "number": 653,
+    "title": "CRISTO MI ÍNTIMO AMIGO",
+    "chorus": "Cristo mi íntimo amigo;/na mi lado siempre va./nCristo jamás me abandona;/nmis temores quitará./nCristo mi íntimo amigo;/nmi confianza está en Él./nMi gran Rey, mi Señor, Salvador;/npero es más, es mi amigo más fiel.",
+    "stanzas": [
+      "1) Exaltado es Cristo, Rey de reyes de la eternidad;/ncon los serafines, alabadle en su majestad./nReina en los cielos, el amado Creador;/nel que es la luz, nos sufrió la cruz, oh, ¡qué gran amor!",
+      "2) Gloria doy a Cristo, sólo Él merece mi honor;/nes mi fortaleza, es mi roca y consolador./nEs castillo fuerte, fundamento de mi fe;/nel que no pecó, se sacrificó, a su viña iré."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice"
+  },
+  {
+    "number": 654,
+    "title": "UN DÍA CRISTO VOLVERÁ",
+    "chorus": "Muy pronto, sí, Jesús vendrá, y alegre le verá su pueblo;/n¡Velad! ¡Orad! el Rey vendrá, los suyos arrebatará.",
+    "stanzas": [
+      "1) Un día Cristo volverá es la promesa del Señor;/ntal como fue así vendrá, y su pueblo ha de ver al Salvador.",
+      "2) Los mensajeros del Señor anuncian que vendrá Jesús;/nseñales hay alrededor Él vendrá y a los suyos llevará.",
+      "3) En busca de su grey vendrá con toda gloria y honor;/nsu iglesia esperando está, y aclamará con gozo a su Señor.",
+      "4) ¡Oh bienvenido Rey Jesús! tus hijos te esperan ya;/nmuy pronto han de ver tu luz, y gozar en tu presencia siempre allá."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice"
+  },
+  {
+    "number": 655,
+    "title": "A SU LEY",
+    "chorus": "¡A su Ley! ¡A su Ley!/nSus promesas son verdad. ¡A su Ley!/nSi no hallas tu lugar,/nsi tu gozo es llorar,/nsi tú tiendes a dudar,/n¡A su Ley!",
+    "stanzas": [
+      "1) Cada estrella Dios ha hecho,/nÉl creó la tierra y mar./nDueño es de toda ciencia,/nel pasado y lo que habrá.../n...Y su gran sabiduría/nes tu guía para ver;/nEs la lámpara siempre diáfana,/npara en ti su plan hacer.",
+      "2) No es alguien alejado,/nquiere ser tu amigo fiel./nTe escucha atentamente/ncuando en oración con Él.../n...Siempre anda a tu lado,/nno se apartará jamás./nEn debilidad y necesidad,/nte da fuerza y dulce paz."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice,Suave"
+  },
+  {
+    "number": 656,
+    "title": "ERES MI PROTECTOR",
+    "chorus": "Confiaré en Ti,/nEl débil dirá fuerte soy,/ncon poder del Señor.",
+    "stanzas": [
+      "1) Eres mi protector,/nllenas mi corazón/ncon cánticos de liberación;/nde angustias me guardarás./nConfiaré en Ti."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice,Suave"
+  },
+  {
+    "number": 657,
+    "title": "VEN CONTEMPLA EL MISTERIO",
+    "chorus": null,
+    "stanzas": [
+      "1) Ven contempla el gran misterio,/nel amanecer del Rey;/nalabado en el cielo,/nse vistió de humanidad./nA este mundo de tinieblas,/nesa luz de vida entró./nMira a Cristo, hecho hombre,/npara darnos redención.",
+      "2) Ven contempla el gran misterio,/nel perfecto Hijo de Dios;/nen su vida y sufrimiento,/nen pecado no cayó./nMira a Adán, el verdadero,/nSalvador del hombre infiel./nCristo el firme cumplimiento,/nde la ley; la roca es Él.",
+      "3) Ven contempla el gran misterio,/nCristo alzado en una cruz;/nen lugar de pecadores,/ntraspasado fue Jesús./nMira el precio por salvarnos,/nmira el plan de redención./nLleva a muchos a la gloria,/noh cuán vasto inmenso amor.",
+      "4) Ven contempla el gran misterio,/nDios de vida que murió;/nmás la tumba fue vencida,/ngloria al Padre, Él vivo está./n¡Oh, esperanza tan segura!/nVida eterna nos dará./nel Señor resucitado,/ncuando venga a reinar.",
+      "5) Ven contempla el gran misterio,/nel amanecer del Rey./nMira a Cristo, hecho hombre,/npara darnos redención."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
     "tags": "Apéndice,Suave"
   },
   {
