@@ -12,6 +12,7 @@ import {
   Controls,
   Presenter,
   List,
+  Alert,
 } from 'components';
 import { useCountdown, usePresenter } from 'hooks';
 import { BROADCAST } from 'values';
@@ -122,6 +123,8 @@ export default function StopwatchPage() {
           </Row>
         </List>
       </Sidebar>
+
+      {presenting ? <Alert presenting={!showLogo} label={time} /> : null}
 
       <Wrapper direction="column" {...settings}>
         <Presenter

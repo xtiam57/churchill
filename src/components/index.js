@@ -1,3 +1,4 @@
+export * from './alert';
 export * from './bookmark';
 export * from './bookmarkList';
 export * from './controls';
