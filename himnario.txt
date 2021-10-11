@@ -26,9 +26,7 @@ Vemos en tus obras en cielo, tierra y mar.
 Dios en tres Personas, bendita Trinidad.
 ***
 @AUTHORS
-Letra por Reginal Heber, 1826
-Traducido por J. B. Cabrera
-Música por John B. Dykes, 1861
+Reginal Heber
 
 ---
 
@@ -14831,26 +14829,26 @@ Suave
 
 ## 642. MI SER DESCANSA EN ÉL
 ***
-1) Mi ser, descansa en Él,
-No dudes ya, aunque mañana haya tormentas;
-Dios contigo está,
-No temas más las llamas de dolor que asechan.
+1) Mi ser, descansa en Él, no dudes ya,
+aunque mañana haya tormentas;
+Dios contigo está, no temas más
+las llamas de dolor que asechan.
 ***
 @CORO
-Dios, Tú eres mi Dios; no seré removido, en Ti confío.
+Dios, Tú eres mi Dios;
+no seré removido, en Ti confío.
 Dios, renueva hoy un firme espíritu en mí;
-Descanso solo en Ti,
-Descanso solo en Ti.
+//Descanso solo en Ti.//
 ***
-2) Mi ser, descansa en Dios,
-No tiembles ya ante las sombras de peligro;
-Pon tu fe en Él,
-Tu escudo es que apaga el fuego del maligno.
+2) Mi ser, descansa en Dios, no tiembles ya
+ante las sombras de peligro;
+Pon tu fe en Él, tu escudo es
+que apaga el fuego del maligno.
 ***
-3) Mi ser, descansa en Dios,
-Abraza fiel esta Verdad que es luz y vida;
-Ven, espera en Él,
-Verás nacer con esperanza un nuevo día.
+3) Mi ser, descansa en Dios, abraza fiel
+esta Verdad que es luz y vida;
+Ven, espera en Él, verás nacer
+con esperanza un nuevo día.
 ***
 @AUTHORS
 Mateo 14:31
@@ -14879,7 +14877,7 @@ ven adoremos a nuestro Dios.
 Adoremos a Dios, sólo a Dios.
 Ven, adoremos a Dios.
 A una voz, al Trino Dios;
-himnos cantemos de corazón
+himnos cantemos de corazón.
 Hijo del hombre, también de Dios;
 Es vencedor el que se humilló.
 Honra, gloria, ven adoremos a Dios por siempre.
@@ -14892,7 +14890,7 @@ ven adoremos a nuestro Dios.
 Al victorioso de la maldad;
 ven adoremos a Dios.
 Honra a Jesús, Él es la luz;
-ven adoremos a nuestro Dios
+ven adoremos a nuestro Dios.
 ***
 @TAGS
 Apéndice
@@ -14903,8 +14901,7 @@ Apéndice
 ***
 1) No nos ha dado Dios sentir de temor,
 sino de poder cordura y amor.
-Y no me avergüenzo
-de dar testimonio de Él,
+Y no me avergüenzo de dar testimonio de Él,
 pues quiero por siempre ser fiel.
 ***
 @CORO
@@ -14915,13 +14912,11 @@ Cada día sin falta al Rey.
 ***
 2) Nadie que busca placer terrenal
 es premiado vencedor al final.
-Sé fiel trabajando
-sirviendo al Redentor,
+Sé fiel trabajando sirviendo al Redentor,
 buscando de Dios lo mejor.
 ***
 3) En vida o muerte la gloria te doy,
-pues me has dado amor
-y tu gran perdón.
+pues me has dado amor y tu gran perdón.
 Un siervo ferviente de Cristo yo quiero ser,
 y leal siempre permanecer.
 ***
@@ -14959,7 +14954,7 @@ Suave
 
 ---
 
-## 646. REY EXALTADO
+## 646. ¡MAJESTAD!
 ***
 1) ¡Majestad, excelsa majestad!
 Tributadle la gloria y el honor.
@@ -14972,8 +14967,8 @@ Adorad, magnificad al gran Redentor.
 ¡Majestad! La gloria celebrad
 del Salvador, Cristo Jesús, Rey y Señor.
 ***
-2) ¡Majestad, divina majestad! Dios eterno
-es Jesucristo el Señor.
+2) ¡Majestad, divina majestad!
+Dios eterno es Jesucristo el Señor.
 ¡Majestad! De su poder cantad
 es el Creador, Sustentador, Gobernador.
 ***
@@ -14990,9 +14985,7 @@ Suave
 
 ## 647. CRISTO ES LA PEÑA
 ***
-1) //Cristo es la peña de Horeb
-que está brotando,
-agua de vida saludable para ti.//
+1) //Cristo es la peña de Horeb que está brotando, agua de vida saludable para ti.//
 ***
 @CORO
 Ven a tomarla que es más dulce que la miel.
@@ -15051,9 +15044,7 @@ Cual alma perdida entre las pobrezas;
 de mí es Jesucristo tuvo compasión.
 ***
 @CORO
-//Más allá del sol, más allá del sol,
-Yo tengo un hogar, hogar bello hogar,
-Mas allá del sol.//
+//Más allá del sol, más allá del sol, yo tengo un hogar, hogar bello hogar, mas allá del sol.//
 ***
 2) Así, por el mundo, yo voy caminando;
 de pruebas rodeado, y de tentación.
@@ -15103,9 +15094,8 @@ Y a su nombre huirá Satanás.
 6) Con cánticos de gozo alabemos
 al Rey de reyes, nuestro Salvador.
 Hoy con amor cantemos reverentes,
-alcemos la voz proclamando  su poder.
-¡Dad gloria a Dios!
-Amén, por siempre amén.
+alcemos la voz proclamando su poder.
+¡Dad gloria a Dios! Amén, por siempre amén.
 ***
 @TAGS
 Apéndice
@@ -15147,7 +15137,7 @@ sufriendo por su amor.
 @CORO
 Después de la batalla nos coronará,
 //Dios nos coronará//
-Después de la batalla nos coronara,
+Después de la batalla nos coronará,
 en aquella santa Sion.
 Más allá, más allá,
 en aquella santa Sion.
@@ -15171,12 +15161,10 @@ Apéndice
 
 ## 653. CRISTO MI ÍNTIMO AMIGO
 ***
-1) Exaltado es Cristo,
-Rey de reyes de la eternidad;
+1) Exaltado es Cristo, Rey de reyes de la eternidad;
 con los serafines, alabadle en su majestad.
 Reina en los cielos, el amado Creador;
-el que es la luz, nos sufrió la cruz,
-oh, ¡qué gran amor!
+el que es la luz, nos sufrió la cruz, oh, ¡qué gran amor!
 ***
 @CORO
 Cristo mi íntimo amigo;
@@ -15188,8 +15176,7 @@ mi confianza está en Él.
 Mi gran Rey, mi Señor, Salvador;
 pero es más, es mi amigo más fiel.
 ***
-2) Gloria doy a Cristo,
-sólo Él merece mi honor;
+2) Gloria doy a Cristo, sólo Él merece mi honor;
 es mi fortaleza, es mi roca y consolador.
 Es castillo fuerte, fundamento de mi fe;
 el que no pecó, se sacrificó, a su viña iré.
@@ -15201,31 +15188,21 @@ Apéndice
 
 ## 654. UN DÍA CRISTO VOLVERÁ
 ***
-1) Un día Cristo volverá
-es la promesa del Señor;
-tal como fue así vendrá,
-y su pueblo ha de ver al Salvador.
+1) Un día Cristo volverá es la promesa del Señor;
+tal como fue así vendrá, y su pueblo ha de ver al Salvador.
 ***
 @CORO
-Muy pronto, sí, Jesús vendrá,
-y alegre le verá su pueblo;
-¡Velad! ¡Orad! el Rey vendrá,
-los suyos arrebatará.
+Muy pronto, sí, Jesús vendrá, y alegre le verá su pueblo;
+¡Velad! ¡Orad! el Rey vendrá, los suyos arrebatará.
 ***
-2) Los mensajeros del Señor
-anuncian que vendrá Jesús;
-señales hay alrededor
-Él vendrá y a los suyos llevará.
+2) Los mensajeros del Señor anuncian que vendrá Jesús;
+señales hay alrededor Él vendrá y a los suyos llevará.
 ***
-3) En busca de su grey vendrá
-con toda gloria y honor;
-su iglesia esperando está,
-y aclamará con gozo a su Señor.
+3) En busca de su grey vendrá con toda gloria y honor;
+su iglesia esperando está, y aclamará con gozo a su Señor.
 ***
-4) ¡Oh bienvenido Rey Jesús!
-tus hijos te esperan ya;
-muy pronto han de ver tu luz,
-y gozar en tu presencia siempre allá.
+4) ¡Oh bienvenido Rey Jesús! tus hijos te esperan ya;
+muy pronto han de ver tu luz, y gozar en tu presencia siempre allá.
 ***
 @TAGS
 Apéndice

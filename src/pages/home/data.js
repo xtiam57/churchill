@@ -1,4 +1,6 @@
 import { Slide } from 'utils';
+import rondalla from 'assets/images/rondalla.png';
+import { Logo } from 'components';
 
 const NOTICES = [
   {
@@ -229,6 +231,20 @@ const NOTICES = [
   //       title: '<span class="fs-xl">⚖</span>',
   //       text: 'Porque <b>somos sepultados</b> juntamente con él <b>para muerte</b> por el bautismo, a fin de que como Cristo <b>resucitó</b> de los muertos por la gloria del Padre, así también nosotros andemos en vida nueva',
   //       subtext: 'Romanos 6:4 ',
+  //     }),
+  //   ],
+  // },
+
+  // {
+  //   id: 6,
+  //   index: 5,
+  //   type: 'notice',
+  //   title: 'Logo de la Rondalla',
+  //   slides: [
+  //     Slide.create({
+  //       title: '',
+  //       text: `<img src="${rondalla}" alt="rondalla" style="width: 100%"/>`,
+  //       // text: `---RONDALLA---`,
   //     }),
   //   ],
   // },

@@ -133,7 +133,7 @@ function AnthemnsProvider({ children }) {
             id: `${id}_${slideIndex}`,
             title: `${isNotAnthemn ? `Coro #${number}` : `Himno #${number}`}`,
             text: title,
-            subtext: `<small>${authors}</small>`,
+            subtext: authors,
             index: slideIndex++,
           })
         );
