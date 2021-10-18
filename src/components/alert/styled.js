@@ -9,9 +9,8 @@ export const AlertStyled = styled.div`
     presenting ? 'var(--warning)' : 'var(--light)'};
   top: 80px;
   border-radius: 100px;
-  font-size: 0.9em;
+  font-size: 0.75em;
   color: ${({ presenting }) => (presenting ? '' : 'var(--light)')};
-
   z-index: 2;
   padding: 8px 25px;
   margin-left: 315px;
