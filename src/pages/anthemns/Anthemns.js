@@ -24,6 +24,7 @@ import {
   DisplayButton,
   Title,
   FinderButton,
+  Alert,
 } from 'components';
 import { useAnthemn, useFolder, useKeyUp, usePresenter } from 'hooks';
 import { getBookmarkedItems, Storage } from 'utils';
@@ -190,6 +191,10 @@ export default function AnthemnsPage() {
 
         <AnthemnTags onClick={handleSearch} current={current} />
       </Sidebar>
+
+      {presenting ? (
+        <Alert presenting={!showLogo} label={current?.title} />
+      ) : null}
 
       <Wrapper direction="column" {...settings}>
         <Bookmark

@@ -17,6 +17,7 @@ import {
   List,
   Title,
   DisplayButton,
+  Alert,
 } from 'components';
 import { useKeyUp, useIterate, usePresenter, useBirthday } from 'hooks';
 import { BROADCAST, MOVEMENT } from 'values';
@@ -97,6 +98,10 @@ export default function HomePage() {
           ))}
         </List>
       </Sidebar>
+
+      {presenting ? (
+        <Alert presenting={!showLogo} label={notice?.title} />
+      ) : null}
 
       <Wrapper direction="column" {...settings}>
         <Slider

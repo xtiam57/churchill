@@ -15,6 +15,7 @@ import {
   Title,
   DisplayButton,
   FinderButton,
+  Alert,
 } from 'components';
 import { useScriptures, useKeyUp, usePresenter } from 'hooks';
 import { getBookmarkedItems } from 'utils';
@@ -135,6 +136,10 @@ function ScripturesView() {
         />
       </Sidebar>
 
+      {presenting ? (
+        <Alert presenting={!showLogo} label={current?.subtext} />
+      ) : null}
+
       <Wrapper direction="column" {...settings}>
         <Bookmark element={current} onChange={setBookmarks} />
 
@@ -178,7 +183,6 @@ function ScripturesView() {
           </ButtonGroup>
         </Controls>
       </Wrapper>
-
       <Finder
         show={openFinder}
         onHide={() => setOpenFinder(false)}

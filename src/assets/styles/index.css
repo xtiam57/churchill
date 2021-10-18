@@ -46,7 +46,7 @@ select {
 }
 
 .fs-xlg {
-  font-size: 1.7em;
+  font-size: 1.6em;
 }
 
 .fs-xl {
@@ -242,5 +242,17 @@ select {
 
   50% {
     transform: translateX(0);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
