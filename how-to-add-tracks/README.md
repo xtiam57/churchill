@@ -3,6 +3,7 @@
 El primer paso es decargar el archivo comprimido donde estarán los himnos:
 
 - [Descargar Pistas para Himnos (216 pistas)](https://github.com/xtiam57/churchill/releases/download/v2.0.3-RC/himnos.zip)
+- [Descargar 33 pistas nuevas](https://github.com/xtiam57/churchill/releases/download/v2.0.4-RC/33.himnos.zip)
 
 **NOTA: se irá actualizando la lista de descarga de arriba a medida que se agreguen más pistas.**
 
