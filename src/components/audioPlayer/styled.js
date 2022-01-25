@@ -28,4 +28,5 @@ export const ControlsStyled = styled.div`
   height: 100%;
   align-items: center;
   justify-content: center;
+  padding: 5px;
 `;

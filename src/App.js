@@ -1,19 +1,17 @@
-import React from 'react';
-import { HashRouter as Router } from 'react-router-dom';
-
+// CSS
+import 'bootstrap/dist/css/bootstrap.css';
+import { AudioPlayer, Navbar, Settings } from 'components';
 import {
   AnthemnsProvider,
   AppProvider,
+  BirthdaysProvider,
   PresenterProvider,
   ScripturesProvider,
-  BirthdaysProvider,
 } from 'providers';
-import { Navbar, Settings, AudioPlayer } from 'components';
-import { RouteMapper } from 'router';
-
-// CSS
-import 'bootstrap/dist/css/bootstrap.css';
+import React from 'react';
 import 'react-bootstrap-typeahead/css/Typeahead.css';
+import { HashRouter as Router } from 'react-router-dom';
+import { RouteMapper } from 'router';
 import './assets/styles/index.css';
 
 function App() {
@@ -30,7 +28,7 @@ function App() {
                 <RouteMapper />
                 {/* Sidebar settings */}
                 <Settings />
-
+                {/* Global audio player */}
                 <AudioPlayer />
               </BirthdaysProvider>
             </AnthemnsProvider>

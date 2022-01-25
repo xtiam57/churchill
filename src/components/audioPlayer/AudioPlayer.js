@@ -1,17 +1,9 @@
 import React from 'react';
-import { AudioPlayerStyled, SummaryStyled, ControlsStyled } from './styled';
-import { Controls } from 'components';
 import { Button, ButtonGroup, Form } from 'react-bootstrap';
+import { ImPlay3, ImStop2, ImVolumeHigh, ImVolumeMute } from 'react-icons/im';
 import { useLocation } from 'react-router-dom';
-import {
-  ImVolumeMute,
-  ImVolumeHigh,
-  ImStop2,
-  ImPlay3,
-  ImNext2,
-  ImPrevious2,
-} from 'react-icons/im';
 import { PATHS } from 'router';
+import { AudioPlayerStyled, ControlsStyled, SummaryStyled } from './styled';
 
 export function AudioPlayer({
   isMP3Loaded = true,
@@ -40,6 +32,13 @@ export function AudioPlayer({
 
         <small className="text-nowrap text-right">2nd</small>
       </SummaryStyled> */}
+
+      <div className="marquee small">
+        <p className="m-0">
+          ¡SANTO! ¡SANTO! ¡SANTO! - Letra por Reginal Heber, 1826, Traducido por
+          J. B. Cabrera, Música por John B. Dykes, 1861
+        </p>
+      </div>
 
       <ControlsStyled>
         {isMP3Loaded ? (
@@ -83,15 +82,6 @@ export function AudioPlayer({
           {isMP3Loaded ? (
             <>
               <ButtonGroup className="mx-auto">
-                <Button
-                  onClick={() => {
-                    /* stop() */
-                  }}
-                  variant="secondary"
-                >
-                  <ImPrevious2 />
-                </Button>
-
                 {isPlaying ? (
                   <Button
                     onClick={() => {
@@ -113,25 +103,12 @@ export function AudioPlayer({
                     <ImPlay3 />
                   </Button>
                 )}
-                <Button
-                  onClick={() => {
-                    /* stop() */
-                  }}
-                  variant="secondary"
-                >
-                  <ImNext2 />
-                </Button>
               </ButtonGroup>
             </>
           ) : null}
         </div>
 
-        <div className="marquee small">
-          <p className="m-0">
-            ¡SANTO! ¡SANTO! ¡SANTO! - Letra por Reginal Heber, 1826, Traducido
-            por J. B. Cabrera, Música por John B. Dykes, 1861
-          </p>
-        </div>
+        <span></span>
 
         {isMP3Loaded ? (
           <>
