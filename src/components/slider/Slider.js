@@ -1,13 +1,12 @@
-import React, {
-  useState,
-  useEffect,
-  forwardRef,
-  useImperativeHandle,
-} from 'react';
-import createPersistedState from 'use-persisted-state';
-
 import { Presenter } from 'components';
 import { useIterate, useKeyUp } from 'hooks';
+import React, {
+  forwardRef,
+  useEffect,
+  useImperativeHandle,
+  useState,
+} from 'react';
+import createPersistedState from 'use-persisted-state';
 import { BROADCAST, MOVEMENT } from 'values';
 import { SummaryStyled } from './styled';
 
@@ -98,6 +97,7 @@ export const Slider = forwardRef(
           id={slide?.id || slide?.index}
           text={slide?.text}
           subtext={slide?.subtext}
+          bg={slide?.bg}
           grayscale={grayscale}
           leftshadow={loop ? true : slide?.index !== 0}
           rightshadow={loop ? true : next.id !== slide.id}

@@ -1,6 +1,6 @@
+import guitar from 'assets/images/bg/guitar.jpg';
+import rondalla from 'assets/images/rondalla.svg';
 import { Slide } from 'utils';
-import rondalla from 'assets/images/rondalla.png';
-import { Logo } from 'components';
 
 const NOTICES = [
   {
@@ -65,12 +65,12 @@ const NOTICES = [
       Slide.create({
         text: 'Reunión de Jóvenes:/n<b>Sábados</b>/n<strong class="fs-xl" style="line-height:1">04:30 PM</strong>',
       }),
-      Slide.create({
-        text: 'Reunión de Coro:/n<b>Sábados</b>/n<strong class="fs-xl" style="line-height:1">08:30 AM</strong>',
-      }),
-      Slide.create({
-        text: 'Reunión de Damas:/n<b>Sábados</b>/n<strong class="fs-xl" style="line-height:1">07:00 PM</strong>',
-      }),
+      // Slide.create({
+      //   text: 'Reunión de Coro:/n<b>Sábados</b>/n<strong class="fs-xl" style="line-height:1">08:30 AM</strong>',
+      // }),
+      // Slide.create({
+      //   text: 'Reunión de Damas:/n<b>Sábados</b>/n<strong class="fs-xl" style="line-height:1">07:00 PM</strong>',
+      // }),
     ],
   },
   {
@@ -235,19 +235,19 @@ const NOTICES = [
   //   ],
   // },
 
-  // {
-  //   id: 6,
-  //   index: 5,
-  //   type: 'notice',
-  //   title: 'Logo de la Rondalla',
-  //   slides: [
-  //     Slide.create({
-  //       title: '',
-  //       text: `<img src="${rondalla}" alt="rondalla" style="width: 100%"/>`,
-  //       // text: `---RONDALLA---`,
-  //     }),
-  //   ],
-  // },
+  {
+    id: 6,
+    index: 5,
+    type: 'notice',
+    title: 'Logo de la Rondalla',
+    slides: [
+      Slide.create({
+        title: '',
+        text: `<img src="${rondalla}" alt="rondalla" style="width: 60%"/>`,
+        bg: guitar,
+      }),
+    ],
+  },
 ];
 
 export function getNotices(birthdaySLide) {

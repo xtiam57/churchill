@@ -1,29 +1,3 @@
-import bg01 from 'assets/images/bg/christmas.jpg';
-import bg02 from 'assets/images/bg/dawn.jpg';
-import bg03 from 'assets/images/bg/dusk.jpg';
-import bg04 from 'assets/images/bg/heart.jpg';
-import bg05 from 'assets/images/bg/cross.jpg';
-import bg06 from 'assets/images/bg/fun.jpg';
-import bg07 from 'assets/images/bg/celebration.jpg';
-import bg08 from 'assets/images/bg/wall.jpg';
-import bg09 from 'assets/images/bg/wood.jpg';
-import bg10 from 'assets/images/bg/wood-lights.jpg';
-import bg11 from 'assets/images/bg/green-wood.jpg';
-import bg12 from 'assets/images/bg/xmas.jpg';
-import bg13 from 'assets/images/bg/blue.jpg';
-import bg14 from 'assets/images/bg/black.jpg';
-import bg15 from 'assets/images/bg/paper3.jpg';
-import bg16 from 'assets/images/bg/paper2.jpg';
-import bg17 from 'assets/images/bg/paper1.jpg';
-import bg18 from 'assets/images/bg/peru.jpg';
-import bg19 from 'assets/images/bg/resurrection.jpg';
-import bg20 from 'assets/images/bg/xmas2.jpg';
-import bg21 from 'assets/images/bg/xmas3.jpg';
-import bg22 from 'assets/images/bg/wedding.jpg';
-import bg23 from 'assets/images/bg/pray.jpg';
-import bg24 from 'assets/images/bg/peru2.jpg';
-import bg25 from 'assets/images/bg/sand.jpg';
-import bg26 from 'assets/images/bg/montains.jpg';
 import bg27 from 'assets/images/bg/abstract1.jpg';
 import bg28 from 'assets/images/bg/abstract2.jpg';
 import bg29 from 'assets/images/bg/abstract3.jpg';
@@ -31,35 +5,64 @@ import bg30 from 'assets/images/bg/abstract4.jpg';
 import bg31 from 'assets/images/bg/abstract5.jpg';
 import bg32 from 'assets/images/bg/abstract6.jpg';
 import bg33 from 'assets/images/bg/abstract7.jpg';
+import bg62 from 'assets/images/bg/ark.jpg';
+import bg57 from 'assets/images/bg/bible.jpg';
+import bg14 from 'assets/images/bg/black.jpg';
+import bg13 from 'assets/images/bg/blue.jpg';
 import bg34 from 'assets/images/bg/boreal.jpg';
 import bg35 from 'assets/images/bg/cave.jpg';
+import bg07 from 'assets/images/bg/celebration.jpg';
+import bg01 from 'assets/images/bg/christmas.jpg';
+import bg05 from 'assets/images/bg/cross.jpg';
 import bg36 from 'assets/images/bg/cubes.jpg';
+import bg02 from 'assets/images/bg/dawn.jpg';
 import bg37 from 'assets/images/bg/dawn2.jpg';
 import bg38 from 'assets/images/bg/down.jpg';
 import bg39 from 'assets/images/bg/drops.jpg';
+import bg03 from 'assets/images/bg/dusk.jpg';
 import bg40 from 'assets/images/bg/earth.jpg';
 import bg41 from 'assets/images/bg/forest1.jpg';
 import bg42 from 'assets/images/bg/forest2.jpg';
 import bg43 from 'assets/images/bg/forest3.jpg';
 import bg44 from 'assets/images/bg/forest4.jpg';
 import bg45 from 'assets/images/bg/forest5.jpg';
+import bg06 from 'assets/images/bg/fun.jpg';
+import bg11 from 'assets/images/bg/green-wood.jpg';
+import bg63 from 'assets/images/bg/guitar.jpg';
+import bg04 from 'assets/images/bg/heart.jpg';
+import bg26 from 'assets/images/bg/montains.jpg';
 import bg46 from 'assets/images/bg/montains2.jpg';
 import bg47 from 'assets/images/bg/montains3.jpg';
 import bg48 from 'assets/images/bg/montains4.jpg';
 import bg49 from 'assets/images/bg/montains5.jpg';
 import bg50 from 'assets/images/bg/montains6.jpg';
 import bg51 from 'assets/images/bg/montains7.jpg';
+import bg58 from 'assets/images/bg/moon.jpg';
+import bg17 from 'assets/images/bg/paper1.jpg';
+import bg16 from 'assets/images/bg/paper2.jpg';
+import bg15 from 'assets/images/bg/paper3.jpg';
 import bg52 from 'assets/images/bg/pattern.jpg';
+import bg18 from 'assets/images/bg/peru.jpg';
+import bg24 from 'assets/images/bg/peru2.jpg';
 import bg53 from 'assets/images/bg/plants.jpg';
 import bg54 from 'assets/images/bg/plants2.jpg';
+import bg23 from 'assets/images/bg/pray.jpg';
+import bg65 from 'assets/images/bg/pretil-2.jpg';
+import bg64 from 'assets/images/bg/pretil.jpg';
+import bg19 from 'assets/images/bg/resurrection.jpg';
 import bg55 from 'assets/images/bg/rocks.jpg';
-import bg56 from 'assets/images/bg/wave.jpg';
-import bg57 from 'assets/images/bg/bible.jpg';
-import bg58 from 'assets/images/bg/moon.jpg';
+import bg25 from 'assets/images/bg/sand.jpg';
 import bg59 from 'assets/images/bg/sky.jpg';
 import bg60 from 'assets/images/bg/space.jpg';
 import bg61 from 'assets/images/bg/starts.jpg';
-import bg62 from 'assets/images/bg/ark.jpg';
+import bg08 from 'assets/images/bg/wall.jpg';
+import bg56 from 'assets/images/bg/wave.jpg';
+import bg22 from 'assets/images/bg/wedding.jpg';
+import bg10 from 'assets/images/bg/wood-lights.jpg';
+import bg09 from 'assets/images/bg/wood.jpg';
+import bg12 from 'assets/images/bg/xmas.jpg';
+import bg20 from 'assets/images/bg/xmas2.jpg';
+import bg21 from 'assets/images/bg/xmas3.jpg';
 
 export const BACKGROUNDS = [
   { value: '', label: 'Color Sólido' },
@@ -94,6 +97,7 @@ export const BACKGROUNDS = [
   { label: 'Estrellas', value: bg61 },
   { label: 'Fiesta', value: bg07 },
   { label: 'Gotas', value: bg39 },
+  { label: 'Guitarra', value: bg63 },
   { label: 'Ladrillos', value: bg08 },
   { label: 'Luna', value: bg58 },
   { label: 'Madera con luces', value: bg10 },
@@ -122,6 +126,8 @@ export const BACKGROUNDS = [
   { label: 'Perú 2', value: bg24 },
   { label: 'Plantas 1', value: bg53 },
   { label: 'Plantas 2', value: bg54 },
+  { label: 'Pretil 1', value: bg64 },
+  { label: 'Pretil 2', value: bg65 },
   { label: 'Resurreción', value: bg19 },
   { label: 'San Valentín', value: bg04 },
   { label: 'Tierra', value: bg40 },

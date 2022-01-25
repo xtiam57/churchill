@@ -93,6 +93,15 @@ export const THEMES = {
     optionscolor: '#ffff00',
     mode: '#ffffff',
   },
+  conference: {
+    background: '#333',
+    textcolor: '#ffffff',
+    titlecolor: '#00ffff',
+    subtextcolor: '#00ffff',
+    jesus: '#00FF84',
+    optionscolor: '#ffff00',
+    mode: '#ffffff',
+  },
 };
 
 const SETTINGS_INITIAL_STATE = {
@@ -142,6 +151,7 @@ export const SETTINGS_OPTIONS = {
     { value: 'calvarioDark', label: 'Monte Calvario (Oscuro)' },
     { value: 'christmas', label: 'Navidad' },
     { value: 'cobalt', label: 'Cobalto' },
+    { value: 'conference', label: 'III Conferencia' },
     { value: 'dark', label: 'Oscuro' },
     { value: 'female', label: 'Femenino' },
     { value: 'fun', label: 'Divertido' },
@@ -156,6 +166,7 @@ export const SETTINGS_OPTIONS = {
     { value: 'ninos', label: 'Niños' },
     { value: 'rondalla', label: 'Rondalla' },
     { value: 'churchill', label: 'Churchill' },
+    { value: 'conferencia', label: 'III Conferencia' },
   ],
   TIME_INTERVALS: [
     { value: 1000, label: '1 segundo' },
