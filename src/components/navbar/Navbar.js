@@ -1,11 +1,11 @@
+import { Semaphore } from 'components';
+import { useClock, usePresenter, useSettingsSidebar } from 'hooks';
 import React from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
-import { BsHouseFill, BsFillGearFill } from 'react-icons/bs';
-import { RiSlideshow2Fill, RiComputerLine } from 'react-icons/ri';
-
-import { usePresenter, useSettingsSidebar, useClock } from 'hooks';
-import { routes, PATHS } from 'router';
+import { BsFillGearFill, BsHouseFill } from 'react-icons/bs';
+import { RiComputerLine, RiSlideshow2Fill } from 'react-icons/ri';
+import { NavLink, useLocation } from 'react-router-dom';
+import { PATHS, routes } from 'router';
 
 export function Navbar() {
   const location = useLocation();
@@ -65,7 +65,9 @@ export function Navbar() {
               ))}
           </ul>
 
-          <span className="navbar-text d-block mr-3">{time}</span>
+          <span className="mr-3">
+            <Semaphore />
+          </span>
 
           <Button
             onClick={toggle}

@@ -256,3 +256,9 @@ select {
     background-position: 0% 50%;
   }
 }
+
+@keyframes blink {
+  50% {
+    opacity: 20%;
+  }
+}
