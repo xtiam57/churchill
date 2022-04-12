@@ -24,9 +24,13 @@ export function Semaphore() {
   }
 
   return (
-    <SemaphoreStyled>
+    <SemaphoreStyled title="Semáforo de predicación">
       {running ? (
-        <div className="controls" onClick={() => stop()}>
+        <div
+          className="controls"
+          onClick={() => stop()}
+          title="Detener semáforo"
+        >
           <ImStop2 />
         </div>
       ) : (

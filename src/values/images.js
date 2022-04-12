@@ -5,7 +5,9 @@ import bg30 from 'assets/images/bg/abstract4.jpg';
 import bg31 from 'assets/images/bg/abstract5.jpg';
 import bg32 from 'assets/images/bg/abstract6.jpg';
 import bg33 from 'assets/images/bg/abstract7.jpg';
+import bg70 from 'assets/images/bg/abstract8.jpg';
 import bg62 from 'assets/images/bg/ark.jpg';
+import bg71 from 'assets/images/bg/bible-2.jpg';
 import bg57 from 'assets/images/bg/bible.jpg';
 import bg14 from 'assets/images/bg/black.jpg';
 import bg13 from 'assets/images/bg/blue.jpg';
@@ -13,6 +15,7 @@ import bg34 from 'assets/images/bg/boreal.jpg';
 import bg35 from 'assets/images/bg/cave.jpg';
 import bg07 from 'assets/images/bg/celebration.jpg';
 import bg01 from 'assets/images/bg/christmas.jpg';
+import bg72 from 'assets/images/bg/cross-2.jpg';
 import bg05 from 'assets/images/bg/cross.jpg';
 import bg36 from 'assets/images/bg/cubes.jpg';
 import bg02 from 'assets/images/bg/dawn.jpg';
@@ -21,6 +24,7 @@ import bg38 from 'assets/images/bg/down.jpg';
 import bg39 from 'assets/images/bg/drops.jpg';
 import bg03 from 'assets/images/bg/dusk.jpg';
 import bg40 from 'assets/images/bg/earth.jpg';
+import bg73 from 'assets/images/bg/flower.jpg';
 import bg41 from 'assets/images/bg/forest1.jpg';
 import bg42 from 'assets/images/bg/forest2.jpg';
 import bg43 from 'assets/images/bg/forest3.jpg';
@@ -38,23 +42,28 @@ import bg49 from 'assets/images/bg/montains5.jpg';
 import bg50 from 'assets/images/bg/montains6.jpg';
 import bg51 from 'assets/images/bg/montains7.jpg';
 import bg58 from 'assets/images/bg/moon.jpg';
+import bg74 from 'assets/images/bg/oil.jpg';
 import bg17 from 'assets/images/bg/paper1.jpg';
 import bg16 from 'assets/images/bg/paper2.jpg';
 import bg15 from 'assets/images/bg/paper3.jpg';
 import bg52 from 'assets/images/bg/pattern.jpg';
 import bg18 from 'assets/images/bg/peru.jpg';
 import bg24 from 'assets/images/bg/peru2.jpg';
+import bg75 from 'assets/images/bg/piano.jpg';
 import bg53 from 'assets/images/bg/plants.jpg';
 import bg54 from 'assets/images/bg/plants2.jpg';
 import bg23 from 'assets/images/bg/pray.jpg';
 import bg65 from 'assets/images/bg/pretil-2.jpg';
 import bg64 from 'assets/images/bg/pretil.jpg';
 import bg19 from 'assets/images/bg/resurrection.jpg';
+import bg76 from 'assets/images/bg/rocks-2.jpg';
+import bg77 from 'assets/images/bg/rocks-3.jpg';
 import bg55 from 'assets/images/bg/rocks.jpg';
 import bg25 from 'assets/images/bg/sand.jpg';
 import bg59 from 'assets/images/bg/sky.jpg';
 import bg60 from 'assets/images/bg/space.jpg';
 import bg61 from 'assets/images/bg/starts.jpg';
+import bg78 from 'assets/images/bg/wall-2.jpg';
 import bg08 from 'assets/images/bg/wall.jpg';
 import bg56 from 'assets/images/bg/wave.jpg';
 import bg22 from 'assets/images/bg/wedding.jpg';
@@ -73,13 +82,16 @@ export const BACKGROUNDS = [
   { label: 'Abstracto 5', value: bg31 },
   { label: 'Abstracto 6', value: bg32 },
   { label: 'Abstracto 7', value: bg33 },
+  { label: 'Abstracto 8', value: bg70 },
+  { label: 'Aceite', value: bg74 },
   { label: 'Amanecer 1', value: bg02 },
   { label: 'Amanecer 2', value: bg37 },
   { label: 'Amanecer 3', value: bg38 },
   { label: 'Arca', value: bg62 },
   { label: 'Arena', value: bg25 },
   { label: 'Atardecer', value: bg03 },
-  { label: 'Biblia', value: bg57 },
+  { label: 'Biblia 1', value: bg57 },
+  { label: 'Biblia 2', value: bg71 },
   { label: 'Boda', value: bg22 },
   { label: 'Boreal', value: bg34 },
   { label: 'Bosque 1', value: bg41 },
@@ -88,7 +100,8 @@ export const BACKGROUNDS = [
   { label: 'Bosque 4', value: bg44 },
   { label: 'Bosque 5', value: bg45 },
   { label: 'Cielo', value: bg59 },
-  { label: 'Cruz', value: bg05 },
+  { label: 'Cruz 1', value: bg05 },
+  { label: 'Cruz 2', value: bg72 },
   { label: 'Cubos', value: bg36 },
   { label: 'Cueva', value: bg35 },
   { label: 'Cueva', value: bg55 },
@@ -96,6 +109,7 @@ export const BACKGROUNDS = [
   { label: 'Espacio', value: bg60 },
   { label: 'Estrellas', value: bg61 },
   { label: 'Fiesta', value: bg07 },
+  { label: 'Flor', value: bg73 },
   { label: 'Gotas', value: bg39 },
   { label: 'Guitarra', value: bg63 },
   { label: 'Ladrillos', value: bg08 },
@@ -119,16 +133,20 @@ export const BACKGROUNDS = [
   { label: 'Papel 1', value: bg15 },
   { label: 'Papel 2', value: bg16 },
   { label: 'Papel 3', value: bg17 },
+  { label: 'Pared', value: bg78 },
   { label: 'Patrón Azul', value: bg13 },
   { label: 'Patrón Negro', value: bg14 },
   { label: 'Patrón', value: bg52 },
   { label: 'Perú 1', value: bg18 },
   { label: 'Perú 2', value: bg24 },
+  { label: 'Piano', value: bg75 },
   { label: 'Plantas 1', value: bg53 },
   { label: 'Plantas 2', value: bg54 },
   { label: 'Pretil 1', value: bg64 },
   { label: 'Pretil 2', value: bg65 },
   { label: 'Resurreción', value: bg19 },
+  { label: 'Rocas 1', value: bg76 },
+  { label: 'Rocas 2', value: bg77 },
   { label: 'San Valentín', value: bg04 },
   { label: 'Tierra', value: bg40 },
 ];
