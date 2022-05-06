@@ -18,6 +18,7 @@ import { Typeahead } from 'react-bootstrap-typeahead';
 import {
   ImArrowLeft2,
   ImArrowRight2,
+  ImBook,
   ImFolderOpen,
   ImPlay3,
   ImStop2,
@@ -28,6 +29,7 @@ import createPersistedState from 'use-persisted-state';
 import useSound from 'use-sound';
 import { getBookmarkedItems, Storage } from 'utils';
 import { BROADCAST, MOVEMENT } from 'values';
+import { AnthemnIndex } from './AnthemnIndex';
 import { AnthemnTags } from './AnthemnTags';
 import { RecentBirthdays } from './RecentBirthdays';
 import { finderRender, typeaheadRender } from './renders';
@@ -46,6 +48,7 @@ export default function AnthemnsPage() {
   const { anthemns, current, setCurrent, moveAnthemn } = useAnthemn();
   const [showLogo, setShowLogo] = useState(true);
   const [openFinder, setOpenFinder] = useState(false);
+  const [openIndex, setOpenIndex] = useState(false);
   const [search, setSearch] = useState([current]);
   const [bookmarkSort, setBookmarkSort] = useState('asc');
   const [bookmarks, setBookmarks] = useState(
@@ -185,7 +188,19 @@ export default function AnthemnsPage() {
           renderMenuItemChildren={typeaheadRender}
         />
 
-        <FinderButton onOpen={setOpenFinder} />
+        <FinderButton
+          onOpen={setOpenFinder}
+          extraButton={
+            <Button
+              variant="link"
+              className="text-light p-0 text-small mr-2"
+              onClick={(e) => setOpenIndex(true)}
+              title="Abrir Himnario"
+            >
+              <ImBook />
+            </Button>
+          }
+        />
 
         <DisplayButton
           value={showLogo}
@@ -207,11 +222,9 @@ export default function AnthemnsPage() {
 
         <AnthemnTags onClick={handleSearch} current={current} />
       </Sidebar>
-
       {presenting ? (
         <Alert presenting={!showLogo} label={current?.title} />
       ) : null}
-
       <Wrapper direction="column" {...settings}>
         <Bookmark
           element={current}
@@ -381,6 +394,19 @@ export default function AnthemnsPage() {
           }
         }}
         render={finderRender}
+      />
+
+      <AnthemnIndex
+        show={openIndex}
+        onHide={() => setOpenIndex(false)}
+        onChange={setBookmarks}
+        sort={bookmarkSort}
+        onSelect={(item) => {
+          if (item) {
+            handleSearch([item]);
+            setOpenIndex(false);
+          }
+        }}
       />
     </Wrapper>
   );

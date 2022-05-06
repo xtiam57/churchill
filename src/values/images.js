@@ -14,10 +14,15 @@ import bg13 from 'assets/images/bg/blue.jpg';
 import bg34 from 'assets/images/bg/boreal.jpg';
 import bg35 from 'assets/images/bg/cave.jpg';
 import bg07 from 'assets/images/bg/celebration.jpg';
+import bg80 from 'assets/images/bg/celebration2.jpg';
+import bg81 from 'assets/images/bg/celebration3.jpg';
 import bg01 from 'assets/images/bg/christmas.jpg';
 import bg72 from 'assets/images/bg/cross-2.jpg';
 import bg05 from 'assets/images/bg/cross.jpg';
 import bg36 from 'assets/images/bg/cubes.jpg';
+import bg82 from 'assets/images/bg/dad1.jpg';
+import bg83 from 'assets/images/bg/dad2.jpg';
+import bg84 from 'assets/images/bg/dad3.jpg';
 import bg02 from 'assets/images/bg/dawn.jpg';
 import bg37 from 'assets/images/bg/dawn2.jpg';
 import bg38 from 'assets/images/bg/down.jpg';
@@ -25,6 +30,7 @@ import bg39 from 'assets/images/bg/drops.jpg';
 import bg03 from 'assets/images/bg/dusk.jpg';
 import bg40 from 'assets/images/bg/earth.jpg';
 import bg73 from 'assets/images/bg/flower.jpg';
+import bg85 from 'assets/images/bg/flowers.jpg';
 import bg41 from 'assets/images/bg/forest1.jpg';
 import bg42 from 'assets/images/bg/forest2.jpg';
 import bg43 from 'assets/images/bg/forest3.jpg';
@@ -42,6 +48,10 @@ import bg49 from 'assets/images/bg/montains5.jpg';
 import bg50 from 'assets/images/bg/montains6.jpg';
 import bg51 from 'assets/images/bg/montains7.jpg';
 import bg58 from 'assets/images/bg/moon.jpg';
+import bg86 from 'assets/images/bg/mother1.jpg';
+import bg87 from 'assets/images/bg/mother2.jpg';
+import bg94 from 'assets/images/bg/mother3.jpg';
+import bg95 from 'assets/images/bg/mother4.jpg';
 import bg74 from 'assets/images/bg/oil.jpg';
 import bg17 from 'assets/images/bg/paper1.jpg';
 import bg16 from 'assets/images/bg/paper2.jpg';
@@ -56,9 +66,15 @@ import bg23 from 'assets/images/bg/pray.jpg';
 import bg65 from 'assets/images/bg/pretil-2.jpg';
 import bg64 from 'assets/images/bg/pretil.jpg';
 import bg19 from 'assets/images/bg/resurrection.jpg';
+import bg88 from 'assets/images/bg/river1.jpg';
+import bg89 from 'assets/images/bg/river2.jpg';
+import bg90 from 'assets/images/bg/river3.jpg';
+import bg91 from 'assets/images/bg/river4.jpg';
 import bg76 from 'assets/images/bg/rocks-2.jpg';
 import bg77 from 'assets/images/bg/rocks-3.jpg';
 import bg55 from 'assets/images/bg/rocks.jpg';
+import bg92 from 'assets/images/bg/rose1.jpg';
+import bg93 from 'assets/images/bg/rose2.jpg';
 import bg25 from 'assets/images/bg/sand.jpg';
 import bg59 from 'assets/images/bg/sky.jpg';
 import bg60 from 'assets/images/bg/space.jpg';
@@ -75,6 +91,7 @@ import bg21 from 'assets/images/bg/xmas3.jpg';
 
 export const BACKGROUNDS = [
   { value: '', label: 'Color Sólido' },
+
   { label: 'Abstracto 1', value: bg27 },
   { label: 'Abstracto 2', value: bg28 },
   { label: 'Abstracto 3', value: bg29 },
@@ -99,17 +116,20 @@ export const BACKGROUNDS = [
   { label: 'Bosque 3', value: bg43 },
   { label: 'Bosque 4', value: bg44 },
   { label: 'Bosque 5', value: bg45 },
+  { label: 'Celebración 1', value: bg80 },
+  { label: 'Celebración 2', value: bg81 },
+  { label: 'Celebración 3', value: bg07 },
   { label: 'Cielo', value: bg59 },
   { label: 'Cruz 1', value: bg05 },
   { label: 'Cruz 2', value: bg72 },
   { label: 'Cubos', value: bg36 },
-  { label: 'Cueva', value: bg35 },
-  { label: 'Cueva', value: bg55 },
+  { label: 'Cueva 1', value: bg35 },
+  { label: 'Cueva 2', value: bg55 },
   { label: 'Divertido', value: bg06 },
   { label: 'Espacio', value: bg60 },
   { label: 'Estrellas', value: bg61 },
-  { label: 'Fiesta', value: bg07 },
-  { label: 'Flor', value: bg73 },
+  { label: 'Flor 1', value: bg73 },
+  { label: 'Flor 2', value: bg85 },
   { label: 'Gotas', value: bg39 },
   { label: 'Guitarra', value: bg63 },
   { label: 'Ladrillos', value: bg08 },
@@ -117,6 +137,10 @@ export const BACKGROUNDS = [
   { label: 'Madera con luces', value: bg10 },
   { label: 'Madera Verde', value: bg11 },
   { label: 'Madera', value: bg09 },
+  { label: 'Mamá 1', value: bg86 },
+  { label: 'Mamá 2', value: bg87 },
+  { label: 'Mamá 3', value: bg94 },
+  { label: 'Mamá 4', value: bg95 },
   { label: 'Montañas 1', value: bg26 },
   { label: 'Montañas 2', value: bg46 },
   { label: 'Montañas 3', value: bg47 },
@@ -130,6 +154,9 @@ export const BACKGROUNDS = [
   { label: 'Navidad 4', value: bg21 },
   { label: 'Ola', value: bg56 },
   { label: 'Oración', value: bg23 },
+  { label: 'Papá 1', value: bg82 },
+  { label: 'Papá 2', value: bg83 },
+  { label: 'Papá 3', value: bg84 },
   { label: 'Papel 1', value: bg15 },
   { label: 'Papel 2', value: bg16 },
   { label: 'Papel 3', value: bg17 },
@@ -145,8 +172,14 @@ export const BACKGROUNDS = [
   { label: 'Pretil 1', value: bg64 },
   { label: 'Pretil 2', value: bg65 },
   { label: 'Resurreción', value: bg19 },
+  { label: 'Río 1', value: bg88 },
+  { label: 'Río 2', value: bg89 },
+  { label: 'Río 3', value: bg90 },
+  { label: 'Río 4', value: bg91 },
   { label: 'Rocas 1', value: bg76 },
   { label: 'Rocas 2', value: bg77 },
+  { label: 'Rosa 1', value: bg92 },
+  { label: 'Rosa 2', value: bg93 },
   { label: 'San Valentín', value: bg04 },
   { label: 'Tierra', value: bg40 },
 ];

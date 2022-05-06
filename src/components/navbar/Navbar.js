@@ -58,8 +58,10 @@ export function Navbar() {
                     to={route.path}
                     className="nav-link"
                     activeClassName="active"
+                    title={route.label}
                   >
-                    {route.icon} {route.label}
+                    {route.icon}
+                    {route.showLabel && <span> {route.label}</span>}
                   </NavLink>
                 </li>
               ))}

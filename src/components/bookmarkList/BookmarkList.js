@@ -1,10 +1,9 @@
+import { Bookmark, createKey, List } from 'components';
+import { useAnthemn, useScriptures } from 'hooks';
 import React from 'react';
-import { FaSortAmountDownAlt, FaSortAmountDown } from 'react-icons/fa';
-
-import { Bookmark, List, createKey } from 'components';
-import { Storage, getBookmarkedItems } from 'utils';
+import { FaSortAmountDown, FaSortAmountDownAlt } from 'react-icons/fa';
+import { getBookmarkedItems, Storage } from 'utils';
 import { MAX_BOOKMARKS } from 'values';
-import { useScriptures, useAnthemn } from 'hooks';
 
 export function BookmarkList({
   type = '',

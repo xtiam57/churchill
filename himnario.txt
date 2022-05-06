@@ -13657,8 +13657,8 @@ Mi suerte cualquiera que sea, diré:
 Estoy bien, estoy bien con mi Dios.
 ***
 @CORO
-Estoy bien (estoy bien),
-¡Con mi Dios! (con mi Dios),
+Estoy bien _(estoy bien)__,
+¡Con mi Dios! _(con mi Dios)__,
 estoy bien, estoy bien,
 ¡Con mi Dios!
 ***
@@ -13722,9 +13722,16 @@ Más grande que mis culpas clavadas en la cruz
 Es la maravillosa gracia de Jesús.
 ***
 @CORO
-Inefable es la divina gracia, es inmensurable cual la mar,
+Inefable es la divina gracia,
+_(la divina gracia)__
+es inmensurable cual la mar,
+_(la más profunda mar)__
 Fuente preciosa, para el pecador, el pecador
-Perdonando todos mis pecados Cristo me limpió de mi maldad;
+_(Como clara fuente, siempre suficiente a los pecadores rescatar)__
+Perdonando todos mis pecados
+_(mis pecados todos)__
+Cristo me limpió de mi maldad;
+_(de mi maldad)__
 Alabaré su dulce nombre por la eternidad.
 ***
 2) Maravillosa gracia, gracia de compasión,
@@ -13742,6 +13749,7 @@ Apéndice
 ***
 @AUTHORS
 Haldor Lillenas
+(a dos voces)
 
 ---
 
@@ -15322,7 +15330,8 @@ Yo no lo  escogí;
 Dios me escogió a mi
 Sumiso, a Cristo seguiré.
 ***
-2) No lo que quiera hacer,
+@CORO
+No lo que quiera hacer,
 Ni donde quiera ir
 Pues quien soy yo
 Que debo decidir?
@@ -15330,14 +15339,14 @@ Mi Padre escogerá,
 La senda que es mejor
 Y así confiado puedo ir.
 ***
-3) He de seguirle fiel,
+2) He de seguirle fiel,
 cargando aquí la cruz
 Camino es, de santidad
 Gran privilegio es,
 Servir a mi Señor
 Su Voluntad yo quiero hacer.
 ***
-4) Al que me amó amaré,
+3) Al que me amó amaré,
 Y le obedeceré
 Dispuesto estoy a padecer,
 Sobre el pecado vil,

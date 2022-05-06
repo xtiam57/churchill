@@ -1,19 +1,18 @@
-import {
-  BsHouseFill,
-  BsBook,
-  BsMusicNoteList,
-  BsGift,
-  BsClock,
-  BsQuestionCircle,
-} from 'react-icons/bs';
-
 import AnthemnsPage from 'pages/anthemns';
 import BirthdaysPage from 'pages/birthdays';
 import CastPage from 'pages/cast';
+import CountdownPage from 'pages/countdown';
 import HomePage from 'pages/home';
 import ScripturesPage from 'pages/scriptures';
-import CountdownPage from 'pages/countdown';
 import TriviaPage from 'pages/trivia';
+import {
+  BsBook,
+  BsClock,
+  BsGift,
+  BsHouseFill,
+  BsMusicNoteList,
+  BsQuestionCircle,
+} from 'react-icons/bs';
 
 export const PATHS = {
   ROOT: '/',
@@ -42,6 +41,7 @@ export const routes = flatten([
     icon: <BsBook />,
     label: 'Escrituras',
     menu: true,
+    showLabel: true,
   },
   {
     key: PATHS.ANTHEMNS_PAGE,
@@ -51,6 +51,7 @@ export const routes = flatten([
     icon: <BsMusicNoteList />,
     label: 'Himnos',
     menu: true,
+    showLabel: true,
   },
   {
     key: PATHS.BIRTHDAYS_PAGE,
@@ -60,6 +61,7 @@ export const routes = flatten([
     icon: <BsGift />,
     label: 'Cumpleaños',
     menu: true,
+    showLabel: false,
   },
   {
     key: PATHS.CAST_PAGE,
@@ -69,15 +71,6 @@ export const routes = flatten([
     label: 'Proyectar',
   },
   {
-    key: PATHS.TRIVIA_PAGE,
-    exact: true,
-    path: PATHS.TRIVIA_PAGE,
-    component: TriviaPage,
-    icon: <BsQuestionCircle />,
-    label: 'Trivia',
-    menu: true,
-  },
-  {
     key: PATHS.COUNTDOWN_PAGE,
     exact: true,
     path: PATHS.COUNTDOWN_PAGE,
@@ -85,6 +78,17 @@ export const routes = flatten([
     icon: <BsClock />,
     label: 'Temporizador',
     menu: true,
+    showLabel: false,
+  },
+  {
+    key: PATHS.TRIVIA_PAGE,
+    exact: true,
+    path: PATHS.TRIVIA_PAGE,
+    component: TriviaPage,
+    icon: <BsQuestionCircle />,
+    label: 'Trivia',
+    menu: true,
+    showLabel: false,
   },
 ]);
 
