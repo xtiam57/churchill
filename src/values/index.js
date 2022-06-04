@@ -168,6 +168,7 @@ export const SETTINGS_OPTIONS = {
     { value: 'jovenes', label: 'Jóvenes' },
     { value: 'ninos', label: 'Niños' },
     { value: 'rondalla', label: 'Rondalla' },
+    { value: 'erick y sol', label: 'Erick y Solange' },
     { value: 'churchill', label: 'Churchill' },
   ],
   TIME_INTERVALS: [
