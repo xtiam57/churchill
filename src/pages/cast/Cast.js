@@ -1,7 +1,6 @@
+import { Logo, Presenter, Wrapper } from 'components';
 import React from 'react';
 import createPersistedState from 'use-persisted-state';
-
-import { Presenter, Wrapper, Logo } from 'components';
 import { BROADCAST } from 'values';
 
 const useBroadcast = createPersistedState(BROADCAST.CHANNEL);
@@ -18,6 +17,7 @@ export default function CastPage() {
           id={message.id}
           text={message.text}
           subtext={message.subtext}
+          bg={message?.bg}
           {...settings}
         />
       ) : (

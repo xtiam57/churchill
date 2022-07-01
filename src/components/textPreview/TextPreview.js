@@ -1,4 +1,4 @@
-import { TextPreviewWrapperStyled, TextPreviewStyled } from './styled';
+import { TextPreviewStyled, TextPreviewWrapperStyled } from './styled';
 
 export function TextPreview(props) {
   return (
@@ -9,7 +9,7 @@ export function TextPreview(props) {
           Texto normal. <i className="jesus">Palabras de Jesús.</i>{' '}
           <i>Palabras en cursiva.</i> <b>Palabras resaltadas.</b>
           <small className="my-1">Citas</small>
-          <div className="opts">Opción de Trivia.</div>
+          <span className="opts">Opción de Trivia.</span>
         </p>
       </TextPreviewStyled>
     </TextPreviewWrapperStyled>

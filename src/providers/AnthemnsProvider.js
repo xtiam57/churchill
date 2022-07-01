@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react';
 import json from 'assets/data/anthemns';
+import React, { useMemo, useState } from 'react';
 import { Slide } from 'utils';
 
 const AnthemnsContext = React.createContext({});
@@ -169,6 +169,7 @@ function AnthemnsProvider({ children }) {
           index,
           number,
           title: `#${number} ${title}`,
+          name: title,
           type: 'anthemn',
           slides,
           text,

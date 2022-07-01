@@ -11,7 +11,9 @@ export const finderRender = (option, { text }) => (
       ))}
     </div>
 
-    <Highlighter search={text}>{option.text.replaceAll('/n', ' ')}</Highlighter>
+    <Highlighter search={text}>
+      {option.text.replaceAll('/n', ' ').replaceAll('_', '')}
+    </Highlighter>
 
     {option.authors ? (
       <div className="small font-italic mt-2">Autor(es): {option.authors}</div>

@@ -4,7 +4,7 @@ import { AlertStyled } from './styled';
 export function Alert({ presenting = false, label = '' }) {
   return (
     <AlertStyled presenting={presenting}>
-      Proyectando <strong>{presenting ? label : 'Logo'}</strong>
+      <strong>{presenting ? label : 'Logo'}</strong>
     </AlertStyled>
   );
 }

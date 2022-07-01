@@ -99,12 +99,15 @@ const SETTINGS_INITIAL_STATE = {
   interval: 10000,
   font: '',
   blur: 5,
-  logo: 'default',
+  logo: 'churchill',
   image: '',
   theme: 'default',
   preview: true,
   triviainterval: 20000,
   birthdaytimeframe: 3,
+  preachtime: 40,
+  preachyellow: 10,
+  preachred: 0,
   ...THEMES['default'],
 };
 
@@ -148,15 +151,7 @@ export const SETTINGS_OPTIONS = {
     { value: 'pinguin', label: 'Pingüino Emperador' },
     { value: 'custom', label: 'Personalizado' },
   ],
-  LOGOS: [
-    { value: 'default', label: 'Iglesia' },
-    { value: 'damas', label: 'Damas' },
-    { value: 'instituto', label: 'Instituto' },
-    { value: 'jovenes', label: 'Jóvenes' },
-    { value: 'ninos', label: 'Niños' },
-    { value: 'rondalla', label: 'Rondalla' },
-    { value: 'churchill', label: 'Churchill' },
-  ],
+  LOGOS: [{ value: 'churchill', label: 'Churchill' }],
   TIME_INTERVALS: [
     { value: 1000, label: '1 segundo' },
     { value: 2000, label: '2 segundos' },
@@ -183,6 +178,23 @@ export const SETTINGS_OPTIONS = {
     { value: 5, label: '5 días' },
     { value: 6, label: '6 días' },
     { value: 7, label: '1 semana' },
+  ],
+  PREACH_TIME: [
+    { value: 60, label: '1 hora' },
+    { value: 45, label: '45 minutos' },
+    { value: 40, label: '40 minutos' },
+    { value: 30, label: '30 minutos' },
+    { value: 15, label: '15 minutos' },
+  ],
+  PREACH_YELLOW: [
+    { value: 15, label: '15 minutos' },
+    { value: 10, label: '10 minutos' },
+    { value: 5, label: '5 minutos' },
+  ],
+  PREACH_RED: [
+    { value: 10, label: '10 minutos' },
+    { value: 5, label: '5 minutos' },
+    { value: 0, label: '0 minutos' },
   ],
   BACKGROUNDS,
 };

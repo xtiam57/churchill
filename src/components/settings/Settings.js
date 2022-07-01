@@ -1,13 +1,12 @@
+import { Logo, LogoPreview, Sidebar, TextPreview } from 'components';
+import { usePresenter, useSettingsSidebar } from 'hooks';
 import React, { useState } from 'react';
-import createPersistedState from 'use-persisted-state';
-import { Button, Form, Col, InputGroup } from 'react-bootstrap';
+import { Button, Col, Form, InputGroup } from 'react-bootstrap';
+import { BsDownload, BsHeartFill, BsUpload } from 'react-icons/bs';
 import { MdClose } from 'react-icons/md';
-import { BsHeartFill, BsDownload, BsUpload } from 'react-icons/bs';
-
-import { Sidebar, Logo, LogoPreview, TextPreview } from 'components';
-import { useSettingsSidebar, usePresenter } from 'hooks';
-import { BROADCAST, THEMES, SETTINGS_OPTIONS } from 'values';
+import createPersistedState from 'use-persisted-state';
 import { Storage } from 'utils';
+import { BROADCAST, SETTINGS_OPTIONS, THEMES } from 'values';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
@@ -303,6 +302,71 @@ export function Settings() {
       <LogoPreview className="my-2" {...settings}>
         <Logo width="80%" height="80%" {...settings} />
       </LogoPreview>
+
+      <hr />
+
+      <Form.Row>
+        <Form.Group as={Col} className="mb-1">
+          <Form.Label className=" small mb-1">
+            Tiempo de predicación (semáforo)
+          </Form.Label>
+          <Form.Control
+            size="sm"
+            as="select"
+            name="preachtime"
+            value={settings?.preachtime}
+            onChange={handleChangeNumericValue}
+          >
+            {SETTINGS_OPTIONS.PREACH_TIME.map(({ value, label }) => (
+              <option key={value} value={value}>
+                {label}
+              </option>
+            ))}
+          </Form.Control>
+        </Form.Group>
+      </Form.Row>
+
+      <Form.Row>
+        <Form.Group as={Col} className="mb-1">
+          <Form.Label className=" small mb-1">
+            Tiempo restante para la luz amarilla
+          </Form.Label>
+          <Form.Control
+            size="sm"
+            as="select"
+            name="preachyellow"
+            value={settings?.preachyellow}
+            onChange={handleChangeNumericValue}
+          >
+            {SETTINGS_OPTIONS.PREACH_YELLOW.map(({ value, label }) => (
+              <option key={value} value={value}>
+                {label}
+              </option>
+            ))}
+          </Form.Control>
+        </Form.Group>
+      </Form.Row>
+
+      <Form.Row>
+        <Form.Group as={Col} className="mb-1">
+          <Form.Label className=" small mb-1">
+            Tiempo restante para la luz roja
+          </Form.Label>
+          <Form.Control
+            size="sm"
+            as="select"
+            name="preachred"
+            value={settings?.preachred}
+            onChange={handleChangeNumericValue}
+          >
+            {SETTINGS_OPTIONS.PREACH_RED.map(({ value, label }) => (
+              <option key={value} value={value}>
+                {label}
+              </option>
+            ))}
+          </Form.Control>
+        </Form.Group>
+      </Form.Row>
 
       <hr />
 

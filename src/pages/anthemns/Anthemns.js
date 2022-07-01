@@ -1,38 +1,38 @@
-import React, { useState, useRef, useEffect } from 'react';
-import createPersistedState from 'use-persisted-state';
-import { Typeahead } from 'react-bootstrap-typeahead';
-import { Button, ButtonGroup, Form } from 'react-bootstrap';
 import {
-  ImVolumeMute,
-  ImVolumeHigh,
-  ImStop2,
-  ImPlay3,
-  ImArrowLeft2,
-  ImArrowRight2,
-  ImFolderOpen,
-} from 'react-icons/im';
-import useSound from 'use-sound';
-
-import {
-  Slider,
-  Sidebar,
-  Wrapper,
-  Controls,
+  Alert,
   Bookmark,
   BookmarkList,
-  Finder,
+  Controls,
   DisplayButton,
-  Title,
+  Finder,
   FinderButton,
-  Alert,
+  Sidebar,
+  Slider,
+  Title,
+  Wrapper,
 } from 'components';
 import { useAnthemn, useFolder, useKeyUp, usePresenter } from 'hooks';
+import React, { useEffect, useRef, useState } from 'react';
+import { Button, ButtonGroup, Form } from 'react-bootstrap';
+import { Typeahead } from 'react-bootstrap-typeahead';
+import {
+  ImArrowLeft2,
+  ImArrowRight2,
+  ImBook,
+  ImFolderOpen,
+  ImPlay3,
+  ImStop2,
+  ImVolumeHigh,
+  ImVolumeMute,
+} from 'react-icons/im';
+import createPersistedState from 'use-persisted-state';
+import useSound from 'use-sound';
 import { getBookmarkedItems, Storage } from 'utils';
 import { BROADCAST, MOVEMENT } from 'values';
-
-import { RecentBirthdays } from './RecentBirthdays';
+import { AnthemnIndex } from './AnthemnIndex';
 import { AnthemnTags } from './AnthemnTags';
-import { typeaheadRender, finderRender } from './renders';
+import { RecentBirthdays } from './RecentBirthdays';
+import { finderRender, typeaheadRender } from './renders';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
@@ -48,6 +48,7 @@ export default function AnthemnsPage() {
   const { anthemns, current, setCurrent, moveAnthemn } = useAnthemn();
   const [showLogo, setShowLogo] = useState(true);
   const [openFinder, setOpenFinder] = useState(false);
+  const [openIndex, setOpenIndex] = useState(false);
   const [search, setSearch] = useState([current]);
   const [bookmarkSort, setBookmarkSort] = useState('asc');
   const [bookmarks, setBookmarks] = useState(
@@ -57,13 +58,15 @@ export default function AnthemnsPage() {
   const [isMP3Loaded, setIsMP3Loaded] = useState(false);
   const [playbackRate, setPlaybackRate] = React.useState(1);
   const [volume, setVolume] = useState(1);
-  const [play, { stop, isPlaying }] = useSound(url, {
+  const [play, { stop, isPlaying, sound }] = useSound(url, {
     volume,
     playbackRate,
     interrupt: true,
     onload: () => setIsMP3Loaded(true),
     onloaderror: () => setIsMP3Loaded(false),
   });
+  const [trackProgress, setTrackProgress] = useState(0);
+  const intervalRef = useRef();
 
   useEffect(() => {
     stop();
@@ -86,6 +89,22 @@ export default function AnthemnsPage() {
       setShowLogo(true);
     }
   }, [presenting]);
+
+  useEffect(() => {
+    if (!isPlaying) {
+      setTrackProgress(0);
+      clearInterval(intervalRef.current);
+    }
+  }, [isPlaying]);
+
+  const startTimer = () => {
+    // Clear any timers already running
+    clearInterval(intervalRef.current);
+
+    intervalRef.current = setInterval(() => {
+      setTrackProgress((state) => state + 1);
+    }, [1000]);
+  };
 
   function handleSearch(event) {
     setSearch(event);
@@ -169,7 +188,19 @@ export default function AnthemnsPage() {
           renderMenuItemChildren={typeaheadRender}
         />
 
-        <FinderButton onOpen={setOpenFinder} />
+        <FinderButton
+          onOpen={setOpenFinder}
+          extraButton={
+            <Button
+              variant="link"
+              className="text-light p-0 text-small mr-2"
+              onClick={(e) => setOpenIndex(true)}
+              title="Abrir Himnario"
+            >
+              <ImBook />
+            </Button>
+          }
+        />
 
         <DisplayButton
           value={showLogo}
@@ -191,11 +222,9 @@ export default function AnthemnsPage() {
 
         <AnthemnTags onClick={handleSearch} current={current} />
       </Sidebar>
-
       {presenting ? (
         <Alert presenting={!showLogo} label={current?.title} />
       ) : null}
-
       <Wrapper direction="column" {...settings}>
         <Bookmark
           element={current}
@@ -223,6 +252,22 @@ export default function AnthemnsPage() {
           cambiar de página, y <strong>&uarr;</strong> y <strong>&darr;</strong>{' '}
           para cambiar de himno.
         </Slider>
+
+        <div className="p-2" style={{ backgroundColor: '#20232a' }}>
+          <Form.Control
+            type="range"
+            name="position"
+            value={trackProgress}
+            min="0"
+            max={Math.floor(sound?.duration())}
+            step="1"
+            onChange={({ target }) => {
+              sound?.seek(+target.value);
+              setTrackProgress(+target.value);
+              // +target.value;
+            }}
+          />
+        </div>
 
         <Controls>
           {isMP3Loaded ? (
@@ -272,7 +317,14 @@ export default function AnthemnsPage() {
                       <ImStop2 />
                     </Button>
                   ) : (
-                    <Button onClick={() => play()} variant="secondary">
+                    <Button
+                      onClick={() => {
+                        play();
+                        startTimer();
+                        sound?.seek(trackProgress);
+                      }}
+                      variant="secondary"
+                    >
                       <ImPlay3 />
                     </Button>
                   )}
@@ -318,6 +370,7 @@ export default function AnthemnsPage() {
                     });
                     if (isPlaying) {
                       play();
+                      setTrackProgress(0);
                     }
                   }}
                 />
@@ -341,6 +394,19 @@ export default function AnthemnsPage() {
           }
         }}
         render={finderRender}
+      />
+
+      <AnthemnIndex
+        show={openIndex}
+        onHide={() => setOpenIndex(false)}
+        onChange={setBookmarks}
+        sort={bookmarkSort}
+        onSelect={(item) => {
+          if (item) {
+            handleSearch([item]);
+            setOpenIndex(false);
+          }
+        }}
       />
     </Wrapper>
   );

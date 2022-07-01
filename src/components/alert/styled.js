@@ -7,11 +7,16 @@ export const AlertStyled = styled.div`
   position: absolute;
   border-color: ${({ presenting }) =>
     presenting ? 'var(--warning)' : 'var(--light)'};
-  top: 80px;
-  border-radius: 100px;
-  font-size: 0.75em;
+  top: 75px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  font-size: 0.7em;
   color: ${({ presenting }) => (presenting ? '' : 'var(--light)')};
   z-index: 2;
-  padding: 8px 25px;
-  margin-left: 315px;
+  padding: 8px 15px;
+  margin-left: 288px;
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;

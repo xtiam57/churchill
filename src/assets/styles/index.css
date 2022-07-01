@@ -166,8 +166,12 @@ select {
 /* Animations */
 
 @keyframes marquee {
-  0%   { transform: translate(0, 0); }
-  100% { transform: translate(-100%, 0); }
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
 }
 
 :root {
@@ -255,4 +259,14 @@ select {
   100% {
     background-position: 0% 50%;
   }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 20%;
+  }
+}
+
+.anthemns-index.modal .modal-dialog {
+  max-width: calc(100% - 3.5rem) !important;
 }

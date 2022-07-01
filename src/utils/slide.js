@@ -8,6 +8,7 @@ Slide.create = ({
   title = '',
   text = '',
   subtext = null,
+  bg = null,
   ...rest
 }) => {
   const length = (title ? title.length : 0) + text.replaceAll('/n', '').length;
@@ -20,6 +21,7 @@ Slide.create = ({
     text,
     subtext,
     length,
+    bg,
     ...rest,
   };
 };

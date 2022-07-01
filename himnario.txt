@@ -82,9 +82,7 @@ Que es la fuente de gracia,
 poder y verdad.
 ***
 @AUTHORS
-Letra por William P. Mackat, 1863
-Música por John J. Husband, 1820
-Traducción por H. W. Cragin
+William P. Mackat
 
 ---
 
@@ -5677,7 +5675,7 @@ Y tu eternal amor.
 ***
 1) El que habita al abrigo de Dios
 Morará bajo sombras de amor;
-Sobre Él no vendrá ningún mal
+Sobre él no vendrá ningún mal
 Y en sus alas feliz vivirá.
 ***
 @CORO
@@ -5694,7 +5692,7 @@ Y sus pies nunca resbalarán.
 3) El que habita al abrigo de Dios
 Para siempre seguro estará;
 Caerán mil y diez mil por doquier,
-Mas a Él no vendrá mortandad.
+Mas a él no vendrá mortandad.
 ***
 @TAGS
 Suave
@@ -13659,8 +13657,8 @@ Mi suerte cualquiera que sea, diré:
 Estoy bien, estoy bien con mi Dios.
 ***
 @CORO
-Estoy bien (estoy bien),
-¡Con mi Dios! (con mi Dios),
+Estoy bien _(estoy bien)__,
+¡Con mi Dios! _(con mi Dios)__,
 estoy bien, estoy bien,
 ¡Con mi Dios!
 ***
@@ -13724,9 +13722,16 @@ Más grande que mis culpas clavadas en la cruz
 Es la maravillosa gracia de Jesús.
 ***
 @CORO
-Inefable es la divina gracia, es inmensurable cual la mar,
+Inefable es la divina gracia,
+_(la divina gracia)__
+es inmensurable cual la mar,
+_(la más profunda mar)__
 Fuente preciosa, para el pecador, el pecador
-Perdonando todos mis pecados Cristo me limpió de mi maldad;
+_(Como clara fuente, siempre suficiente a los pecadores rescatar)__
+Perdonando todos mis pecados
+_(mis pecados todos)__
+Cristo me limpió de mi maldad;
+_(de mi maldad)__
 Alabaré su dulce nombre por la eternidad.
 ***
 2) Maravillosa gracia, gracia de compasión,
@@ -13744,6 +13749,7 @@ Apéndice
 ***
 @AUTHORS
 Haldor Lillenas
+(a dos voces)
 
 ---
 
@@ -13899,6 +13905,66 @@ Apéndice
 
 ---
 
+## 997. HIMNO NACIONAL DE VENEZUELA
+***
+@CORO
+//Gloria al bravo pueblo
+Que el yugo lanzó
+La Ley respetando
+La virtud y honor.//
+***
+//!Abajo cadenas!//
+//Gritaba el Señor//
+y el pobre en su choza
+libertad pidió
+A este santo nombre
+tembló de pavor
+el vil egoísmo
+que otra vez triunfó
+//A este santo nombre//
+tembló de pavor
+//el vil egoísmo
+que otra vez triunfó//
+***
+@TAGS
+Apéndice
+Himno Nacional
+***
+@AUTHORS
+"Gloria al Bravo Pueblo"
+Juan José Landaeta
+Vicente Salias
+
+---
+
+## 998. HIMNO NACIONAL DE MÉXICO
+***
+@CORO
+Mexicanos, al grito de guerra
+El acero aprestad y el bridón;
+//Y retiemble en sus centros la tierra
+Al sonoro rugir del cañón.//
+***
+Ciña ¡Oh, Patria! tus sienes de oliva
+de la paz el arcángel divino,
+que en el cielo tu eterno destino
+por el dedo de Dios se escribió.
+Mas si osare un extraño enemigo
+profanar con su planta tu suelo,
+piensa ¡Oh, Patria querida! que el cielo
+//un soldado en cada hijo te dio.//
+***
+@TAGS
+Apéndice
+Himno Nacional
+***
+@AUTHORS
+"Mexicanos, al grito de guerra"
+Francisco González Bocanegra
+Jaime Nunó Roca
+
+---
+
 ## 999. HIMNO NACIONAL DEL PERÚ
 ***
 @CORO
@@ -13921,6 +13987,7 @@ Apéndice
 Himno Nacional
 ***
 @AUTHORS
+"Somos libres, seámoslo siempre"
 José de la Torre Ugarte
 José Bernardo Alcedo
 
@@ -14548,7 +14615,7 @@ Apéndice
 
 ---
 
-## 633. ¡OH AMOR ES DIOS!
+## 633. ¡OH, AMOR DE DIOS!
 ***
 1) Oh, amor de Dios su inmensidad, el hombre no podría contar
 ni comprender la gran verdad que Dios al hombre pudo a amar.
@@ -14610,6 +14677,10 @@ Vida eterna tengo en Él,
 Él me sostendrá;
 hasta que le pueda ver
 ¡Él regresará!
+Él regresará,
+Él regresará;
+pues me ama el Salvador,
+Él regresará.
 ***
 @TAGS
 Apéndice
@@ -15304,6 +15375,77 @@ cuando venga a reinar.
 el amanecer del Rey.
 Mira a Cristo, hecho hombre,
 para darnos redención.
+***
+@TAGS
+Apéndice
+Suave
+
+---
+
+## 658. SUMISIÓN
+***
+1) La puerta estrecha es,
+Para la salvación
+Y el camino angosto es
+Yo no lo  escogí;
+Dios me escogió a mi
+Sumiso, a Cristo seguiré.
+***
+@CORO
+No lo que quiera hacer,
+Ni donde quiera ir
+Pues quien soy yo
+Que debo decidir?
+Mi Padre escogerá,
+La senda que es mejor
+Y así confiado puedo ir.
+***
+2) He de seguirle fiel,
+cargando aquí la cruz
+Camino es, de santidad
+Gran privilegio es,
+Servir a mi Señor
+Su Voluntad yo quiero hacer.
+***
+3) Al que me amó amaré,
+Y le obedeceré
+Dispuesto estoy a padecer,
+Sobre el pecado vil,
+Y toda vanidad
+Confiando en Cristo venceré.
+***
+@TAGS
+Apéndice
+Suave
+
+---
+
+## 659. JESÚS ES LA ROCA DE MI SALVACIÓN
+***
+1) Jesús es la roca de mi salvación;
+Él es quien me libra de condenación.
+Jesús es mi fuerte, mi gran protector;
+// Yo se que soy hijo de todo su amor. //
+***
+2) Jesús me defiende de negra traición;
+Él lava las manchas de mi corazón.
+Jesús me rescata del mundo falaz;
+// Me lleva a su seno, su seno de paz. //
+***
+3) Por eso en mis horas de negro dolor,
+Yo busco el consuelo de mi redentor.
+Venid si por Cristo ser salvo queréis,
+// Al lado de Cristo lugar hallareis. //
+***
+4) Su paz os ofrece, su paz Él os da;
+Aquel que le busca, ser salvo podrá;
+Yo fui mucho tiempo esclavo del mal,
+// mas hoy Jesucristo me dio libertad. //
+***
+5) Jesús es la fuente de la rendición;
+Él sana las llagas de mi corazón.
+Él sana al leproso al ciego da luz;
+// por eso confió tan solo en Jesús. //
 ***
 @TAGS
 Apéndice

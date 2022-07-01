@@ -38,7 +38,7 @@
       "4) Unidos load,/na la gran Trinidad,/nQue es la fuente de gracia,/npoder y verdad."
     ],
     "startsWithChorus": false,
-    "authors": "Letra por William P. Mackat, 1863, Música por John J. Husband, 1820, Traducción por H. W. Cragin",
+    "authors": "William P. Mackat",
     "tags": null
   },
   {
@@ -2938,9 +2938,9 @@
     "title": "EL QUE HABITA AL ABRIGO DE DIOS",
     "chorus": "Oh, yo quiero habitar al abrigo de Dios;/nSólo allí encontraré paz y profundo amor./nMi delicia es con Él comunión disfrutar/nY por siempre su nombre alabar.",
     "stanzas": [
-      "1) El que habita al abrigo de Dios/nMorará bajo sombras de amor;/nSobre Él no vendrá ningún mal/nY en sus alas feliz vivirá.",
+      "1) El que habita al abrigo de Dios/nMorará bajo sombras de amor;/nSobre él no vendrá ningún mal/nY en sus alas feliz vivirá.",
       "2) El que habita al abrigo de Dios/nCiertamente muy feliz será;/nÁngeles guardarán su salud/nY sus pies nunca resbalarán.",
-      "3) El que habita al abrigo de Dios/nPara siempre seguro estará;/nCaerán mil y diez mil por doquier,/nMas a Él no vendrá mortandad."
+      "3) El que habita al abrigo de Dios/nPara siempre seguro estará;/nCaerán mil y diez mil por doquier,/nMas a él no vendrá mortandad."
     ],
     "startsWithChorus": false,
     "authors": null,
@@ -7168,7 +7168,7 @@
   {
     "number": 605,
     "title": "ESTOY BIEN CON MI DIOS",
-    "chorus": "Estoy bien (estoy bien),/n¡Con mi Dios! (con mi Dios),/nestoy bien, estoy bien,/n¡Con mi Dios!",
+    "chorus": "Estoy bien _(estoy bien)__,/n¡Con mi Dios! _(con mi Dios)__,/nestoy bien, estoy bien,/n¡Con mi Dios!",
     "stanzas": [
       "1) De paz inundada mi senda ya esté/nO cúbrala un mar de aflicción,/nMi suerte cualquiera que sea, diré:/nEstoy bien, estoy bien con mi Dios.",
       "2) Ya venga la prueba o me tiente Satán,/nNo amenguan mi fe ni mi amor;/nPues Cristo comprende mis luchas, mi afán,/nY su sangre obrará en mi favor.",
@@ -7195,14 +7195,14 @@
   {
     "number": 607,
     "title": "MARAVILLOSA GRACIA",
-    "chorus": "Inefable es la divina gracia, es inmensurable cual la mar,/nFuente preciosa, para el pecador, el pecador/nPerdonando todos mis pecados Cristo me limpió de mi maldad;/nAlabaré su dulce nombre por la eternidad.",
+    "chorus": "Inefable es la divina gracia,/n_(la divina gracia)__/nes inmensurable cual la mar,/n_(la más profunda mar)__/nFuente preciosa, para el pecador, el pecador/n_(Como clara fuente, siempre suficiente a los pecadores rescatar)__/nPerdonando todos mis pecados/n_(mis pecados todos)__/nCristo me limpió de mi maldad;/n_(de mi maldad)__/nAlabaré su dulce nombre por la eternidad.",
     "stanzas": [
       "1) Maravillosa gracia, vino Jesús a dar,/nMás alta que los cielos, más honda que la mar,/nMás grande que mis culpas clavadas en la cruz/nEs la maravillosa gracia de Jesús.",
       "2) Maravillosa gracia, gracia de compasión,/nGracia que sacia el alma con plena salvación,/nGracia que lleva al cielo, gracia de paz y luz/nEs la maravillosa gracia de Jesús.",
       "3) Maravillosa gracia llama con dulce voz,/nLlámanos a ser hechos hijos de nuestro Dios;/nColma de su consuelo, nos llena de virtud,/nEs la maravillosa gracia de Jesús."
     ],
     "startsWithChorus": false,
-    "authors": "Haldor Lillenas",
+    "authors": "Haldor Lillenas, (a dos voces)",
     "tags": "Apéndice"
   },
   {
@@ -7539,7 +7539,7 @@
   },
   {
     "number": 633,
-    "title": "¡OH AMOR ES DIOS!",
+    "title": "¡OH, AMOR DE DIOS!",
     "chorus": "Oh, amor de Dios, brotando está,/ninmensurable eternal;/npor las edades durará,/ninagotable raudal.",
     "stanzas": [
       "1) Oh, amor de Dios su inmensidad, el hombre no podría contar/nni comprender la gran verdad que Dios al hombre pudo a amar./nCuando el pecar entró al hogar de Adán y Eva en Edén/nDios les sacó, más prometió un Salvador también.",
@@ -7557,7 +7557,7 @@
     "stanzas": [
       "1) Si mi fe ha de caer,/nÉl me sostendrá;/nen la tentación yo sé,/nÉl me sostendrá./nNo podría estar de pie,/nen la oscuridad;/npues mi amor muy frágil es,/nÉl me sostendrá.",
       "2) Él se goza en quien salvó,/nÉl me sostendrá;/nante Él precioso soy,/nÉl me sostendrá./nSus promesas fieles son,/nmi alma guardará;/nalto precio Él pagó,/nÉl me sostendrá.",
-      "3) Él sufrió y por mí murió,/nÉl me sostendrá;/nla justicia Él cumplió,/nÉl me sostendrá./nVida eterna tengo en Él,/nÉl me sostendrá;/nhasta que le pueda ver/n¡Él regresará!"
+      "3) Él sufrió y por mí murió,/nÉl me sostendrá;/nla justicia Él cumplió,/nÉl me sostendrá./nVida eterna tengo en Él,/nÉl me sostendrá;/nhasta que le pueda ver/n¡Él regresará!/nÉl regresará,/nÉl regresará;/npues me ama el Salvador,/nÉl regresará."
     ],
     "startsWithChorus": false,
     "authors": null,
@@ -7866,6 +7866,56 @@
     "tags": "Apéndice,Suave"
   },
   {
+    "number": 658,
+    "title": "SUMISIÓN",
+    "chorus": "No lo que quiera hacer,/nNi donde quiera ir/nPues quien soy yo/nQue debo decidir?/nMi Padre escogerá,/nLa senda que es mejor/nY así confiado puedo ir.",
+    "stanzas": [
+      "1) La puerta estrecha es,/nPara la salvación/nY el camino angosto es/nYo no lo  escogí;/nDios me escogió a mi/nSumiso, a Cristo seguiré.",
+      "2) He de seguirle fiel,/ncargando aquí la cruz/nCamino es, de santidad/nGran privilegio es,/nServir a mi Señor/nSu Voluntad yo quiero hacer.",
+      "3) Al que me amó amaré,/nY le obedeceré/nDispuesto estoy a padecer,/nSobre el pecado vil,/nY toda vanidad/nConfiando en Cristo venceré."
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice,Suave"
+  },
+  {
+    "number": 659,
+    "title": "JESÚS ES LA ROCA DE MI SALVACIÓN",
+    "chorus": null,
+    "stanzas": [
+      "1) Jesús es la roca de mi salvación;/nÉl es quien me libra de condenación./nJesús es mi fuerte, mi gran protector;/n// Yo se que soy hijo de todo su amor. //",
+      "2) Jesús me defiende de negra traición;/nÉl lava las manchas de mi corazón./nJesús me rescata del mundo falaz;/n// Me lleva a su seno, su seno de paz. //",
+      "3) Por eso en mis horas de negro dolor,/nYo busco el consuelo de mi redentor./nVenid si por Cristo ser salvo queréis,/n// Al lado de Cristo lugar hallareis. //",
+      "4) Su paz os ofrece, su paz Él os da;/nAquel que le busca, ser salvo podrá;/nYo fui mucho tiempo esclavo del mal,/n// mas hoy Jesucristo me dio libertad. //",
+      "5) Jesús es la fuente de la rendición;/nÉl sana las llagas de mi corazón./nÉl sana al leproso al ciego da luz;/n// por eso confió tan solo en Jesús. //"
+    ],
+    "startsWithChorus": false,
+    "authors": null,
+    "tags": "Apéndice,Suave"
+  },
+  {
+    "number": 997,
+    "title": "HIMNO NACIONAL DE VENEZUELA",
+    "chorus": "//Gloria al bravo pueblo/nQue el yugo lanzó/nLa Ley respetando/nLa virtud y honor.//",
+    "stanzas": [
+      "//!Abajo cadenas!///n//Gritaba el Señor///ny el pobre en su choza/nlibertad pidió/nA este santo nombre/ntembló de pavor/nel vil egoísmo/nque otra vez triunfó/n//A este santo nombre///ntembló de pavor/n//el vil egoísmo/nque otra vez triunfó//"
+    ],
+    "startsWithChorus": true,
+    "authors": "\"Gloria al Bravo Pueblo\", Juan José Landaeta, Vicente Salias",
+    "tags": "Apéndice,Himno Nacional"
+  },
+  {
+    "number": 998,
+    "title": "HIMNO NACIONAL DE MÉXICO",
+    "chorus": "Mexicanos, al grito de guerra/nEl acero aprestad y el bridón;/n//Y retiemble en sus centros la tierra/nAl sonoro rugir del cañón.//",
+    "stanzas": [
+      "Ciña ¡Oh, Patria! tus sienes de oliva/nde la paz el arcángel divino,/nque en el cielo tu eterno destino/npor el dedo de Dios se escribió./nMas si osare un extraño enemigo/nprofanar con su planta tu suelo,/npiensa ¡Oh, Patria querida! que el cielo/n//un soldado en cada hijo te dio.//"
+    ],
+    "startsWithChorus": true,
+    "authors": "\"Mexicanos, al grito de guerra\", Francisco González Bocanegra, Jaime Nunó Roca",
+    "tags": "Apéndice,Himno Nacional"
+  },
+  {
     "number": 999,
     "title": "HIMNO NACIONAL DEL PERÚ",
     "chorus": "¡Somos libres! ¡Seámoslo siempre!/nY antes niegue sus luces el sol,/nQue faltemos al voto solemne/nQue la patria al eterno elevó.",
@@ -7873,7 +7923,7 @@
       "En sus cima los Andes sostengan/nla bandera o pendón bicolor/nque a los siglos anuncie el esfuerzo/nque ser libres por siempre nos dio./nA su sombra posemos tranquilos/ny al nacer por sus cumbres el sol/nrenovemos el gran juramento/nque rendimos al Dios de Jacob."
     ],
     "startsWithChorus": true,
-    "authors": "José de la Torre Ugarte, José Bernardo Alcedo",
+    "authors": "\"Somos libres, seámoslo siempre\", José de la Torre Ugarte, José Bernardo Alcedo",
     "tags": "Apéndice,Himno Nacional"
   }
 ]

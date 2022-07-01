@@ -195,7 +195,6 @@ function Logo({
           </g>
         </svg>
       );
-
     case 'damas':
       return (
         <svg
@@ -263,7 +262,6 @@ function Logo({
           </g>
         </svg>
       );
-
     case 'ninos':
       return (
         <svg
@@ -381,7 +379,6 @@ function Logo({
           </g>
         </svg>
       );
-
     case 'rondalla':
       return (
         <svg
@@ -418,7 +415,6 @@ function Logo({
           />
         </svg>
       );
-
     case 'instituto':
       return (
         <svg
@@ -489,7 +485,6 @@ function Logo({
           </g>
         </svg>
       );
-
     default:
       return (
         <svg
