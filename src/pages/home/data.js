@@ -1,29 +1,4 @@
 import guitar from 'assets/images/bg/guitar.jpg';
-import boda1 from 'assets/images/boda/b1.png';
-import boda10 from 'assets/images/boda/b10.png';
-import boda11 from 'assets/images/boda/b11.png';
-import boda12 from 'assets/images/boda/b12.png';
-import boda13 from 'assets/images/boda/b13.png';
-import boda14 from 'assets/images/boda/b14.png';
-import boda15 from 'assets/images/boda/b15.png';
-import boda16 from 'assets/images/boda/b16.png';
-import boda17 from 'assets/images/boda/b17.png';
-import boda18 from 'assets/images/boda/b18.png';
-import boda19 from 'assets/images/boda/b19.png';
-import boda2 from 'assets/images/boda/b2.png';
-import boda20 from 'assets/images/boda/b20.png';
-import boda21 from 'assets/images/boda/b21.png';
-import boda22 from 'assets/images/boda/b22.png';
-import boda23 from 'assets/images/boda/b23.png';
-import boda24 from 'assets/images/boda/b24.png';
-import boda25 from 'assets/images/boda/b25.png';
-import boda3 from 'assets/images/boda/b3.png';
-import boda4 from 'assets/images/boda/b4.png';
-import boda5 from 'assets/images/boda/b5.png';
-import boda6 from 'assets/images/boda/b6.png';
-import boda7 from 'assets/images/boda/b7.png';
-import boda8 from 'assets/images/boda/b8.png';
-import boda9 from 'assets/images/boda/b9.png';
 import rondalla from 'assets/images/rondalla.svg';
 import { Slide } from 'utils';
 
@@ -259,7 +234,6 @@ const NOTICES = [
   //     }),
   //   ],
   // },
-
   {
     id: 6,
     index: 5,
@@ -271,39 +245,6 @@ const NOTICES = [
         text: `<img src="${rondalla}" alt="rondalla" style="width: 60%"/>`,
         bg: guitar,
       }),
-    ],
-  },
-  {
-    id: 7,
-    index: 6,
-    type: 'notice',
-    title: 'Erick y Solange',
-    slides: [
-      Slide.create({ bg: boda1 }),
-      Slide.create({ bg: boda2 }),
-      Slide.create({ bg: boda3 }),
-      Slide.create({ bg: boda4 }),
-      Slide.create({ bg: boda5 }),
-      Slide.create({ bg: boda6 }),
-      Slide.create({ bg: boda7 }),
-      Slide.create({ bg: boda8 }),
-      Slide.create({ bg: boda9 }),
-      Slide.create({ bg: boda10 }),
-      Slide.create({ bg: boda11 }),
-      Slide.create({ bg: boda12 }),
-      Slide.create({ bg: boda13 }),
-      Slide.create({ bg: boda14 }),
-      Slide.create({ bg: boda15 }),
-      Slide.create({ bg: boda16 }),
-      Slide.create({ bg: boda17 }),
-      Slide.create({ bg: boda18 }),
-      Slide.create({ bg: boda19 }),
-      Slide.create({ bg: boda20 }),
-      Slide.create({ bg: boda21 }),
-      Slide.create({ bg: boda22 }),
-      Slide.create({ bg: boda23 }),
-      Slide.create({ bg: boda24 }),
-      Slide.create({ bg: boda25 }),
     ],
   },
 ];
