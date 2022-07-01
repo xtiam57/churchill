@@ -1,5 +1,3 @@
-import guitar from 'assets/images/bg/guitar.jpg';
-import rondalla from 'assets/images/rondalla.svg';
 import { Slide } from 'utils';
 
 const NOTICES = [
@@ -45,32 +43,6 @@ const NOTICES = [
         title: '<span class="fs-xl">⛪</span>',
         text: 'Recuerde <b>cuidar la Iglesia y sus instalaciones</b>. No olvide que es la Casa de Dios.',
       }),
-    ],
-  },
-  {
-    id: 2,
-    index: 1,
-    type: 'notice',
-    title: 'Horarios',
-    slides: [
-      Slide.create({
-        text: 'Cultos Generales:/n<b>Domingos</b>/n<strong class="fs-xl" style="line-height:1">11:00 AM</strong>/n<strong class="fs-xl" style="line-height:1">06:30 PM</strong>/nEscuela Dominical: <b>10:00 AM</b>',
-      }),
-      Slide.create({
-        text: 'Culto General:/n<b>Miércoles</b>/n<strong class="fs-xl" style="line-height:1">07:00 PM</strong>',
-      }),
-      Slide.create({
-        text: 'Reunión de "Ganar Almas":/n<b>Sábados</b>/n<strong class="fs-xl" style="line-height:1">10:00 AM</strong>',
-      }),
-      Slide.create({
-        text: 'Reunión de Jóvenes:/n<b>Sábados</b>/n<strong class="fs-xl" style="line-height:1">04:30 PM</strong>',
-      }),
-      // Slide.create({
-      //   text: 'Reunión de Coro:/n<b>Sábados</b>/n<strong class="fs-xl" style="line-height:1">08:30 AM</strong>',
-      // }),
-      // Slide.create({
-      //   text: 'Reunión de Damas:/n<b>Sábados</b>/n<strong class="fs-xl" style="line-height:1">07:00 PM</strong>',
-      // }),
     ],
   },
   {
@@ -234,19 +206,6 @@ const NOTICES = [
   //     }),
   //   ],
   // },
-  {
-    id: 6,
-    index: 5,
-    type: 'notice',
-    title: 'Logo de la Rondalla',
-    slides: [
-      Slide.create({
-        title: '',
-        text: `<img src="${rondalla}" alt="rondalla" style="width: 60%"/>`,
-        bg: guitar,
-      }),
-    ],
-  },
 ];
 
 export function getNotices(birthdaySLide) {
