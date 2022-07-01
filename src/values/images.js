@@ -44,6 +44,7 @@ import bg06 from 'assets/images/bg/fun.jpg';
 import bg11 from 'assets/images/bg/green-wood.jpg';
 import bg63 from 'assets/images/bg/guitar.jpg';
 import bg04 from 'assets/images/bg/heart.jpg';
+import bg150 from 'assets/images/bg/mexico1.jpg';
 import bg26 from 'assets/images/bg/montains.jpg';
 import bg46 from 'assets/images/bg/montains2.jpg';
 import bg47 from 'assets/images/bg/montains3.jpg';
@@ -85,6 +86,7 @@ import bg25 from 'assets/images/bg/sand.jpg';
 import bg59 from 'assets/images/bg/sky.jpg';
 import bg60 from 'assets/images/bg/space.jpg';
 import bg61 from 'assets/images/bg/starts.jpg';
+import bg151 from 'assets/images/bg/venezuela1.jpg';
 import bg78 from 'assets/images/bg/wall-2.jpg';
 import bg08 from 'assets/images/bg/wall.jpg';
 import bg56 from 'assets/images/bg/wave.jpg';
@@ -99,6 +101,8 @@ export const BACKGROUNDS = [
   { value: '', label: 'Color Sólido' },
 
   { label: 'Abstracto 1', value: bg27 },
+  { label: 'Abstracto 10', value: bg97 },
+  { label: 'Abstracto 11', value: bg99 },
   { label: 'Abstracto 2', value: bg28 },
   { label: 'Abstracto 3', value: bg29 },
   { label: 'Abstracto 4', value: bg30 },
@@ -107,8 +111,6 @@ export const BACKGROUNDS = [
   { label: 'Abstracto 7', value: bg33 },
   { label: 'Abstracto 8', value: bg70 },
   { label: 'Abstracto 9', value: bg96 },
-  { label: 'Abstracto 10', value: bg97 },
-  { label: 'Abstracto 11', value: bg99 },
   { label: 'Aceite', value: bg74 },
   { label: 'Amanecer 1', value: bg02 },
   { label: 'Amanecer 2', value: bg37 },
@@ -151,6 +153,7 @@ export const BACKGROUNDS = [
   { label: 'Mamá 2', value: bg87 },
   { label: 'Mamá 3', value: bg94 },
   { label: 'Mamá 4', value: bg95 },
+  { label: 'México', value: bg150 },
   { label: 'Montañas 1', value: bg26 },
   { label: 'Montañas 2', value: bg46 },
   { label: 'Montañas 3', value: bg47 },
@@ -194,4 +197,5 @@ export const BACKGROUNDS = [
   { label: 'Rosa 2', value: bg93 },
   { label: 'San Valentín', value: bg04 },
   { label: 'Tierra', value: bg40 },
+  { label: 'Venezuela', value: bg151 },
 ];

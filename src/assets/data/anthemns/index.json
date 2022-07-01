@@ -7894,6 +7894,28 @@
     "tags": "Apéndice,Suave"
   },
   {
+    "number": 997,
+    "title": "HIMNO NACIONAL DE VENEZUELA",
+    "chorus": "//Gloria al bravo pueblo/nQue el yugo lanzó/nLa Ley respetando/nLa virtud y honor.//",
+    "stanzas": [
+      "//!Abajo cadenas!///n//Gritaba el Señor///ny el pobre en su choza/nlibertad pidió/nA este santo nombre/ntembló de pavor/nel vil egoísmo/nque otra vez triunfó/n//A este santo nombre///ntembló de pavor/n//el vil egoísmo/nque otra vez triunfó//"
+    ],
+    "startsWithChorus": true,
+    "authors": "\"Gloria al Bravo Pueblo\", Juan José Landaeta, Vicente Salias",
+    "tags": "Apéndice,Himno Nacional"
+  },
+  {
+    "number": 998,
+    "title": "HIMNO NACIONAL DE MÉXICO",
+    "chorus": "Mexicanos, al grito de guerra/nEl acero aprestad y el bridón;/n//Y retiemble en sus centros la tierra/nAl sonoro rugir del cañón.//",
+    "stanzas": [
+      "Ciña ¡Oh, Patria! tus sienes de oliva/nde la paz el arcángel divino,/nque en el cielo tu eterno destino/npor el dedo de Dios se escribió./nMas si osare un extraño enemigo/nprofanar con su planta tu suelo,/npiensa ¡Oh, Patria querida! que el cielo/n//un soldado en cada hijo te dio.//"
+    ],
+    "startsWithChorus": true,
+    "authors": "\"Mexicanos, al grito de guerra\", Francisco González Bocanegra, Jaime Nunó Roca",
+    "tags": "Apéndice,Himno Nacional"
+  },
+  {
     "number": 999,
     "title": "HIMNO NACIONAL DEL PERÚ",
     "chorus": "¡Somos libres! ¡Seámoslo siempre!/nY antes niegue sus luces el sol,/nQue faltemos al voto solemne/nQue la patria al eterno elevó.",
@@ -7901,7 +7923,7 @@
       "En sus cima los Andes sostengan/nla bandera o pendón bicolor/nque a los siglos anuncie el esfuerzo/nque ser libres por siempre nos dio./nA su sombra posemos tranquilos/ny al nacer por sus cumbres el sol/nrenovemos el gran juramento/nque rendimos al Dios de Jacob."
     ],
     "startsWithChorus": true,
-    "authors": "José de la Torre Ugarte, José Bernardo Alcedo",
+    "authors": "\"Somos libres, seámoslo siempre\", José de la Torre Ugarte, José Bernardo Alcedo",
     "tags": "Apéndice,Himno Nacional"
   }
 ]

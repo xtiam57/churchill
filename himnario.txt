@@ -13905,6 +13905,66 @@ Apéndice
 
 ---
 
+## 997. HIMNO NACIONAL DE VENEZUELA
+***
+@CORO
+//Gloria al bravo pueblo
+Que el yugo lanzó
+La Ley respetando
+La virtud y honor.//
+***
+//!Abajo cadenas!//
+//Gritaba el Señor//
+y el pobre en su choza
+libertad pidió
+A este santo nombre
+tembló de pavor
+el vil egoísmo
+que otra vez triunfó
+//A este santo nombre//
+tembló de pavor
+//el vil egoísmo
+que otra vez triunfó//
+***
+@TAGS
+Apéndice
+Himno Nacional
+***
+@AUTHORS
+"Gloria al Bravo Pueblo"
+Juan José Landaeta
+Vicente Salias
+
+---
+
+## 998. HIMNO NACIONAL DE MÉXICO
+***
+@CORO
+Mexicanos, al grito de guerra
+El acero aprestad y el bridón;
+//Y retiemble en sus centros la tierra
+Al sonoro rugir del cañón.//
+***
+Ciña ¡Oh, Patria! tus sienes de oliva
+de la paz el arcángel divino,
+que en el cielo tu eterno destino
+por el dedo de Dios se escribió.
+Mas si osare un extraño enemigo
+profanar con su planta tu suelo,
+piensa ¡Oh, Patria querida! que el cielo
+//un soldado en cada hijo te dio.//
+***
+@TAGS
+Apéndice
+Himno Nacional
+***
+@AUTHORS
+"Mexicanos, al grito de guerra"
+Francisco González Bocanegra
+Jaime Nunó Roca
+
+---
+
 ## 999. HIMNO NACIONAL DEL PERÚ
 ***
 @CORO
@@ -13927,6 +13987,7 @@ Apéndice
 Himno Nacional
 ***
 @AUTHORS
+"Somos libres, seámoslo siempre"
 José de la Torre Ugarte
 José Bernardo Alcedo
 
