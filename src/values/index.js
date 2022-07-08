@@ -99,7 +99,7 @@ const SETTINGS_INITIAL_STATE = {
   interval: 10000,
   font: '',
   blur: 5,
-  logo: 'churchill',
+  logo: 'default',
   image: '',
   theme: 'default',
   preview: true,
@@ -151,7 +151,10 @@ export const SETTINGS_OPTIONS = {
     { value: 'pinguin', label: 'Pingüino Emperador' },
     { value: 'custom', label: 'Personalizado' },
   ],
-  LOGOS: [{ value: 'churchill', label: 'Churchill' }],
+  LOGOS: [
+    { value: 'default', label: 'IBMO' },
+    { value: 'churchill', label: 'Churchill' },
+  ],
   TIME_INTERVALS: [
     { value: 1000, label: '1 segundo' },
     { value: 2000, label: '2 segundos' },
