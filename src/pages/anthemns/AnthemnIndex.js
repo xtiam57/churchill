@@ -80,47 +80,42 @@ export function AnthemnIndex({
     setCategory(value);
   };
 
-  const render = useCallback(
-    (start = 0, end = 1000) => {
-      const list = anthemns.slice(start, end);
+  const render = useCallback(() => {
+    return anthemns.map((item, index) => {
+      if (!item.category) {
+        item.category = Storage.get(createCategoryKey(item));
+      }
 
-      return list.map((anthemn, index) => {
-        const aCat = Storage.get(createCategoryKey(anthemn));
+      if (category === 'CHEERFUL' && item.category !== 'CHEERFUL') {
+        return null;
+      }
 
-        if (category === 'CHEERFUL' && aCat !== 'CHEERFUL') {
-          return null;
-        }
+      if (category === 'CONGREGATIONAL' && item.category !== 'CONGREGATIONAL') {
+        return null;
+      }
 
-        if (category === 'CONGREGATIONAL' && aCat !== 'CONGREGATIONAL') {
-          return null;
-        }
+      if (category === 'SOLEMN' && item.category !== 'SOLEMN') {
+        return null;
+      }
 
-        if (category === 'SOLEMN' && aCat !== 'SOLEMN') {
-          return null;
-        }
+      if (category === '' && item.category) {
+        return null;
+      }
 
-        if (category === '' && aCat) {
-          return null;
-        }
-
-        return (
-          <li key={index}>
-            <span
-              title={anthemn?.text?.replaceAll('/n', '\n').replaceAll('_', '')}
-            >
-              <span className="number text-warning">#{anthemn.number}</span>
-              <span className="name" onClick={() => onSelect(anthemn)}>
-                {anthemn.name}
-              </span>
+      return (
+        <li key={index}>
+          <span title={item?.text?.replaceAll('/n', '\n').replaceAll('_', '')}>
+            <span className="number text-warning">#{item.number}</span>
+            <span className="name" onClick={() => onSelect(item)}>
+              {item.name}
             </span>
-            <AnthemnCategory element={anthemn} className="mr-2" />
-            <Bookmark icon element={anthemn} onChange={onChange} sort={sort} />
-          </li>
-        );
-      });
-    },
-    [anthemns, onChange, onSelect, sort, category]
-  );
+          </span>
+          <AnthemnCategory element={item} className="mr-2" />
+          <Bookmark icon element={item} onChange={onChange} sort={sort} />
+        </li>
+      );
+    });
+  }, [anthemns, onChange, onSelect, sort, category]);
 
   return (
     <Modal

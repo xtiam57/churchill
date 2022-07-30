@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styledComponents from 'styled-components';
 import { Storage } from 'utils';
 
@@ -13,24 +13,21 @@ const AnthemnSelectStyled = styledComponents.select`
 `;
 
 export function AnthemnCategory({ element, ...rest }) {
-  const [category, setCategory] = useState('');
-  const inStorage = Storage.has(createCategoryKey(element));
+  const [category, setCategory] = useState(
+    Storage.get(createCategoryKey(element) || '')
+  );
 
   const handleChange = ({ target }) => {
     const { value } = target;
     setCategory(value);
     if (value) {
+      element.category = value;
       Storage.set(createCategoryKey(element), value);
     } else {
+      delete element.category;
       Storage.remove(createCategoryKey(element));
     }
   };
-
-  useEffect(() => {
-    if (inStorage) {
-      setCategory(Storage.get(createCategoryKey(element)));
-    }
-  }, [element, inStorage]);
 
   return (
     <AnthemnSelectStyled value={category} onChange={handleChange} {...rest}>

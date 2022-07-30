@@ -108,6 +108,12 @@ const SETTINGS_INITIAL_STATE = {
   preachtime: 40,
   preachyellow: 10,
   preachred: 0,
+  sundayCultAM: '11:00',
+  sundayCultPM: '06:30',
+  sundaySchoolAM: '10:00',
+  weekCultHour: '07:00',
+  weekCultDay: 'Miércoles',
+  weekCultTime: 'PM',
   ...THEMES['default'],
 };
 
@@ -205,4 +211,16 @@ export const SETTINGS_OPTIONS = {
     { value: 0, label: '0 minutos' },
   ],
   BACKGROUNDS,
+  HOURS: Array(12)
+    .fill(0)
+    .map((_, i) => {
+      return Array(12)
+        .fill(0)
+        .map((_, j) => {
+          return `${(i + 1).toString().padStart(2, '0')}:${(j * 5)
+            .toString()
+            .padStart(2, '0')}`;
+        });
+    })
+    .flat(),
 };
