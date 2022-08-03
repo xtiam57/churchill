@@ -111,7 +111,16 @@ function AnthemnsProvider({ children }) {
   const anthemns = useMemo(() => {
     return json.map(
       (
-        { number, title, startsWithChorus, chorus, stanzas, tags, authors },
+        {
+          number,
+          title,
+          startsWithChorus,
+          repeatChorusAtEnd,
+          chorus,
+          stanzas,
+          tags,
+          authors,
+        },
         index
       ) => {
         const slides = [];
@@ -154,6 +163,10 @@ function AnthemnsProvider({ children }) {
             }
           }
         });
+
+        if (repeatChorusAtEnd) {
+          slideIndex = splitLines(id, '(Coro)', chorus, slides, slideIndex);
+        }
 
         slides.push(
           Slide.create({
