@@ -1,5 +1,4 @@
 import { Logo, Presenter, Wrapper } from 'components';
-import React from 'react';
 import createPersistedState from 'use-persisted-state';
 import { BROADCAST } from 'values';
 
