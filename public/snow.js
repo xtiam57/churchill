@@ -1,5 +1,6 @@
 /* https://embed.im/snow */
 var embedimSnow = document.getElementById('embedim--snow');
+
 if (!embedimSnow) {
   var month = new Date().getMonth();
   if (month === 11) {
@@ -9,7 +10,7 @@ if (!embedimSnow) {
     var embCSS =
       '.embedim-snow{position: absolute;width: 10px;height: 10px;background: white;border-radius: 50%;margin-top:-10px}';
     var embHTML = '';
-    for (i = 1; i < 200; i++) {
+    for (var i = 1; i < 200; i++) {
       embHTML += '<i class="embedim-snow"></i>';
       var rndX = embRand(0, 1000000) * 0.0001,
         rndO = embRand(-100000, 100000) * 0.0001,

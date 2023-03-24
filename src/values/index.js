@@ -164,6 +164,7 @@ export const SETTINGS_OPTIONS = {
     { value: 'jovenes', label: 'Jóvenes' },
     { value: 'ninos', label: 'Niños' },
     { value: 'rondalla', label: 'Rondalla' },
+    { value: 'conference', label: 'Conferencia' },
     { value: 'churchill', label: 'Churchill' },
   ],
   TIME_INTERVALS: [

@@ -95,7 +95,12 @@ import bg10 from 'assets/images/bg/wood-lights.jpg';
 import bg09 from 'assets/images/bg/wood.jpg';
 import bg12 from 'assets/images/bg/xmas.jpg';
 import bg20 from 'assets/images/bg/xmas2.jpg';
+
 import bg21 from 'assets/images/bg/xmas3.jpg';
+
+import bg300 from 'assets/images/bg/planet1.jpg';
+import bg301 from 'assets/images/bg/planet2.jpg';
+import bg302 from 'assets/images/bg/planet3.jpg';
 
 export const BACKGROUNDS = [
   { value: '', label: 'Color Sólido' },
@@ -198,4 +203,7 @@ export const BACKGROUNDS = [
   { label: 'San Valentín', value: bg04 },
   { label: 'Tierra', value: bg40 },
   { label: 'Venezuela', value: bg151 },
+  { label: 'Conferencia 1', value: bg300 },
+  { label: 'Conferencia 2', value: bg301 },
+  { label: 'Conferencia 3', value: bg302 },
 ];
