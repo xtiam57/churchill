@@ -64,14 +64,14 @@ import bg16 from 'assets/images/bg/paper2.jpg';
 import bg15 from 'assets/images/bg/paper3.jpg';
 import bg52 from 'assets/images/bg/pattern.jpg';
 import bg18 from 'assets/images/bg/peru.jpg';
-import bg24 from 'assets/images/bg/peru2.jpg';
 import bg75 from 'assets/images/bg/piano.jpg';
+import bg300 from 'assets/images/bg/planet1.jpg';
+import bg301 from 'assets/images/bg/planet2.jpg';
+import bg302 from 'assets/images/bg/planet3.jpg';
 import bg101 from 'assets/images/bg/plants-3.jpg';
 import bg53 from 'assets/images/bg/plants.jpg';
 import bg54 from 'assets/images/bg/plants2.jpg';
 import bg23 from 'assets/images/bg/pray.jpg';
-import bg65 from 'assets/images/bg/pretil-2.jpg';
-import bg64 from 'assets/images/bg/pretil.jpg';
 import bg19 from 'assets/images/bg/resurrection.jpg';
 import bg88 from 'assets/images/bg/river1.jpg';
 import bg89 from 'assets/images/bg/river2.jpg';
@@ -86,7 +86,6 @@ import bg25 from 'assets/images/bg/sand.jpg';
 import bg59 from 'assets/images/bg/sky.jpg';
 import bg60 from 'assets/images/bg/space.jpg';
 import bg61 from 'assets/images/bg/starts.jpg';
-import bg151 from 'assets/images/bg/venezuela1.jpg';
 import bg78 from 'assets/images/bg/wall-2.jpg';
 import bg08 from 'assets/images/bg/wall.jpg';
 import bg56 from 'assets/images/bg/wave.jpg';
@@ -95,12 +94,7 @@ import bg10 from 'assets/images/bg/wood-lights.jpg';
 import bg09 from 'assets/images/bg/wood.jpg';
 import bg12 from 'assets/images/bg/xmas.jpg';
 import bg20 from 'assets/images/bg/xmas2.jpg';
-
 import bg21 from 'assets/images/bg/xmas3.jpg';
-
-import bg300 from 'assets/images/bg/planet1.jpg';
-import bg301 from 'assets/images/bg/planet2.jpg';
-import bg302 from 'assets/images/bg/planet3.jpg';
 
 export const BACKGROUNDS = [
   { value: '', label: 'Color Sólido' },
@@ -184,13 +178,10 @@ export const BACKGROUNDS = [
   { label: 'Patrón Negro', value: bg14 },
   { label: 'Patrón', value: bg52 },
   { label: 'Perú 1', value: bg18 },
-  { label: 'Perú 2', value: bg24 },
   { label: 'Piano', value: bg75 },
   { label: 'Plantas 1', value: bg53 },
   { label: 'Plantas 2', value: bg54 },
   { label: 'Plantas 3', value: bg101 },
-  { label: 'Pretil 1', value: bg64 },
-  { label: 'Pretil 2', value: bg65 },
   { label: 'Resurreción', value: bg19 },
   { label: 'Río 1', value: bg88 },
   { label: 'Río 2', value: bg89 },
@@ -202,8 +193,7 @@ export const BACKGROUNDS = [
   { label: 'Rosa 2', value: bg93 },
   { label: 'San Valentín', value: bg04 },
   { label: 'Tierra', value: bg40 },
-  { label: 'Venezuela', value: bg151 },
-  { label: 'Conferencia 1', value: bg300 },
-  { label: 'Conferencia 2', value: bg301 },
-  { label: 'Conferencia 3', value: bg302 },
+  { label: 'Mapa 1', value: bg300 },
+  { label: 'Mapa 2', value: bg301 },
+  { label: 'Mapa 3', value: bg302 },
 ];

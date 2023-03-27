@@ -158,13 +158,7 @@ export const SETTINGS_OPTIONS = {
     { value: 'custom', label: 'Personalizado' },
   ],
   LOGOS: [
-    { value: 'default', label: 'Iglesia' },
-    { value: 'damas', label: 'Damas' },
-    { value: 'instituto', label: 'Instituto' },
-    { value: 'jovenes', label: 'Jóvenes' },
-    { value: 'ninos', label: 'Niños' },
-    { value: 'rondalla', label: 'Rondalla' },
-    { value: 'conference', label: 'Conferencia' },
+    { value: 'default', label: 'Jóvenes' },
     { value: 'churchill', label: 'Churchill' },
   ],
   TIME_INTERVALS: [
