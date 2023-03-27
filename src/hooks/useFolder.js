@@ -1,17 +1,21 @@
-import { useMemo } from 'react';
+import { useCallback } from 'react';
 
 export function useFolder() {
-  const folder = useMemo(() => {
-    const { app, shell } = window.require('electron').remote;
-    const { protocol } = window.location;
-    const path = `${
-      protocol === 'file:' ? app.getPath('userData') : ''
-    }\\himnos`;
-    return {
-      open: () => shell.openPath(path),
-      getPath: (file) => `${path}\\${file}.mp3`,
-    };
-  }, []);
+  const { protocol } = window.location;
 
-  return folder;
+  const openPath = useCallback(
+    () => window.electronAPI.openPath(protocol),
+    [protocol]
+  );
+
+  const getPath = useCallback(
+    (file) =>
+      window.electronAPI.getPath(file, protocol).then((response) => response),
+    [protocol]
+  );
+
+  return {
+    openPath,
+    getPath,
+  };
 }

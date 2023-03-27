@@ -12,17 +12,16 @@ const fs = require('fs');
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
 
-function handleOpen(event, protocol) {
-  // const webContents = event.sender;
-  // const win = BrowserWindow.fromWebContents(webContents);
-  // win.setTitle(title);
-
-  console.log('event', event);
-
+function handleOpenPath(event, protocol) {
   const { app, shell } = electron;
   const path = `${protocol === 'file:' ? app.getPath('userData') : ''}\\himnos`;
-
   shell.openPath(path);
+}
+
+function handleGetPath(event, file, protocol) {
+  const { app } = electron;
+  const path = `${protocol === 'file:' ? app.getPath('userData') : ''}\\himnos`;
+  event.sender.send('get-path-response', `${path}\\${file}.mp3`);
 }
 
 function createWindow() {
@@ -75,21 +74,8 @@ function createWindow() {
     recursive: true,
   });
 
-  electron.ipcMain.on('open-path', handleOpen);
-
-  electron.ipcMain.on('get-path', (event, file) => {
-    // const webContents = event.sender;
-    // const win = BrowserWindow.fromWebContents(webContents);
-    // win.setTitle(title);
-
-    const { app } = electron.remote;
-    const { protocol } = window.location;
-    const path = `${
-      protocol === 'file:' ? app.getPath('userData') : ''
-    }\\himnos`;
-
-    return `${path}\\${file}.mp3`;
-  });
+  electron.ipcMain.on('open-path', handleOpenPath);
+  electron.ipcMain.on('get-path', handleGetPath);
 }
 
 // This method will be called when Electron has finished

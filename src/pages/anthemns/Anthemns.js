@@ -39,7 +39,7 @@ const useSettings = createPersistedState(BROADCAST.SETTINGS);
 export const createKey = ({ id, type }) => `${type}_${id}_config`;
 
 export default function AnthemnsPage() {
-  const folder = useFolder();
+  const { getPath, openPath } = useFolder();
 
   const typeaheadRef = useRef();
   const sliderRef = useRef();
@@ -54,7 +54,12 @@ export default function AnthemnsPage() {
   const [bookmarks, setBookmarks] = useState(
     getBookmarkedItems('anthemn', bookmarkSort)
   );
-  const [url, setUrl] = useState(folder.getPath(current.number));
+  const [url, setUrl] = useState(() =>
+    (async () => {
+      const value = await getPath(current.number);
+      return value;
+    })()
+  );
   const [isMP3Loaded, setIsMP3Loaded] = useState(false);
   const [playbackRate, setPlaybackRate] = React.useState(1);
   const [volume, setVolume] = useState(1);
@@ -68,9 +73,16 @@ export default function AnthemnsPage() {
   const [trackProgress, setTrackProgress] = useState(0);
   const intervalRef = useRef();
 
+  console.log('url', url);
+
   useEffect(() => {
     stop();
-    setUrl(folder.getPath(current.number));
+    setUrl(() =>
+      (async () => {
+        const value = await getPath(current.number);
+        return value;
+      })()
+    );
     // Bug: delay to set config of the song
     setTimeout(() => {
       // Trying to get settings from storage
@@ -78,7 +90,7 @@ export default function AnthemnsPage() {
       setPlaybackRate(config ? config.playbackRate : 1);
       setVolume(config ? config.volume : 1);
     });
-  }, [current, folder, stop]);
+  }, [current, getPath, stop]);
 
   useEffect(() => {
     return () => stop();
@@ -142,7 +154,7 @@ export default function AnthemnsPage() {
 
   const handleOpenPath = (e) => {
     e.preventDefault();
-    folder.open();
+    openPath();
   };
 
   const handleSave = (target) => {

@@ -1,7 +1,13 @@
 const { contextBridge, ipcRenderer } = require('electron');
 
 contextBridge.exposeInMainWorld('electronAPI', {
-  // setTitle: (title) => ipcRenderer.send('set-title', title),
   openPath: (protocol) => ipcRenderer.send('open-path', protocol),
-  getPath: (file) => ipcRenderer.send('get-path', file),
+  getPath: (file, protocol) => {
+    return new Promise((resolve) => {
+      ipcRenderer.once('get-path-response', (event, response) => {
+        resolve(response);
+      });
+      ipcRenderer.send('get-path', file, protocol);
+    });
+  },
 });
