@@ -12,6 +12,19 @@ const fs = require('fs');
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
 
+function handleOpen(event, protocol) {
+  // const webContents = event.sender;
+  // const win = BrowserWindow.fromWebContents(webContents);
+  // win.setTitle(title);
+
+  console.log('event', event);
+
+  const { app, shell } = electron;
+  const path = `${protocol === 'file:' ? app.getPath('userData') : ''}\\himnos`;
+
+  shell.openPath(path);
+}
+
 function createWindow() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
@@ -21,6 +34,8 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
       enableRemoteModule: true,
+      contextIsolation: true,
+      preload: path.join(__dirname, 'preload.js'),
     },
   });
 
@@ -36,7 +51,7 @@ function createWindow() {
   mainWindow.loadURL(startUrl);
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools();
+  mainWindow.webContents.openDevTools();
 
   // Hide menu
   mainWindow.removeMenu();
@@ -58,6 +73,22 @@ function createWindow() {
   // Creando carpeta para los himnos
   fs.mkdirSync(`${app.getPath('userData')}\\himnos`, {
     recursive: true,
+  });
+
+  electron.ipcMain.on('open-path', handleOpen);
+
+  electron.ipcMain.on('get-path', (event, file) => {
+    // const webContents = event.sender;
+    // const win = BrowserWindow.fromWebContents(webContents);
+    // win.setTitle(title);
+
+    const { app } = electron.remote;
+    const { protocol } = window.location;
+    const path = `${
+      protocol === 'file:' ? app.getPath('userData') : ''
+    }\\himnos`;
+
+    return `${path}\\${file}.mp3`;
   });
 }
 
