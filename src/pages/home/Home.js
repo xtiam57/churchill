@@ -1,27 +1,27 @@
-import React, { useState, useRef, useEffect } from 'react';
-import createPersistedState from 'use-persisted-state';
+import { useEffect, useRef, useState } from 'react';
 import { Button, ButtonGroup } from 'react-bootstrap';
 import {
-  ImPause2,
-  ImPlay3,
   ImArrowLeft2,
   ImArrowRight2,
   ImLoop,
+  ImPause2,
+  ImPlay3,
 } from 'react-icons/im';
+import createPersistedState from 'use-persisted-state';
 
 import {
-  Slider,
-  Sidebar,
-  Wrapper,
-  Controls,
-  List,
-  Title,
-  DisplayButton,
   Alert,
+  Controls,
+  DisplayButton,
+  List,
+  Sidebar,
+  Slider,
+  Title,
+  Wrapper,
 } from 'components';
-import { useKeyUp, useIterate, usePresenter, useBirthday } from 'hooks';
+import { useBirthday, useIterate, useKeyUp, usePresenter } from 'hooks';
+import { Slide } from 'utils';
 import { BROADCAST, MOVEMENT } from 'values';
-
 import { getNotices } from './data';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
@@ -31,7 +31,7 @@ export default function HomePage() {
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const [showLogo, setShowLogo] = useState(true);
   const { current } = useBirthday();
-  const notices = getNotices(current);
+  const [notices, setNotices] = useState(getNotices(current));
   const [notice, setNotice] = useState(notices[0]);
   const [autoplay, setAutoplay] = useState(true);
   const [loop, setLoop] = useState(true);
@@ -51,6 +51,31 @@ export default function HomePage() {
       setShowLogo(true);
     }
   }, [presenting]);
+
+  useEffect(() => {
+    setNotices((notices) => {
+      const index = notices.findIndex((n) => n.title === 'Horarios');
+
+      const schedules =
+        settings?.schedules?.filter((entry) => entry.active) || [];
+
+      notices[index] = {
+        ...notices[index],
+        slides: schedules.map((entry) =>
+          Slide.create({
+            text: `
+                ${entry.name ? `${entry.name}/n` : ''}
+                <b>${entry.day} ${entry.daySuffix ? entry.daySuffix : ''}</b>/n
+                <strong class="fs-xl" style="line-height:1">
+                  ${entry.hour} ${entry.hourSuffix}
+                </strong>
+              `,
+          })
+        ),
+      };
+      return [...notices];
+    });
+  }, [settings]);
 
   const handlePrevSlide = () => sliderRef.current.prev();
 

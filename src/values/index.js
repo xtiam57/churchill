@@ -114,6 +114,72 @@ const SETTINGS_INITIAL_STATE = {
   weekCultHour: '07:00',
   weekCultDay: 'Miércoles',
   weekCultTime: 'PM',
+  schedules: [
+    {
+      name: 'Culto General Diurno',
+      day: 'Domingo',
+      daySuffix: 'AM',
+      hour: '11:00',
+      hourSuffix: 'AM',
+      active: true,
+    },
+    {
+      name: 'Culto General Nocturno',
+      day: 'Domingo',
+      daySuffix: 'PM',
+      hour: '06:30',
+      hourSuffix: 'PM',
+      active: true,
+    },
+    {
+      name: 'Escuela Dominical',
+      day: 'Domingo',
+      daySuffix: null,
+      hour: '10:00',
+      hourSuffix: 'AM',
+      active: true,
+    },
+    {
+      name: 'Reunión de Jóvenes',
+      day: 'Sábado',
+      daySuffix: null,
+      hour: '06:00',
+      hourSuffix: 'PM',
+      active: true,
+    },
+    {
+      name: 'Reunión para "Ganar Almas"',
+      day: 'Sábado',
+      daySuffix: null,
+      hour: '10:00',
+      hourSuffix: 'AM',
+      active: true,
+    },
+    {
+      name: null,
+      day: 'Domingo',
+      daySuffix: null,
+      hour: '01:00',
+      hourSuffix: 'AM',
+      active: false,
+    },
+    {
+      name: null,
+      day: 'Domingo',
+      daySuffix: null,
+      hour: '01:00',
+      hourSuffix: 'AM',
+      active: false,
+    },
+    {
+      name: null,
+      day: 'Domingo',
+      daySuffix: null,
+      hour: '01:00',
+      hourSuffix: 'AM',
+      active: false,
+    },
+  ],
   ...THEMES['default'],
 };
 
@@ -206,6 +272,15 @@ export const SETTINGS_OPTIONS = {
     { value: 0, label: '0 minutos' },
   ],
   BACKGROUNDS,
+  DAYS: [
+    { value: 'Domingo', label: 'Domingo' },
+    { value: 'Lunes', label: 'Lunes' },
+    { value: 'Martes', label: 'Martes' },
+    { value: 'Miércoles', label: 'Miércoles' },
+    { value: 'Jueves', label: 'Jueves' },
+    { value: 'Viernes', label: 'Viernes' },
+    { value: 'Sábado', label: 'Sábado' },
+  ],
   HOURS: Array(12)
     .fill(0)
     .map((_, i) => {

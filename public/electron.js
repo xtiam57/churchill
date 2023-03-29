@@ -36,7 +36,7 @@ function createWindow() {
   mainWindow.loadURL(startUrl);
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools();
+  mainWindow.webContents.openDevTools();
 
   // Hide menu
   mainWindow.removeMenu();
@@ -56,7 +56,7 @@ function createWindow() {
   });
 
   // Creando carpeta para los himnos
-  fs.mkdirSync(`${app.getPath('userData')}\\himnos`, {
+  fs.mkdirSync(`${app.getPath('documents')}\\Churchill\\Pistas`, {
     recursive: true,
   });
 }

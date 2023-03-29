@@ -45,35 +45,35 @@ const NOTICES = [
       }),
     ],
   },
+  // {
+  //   id: 2,
+  //   index: 1,
+  //   type: 'notice',
+  //   title: 'Horarios',
+  //   slides: [
+  //     Slide.create({
+  //       text: 'Cultos Generales:/n<b>Domingos</b>/n<strong class="fs-xl" style="line-height:1">11:00 AM</strong>/n<strong class="fs-xl" style="line-height:1">06:30 PM</strong>/nEscuela Dominical: <b>10:00 AM</b>',
+  //     }),
+  //     Slide.create({
+  //       text: 'Culto General:/n<b>Miércoles</b>/n<strong class="fs-xl" style="line-height:1">07:00 PM</strong>',
+  //     }),
+  //     Slide.create({
+  //       text: 'Reunión de "Ganar Almas":/n<b>Sábados</b>/n<strong class="fs-xl" style="line-height:1">10:00 AM</strong>',
+  //     }),
+  //     Slide.create({
+  //       text: 'Reunión de Jóvenes:/n<b>Sábados</b>/n<strong class="fs-xl" style="line-height:1">04:30 PM</strong>',
+  //     }),
+  //     // Slide.create({
+  //     //   text: 'Reunión de Coro:/n<b>Sábados</b>/n<strong class="fs-xl" style="line-height:1">08:30 AM</strong>',
+  //     // }),
+  //     // Slide.create({
+  //     //   text: 'Reunión de Damas:/n<b>Sábados</b>/n<strong class="fs-xl" style="line-height:1">07:00 PM</strong>',
+  //     // }),
+  //   ],
+  // },
   {
     id: 2,
     index: 1,
-    type: 'notice',
-    title: 'Horarios',
-    slides: [
-      Slide.create({
-        text: 'Cultos Generales:/n<b>Domingos</b>/n<strong class="fs-xl" style="line-height:1">11:00 AM</strong>/n<strong class="fs-xl" style="line-height:1">06:30 PM</strong>/nEscuela Dominical: <b>10:00 AM</b>',
-      }),
-      Slide.create({
-        text: 'Culto General:/n<b>Miércoles</b>/n<strong class="fs-xl" style="line-height:1">07:00 PM</strong>',
-      }),
-      Slide.create({
-        text: 'Reunión de "Ganar Almas":/n<b>Sábados</b>/n<strong class="fs-xl" style="line-height:1">10:00 AM</strong>',
-      }),
-      Slide.create({
-        text: 'Reunión de Jóvenes:/n<b>Sábados</b>/n<strong class="fs-xl" style="line-height:1">04:30 PM</strong>',
-      }),
-      // Slide.create({
-      //   text: 'Reunión de Coro:/n<b>Sábados</b>/n<strong class="fs-xl" style="line-height:1">08:30 AM</strong>',
-      // }),
-      // Slide.create({
-      //   text: 'Reunión de Damas:/n<b>Sábados</b>/n<strong class="fs-xl" style="line-height:1">07:00 PM</strong>',
-      // }),
-    ],
-  },
-  {
-    id: 3,
-    index: 2,
     type: 'notice',
     title: 'Bautizo',
     slides: [
@@ -84,8 +84,8 @@ const NOTICES = [
     ],
   },
   {
-    id: 4,
-    index: 3,
+    id: 3,
+    index: 2,
     type: 'notice',
     title: 'Canto Especial',
     slides: [
@@ -94,6 +94,13 @@ const NOTICES = [
         subtext: 'Por favor permanezca en silencio durante la presentación.',
       }),
     ],
+  },
+  {
+    id: 4,
+    index: 3,
+    type: 'notice',
+    title: 'Horarios',
+    slides: [],
   },
 ];
 

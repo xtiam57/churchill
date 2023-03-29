@@ -2,7 +2,13 @@ import { Logo, LogoPreview, Sidebar, TextPreview } from 'components';
 import { usePresenter, useSettingsSidebar } from 'hooks';
 import { useState } from 'react';
 import { Button, Col, Form, InputGroup } from 'react-bootstrap';
-import { BsDownload, BsHeartFill, BsUpload } from 'react-icons/bs';
+import {
+  BsChevronDown,
+  BsChevronUp,
+  BsDownload,
+  BsHeartFill,
+  BsUpload,
+} from 'react-icons/bs';
 import { MdClose } from 'react-icons/md';
 import createPersistedState from 'use-persisted-state';
 import { Storage } from 'utils';
@@ -15,6 +21,7 @@ export function Settings() {
   const [settings, setSettings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const [file, setFile] = useState(null);
   const { reload } = usePresenter();
+  const [expanded, setExpanded] = useState(false);
 
   const handleChangeValue = ({ target }) => {
     const { name, value } = target;
@@ -42,6 +49,15 @@ export function Settings() {
       ...state,
       theme: value,
       ...data,
+    }));
+  };
+
+  const handleSchedulesChangeValue = (name, value, index) => {
+    settings.schedules[index][name] = value;
+
+    setSettings((state) => ({
+      ...state,
+      schedules: [...settings.schedules],
     }));
   };
 
@@ -332,9 +348,156 @@ export function Settings() {
           </Form.Control>
         </Form.Group>
       </Form.Row>
+
       <LogoPreview className="my-2" {...settings}>
         <Logo width="80%" height="80%" {...settings} />
       </LogoPreview>
+
+      <hr />
+
+      <Button
+        variant="outline-secondary"
+        block
+        className="mb-3"
+        onClick={() => {
+          setExpanded((value) => !value);
+        }}
+      >
+        Horarios {expanded ? <BsChevronUp /> : <BsChevronDown />}
+      </Button>
+
+      {expanded ? (
+        <>
+          {settings?.schedules?.map((schedule, index) => {
+            return (
+              <div
+                key={index}
+                className="p-3 mb-2 bg-white border"
+                style={{ borderRadius: '5px' }}
+              >
+                {index > 0 ? (
+                  <Form.Row>
+                    <Form.Group as={Col} className="mb-1">
+                      <Form.Check
+                        className="d-inline-block"
+                        type="switch"
+                        id={`active-${index}`}
+                        name="active"
+                        checked={schedule.active}
+                        onChange={() =>
+                          handleSchedulesChangeValue(
+                            'active',
+                            !schedule.active,
+                            index
+                          )
+                        }
+                      />
+                    </Form.Group>
+                  </Form.Row>
+                ) : null}
+
+                <Form.Row>
+                  <Form.Group as={Col} className="mb-1">
+                    <Form.Label className=" small mb-1">Nombre</Form.Label>
+                    <Form.Control
+                      as="input"
+                      size="sm"
+                      value={schedule.name}
+                      name="name"
+                      disabled={!schedule.active}
+                      onChange={({ target }) => {
+                        const { name, value } = target;
+                        handleSchedulesChangeValue(name, value, index);
+                      }}
+                    />
+                  </Form.Group>
+                </Form.Row>
+                <Form.Row>
+                  <Form.Group as={Col} className="mb-1">
+                    <Form.Label className=" small mb-1">Día</Form.Label>
+                    <Form.Control
+                      as="select"
+                      size="sm"
+                      value={schedule.day}
+                      name="day"
+                      disabled={!schedule.active}
+                      onChange={({ target }) => {
+                        const { name, value } = target;
+                        handleSchedulesChangeValue(name, value, index);
+                      }}
+                    >
+                      {SETTINGS_OPTIONS.DAYS.map(({ value, label }) => (
+                        <option key={value} value={value}>
+                          {label}
+                        </option>
+                      ))}
+                    </Form.Control>
+                  </Form.Group>
+
+                  <Form.Group as={Col} className="mb-1">
+                    <Form.Label className=" small mb-1">Sufijo</Form.Label>
+                    <Form.Control
+                      as="select"
+                      size="sm"
+                      value={schedule.daySuffix}
+                      name="daySuffix"
+                      disabled={!schedule.active}
+                      onChange={({ target }) => {
+                        const { name, value } = target;
+                        handleSchedulesChangeValue(name, value, index);
+                      }}
+                    >
+                      <option value=""></option>
+                      <option value="AM">AM</option>
+                      <option value="PM">PM</option>
+                    </Form.Control>
+                  </Form.Group>
+                </Form.Row>
+                <Form.Row>
+                  <Form.Group as={Col} className="mb-1">
+                    <Form.Label className=" small mb-1">Hora</Form.Label>
+                    <Form.Control
+                      size="sm"
+                      as="select"
+                      name="hour"
+                      disabled={!schedule.active}
+                      value={schedule.hour}
+                      onChange={({ target }) => {
+                        const { name, value } = target;
+                        handleSchedulesChangeValue(name, value, index);
+                      }}
+                    >
+                      {SETTINGS_OPTIONS.HOURS.map((value) => (
+                        <option key={value} value={value}>
+                          {value}
+                        </option>
+                      ))}
+                    </Form.Control>
+                  </Form.Group>
+
+                  <Form.Group as={Col} className="mb-1">
+                    <Form.Label className=" small mb-1">Franja</Form.Label>
+                    <Form.Control
+                      as="select"
+                      size="sm"
+                      value={schedule.hourSuffix}
+                      name="hourSuffix"
+                      disabled={!schedule.active}
+                      onChange={({ target }) => {
+                        const { name, value } = target;
+                        handleSchedulesChangeValue(name, value, index);
+                      }}
+                    >
+                      <option value="AM">AM</option>
+                      <option value="PM">PM</option>
+                    </Form.Control>
+                  </Form.Group>
+                </Form.Row>
+              </div>
+            );
+          })}
+        </>
+      ) : null}
 
       <hr />
 
