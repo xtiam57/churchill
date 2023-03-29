@@ -11,7 +11,7 @@ import {
   Title,
   Wrapper,
 } from 'components';
-import { useAnthemn, useFolder, useKeyUp, usePresenter } from 'hooks';
+import { useAnthemn, useApp, useKeyUp, usePresenter } from 'hooks';
 import React, { useEffect, useRef, useState } from 'react';
 import { Button, ButtonGroup, Form } from 'react-bootstrap';
 import { Typeahead } from 'react-bootstrap-typeahead';
@@ -39,7 +39,7 @@ const useSettings = createPersistedState(BROADCAST.SETTINGS);
 export const createKey = ({ id, type }) => `${type}_${id}_config`;
 
 export default function AnthemnsPage() {
-  const { getPath, openPath } = useFolder();
+  const { openMyDocuments, getPath } = useApp();
 
   const typeaheadRef = useRef();
   const sliderRef = useRef();
@@ -54,12 +54,7 @@ export default function AnthemnsPage() {
   const [bookmarks, setBookmarks] = useState(
     getBookmarkedItems('anthemn', bookmarkSort)
   );
-  const [url, setUrl] = useState(() =>
-    (async () => {
-      const value = await getPath(current.number);
-      return value;
-    })()
-  );
+  const [url, setUrl] = useState(getPath(current.number));
   const [isMP3Loaded, setIsMP3Loaded] = useState(false);
   const [playbackRate, setPlaybackRate] = React.useState(1);
   const [volume, setVolume] = useState(1);
@@ -77,12 +72,7 @@ export default function AnthemnsPage() {
 
   useEffect(() => {
     stop();
-    setUrl(() =>
-      (async () => {
-        const value = await getPath(current.number);
-        return value;
-      })()
-    );
+    setUrl(getPath(current.number));
     // Bug: delay to set config of the song
     setTimeout(() => {
       // Trying to get settings from storage
@@ -154,7 +144,7 @@ export default function AnthemnsPage() {
 
   const handleOpenPath = (e) => {
     e.preventDefault();
-    openPath();
+    openMyDocuments();
   };
 
   const handleSave = (target) => {

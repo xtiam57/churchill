@@ -1,21 +1,37 @@
-import React, { useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 const AppContext = React.createContext({});
 
 const AppProvider = ({ children }) => {
   const [showSettings, setShowSettings] = useState(false);
+  const [myDocumentsPath, setMyDocumentsPath] = useState('');
 
-  const toggleSettings = () => {
-    setShowSettings((state) => !state);
-  };
+  const toggleSettings = useCallback(
+    () => setShowSettings((state) => !state),
+    []
+  );
 
-  const openSettings = () => {
-    setShowSettings(true);
-  };
+  const openSettings = useCallback(() => setShowSettings(true), []);
 
-  const closeSettings = () => {
-    setShowSettings(false);
-  };
+  const closeSettings = useCallback(() => setShowSettings(false), []);
+
+  const openMyDocuments = useCallback(
+    () => window.electronAPI.openMyDocuments(),
+    []
+  );
+
+  const getPath = useCallback(
+    (file) => {
+      return `${myDocumentsPath}\\${file}.mp3`;
+    },
+    [myDocumentsPath]
+  );
+
+  useEffect(() => {
+    window.electronAPI
+      .getMyDocumentsPath()
+      .then((response) => setMyDocumentsPath(response));
+  }, []);
 
   return (
     <AppContext.Provider
@@ -24,6 +40,8 @@ const AppProvider = ({ children }) => {
         toggleSettings,
         openSettings,
         closeSettings,
+        openMyDocuments,
+        getPath,
       }}
     >
       {children}

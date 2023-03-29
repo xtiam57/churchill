@@ -12,16 +12,65 @@ const fs = require('fs');
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
 
-function handleOpenPath(event, protocol) {
-  const { app, shell } = electron;
-  const path = `${protocol === 'file:' ? app.getPath('userData') : ''}\\himnos`;
-  shell.openPath(path);
+// API methods
+function handleTogglePresenter(
+  event,
+  presenter,
+  setPresenter,
+  setPresenting,
+  castPage
+) {
+  const { BrowserWindow, screen, app } = electron;
+  const [parent] = BrowserWindow.getAllWindows();
+  let url = parent.webContents.getURL();
+
+  if (presenter) {
+    presenter.isVisible() ? presenter.hide() : presenter.show();
+    setPresenting(presenter.isVisible());
+    return;
+  }
+
+  app.whenReady().then(() => {
+    const displays = screen.getAllDisplays();
+    const extDisplay = displays.find(
+      ({ bounds }) => bounds.x !== 0 || bounds.y !== 0
+    );
+
+    if (extDisplay) {
+      let win = new BrowserWindow({
+        x: extDisplay.bounds.x + 50,
+        y: extDisplay.bounds.y + 50,
+        frame: false,
+        fullscreen: true,
+        show: false,
+        parent,
+      });
+
+      // Open the DevTools.
+      // win.webContents.openDevTools();
+
+      win.loadURL(url.replace(/#.*$/, `#${castPage}`));
+
+      win.once('ready-to-show', () => {
+        win.show();
+        setPresenting(true);
+      });
+
+      setPresenter(win);
+    }
+  });
 }
 
-function handleGetPath(event, file, protocol) {
+function handleGetMyDocumentsPath(event) {
   const { app } = electron;
-  const path = `${protocol === 'file:' ? app.getPath('userData') : ''}\\himnos`;
-  event.sender.send('get-path-response', `${path}\\${file}.mp3`);
+  const path = `${app.getPath('documents')}\\Churchill\\Himnos`;
+  event.sender.send('GET_MY_DOCUMENTS_PATH_RESPONSE', path);
+}
+
+function handleOpenMyDocuments(_) {
+  const { app, shell } = electron;
+  const path = `${app.getPath('documents')}\\Churchill\\Himnos`;
+  shell.openPath(path);
 }
 
 function createWindow() {
@@ -70,12 +119,14 @@ function createWindow() {
   });
 
   // Creando carpeta para los himnos
-  fs.mkdirSync(`${app.getPath('userData')}\\himnos`, {
+  fs.mkdirSync(`${app.getPath('documents')}\\Churchill\\Himnos`, {
     recursive: true,
   });
 
-  electron.ipcMain.on('open-path', handleOpenPath);
-  electron.ipcMain.on('get-path', handleGetPath);
+  // API
+  electron.ipcMain.on('TOGGLE_PRESENTER', handleTogglePresenter);
+  electron.ipcMain.on('OPEN_MY_DOCUMENTS', handleOpenMyDocuments);
+  electron.ipcMain.on('GET_MY_DOCUMENTS_PATH', handleGetMyDocumentsPath);
 }
 
 // This method will be called when Electron has finished
