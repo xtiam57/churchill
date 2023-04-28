@@ -224,7 +224,7 @@ export const SETTINGS_OPTIONS = {
     { value: 'custom', label: 'Personalizado' },
   ],
   LOGOS: [
-    { value: 'default', label: 'Jóvenes' },
+    { value: 'default', label: 'Antioquía' },
     { value: 'churchill', label: 'Churchill' },
   ],
   TIME_INTERVALS: [
