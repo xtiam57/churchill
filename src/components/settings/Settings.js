@@ -101,39 +101,6 @@ export function Settings() {
         <MdClose />
       </Button>
 
-      {/* <Form.Row>
-        <Form.Group as={Col} className="mb-1">
-          <Form.Label className=" small mb-1">Culto Domingo AM</Form.Label>
-
-          <div className="d-flex align-items-center">
-            <Form.Check
-              className="d-inline-block"
-              type="switch"
-              id="pp"
-              name="active"
-              checked={false}
-              onChange={() => {}}
-            />
-
-            <Form.Control
-              size="sm"
-              as="select"
-              name="font"
-              value={settings?.font}
-              onChange={handleChangeValue}
-            >
-              {SETTINGS_OPTIONS.HOURS.map((value) => (
-                <option key={value} value={value}>
-                  {value}
-                </option>
-              ))}
-            </Form.Control>
-          </div>
-        </Form.Group>
-      </Form.Row>
-
-      <hr /> */}
-
       <Form.Row>
         <Form.Group as={Col} className="mb-1">
           <Form.Label className=" small mb-1">Fuente</Form.Label>
