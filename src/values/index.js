@@ -110,7 +110,7 @@ const SETTINGS_INITIAL_STATE = {
   preachred: 0,
   schedules: [
     {
-      name: 'Culto General Diurno',
+      name: 'Culto General Mañana',
       day: 'Domingo',
       daySuffix: 'AM',
       hour: '11:00',
@@ -118,7 +118,7 @@ const SETTINGS_INITIAL_STATE = {
       active: true,
     },
     {
-      name: 'Culto General Nocturno',
+      name: 'Culto General Noche',
       day: 'Domingo',
       daySuffix: 'PM',
       hour: '06:30',
@@ -128,7 +128,7 @@ const SETTINGS_INITIAL_STATE = {
     {
       name: 'Escuela Dominical',
       day: 'Domingo',
-      daySuffix: null,
+      daySuffix: '',
       hour: '10:00',
       hourSuffix: 'AM',
       active: true,
@@ -136,23 +136,39 @@ const SETTINGS_INITIAL_STATE = {
     {
       name: 'Reunión de Jóvenes',
       day: 'Sábado',
-      daySuffix: null,
-      hour: '06:00',
+      daySuffix: '',
+      hour: '07:00',
       hourSuffix: 'PM',
       active: true,
     },
     {
       name: 'Reunión para "Ganar Almas"',
       day: 'Sábado',
-      daySuffix: null,
-      hour: '10:00',
-      hourSuffix: 'AM',
+      daySuffix: '',
+      hour: '04:00',
+      hourSuffix: 'PM',
+      active: true,
+    },
+    {
+      name: 'Reunión de Oración',
+      day: 'Jueves',
+      daySuffix: '',
+      hour: '08:00',
+      hourSuffix: 'PM',
+      active: true,
+    },
+    {
+      name: 'Ensayos de Coro',
+      day: 'Jueves',
+      daySuffix: '',
+      hour: '07:00',
+      hourSuffix: 'PM',
       active: true,
     },
     {
       name: null,
       day: 'Domingo',
-      daySuffix: null,
+      daySuffix: '',
       hour: '01:00',
       hourSuffix: 'AM',
       active: false,
@@ -160,7 +176,7 @@ const SETTINGS_INITIAL_STATE = {
     {
       name: null,
       day: 'Domingo',
-      daySuffix: null,
+      daySuffix: '',
       hour: '01:00',
       hourSuffix: 'AM',
       active: false,
@@ -168,7 +184,7 @@ const SETTINGS_INITIAL_STATE = {
     {
       name: null,
       day: 'Domingo',
-      daySuffix: null,
+      daySuffix: '',
       hour: '01:00',
       hourSuffix: 'AM',
       active: false,
@@ -272,6 +288,15 @@ export const SETTINGS_OPTIONS = {
     { value: 0, label: '0 minutos' },
   ],
   BACKGROUNDS,
+  DAYS: [
+    { value: 'Domingo', label: 'Domingo' },
+    { value: 'Lunes', label: 'Lunes' },
+    { value: 'Martes', label: 'Martes' },
+    { value: 'Miércoles', label: 'Miércoles' },
+    { value: 'Jueves', label: 'Jueves' },
+    { value: 'Viernes', label: 'Viernes' },
+    { value: 'Sábado', label: 'Sábado' },
+  ],
   HOURS: Array(12)
     .fill(0)
     .map((_, i) => {
