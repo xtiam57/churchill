@@ -108,12 +108,6 @@ const SETTINGS_INITIAL_STATE = {
   preachtime: 40,
   preachyellow: 10,
   preachred: 0,
-  sundayCultAM: '11:00',
-  sundayCultPM: '06:30',
-  sundaySchoolAM: '10:00',
-  weekCultHour: '07:00',
-  weekCultDay: 'Miércoles',
-  weekCultTime: 'PM',
   schedules: [
     {
       name: 'Culto General Diurno',
@@ -224,7 +218,13 @@ export const SETTINGS_OPTIONS = {
     { value: 'custom', label: 'Personalizado' },
   ],
   LOGOS: [
-    { value: 'default', label: 'Jóvenes' },
+    { value: 'default', label: 'Iglesia' },
+    { value: 'damas', label: 'Damas' },
+    { value: 'instituto', label: 'Instituto' },
+    { value: 'jovenes', label: 'Jóvenes' },
+    { value: 'ninos', label: 'Niños' },
+    { value: 'rondalla', label: 'Rondalla' },
+    { value: 'conference', label: 'Conferencia' },
     { value: 'churchill', label: 'Churchill' },
   ],
   TIME_INTERVALS: [
@@ -272,15 +272,6 @@ export const SETTINGS_OPTIONS = {
     { value: 0, label: '0 minutos' },
   ],
   BACKGROUNDS,
-  DAYS: [
-    { value: 'Domingo', label: 'Domingo' },
-    { value: 'Lunes', label: 'Lunes' },
-    { value: 'Martes', label: 'Martes' },
-    { value: 'Miércoles', label: 'Miércoles' },
-    { value: 'Jueves', label: 'Jueves' },
-    { value: 'Viernes', label: 'Viernes' },
-    { value: 'Sábado', label: 'Sábado' },
-  ],
   HOURS: Array(12)
     .fill(0)
     .map((_, i) => {
