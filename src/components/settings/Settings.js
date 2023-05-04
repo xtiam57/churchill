@@ -576,6 +576,27 @@ export function Settings() {
       </Form.Row>
 
       <Form.Row>
+        <Form.Group as={Col} className="mb-2">
+          <Form.Label className=" small mb-1">
+            Duración de "Aviso en pantalla"
+          </Form.Label>
+          <Form.Control
+            size="sm"
+            as="select"
+            name="alertsinterval"
+            value={settings?.alertsinterval}
+            onChange={handleChangeNumericValue}
+          >
+            {SETTINGS_OPTIONS.ALERTS_TIME_INTERVALS.map(({ value, label }) => (
+              <option key={value} value={value}>
+                {label}
+              </option>
+            ))}
+          </Form.Control>
+        </Form.Group>
+      </Form.Row>
+
+      <Form.Row>
         <Form.Group as={Col} className="mb-0">
           <Form.Label className=" small mb-1">
             Rango para detectar cumpleaños

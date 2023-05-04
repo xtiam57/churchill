@@ -104,6 +104,7 @@ const SETTINGS_INITIAL_STATE = {
   theme: 'default',
   preview: true,
   triviainterval: 20000,
+  alertsinterval: 30000,
   birthdaytimeframe: 3,
   preachtime: 40,
   preachyellow: 10,
@@ -150,18 +151,18 @@ const SETTINGS_INITIAL_STATE = {
       active: true,
     },
     {
-      name: 'Reunión de Oración',
-      day: 'Jueves',
-      daySuffix: '',
-      hour: '08:00',
-      hourSuffix: 'PM',
-      active: true,
-    },
-    {
       name: 'Ensayos de Coro',
       day: 'Jueves',
       daySuffix: '',
       hour: '07:00',
+      hourSuffix: 'PM',
+      active: true,
+    },
+    {
+      name: 'Reunión de Oración',
+      day: 'Jueves',
+      daySuffix: '',
+      hour: '08:00',
       hourSuffix: 'PM',
       active: true,
     },
@@ -198,6 +199,8 @@ export const BROADCAST = {
   INITIAL_CHANNEL: null,
   SETTINGS: 'BROADCASTING_SETTINGS',
   INITIAL_SETTINGS: SETTINGS_INITIAL_STATE,
+  ALERT: 'BROADCASTING_ALERT',
+  INITIAL_ALERT: '',
 };
 
 export const CLOCK_POSITION = [
@@ -258,6 +261,13 @@ export const SETTINGS_OPTIONS = {
     { value: 20000, label: '20 segundos' },
     { value: 25000, label: '25 segundos' },
     { value: 30000, label: '30 segundos' },
+    { value: 60000, label: '1 minuto' },
+  ],
+  ALERTS_TIME_INTERVALS: [
+    { value: 20000, label: '20 segundos' },
+    { value: 30000, label: '30 segundos' },
+    { value: 40000, label: '40 segundos' },
+    { value: 50000, label: '50 segundos' },
     { value: 60000, label: '1 minuto' },
   ],
   BIRTHDAYS_TIME_INTERVALS: [
