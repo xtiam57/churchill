@@ -244,6 +244,7 @@ export const SETTINGS_OPTIONS = {
     { value: 'ninos', label: 'Niños' },
     { value: 'rondalla', label: 'Rondalla' },
     { value: 'conference', label: 'Conferencia' },
+    { value: '9-aniversary', label: '9no Aniversario' },
     { value: 'churchill', label: 'Churchill' },
   ],
   TIME_INTERVALS: [

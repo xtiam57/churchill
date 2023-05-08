@@ -1,3 +1,4 @@
+import bg200 from 'assets/images/bg/9-aniversario.jpg';
 import bg27 from 'assets/images/bg/abstract1.jpg';
 import bg97 from 'assets/images/bg/abstract10.jpg';
 import bg98 from 'assets/images/bg/abstract11.jpg';
@@ -99,6 +100,7 @@ import bg21 from 'assets/images/bg/xmas3.jpg';
 export const BACKGROUNDS = [
   { value: '', label: 'Color Sólido' },
 
+  { label: '9no Aniversario', value: bg200 },
   { label: 'Abstracto 1', value: bg27 },
   { label: 'Abstracto 10', value: bg97 },
   { label: 'Abstracto 11', value: bg99 },
