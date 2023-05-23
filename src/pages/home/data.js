@@ -1,5 +1,3 @@
-import guitar from 'assets/images/bg/guitar.jpg';
-import rondalla from 'assets/images/rondalla.svg';
 import { Slide } from 'utils';
 
 const NOTICES = [
@@ -77,19 +75,6 @@ const NOTICES = [
     type: 'notice',
     title: 'Horarios',
     slides: [],
-  },
-  {
-    id: 5,
-    index: 4,
-    type: 'notice',
-    title: 'Logo de la Rondalla',
-    slides: [
-      Slide.create({
-        title: '',
-        text: `<img src="${rondalla}" alt="rondalla" style="width: 60%"/>`,
-        bg: guitar,
-      }),
-    ],
   },
 ];
 
