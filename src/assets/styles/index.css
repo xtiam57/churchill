@@ -46,7 +46,7 @@ select {
 }
 
 .fs-xlg {
-  font-size: 1.7em;
+  font-size: 1.6em;
 }
 
 .fs-xl {
@@ -163,11 +163,36 @@ select {
   animation: marquee 15s linear infinite;
 }
 
+.cast-marquee {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(31, 34, 36, 0.8);
+  color: yellow;
+  padding: 10px 0;
+}
+
+.cast-marquee p {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 15s linear infinite;
+  font-size: calc(0.6em + 3vh);
+}
+
 /* Animations */
 
 @keyframes marquee {
-  0%   { transform: translate(0, 0); }
-  100% { transform: translate(-100%, 0); }
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
 }
 
 :root {
@@ -243,4 +268,26 @@ select {
   50% {
     transform: translateX(0);
   }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 20%;
+  }
+}
+
+.anthemns-index.modal .modal-dialog {
+  max-width: calc(100% - 3.5rem) !important;
 }

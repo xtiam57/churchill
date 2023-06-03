@@ -1,10 +1,8 @@
+import { AnimatePresence, motion } from 'framer-motion';
 import React, { useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-
 import { generateGUID } from 'utils';
-
-import { PresenterStyled } from './styled';
 import { process, resizeText } from './helper';
+import { PresenterStyled } from './styled';
 
 const textMotion = {
   initial: { opacity: 0, y: '-100%' },

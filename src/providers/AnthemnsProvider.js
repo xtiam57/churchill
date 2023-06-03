@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react';
 import json from 'assets/data/anthemns';
+import React, { useMemo, useState } from 'react';
 import { Slide } from 'utils';
 
 const AnthemnsContext = React.createContext({});
@@ -111,7 +111,16 @@ function AnthemnsProvider({ children }) {
   const anthemns = useMemo(() => {
     return json.map(
       (
-        { number, title, startsWithChorus, chorus, stanzas, tags, authors },
+        {
+          number,
+          title,
+          startsWithChorus,
+          repeatChorusAtEnd,
+          chorus,
+          stanzas,
+          tags,
+          authors,
+        },
         index
       ) => {
         const slides = [];
@@ -155,6 +164,10 @@ function AnthemnsProvider({ children }) {
           }
         });
 
+        if (repeatChorusAtEnd) {
+          slideIndex = splitLines(id, '(Coro)', chorus, slides, slideIndex);
+        }
+
         slides.push(
           Slide.create({
             id: `${id}_${slideIndex}`,
@@ -169,6 +182,7 @@ function AnthemnsProvider({ children }) {
           index,
           number,
           title: `#${number} ${title}`,
+          name: title,
           type: 'anthemn',
           slides,
           text,

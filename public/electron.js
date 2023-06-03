@@ -56,7 +56,7 @@ function createWindow() {
   });
 
   // Creando carpeta para los himnos
-  fs.mkdirSync(`${app.getPath('userData')}\\himnos`, {
+  fs.mkdirSync(`${app.getPath('documents')}\\Churchill\\Pistas`, {
     recursive: true,
   });
 }

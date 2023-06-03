@@ -17,6 +17,7 @@ import {
   List,
   Title,
   DisplayButton,
+  Alert,
 } from 'components';
 import { useKeyUp, useIterate, usePresenter } from 'hooks';
 import { BROADCAST, MOVEMENT } from 'values';
@@ -95,6 +96,8 @@ export default function TriviaPage() {
           ))}
         </List>
       </Sidebar>
+
+      {presenting ? <Alert presenting={!showLogo} label="preguntas" /> : null}
 
       <Wrapper direction="column" {...settings}>
         <Slider

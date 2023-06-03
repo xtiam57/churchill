@@ -104,7 +104,93 @@ const SETTINGS_INITIAL_STATE = {
   theme: 'default',
   preview: true,
   triviainterval: 20000,
+  alertsinterval: 40000,
   birthdaytimeframe: 3,
+  preachtime: 40,
+  preachyellow: 10,
+  preachred: 0,
+  schedules: [
+    {
+      name: 'Culto General Mañana',
+      day: 'Domingo',
+      daySuffix: 'AM',
+      hour: '11:00',
+      hourSuffix: 'AM',
+      active: true,
+    },
+    {
+      name: 'Culto General Noche',
+      day: 'Domingo',
+      daySuffix: 'PM',
+      hour: '06:30',
+      hourSuffix: 'PM',
+      active: true,
+    },
+    {
+      name: null,
+      day: 'Domingo',
+      daySuffix: '',
+      hour: '01:00',
+      hourSuffix: 'AM',
+      active: false,
+    },
+    {
+      name: null,
+      day: 'Domingo',
+      daySuffix: '',
+      hour: '01:00',
+      hourSuffix: 'AM',
+      active: false,
+    },
+    {
+      name: null,
+      day: 'Domingo',
+      daySuffix: '',
+      hour: '01:00',
+      hourSuffix: 'AM',
+      active: false,
+    },
+    {
+      name: null,
+      day: 'Domingo',
+      daySuffix: '',
+      hour: '01:00',
+      hourSuffix: 'AM',
+      active: false,
+    },
+    {
+      name: null,
+      day: 'Domingo',
+      daySuffix: '',
+      hour: '01:00',
+      hourSuffix: 'AM',
+      active: false,
+    },
+    {
+      name: null,
+      day: 'Domingo',
+      daySuffix: '',
+      hour: '01:00',
+      hourSuffix: 'AM',
+      active: false,
+    },
+    {
+      name: null,
+      day: 'Domingo',
+      daySuffix: '',
+      hour: '01:00',
+      hourSuffix: 'AM',
+      active: false,
+    },
+    {
+      name: null,
+      day: 'Domingo',
+      daySuffix: '',
+      hour: '01:00',
+      hourSuffix: 'AM',
+      active: false,
+    },
+  ],
   ...THEMES['default'],
 };
 
@@ -113,6 +199,8 @@ export const BROADCAST = {
   INITIAL_CHANNEL: null,
   SETTINGS: 'BROADCASTING_SETTINGS',
   INITIAL_SETTINGS: SETTINGS_INITIAL_STATE,
+  ALERT: 'BROADCASTING_ALERT',
+  INITIAL_ALERT: '',
 };
 
 export const CLOCK_POSITION = [
@@ -169,6 +257,13 @@ export const SETTINGS_OPTIONS = {
     { value: 30000, label: '30 segundos' },
     { value: 60000, label: '1 minuto' },
   ],
+  ALERTS_TIME_INTERVALS: [
+    { value: 20000, label: '20 segundos' },
+    { value: 30000, label: '30 segundos' },
+    { value: 40000, label: '40 segundos' },
+    { value: 50000, label: '50 segundos' },
+    { value: 60000, label: '1 minuto' },
+  ],
   BIRTHDAYS_TIME_INTERVALS: [
     { value: 0, label: 'Hoy' },
     { value: 1, label: '1 día' },
@@ -179,5 +274,43 @@ export const SETTINGS_OPTIONS = {
     { value: 6, label: '6 días' },
     { value: 7, label: '1 semana' },
   ],
+  PREACH_TIME: [
+    { value: 60, label: '1 hora' },
+    { value: 45, label: '45 minutos' },
+    { value: 40, label: '40 minutos' },
+    { value: 30, label: '30 minutos' },
+    { value: 15, label: '15 minutos' },
+  ],
+  PREACH_YELLOW: [
+    { value: 15, label: '15 minutos' },
+    { value: 10, label: '10 minutos' },
+    { value: 5, label: '5 minutos' },
+  ],
+  PREACH_RED: [
+    { value: 10, label: '10 minutos' },
+    { value: 5, label: '5 minutos' },
+    { value: 0, label: '0 minutos' },
+  ],
   BACKGROUNDS,
+  DAYS: [
+    { value: 'Domingo', label: 'Domingo' },
+    { value: 'Lunes', label: 'Lunes' },
+    { value: 'Martes', label: 'Martes' },
+    { value: 'Miércoles', label: 'Miércoles' },
+    { value: 'Jueves', label: 'Jueves' },
+    { value: 'Viernes', label: 'Viernes' },
+    { value: 'Sábado', label: 'Sábado' },
+  ],
+  HOURS: Array(12)
+    .fill(0)
+    .map((_, i) => {
+      return Array(12)
+        .fill(0)
+        .map((_, j) => {
+          return `${(i + 1).toString().padStart(2, '0')}:${(j * 5)
+            .toString()
+            .padStart(2, '0')}`;
+        });
+    })
+    .flat(),
 };

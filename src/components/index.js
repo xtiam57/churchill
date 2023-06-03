@@ -1,3 +1,4 @@
+export * from './alert';
 export * from './bookmark';
 export * from './bookmarkList';
 export * from './controls';
@@ -9,6 +10,7 @@ export * from './logo';
 export * from './logoPreview';
 export * from './navbar';
 export * from './presenter';
+export * from './semaphore';
 export * from './settings';
 export * from './sidebar';
 export * from './slider';

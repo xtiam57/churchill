@@ -11,8 +11,6 @@ export const PresenterStyled = styled.section`
   padding: 4em;
   text-align: center;
   border: 1px solid var(--dark);
-  /* border: ${({ live, background }) =>
-    live ? 'solid 4px var(--warning)' : `solid 1px ${background}`}; */
   filter: ${({ grayscale }) => `grayscale(${grayscale ? 1 : 0})`};
   backdrop-filter: ${({ blur, grayscale }) =>
     blur
@@ -23,6 +21,11 @@ export const PresenterStyled = styled.section`
     '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"'};
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+
+  background-image: ${({ bg }) => (bg ? `url(${bg})` : 'none')};
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   /* &:before,
   &:after {
@@ -48,6 +51,7 @@ export const PresenterStyled = styled.section`
     font-size: calc(1.4em + 3vh);
     margin: 0;
     color: ${({ textcolor }) => textcolor || '#000'};
+    width: 100%;
 
     strong {
       color: ${({ titlecolor }) => titlecolor || '#007bff'} !important;

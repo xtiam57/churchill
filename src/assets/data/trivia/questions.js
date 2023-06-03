@@ -550,7 +550,7 @@ export const questions = [
   {
     difficulty: 'MEDIUM',
     question:
-      '¿Cuántas veces pasó el pueblo de Israel por aguas que se abrieron?,',
+      '¿Cuántas veces pasó el pueblo de Israel por aguas que se abrieron?',
     options: ['Dos veces', 'Una vez', 'Tres veces', 'Siete veces'],
     reference: 'Éxodo 14 y Josué 3',
   },

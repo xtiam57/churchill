@@ -12,6 +12,7 @@ import {
   List,
   Title,
   DisplayButton,
+  Alert,
 } from 'components';
 import { useBirthday, usePresenter } from 'hooks';
 import { Time } from 'utils';
@@ -123,6 +124,8 @@ export default function BirthdaysPage() {
           ))}
         </List>
       </Sidebar>
+
+      {presenting ? <Alert presenting={!showLogo} label="cumpleaños" /> : null}
 
       <Wrapper direction="column" {...settings}>
         <Presenter

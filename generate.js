@@ -17,6 +17,7 @@ fs.readFile('./himnario.txt', 'utf8', (err, data) => {
       chorus: null,
       stanzas: [],
       startsWithChorus: false,
+      repeatChorusAtEnd: false,
       authors: null,
       tags: null,
     };
@@ -39,6 +40,8 @@ fs.readFile('./himnario.txt', 'utf8', (err, data) => {
         } else if (lines[0].includes('@TAGS')) {
           lines.shift();
           item.tags = lines.join(',');
+        } else if (lines[0].includes('@REPETIR_CORO_AL_FINAL')) {
+          item.repeatChorusAtEnd = true;
         } else {
           item.stanzas.push(lines.join('/n'));
         }
