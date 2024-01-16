@@ -1,5 +1,5 @@
 {
-  "name": "churchill-torre-fuerte",
+  "name": "churchill-monte-horeb-mx",
   "version": "3.0.1",
   "description": "Sistema de proyección para Iglesias.",
   "author": "xtiam57",
@@ -44,7 +44,7 @@
     "react-test": "react-scripts test",
     "react-eject": "react-scripts eject",
     "generate": "node generate.js",
-    "build": "yarn generate && rimraf dist && yarn react-build && electron-builder",
+    "build": "rimraf dist && yarn react-build && electron-builder",
     "start": "concurrently \"yarn generate\" \"set BROWSER=none && yarn run react-start\" \"wait-on http://localhost:3000 && set ELECTRON_START_URL=http://localhost:3000 && electron .\""
   },
   "eslintConfig": {
