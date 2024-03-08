@@ -1,18 +1,9 @@
 import AnthemnsPage from 'pages/anthemns';
 import BirthdaysPage from 'pages/birthdays';
 import CastPage from 'pages/cast';
-import CountdownPage from 'pages/countdown';
 import HomePage from 'pages/home';
 import ScripturesPage from 'pages/scriptures';
-import TriviaPage from 'pages/trivia';
-import {
-  BsBook,
-  BsClock,
-  BsGift,
-  BsHouseFill,
-  BsMusicNoteList,
-  BsQuestionCircle,
-} from 'react-icons/bs';
+import { BsBook, BsGift, BsHouseFill, BsMusicNoteList } from 'react-icons/bs';
 
 export const PATHS = {
   ROOT: '/',
@@ -70,26 +61,26 @@ export const routes = flatten([
     component: CastPage,
     label: 'Proyectar',
   },
-  {
-    key: PATHS.COUNTDOWN_PAGE,
-    exact: true,
-    path: PATHS.COUNTDOWN_PAGE,
-    component: CountdownPage,
-    icon: <BsClock />,
-    label: 'Temporizador',
-    menu: true,
-    showLabel: false,
-  },
-  {
-    key: PATHS.TRIVIA_PAGE,
-    exact: true,
-    path: PATHS.TRIVIA_PAGE,
-    component: TriviaPage,
-    icon: <BsQuestionCircle />,
-    label: 'Trivia',
-    menu: true,
-    showLabel: false,
-  },
+  // {
+  //   key: PATHS.COUNTDOWN_PAGE,
+  //   exact: true,
+  //   path: PATHS.COUNTDOWN_PAGE,
+  //   component: CountdownPage,
+  //   icon: <BsClock />,
+  //   label: 'Temporizador',
+  //   menu: true,
+  //   showLabel: false,
+  // },
+  // {
+  //   key: PATHS.TRIVIA_PAGE,
+  //   exact: true,
+  //   path: PATHS.TRIVIA_PAGE,
+  //   component: TriviaPage,
+  //   icon: <BsQuestionCircle />,
+  //   label: 'Trivia',
+  //   menu: true,
+  //   showLabel: false,
+  // },
 ]);
 
 function flatten(routes) {

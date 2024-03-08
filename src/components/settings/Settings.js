@@ -306,8 +306,8 @@ export function Settings() {
           <Form.Control
             as="select"
             size="sm"
-            value={settings?.mode}
-            name="mode"
+            value={settings?.color}
+            name="color"
             onChange={handleChangeValue}
           >
             <option value="default">Normal</option>
@@ -317,7 +317,7 @@ export function Settings() {
       </Form.Row>
 
       <LogoPreview className="my-2" {...settings}>
-        <Logo width="80%" height="80%" {...settings} />
+        <Logo height="80%" {...settings} />
       </LogoPreview>
 
       <hr />

@@ -291,3 +291,20 @@ select {
 .anthemns-index.modal .modal-dialog {
   max-width: calc(100% - 3.5rem) !important;
 }
+
+/* :root {
+  --primary: #253551;
+  --warning: #FF8A65;
+}
+
+.bg-primary {
+  background-color: var(--primary) !important;
+}
+
+.bg-warning {
+  background-color: var(--warning) !important;
+}
+
+.text-warning {
+    color: var(--warning) !important;
+} */

@@ -102,3 +102,26 @@ export const PresenterStyled = styled.section`
     }
   }
 `;
+
+export const CornerStyled = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: ${({ font }) =>
+    font ||
+    '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"'};
+
+  position: absolute;
+  top: 3%;
+  right: 2%;
+  /* transform: translateX(50%); */
+
+  p {
+    font-size: calc(0.1em + 2.3vh);
+    margin: 0;
+    color: ${({ textcolor }) => textcolor || '#000'};
+    width: 100%;
+    line-height: 1;
+  }
+`;

@@ -27,7 +27,7 @@ import {
 } from 'react-icons/im';
 import createPersistedState from 'use-persisted-state';
 import useSound from 'use-sound';
-import { getBookmarkedItems, Storage } from 'utils';
+import { Storage, getBookmarkedItems } from 'utils';
 import { BROADCAST, MOVEMENT } from 'values';
 import { AnthemnIndex } from './AnthemnIndex';
 import { AnthemnTags } from './AnthemnTags';
@@ -253,21 +253,22 @@ export default function AnthemnsPage() {
           para cambiar de himno.
         </Slider>
 
-        <div className="p-2" style={{ backgroundColor: '#20232a' }}>
-          <Form.Control
-            type="range"
-            name="position"
-            value={trackProgress}
-            min="0"
-            max={Math.floor(sound?.duration())}
-            step="1"
-            onChange={({ target }) => {
-              sound?.seek(+target.value);
-              setTrackProgress(+target.value);
-              // +target.value;
-            }}
-          />
-        </div>
+        {isMP3Loaded && (
+          <div className="p-2" style={{ backgroundColor: '#20232a' }}>
+            <Form.Control
+              type="range"
+              name="position"
+              value={trackProgress}
+              min="0"
+              max={Math.floor(sound?.duration())}
+              step="1"
+              onChange={({ target }) => {
+                sound?.seek(+target.value);
+                setTrackProgress(+target.value);
+              }}
+            />
+          </div>
+        )}
 
         <Controls>
           {isMP3Loaded ? (
@@ -304,7 +305,7 @@ export default function AnthemnsPage() {
               >
                 /himnos
               </strong>{' '}
-              con el nombre <strong>{current.number}.mp3</strong>.
+              con el nombre <strong>{current.number}.mp3</strong>
             </small>
           )}
 

@@ -2,6 +2,7 @@ export * from './alert';
 export * from './bookmark';
 export * from './bookmarkList';
 export * from './controls';
+export * from './countdown';
 export * from './displayButton';
 export * from './finder/Finder';
 export * from './finderButton';

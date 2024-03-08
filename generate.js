@@ -9,7 +9,7 @@ fs.readFile('./himnario.txt', 'utf8', (err, data) => {
   const json = [];
 
   songs.forEach((song, index) => {
-    const parts = song.split('***\n').filter((part) => part !== '');
+    const parts = song.split('***\r\n').filter((part) => part !== '');
 
     const item = {
       number: 0,
@@ -23,7 +23,7 @@ fs.readFile('./himnario.txt', 'utf8', (err, data) => {
     };
 
     parts.forEach((part, index) => {
-      const lines = part.split('\n').filter((line) => line !== '');
+      const lines = part.split('\r\n').filter((line) => line !== '');
 
       if (index === 0) {
         let title = lines.join().replace('## ', '').replace('.', '');

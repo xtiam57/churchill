@@ -1,4 +1,4 @@
-import { Semaphore } from 'components';
+import { Countdown, Logo } from 'components';
 import { usePresenter, useSettingsSidebar } from 'hooks';
 import { useCallback, useState } from 'react';
 import { Button } from 'react-bootstrap';
@@ -46,9 +46,13 @@ export function Navbar() {
     <>
       <nav className={styles}>
         <div className="container-fluid">
-          <NavLink exact to="/">
-            <span className="navbar-brand">Churchill</span>
-          </NavLink>
+          <span className="navbar-brand d-flex align-items-center text-warning">
+            <Logo
+              height={24}
+              logo="horizontal"
+              color={presenting ? '#20232a' : '#fff'}
+            />
+          </span>
 
           <ul className="navbar-nav mr-auto">
             <li
@@ -109,8 +113,12 @@ export function Navbar() {
           ) : null}
 
           <span className="mr-3">
-            <Semaphore />
+            <Countdown />
           </span>
+
+          {/* <span className="mr-3">
+            <Semaphore />
+          </span> */}
 
           <Button
             onClick={toggle}

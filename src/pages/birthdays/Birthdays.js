@@ -1,18 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import createPersistedState from 'use-persisted-state';
 import { ImUserPlus } from 'react-icons/im';
 import { RiCloseFill } from 'react-icons/ri';
+import createPersistedState from 'use-persisted-state';
 
 import {
-  Wrapper,
-  Presenter,
-  Controls,
-  Sidebar,
-  List,
-  Title,
-  DisplayButton,
   Alert,
+  DisplayButton,
+  List,
+  Presenter,
+  Sidebar,
+  Title,
+  Wrapper,
 } from 'components';
 import { useBirthday, usePresenter } from 'hooks';
 import { Time } from 'utils';
@@ -66,6 +65,16 @@ export default function BirthdaysPage() {
           presenting={presenting}
           onToggle={setShowLogo}
         />
+
+        <Button
+          block
+          size="lg"
+          onClick={() => setShowModal(true)}
+          variant="primary"
+          className="mb-4"
+        >
+          <ImUserPlus /> Agregar
+        </Button>
 
         <List className="mb-4">
           {recent.length ? (
@@ -137,17 +146,11 @@ export default function BirthdaysPage() {
           {...settings}
         />
 
-        <Controls centered>
-          <Button onClick={() => setShowModal(true)} variant="secondary">
-            <ImUserPlus /> Agregar
-          </Button>
-
-          <BirthdayModal
-            show={showModal}
-            handleClose={() => setShowModal(false)}
-            handleSave={handleSave}
-          />
-        </Controls>
+        <BirthdayModal
+          show={showModal}
+          handleClose={() => setShowModal(false)}
+          handleSave={handleSave}
+        />
       </Wrapper>
     </Wrapper>
   );

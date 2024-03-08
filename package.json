@@ -1,6 +1,6 @@
 {
-  "name": "churchill-calvario",
-  "version": "3.0.1",
+  "name": "churchill",
+  "version": "4.0.0",
   "description": "Sistema de proyección para Iglesias.",
   "author": "xtiam57",
   "private": true,
@@ -17,6 +17,15 @@
     ]
   },
   "homepage": "./",
+  "scripts": {
+    "react-start": "react-scripts start",
+    "react-build": "react-scripts build",
+    "react-test": "react-scripts test",
+    "react-eject": "react-scripts eject",
+    "generate": "node generate.js",
+    "build": "yarn generate && rimraf dist && yarn react-build && electron-builder",
+    "start": "concurrently \"set BROWSER=none && yarn run react-start\" \"wait-on http://localhost:3000 && set ELECTRON_START_URL=http://localhost:3000 && electron .\""
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -32,20 +41,19 @@
     "react-icons": "^4.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
+    "sass": "^1.71.1",
     "styled-components": "^5.2.1",
     "styled-system": "^5.1.5",
     "use-persisted-state": "^0.3.3",
     "use-sound": "^2.0.1",
     "web-vitals": "^0.2.4"
   },
-  "scripts": {
-    "react-start": "react-scripts start",
-    "react-build": "react-scripts build",
-    "react-test": "react-scripts test",
-    "react-eject": "react-scripts eject",
-    "generate": "node generate.js",
-    "build": "yarn generate && rimraf dist && yarn react-build && electron-builder",
-    "start": "concurrently \"yarn generate\" \"set BROWSER=none && yarn run react-start\" \"wait-on http://localhost:3000 && set ELECTRON_START_URL=http://localhost:3000 && electron .\""
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "electron": "^11.2.2",
+    "electron-builder": "^22.9.1",
+    "rimraf": "^3.0.2",
+    "wait-on": "^5.2.1"
   },
   "eslintConfig": {
     "extends": [
@@ -64,12 +72,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "concurrently": "^5.3.0",
-    "electron": "^11.2.2",
-    "electron-builder": "^22.9.1",
-    "rimraf": "^3.0.2",
-    "wait-on": "^5.2.1"
   }
 }

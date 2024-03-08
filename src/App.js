@@ -1,19 +1,18 @@
-import React from 'react';
 import { HashRouter as Router } from 'react-router-dom';
 
+import { Navbar, Settings } from 'components';
 import {
   AnthemnsProvider,
   AppProvider,
+  BirthdaysProvider,
   PresenterProvider,
   ScripturesProvider,
-  BirthdaysProvider,
 } from 'providers';
-import { Navbar, Settings } from 'components';
 import { RouteMapper } from 'router';
 
 // CSS
-import 'bootstrap/dist/css/bootstrap.css';
 import 'react-bootstrap-typeahead/css/Typeahead.css';
+import './assets/styles/custom.scss';
 import './assets/styles/index.css';
 
 function App() {

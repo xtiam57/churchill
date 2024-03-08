@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 import { PATHS } from 'router';
 
 const PresenterContext = React.createContext({});
@@ -55,7 +55,7 @@ const PresenterProvider = ({ children }) => {
         });
 
         // Open the DevTools.
-        // win.webContents.openDevTools();
+        win.webContents.openDevTools();
 
         win.loadURL(url.replace(/#.*$/, `#${PATHS.CAST_PAGE}`));
 
