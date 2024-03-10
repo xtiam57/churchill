@@ -1,11 +1,15 @@
+import {
+  CancelPresentation,
+  Chat,
+  Settings,
+  Slideshow,
+} from '@mui/icons-material';
 import { Countdown, Logo } from 'components';
 import { usePresenter, useSettingsSidebar } from 'hooks';
 import { useCallback, useState } from 'react';
 import { Button } from 'react-bootstrap';
-import { BsChatDotsFill, BsFillGearFill, BsHouseFill } from 'react-icons/bs';
-import { RiComputerLine, RiSlideshow2Fill } from 'react-icons/ri';
-import { NavLink, useLocation } from 'react-router-dom';
-import { PATHS, routes } from 'router';
+import { useLocation } from 'react-router-dom';
+import { PATHS } from 'router';
 import createPersistedState from 'use-persisted-state';
 import { BROADCAST } from 'values';
 import { AlertMessageModal } from './modal';
@@ -39,23 +43,22 @@ export function Navbar() {
   }
 
   const styles = `navbar navbar-expand-lg sticky-top ${
-    presenting ? 'navbar-light bg-warning' : 'navbar-dark bg-primary'
+    presenting ? 'navbar-light bg-secondary' : 'navbar-dark bg-primary'
   }`;
 
   return (
     <>
-      <nav className={styles}>
+      <nav style={{ gridArea: 'navbar' }} className={styles}>
         <div className="container-fluid">
-          <span className="navbar-brand d-flex align-items-center text-warning">
+          <span className="navbar-brand d-flex align-items-center">
             <Logo
               height={24}
               logo="horizontal"
               color={presenting ? '#20232a' : '#fff'}
             />
           </span>
-
           <ul className="navbar-nav mr-auto">
-            <li
+            {/* <li
               className="nav-item d-flex align-items-center justify-content-center"
               style={{ width: '42px', height: '38px' }}
             >
@@ -65,16 +68,16 @@ export function Navbar() {
                 className="nav-link"
                 activeClassName="active"
               >
-                <BsHouseFill />
+                <Newspaper />
               </NavLink>
-            </li>
+            </li> */}
             <li className="nav-item">
               <Button
                 onClick={toggleSettings}
                 className={presenting ? 'text-dark' : 'text-light'}
                 variant="link"
               >
-                <BsFillGearFill />
+                <Settings />
               </Button>
             </li>
             <li className="nav-item">
@@ -85,11 +88,11 @@ export function Navbar() {
                 className={presenting ? 'text-dark' : 'text-light'}
                 variant="link"
               >
-                <BsChatDotsFill />
+                <Chat />
               </Button>
             </li>
 
-            {routes
+            {/* {routes
               .filter((route) => route.menu)
               .map((route, index) => (
                 <li key={index} className="nav-item">
@@ -103,9 +106,8 @@ export function Navbar() {
                     {route.showLabel && <span> {route.label}</span>}
                   </NavLink>
                 </li>
-              ))}
+              ))} */}
           </ul>
-
           {alert ? (
             <div className="marquee mr-3" style={{ maxWidth: '250px' }}>
               <p className="m-0">{alert}</p>
@@ -119,12 +121,12 @@ export function Navbar() {
           {/* <span className="mr-3">
             <Semaphore />
           </span> */}
-
           <Button
             onClick={toggle}
-            variant={presenting ? 'outline-dark' : 'outline-light'}
+            variant={presenting ? 'outline-dark' : 'secondary'}
+            title="Iniciar proyección"
           >
-            {presenting ? <RiComputerLine /> : <RiSlideshow2Fill />}
+            {presenting ? <CancelPresentation /> : <Slideshow />}
           </Button>
         </div>
       </nav>

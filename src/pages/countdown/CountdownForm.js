@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Button, Form, Col } from 'react-bootstrap';
-import { ImPlay3 } from 'react-icons/im';
+import { PlayArrow } from '@mui/icons-material';
+import { useState } from 'react';
+import { Button, Col, Form } from 'react-bootstrap';
 
 export function CountdownForm({ onSubmit = () => {} }) {
   const [minutes, setMinutes] = useState(0);
@@ -47,7 +47,7 @@ export function CountdownForm({ onSubmit = () => {} }) {
       <Form.Row>
         <Col>
           <Button type="submit" className="mb-4" block variant="primary">
-            <ImPlay3 /> Iniciar
+            <PlayArrow /> Iniciar
           </Button>
         </Col>
       </Form.Row>

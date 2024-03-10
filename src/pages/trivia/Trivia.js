@@ -1,27 +1,19 @@
-import React, { useState, useRef, useEffect } from 'react';
-import createPersistedState from 'use-persisted-state';
-import { Button, ButtonGroup } from 'react-bootstrap';
+import { East, Pause, PlayArrow, Repeat, West } from '@mui/icons-material';
 import {
-  ImPause2,
-  ImPlay3,
-  ImArrowLeft2,
-  ImArrowRight2,
-  ImLoop,
-} from 'react-icons/im';
-
-import {
-  Slider,
-  Sidebar,
-  Wrapper,
-  Controls,
-  List,
-  Title,
-  DisplayButton,
   Alert,
+  Controls,
+  DisplayButton,
+  List,
+  Sidebar,
+  Slider,
+  Title,
+  Wrapper,
 } from 'components';
-import { useKeyUp, useIterate, usePresenter } from 'hooks';
+import { useIterate, useKeyUp, usePresenter } from 'hooks';
+import { useEffect, useRef, useState } from 'react';
+import { Button, ButtonGroup } from 'react-bootstrap';
+import createPersistedState from 'use-persisted-state';
 import { BROADCAST, MOVEMENT } from 'values';
-
 import { QUESTIONS } from './data';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
@@ -116,21 +108,21 @@ export default function TriviaPage() {
           <ButtonGroup className="mx-2">
             {autoplay ? (
               <Button onClick={() => setAutoplay(false)} variant="light">
-                <ImPause2 />
+                <Pause />
               </Button>
             ) : (
               <Button onClick={() => setAutoplay(true)} variant="secondary">
-                <ImPlay3 />
+                <PlayArrow />
               </Button>
             )}
           </ButtonGroup>
 
           <ButtonGroup>
             <Button onClick={handlePrevSlide} variant="secondary">
-              <ImArrowLeft2 />
+              <West />
             </Button>
             <Button onClick={handleNextSlide} variant="secondary">
-              <ImArrowRight2 />
+              <East />
             </Button>
           </ButtonGroup>
 
@@ -139,7 +131,7 @@ export default function TriviaPage() {
               onClick={() => setLoop((state) => !state)}
               variant={loop ? 'light' : 'secondary'}
             >
-              <ImLoop />
+              <Repeat />
             </Button>
           </ButtonGroup>
         </Controls>

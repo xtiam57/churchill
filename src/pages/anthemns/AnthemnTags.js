@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 import { List } from 'components';
+import { useState } from 'react';
 
 import { useAnthemn } from 'hooks';
 
@@ -64,7 +64,7 @@ export function AnthemnTags({ onClick = () => {}, current }) {
             <List.Action
               onClick={() => onClick([item])}
               title={item?.text.replaceAll('/n', '\n')}
-              className={current.id === item.id ? 'text-warning' : ''}
+              className={current.id === item.id ? 'text-light' : ''}
             >
               {item.title}
             </List.Action>

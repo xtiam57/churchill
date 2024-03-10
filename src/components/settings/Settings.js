@@ -1,15 +1,15 @@
+import {
+  Close,
+  Download,
+  ExpandLess,
+  ExpandMore,
+  Favorite,
+  FileUpload,
+} from '@mui/icons-material';
 import { Logo, LogoPreview, Sidebar, TextPreview } from 'components';
 import { usePresenter, useSettingsSidebar } from 'hooks';
 import { useState } from 'react';
-import { Button, Col, Form, InputGroup } from 'react-bootstrap';
-import {
-  BsChevronDown,
-  BsChevronUp,
-  BsDownload,
-  BsHeartFill,
-  BsUpload,
-} from 'react-icons/bs';
-import { MdClose } from 'react-icons/md';
+import { Button, Col, Form, InputGroup, Row } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
 import { Storage } from 'utils';
 import { BROADCAST, SETTINGS_OPTIONS, THEMES } from 'values';
@@ -90,7 +90,12 @@ export function Settings() {
   // });
 
   return (
-    <Sidebar light closable className={showingSettings ? '' : 'closed'}>
+    <Sidebar
+      light
+      closable
+      className={showingSettings ? '' : 'closed'}
+      size={620}
+    >
       <h1 className="display-4">Ajustes</h1>
       <Button
         className="p-0 text-dark"
@@ -98,8 +103,115 @@ export function Settings() {
         style={{ position: 'absolute', top: 13, right: 15 }}
         onClick={toggleSettings}
       >
-        <MdClose />
+        <Close />
       </Button>
+
+      <Row>
+        {/* Logo */}
+        <Col xs={6}>
+          <Form.Row className="mb-2">
+            <Form.Group as={Col} className="mb-1">
+              <Form.Label className=" small mb-1">Logo </Form.Label>
+
+              <Form.Control
+                as="select"
+                size="sm"
+                name="logo"
+                value={settings?.logo}
+                onChange={handleChangeValue}
+              >
+                {SETTINGS_OPTIONS.LOGOS.map(({ value, label }) => (
+                  <option key={value} value={value}>
+                    {label}
+                  </option>
+                ))}
+              </Form.Control>
+            </Form.Group>
+
+            <Form.Group as={Col} className="mb-1">
+              <Form.Label className=" small mb-1">Modo</Form.Label>
+              <Form.Control
+                as="select"
+                size="sm"
+                value={settings?.color}
+                name="color"
+                onChange={handleChangeValue}
+              >
+                <option value="default">Normal</option>
+                <option value="#ffffff">Negativo</option>
+              </Form.Control>
+            </Form.Group>
+          </Form.Row>
+
+          <LogoPreview {...settings}>
+            <Logo height="80%" {...settings} />
+          </LogoPreview>
+        </Col>
+
+        {/* Fond */}
+        <Col xs={6}>
+          <Form.Row className="mb-0">
+            <Form.Group as={Col}>
+              <Form.Label className="small mb-1 d-flex justify-content-between">
+                Fondo
+                <a href=" " onClick={handleRandomBackground}>
+                  (Aleatorio)
+                </a>
+              </Form.Label>
+              <Form.Control
+                size="sm"
+                as="select"
+                value={settings?.image}
+                name="image"
+                onChange={handleChangeValue}
+              >
+                {SETTINGS_OPTIONS.BACKGROUNDS.map(({ value, label }) => (
+                  <option key={value} value={value}>
+                    {label}
+                  </option>
+                ))}
+              </Form.Control>
+            </Form.Group>
+          </Form.Row>
+
+          <TextPreview hideText {...settings} />
+
+          {settings?.image ? (
+            <Form.Row>
+              <Form.Group as={Col} className="mb-0">
+                <Form.Label className="small mb-1">
+                  Difuminado del Fondo (
+                  {Number.parseFloat(settings?.blur).toFixed(1)})
+                </Form.Label>
+                <Form.Control
+                  custom
+                  type="range"
+                  min="0"
+                  max="20"
+                  step="1"
+                  name="blur"
+                  value={settings?.blur}
+                  onChange={handleChangeNumericValue}
+                />
+              </Form.Group>
+            </Form.Row>
+          ) : (
+            <Form.Row>
+              <Form.Group as={Col} className="mb-0">
+                <Form.Label className=" small mb-1">Fondo</Form.Label>
+                <Form.Control
+                  size="sm"
+                  type="color"
+                  name="background"
+                  value={settings?.background}
+                  onChange={handleChangeValue}
+                />
+              </Form.Group>
+              <Col />
+            </Form.Row>
+          )}
+        </Col>
+      </Row>
 
       <Form.Row>
         <Form.Group as={Col} className="mb-1">
@@ -221,104 +333,7 @@ export function Settings() {
 
       <hr />
 
-      <Form.Row>
-        <Form.Group as={Col} className="mb-2">
-          <Form.Label className="small my-2 d-flex justify-content-between">
-            Fondo
-            <a href=" " onClick={handleRandomBackground}>
-              (Aleatorio)
-            </a>
-          </Form.Label>
-          <Form.Control
-            size="sm"
-            as="select"
-            value={settings?.image}
-            name="image"
-            onChange={handleChangeValue}
-          >
-            {SETTINGS_OPTIONS.BACKGROUNDS.map(({ value, label }) => (
-              <option key={value} value={value}>
-                {label}
-              </option>
-            ))}
-          </Form.Control>
-        </Form.Group>
-      </Form.Row>
-
-      {settings?.image ? (
-        <Form.Row>
-          <Form.Group as={Col} className="mb-0">
-            <Form.Label className="small mb-1">
-              Difuminado del Fondo (
-              {Number.parseFloat(settings?.blur).toFixed(1)})
-            </Form.Label>
-            <Form.Control
-              custom
-              type="range"
-              min="0"
-              max="20"
-              step="1"
-              name="blur"
-              value={settings?.blur}
-              onChange={handleChangeNumericValue}
-            />
-          </Form.Group>
-        </Form.Row>
-      ) : (
-        <Form.Row>
-          <Form.Group as={Col} className="mb-0">
-            <Form.Label className=" small mb-1">Fondo</Form.Label>
-            <Form.Control
-              size="sm"
-              type="color"
-              name="background"
-              value={settings?.background}
-              onChange={handleChangeValue}
-            />
-          </Form.Group>
-          <Col />
-        </Form.Row>
-      )}
-
       <hr />
-
-      <Form.Row>
-        <Form.Group as={Col} className="mb-1">
-          <Form.Label className=" small mb-1">Logo </Form.Label>
-
-          <Form.Control
-            as="select"
-            size="sm"
-            name="logo"
-            value={settings?.logo}
-            onChange={handleChangeValue}
-          >
-            {SETTINGS_OPTIONS.LOGOS.map(({ value, label }) => (
-              <option key={value} value={value}>
-                {label}
-              </option>
-            ))}
-          </Form.Control>
-        </Form.Group>
-
-        <Form.Group as={Col} className="mb-1">
-          <Form.Label className=" small mb-1">Modo</Form.Label>
-          <Form.Control
-            as="select"
-            size="sm"
-            value={settings?.color}
-            name="color"
-            onChange={handleChangeValue}
-          >
-            <option value="default">Normal</option>
-            <option value="#ffffff">Negativo</option>
-          </Form.Control>
-        </Form.Group>
-      </Form.Row>
-
-      <LogoPreview className="my-2" {...settings}>
-        <Logo height="80%" {...settings} />
-      </LogoPreview>
 
       <hr />
 
@@ -330,7 +345,7 @@ export function Settings() {
           setExpanded((value) => !value);
         }}
       >
-        Horarios {expanded ? <BsChevronUp /> : <BsChevronDown />}
+        Horarios {expanded ? <ExpandLess /> : <ExpandMore />}
       </Button>
 
       {expanded ? (
@@ -645,7 +660,7 @@ export function Settings() {
             Exportar datos del usuario
           </Form.Label>
           <Button variant="outline-primary" block onClick={handleExport}>
-            <BsDownload /> Exportar
+            <Download /> Exportar
           </Button>
         </Form.Group>
       </Form.Row>
@@ -675,7 +690,7 @@ export function Settings() {
               onClick={handleImport}
               disabled={!file}
             >
-              <BsUpload /> Importar
+              <FileUpload /> Importar
             </Button>
           </Form.Group>
         </Form.Row>
@@ -692,8 +707,8 @@ export function Settings() {
       <hr />
 
       <small className="d-block text-center text-muted mt-4">
-        Hecho con <BsHeartFill className="text-danger pulse" /> para Dios y su
-        Iglesia. <br />
+        Hecho con <Favorite fontSize="small" className="text-danger pulse" />{' '}
+        para Dios y su Iglesia. <br />
         Por Christiam Mena (@xtiam57). <br />
         <a href="mailto:christiam.mena@gmail.com">christiam.mena@gmail.com</a>
       </small>

@@ -1,14 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
-import { Button, ButtonGroup } from 'react-bootstrap';
-import {
-  ImArrowLeft2,
-  ImArrowRight2,
-  ImLoop,
-  ImPause2,
-  ImPlay3,
-} from 'react-icons/im';
-import createPersistedState from 'use-persisted-state';
-
+import { East, Pause, PlayArrow, Repeat, West } from '@mui/icons-material';
 import {
   Alert,
   Controls,
@@ -20,6 +10,9 @@ import {
   Wrapper,
 } from 'components';
 import { useBirthday, useIterate, useKeyUp, usePresenter } from 'hooks';
+import { useEffect, useRef, useState } from 'react';
+import { Button, ButtonGroup } from 'react-bootstrap';
+import createPersistedState from 'use-persisted-state';
 import { Slide } from 'utils';
 import { BROADCAST, MOVEMENT } from 'values';
 import { getNotices } from './data';
@@ -145,31 +138,31 @@ export default function HomePage() {
         <Controls centered>
           <ButtonGroup className="mx-2">
             {autoplay ? (
-              <Button onClick={() => setAutoplay(false)} variant="light">
-                <ImPause2 />
+              <Button onClick={() => setAutoplay(false)} variant="secondary">
+                <Pause />
               </Button>
             ) : (
-              <Button onClick={() => setAutoplay(true)} variant="secondary">
-                <ImPlay3 />
+              <Button onClick={() => setAutoplay(true)} variant="dark">
+                <PlayArrow />
               </Button>
             )}
           </ButtonGroup>
 
           <ButtonGroup>
-            <Button onClick={handlePrevSlide} variant="secondary">
-              <ImArrowLeft2 />
+            <Button onClick={handlePrevSlide} variant="primary">
+              <West />
             </Button>
-            <Button onClick={handleNextSlide} variant="secondary">
-              <ImArrowRight2 />
+            <Button onClick={handleNextSlide} variant="primary">
+              <East />
             </Button>
           </ButtonGroup>
 
           <ButtonGroup className="mx-2">
             <Button
               onClick={() => setLoop((state) => !state)}
-              variant={loop ? 'light' : 'secondary'}
+              variant={loop ? 'secondary' : 'dark'}
             >
-              <ImLoop />
+              <Repeat />
             </Button>
           </ButtonGroup>
         </Controls>

@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { BsBookmarkPlus, BsBookmarkFill } from 'react-icons/bs';
-
-import { BookmarkStyled } from './styled';
-import { Storage, getBookmarkedItems } from 'utils';
+import { BookmarkAddOutlined, BookmarkOutlined } from '@mui/icons-material';
 import { useKeyUp } from 'hooks';
+import { useEffect, useState } from 'react';
+import { Storage, getBookmarkedItems } from 'utils';
+import { BookmarkStyled } from './styled';
 
 export const createKey = ({ id, type }) => `${type}_${id}_bookmarked`;
 
@@ -51,9 +50,15 @@ export function Bookmark({
       {...rest}
     >
       {bookmarked ? (
-        <BsBookmarkFill onClick={remove} />
+        <BookmarkOutlined
+          fontSize={icon ? 'small' : undefined}
+          onClick={remove}
+        />
       ) : (
-        <BsBookmarkPlus onClick={add} />
+        <BookmarkAddOutlined
+          fontSize={icon ? 'small' : undefined}
+          onClick={add}
+        />
       )}
     </BookmarkStyled>
   );

@@ -36,7 +36,7 @@ const AnthemnIndexStyled = styledComponents.div`
         }
 
         &:hover {
-          background-color: var(--secondary);
+          background-color: var(--gray);
           > span {
             color: #fff;
           }
@@ -105,7 +105,7 @@ export function AnthemnIndex({
       return (
         <li key={index}>
           <span title={item?.text?.replaceAll('/n', '\n').replaceAll('_', '')}>
-            <span className="number text-warning">#{item.number}</span>
+            <span className="number text-light">#{item.number}</span>
             <span className="name" onClick={() => onSelect(item)}>
               {item.name}
             </span>

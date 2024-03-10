@@ -1,6 +1,5 @@
-import React from 'react';
+import { Search } from '@mui/icons-material';
 import { Button } from 'react-bootstrap';
-import { ImSearch } from 'react-icons/im';
 
 export function FinderButton({ onOpen = () => {}, extraButton = null }) {
   return (
@@ -14,11 +13,11 @@ export function FinderButton({ onOpen = () => {}, extraButton = null }) {
 
         <Button
           variant="link"
-          className="text-light p-0 text-small"
+          className="text-white p-0 text-small"
           onClick={(e) => onOpen(true)}
           title="Búsqueda avanzada (Ctrl+B)"
         >
-          <ImSearch />
+          <Search fontSize="small" />
         </Button>
       </div>
     </div>

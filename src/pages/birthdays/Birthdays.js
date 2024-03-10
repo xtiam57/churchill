@@ -1,9 +1,4 @@
-import { useEffect, useState } from 'react';
-import { Button, Form } from 'react-bootstrap';
-import { ImUserPlus } from 'react-icons/im';
-import { RiCloseFill } from 'react-icons/ri';
-import createPersistedState from 'use-persisted-state';
-
+import { PersonAddAlt, RemoveCircle } from '@mui/icons-material';
 import {
   Alert,
   DisplayButton,
@@ -14,9 +9,11 @@ import {
   Wrapper,
 } from 'components';
 import { useBirthday, usePresenter } from 'hooks';
+import { useEffect, useState } from 'react';
+import { Button, Form } from 'react-bootstrap';
+import createPersistedState from 'use-persisted-state';
 import { Time } from 'utils';
 import { BROADCAST } from 'values';
-
 import { BirthdayModal } from './modal';
 
 const useBroadcast = createPersistedState(BROADCAST.CHANNEL);
@@ -58,7 +55,7 @@ export default function BirthdaysPage() {
   return (
     <Wrapper>
       <Sidebar>
-        <Title>Cumples</Title>
+        <Title>Cumpleaños</Title>
 
         <DisplayButton
           value={showLogo}
@@ -70,10 +67,10 @@ export default function BirthdaysPage() {
           block
           size="lg"
           onClick={() => setShowModal(true)}
-          variant="primary"
+          variant="success"
           className="mb-4"
         >
-          <ImUserPlus /> Agregar
+          <PersonAddAlt /> Agregar
         </Button>
 
         <List className="mb-4">
@@ -127,7 +124,7 @@ export default function BirthdaysPage() {
                 {Time.formatBirthday(item.day, item.month)})
               </List.Text>
               <List.Action onClick={() => handleDelete(item)}>
-                <RiCloseFill />
+                <RemoveCircle fontSize="small" />
               </List.Action>
             </List.Item>
           ))}

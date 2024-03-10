@@ -1,3 +1,4 @@
+import { History, Stop } from '@mui/icons-material';
 import {
   Alert,
   Controls,
@@ -9,10 +10,8 @@ import {
   Wrapper,
 } from 'components';
 import { useCountdown, usePresenter } from 'hooks';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Button, Col, Row } from 'react-bootstrap';
-import { BsClock } from 'react-icons/bs';
-import { ImStop2 } from 'react-icons/im';
 import createPersistedState from 'use-persisted-state';
 import { BROADCAST } from 'values';
 import { CountdownForm } from './CountdownForm';
@@ -61,19 +60,19 @@ export default function StopwatchPage() {
           <Row>
             <List.Item as={Col}>
               <List.Action onClick={() => start(0, 11)}>
-                <BsClock /> 00:10
+                <History /> 00:10
               </List.Action>
             </List.Item>
 
             <List.Item as={Col}>
               <List.Action onClick={() => start(0, 31)}>
-                <BsClock /> 00:30
+                <History /> 00:30
               </List.Action>
             </List.Item>
 
             <List.Item as={Col}>
               <List.Action onClick={() => start(0, 46)}>
-                <BsClock /> 00:45
+                <History /> 00:45
               </List.Action>
             </List.Item>
           </Row>
@@ -85,19 +84,19 @@ export default function StopwatchPage() {
           <Row>
             <List.Item as={Col}>
               <List.Action onClick={() => start(1, 1)}>
-                <BsClock /> 01:00
+                <History /> 01:00
               </List.Action>
             </List.Item>
 
             <List.Item as={Col}>
               <List.Action onClick={() => start(2, 1)}>
-                <BsClock /> 02:00
+                <History /> 02:00
               </List.Action>
             </List.Item>
 
             <List.Item as={Col}>
               <List.Action onClick={() => start(5, 1)}>
-                <BsClock /> 05:00
+                <History /> 05:00
               </List.Action>
             </List.Item>
           </Row>
@@ -105,17 +104,17 @@ export default function StopwatchPage() {
           <Row>
             <List.Item as={Col}>
               <List.Action onClick={() => start(10, 1)}>
-                <BsClock /> 10:00
+                <History /> 10:00
               </List.Action>
             </List.Item>
             <List.Item as={Col}>
               <List.Action onClick={() => start(30, 1)}>
-                <BsClock /> 30:00
+                <History /> 30:00
               </List.Action>
             </List.Item>
             <List.Item as={Col}>
               <List.Action onClick={() => start(45, 1)}>
-                <BsClock /> 45:00
+                <History /> 45:00
               </List.Action>
             </List.Item>
           </Row>
@@ -135,7 +134,7 @@ export default function StopwatchPage() {
 
         <Controls centered>
           <Button onClick={() => stop()} variant="secondary">
-            <ImStop2 />
+            <Stop />
           </Button>
         </Controls>
       </Wrapper>

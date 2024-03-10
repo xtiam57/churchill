@@ -70,8 +70,8 @@ select {
 /* Tags */
 
 .tag {
-  border: solid 1px var(--secondary);
-  color: var(--secondary);
+  border: solid 1px var(--gray);
+  color: var(--gray);
   background-color: transparent;
   font-weight: normal;
   padding: 6px 10px;
@@ -87,14 +87,14 @@ select {
 }
 
 .tag:not(.active):hover {
-  border: solid 1px var(--light);
-  color: var(--light);
+  border: solid 1px var(--secondary);
+  color: var(--secondary);
 }
 
 .tag.active {
   font-size: 90%;
-  border: solid 1px var(--warning);
-  color: var(--warning);
+  border: solid 1px var(--secondary);
+  color: var(--secondary);
 }
 
 .dropdown-menu.show .dropdown-item.active .tag {
@@ -292,19 +292,3 @@ select {
   max-width: calc(100% - 3.5rem) !important;
 }
 
-/* :root {
-  --primary: #253551;
-  --warning: #FF8A65;
-}
-
-.bg-primary {
-  background-color: var(--primary) !important;
-}
-
-.bg-warning {
-  background-color: var(--warning) !important;
-}
-
-.text-warning {
-    color: var(--warning) !important;
-} */

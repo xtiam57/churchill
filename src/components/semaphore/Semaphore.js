@@ -1,6 +1,5 @@
+import { PlayArrow, Stop } from '@mui/icons-material';
 import { useSemaphore } from 'hooks';
-import React from 'react';
-import { ImPlay3, ImStop2 } from 'react-icons/im';
 import createPersistedState from 'use-persisted-state';
 import { BROADCAST } from 'values';
 import { SemaphoreStyled } from './styled';
@@ -31,11 +30,11 @@ export function Semaphore() {
           onClick={() => stop()}
           title="Detener semáforo"
         >
-          <ImStop2 />
+          <Stop />
         </div>
       ) : (
         <div className="controls" onClick={() => start(settings.preachtime, 0)}>
-          <ImPlay3 />
+          <PlayArrow />
         </div>
       )}
 

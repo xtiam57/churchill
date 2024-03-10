@@ -1,4 +1,14 @@
 import {
+  East,
+  FolderCopy,
+  MenuBook,
+  PlayArrow,
+  Stop,
+  VolumeMute,
+  VolumeUp,
+  West,
+} from '@mui/icons-material';
+import {
   Alert,
   Bookmark,
   BookmarkList,
@@ -15,16 +25,6 @@ import { useAnthemn, useFolder, useKeyUp, usePresenter } from 'hooks';
 import React, { useEffect, useRef, useState } from 'react';
 import { Button, ButtonGroup, Form } from 'react-bootstrap';
 import { Typeahead } from 'react-bootstrap-typeahead';
-import {
-  ImArrowLeft2,
-  ImArrowRight2,
-  ImBook,
-  ImFolderOpen,
-  ImPlay3,
-  ImStop2,
-  ImVolumeHigh,
-  ImVolumeMute,
-} from 'react-icons/im';
 import createPersistedState from 'use-persisted-state';
 import useSound from 'use-sound';
 import { Storage, getBookmarkedItems } from 'utils';
@@ -193,11 +193,11 @@ export default function AnthemnsPage() {
           extraButton={
             <Button
               variant="link"
-              className="text-light p-0 text-small mr-2"
+              className="text-white p-0 text-small mr-2"
               onClick={(e) => setOpenIndex(true)}
               title="Abrir Himnario"
             >
-              <ImBook />
+              <MenuBook fontSize="small" />
             </Button>
           }
         />
@@ -273,7 +273,7 @@ export default function AnthemnsPage() {
         <Controls>
           {isMP3Loaded ? (
             <div className="d-flex">
-              <ImVolumeMute />
+              <VolumeMute />
               <Form.Control
                 type="range"
                 name="volume"
@@ -289,16 +289,16 @@ export default function AnthemnsPage() {
                   });
                 }}
               />
-              <ImVolumeHigh />
+              <VolumeUp />
             </div>
           ) : null}
 
           {isMP3Loaded ? null : (
             <small>
-              <span className="text-warning">
+              <span className="text-light">
                 Este himno <strong>NO</strong> tiene pista.
               </span>{' '}
-              Agrégala en formato <i>.mp3</i> en la carpeta{' '}
+              Agrega su pista en formato <i>.mp3</i> en la carpeta{' '}
               <strong
                 className="pointer text-underline"
                 onClick={handleOpenPath}
@@ -315,7 +315,7 @@ export default function AnthemnsPage() {
                 <ButtonGroup className="mx-2">
                   {isPlaying ? (
                     <Button onClick={() => stop()} variant="light">
-                      <ImStop2 />
+                      <Stop />
                     </Button>
                   ) : (
                     <Button
@@ -326,7 +326,7 @@ export default function AnthemnsPage() {
                       }}
                       variant="secondary"
                     >
-                      <ImPlay3 />
+                      <PlayArrow />
                     </Button>
                   )}
                 </ButtonGroup>
@@ -334,11 +334,11 @@ export default function AnthemnsPage() {
             ) : null}
 
             <ButtonGroup>
-              <Button onClick={handlePrevSlide} variant="secondary">
-                <ImArrowLeft2 />
+              <Button onClick={handlePrevSlide} variant="primary">
+                <West />
               </Button>
-              <Button onClick={handleNextSlide} variant="secondary">
-                <ImArrowRight2 />
+              <Button onClick={handleNextSlide} variant="primary">
+                <East />
               </Button>
             </ButtonGroup>
 
@@ -347,7 +347,7 @@ export default function AnthemnsPage() {
               variant="secondary"
               onClick={handleOpenPath}
             >
-              <ImFolderOpen />
+              <FolderCopy />
             </Button>
           </div>
 

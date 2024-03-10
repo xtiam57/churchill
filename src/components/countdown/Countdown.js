@@ -1,6 +1,7 @@
+import { Add, PlayArrow, Remove, Restore, Stop } from '@mui/icons-material';
 import { useCountdown } from 'hooks';
 import { useCallback, useState } from 'react';
-import { ImMinus, ImPlay3, ImPlus, ImStop2 } from 'react-icons/im';
+import { Button } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
 import { BROADCAST } from 'values';
 import { CountdownStyled } from './styled';
@@ -28,46 +29,57 @@ export function Countdown() {
     <CountdownStyled title="Temporizador">
       {!disabled ? (
         <>
-          <div className="display">{time}</div>
-          <button
+          <div className="display">
+            <Restore fontSize="small" /> {time}
+          </div>
+          <Button
+            size="sm"
+            variant="danger"
             title="Detener temporizador"
             onClick={() => {
               setDisabled(true);
               stop();
             }}
-            className="btn btn-danger btn-sm flat-left"
+            className="flat-left"
           >
-            <ImStop2 />
-          </button>
+            <Stop />
+          </Button>
         </>
       ) : (
         <>
-          <button
-            className="btn btn-dark btn-sm flat-right"
+          <Button
+            size="sm"
+            variant="primary"
+            className="flat-right"
             onClick={handleDecrease}
             title="Decrementar temporizador"
           >
-            <ImMinus />
-          </button>
-          <div className="display">{minutes} min</div>
+            <Remove />
+          </Button>
+          <div className="display">
+            <Restore fontSize="small" /> {minutes} min
+          </div>
           <div className="btn-group">
-            <button
-              className="btn btn-dark btn-sm flat-left"
+            <Button
+              size="sm"
+              variant="primary"
+              className="flat-left"
               onClick={handleIncrease}
               title="Incrementar temporizador"
             >
-              <ImPlus />
-            </button>
-            <button
-              className="btn btn-primary btn-sm"
+              <Add />
+            </Button>
+            <Button
+              size="sm"
+              variant="light"
               onClick={() => {
                 start(minutes, 0);
                 setDisabled(false);
               }}
               title="Empezar temporizador"
             >
-              <ImPlay3 />
-            </button>
+              <PlayArrow />
+            </Button>
           </div>
         </>
       )}

@@ -1,9 +1,9 @@
+import { AutoStories, Cake, Newspaper, QueueMusic } from '@mui/icons-material';
 import AnthemnsPage from 'pages/anthemns';
 import BirthdaysPage from 'pages/birthdays';
 import CastPage from 'pages/cast';
 import HomePage from 'pages/home';
 import ScripturesPage from 'pages/scriptures';
-import { BsBook, BsGift, BsHouseFill, BsMusicNoteList } from 'react-icons/bs';
 
 export const PATHS = {
   ROOT: '/',
@@ -21,15 +21,17 @@ export const routes = flatten([
     exact: true,
     path: PATHS.ROOT,
     component: HomePage,
-    icon: <BsHouseFill />,
-    label: 'Inicio',
+    icon: <Newspaper />,
+    label: 'Anuncios',
+    menu: true,
+    showLabel: true,
   },
   {
     key: PATHS.SCRIPTURES_PAGE,
     exact: true,
     path: PATHS.SCRIPTURES_PAGE,
     component: ScripturesPage,
-    icon: <BsBook />,
+    icon: <AutoStories fontSize="small" />,
     label: 'Escrituras',
     menu: true,
     showLabel: true,
@@ -39,7 +41,7 @@ export const routes = flatten([
     exact: true,
     path: PATHS.ANTHEMNS_PAGE,
     component: AnthemnsPage,
-    icon: <BsMusicNoteList />,
+    icon: <QueueMusic fontSize="small" />,
     label: 'Himnos',
     menu: true,
     showLabel: true,
@@ -49,10 +51,10 @@ export const routes = flatten([
     exact: true,
     path: PATHS.BIRTHDAYS_PAGE,
     component: BirthdaysPage,
-    icon: <BsGift />,
+    icon: <Cake fontSize="small" />,
     label: 'Cumpleaños',
     menu: true,
-    showLabel: false,
+    showLabel: true,
   },
   {
     key: PATHS.CAST_PAGE,

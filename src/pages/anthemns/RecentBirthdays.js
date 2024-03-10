@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { List } from 'components';
 import { useBirthday } from 'hooks';
 import { Time } from 'utils';
@@ -13,7 +11,7 @@ export function RecentBirthdays({ onClick = () => {}, ...rest }) {
         <List className="mb-4" {...rest}>
           <List.Item>
             <List.Title
-              className="text-warning"
+              className="text-white"
               title={recent.reduce(
                 (res, { name, day, month }) =>
                   `${res}${name} (${Time.formatBirthday(day, month)})\n`,
