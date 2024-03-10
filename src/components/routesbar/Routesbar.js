@@ -12,7 +12,7 @@ export function Routesbar() {
             <li key={index} className="nav-item">
               <NavLink
                 to={route.path}
-                className="nav-link text-white"
+                className="nav-link text-dark"
                 activeClassName="active"
                 title={route.label}
               >

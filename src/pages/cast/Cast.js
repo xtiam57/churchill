@@ -21,7 +21,7 @@ export default function CastPage() {
         </div>
       ) : null}
 
-      <Wrapper bare centered {...settings}>
+      <Wrapper style={{ gridArea: 'content' }} bare centered {...settings}>
         {message ? (
           <Presenter
             id={message.id}

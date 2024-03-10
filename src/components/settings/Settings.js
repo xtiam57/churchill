@@ -1,8 +1,7 @@
 import {
+  CalendarMonth,
   Close,
   Download,
-  ExpandLess,
-  ExpandMore,
   Favorite,
   FileUpload,
 } from '@mui/icons-material';
@@ -83,24 +82,19 @@ export function Settings() {
     }));
   };
 
-  // useClickOutside(ref, () => {
-  //   if (showingSettings) {
-  //     closeSettings();
-  //   }
-  // });
-
   return (
     <Sidebar
       light
       closable
       className={showingSettings ? '' : 'closed'}
       size={620}
+      offset={310 + 50}
     >
       <h1 className="display-4">Ajustes</h1>
       <Button
         className="p-0 text-dark"
         variant="link"
-        style={{ position: 'absolute', top: 13, right: 15 }}
+        style={{ position: 'absolute', top: 13, right: 10 }}
         onClick={toggleSettings}
       >
         <Close />
@@ -110,8 +104,8 @@ export function Settings() {
         {/* Logo */}
         <Col xs={6}>
           <Form.Row className="mb-2">
-            <Form.Group as={Col} className="mb-1">
-              <Form.Label className=" small mb-1">Logo </Form.Label>
+            <Form.Group as={Col} className="m-0">
+              <Form.Label className="small mb-1">Logo </Form.Label>
 
               <Form.Control
                 as="select"
@@ -128,7 +122,7 @@ export function Settings() {
               </Form.Control>
             </Form.Group>
 
-            <Form.Group as={Col} className="mb-1">
+            <Form.Group as={Col} className="m-0">
               <Form.Label className=" small mb-1">Modo</Form.Label>
               <Form.Control
                 as="select"
@@ -144,15 +138,15 @@ export function Settings() {
           </Form.Row>
 
           <LogoPreview {...settings}>
-            <Logo height="80%" {...settings} />
+            <Logo height="70%" {...settings} />
           </LogoPreview>
         </Col>
 
-        {/* Fond */}
+        {/* Fondo */}
         <Col xs={6}>
-          <Form.Row className="mb-0">
-            <Form.Group as={Col}>
-              <Form.Label className="small mb-1 d-flex justify-content-between">
+          <Form.Row className="mb-2">
+            <Form.Group as={Col} className="m-0">
+              <Form.Label className="small w-100 mb-1 d-inline-flex justify-content-between">
                 Fondo
                 <a href=" " onClick={handleRandomBackground}>
                   (Aleatorio)
@@ -174,7 +168,12 @@ export function Settings() {
             </Form.Group>
           </Form.Row>
 
-          <TextPreview hideText {...settings} />
+          <TextPreview
+            className="mb-2"
+            hideText
+            {...settings}
+            blur={settings?.image ? settings?.blur : 0}
+          />
 
           {settings?.image ? (
             <Form.Row>
@@ -207,53 +206,64 @@ export function Settings() {
                   onChange={handleChangeValue}
                 />
               </Form.Group>
-              <Col />
             </Form.Row>
           )}
         </Col>
       </Row>
 
-      <Form.Row>
-        <Form.Group as={Col} className="mb-1">
-          <Form.Label className=" small mb-1">Fuente</Form.Label>
-          <Form.Control
-            size="sm"
-            as="select"
-            name="font"
-            value={settings?.font}
-            onChange={handleChangeValue}
-          >
-            {SETTINGS_OPTIONS.FONT_FAMILIES.map(({ value, label }) => (
-              <option key={value} value={value}>
-                {label}
-              </option>
-            ))}
-          </Form.Control>
-        </Form.Group>
-      </Form.Row>
+      <hr />
 
-      <Form.Row>
-        <Form.Group as={Col} className="mb-1">
-          <Form.Label className=" small mb-1">Tema</Form.Label>
-          <Form.Control
-            size="sm"
-            as="select"
-            value={settings?.theme}
-            name="theme"
-            onChange={handleChangeTheme}
-          >
-            {SETTINGS_OPTIONS.THEMES.map(({ value, label }) => (
-              <option key={value} value={value}>
-                {label}
-              </option>
-            ))}
-          </Form.Control>
-        </Form.Group>
-      </Form.Row>
-      {settings?.theme === 'custom' ? (
-        <>
-          <Form.Row>
+      {/* Tema */}
+      <Row>
+        {/* Nombre y preview */}
+        <Col xs={6}>
+          <Form.Row className="mb-2">
             <Form.Group as={Col} className="mb-1">
+              <Form.Label className=" small mb-1">Tema</Form.Label>
+              <Form.Control
+                size="sm"
+                as="select"
+                value={settings?.theme}
+                name="theme"
+                onChange={handleChangeTheme}
+              >
+                {SETTINGS_OPTIONS.THEMES.map(({ value, label }) => (
+                  <option key={value} value={value}>
+                    {label}
+                  </option>
+                ))}
+              </Form.Control>
+            </Form.Group>
+          </Form.Row>
+
+          <TextPreview
+            {...settings}
+            blur={settings?.image ? settings?.blur : 0}
+          />
+        </Col>
+
+        {/* Colores */}
+        <Col xs={6}>
+          <Form.Row>
+            {/* Fuente */}
+            <Form.Group as={Col} xs={12} className="mb-1">
+              <Form.Label className=" small mb-1">Fuente</Form.Label>
+              <Form.Control
+                size="sm"
+                as="select"
+                name="font"
+                value={settings?.font}
+                onChange={handleChangeValue}
+              >
+                {SETTINGS_OPTIONS.FONT_FAMILIES.map(({ value, label }) => (
+                  <option key={value} value={value}>
+                    {label}
+                  </option>
+                ))}
+              </Form.Control>
+            </Form.Group>
+
+            {/* <Form.Group as={Col} xs={6} className="mb-1">
               <Form.Label className=" small mb-1">Fondo</Form.Label>
               <Form.Control
                 size="sm"
@@ -263,8 +273,9 @@ export function Settings() {
                 onChange={handleChangeValue}
                 disabled={settings?.theme !== 'custom'}
               />
-            </Form.Group>
-            <Form.Group as={Col} className="mb-1">
+            </Form.Group> */}
+
+            <Form.Group as={Col} xs={6} className="mb-1">
               <Form.Label className=" small mb-1">Texto</Form.Label>
               <Form.Control
                 type="color"
@@ -275,10 +286,8 @@ export function Settings() {
                 disabled={settings?.theme !== 'custom'}
               />
             </Form.Group>
-          </Form.Row>
 
-          <Form.Row>
-            <Form.Group as={Col} className="mb-1">
+            <Form.Group as={Col} xs={6} className="mb-1">
               <Form.Label className=" small mb-1">Citas</Form.Label>
               <Form.Control
                 size="sm"
@@ -289,7 +298,8 @@ export function Settings() {
                 disabled={settings?.theme !== 'custom'}
               />
             </Form.Group>
-            <Form.Group as={Col} className="mb-1">
+
+            <Form.Group as={Col} xs={6} className="mb-1">
               <Form.Label className=" small mb-1">Títulos</Form.Label>
               <Form.Control
                 size="sm"
@@ -300,10 +310,8 @@ export function Settings() {
                 disabled={settings?.theme !== 'custom'}
               />
             </Form.Group>
-          </Form.Row>
 
-          <Form.Row>
-            <Form.Group as={Col} className="mb-1">
+            <Form.Group as={Col} xs={6} className="mb-1">
               <Form.Label className=" small mb-1">Palabras de Jesús</Form.Label>
               <Form.Control
                 size="sm"
@@ -314,7 +322,8 @@ export function Settings() {
                 disabled={settings?.theme !== 'custom'}
               />
             </Form.Group>
-            <Form.Group as={Col} className="mb-1">
+
+            {/* <Form.Group as={Col} xs={6} className="mb-1">
               <Form.Label className=" small mb-1">Opciones (Trivia)</Form.Label>
               <Form.Control
                 size="sm"
@@ -324,38 +333,39 @@ export function Settings() {
                 onChange={handleChangeValue}
                 disabled={settings?.theme !== 'custom'}
               />
-            </Form.Group>
+            </Form.Group> */}
           </Form.Row>
-        </>
-      ) : null}
-
-      <TextPreview className="my-2" {...settings} />
-
-      <hr />
-
-      <hr />
+        </Col>
+      </Row>
 
       <hr />
 
       <Button
-        variant="outline-secondary"
+        variant="outline-primary"
         block
         className="mb-3"
         onClick={() => {
           setExpanded((value) => !value);
         }}
       >
-        Horarios {expanded ? <ExpandLess /> : <ExpandMore />}
+        <CalendarMonth fontSize="small" /> Horarios{' '}
+        {/* {expanded ? (
+          <ExpandLess fontSize="small" />
+        ) : (
+          <ExpandMore fontSize="small" />
+        )} */}
       </Button>
 
       {expanded ? (
-        <>
-          {settings?.schedules?.map((schedule, index) => {
-            return (
+        <Row>
+          {settings?.schedules?.map((schedule, index) => (
+            <Col key={index} xs={6} className="mb-3">
               <div
-                key={index}
-                className="p-3 mb-2 bg-white border"
-                style={{ borderRadius: '5px' }}
+                style={{
+                  backgroundColor: schedule.active ? '#fff' : '#f2f3f5',
+                  borderLeftWidth: '5px !important',
+                }}
+                className="p-3 border border-primary rounded h-100"
               >
                 {index > 0 ? (
                   <Form.Row>
@@ -394,6 +404,7 @@ export function Settings() {
                     />
                   </Form.Group>
                 </Form.Row>
+
                 <Form.Row>
                   <Form.Group as={Col} className="mb-1">
                     <Form.Label className=" small mb-1">Día</Form.Label>
@@ -435,6 +446,7 @@ export function Settings() {
                     </Form.Control>
                   </Form.Group>
                 </Form.Row>
+
                 <Form.Row>
                   <Form.Group as={Col} className="mb-1">
                     <Form.Label className=" small mb-1">Hora</Form.Label>
@@ -476,14 +488,14 @@ export function Settings() {
                   </Form.Group>
                 </Form.Row>
               </div>
-            );
-          })}
-        </>
+            </Col>
+          ))}
+        </Row>
       ) : null}
 
       <hr />
 
-      <Form.Row>
+      {/* <Form.Row>
         <Form.Group as={Col} className="mb-1">
           <Form.Label className=" small mb-1">
             Tiempo de predicación (semáforo)
@@ -502,9 +514,9 @@ export function Settings() {
             ))}
           </Form.Control>
         </Form.Group>
-      </Form.Row>
+      </Form.Row> */}
 
-      <Form.Row>
+      {/* <Form.Row>
         <Form.Group as={Col} className="mb-1">
           <Form.Label className=" small mb-1">
             Tiempo restante para la luz amarilla
@@ -523,9 +535,9 @@ export function Settings() {
             ))}
           </Form.Control>
         </Form.Group>
-      </Form.Row>
+      </Form.Row> */}
 
-      <Form.Row>
+      {/* <Form.Row>
         <Form.Group as={Col} className="mb-1">
           <Form.Label className=" small mb-1">
             Tiempo restante para la luz roja
@@ -544,14 +556,13 @@ export function Settings() {
             ))}
           </Form.Control>
         </Form.Group>
-      </Form.Row>
+      </Form.Row> */}
 
-      <hr />
-
+      {/* Intervalos */}
       <Form.Row>
-        <Form.Group as={Col} className="mb-1">
+        <Form.Group as={Col} xs={6} className="mb-1">
           <Form.Label className=" small mb-1">
-            Intervalo entre "Anuncios" (Inicio)
+            Intervalo entre los "Anuncios"
           </Form.Label>
           <Form.Control
             size="sm"
@@ -567,33 +578,10 @@ export function Settings() {
             ))}
           </Form.Control>
         </Form.Group>
-      </Form.Row>
 
-      <Form.Row>
-        <Form.Group as={Col} className="mb-2">
+        <Form.Group as={Col} xs={6} className="mb-2">
           <Form.Label className=" small mb-1">
-            Intervalo entre "Preguntas" (Trivia)
-          </Form.Label>
-          <Form.Control
-            size="sm"
-            as="select"
-            name="triviainterval"
-            value={settings?.triviainterval}
-            onChange={handleChangeNumericValue}
-          >
-            {SETTINGS_OPTIONS.TRIVIA_TIME_INTERVALS.map(({ value, label }) => (
-              <option key={value} value={value}>
-                {label}
-              </option>
-            ))}
-          </Form.Control>
-        </Form.Group>
-      </Form.Row>
-
-      <Form.Row>
-        <Form.Group as={Col} className="mb-2">
-          <Form.Label className=" small mb-1">
-            Duración de "Aviso en pantalla"
+            Duración de los "Avisos en pantalla"
           </Form.Label>
           <Form.Control
             size="sm"
@@ -609,10 +597,8 @@ export function Settings() {
             ))}
           </Form.Control>
         </Form.Group>
-      </Form.Row>
 
-      <Form.Row>
-        <Form.Group as={Col} className="mb-0">
+        <Form.Group as={Col} xs={6} className="mb-0">
           <Form.Label className=" small mb-1">
             Rango para detectar cumpleaños
           </Form.Label>
@@ -634,6 +620,27 @@ export function Settings() {
         </Form.Group>
       </Form.Row>
 
+      {/* <Form.Row>
+        <Form.Group as={Col} className="mb-2">
+          <Form.Label className=" small mb-1">
+            Intervalo entre "Preguntas" (Trivia)
+          </Form.Label>
+          <Form.Control
+            size="sm"
+            as="select"
+            name="triviainterval"
+            value={settings?.triviainterval}
+            onChange={handleChangeNumericValue}
+          >
+            {SETTINGS_OPTIONS.TRIVIA_TIME_INTERVALS.map(({ value, label }) => (
+              <option key={value} value={value}>
+                {label}
+              </option>
+            ))}
+          </Form.Control>
+        </Form.Group>
+      </Form.Row> */}
+
       {/* <Form.Row className="mt-3">
         <Form.Group as={Col} className="mb-1">
           <Form.Check
@@ -654,8 +661,8 @@ export function Settings() {
 
       <hr />
 
-      <Form.Row className="mt-2">
-        <Form.Group as={Col} className="mb-1">
+      <Form.Row>
+        <Form.Group as={Col} xs={6} className="m-0">
           <Form.Label className=" small mb-1">
             Exportar datos del usuario
           </Form.Label>
@@ -663,10 +670,8 @@ export function Settings() {
             <Download /> Exportar
           </Button>
         </Form.Group>
-      </Form.Row>
 
-      <Form.Row className="mt-2">
-        <Form.Group as={Col} className="mb-1">
+        <Form.Group as={Col} xs={6} className="m-0">
           <Form.Label className=" small mb-1">
             Importar datos del usuario
           </Form.Label>

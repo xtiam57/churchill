@@ -1,4 +1,4 @@
-import { AutoStories, Cake, Newspaper, QueueMusic } from '@mui/icons-material';
+import { Audiotrack, AutoStories, Cake, Newspaper } from '@mui/icons-material';
 import AnthemnsPage from 'pages/anthemns';
 import BirthdaysPage from 'pages/birthdays';
 import CastPage from 'pages/cast';
@@ -31,7 +31,7 @@ export const routes = flatten([
     exact: true,
     path: PATHS.SCRIPTURES_PAGE,
     component: ScripturesPage,
-    icon: <AutoStories fontSize="small" />,
+    icon: <AutoStories />,
     label: 'Escrituras',
     menu: true,
     showLabel: true,
@@ -41,7 +41,7 @@ export const routes = flatten([
     exact: true,
     path: PATHS.ANTHEMNS_PAGE,
     component: AnthemnsPage,
-    icon: <QueueMusic fontSize="small" />,
+    icon: <Audiotrack />,
     label: 'Himnos',
     menu: true,
     showLabel: true,
@@ -51,7 +51,7 @@ export const routes = flatten([
     exact: true,
     path: PATHS.BIRTHDAYS_PAGE,
     component: BirthdaysPage,
-    icon: <Cake fontSize="small" />,
+    icon: <Cake />,
     label: 'Cumpleaños',
     menu: true,
     showLabel: true,

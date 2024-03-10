@@ -1,19 +1,18 @@
 import styled from 'styled-components';
 
 export const TextPreviewWrapperStyled = styled.div`
-  border-radius: 0.2rem;
+  border-radius: 8px;
   height: 160px;
   background-color: ${({ background }) => background || '#fff'};
   background-image: ${({ image }) => (image ? `url(${image})` : 'none')};
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 `;
 
 export const TextPreviewStyled = styled.div`
-  border-radius: 0.2rem;
   padding: 1em;
-  border: 1px solid #ced4da;
   display: flex;
   justify-content: center;
   align-items: center;

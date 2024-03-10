@@ -49,7 +49,7 @@ export function Countdown() {
         <>
           <Button
             size="sm"
-            variant="primary"
+            variant="dark"
             className="flat-right"
             onClick={handleDecrease}
             title="Decrementar temporizador"
@@ -62,7 +62,7 @@ export function Countdown() {
           <div className="btn-group">
             <Button
               size="sm"
-              variant="primary"
+              variant="dark"
               className="flat-left"
               onClick={handleIncrease}
               title="Incrementar temporizador"
