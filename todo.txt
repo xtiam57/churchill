@@ -1,0 +1,4 @@
+- Depurar bg
+- Depurar temas
+- Refactorizar logos
+- Depurar horarios

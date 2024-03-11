@@ -427,7 +427,7 @@ export function Settings() {
                     </Form.Control>
                   </Form.Group>
 
-                  <Form.Group as={Col} className="mb-1">
+                  {/* <Form.Group as={Col} className="mb-1">
                     <Form.Label className=" small mb-1">Sufijo</Form.Label>
                     <Form.Control
                       as="select"
@@ -444,7 +444,7 @@ export function Settings() {
                       <option value="AM">AM</option>
                       <option value="PM">PM</option>
                     </Form.Control>
-                  </Form.Group>
+                  </Form.Group> */}
                 </Form.Row>
 
                 <Form.Row>
@@ -470,7 +470,7 @@ export function Settings() {
                   </Form.Group>
 
                   <Form.Group as={Col} className="mb-1">
-                    <Form.Label className=" small mb-1">Franja</Form.Label>
+                    <Form.Label className=" small mb-1">Horario</Form.Label>
                     <Form.Control
                       as="select"
                       size="sm"

@@ -56,9 +56,10 @@ export default function HomePage() {
         ...notices[index],
         slides: schedules.map((entry) =>
           Slide.create({
+            //  ${entry.daySuffix ? entry.daySuffix : ''}
             text: `
                 ${entry.name ? `${entry.name}/n` : ''}
-                <b>${entry.day} ${entry.daySuffix ? entry.daySuffix : ''}</b>/n
+                <b>${entry.day}</b>/n
                 <strong class="fs-xl" style="line-height:1">
                   ${entry.hour} ${entry.hourSuffix}
                 </strong>

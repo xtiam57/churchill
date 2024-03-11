@@ -5,7 +5,7 @@ const NOTICES = [
     id: 1,
     index: 0,
     type: 'notice',
-    title: 'Recomendaciones',
+    title: 'Bienvenida',
     slides: [
       Slide.create({
         title: '',
