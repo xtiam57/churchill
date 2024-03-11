@@ -16,3 +16,8 @@ $theme-colors: (
 
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
+
+::selection {
+  color: var(--dark) !important;
+  background-color: var(--light) !important;
+}

@@ -4,6 +4,7 @@ body {
   min-height: 100dvh;
 }
 
+
 .button {
   background-color: #ff8a65;
   color: #333;
@@ -55,3 +56,4 @@ h1 {
     display: none !important;
   }
 }
+

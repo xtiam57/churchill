@@ -19,6 +19,7 @@ export function Routesbar() {
             <li key={index} className="nav-item">
               <NavLink
                 to={route.path}
+                exact={route.exact}
                 className="nav-link text-dark"
                 activeClassName="active"
               >
