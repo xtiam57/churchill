@@ -73,6 +73,7 @@ export const PresenterStyled = styled.section`
       font-size: 1.1em;
       color: ${({ optionscolor }) => optionscolor || '#ffff00'};
       background-color: rgba(0, 0, 0, 0.5);
+      border: solid 1px var(--secondary);
       border-radius: 10px;
       padding: 10px 20px 15px;
       height: 100%;

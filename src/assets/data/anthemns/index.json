@@ -8497,6 +8497,19 @@
     "tags": "Apéndice"
   },
   {
+    "number": 661,
+    "title": "NO CAMBIARÁ",
+    "chorus": "No cambiará, igual será;/nCristo no ha cambiado, Y no cambiará./n¡Qué gran Amigo, tan puro y digno;/nCristo no ha cambiado y no cambiará!",
+    "stanzas": [
+      "1) Soy de él, Padre fiel; sabe quién yo soy./nPor la fe, paz tendré; no cambia ayer ni hoy./nAl caer, o vencer me apoyará;/nsu perdón, protección conmigo irán.",
+      "2) El amor del Señor no se apartará;/nen su ley confiaré, y en su fidelidad./nEn temor o dolor si no veo su faz;/nsu poder por doquier conmigo está."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": "Apéndice,Suave"
+  },
+  {
     "number": 997,
     "title": "HIMNO NACIONAL DE VENEZUELA",
     "chorus": "//Gloria al bravo pueblo/nQue el yugo lanzó/nLa Ley respetando/nLa virtud y honor.//",

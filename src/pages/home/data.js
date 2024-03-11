@@ -8,8 +8,8 @@ const NOTICES = [
     title: 'Bienvenida',
     slides: [
       Slide.create({
-        title: '',
-        text: 'Sea usted cordialmente/n<strong class="fs-xlg" style="line-height:1">¡BIENVENIDO!</strong>/n a la Casa de Dios.',
+        title: '<span class="fs-xl">👨‍👩‍👧‍👦</span>',
+        text: '<strong class="fs-xlg" style="line-height:1">¡BIENVENIDO!</strong>/nA la Casa de Dios',
       }),
       Slide.create({
         title: '<span class="fs-xl">📖</span>',
@@ -24,7 +24,7 @@ const NOTICES = [
         text: 'Por favor <b>apague su celular</b> y evite usarlo durante el culto. Vino a ver a Dios no a su Facebook.',
       }),
       Slide.create({
-        title: '<span class="fs-xl">🍔</span>',
+        title: '<span class="fs-xl">🍗🍔🍬</span>',
         text: 'Espere un poco más y <b>no ingiera alimentos</b> durante el culto.',
       }),
       Slide.create({
