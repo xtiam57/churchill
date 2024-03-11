@@ -24,6 +24,10 @@ body {
   border-radius: 8px;
 }
 
+p,
+h1 {
+  text-wrap: balance;
+}
 
 .text-secondary {
   color: #ff8a65 !important;
