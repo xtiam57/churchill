@@ -24,6 +24,10 @@ body {
   border-radius: 8px;
 }
 
+.logo {
+  width: 164px;
+}
+
 p,
 h1 {
   text-wrap: balance;
