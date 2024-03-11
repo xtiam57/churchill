@@ -12,6 +12,15 @@ export const BIRTHDAY = {
 export const MAX_BOOKMARKS = 15;
 
 export const THEMES = {
+  dark: {
+    background: '#233d57',
+    textcolor: '#ffffff',
+    titlecolor: '#ff8a65',
+    subtextcolor: '#8be1f0',
+    jesus: '#00FF84',
+    optionscolor: '#99cccc',
+    mode: '#ffffff',
+  },
   light: {
     background: '#ffffff',
     textcolor: '#000000',
@@ -33,21 +42,13 @@ export const THEMES = {
   pinguin: {
     background: '#000000',
     textcolor: '#ffffff',
-    titlecolor: '#var(--warning)',
+    titlecolor: '#ff8a65',
     subtextcolor: '#ffff00',
     jesus: '#00FF84',
     optionscolor: '#ffff00',
     mode: '#ffffff',
   },
-  dark: {
-    background: '#253551',
-    textcolor: '#ffffff',
-    titlecolor: '#c58af9',
-    subtextcolor: '#a9f1f1',
-    jesus: '#00FF84',
-    optionscolor: '#99cccc',
-    mode: '#ffffff',
-  },
+
   christmas: {
     background: '#7b0410',
     textcolor: '#ffffff',
@@ -73,23 +74,8 @@ const SETTINGS_INITIAL_STATE = {
   preachtime: 40,
   preachyellow: 10,
   preachred: 0,
+  clockposition: 'bottom-right',
   schedules: [
-    {
-      name: 'Culto General Mañana',
-      day: 'Domingo',
-      daySuffix: 'AM',
-      hour: '11:00',
-      hourSuffix: 'AM',
-      active: true,
-    },
-    {
-      name: 'Culto General Noche',
-      day: 'Domingo',
-      daySuffix: 'PM',
-      hour: '06:30',
-      hourSuffix: 'PM',
-      active: true,
-    },
     {
       name: 'Escuela Dominical',
       day: 'Domingo',
@@ -99,10 +85,18 @@ const SETTINGS_INITIAL_STATE = {
       active: true,
     },
     {
-      name: 'Reunión de Jóvenes',
-      day: 'Sábado',
+      name: 'Culto General Mañana',
+      day: 'Domingo',
       daySuffix: '',
-      hour: '07:00',
+      hour: '11:00',
+      hourSuffix: 'AM',
+      active: true,
+    },
+    {
+      name: 'Culto General Noche',
+      day: 'Domingo',
+      daySuffix: '',
+      hour: '06:30',
       hourSuffix: 'PM',
       active: true,
     },
@@ -115,20 +109,28 @@ const SETTINGS_INITIAL_STATE = {
       active: true,
     },
     {
-      name: 'Ensayos de Coro',
-      day: 'Jueves',
+      name: null,
+      day: 'Domingo',
       daySuffix: '',
-      hour: '07:00',
-      hourSuffix: 'PM',
-      active: true,
+      hour: '01:00',
+      hourSuffix: 'AM',
+      active: false,
     },
     {
-      name: 'Reunión de Oración',
-      day: 'Jueves',
+      name: null,
+      day: 'Domingo',
       daySuffix: '',
-      hour: '08:00',
-      hourSuffix: 'PM',
-      active: true,
+      hour: '01:00',
+      hourSuffix: 'AM',
+      active: false,
+    },
+    {
+      name: null,
+      day: 'Domingo',
+      daySuffix: '',
+      hour: '01:00',
+      hourSuffix: 'AM',
+      active: false,
     },
     {
       name: null,
@@ -169,16 +171,16 @@ export const BROADCAST = {
   INITIAL_COUNTDOWN: null,
 };
 
-export const CLOCK_POSITION = [
-  { value: '', label: 'Arriba-Izquierda' },
-  { value: '', label: 'Arriba-Centro' },
-  { value: '', label: 'Arriba-Derecha' },
-  { value: '', label: 'Abajo-Izquierda' },
-  { value: '', label: 'Abajo-Derecha' },
-  { value: '', label: 'Abajo-Centro' },
-];
-
 export const SETTINGS_OPTIONS = {
+  CLOCK_POSITIONS: [
+    { value: 'top-left', label: 'Arriba-Izquierda' },
+    { value: 'top-center', label: 'Arriba-Centro' },
+    { value: 'top-right', label: 'Arriba-Derecha' },
+    { divider: true },
+    { value: 'bottom-left', label: 'Abajo-Izquierda' },
+    { value: 'bottom-center', label: 'Abajo-Centro' },
+    { value: 'bottom-right', label: 'Abajo-Derecha' },
+  ],
   FONT_FAMILIES: [
     { value: '', label: 'Predeterminada' },
     { value: 'Arial', label: 'Arial' },
@@ -201,18 +203,19 @@ export const SETTINGS_OPTIONS = {
   LOGOS: [
     { value: 'default', label: 'Churchill (isologo)' },
     { value: 'small', label: 'Churchill (isotipo)' },
-    { value: 'esperanza', label: 'I.B. Esperanza' },
-    { value: 'torre-fuerte', label: 'I.B.B. Torre Fuerte' },
-    { value: 'ibi', label: 'Iglesia Bautista Internacional (IBI)' },
-    { value: 'sion', label: 'I.B.F.I. Sión' },
-    { value: 'sinai', label: 'I.B.F. Sinaí' },
-    { value: 'principe-de-paz', label: 'Príncipe de Paz' },
-    { value: 'monte-horeb-1', label: 'I.B.F.I. Monte Horeb' },
-    { value: 'monte-horeb-2', label: 'I.B.F. Monte Horeb' },
+    { divider: true },
     { value: 'antioquia', label: 'I.B. Antioquía' },
-    { value: 'monte-de-los-olivos', label: 'I.B. Monte de los Olivos' },
+    { value: 'esperanza', label: 'I.B. Esperanza' },
+    { value: 'ibi', label: 'Iglesia Bautista Internacional (IBI)' },
     { value: 'jesus-salva', label: 'I.B.B.F.I. Jesús Salva' },
     { value: 'monte-calvario', label: 'I.B.F. Monte Calvario' },
+    { value: 'monte-de-los-olivos', label: 'I.B. Monte de los Olivos' },
+    { value: 'monte-horeb-1', label: 'I.B.F.I. Monte Horeb' },
+    { value: 'monte-horeb-2', label: 'I.B.F. Monte Horeb' },
+    { value: 'principe-de-paz', label: 'Príncipe de Paz' },
+    { value: 'sinai', label: 'I.B.F. Sinaí' },
+    { value: 'sion', label: 'I.B.F.I. Sión' },
+    { value: 'torre-fuerte', label: 'I.B.B. Torre Fuerte' },
   ],
   TIME_INTERVALS: [
     { value: 1000, label: '1 segundo' },

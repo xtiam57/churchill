@@ -6,7 +6,7 @@ export const LogoPreviewStyled = styled.div`
   padding: 1em;
   justify-content: center;
   height: 160px;
-  /* border: 1px solid #ced4da; */
+  border: 1px solid #ced4da;
   align-items: center;
   background-color: ${({ background }) => background || '#fff'};
   background-image: ${({ image }) => (image ? `url(${image})` : 'none')};

@@ -111,11 +111,9 @@ export const CornerStyled = styled.section`
   font-family: ${({ font }) =>
     font ||
     '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"'};
-
   position: absolute;
   bottom: 3%;
   right: 2%;
-  /* transform: translateX(50%); */
 
   p {
     font-size: calc(0.15em + 2.3vh);
@@ -123,5 +121,32 @@ export const CornerStyled = styled.section`
     color: ${({ textcolor }) => textcolor || '#000'};
     width: 100%;
     line-height: 1;
+  }
+
+  &.bottom-left {
+    bottom: 3%;
+    left: 2%;
+  }
+  &.top-left {
+    top: 3%;
+    left: 2%;
+  }
+  &.bottom-center {
+    bottom: 3%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  &.top-center {
+    top: 3%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  &.bottom-right {
+    bottom: 3%;
+    right: 2%;
+  }
+  &.top-right {
+    top: 3%;
+    right: 2%;
   }
 `;

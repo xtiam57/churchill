@@ -9,6 +9,7 @@ export const TextPreviewWrapperStyled = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  border: 1px solid #ced4da;
 `;
 
 export const TextPreviewStyled = styled.div`

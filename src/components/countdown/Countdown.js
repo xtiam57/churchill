@@ -63,20 +63,14 @@ export function Countdown() {
         </>
       ) : (
         <>
-          <OverlayTrigger
-            placement="bottom"
-            overlay={<Tooltip>Decrementar</Tooltip>}
+          <Button
+            size="sm"
+            variant="dark"
+            className="flat-right"
+            onClick={handleDecrease}
           >
-            <Button
-              size="sm"
-              variant="dark"
-              className="flat-right"
-              onClick={handleDecrease}
-            >
-              <Remove />
-            </Button>
-          </OverlayTrigger>
-
+            <Remove />
+          </Button>
           <OverlayTrigger
             placement="bottom"
             overlay={<Tooltip>Temporizador</Tooltip>}
@@ -87,19 +81,14 @@ export function Countdown() {
           </OverlayTrigger>
 
           <div className="btn-group">
-            <OverlayTrigger
-              placement="bottom"
-              overlay={<Tooltip>Incrementar</Tooltip>}
+            <Button
+              size="sm"
+              variant="dark"
+              className="flat-left"
+              onClick={handleIncrease}
             >
-              <Button
-                size="sm"
-                variant="dark"
-                className="flat-left"
-                onClick={handleIncrease}
-              >
-                <Add />
-              </Button>
-            </OverlayTrigger>
+              <Add />
+            </Button>
 
             <OverlayTrigger
               placement="bottom"

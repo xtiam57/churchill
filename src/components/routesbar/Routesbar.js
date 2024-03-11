@@ -1,9 +1,15 @@
 import { OverlayTrigger, Tooltip } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
-import { routes } from 'router';
+import { NavLink, useLocation } from 'react-router-dom';
+import { PATHS, routes } from 'router';
 import { RoutesbarStyled } from './styled';
 
 export function Routesbar() {
+  const location = useLocation();
+
+  if (location.pathname === PATHS.CAST_PAGE) {
+    return null;
+  }
+
   return (
     <RoutesbarStyled>
       <ul>
