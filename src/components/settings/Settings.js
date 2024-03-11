@@ -88,7 +88,7 @@ export function Settings() {
       closable
       className={showingSettings ? '' : 'closed'}
       size={620}
-      offset={310 + 50}
+      offset={310 + 45}
     >
       <h1 className="display-4">Ajustes</h1>
       <Button
