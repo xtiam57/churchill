@@ -10,7 +10,7 @@ import {
 } from 'components';
 import { useBirthday, usePresenter } from 'hooks';
 import { useEffect, useState } from 'react';
-import { Button, Form } from 'react-bootstrap';
+import { Button, Form, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
 import { Time } from 'utils';
 import { BROADCAST } from 'values';
@@ -124,7 +124,12 @@ export default function BirthdaysPage() {
                 {Time.formatBirthday(item.day, item.month)})
               </List.Text>
               <List.Action onClick={() => handleDelete(item)}>
-                <RemoveCircle fontSize="small" />
+                <OverlayTrigger
+                  placement="right"
+                  overlay={<Tooltip>Quitar de la lista</Tooltip>}
+                >
+                  <RemoveCircle fontSize="small" />
+                </OverlayTrigger>
               </List.Action>
             </List.Item>
           ))}

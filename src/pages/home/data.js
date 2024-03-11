@@ -21,18 +21,18 @@ const NOTICES = [
       }),
       Slide.create({
         title: '<span class="fs-xl">📱</span>',
-        text: 'Por favor <b>apague su celular</b> y evite usarlo durante el culto. Vino a ver a Dios no a su celular.',
+        text: 'Por favor <b>apague su celular</b> y evite usarlo durante el culto. Vino a ver a Dios no a su Facebook.',
       }),
       Slide.create({
         title: '<span class="fs-xl">🍔</span>',
         text: 'Espere un poco más y <b>no ingiera alimentos</b> durante el culto.',
       }),
       Slide.create({
-        title: '<span class="fs-xl">🪑🚶🪑</span>',
+        title: '<span class="fs-xl">🪑🪑🪑</span>',
         text: 'Permanezca en su lugar y <b>no se levante durante la predicación</b>.',
       }),
       Slide.create({
-        title: '<span class="fs-xl">👦👶👧</span>',
+        title: '<span class="fs-xl">👦🏽👶🏼👧🏾</span>',
         text: 'No deje que sus niños corran o jueguen durante el culto. <b>Llévelos a su clase</b>. Ellos también necesitan a Dios.',
       }),
       Slide.create({
@@ -52,7 +52,7 @@ const NOTICES = [
     title: 'Bautizo',
     slides: [
       Slide.create({
-        text: '<strong class="fs-xl" style="line-height:1">¡BAUTIZO!</strong>/n¡Hoy un pecador ha recibido a Cristo y <b>ha decidido bautizarse</b>!',
+        text: '<strong class="fs-xl" style="line-height:1">¡BAUTIZO!</strong>/n¡La iglesia toda se goza con tu decisión!',
         subtext: 'Mateo 28:19',
       }),
     ],

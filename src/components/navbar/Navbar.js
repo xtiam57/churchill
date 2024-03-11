@@ -7,7 +7,7 @@ import {
 import { Countdown, Logo } from 'components';
 import { usePresenter, useSettingsSidebar } from 'hooks';
 import { useCallback, useState } from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
 import { PATHS } from 'router';
 import createPersistedState from 'use-persisted-state';
@@ -58,55 +58,36 @@ export function Navbar() {
             />
           </span>
           <ul className="navbar-nav mr-auto">
-            {/* <li
-              className="nav-item d-flex align-items-center justify-content-center"
-              style={{ width: '42px', height: '38px' }}
-            >
-              <NavLink
-                exact
-                to="/"
-                className="nav-link"
-                activeClassName="active"
-              >
-                <Newspaper />
-              </NavLink>
-            </li> */}
             <li className="nav-item">
-              <Button
-                onClick={toggleSettings}
-                className={presenting ? 'text-dark' : 'text-light'}
-                variant="link"
+              <OverlayTrigger
+                placement="bottom"
+                overlay={<Tooltip>Ajustes</Tooltip>}
               >
-                <Settings />
-              </Button>
+                <Button
+                  onClick={toggleSettings}
+                  className={presenting ? 'text-dark' : 'text-light'}
+                  variant="link"
+                >
+                  <Settings />
+                </Button>
+              </OverlayTrigger>
             </li>
-            <li className="nav-item">
-              <Button
-                title="Aviso en pantalla"
-                disabled={!presenting}
-                onClick={() => setShowModal(true)}
-                className={presenting ? 'text-dark' : 'text-light'}
-                variant="link"
-              >
-                <Chat />
-              </Button>
-            </li>
-
-            {/* {routes
-              .filter((route) => route.menu)
-              .map((route, index) => (
-                <li key={index} className="nav-item">
-                  <NavLink
-                    to={route.path}
-                    className="nav-link"
-                    activeClassName="active"
-                    title={route.label}
+            {presenting && (
+              <li className="nav-item">
+                <OverlayTrigger
+                  placement="bottom"
+                  overlay={<Tooltip>Aviso en pantalla</Tooltip>}
+                >
+                  <Button
+                    onClick={() => setShowModal(true)}
+                    className={presenting ? 'text-dark' : 'text-light'}
+                    variant="link"
                   >
-                    {route.icon}
-                    {route.showLabel && <span> {route.label}</span>}
-                  </NavLink>
-                </li>
-              ))} */}
+                    <Chat />
+                  </Button>
+                </OverlayTrigger>
+              </li>
+            )}
           </ul>
           {alert ? (
             <div className="marquee mr-3" style={{ maxWidth: '250px' }}>
@@ -121,13 +102,22 @@ export function Navbar() {
           {/* <span className="mr-3">
             <Semaphore />
           </span> */}
-          <Button
-            onClick={toggle}
-            variant={presenting ? 'outline-dark' : 'secondary'}
-            title="Iniciar proyección"
+
+          <OverlayTrigger
+            placement="bottom"
+            overlay={
+              <Tooltip>
+                {presenting ? 'Detener proyección' : 'Iniciar proyección'}
+              </Tooltip>
+            }
           >
-            {presenting ? <CancelPresentation /> : <Slideshow />}
-          </Button>
+            <Button
+              onClick={toggle}
+              variant={presenting ? 'outline-dark' : 'secondary'}
+            >
+              {presenting ? <CancelPresentation /> : <Slideshow />}
+            </Button>
+          </OverlayTrigger>
         </div>
       </nav>
 

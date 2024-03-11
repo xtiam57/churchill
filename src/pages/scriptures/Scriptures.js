@@ -14,7 +14,7 @@ import {
 } from 'components';
 import { useKeyUp, usePresenter, useScriptures } from 'hooks';
 import { useEffect, useRef, useState } from 'react';
-import { Button, ButtonGroup } from 'react-bootstrap';
+import { Button, ButtonGroup, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { Typeahead } from 'react-bootstrap-typeahead';
 import createPersistedState from 'use-persisted-state';
 import { getBookmarkedItems } from 'utils';
@@ -170,41 +170,43 @@ function ScripturesView() {
         </div>
 
         <Controls centered>
-          <Button
-            onClick={handlePrevChapter}
-            variant="dark"
-            className="mr-5"
-            title="Capítulo previo"
+          <OverlayTrigger
+            placement="top"
+            overlay={<Tooltip>Capítulo previo</Tooltip>}
           >
-            <FirstPage />
-          </Button>
-
-          <ButtonGroup>
-            <Button
-              onClick={handlePrevVerse}
-              variant="primary"
-              title="Versículo previo"
-            >
-              <West />
+            <Button onClick={handlePrevChapter} variant="dark">
+              <FirstPage />
             </Button>
+          </OverlayTrigger>
 
-            <Button
-              onClick={handleNextVerse}
-              variant="primary"
-              title="Versículo siguiente"
+          <ButtonGroup className="mx-5">
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Versículo previo</Tooltip>}
             >
-              <East />
-            </Button>
+              <Button onClick={handlePrevVerse} variant="primary">
+                <West />
+              </Button>
+            </OverlayTrigger>
+
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Versículo siguiente</Tooltip>}
+            >
+              <Button onClick={handleNextVerse} variant="primary">
+                <East />
+              </Button>
+            </OverlayTrigger>
           </ButtonGroup>
 
-          <Button
-            onClick={handleNextChapter}
-            variant="dark"
-            className="ml-5"
-            title="Capítulo siguiente"
+          <OverlayTrigger
+            placement="top"
+            overlay={<Tooltip>Capítulo siguiente</Tooltip>}
           >
-            <LastPage />
-          </Button>
+            <Button onClick={handleNextChapter} variant="dark">
+              <LastPage />
+            </Button>
+          </OverlayTrigger>
         </Controls>
       </Wrapper>
       <Finder

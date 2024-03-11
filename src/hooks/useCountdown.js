@@ -63,9 +63,10 @@ export function useCountdown(disabled, callback = () => {}) {
 
     setMinutes(initialMinutes);
     setSeconds(initialSeconds);
+    setTime(Time.formatTime(initialMinutes, initialSeconds));
     setRunning(true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return { start, stop, time };
+  return { start, stop, time, running };
 }

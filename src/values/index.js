@@ -12,7 +12,7 @@ export const BIRTHDAY = {
 export const MAX_BOOKMARKS = 15;
 
 export const THEMES = {
-  default: {
+  light: {
     background: '#ffffff',
     textcolor: '#000000',
     titlecolor: '#007bff',
@@ -48,42 +48,6 @@ export const THEMES = {
     optionscolor: '#99cccc',
     mode: '#ffffff',
   },
-  // calvario: {
-  //   background: '#ffffff',
-  //   textcolor: '#000000',
-  //   titlecolor: '#0E96D1',
-  //   subtextcolor: '#023060',
-  //   jesus: '#00FF84',
-  //   optionscolor: '#ffff00',
-  //   mode: 'default',
-  // },
-  // calvarioDark: {
-  //   background: '#253551',
-  //   textcolor: '#ffffff',
-  //   titlecolor: '#0E96D1',
-  //   subtextcolor: '#1EC0C2',
-  //   jesus: '#00FF84',
-  //   optionscolor: '#ffff00',
-  //   mode: '#ffffff',
-  // },
-  female: {
-    background: '#ED2079',
-    textcolor: '#ffffff',
-    titlecolor: '#20ED94',
-    subtextcolor: '#F9AAD0',
-    jesus: '#00FF84',
-    optionscolor: '#ffff00',
-    mode: '#ffffff',
-  },
-  fun: {
-    background: '#72BE44',
-    textcolor: '#000000',
-    titlecolor: '#ffffff',
-    subtextcolor: '#ffff00',
-    jesus: '#00FF84',
-    optionscolor: '#ffff00',
-    mode: '#ffffff',
-  },
   christmas: {
     background: '#7b0410',
     textcolor: '#ffffff',
@@ -101,7 +65,7 @@ const SETTINGS_INITIAL_STATE = {
   blur: 5,
   logo: 'default',
   image: '',
-  theme: 'default',
+  theme: 'dark',
   preview: true,
   triviainterval: 20000,
   alertsinterval: 30000,
@@ -191,7 +155,7 @@ const SETTINGS_INITIAL_STATE = {
       active: false,
     },
   ],
-  ...THEMES['default'],
+  ...THEMES['dark'],
 };
 
 export const BROADCAST = {
@@ -227,20 +191,28 @@ export const SETTINGS_OPTIONS = {
     { value: 'Times New Roman', label: 'Times New Roman' },
   ],
   THEMES: [
-    { value: 'default', label: 'Predeterminado' },
-    { value: 'calvario', label: 'Monte Calvario' },
-    { value: 'calvarioDark', label: 'Monte Calvario (Oscuro)' },
-    { value: 'christmas', label: 'Navidad' },
-    { value: 'cobalt', label: 'Cobalto' },
     { value: 'dark', label: 'Oscuro' },
-    { value: 'female', label: 'Femenino' },
-    { value: 'fun', label: 'Divertido' },
+    { value: 'light', label: 'Claro' },
+    { value: 'cobalt', label: 'Cobalto' },
     { value: 'pinguin', label: 'Pingüino Emperador' },
+    { value: 'christmas', label: 'Navidad' },
     { value: 'custom', label: 'Personalizado' },
   ],
   LOGOS: [
     { value: 'default', label: 'Churchill (isologo)' },
     { value: 'small', label: 'Churchill (isotipo)' },
+    { value: 'esperanza', label: 'I.B. Esperanza' },
+    { value: 'torre-fuerte', label: 'I.B.B. Torre Fuerte' },
+    { value: 'ibi', label: 'Iglesia Bautista Internacional (IBI)' },
+    { value: 'sion', label: 'I.B.F.I. Sión' },
+    { value: 'sinai', label: 'I.B.F. Sinaí' },
+    { value: 'principe-de-paz', label: 'Príncipe de Paz' },
+    { value: 'monte-horeb-1', label: 'I.B.F.I. Monte Horeb' },
+    { value: 'monte-horeb-2', label: 'I.B.F. Monte Horeb' },
+    { value: 'antioquia', label: 'I.B. Antioquía' },
+    { value: 'monte-de-los-olivos', label: 'I.B. Monte de los Olivos' },
+    { value: 'jesus-salva', label: 'I.B.B.F.I. Jesús Salva' },
+    { value: 'monte-calvario', label: 'I.B.F. Monte Calvario' },
   ],
   TIME_INTERVALS: [
     { value: 1000, label: '1 segundo' },

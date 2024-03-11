@@ -11,7 +11,7 @@ import {
 } from 'components';
 import { useBirthday, useIterate, useKeyUp, usePresenter } from 'hooks';
 import { useEffect, useRef, useState } from 'react';
-import { Button, ButtonGroup } from 'react-bootstrap';
+import { Button, ButtonGroup, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
 import { Slide } from 'utils';
 import { BROADCAST, MOVEMENT } from 'values';
@@ -91,7 +91,7 @@ export default function HomePage() {
   return (
     <Wrapper>
       <Sidebar>
-        <Title>Inicio</Title>
+        <Title>Anuncios</Title>
 
         <DisplayButton
           value={showLogo}
@@ -101,7 +101,7 @@ export default function HomePage() {
 
         <List className="mb-4">
           <List.Item>
-            <List.Title>Anuncios</List.Title>
+            <List.Title>Listado</List.Title>
           </List.Item>
 
           {notices.map((item) => (
@@ -138,32 +138,57 @@ export default function HomePage() {
         <Controls centered>
           <ButtonGroup className="mx-2">
             {autoplay ? (
-              <Button onClick={() => setAutoplay(false)} variant="secondary">
-                <Pause />
-              </Button>
+              <OverlayTrigger
+                placement="top"
+                overlay={<Tooltip>Pausar cambio automático</Tooltip>}
+              >
+                <Button onClick={() => setAutoplay(false)} variant="secondary">
+                  <Pause />
+                </Button>
+              </OverlayTrigger>
             ) : (
-              <Button onClick={() => setAutoplay(true)} variant="dark">
-                <PlayArrow />
-              </Button>
+              <OverlayTrigger
+                placement="top"
+                overlay={<Tooltip>Empezar cambio automático</Tooltip>}
+              >
+                <Button onClick={() => setAutoplay(true)} variant="dark">
+                  <PlayArrow />
+                </Button>
+              </OverlayTrigger>
             )}
           </ButtonGroup>
 
           <ButtonGroup>
-            <Button onClick={handlePrevSlide} variant="primary">
-              <West />
-            </Button>
-            <Button onClick={handleNextSlide} variant="primary">
-              <East />
-            </Button>
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Página anterior</Tooltip>}
+            >
+              <Button onClick={handlePrevSlide} variant="primary">
+                <West />
+              </Button>
+            </OverlayTrigger>
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Página siguiente</Tooltip>}
+            >
+              <Button onClick={handleNextSlide} variant="primary">
+                <East />
+              </Button>
+            </OverlayTrigger>
           </ButtonGroup>
 
           <ButtonGroup className="mx-2">
-            <Button
-              onClick={() => setLoop((state) => !state)}
-              variant={loop ? 'secondary' : 'dark'}
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Repetir</Tooltip>}
             >
-              <Repeat />
-            </Button>
+              <Button
+                onClick={() => setLoop((state) => !state)}
+                variant={loop ? 'secondary' : 'dark'}
+              >
+                <Repeat />
+              </Button>
+            </OverlayTrigger>
           </ButtonGroup>
         </Controls>
       </Wrapper>

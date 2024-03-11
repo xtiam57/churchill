@@ -1,7 +1,7 @@
 import { Add, PlayArrow, Remove, Restore, Stop } from '@mui/icons-material';
 import { useCountdown } from 'hooks';
-import { useCallback, useState } from 'react';
-import { Button } from 'react-bootstrap';
+import { useCallback, useEffect, useState } from 'react';
+import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
 import { BROADCAST } from 'values';
 import { CountdownStyled } from './styled';
@@ -13,7 +13,7 @@ export function Countdown() {
 
   const [minutes, setMinutes] = useState(1);
   const [disabled, setDisabled] = useState(true);
-  const { time, start, stop } = useCountdown(disabled, (msg) =>
+  const { time, running, start, stop } = useCountdown(disabled, (msg) =>
     setCountdown(msg)
   );
 
@@ -25,61 +25,97 @@ export function Countdown() {
     setMinutes((prev) => Math.max(1, prev - 5));
   }, []);
 
+  useEffect(() => {
+    if (!running) {
+      setDisabled(true);
+    }
+  }, [running]);
+
   return (
-    <CountdownStyled title="Temporizador">
-      {!disabled ? (
+    <CountdownStyled>
+      {!disabled && running ? (
         <>
-          <div className="display">
-            <Restore fontSize="small" /> {time}
-          </div>
-          <Button
-            size="sm"
-            variant="danger"
-            title="Detener temporizador"
-            onClick={() => {
-              setDisabled(true);
-              stop();
-            }}
-            className="flat-left"
+          <OverlayTrigger
+            placement="bottom"
+            overlay={<Tooltip>Temporizador</Tooltip>}
           >
-            <Stop />
-          </Button>
+            <div className="display">
+              <Restore fontSize="small" /> {time}
+            </div>
+          </OverlayTrigger>
+
+          <OverlayTrigger
+            placement="bottom"
+            overlay={<Tooltip>Detener</Tooltip>}
+          >
+            <Button
+              size="sm"
+              variant="danger"
+              onClick={() => {
+                setDisabled(true);
+                stop();
+              }}
+              className="flat-left"
+            >
+              <Stop />
+            </Button>
+          </OverlayTrigger>
         </>
       ) : (
         <>
-          <Button
-            size="sm"
-            variant="dark"
-            className="flat-right"
-            onClick={handleDecrease}
-            title="Decrementar temporizador"
+          <OverlayTrigger
+            placement="bottom"
+            overlay={<Tooltip>Decrementar</Tooltip>}
           >
-            <Remove />
-          </Button>
-          <div className="display">
-            <Restore fontSize="small" /> {minutes} min
-          </div>
-          <div className="btn-group">
             <Button
               size="sm"
               variant="dark"
-              className="flat-left"
-              onClick={handleIncrease}
-              title="Incrementar temporizador"
+              className="flat-right"
+              onClick={handleDecrease}
             >
-              <Add />
+              <Remove />
             </Button>
-            <Button
-              size="sm"
-              variant="light"
-              onClick={() => {
-                start(minutes, 0);
-                setDisabled(false);
-              }}
-              title="Empezar temporizador"
+          </OverlayTrigger>
+
+          <OverlayTrigger
+            placement="bottom"
+            overlay={<Tooltip>Temporizador</Tooltip>}
+          >
+            <div className="display">
+              <Restore fontSize="small" /> {minutes} min
+            </div>
+          </OverlayTrigger>
+
+          <div className="btn-group">
+            <OverlayTrigger
+              placement="bottom"
+              overlay={<Tooltip>Incrementar</Tooltip>}
             >
-              <PlayArrow />
-            </Button>
+              <Button
+                size="sm"
+                variant="dark"
+                className="flat-left"
+                onClick={handleIncrease}
+              >
+                <Add />
+              </Button>
+            </OverlayTrigger>
+
+            <OverlayTrigger
+              placement="bottom"
+              overlay={<Tooltip>Empezar</Tooltip>}
+            >
+              <Button
+                size="sm"
+                variant="light"
+                onClick={() => {
+                  start(minutes, 1);
+                  setDisabled(false);
+                }}
+              >
+                <PlayArrow />
+              </Button>
+            </OverlayTrigger>
           </div>
         </>
       )}

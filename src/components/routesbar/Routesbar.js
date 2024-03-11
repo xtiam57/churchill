@@ -1,3 +1,4 @@
+import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { routes } from 'router';
 import { RoutesbarStyled } from './styled';
@@ -14,10 +15,13 @@ export function Routesbar() {
                 to={route.path}
                 className="nav-link text-dark"
                 activeClassName="active"
-                title={route.label}
               >
-                {route.icon}
-                {/* {route.showLabel && <span> {route.label}</span>} */}
+                <OverlayTrigger
+                  placement="right"
+                  overlay={<Tooltip id={route.key}>{route.label}</Tooltip>}
+                >
+                  {route.icon}
+                </OverlayTrigger>
               </NavLink>
             </li>
           ))}
