@@ -24,6 +24,10 @@ body {
   border-radius: 8px;
 }
 
+.border-rounded {
+  border-radius: 8px;
+}
+
 .logo {
   width: 164px;
 }
