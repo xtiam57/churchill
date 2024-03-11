@@ -21,13 +21,13 @@
   },
   "homepage": "./",
   "scripts": {
-    "react-start": "react-scripts start",
+    "react-start": "set PORT=3006 && react-scripts start",
     "react-build": "react-scripts build",
     "react-test": "react-scripts test",
     "react-eject": "react-scripts eject",
     "generate": "node generate.js",
     "build": "rimraf dist && yarn react-build && electron-builder",
-    "start": "concurrently \"set BROWSER=none && yarn run react-start\" \"wait-on http://localhost:3000 && set ELECTRON_START_URL=http://localhost:3000 && electron .\""
+    "start": "concurrently \"set BROWSER=none && yarn run react-start\" \"wait-on http://localhost:3006 && set ELECTRON_START_URL=http://localhost:3006 && electron .\""
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",

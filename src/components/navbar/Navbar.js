@@ -48,7 +48,13 @@ export function Navbar() {
 
   return (
     <>
-      <nav style={{ gridArea: 'navbar' }} className={styles}>
+      <nav
+        style={{
+          gridArea: 'navbar',
+          boxShadow: '0 -2px 15px 0 rgba(0, 0, 0, 1)',
+        }}
+        className={styles}
+      >
         <div className="container-fluid">
           <span className="navbar-brand d-flex align-items-center">
             <Logo

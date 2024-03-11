@@ -8,10 +8,10 @@ export const RoutesbarStyled = styled.div`
   align-items: center;
   /* justify-content: center; */
   background-color: var(--light);
-  /* color: var(--light); */
   grid-area: routesbar;
   z-index: 5;
   padding: 20px 0;
+  box-shadow: -2px 0 15px 0 rgba(0, 0, 0, 1);
 
   ul {
     list-style: none;

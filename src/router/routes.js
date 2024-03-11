@@ -1,9 +1,16 @@
-import { Audiotrack, AutoStories, Cake, Newspaper } from '@mui/icons-material';
+import {
+  Audiotrack,
+  AutoStories,
+  Cake,
+  Newspaper,
+  PsychologyAlt,
+} from '@mui/icons-material';
 import AnthemnsPage from 'pages/anthemns';
 import BirthdaysPage from 'pages/birthdays';
 import CastPage from 'pages/cast';
 import HomePage from 'pages/home';
 import ScripturesPage from 'pages/scriptures';
+import TriviaPage from 'pages/trivia';
 
 export const PATHS = {
   ROOT: '/',
@@ -73,16 +80,16 @@ export const routes = flatten([
   //   menu: true,
   //   showLabel: false,
   // },
-  // {
-  //   key: PATHS.TRIVIA_PAGE,
-  //   exact: true,
-  //   path: PATHS.TRIVIA_PAGE,
-  //   component: TriviaPage,
-  //   icon: <BsQuestionCircle />,
-  //   label: 'Trivia',
-  //   menu: true,
-  //   showLabel: false,
-  // },
+  {
+    key: PATHS.TRIVIA_PAGE,
+    exact: true,
+    path: PATHS.TRIVIA_PAGE,
+    component: TriviaPage,
+    icon: <PsychologyAlt />,
+    label: 'Trivia',
+    menu: true,
+    showLabel: true,
+  },
 ]);
 
 function flatten(routes) {

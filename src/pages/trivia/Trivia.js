@@ -11,7 +11,7 @@ import {
 } from 'components';
 import { useIterate, useKeyUp, usePresenter } from 'hooks';
 import { useEffect, useRef, useState } from 'react';
-import { Button, ButtonGroup } from 'react-bootstrap';
+import { Button, ButtonGroup, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
 import { BROADCAST, MOVEMENT } from 'values';
 import { QUESTIONS } from './data';
@@ -107,32 +107,58 @@ export default function TriviaPage() {
         <Controls centered>
           <ButtonGroup className="mx-2">
             {autoplay ? (
-              <Button onClick={() => setAutoplay(false)} variant="light">
-                <Pause />
-              </Button>
+              <OverlayTrigger
+                placement="top"
+                overlay={<Tooltip>Pausar cambio automático</Tooltip>}
+              >
+                <Button onClick={() => setAutoplay(false)} variant="secondary">
+                  <Pause />
+                </Button>
+              </OverlayTrigger>
             ) : (
-              <Button onClick={() => setAutoplay(true)} variant="secondary">
-                <PlayArrow />
-              </Button>
+              <OverlayTrigger
+                placement="top"
+                overlay={<Tooltip>Empezar cambio automático</Tooltip>}
+              >
+                <Button onClick={() => setAutoplay(true)} variant="dark">
+                  <PlayArrow />
+                </Button>
+              </OverlayTrigger>
             )}
           </ButtonGroup>
 
           <ButtonGroup>
-            <Button onClick={handlePrevSlide} variant="secondary">
-              <West />
-            </Button>
-            <Button onClick={handleNextSlide} variant="secondary">
-              <East />
-            </Button>
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Página anterior</Tooltip>}
+            >
+              <Button onClick={handlePrevSlide} variant="primary">
+                <West />
+              </Button>
+            </OverlayTrigger>
+
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Página siguiente</Tooltip>}
+            >
+              <Button onClick={handleNextSlide}>
+                <East />
+              </Button>
+            </OverlayTrigger>
           </ButtonGroup>
 
           <ButtonGroup className="mx-2">
-            <Button
-              onClick={() => setLoop((state) => !state)}
-              variant={loop ? 'light' : 'secondary'}
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Repetir</Tooltip>}
             >
-              <Repeat />
-            </Button>
+              <Button
+                onClick={() => setLoop((state) => !state)}
+                variant={loop ? 'secondary' : 'dark'}
+              >
+                <Repeat />
+              </Button>
+            </OverlayTrigger>
           </ButtonGroup>
         </Controls>
       </Wrapper>
