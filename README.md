@@ -9,7 +9,7 @@ La aplicación fue originalmente ideada para ser usada en una iglesia pequeña. 
 
 Es un proyecto hecho con cariño y mucho esfuerzo para Dios y sus Iglesias. Te ruego, que si vas a usar la aplicación, **no pretendas lucrar con ella**.
 
-[Descargar](https://github.com/xtiam57/churchill/releases)
+[Descargar]([https://github.com/xtiam57/churchill/releases](https://xtiam57.github.io/churchill/))
 
 Puedes hacer uso de las pistas de Himnos en el caso de que tu Iglesia no cuente con música en vivo.
 
