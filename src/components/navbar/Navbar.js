@@ -1,84 +1,137 @@
-import { Semaphore } from 'components';
-import { useClock, usePresenter, useSettingsSidebar } from 'hooks';
-import React from 'react';
-import { Button } from 'react-bootstrap';
-import { BsFillGearFill, BsHouseFill } from 'react-icons/bs';
-import { RiComputerLine, RiSlideshow2Fill } from 'react-icons/ri';
-import { NavLink, useLocation } from 'react-router-dom';
-import { PATHS, routes } from 'router';
+import {
+  CancelPresentation,
+  Chat,
+  Settings,
+  Slideshow,
+} from '@mui/icons-material';
+import { Countdown, Logo } from 'components';
+import { usePresenter, useSettingsSidebar } from 'hooks';
+import { useCallback, useState } from 'react';
+import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { useLocation } from 'react-router-dom';
+import { PATHS } from 'router';
+import createPersistedState from 'use-persisted-state';
+import { BROADCAST } from 'values';
+import { AlertMessageModal } from './modal';
+
+const useAlert = createPersistedState(BROADCAST.ALERT);
+const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
 export function Navbar() {
+  const [alert, setAlert] = useAlert(BROADCAST.INITIAL_ALERT);
+  const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
+
   const location = useLocation();
-  const time = useClock();
   const { toggleSettings } = useSettingsSidebar();
   const { toggle, presenting } = usePresenter();
+  const [showModal, setShowModal] = useState(false);
+
+  const handleSendMessage = useCallback(
+    ({ message }) => {
+      setShowModal(false);
+      setAlert(message);
+
+      setTimeout(() => {
+        setAlert('');
+      }, settings.alertsinterval || 30000);
+    },
+    [setAlert, settings]
+  );
 
   if (location.pathname === PATHS.CAST_PAGE) {
     return null;
   }
 
   const styles = `navbar navbar-expand-lg sticky-top ${
-    presenting ? 'navbar-light bg-warning' : 'navbar-dark bg-primary'
+    presenting ? 'navbar-light bg-secondary' : 'navbar-dark bg-primary'
   }`;
 
   return (
     <>
-      <nav className={styles}>
+      <nav
+        style={{
+          gridArea: 'navbar',
+          boxShadow: '0 -2px 15px 0 rgba(0, 0, 0, 1)',
+        }}
+        className={styles}
+      >
         <div className="container-fluid">
-          <NavLink exact to="/">
-            <span className="navbar-brand">Churchill</span>
-          </NavLink>
-
+          <span className="navbar-brand d-flex align-items-center">
+            <Logo
+              height={24}
+              logo="horizontal"
+              color={presenting ? '#20232a' : '#fff'}
+            />
+          </span>
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
-              <NavLink
-                exact
-                to="/"
-                className="nav-link"
-                activeClassName="active"
+              <OverlayTrigger
+                placement="bottom"
+                overlay={<Tooltip>Ajustes</Tooltip>}
               >
-                <BsHouseFill />
-              </NavLink>
+                <Button
+                  onClick={toggleSettings}
+                  className={presenting ? 'text-dark' : 'text-light'}
+                  variant="link"
+                >
+                  <Settings />
+                </Button>
+              </OverlayTrigger>
             </li>
-            <li className="nav-item">
-              <Button
-                onClick={toggleSettings}
-                className={presenting ? 'text-dark' : 'text-light'}
-                variant="link"
-              >
-                <BsFillGearFill />
-              </Button>
-            </li>
-
-            {routes
-              .filter((route) => route.menu)
-              .map((route, index) => (
-                <li key={index} className="nav-item">
-                  <NavLink
-                    to={route.path}
-                    className="nav-link"
-                    activeClassName="active"
-                    title={route.label}
+            {presenting && (
+              <li className="nav-item">
+                <OverlayTrigger
+                  placement="bottom"
+                  overlay={<Tooltip>Aviso en pantalla</Tooltip>}
+                >
+                  <Button
+                    onClick={() => setShowModal(true)}
+                    className={presenting ? 'text-dark' : 'text-light'}
+                    variant="link"
                   >
-                    {route.icon}
-                    {route.showLabel && <span> {route.label}</span>}
-                  </NavLink>
-                </li>
-              ))}
+                    <Chat />
+                  </Button>
+                </OverlayTrigger>
+              </li>
+            )}
           </ul>
+          {alert ? (
+            <div className="marquee mr-3" style={{ maxWidth: '250px' }}>
+              <p className="m-0">{alert}</p>
+            </div>
+          ) : null}
 
           <span className="mr-3">
-            <Semaphore />
+            <Countdown />
           </span>
 
-          <Button
-            onClick={toggle}
-            variant={presenting ? 'outline-dark' : 'outline-light'}
+          {/* <span className="mr-3">
+            <Semaphore />
+          </span> */}
+
+          <OverlayTrigger
+            placement="bottom"
+            overlay={
+              <Tooltip>
+                {presenting ? 'Detener proyección' : 'Iniciar proyección'}
+              </Tooltip>
+            }
           >
-            {presenting ? <RiComputerLine /> : <RiSlideshow2Fill />}
-          </Button>
+            <Button
+              onClick={toggle}
+              variant={presenting ? 'outline-dark' : 'secondary'}
+            >
+              {presenting ? <CancelPresentation /> : <Slideshow />}
+            </Button>
+          </OverlayTrigger>
         </div>
       </nav>
+
+      <AlertMessageModal
+        show={showModal}
+        handleClose={() => setShowModal(false)}
+        handleSave={handleSendMessage}
+      />
     </>
   );
 }

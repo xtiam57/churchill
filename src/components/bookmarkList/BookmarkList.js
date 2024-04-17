@@ -1,7 +1,6 @@
+import { Sort } from '@mui/icons-material';
 import { Bookmark, createKey, List } from 'components';
 import { useAnthemn, useScriptures } from 'hooks';
-import React from 'react';
-import { FaSortAmountDown, FaSortAmountDownAlt } from 'react-icons/fa';
 import { getBookmarkedItems, Storage } from 'utils';
 import { MAX_BOOKMARKS } from 'values';
 
@@ -32,7 +31,7 @@ export function BookmarkList({
           <List.Title>Marcadores ({items.length}) </List.Title>
           {onSort ? (
             <List.Action className="text-center" onClick={onSort}>
-              {sort === 'desc' ? <FaSortAmountDownAlt /> : <FaSortAmountDown />}
+              <Sort />
             </List.Action>
           ) : null}
           <List.Action className="text-right" onClick={handleRemove}>
@@ -57,7 +56,7 @@ export function BookmarkList({
                   ? item?.text.replaceAll('<br/>', '\n').replaceAll('_', '')
                   : item?.text?.replaceAll('/n', '\n').replaceAll('_', '')
               }
-              className={current.id === item.id ? 'text-warning' : ''}
+              className={current.id === item.id ? 'text-light' : ''}
             >
               {item.title}
             </List.Action>

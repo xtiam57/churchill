@@ -1,35 +1,42 @@
 import { Bookmark } from 'components';
 import { useAnthemn } from 'hooks';
-import { Modal } from 'react-bootstrap';
+import { useCallback, useState } from 'react';
+import { Form, Modal } from 'react-bootstrap';
 import styledComponents from 'styled-components';
+import { Storage } from 'utils';
+import { AnthemnCategory, createCategoryKey } from './AnthemCategory';
 
 const AnthemnIndexStyled = styledComponents.div`
   width: 100%;
 
   .sub-index {
-    padding: 30px;
-    overflow-y: hidden;
-    overflow-x: auto;
+    padding: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
     background-color: #20232a;
     color: #ccc;
+    height: calc(100vh - 56px - 100px);
 
     ul {
       margin: 0;
       padding: 0;
       list-style: none;
-      columns: 300px;
-      height: calc(100vh - 56px - 150px);
 
       li {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: .15rem;
+        padding: .3rem 1rem;
+        border-radius: .25rem;
         page-break-inside: avoid;
         break-inside: avoid;
-        margin-right: 30px;
+
+        &:nth-child(odd) {
+          background-color: #2b2f36;
+        }
 
         &:hover {
+          background-color: var(--gray);
           > span {
             color: #fff;
           }
@@ -39,20 +46,17 @@ const AnthemnIndexStyled = styledComponents.div`
           display: flex;
           flex: 1 0 auto;
           margin-right: 10px;
-          font-size: .8rem;
-          //border: solid 1px magenta;
+          font-size: .85rem;
 
           .name {
             flex: 1 1 auto;
             cursor: pointer;
-            //border: solid 1px cyan;
           }
 
           .number {
             flex: 0 1 35px;
             text-align: right;
             margin-right: 10px;
-            //border: solid 1px blue;
           }
         }
       }
@@ -69,45 +73,83 @@ export function AnthemnIndex({
   ...rest
 }) {
   const { anthemns } = useAnthemn();
+  const [category, setCategory] = useState('ALL');
+
+  const handleChange = ({ target }) => {
+    const { value } = target;
+    setCategory(value);
+  };
+
+  const render = useCallback(() => {
+    return anthemns.map((item, index) => {
+      if (!item.category) {
+        item.category = Storage.get(createCategoryKey(item));
+      }
+
+      if (category === 'CHEERFUL' && item.category !== 'CHEERFUL') {
+        return null;
+      }
+
+      if (category === 'CONGREGATIONAL' && item.category !== 'CONGREGATIONAL') {
+        return null;
+      }
+
+      if (category === 'SOLEMN' && item.category !== 'SOLEMN') {
+        return null;
+      }
+
+      if (category === '' && item.category) {
+        return null;
+      }
+
+      return (
+        <li key={index}>
+          <span title={item?.text?.replaceAll('/n', '\n').replaceAll('_', '')}>
+            <span className="number text-light">#{item.number}</span>
+            <span className="name" onClick={() => onSelect(item)}>
+              {item.name}
+            </span>
+          </span>
+          <AnthemnCategory element={item} className="mr-2" />
+          <Bookmark icon element={item} onChange={onChange} sort={sort} />
+        </li>
+      );
+    });
+  }, [anthemns, onChange, onSelect, sort, category]);
 
   return (
     <Modal
-      size="xl"
+      size="lg"
       centered
       show={show}
       onHide={onHide}
       backdrop="static"
       keyboard={false}
-      className="anthemns-index"
     >
       <Modal.Header closeButton className="border-0">
-        <Modal.Title>Himnario</Modal.Title>
+        <Modal.Title className="d-flex align-items-center justify-content-between w-100">
+          Himnario
+          <div>
+            <Form.Control
+              size="sm"
+              as="select"
+              value={category}
+              onChange={handleChange}
+              {...rest}
+            >
+              <option value="ALL">Todo</option>
+              <option value="">⚪ Sin categoría</option>
+              <option value="CHEERFUL">🟡 Alegre</option>
+              <option value="CONGREGATIONAL">🟢 Congregacional</option>
+              <option value="SOLEMN">🟠 Solemne</option>
+            </Form.Control>
+          </div>
+        </Modal.Title>
       </Modal.Header>
       <Modal.Body className="p-0">
         <AnthemnIndexStyled>
           <div className="sub-index">
-            <ul>
-              {anthemns.map((item, index) => (
-                <li key={index}>
-                  <span
-                    title={item?.text
-                      ?.replaceAll('/n', '\n')
-                      .replaceAll('_', '')}
-                  >
-                    <span className="number text-warning">#{item.number}</span>
-                    <span className="name" onClick={() => onSelect(item)}>
-                      {item.name}
-                    </span>
-                  </span>
-                  <Bookmark
-                    icon
-                    element={item}
-                    onChange={onChange}
-                    sort={sort}
-                  />
-                </li>
-              ))}
-            </ul>
+            <ul>{render()}</ul>
           </div>
         </AnthemnIndexStyled>
       </Modal.Body>

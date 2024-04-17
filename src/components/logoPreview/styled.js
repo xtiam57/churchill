@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const LogoPreviewStyled = styled.div`
-  border-radius: 0.2rem;
+  border-radius: 8px;
   display: flex;
   padding: 1em;
   justify-content: center;

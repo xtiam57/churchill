@@ -1,7 +1,7 @@
-import { useEffect, useState, useCallback, useMemo } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { Time } from 'utils';
 
-export function useCountdown(showLogo, callback = () => {}) {
+export function useCountdown(disabled, callback = () => {}) {
   const audio = useMemo(() => new Audio('./audio/beep.mp3'), []);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
@@ -31,12 +31,12 @@ export function useCountdown(showLogo, callback = () => {}) {
     }, 1000);
 
     callback(
-      showLogo
+      disabled
         ? null
         : {
             id: 'TEMP',
             text: `<strong class="fs-timer">${time}</strong>`,
-            type: 'temp',
+            type: 'corner',
           }
     );
 
@@ -44,7 +44,7 @@ export function useCountdown(showLogo, callback = () => {}) {
       clearInterval(interval);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [minutes, seconds, showLogo, running]);
+  }, [minutes, seconds, disabled, running]);
 
   const stop = useCallback(() => {
     audio.pause();
@@ -63,9 +63,10 @@ export function useCountdown(showLogo, callback = () => {}) {
 
     setMinutes(initialMinutes);
     setSeconds(initialSeconds);
+    setTime(Time.formatTime(initialMinutes, initialSeconds));
     setRunning(true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return { start, stop, time };
+  return { start, stop, time, running };
 }

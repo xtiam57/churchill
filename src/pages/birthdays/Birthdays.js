@@ -1,23 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { Button, Form } from 'react-bootstrap';
-import createPersistedState from 'use-persisted-state';
-import { ImUserPlus } from 'react-icons/im';
-import { RiCloseFill } from 'react-icons/ri';
-
+import { PersonAddAlt, RemoveCircle } from '@mui/icons-material';
 import {
-  Wrapper,
-  Presenter,
-  Controls,
-  Sidebar,
-  List,
-  Title,
-  DisplayButton,
   Alert,
+  DisplayButton,
+  List,
+  Presenter,
+  Sidebar,
+  Title,
+  Wrapper,
 } from 'components';
 import { useBirthday, usePresenter } from 'hooks';
+import { useEffect, useState } from 'react';
+import { Button, Form, OverlayTrigger, Tooltip } from 'react-bootstrap';
+import createPersistedState from 'use-persisted-state';
 import { Time } from 'utils';
 import { BROADCAST } from 'values';
-
 import { BirthdayModal } from './modal';
 
 const useBroadcast = createPersistedState(BROADCAST.CHANNEL);
@@ -59,13 +55,23 @@ export default function BirthdaysPage() {
   return (
     <Wrapper>
       <Sidebar>
-        <Title>Cumples</Title>
+        <Title>Cumpleaños</Title>
 
         <DisplayButton
           value={showLogo}
           presenting={presenting}
           onToggle={setShowLogo}
         />
+
+        <Button
+          block
+          size="lg"
+          onClick={() => setShowModal(true)}
+          variant="success"
+          className="mb-4"
+        >
+          <PersonAddAlt /> Agregar
+        </Button>
 
         <List className="mb-4">
           {recent.length ? (
@@ -118,7 +124,12 @@ export default function BirthdaysPage() {
                 {Time.formatBirthday(item.day, item.month)})
               </List.Text>
               <List.Action onClick={() => handleDelete(item)}>
-                <RiCloseFill />
+                <OverlayTrigger
+                  placement="right"
+                  overlay={<Tooltip>Quitar de la lista</Tooltip>}
+                >
+                  <RemoveCircle fontSize="small" />
+                </OverlayTrigger>
               </List.Action>
             </List.Item>
           ))}
@@ -137,17 +148,11 @@ export default function BirthdaysPage() {
           {...settings}
         />
 
-        <Controls centered>
-          <Button onClick={() => setShowModal(true)} variant="secondary">
-            <ImUserPlus /> Agregar
-          </Button>
-
-          <BirthdayModal
-            show={showModal}
-            handleClose={() => setShowModal(false)}
-            handleSave={handleSave}
-          />
-        </Controls>
+        <BirthdayModal
+          show={showModal}
+          handleClose={() => setShowModal(false)}
+          handleSave={handleSave}
+        />
       </Wrapper>
     </Wrapper>
   );

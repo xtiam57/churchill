@@ -3,7 +3,7 @@ import { Highlighter } from 'react-bootstrap-typeahead';
 export const finderRender = (option, { text }) => (
   <div className="my-2">
     <div className="d-flex">
-      <div className="text-primary fs-lg ">{option.title}</div>
+      <strong className="fs-lg">{option.title}</strong>
       {option?.tags?.split(',').map((tag) => (
         <small key={tag} className="tag mb-0 ml-2">
           {tag}

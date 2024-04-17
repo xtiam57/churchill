@@ -1,18 +1,16 @@
+import {
+  Audiotrack,
+  AutoStories,
+  Cake,
+  Newspaper,
+  PsychologyAlt,
+} from '@mui/icons-material';
 import AnthemnsPage from 'pages/anthemns';
 import BirthdaysPage from 'pages/birthdays';
 import CastPage from 'pages/cast';
-import CountdownPage from 'pages/countdown';
 import HomePage from 'pages/home';
 import ScripturesPage from 'pages/scriptures';
 import TriviaPage from 'pages/trivia';
-import {
-  BsBook,
-  BsClock,
-  BsGift,
-  BsHouseFill,
-  BsMusicNoteList,
-  BsQuestionCircle,
-} from 'react-icons/bs';
 
 export const PATHS = {
   ROOT: '/',
@@ -30,15 +28,17 @@ export const routes = flatten([
     exact: true,
     path: PATHS.ROOT,
     component: HomePage,
-    icon: <BsHouseFill />,
-    label: 'Inicio',
+    icon: <Newspaper />,
+    label: 'Anuncios',
+    menu: true,
+    showLabel: true,
   },
   {
     key: PATHS.SCRIPTURES_PAGE,
     exact: true,
     path: PATHS.SCRIPTURES_PAGE,
     component: ScripturesPage,
-    icon: <BsBook />,
+    icon: <AutoStories />,
     label: 'Escrituras',
     menu: true,
     showLabel: true,
@@ -48,7 +48,7 @@ export const routes = flatten([
     exact: true,
     path: PATHS.ANTHEMNS_PAGE,
     component: AnthemnsPage,
-    icon: <BsMusicNoteList />,
+    icon: <Audiotrack />,
     label: 'Himnos',
     menu: true,
     showLabel: true,
@@ -58,10 +58,10 @@ export const routes = flatten([
     exact: true,
     path: PATHS.BIRTHDAYS_PAGE,
     component: BirthdaysPage,
-    icon: <BsGift />,
+    icon: <Cake />,
     label: 'Cumpleaños',
     menu: true,
-    showLabel: false,
+    showLabel: true,
   },
   {
     key: PATHS.CAST_PAGE,
@@ -70,25 +70,25 @@ export const routes = flatten([
     component: CastPage,
     label: 'Proyectar',
   },
-  {
-    key: PATHS.COUNTDOWN_PAGE,
-    exact: true,
-    path: PATHS.COUNTDOWN_PAGE,
-    component: CountdownPage,
-    icon: <BsClock />,
-    label: 'Temporizador',
-    menu: true,
-    showLabel: false,
-  },
+  // {
+  //   key: PATHS.COUNTDOWN_PAGE,
+  //   exact: true,
+  //   path: PATHS.COUNTDOWN_PAGE,
+  //   component: CountdownPage,
+  //   icon: <BsClock />,
+  //   label: 'Temporizador',
+  //   menu: true,
+  //   showLabel: false,
+  // },
   {
     key: PATHS.TRIVIA_PAGE,
     exact: true,
     path: PATHS.TRIVIA_PAGE,
     component: TriviaPage,
-    icon: <BsQuestionCircle />,
+    icon: <PsychologyAlt />,
     label: 'Trivia',
     menu: true,
-    showLabel: false,
+    showLabel: true,
   },
 ]);
 

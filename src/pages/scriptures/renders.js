@@ -5,7 +5,7 @@ export const finderRender = (option, { text }) => (
     <Highlighter search={text}>
       {option.text.replaceAll('<br/>', '\n').replaceAll('_', '')}
     </Highlighter>
-    <small className="d-block text-primary">{option.subtext}</small>
+    <strong className="d-block">{option.subtext}</strong>
   </div>
 );
 

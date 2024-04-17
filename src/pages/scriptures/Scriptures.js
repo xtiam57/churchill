@@ -1,26 +1,24 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Typeahead } from 'react-bootstrap-typeahead';
-import { Button, ButtonGroup } from 'react-bootstrap';
-import createPersistedState from 'use-persisted-state';
-import { ImArrowLeft2, ImArrowRight2 } from 'react-icons/im';
-
+import { East, FirstPage, LastPage, West } from '@mui/icons-material';
 import {
-  Wrapper,
-  Presenter,
-  Controls,
-  Sidebar,
+  Alert,
   Bookmark,
   BookmarkList,
-  Finder,
-  Title,
+  Controls,
   DisplayButton,
+  Finder,
   FinderButton,
-  Alert,
+  Presenter,
+  Sidebar,
+  Title,
+  Wrapper,
 } from 'components';
-import { useScriptures, useKeyUp, usePresenter } from 'hooks';
+import { useKeyUp, usePresenter, useScriptures } from 'hooks';
+import { useEffect, useRef, useState } from 'react';
+import { Button, ButtonGroup, OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { Typeahead } from 'react-bootstrap-typeahead';
+import createPersistedState from 'use-persisted-state';
 import { getBookmarkedItems } from 'utils';
 import { BROADCAST, MOVEMENT } from 'values';
-
 import { finderRender, typeaheadRender } from './renders';
 
 const useBroadcast = createPersistedState(BROADCAST.CHANNEL);
@@ -152,7 +150,7 @@ function ScripturesView() {
           {...settings}
         />
 
-        <div className="text-light bg-dark py-2 px-3 d-flex justify-content-between">
+        <div className="text-white bg-dark py-2 px-3 d-flex justify-content-between">
           <small>
             Usa las teclas <strong>&larr;</strong> y <strong>&rarr;</strong>{' '}
             para cambiar de versículo, y <strong>&uarr;</strong> y{' '}
@@ -161,7 +159,7 @@ function ScripturesView() {
           <small>
             Capítulo: {current.chapterNumber}/{current.chaptersCount} &middot;
             Libro: {current.bookNumber}/66 &middot;{' '}
-            <strong className="text-warning">
+            <strong className="text-light">
               {Math.round(
                 ((current.index / scriptures.length) * 100 + Number.EPSILON) *
                   100
@@ -172,15 +170,43 @@ function ScripturesView() {
         </div>
 
         <Controls centered>
-          <ButtonGroup>
-            <Button onClick={handlePrevVerse} variant="secondary">
-              <ImArrowLeft2 />
+          <OverlayTrigger
+            placement="top"
+            overlay={<Tooltip>Capítulo previo</Tooltip>}
+          >
+            <Button onClick={handlePrevChapter} variant="dark">
+              <FirstPage />
             </Button>
+          </OverlayTrigger>
 
-            <Button onClick={handleNextVerse} variant="secondary">
-              <ImArrowRight2 />
-            </Button>
+          <ButtonGroup className="mx-5">
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Versículo previo</Tooltip>}
+            >
+              <Button onClick={handlePrevVerse} variant="primary">
+                <West />
+              </Button>
+            </OverlayTrigger>
+
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Versículo siguiente</Tooltip>}
+            >
+              <Button onClick={handleNextVerse} variant="primary">
+                <East />
+              </Button>
+            </OverlayTrigger>
           </ButtonGroup>
+
+          <OverlayTrigger
+            placement="top"
+            overlay={<Tooltip>Capítulo siguiente</Tooltip>}
+          >
+            <Button onClick={handleNextChapter} variant="dark">
+              <LastPage />
+            </Button>
+          </OverlayTrigger>
         </Controls>
       </Wrapper>
       <Finder

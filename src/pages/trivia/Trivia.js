@@ -1,27 +1,19 @@
-import React, { useState, useRef, useEffect } from 'react';
-import createPersistedState from 'use-persisted-state';
-import { Button, ButtonGroup } from 'react-bootstrap';
+import { East, Pause, PlayArrow, Repeat, West } from '@mui/icons-material';
 import {
-  ImPause2,
-  ImPlay3,
-  ImArrowLeft2,
-  ImArrowRight2,
-  ImLoop,
-} from 'react-icons/im';
-
-import {
-  Slider,
-  Sidebar,
-  Wrapper,
-  Controls,
-  List,
-  Title,
-  DisplayButton,
   Alert,
+  Controls,
+  DisplayButton,
+  List,
+  Sidebar,
+  Slider,
+  Title,
+  Wrapper,
 } from 'components';
-import { useKeyUp, useIterate, usePresenter } from 'hooks';
+import { useIterate, useKeyUp, usePresenter } from 'hooks';
+import { useEffect, useRef, useState } from 'react';
+import { Button, ButtonGroup, OverlayTrigger, Tooltip } from 'react-bootstrap';
+import createPersistedState from 'use-persisted-state';
 import { BROADCAST, MOVEMENT } from 'values';
-
 import { QUESTIONS } from './data';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
@@ -115,32 +107,58 @@ export default function TriviaPage() {
         <Controls centered>
           <ButtonGroup className="mx-2">
             {autoplay ? (
-              <Button onClick={() => setAutoplay(false)} variant="light">
-                <ImPause2 />
-              </Button>
+              <OverlayTrigger
+                placement="top"
+                overlay={<Tooltip>Pausar cambio automático</Tooltip>}
+              >
+                <Button onClick={() => setAutoplay(false)} variant="secondary">
+                  <Pause />
+                </Button>
+              </OverlayTrigger>
             ) : (
-              <Button onClick={() => setAutoplay(true)} variant="secondary">
-                <ImPlay3 />
-              </Button>
+              <OverlayTrigger
+                placement="top"
+                overlay={<Tooltip>Empezar cambio automático</Tooltip>}
+              >
+                <Button onClick={() => setAutoplay(true)} variant="dark">
+                  <PlayArrow />
+                </Button>
+              </OverlayTrigger>
             )}
           </ButtonGroup>
 
           <ButtonGroup>
-            <Button onClick={handlePrevSlide} variant="secondary">
-              <ImArrowLeft2 />
-            </Button>
-            <Button onClick={handleNextSlide} variant="secondary">
-              <ImArrowRight2 />
-            </Button>
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Página anterior</Tooltip>}
+            >
+              <Button onClick={handlePrevSlide} variant="primary">
+                <West />
+              </Button>
+            </OverlayTrigger>
+
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Página siguiente</Tooltip>}
+            >
+              <Button onClick={handleNextSlide}>
+                <East />
+              </Button>
+            </OverlayTrigger>
           </ButtonGroup>
 
           <ButtonGroup className="mx-2">
-            <Button
-              onClick={() => setLoop((state) => !state)}
-              variant={loop ? 'light' : 'secondary'}
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Repetir</Tooltip>}
             >
-              <ImLoop />
-            </Button>
+              <Button
+                onClick={() => setLoop((state) => !state)}
+                variant={loop ? 'secondary' : 'dark'}
+              >
+                <Repeat />
+              </Button>
+            </OverlayTrigger>
           </ButtonGroup>
         </Controls>
       </Wrapper>

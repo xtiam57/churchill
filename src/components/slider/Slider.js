@@ -1,11 +1,6 @@
 import { Presenter } from 'components';
 import { useIterate, useKeyUp } from 'hooks';
-import React, {
-  forwardRef,
-  useEffect,
-  useImperativeHandle,
-  useState,
-} from 'react';
+import { forwardRef, useEffect, useImperativeHandle, useState } from 'react';
 import createPersistedState from 'use-persisted-state';
 import { BROADCAST, MOVEMENT } from 'values';
 import { SummaryStyled } from './styled';
@@ -114,7 +109,7 @@ export const Slider = forwardRef(
           </SlidePreviewStyled>
         ) : null} */}
 
-        <SummaryStyled className="text-light bg-dark py-2 px-3">
+        <SummaryStyled className="text-white bg-dark py-2 px-3">
           <small className="text-nowrap">{children}</small>
 
           {marquee ? (
@@ -131,7 +126,7 @@ export const Slider = forwardRef(
               <>
                 {' '}
                 &middot;{' '}
-                <strong className="text-warning">
+                <strong className="text-light">
                   {Math.round(
                     (((slide.index + 1) / slides.length) * 100 +
                       Number.EPSILON) *

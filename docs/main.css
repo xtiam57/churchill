@@ -1,0 +1,67 @@
+body {
+  background-color: #233d57;
+  color: #fff;
+  min-height: 100dvh;
+}
+
+
+.button {
+  background-color: #ff8a65;
+  color: #333;
+  padding: 20px 50px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 24px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.image {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+.border-rounded {
+  border-radius: 8px;
+}
+
+.logo {
+  width: 164px;
+}
+
+p,
+h1 {
+  text-wrap: balance;
+}
+
+.text-secondary {
+  color: #ff8a65 !important;
+}
+
+.text-light {
+  color: #8be1f0 !important;
+}
+
+.cvisible {
+  display: block;
+}
+.cinvisible {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .cvisible-md {
+    display: block !important;
+  }
+  .cinvisible-md {
+    display: none !important;
+  }
+}
+
+::selection {
+  color: #20232a;
+  background-color: #8be1f0;
+}

@@ -7,7 +7,7 @@ export const ListStyled = styled.ul`
 `;
 
 export const TitleStyled = styled.span`
-  color: var(--light);
+  color: #fff;
   text-transform: uppercase;
   font-size: 0.7em;
   letter-spacing: 2px;
@@ -38,10 +38,10 @@ export const ActionStyled = styled.button`
   font-size: 0.9em;
   padding: 5px 0 5px 0;
   min-width: 16px;
-  color: ${({ active }) => (active ? 'var(--warning)' : 'var(--secondary)')};
+  color: ${({ active }) => (active ? 'var(--light)' : 'var(--gray)')};
 
   &:hover {
-    color: ${({ active }) => (active ? 'var(--warning)' : 'var(--light)')};
+    color: ${({ active }) => (active ? 'var(--light)' : 'var(--light)')};
   }
 `;
 

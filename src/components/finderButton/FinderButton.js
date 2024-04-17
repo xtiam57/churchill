@@ -1,6 +1,5 @@
-import React from 'react';
-import { Button } from 'react-bootstrap';
-import { ImSearch } from 'react-icons/im';
+import { Search } from '@mui/icons-material';
+import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
 
 export function FinderButton({ onOpen = () => {}, extraButton = null }) {
   return (
@@ -12,14 +11,18 @@ export function FinderButton({ onOpen = () => {}, extraButton = null }) {
       <div>
         {extraButton}
 
-        <Button
-          variant="link"
-          className="text-light p-0 text-small"
-          onClick={(e) => onOpen(true)}
-          title="Búsqueda avanzada (Ctrl+B)"
+        <OverlayTrigger
+          placement="right"
+          overlay={<Tooltip>Búsqueda avanzada (Ctrl+B)</Tooltip>}
         >
-          <ImSearch />
-        </Button>
+          <Button
+            variant="link"
+            className="text-white p-0 text-small"
+            onClick={(e) => onOpen(true)}
+          >
+            <Search fontSize="small" />
+          </Button>
+        </OverlayTrigger>
       </div>
     </div>
   );

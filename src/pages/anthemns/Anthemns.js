@@ -1,4 +1,16 @@
 import {
+  East,
+  FirstPage,
+  FolderCopy,
+  LastPage,
+  MenuBook,
+  PlayArrow,
+  Stop,
+  VolumeMute,
+  VolumeUp,
+  West,
+} from '@mui/icons-material';
+import {
   Alert,
   Bookmark,
   BookmarkList,
@@ -13,21 +25,17 @@ import {
 } from 'components';
 import { useAnthemn, useFolder, useKeyUp, usePresenter } from 'hooks';
 import React, { useEffect, useRef, useState } from 'react';
-import { Button, ButtonGroup, Form } from 'react-bootstrap';
-import { Typeahead } from 'react-bootstrap-typeahead';
 import {
-  ImArrowLeft2,
-  ImArrowRight2,
-  ImBook,
-  ImFolderOpen,
-  ImPlay3,
-  ImStop2,
-  ImVolumeHigh,
-  ImVolumeMute,
-} from 'react-icons/im';
+  Button,
+  ButtonGroup,
+  Form,
+  OverlayTrigger,
+  Tooltip,
+} from 'react-bootstrap';
+import { Typeahead } from 'react-bootstrap-typeahead';
 import createPersistedState from 'use-persisted-state';
 import useSound from 'use-sound';
-import { getBookmarkedItems, Storage } from 'utils';
+import { Storage, getBookmarkedItems } from 'utils';
 import { BROADCAST, MOVEMENT } from 'values';
 import { AnthemnIndex } from './AnthemnIndex';
 import { AnthemnTags } from './AnthemnTags';
@@ -191,14 +199,19 @@ export default function AnthemnsPage() {
         <FinderButton
           onOpen={setOpenFinder}
           extraButton={
-            <Button
-              variant="link"
-              className="text-light p-0 text-small mr-2"
-              onClick={(e) => setOpenIndex(true)}
-              title="Abrir Himnario"
+            <OverlayTrigger
+              placement="bottom"
+              overlay={<Tooltip>Abrir Himnario</Tooltip>}
             >
-              <ImBook />
-            </Button>
+              <Button
+                variant="link"
+                className="text-white p-0 text-small mr-2"
+                onClick={(e) => setOpenIndex(true)}
+                title="Abrir Himnario"
+              >
+                <MenuBook fontSize="small" />
+              </Button>
+            </OverlayTrigger>
           }
         />
 
@@ -253,34 +266,37 @@ export default function AnthemnsPage() {
           para cambiar de himno.
         </Slider>
 
-        <div className="p-2" style={{ backgroundColor: '#20232a' }}>
-          <Form.Control
-            type="range"
-            name="position"
-            value={trackProgress}
-            min="0"
-            max={Math.floor(sound?.duration())}
-            step="1"
-            onChange={({ target }) => {
-              sound?.seek(+target.value);
-              setTrackProgress(+target.value);
-              // +target.value;
-            }}
-          />
-        </div>
+        {isMP3Loaded && (
+          <div className="p-2 bg-gray d-flex align-items-center">
+            <Form.Control
+              custom
+              type="range"
+              name="position"
+              value={trackProgress}
+              min="0"
+              max={Math.floor(sound?.duration())}
+              step="1"
+              onChange={({ target }) => {
+                sound?.seek(+target.value);
+                setTrackProgress(+target.value);
+              }}
+            />
+          </div>
+        )}
 
         <Controls>
           {isMP3Loaded ? (
             <div className="d-flex">
-              <ImVolumeMute />
+              <VolumeMute fontSize="small" />
               <Form.Control
+                custom
                 type="range"
                 name="volume"
                 value={volume}
                 min="0"
                 max="1"
                 step="0.05"
-                className="mx-2"
+                className="mx-2 volume-control"
                 onChange={({ target }) => {
                   setVolume(() => {
                     handleSave(target);
@@ -288,23 +304,23 @@ export default function AnthemnsPage() {
                   });
                 }}
               />
-              <ImVolumeHigh />
+              <VolumeUp fontSize="small" />
             </div>
           ) : null}
 
           {isMP3Loaded ? null : (
             <small>
-              <span className="text-warning">
+              <span className="text-light">
                 Este himno <strong>NO</strong> tiene pista.
               </span>{' '}
-              Agrégala en formato <i>.mp3</i> en la carpeta{' '}
+              Agrega su pista en formato <i>.mp3</i> en la carpeta{' '}
               <strong
                 className="pointer text-underline"
                 onClick={handleOpenPath}
               >
                 /himnos
               </strong>{' '}
-              con el nombre <strong>{current.number}.mp3</strong>.
+              con el nombre <strong>{current.number}.mp3</strong>
             </small>
           )}
 
@@ -313,41 +329,85 @@ export default function AnthemnsPage() {
               <>
                 <ButtonGroup className="mx-2">
                   {isPlaying ? (
-                    <Button onClick={() => stop()} variant="light">
-                      <ImStop2 />
-                    </Button>
-                  ) : (
-                    <Button
-                      onClick={() => {
-                        play();
-                        startTimer();
-                        sound?.seek(trackProgress);
-                      }}
-                      variant="secondary"
+                    <OverlayTrigger
+                      placement="top"
+                      overlay={<Tooltip>Detener</Tooltip>}
                     >
-                      <ImPlay3 />
-                    </Button>
+                      <Button onClick={() => stop()} variant="light">
+                        <Stop />
+                      </Button>
+                    </OverlayTrigger>
+                  ) : (
+                    <OverlayTrigger
+                      placement="top"
+                      overlay={<Tooltip>Reproducir</Tooltip>}
+                    >
+                      <Button
+                        onClick={() => {
+                          play();
+                          startTimer();
+                          sound?.seek(trackProgress);
+                        }}
+                        variant="secondary"
+                      >
+                        <PlayArrow />
+                      </Button>
+                    </OverlayTrigger>
                   )}
                 </ButtonGroup>
               </>
             ) : null}
 
-            <ButtonGroup>
-              <Button onClick={handlePrevSlide} variant="secondary">
-                <ImArrowLeft2 />
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Himno previo</Tooltip>}
+            >
+              <Button onClick={handlePrevAnthemn} variant="dark">
+                <FirstPage />
               </Button>
-              <Button onClick={handleNextSlide} variant="secondary">
-                <ImArrowRight2 />
-              </Button>
+            </OverlayTrigger>
+
+            <ButtonGroup className="mx-3">
+              <OverlayTrigger
+                placement="top"
+                overlay={<Tooltip>Página anterior</Tooltip>}
+              >
+                <Button onClick={handlePrevSlide} variant="primary">
+                  <West />
+                </Button>
+              </OverlayTrigger>
+
+              <OverlayTrigger
+                placement="top"
+                overlay={<Tooltip>Página siguiente</Tooltip>}
+              >
+                <Button onClick={handleNextSlide} variant="primary">
+                  <East />
+                </Button>
+              </OverlayTrigger>
             </ButtonGroup>
 
-            <Button
-              className="ml-2"
-              variant="secondary"
-              onClick={handleOpenPath}
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Himno siguiente</Tooltip>}
             >
-              <ImFolderOpen />
-            </Button>
+              <Button onClick={handleNextAnthemn} variant="dark">
+                <LastPage />
+              </Button>
+            </OverlayTrigger>
+
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Abrir directorio de pistas</Tooltip>}
+            >
+              <Button
+                className="ml-2"
+                variant="secondary"
+                onClick={handleOpenPath}
+              >
+                <FolderCopy />
+              </Button>
+            </OverlayTrigger>
           </div>
 
           {isMP3Loaded ? (
@@ -361,8 +421,8 @@ export default function AnthemnsPage() {
                   min="0.5"
                   max="2"
                   step="0.05"
-                  className="mx-2"
                   style={{ width: '80px' }}
+                  className="mx-2 volume-control"
                   onChange={({ target }) => {
                     setPlaybackRate(() => {
                       handleSave(target);
@@ -374,7 +434,7 @@ export default function AnthemnsPage() {
                     }
                   }}
                 />
-                <small className="navbar-text">
+                <small className="text-light">
                   x{Number.parseFloat(playbackRate).toFixed(2)}
                 </small>
               </div>

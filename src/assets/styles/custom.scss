@@ -1,0 +1,23 @@
+// Override default variables before the import
+
+$white: #ffffff;
+
+$theme-colors: (
+    "light":      #8be1f0,
+    "dark":       #20232a,
+    "primary":    #233d57,
+    "secondary":  #ff8a65,
+    "info":       #397951,
+    "success":    #259758,
+    "warning":    #e0c728,
+    "danger":     #ec1615,
+    "gray":       #737c85
+);
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+
+::selection {
+  color: var(--dark) !important;
+  background-color: var(--light) !important;
+}

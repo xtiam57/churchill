@@ -1,4 +1,4 @@
-import { Storage, Time, Slide, generateGUID } from 'utils';
+import { Slide, Storage, Time, generateGUID } from 'utils';
 
 export const BirthdayHelper = {};
 
@@ -43,7 +43,7 @@ BirthdayHelper.getSlide = (
             return `${name} <i>(${Time.formatBirthday(day, month)})</i>`;
           })
           .join('/n'),
-        subtext: `Deseamos que Dios le${bdays.length > 1 ? 's' : ''} bendiga.`,
+        // subtext: `Deseamos que Dios le${bdays.length > 1 ? 's' : ''} bendiga.`,
         type: 'birthday',
         count: bdays.length,
       })

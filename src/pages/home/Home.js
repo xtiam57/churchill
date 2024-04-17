@@ -1,27 +1,20 @@
-import React, { useState, useRef, useEffect } from 'react';
-import createPersistedState from 'use-persisted-state';
-import { Button, ButtonGroup } from 'react-bootstrap';
+import { East, Pause, PlayArrow, Repeat, West } from '@mui/icons-material';
 import {
-  ImPause2,
-  ImPlay3,
-  ImArrowLeft2,
-  ImArrowRight2,
-  ImLoop,
-} from 'react-icons/im';
-
-import {
-  Slider,
-  Sidebar,
-  Wrapper,
-  Controls,
-  List,
-  Title,
-  DisplayButton,
   Alert,
+  Controls,
+  DisplayButton,
+  List,
+  Sidebar,
+  Slider,
+  Title,
+  Wrapper,
 } from 'components';
-import { useKeyUp, useIterate, usePresenter, useBirthday } from 'hooks';
+import { useBirthday, useIterate, useKeyUp, usePresenter } from 'hooks';
+import { useEffect, useRef, useState } from 'react';
+import { Button, ButtonGroup, OverlayTrigger, Tooltip } from 'react-bootstrap';
+import createPersistedState from 'use-persisted-state';
+import { Slide } from 'utils';
 import { BROADCAST, MOVEMENT } from 'values';
-
 import { getNotices } from './data';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
@@ -31,7 +24,7 @@ export default function HomePage() {
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const [showLogo, setShowLogo] = useState(true);
   const { current } = useBirthday();
-  const notices = getNotices(current);
+  const [notices, setNotices] = useState(getNotices(current));
   const [notice, setNotice] = useState(notices[0]);
   const [autoplay, setAutoplay] = useState(true);
   const [loop, setLoop] = useState(true);
@@ -51,6 +44,32 @@ export default function HomePage() {
       setShowLogo(true);
     }
   }, [presenting]);
+
+  useEffect(() => {
+    setNotices((notices) => {
+      const index = notices.findIndex((n) => n.title === 'Horarios');
+
+      const schedules =
+        settings?.schedules?.filter((entry) => entry.active) || [];
+
+      notices[index] = {
+        ...notices[index],
+        slides: schedules.map((entry) =>
+          Slide.create({
+            //  ${entry.daySuffix ? entry.daySuffix : ''}
+            text: `
+                ${entry.name ? `${entry.name}/n` : ''}
+                <b>${entry.day}</b>/n
+                <strong class="fs-xl" style="line-height:1">
+                  ${entry.hour} ${entry.hourSuffix}
+                </strong>
+              `,
+          })
+        ),
+      };
+      return [...notices];
+    });
+  }, [settings]);
 
   const handlePrevSlide = () => sliderRef.current.prev();
 
@@ -73,7 +92,7 @@ export default function HomePage() {
   return (
     <Wrapper>
       <Sidebar>
-        <Title>Inicio</Title>
+        <Title>Anuncios</Title>
 
         <DisplayButton
           value={showLogo}
@@ -83,7 +102,7 @@ export default function HomePage() {
 
         <List className="mb-4">
           <List.Item>
-            <List.Title>Anuncios</List.Title>
+            <List.Title>Listado</List.Title>
           </List.Item>
 
           {notices.map((item) => (
@@ -120,32 +139,57 @@ export default function HomePage() {
         <Controls centered>
           <ButtonGroup className="mx-2">
             {autoplay ? (
-              <Button onClick={() => setAutoplay(false)} variant="light">
-                <ImPause2 />
-              </Button>
+              <OverlayTrigger
+                placement="top"
+                overlay={<Tooltip>Pausar cambio automático</Tooltip>}
+              >
+                <Button onClick={() => setAutoplay(false)} variant="secondary">
+                  <Pause />
+                </Button>
+              </OverlayTrigger>
             ) : (
-              <Button onClick={() => setAutoplay(true)} variant="secondary">
-                <ImPlay3 />
-              </Button>
+              <OverlayTrigger
+                placement="top"
+                overlay={<Tooltip>Empezar cambio automático</Tooltip>}
+              >
+                <Button onClick={() => setAutoplay(true)} variant="dark">
+                  <PlayArrow />
+                </Button>
+              </OverlayTrigger>
             )}
           </ButtonGroup>
 
           <ButtonGroup>
-            <Button onClick={handlePrevSlide} variant="secondary">
-              <ImArrowLeft2 />
-            </Button>
-            <Button onClick={handleNextSlide} variant="secondary">
-              <ImArrowRight2 />
-            </Button>
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Página anterior</Tooltip>}
+            >
+              <Button onClick={handlePrevSlide} variant="primary">
+                <West />
+              </Button>
+            </OverlayTrigger>
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Página siguiente</Tooltip>}
+            >
+              <Button onClick={handleNextSlide} variant="primary">
+                <East />
+              </Button>
+            </OverlayTrigger>
           </ButtonGroup>
 
           <ButtonGroup className="mx-2">
-            <Button
-              onClick={() => setLoop((state) => !state)}
-              variant={loop ? 'light' : 'secondary'}
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Repetir</Tooltip>}
             >
-              <ImLoop />
-            </Button>
+              <Button
+                onClick={() => setLoop((state) => !state)}
+                variant={loop ? 'secondary' : 'dark'}
+              >
+                <Repeat />
+              </Button>
+            </OverlayTrigger>
           </ButtonGroup>
         </Controls>
       </Wrapper>

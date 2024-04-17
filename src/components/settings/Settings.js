@@ -1,9 +1,14 @@
+import {
+  CalendarMonth,
+  Close,
+  Download,
+  Favorite,
+  FileUpload,
+} from '@mui/icons-material';
 import { Logo, LogoPreview, Sidebar, TextPreview } from 'components';
 import { usePresenter, useSettingsSidebar } from 'hooks';
 import React, { useState } from 'react';
-import { Button, Col, Form, InputGroup } from 'react-bootstrap';
-import { BsDownload, BsHeartFill, BsUpload } from 'react-icons/bs';
-import { MdClose } from 'react-icons/md';
+import { Button, Col, Form, InputGroup, Row } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
 import { Storage } from 'utils';
 import { BROADCAST, SETTINGS_OPTIONS, THEMES } from 'values';
@@ -15,6 +20,7 @@ export function Settings() {
   const [settings, setSettings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const [file, setFile] = useState(null);
   const { reload } = usePresenter();
+  const [expanded, setExpanded] = useState(false);
 
   const handleChangeValue = ({ target }) => {
     const { name, value } = target;
@@ -45,6 +51,15 @@ export function Settings() {
     }));
   };
 
+  const handleSchedulesChangeValue = (name, value, index) => {
+    settings.schedules[index][name] = value;
+
+    setSettings((state) => ({
+      ...state,
+      schedules: [...settings.schedules],
+    }));
+  };
+
   const handleExport = () => {
     Storage.download();
   };
@@ -67,65 +82,200 @@ export function Settings() {
     }));
   };
 
-  // useClickOutside(ref, () => {
-  //   if (showingSettings) {
-  //     closeSettings();
-  //   }
-  // });
-
   return (
-    <Sidebar light closable className={showingSettings ? '' : 'closed'}>
+    <Sidebar
+      light
+      closable
+      className={showingSettings ? '' : 'closed'}
+      size={620}
+      offset={310 + 45}
+    >
       <h1 className="display-4">Ajustes</h1>
       <Button
         className="p-0 text-dark"
         variant="link"
-        style={{ position: 'absolute', top: 13, right: 15 }}
+        style={{ position: 'absolute', top: 13, right: 10 }}
         onClick={toggleSettings}
       >
-        <MdClose />
+        <Close />
       </Button>
 
-      <Form.Row>
-        <Form.Group as={Col} className="mb-1">
-          <Form.Label className=" small mb-1">Fuente</Form.Label>
-          <Form.Control
-            size="sm"
-            as="select"
-            name="font"
-            value={settings?.font}
-            onChange={handleChangeValue}
-          >
-            {SETTINGS_OPTIONS.FONT_FAMILIES.map(({ value, label }) => (
-              <option key={value} value={value}>
-                {label}
-              </option>
-            ))}
-          </Form.Control>
-        </Form.Group>
-      </Form.Row>
+      <Row>
+        {/* Logo */}
+        <Col xs={6}>
+          <Form.Row className="mb-2">
+            <Form.Group as={Col} className="m-0">
+              <Form.Label className="small mb-1">Logo </Form.Label>
 
-      <Form.Row>
-        <Form.Group as={Col} className="mb-1">
-          <Form.Label className=" small mb-1">Tema</Form.Label>
-          <Form.Control
-            size="sm"
-            as="select"
-            value={settings?.theme}
-            name="theme"
-            onChange={handleChangeTheme}
-          >
-            {SETTINGS_OPTIONS.THEMES.map(({ value, label }) => (
-              <option key={value} value={value}>
-                {label}
-              </option>
-            ))}
-          </Form.Control>
-        </Form.Group>
-      </Form.Row>
-      {settings?.theme === 'custom' ? (
-        <>
-          <Form.Row>
+              <Form.Control
+                as="select"
+                size="sm"
+                name="logo"
+                value={settings?.logo}
+                onChange={handleChangeValue}
+              >
+                {SETTINGS_OPTIONS.LOGOS.map(({ value, label, divider }) => (
+                  <React.Fragment key={value}>
+                    {divider ? <hr /> : <option value={value}>{label}</option>}
+                  </React.Fragment>
+                ))}
+              </Form.Control>
+            </Form.Group>
+
+            <Form.Group as={Col} className="m-0">
+              <Form.Label className=" small mb-1">Modo</Form.Label>
+              <Form.Control
+                as="select"
+                size="sm"
+                value={settings?.color}
+                name="color"
+                onChange={handleChangeValue}
+              >
+                <option value="default">Normal</option>
+                <option value="#ffffff">Negativo</option>
+              </Form.Control>
+            </Form.Group>
+          </Form.Row>
+
+          <LogoPreview {...settings}>
+            <Logo height="70%" {...settings} />
+          </LogoPreview>
+        </Col>
+
+        {/* Fondo */}
+        <Col xs={6}>
+          <Form.Row className="mb-2">
+            <Form.Group as={Col} className="m-0">
+              <Form.Label className="small w-100 mb-1 d-inline-flex justify-content-between">
+                Fondo
+                <a href=" " onClick={handleRandomBackground}>
+                  (Aleatorio)
+                </a>
+              </Form.Label>
+              <Form.Control
+                size="sm"
+                as="select"
+                value={settings?.image}
+                name="image"
+                onChange={handleChangeValue}
+              >
+                {SETTINGS_OPTIONS.BACKGROUNDS.map(
+                  ({ value, label, divider }) => (
+                    <React.Fragment key={value}>
+                      {divider ? (
+                        <hr />
+                      ) : (
+                        <option value={value}>{label}</option>
+                      )}
+                    </React.Fragment>
+                  )
+                )}
+              </Form.Control>
+            </Form.Group>
+          </Form.Row>
+
+          <TextPreview
+            className="mb-2"
+            hideText
+            {...settings}
+            blur={settings?.image ? settings?.blur : 0}
+          />
+
+          {settings?.image ? (
+            <Form.Row>
+              <Form.Group as={Col} className="mb-0">
+                <Form.Label className="small mb-1">
+                  Difuminado del Fondo (
+                  {Number.parseFloat(settings?.blur).toFixed(1)})
+                </Form.Label>
+                <Form.Control
+                  custom
+                  type="range"
+                  min="0"
+                  max="20"
+                  step="1"
+                  name="blur"
+                  value={settings?.blur}
+                  onChange={handleChangeNumericValue}
+                />
+              </Form.Group>
+            </Form.Row>
+          ) : (
+            <Form.Row>
+              <Form.Group as={Col} className="mb-0">
+                <Form.Label className=" small mb-1">Fondo</Form.Label>
+                <Form.Control
+                  size="sm"
+                  type="color"
+                  name="background"
+                  value={settings?.background}
+                  onChange={handleChangeValue}
+                />
+              </Form.Group>
+            </Form.Row>
+          )}
+        </Col>
+      </Row>
+
+      <hr />
+
+      {/* Tema */}
+      <Row>
+        {/* Nombre y preview */}
+        <Col xs={6}>
+          <Form.Row className="mb-2">
             <Form.Group as={Col} className="mb-1">
+              <Form.Label className=" small mb-1">Tema</Form.Label>
+              <Form.Control
+                size="sm"
+                as="select"
+                value={settings?.theme}
+                name="theme"
+                onChange={handleChangeTheme}
+              >
+                {SETTINGS_OPTIONS.THEMES.map(({ value, label, divider }) => (
+                  <React.Fragment key={value}>
+                    {divider ? <hr /> : <option value={value}>{label}</option>}
+                  </React.Fragment>
+                ))}
+              </Form.Control>
+            </Form.Group>
+          </Form.Row>
+
+          <TextPreview
+            {...settings}
+            blur={settings?.image ? settings?.blur : 0}
+          />
+        </Col>
+
+        {/* Colores */}
+        <Col xs={6}>
+          <Form.Row>
+            {/* Fuente */}
+            <Form.Group as={Col} xs={12} className="mb-1">
+              <Form.Label className=" small mb-1">Fuente</Form.Label>
+              <Form.Control
+                size="sm"
+                as="select"
+                name="font"
+                value={settings?.font}
+                onChange={handleChangeValue}
+              >
+                {SETTINGS_OPTIONS.FONT_FAMILIES.map(
+                  ({ value, label, divider }) => (
+                    <React.Fragment key={value}>
+                      {divider ? (
+                        <hr />
+                      ) : (
+                        <option value={value}>{label}</option>
+                      )}
+                    </React.Fragment>
+                  )
+                )}
+              </Form.Control>
+            </Form.Group>
+
+            {/* <Form.Group as={Col} xs={6} className="mb-1">
               <Form.Label className=" small mb-1">Fondo</Form.Label>
               <Form.Control
                 size="sm"
@@ -135,8 +285,9 @@ export function Settings() {
                 onChange={handleChangeValue}
                 disabled={settings?.theme !== 'custom'}
               />
-            </Form.Group>
-            <Form.Group as={Col} className="mb-1">
+            </Form.Group> */}
+
+            <Form.Group as={Col} xs={6} className="mb-1">
               <Form.Label className=" small mb-1">Texto</Form.Label>
               <Form.Control
                 type="color"
@@ -147,10 +298,8 @@ export function Settings() {
                 disabled={settings?.theme !== 'custom'}
               />
             </Form.Group>
-          </Form.Row>
 
-          <Form.Row>
-            <Form.Group as={Col} className="mb-1">
+            <Form.Group as={Col} xs={6} className="mb-1">
               <Form.Label className=" small mb-1">Citas</Form.Label>
               <Form.Control
                 size="sm"
@@ -161,7 +310,8 @@ export function Settings() {
                 disabled={settings?.theme !== 'custom'}
               />
             </Form.Group>
-            <Form.Group as={Col} className="mb-1">
+
+            <Form.Group as={Col} xs={6} className="mb-1">
               <Form.Label className=" small mb-1">Títulos</Form.Label>
               <Form.Control
                 size="sm"
@@ -172,10 +322,8 @@ export function Settings() {
                 disabled={settings?.theme !== 'custom'}
               />
             </Form.Group>
-          </Form.Row>
 
-          <Form.Row>
-            <Form.Group as={Col} className="mb-1">
+            <Form.Group as={Col} xs={6} className="mb-1">
               <Form.Label className=" small mb-1">Palabras de Jesús</Form.Label>
               <Form.Control
                 size="sm"
@@ -186,7 +334,8 @@ export function Settings() {
                 disabled={settings?.theme !== 'custom'}
               />
             </Form.Group>
-            <Form.Group as={Col} className="mb-1">
+
+            {/* <Form.Group as={Col} xs={6} className="mb-1">
               <Form.Label className=" small mb-1">Opciones (Trivia)</Form.Label>
               <Form.Control
                 size="sm"
@@ -196,116 +345,175 @@ export function Settings() {
                 onChange={handleChangeValue}
                 disabled={settings?.theme !== 'custom'}
               />
-            </Form.Group>
+            </Form.Group> */}
           </Form.Row>
-        </>
+        </Col>
+      </Row>
+
+      <hr />
+
+      <Button
+        variant="outline-primary"
+        block
+        className="mb-3"
+        onClick={() => {
+          setExpanded((value) => !value);
+        }}
+      >
+        <CalendarMonth fontSize="small" /> Horarios{' '}
+        {/* {expanded ? (
+          <ExpandLess fontSize="small" />
+        ) : (
+          <ExpandMore fontSize="small" />
+        )} */}
+      </Button>
+
+      {expanded ? (
+        <Row>
+          {settings?.schedules?.map((schedule, index) => (
+            <Col key={index} xs={6} className="mb-3">
+              <div
+                style={{
+                  backgroundColor: schedule.active ? '#fff' : '#f2f3f5',
+                  borderLeftWidth: '5px !important',
+                }}
+                className="p-3 border border-primary rounded h-100"
+              >
+                {index > 0 ? (
+                  <Form.Row>
+                    <Form.Group as={Col} className="mb-1">
+                      <Form.Check
+                        className="d-inline-block"
+                        type="switch"
+                        id={`active-${index}`}
+                        name="active"
+                        checked={schedule.active}
+                        onChange={() =>
+                          handleSchedulesChangeValue(
+                            'active',
+                            !schedule.active,
+                            index
+                          )
+                        }
+                      />
+                    </Form.Group>
+                  </Form.Row>
+                ) : null}
+
+                <Form.Row>
+                  <Form.Group as={Col} className="mb-1">
+                    <Form.Label className=" small mb-1">Descripción</Form.Label>
+                    <Form.Control
+                      as="input"
+                      size="sm"
+                      value={schedule.name}
+                      name="name"
+                      disabled={!schedule.active}
+                      onChange={({ target }) => {
+                        const { name, value } = target;
+                        handleSchedulesChangeValue(name, value, index);
+                      }}
+                    />
+                  </Form.Group>
+                </Form.Row>
+
+                <Form.Row>
+                  <Form.Group as={Col} className="mb-1">
+                    <Form.Label className=" small mb-1">Día</Form.Label>
+                    <Form.Control
+                      as="select"
+                      size="sm"
+                      value={schedule.day}
+                      name="day"
+                      disabled={!schedule.active}
+                      onChange={({ target }) => {
+                        const { name, value } = target;
+                        handleSchedulesChangeValue(name, value, index);
+                      }}
+                    >
+                      {SETTINGS_OPTIONS.DAYS.map(
+                        ({ value, label, divider }) => (
+                          <React.Fragment key={value}>
+                            {divider ? (
+                              <hr />
+                            ) : (
+                              <option value={value}>{label}</option>
+                            )}
+                          </React.Fragment>
+                        )
+                      )}
+                    </Form.Control>
+                  </Form.Group>
+
+                  {/* <Form.Group as={Col} className="mb-1">
+                    <Form.Label className=" small mb-1">Sufijo</Form.Label>
+                    <Form.Control
+                      as="select"
+                      size="sm"
+                      value={schedule.daySuffix}
+                      name="daySuffix"
+                      disabled={!schedule.active}
+                      onChange={({ target }) => {
+                        const { name, value } = target;
+                        handleSchedulesChangeValue(name, value, index);
+                      }}
+                    >
+                      <option value=""></option>
+                      <option value="AM">AM</option>
+                      <option value="PM">PM</option>
+                    </Form.Control>
+                  </Form.Group> */}
+                </Form.Row>
+
+                <Form.Row>
+                  <Form.Group as={Col} className="mb-1">
+                    <Form.Label className=" small mb-1">Hora</Form.Label>
+                    <Form.Control
+                      size="sm"
+                      as="select"
+                      name="hour"
+                      disabled={!schedule.active}
+                      value={schedule.hour}
+                      onChange={({ target }) => {
+                        const { name, value } = target;
+                        handleSchedulesChangeValue(name, value, index);
+                      }}
+                    >
+                      {SETTINGS_OPTIONS.HOURS.map((value) => (
+                        <option key={value} value={value}>
+                          {value}
+                        </option>
+                      ))}
+                    </Form.Control>
+                  </Form.Group>
+
+                  <Form.Group as={Col} className="mb-1">
+                    <Form.Label className=" small mb-1">Horario</Form.Label>
+                    <Form.Control
+                      as="select"
+                      size="sm"
+                      value={schedule.hourSuffix}
+                      name="hourSuffix"
+                      disabled={!schedule.active}
+                      onChange={({ target }) => {
+                        const { name, value } = target;
+                        handleSchedulesChangeValue(name, value, index);
+                      }}
+                    >
+                      <option value="AM">AM</option>
+                      <option value="PM">PM</option>
+                    </Form.Control>
+                  </Form.Group>
+                </Form.Row>
+              </div>
+            </Col>
+          ))}
+        </Row>
       ) : null}
 
-      <TextPreview className="my-2" {...settings} />
-
       <hr />
 
-      <Form.Row>
-        <Form.Group as={Col} className="mb-2">
-          <Form.Label className="small my-2 d-flex justify-content-between">
-            Fondo
-            <a href=" " onClick={handleRandomBackground}>
-              (Aleatorio)
-            </a>
-          </Form.Label>
-          <Form.Control
-            size="sm"
-            as="select"
-            value={settings?.image}
-            name="image"
-            onChange={handleChangeValue}
-          >
-            {SETTINGS_OPTIONS.BACKGROUNDS.map(({ value, label }) => (
-              <option key={value} value={value}>
-                {label}
-              </option>
-            ))}
-          </Form.Control>
-        </Form.Group>
-      </Form.Row>
-
-      {settings?.image ? (
-        <Form.Row>
-          <Form.Group as={Col} className="mb-0">
-            <Form.Label className="small mb-1">
-              Difuminado del Fondo (
-              {Number.parseFloat(settings?.blur).toFixed(1)})
-            </Form.Label>
-            <Form.Control
-              custom
-              type="range"
-              min="0"
-              max="20"
-              step="1"
-              name="blur"
-              value={settings?.blur}
-              onChange={handleChangeNumericValue}
-            />
-          </Form.Group>
-        </Form.Row>
-      ) : (
-        <Form.Row>
-          <Form.Group as={Col} className="mb-0">
-            <Form.Label className=" small mb-1">Fondo</Form.Label>
-            <Form.Control
-              size="sm"
-              type="color"
-              name="background"
-              value={settings?.background}
-              onChange={handleChangeValue}
-            />
-          </Form.Group>
-          <Col />
-        </Form.Row>
-      )}
-
-      <hr />
-
-      <Form.Row>
-        <Form.Group as={Col} className="mb-1">
-          <Form.Label className=" small mb-1">Logo </Form.Label>
-
-          <Form.Control
-            as="select"
-            size="sm"
-            name="logo"
-            value={settings?.logo}
-            onChange={handleChangeValue}
-          >
-            {SETTINGS_OPTIONS.LOGOS.map(({ value, label }) => (
-              <option key={value} value={value}>
-                {label}
-              </option>
-            ))}
-          </Form.Control>
-        </Form.Group>
-
-        <Form.Group as={Col} className="mb-1">
-          <Form.Label className=" small mb-1">Modo</Form.Label>
-          <Form.Control
-            as="select"
-            size="sm"
-            value={settings?.mode}
-            name="mode"
-            onChange={handleChangeValue}
-          >
-            <option value="default">Normal</option>
-            <option value="#ffffff">Negativo</option>
-          </Form.Control>
-        </Form.Group>
-      </Form.Row>
-      <LogoPreview className="my-2" {...settings}>
-        <Logo width="80%" height="80%" {...settings} />
-      </LogoPreview>
-
-      <hr />
-
-      <Form.Row>
+      {/* <Form.Row>
         <Form.Group as={Col} className="mb-1">
           <Form.Label className=" small mb-1">
             Tiempo de predicación (semáforo)
@@ -317,16 +525,16 @@ export function Settings() {
             value={settings?.preachtime}
             onChange={handleChangeNumericValue}
           >
-            {SETTINGS_OPTIONS.PREACH_TIME.map(({ value, label }) => (
-              <option key={value} value={value}>
-                {label}
-              </option>
+            {SETTINGS_OPTIONS.PREACH_TIME.map(({ value, label,divider }) => (
+              <React.Fragment key={value}>
+                    {divider ? <hr /> : <option value={value}>{label}</option>}
+                  </React.Fragment>
             ))}
           </Form.Control>
         </Form.Group>
-      </Form.Row>
+      </Form.Row> */}
 
-      <Form.Row>
+      {/* <Form.Row>
         <Form.Group as={Col} className="mb-1">
           <Form.Label className=" small mb-1">
             Tiempo restante para la luz amarilla
@@ -338,16 +546,16 @@ export function Settings() {
             value={settings?.preachyellow}
             onChange={handleChangeNumericValue}
           >
-            {SETTINGS_OPTIONS.PREACH_YELLOW.map(({ value, label }) => (
-              <option key={value} value={value}>
-                {label}
-              </option>
+            {SETTINGS_OPTIONS.PREACH_YELLOW.map(({ value, label,divider }) => (
+               <React.Fragment key={value}>
+                    {divider ? <hr /> : <option value={value}>{label}</option>}
+                  </React.Fragment>
             ))}
           </Form.Control>
         </Form.Group>
-      </Form.Row>
+      </Form.Row> */}
 
-      <Form.Row>
+      {/* <Form.Row>
         <Form.Group as={Col} className="mb-1">
           <Form.Label className=" small mb-1">
             Tiempo restante para la luz roja
@@ -359,21 +567,20 @@ export function Settings() {
             value={settings?.preachred}
             onChange={handleChangeNumericValue}
           >
-            {SETTINGS_OPTIONS.PREACH_RED.map(({ value, label }) => (
-              <option key={value} value={value}>
-                {label}
-              </option>
+            {SETTINGS_OPTIONS.PREACH_RED.map(({ value, label,divider }) => (
+              <React.Fragment key={value}>
+                    {divider ? <hr /> : <option value={value}>{label}</option>}
+                  </React.Fragment>
             ))}
           </Form.Control>
         </Form.Group>
-      </Form.Row>
+      </Form.Row> */}
 
-      <hr />
-
+      {/* Intervalos */}
       <Form.Row>
-        <Form.Group as={Col} className="mb-1">
+        <Form.Group as={Col} xs={6} className="mb-1">
           <Form.Label className=" small mb-1">
-            Intervalo entre "Anuncios" (Inicio)
+            Intervalo entre los "Anuncios"
           </Form.Label>
           <Form.Control
             size="sm"
@@ -382,16 +589,81 @@ export function Settings() {
             value={settings?.interval}
             onChange={handleChangeNumericValue}
           >
-            {SETTINGS_OPTIONS.TIME_INTERVALS.map(({ value, label }) => (
-              <option key={value} value={value}>
-                {label}
-              </option>
-            ))}
+            {SETTINGS_OPTIONS.TIME_INTERVALS.map(
+              ({ value, label, divider }) => (
+                <React.Fragment key={value}>
+                  {divider ? <hr /> : <option value={value}>{label}</option>}
+                </React.Fragment>
+              )
+            )}
+          </Form.Control>
+        </Form.Group>
+
+        <Form.Group as={Col} xs={6} className="mb-2">
+          <Form.Label className=" small mb-1">
+            Duración de los "Avisos en pantalla"
+          </Form.Label>
+          <Form.Control
+            size="sm"
+            as="select"
+            name="alertsinterval"
+            value={settings?.alertsinterval}
+            onChange={handleChangeNumericValue}
+          >
+            {SETTINGS_OPTIONS.ALERTS_TIME_INTERVALS.map(
+              ({ value, label, divider }) => (
+                <React.Fragment key={value}>
+                  {divider ? <hr /> : <option value={value}>{label}</option>}
+                </React.Fragment>
+              )
+            )}
+          </Form.Control>
+        </Form.Group>
+
+        <Form.Group as={Col} xs={6} className="mb-0">
+          <Form.Label className=" small mb-1">
+            Rango para detectar cumpleaños
+          </Form.Label>
+          <Form.Control
+            size="sm"
+            as="select"
+            name="birthdaytimeframe"
+            value={settings?.birthdaytimeframe}
+            onChange={handleChangeNumericValue}
+          >
+            {SETTINGS_OPTIONS.BIRTHDAYS_TIME_INTERVALS.map(
+              ({ value, label, divider }) => (
+                <React.Fragment key={value}>
+                  {divider ? <hr /> : <option value={value}>{label}</option>}
+                </React.Fragment>
+              )
+            )}
+          </Form.Control>
+        </Form.Group>
+
+        <Form.Group as={Col} xs={6} className="mb-0">
+          <Form.Label className=" small mb-1">
+            Posición del temporizador
+          </Form.Label>
+          <Form.Control
+            size="sm"
+            as="select"
+            name="clockposition"
+            value={settings?.clockposition}
+            onChange={handleChangeValue}
+          >
+            {SETTINGS_OPTIONS.CLOCK_POSITIONS.map(
+              ({ value, label, divider }) => (
+                <React.Fragment key={value}>
+                  {divider ? <hr /> : <option value={value}>{label}</option>}
+                </React.Fragment>
+              )
+            )}
           </Form.Control>
         </Form.Group>
       </Form.Row>
 
-      <Form.Row>
+      {/* <Form.Row>
         <Form.Group as={Col} className="mb-2">
           <Form.Label className=" small mb-1">
             Intervalo entre "Preguntas" (Trivia)
@@ -410,30 +682,7 @@ export function Settings() {
             ))}
           </Form.Control>
         </Form.Group>
-      </Form.Row>
-
-      <Form.Row>
-        <Form.Group as={Col} className="mb-0">
-          <Form.Label className=" small mb-1">
-            Rango para detectar cumpleaños
-          </Form.Label>
-          <Form.Control
-            size="sm"
-            as="select"
-            name="birthdaytimeframe"
-            value={settings?.birthdaytimeframe}
-            onChange={handleChangeNumericValue}
-          >
-            {SETTINGS_OPTIONS.BIRTHDAYS_TIME_INTERVALS.map(
-              ({ value, label }) => (
-                <option key={value} value={value}>
-                  {label}
-                </option>
-              )
-            )}
-          </Form.Control>
-        </Form.Group>
-      </Form.Row>
+      </Form.Row> */}
 
       {/* <Form.Row className="mt-3">
         <Form.Group as={Col} className="mb-1">
@@ -455,19 +704,17 @@ export function Settings() {
 
       <hr />
 
-      <Form.Row className="mt-2">
-        <Form.Group as={Col} className="mb-1">
+      <Form.Row>
+        <Form.Group as={Col} xs={6} className="m-0">
           <Form.Label className=" small mb-1">
             Exportar datos del usuario
           </Form.Label>
           <Button variant="outline-primary" block onClick={handleExport}>
-            <BsDownload /> Exportar
+            <Download /> Exportar
           </Button>
         </Form.Group>
-      </Form.Row>
 
-      <Form.Row className="mt-2">
-        <Form.Group as={Col} className="mb-1">
+        <Form.Group as={Col} xs={6} className="m-0">
           <Form.Label className=" small mb-1">
             Importar datos del usuario
           </Form.Label>
@@ -491,7 +738,7 @@ export function Settings() {
               onClick={handleImport}
               disabled={!file}
             >
-              <BsUpload /> Importar
+              <FileUpload /> Importar
             </Button>
           </Form.Group>
         </Form.Row>
@@ -508,8 +755,8 @@ export function Settings() {
       <hr />
 
       <small className="d-block text-center text-muted mt-4">
-        Hecho con <BsHeartFill className="text-danger pulse" /> para Dios y su
-        Iglesia. <br />
+        Hecho con <Favorite fontSize="small" className="text-danger pulse" />{' '}
+        para Dios y su Iglesia. <br />
         Por Christiam Mena (@xtiam57). <br />
         <a href="mailto:christiam.mena@gmail.com">christiam.mena@gmail.com</a>
       </small>

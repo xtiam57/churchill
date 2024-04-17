@@ -1794,6 +1794,7 @@ de su melodiosa voz.
 para contemplar con fe
 A Jesús, autor del bien,
 al recién nacido Rey.
+***
 @TAGS
 Navidad
 ***
@@ -4143,7 +4144,7 @@ Roca de la eternidad.
 
 ---
 
-## 160. ¿QUE ME PUEDE DAR PERDÓN?
+## 160. ¿QUÉ ME PUEDE DAR PERDÓN?
 ***
 1) ¿Qué me puede dar perdón?
 Sólo de Jesús la sangre,
@@ -4161,8 +4162,8 @@ sólo de Jesús la sangre;
 Trajo santidad y paz,
 sólo de Jesús la sangre.
 ***
-3) Veo para mi salud, s
-ólo de Jesús la sangre,
+3) Veo para mi salud,
+sólo de Jesús la sangre,
 Tiene de sanar virtud,
 sólo de Jesús la sangre.
 ***
@@ -5675,7 +5676,7 @@ Y tu eternal amor.
 ***
 1) El que habita al abrigo de Dios
 Morará bajo sombras de amor;
-Sobre él no vendrá ningún mal
+Sobre Él no vendrá ningún mal
 Y en sus alas feliz vivirá.
 ***
 @CORO
@@ -5692,7 +5693,7 @@ Y sus pies nunca resbalarán.
 3) El que habita al abrigo de Dios
 Para siempre seguro estará;
 Caerán mil y diez mil por doquier,
-Mas a él no vendrá mortandad.
+Mas a Él no vendrá mortandad.
 ***
 @TAGS
 Suave
@@ -13905,6 +13906,41 @@ Apéndice
 
 ---
 
+## 660. CREO EN DIOS
+***
+1) ¿Cómo puedes no creer en Dios?
+¿Cómo intentas ignorar su voz?
+El ha dado muestras De sus grandes maravillas
+¿Puedes ver, su poder?
+Él eclipsa el sol hasta opacar,
+La más densa noche hace brillar,
+Todo lo transforma en su designio soberano
+Porque es Dios, solo Él es Dios.
+***
+@CORO
+Creo en Dios, su voz levanta el viento y mar en tempestad,
+Y por su mano alzada pronto acallarán
+Aun cuando todo esté perdido yo,
+Creo en Dios, porque Él es mi esperanza en medio del dolor,
+Confiado cantaré su grande salvación,
+Porque vivo y creo en Dios.
+***
+2) Dios al mundo envuelve con su amor
+Su justicia y tierna compasión,
+Más su gracia alcanza todo aquel que arrepentido
+Clama a Él, solo a Él.
+Y aunque no lo puedas vislumbrar
+Dios es siempre fiel hasta el final,
+Porque ha prometido caminar a nuestro lado
+Cerca está, porque Él es Dios.
+***
+@REPETIR_CORO_AL_FINAL
+***
+@TAGS
+Apéndice
+
+---
+
 ## 997. HIMNO NACIONAL DE VENEZUELA
 ***
 @CORO
@@ -14184,7 +14220,7 @@ y en sus alas feliz vivirá.
 @CORO
 Oh, yo quiero habitar al abrigo de Dios,
 sólo allí encontraré paz y profundo amor.
-Mi delicia es con Él comunión
+Mi delicia es con Él comunión disfrutar
 y por siempre su nombre alabar.
 ***
 2) El que habita al abrigo de Dios
@@ -15394,8 +15430,8 @@ Sumiso, a Cristo seguiré.
 @CORO
 No lo que quiera hacer,
 Ni donde quiera ir
-Pues quien soy yo
-Que debo decidir?
+¿Pues quién soy yo
+que debo decidir?
 Mi Padre escogerá,
 La senda que es mejor
 Y así confiado puedo ir.
@@ -15446,6 +15482,30 @@ Yo fui mucho tiempo esclavo del mal,
 Él sana las llagas de mi corazón.
 Él sana al leproso al ciego da luz;
 // por eso confió tan solo en Jesús. //
+***
+@TAGS
+Apéndice
+Suave
+
+---
+
+## 661. NO CAMBIARÁ
+***
+1) Soy de él, Padre fiel; sabe quién yo soy.
+Por la fe, paz tendré; no cambia ayer ni hoy.
+Al caer, o vencer me apoyará;
+su perdón, protección conmigo irán.
+***
+@CORO
+No cambiará, igual será;
+Cristo no ha cambiado, Y no cambiará.
+¡Qué gran Amigo, tan puro y digno;
+Cristo no ha cambiado y no cambiará!
+***
+2) El amor del Señor no se apartará;
+en su ley confiaré, y en su fidelidad.
+En temor o dolor si no veo su faz;
+su poder por doquier conmigo está.
 ***
 @TAGS
 Apéndice
