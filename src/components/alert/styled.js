@@ -13,7 +13,7 @@ export const AlertStyled = styled.div`
   color: ${({ presenting }) => (presenting ? '' : 'var(--light)')};
   z-index: 2;
   padding: 8px 15px;
-  margin-left: 309px;
+  margin-left: 319px;
   max-width: 250px;
   white-space: nowrap;
   overflow: hidden;

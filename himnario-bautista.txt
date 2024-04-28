@@ -25,8 +25,8 @@ Vemos en tus obras en cielo, tierra y mar.
 ¡Santo! ¡Santo! ¡Santo! te adora todo hombre,
 Dios en tres Personas, bendita Trinidad.
 ***
-@AUTHORS
-Reginal Heber
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -48,8 +48,7 @@ Derrame en nuestro ser divina claridad,
 Para poder vivir en santidad.
 ***
 @TAGS
-Suave
-
+Hmrio. Bautista
 
 ---
 
@@ -81,8 +80,8 @@ a la gran Trinidad,
 Que es la fuente de gracia,
 poder y verdad.
 ***
-@AUTHORS
-William P. Mackat
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -98,8 +97,8 @@ Sus alabanzas entonad;
 Su eterna gloria proclamad
 Con gozo, gratitud v amor.
 ***
-@AUTHORS
-Louis Bourgeois
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -124,6 +123,9 @@ Nos muestra el amor de Cristo, el Señor;
 Al Trino Dios. En la eternidad
 Mora la Trinidad;
 ¡Por siempre alabad, Al Trino Dios!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -138,6 +140,9 @@ Que todo el mundo cante al Señor, mi Dios y Rey.
 La iglesia himnos da y nunca cesará;
 Con todo el corazón le alaben con tesón;
 Que todo el mundo cante al Señor, mi Dios y Rey.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -162,6 +167,9 @@ Sólo Él se declaró nuestro Fuerte, nuestro Fuerte.
 Nos libraste del furor del infierno, del infierno;
 Y por esto con placer proclamamos, proclamamos
 Que sólo en tu gran poder esperamos, esperamos.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -194,6 +202,9 @@ Al excelso y bendito Dios,
 Al excelso y bendito Dios;
 Cantadle con gratitud y amor.
 ¡Alabad al Señor!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -206,7 +217,7 @@ Cantadle con gratitud y amor.
 //Dame manos limpias y un corazón puro, y sin vanidades, enséñame a amar.//
 ***
 @TAGS
-Suave
+Hmrio. Bautista
 
 ---
 
@@ -241,6 +252,9 @@ Declaran tu poder.
 La vida a todos das;
 Doquier que miro alrededor
 Allí presente estás.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -271,6 +285,9 @@ calmando tu inquietud.
 mas pronto es en su amor,
 No quiere siempre contender
 ni dura su furor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -302,6 +319,9 @@ Por el mundo su mano nos lleva.
 Y al celeste descanso nos guía;
 Su bondad vivirá eterno día,
 Cuando el mundo no exista ya más.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -311,6 +331,9 @@ Engrandecido sea Jehová,
 nuestro Dios;
 Por todas las edades,
 por siempre.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -339,6 +362,9 @@ Dios omnipresente,
 Ilumina mi alma y feliz yo te obedezca;
 Haz que así, tú en mí
 Seas reflejado, y tu amor, probado.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -368,6 +394,9 @@ con dolor te dije, y me abrazaste.
 Nunca mi pecho con amor latía;
 Hoy de amor late,
 porque en tus bondades sólo confía.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -398,9 +427,8 @@ Despiértalas, Señor,
 Despiértalas, Señor,
 Escucha nuestra petición,
 ***
-@AUTHORS
-James Ellor
-Enrique S. Turrall
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -424,6 +452,9 @@ y perdona al pecador.
 en el santo Redentor;
 Y en la gloria, redimidos,
 cantaremos su amor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -448,6 +479,9 @@ Y la riegas por doquiera, la enriqueces con verdor.
 Y los valles como huertos con sus frutos llenaras.
 Gracias hoy, Señor, te damos porque aceptas la oración,
 Y los votos te pagamos con placer y devoción.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -477,6 +511,9 @@ la buena nueva difundid.
 nos muestra por la eternidad,
 Y su verdad será eternal
 a toda la posteridad.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -508,8 +545,8 @@ Al dulce hogar, al cielo de esplendor,
 Le adoraré cantando la grandeza
 De su poder y su infinito amor:
 ***
-@AUTHORS
-Carl Boberg
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -529,6 +566,9 @@ Porque para siempre es su misericordia.
 Alabad al Señor de los señores,
 Alabad al Señor de los señores,
 Porque para siempre es su misericordia.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -554,6 +594,9 @@ En ese momento perdón recibió.
 Y grande es el gozo que Cristo nos da;
 Mas nuestro asombro será aún mayor
 Al ver a Jesús que en su gloria vendrá.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -583,6 +626,9 @@ En tu oído resonó.
 Tu infinita perfección,
 El asombro llena mi alma,
 ¡Se confunde mi razón!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -602,6 +648,9 @@ Acepta nuestras preces, como en Jerusalén.
 Lo bueno té deleita, también la adoración.
 Honor, loor y gloria a ti, Rey, Redentor,
 Nosotros ensalzamos, tu nombre, oh Señor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -627,6 +676,9 @@ Y en esencia uno sois.
 Te adoramos, Dios bendito,
 Y te damos nuestro amor:
 A tu nombre, ¡oh Salvador!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -660,8 +712,8 @@ Nos pueden despojar de bienes, nombre, hogar,
 El cuerpo destruir, mas siempre ha de existir
 De Dios el Reino eterno.
 ***
-@AUTHORS
-Martín Lutero
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -682,9 +734,8 @@ Será eterna tu verdad;
 Inagotable es tu amor
 ¡Omnipotente Dios, Señor!
 ***
-@AUTHORS
-William Gardiner
-Isaac Watts
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -704,6 +755,9 @@ En alas de esperanza y fe remontarás.
 Mas por la fe en mi Salvador, mi Padre es Dios.
 Su Espíritu obra en mí y no me dejará;
 Al acabar mi vida aquí veré su faz.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -728,6 +782,9 @@ Se eleven por siempre a tu trono, Señor.
 Que pueblan la tierra, y el aire y el mar,
 Unidos proclamen tus glorias eternas,
 Y dente alabanzas, Señor, sin cesar.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -753,6 +810,9 @@ Gloria demos al Salvador.
 Gloria demos al Salvador;
 Su ser Él quiere transformar,
 Gloria demos al Salvador.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -783,6 +843,9 @@ Su riquísimo amor.
 Que se elevan hacia Él;
 Victorioso reina el Cristo:
 Adorad a Emanuel.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -807,6 +870,9 @@ Redentor, te adoramos, llénanos de tu bondad.
 Algún día por tu gracia, la podremos contemplar.
 Redentor, te adoramos, transformónos tu verdad;
 Redentor, te adoramos, hoy y por la eternidad.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -827,6 +893,9 @@ De Cristo ved su majestad, y proclamadle Rey.
 4) Dios quiera que con los que están del trono en derredor,
 Cantemos por la eternidad a Cristo el Salvador;
 Cantemos por la eternidad a Cristo el Salvador.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -851,6 +920,9 @@ Digno es el Señor; su gracia es para mí.
 Digno es el Señor; y yo le sigo fiel.
 Digno es el Señor; mi vida cambia aquí.
 ¡Oh!, digno es el Señor: loor doy a ti.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -872,11 +944,7 @@ Guíanos en obediencia, humildad, amor y fe;
 Nos ampare tu clemencia; Salvador, propicio sé.
 ***
 @TAGS
-Suave
-***
-@AUTHORS
-John Wyeth
-Tomas M. Westrup
+Hmrio. Bautista
 
 ---
 
@@ -907,6 +975,9 @@ como nuestro Salvador.
 ven con gloria divinal.
 Ven y lleva a tu iglesia
 a tu reino celestial.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -935,6 +1006,9 @@ la lucha fin tendrá.
 loores siempre dad,
 Y bajo toda condición
 el himno levantad.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -957,6 +1031,9 @@ Del pecado Cristo nos libertó.
 Que nos brinda éste que Él mostró.
 ¡Gloria! ¡Gloria! ángeles santos del cielo
 Rindan loor al que nos rescató.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -981,6 +1058,9 @@ El pobre pecador.
 Victoria te dará.
 Su sangre limpia al ser más vil.
 ¡Gloria a Dios, soy limpio ya!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -1005,6 +1085,9 @@ Tu gracia inspira mi sentir y mi hablar.
 Le adoro, le adoro con toda la grey;
 Le adoro, le adoro con toda la grey,
 Y ríos de gozo me vendrán a animar.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -1036,6 +1119,9 @@ En la lucha constante seguiré.
 Te alabo, mi Rey y Señor.
 ¡Mi Salvador! ¡Mi Salvador!
 Te alabo, mi Rey y Señor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -1067,6 +1153,9 @@ La creación adore al Señor
 Exaltando su gran amor.
 La canción al mundo entonad:
 ¡Cristo es el Rey!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -1091,6 +1180,9 @@ La plenitud de su amor.
 Levantaré con gratitud:
 A ti, mi Redentor y Dios,
 Autor de vida y salud.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -1115,6 +1207,9 @@ Y paz eterna gozaré.
 Mil lenguas tu amor cantando siempre estén.
 En tu mansión yo te veré,
 Y paz eterna gozaré.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -1145,6 +1240,9 @@ cual es nuestro Salvador.
 Él es nuestro Protector;
 Y ya nunca temeremos
 al astuto tentador.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -1160,7 +1258,7 @@ Venid, amadle, hoy adoradle;
 Maravilloso es Cristo el Señor.
 ***
 @TAGS
-Suave
+Hmrio. Bautista
 
 ---
 
@@ -1192,6 +1290,9 @@ Entonces acepta mi vida,
 Que a ti sólo queda rendida,
 Pues yo soy feliz,
 pues yo soy feliz por ti.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -1223,6 +1324,9 @@ Oh Señor, tu santo nombre
 alabamos sin cesar;
 Por tu amor incomparable
 gracias te queremos dar.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -1253,6 +1357,9 @@ recíbeme, Señor.
 con Él habitaré;
 Pues suyo soy, y de hoy en más,
 a nadie temeré.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -1273,8 +1380,8 @@ A sus ovejas el Pastor;
 Ninguna de ellas faltará
 Si fueren fieles al Señor.
 ***
-@AUTHORS
-John Hatton
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -1307,6 +1414,9 @@ Nos acercan hoy aquí y a
 los que partieron ya;
 Te ofrecemos, oh Señor,
 alabanzas con fervor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -1338,7 +1448,7 @@ Cristo, yo sé que tú vienes
 Para llevarme a tu hogar.
 ***
 @TAGS
-Suave
+Hmrio. Bautista
 
 ---
 
@@ -1365,7 +1475,7 @@ Magnificencia Incomparable
 eres mi Cristo, mi Señor.
 ***
 @TAGS
-Suave
+Hmrio. Bautista
 
 ---
 
@@ -1396,7 +1506,7 @@ Destruye el poder del mal.
 ¡Visítanos, Rey celestial!
 ***
 @TAGS
-Suave
+Hmrio. Bautista
 
 ---
 
@@ -1416,6 +1526,9 @@ Valles, saludadle erguidos; montes, inclinaos ante Él.
 Un ejemplo de su reino, sea vuestro corazón.
 Y la gloria del Señor, revelada así será;
 Todo ser habrá de verla, pues Jehová lo ha dicho así.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -1440,7 +1553,7 @@ Y tu gracia nos conduzca
 A tu trono de esplendor.
 ***
 @TAGS
-Suave
+Hmrio. Bautista
 
 ---
 
@@ -1476,6 +1589,9 @@ aleluya.
 aleluya,
 En su amor me gozaré,
 aleluya.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -1504,9 +1620,7 @@ Astro de eterno fulgor.
 ***
 @TAGS
 Navidad
-***
-@AUTHORS
-Franz Grüber
+Hmrio. Bautista
 
 ---
 
@@ -1538,6 +1652,7 @@ Pueblos, hoy venid; pueblos, hoy llegad.
 ***
 @TAGS
 Navidad
+Hmrio. Bautista
 
 ---
 
@@ -1571,9 +1686,7 @@ Que hay lugar junto a mí para ti."
 ***
 @TAGS
 Navidad
-***
-@AUTHORS
-Ira D. Sankey
+Hmrio. Bautista
 
 ---
 
@@ -1611,6 +1724,7 @@ La buena voluntad."
 ***
 @TAGS
 Navidad
+Hmrio. Bautista
 
 ---
 
@@ -1648,6 +1762,7 @@ Por brindarnos su amor,
 ***
 @TAGS
 Navidad
+Hmrio. Bautista
 
 ---
 
@@ -1683,7 +1798,7 @@ anuncian que hoy ha nacido el Rey.
 ***
 @TAGS
 Navidad
-
+Hmrio. Bautista
 
 ---
 
@@ -1722,10 +1837,7 @@ A la muerte quieres ir.
 ***
 @TAGS
 Navidad
-***
-@AUTHORS
-Felix Mendelssohn
-William H. Cummings
+Hmrio. Bautista
 
 ---
 
@@ -1748,6 +1860,7 @@ Nos ha venido el Redentor.
 ***
 @TAGS
 Navidad
+Hmrio. Bautista
 
 ---
 
@@ -1771,6 +1884,7 @@ Vino a salvar, vino a salvar.
 ***
 @TAGS
 Navidad
+Hmrio. Bautista
 
 ---
 
@@ -1797,9 +1911,7 @@ al recién nacido Rey.
 ***
 @TAGS
 Navidad
-***
-@AUTHORS
-George P. Simmonds
+Hmrio. Bautista
 
 ---
 
@@ -1822,6 +1934,7 @@ Al hombre buena voluntad, paz, gozo y bendición!"
 ***
 @TAGS
 Navidad
+Hmrio. Bautista
 
 ---
 
@@ -1845,6 +1958,7 @@ Adoremos, adoremos al recién nacido Rey.
 ***
 @TAGS
 Navidad
+Hmrio. Bautista
 
 ---
 
@@ -1871,6 +1985,7 @@ Cariño le quisieron dar.
 ***
 @TAGS
 Navidad
+Hmrio. Bautista
 
 ---
 
@@ -1898,6 +2013,7 @@ Y adoramos al Niño, al Rey y Señor.
 ***
 @TAGS
 Navidad
+Hmrio. Bautista
 
 ---
 
@@ -1925,6 +2041,7 @@ Resuene el cielo con vuestra canción:
 ***
 @TAGS
 Navidad
+Hmrio. Bautista
 
 ---
 
@@ -1953,6 +2070,7 @@ los hombres a salvar.
 ***
 @TAGS
 Navidad
+Hmrio. Bautista
 
 ---
 
@@ -1980,6 +2098,7 @@ Los ángeles del cielo te anuncian al nacer:
 ***
 @TAGS
 Navidad
+Hmrio. Bautista
 
 ---
 
@@ -2011,6 +2130,7 @@ Por su sangre nuestra alma salvada está.
 ***
 @TAGS
 Navidad
+Hmrio. Bautista
 
 ---
 
@@ -2033,9 +2153,7 @@ Su amor, su amor y su poder.
 ***
 @TAGS
 Navidad
-***
-@AUTHORS
-Isaac Watts
+Hmrio. Bautista
 
 ---
 
@@ -2058,6 +2176,7 @@ Me hará pensar en Jesús, mi Rey.
 ***
 @TAGS
 Navidad
+Hmrio. Bautista
 
 ---
 
@@ -2092,6 +2211,7 @@ Victoria sin igual.
 ***
 @TAGS
 Navidad
+Hmrio. Bautista
 
 ---
 
@@ -2109,6 +2229,7 @@ Que Jesús nació en Belén.
 ***
 @TAGS
 Navidad
+Hmrio. Bautista
 
 ---
 
@@ -2136,6 +2257,7 @@ En darnos a su Hijo, Jesús el Señor."
 ***
 @TAGS
 Navidad
+Hmrio. Bautista
 
 ---
 
@@ -2163,6 +2285,7 @@ Los brazos nos tiende con grato ademán:
 ***
 @TAGS
 Navidad
+Hmrio. Bautista
 
 ---
 
@@ -2191,6 +2314,7 @@ y tributos cual pastores dadle.
 ***
 @TAGS
 Navidad
+Hmrio. Bautista
 
 ---
 
@@ -2219,6 +2343,7 @@ también nos dicta su ley.
 ***
 @TAGS
 Navidad
+Hmrio. Bautista
 
 ---
 
@@ -2241,6 +2366,7 @@ Príncipe del cielo, danos tu consuelo:
 ***
 @TAGS
 Navidad
+Hmrio. Bautista
 
 ---
 
@@ -2263,6 +2389,7 @@ Y así bien felices siempre hemos de estar.
 ***
 @TAGS
 Navidad
+Hmrio. Bautista
 
 ---
 
@@ -2291,6 +2418,7 @@ Tributemos nuestra adoración.
 ***
 @TAGS
 Navidad
+Hmrio. Bautista
 
 ---
 
@@ -2326,6 +2454,7 @@ Porque tenga paz en Él Todo pobre pecador.
 ***
 @TAGS
 Navidad
+Hmrio. Bautista
 
 ---
 
@@ -2350,6 +2479,9 @@ Nos extravíe lejos de tu cruz.
 Sobre la muerte y vida eterna das.
 Fieles seremos al pregón glorioso:
 ¡Tú para siempre, Cristo, reinarás!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -2372,6 +2504,9 @@ El más grato, el más bello y el mejor,
 Cuando, de cualquier nación,
 Niños mil, sin distinción,
 En los brazos se encuentren del Señor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -2402,6 +2537,9 @@ Al impartir su gracia, su Espíritu y poder.
 Que marca esplendoroso la senda del ideal;
 Y el paso de los años lo hará más dulce y más,
 Precioso al dar al alma su incomparable paz.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -2426,6 +2564,9 @@ Cómo debo yo pensar.
 En mi vida espiritual.
 Sólo así morar podré
 En la patria celestial.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -2456,6 +2597,9 @@ Hijo de Dios es Él.
 Hijo de Dios es Él.
 Darás alabanzas, tendrás alegrías,
 Hijo de Dios es Él.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -2486,6 +2630,9 @@ El agua de la vida.
 Con Él nos elevemos,
 Arrebatados en su amor,
 Su gloria cantaremos.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -2511,6 +2658,9 @@ habló a los millares la palabra de amor.
 que son los viejos muros de la Jerusalén;
 Viejas paredes ya destruidas,
 que si tuvieran vida, nos hablarían bien.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -2530,6 +2680,9 @@ Salvador, ayúdame.
 Y por tu resurrección, y gloriosa ascensión:
 Sólo en ti vencer podré.
 Salvador, ayúdame.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -2549,6 +2702,9 @@ A todos los que nos han hecho mal.
 Mas líbranos del mundo y su maldad.
 Pues tuyo es el reino y la gloria,
 Y por los siglos tuyo es el poder.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -2573,6 +2729,9 @@ tórgame, Dios mío, la gracia del perdón.
 Pues cuando errante andaba, en ti encontré la luz.
 Me apacentaste siempre, paciente cual pastor;
 Me amaste tiernamente con infinito amor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -2597,6 +2756,9 @@ La gloria de su gran poder me gozo en ensalzar.
 Se lavará por siempre en ti el pueblo del Señor.
 El pueblo del Señor, el pueblo del Señor.
 Se lavará por siempre en ti el pueblo del Señor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -2630,7 +2792,7 @@ Y dulce paz yo recibí
 en el Calvario allí.
 ***
 @TAGS
-Suave
+Hmrio. Bautista
 
 ---
 
@@ -2663,10 +2825,7 @@ Y algún día feliz con los santos en luz,
 Para siempre su gloria tendré.
 ***
 @TAGS
-Suave
-***
-@AUTHORS
-George Bennard
+Hmrio. Bautista
 
 ---
 
@@ -2687,6 +2846,9 @@ La que quita los pecados y el temor.
 4) Sin la sangre es
 imposible que haya remisión;
 Por las obras no se alcanza salvación.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -2712,6 +2874,9 @@ y con arrojo a la muerte se enfrentó.
 culpa nunca se le halló;
 Sin embargo, se ensañaron
 con mi Cristo, con mi Dios.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -2736,6 +2901,9 @@ Pues con su sangre nos abrió el reino celestial.
 Quien a la muerte despojó de todo su terror;
 En el poder vivid de su resurrección;
 Glorioso el día llegará de plena redención.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -2763,7 +2931,7 @@ Ya consumó mi eternal salvación,
 De tal manera me amó.
 ***
 @TAGS
-Suave
+Hmrio. Bautista
 
 ---
 
@@ -2790,9 +2958,8 @@ en ti me gloriaré;
 Por mí moriste en la cruz;
 no te olvidaré.
 ***
-@AUTHORS
-William J. Kirkpatrick
-George P. Simmonds
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -2813,6 +2980,9 @@ Corona ensangrentada, perdón del pecador;
 Corona dolorosa de nuestro Salvador;
 Corona dolorosa de nuestro Salvador.
 Espinas de mi Cristo.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -2843,8 +3013,8 @@ Y vertí mi llanto con el corazón;
 Vi sus dos heridas y la sangre vi
 Que tú derramaste por salvarme a mí.
 ***
-@AUTHORS
-Alfredo Colom M.
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -2870,6 +3040,9 @@ Para que tengan paz celestial."
 Servirle quiero y honrarle más.
 Mi vida toda es sólo de Él,
 Gloria a su nombre siempre jamás.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -2896,10 +3069,7 @@ Amor tan grande, sin igual,
 En cambio exige todo el ser.
 ***
 @TAGS
-Suave
-***
-@AUTHORS
-Isaac Watts
+Hmrio. Bautista
 
 ---
 
@@ -2936,8 +3106,8 @@ con Él habitaré;
 Ya suyo soy, y de hoy en más
 a nadie temeré.
 ***
-@AUTHORS
-Pedro Grado Valdés
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -2961,6 +3131,9 @@ Mientras permanezca aquí, hazme siempre fiel a ti.
 Al bendito Redentor serviré con firme amor.
 Sea mi alma ya su hogar, y mi corazón su altar;
 Vida emana, paz y luz, del Calvario, de la cruz.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -2991,6 +3164,9 @@ por nuestra redención.
 jamás pagar tu amor;
 Mas lo que tengo doy a ti,
 tu siervo soy, Señor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3010,6 +3186,9 @@ Y a Jesús, quien es Señor, himnos le cantamos.
 Pues glorioso emergió de la tumba invicto.
 ¡Aleluya! a Jesús y a Dios el Padre;
 Y al Espíritu de luz loas le complacen.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3034,6 +3213,9 @@ Reina vivo e inmortal ¡Aleluya!
 Donde escucha nuestra voz; ¡Aleluya!
 Por nosotros rogará, ¡Aleluya!
 Con su amor nos salvará. ¡Aleluya!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3058,6 +3240,9 @@ Reina vivo e inmortal ¡Aleluya!
 Donde escucha nuestra voz; ¡Aleluya!
 Por nosotros rogará, ¡Aleluya!
 Con su amor nos salvará. ¡Aleluya!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3094,8 +3279,8 @@ Un día en su gloria el Señor brillará;
 ¡Oh día admirable en que unido su pueblo
 Loores a Cristo por siempre dará!
 ***
-@AUTHORS
-George P. Simmonds
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3125,6 +3310,9 @@ al reino del Señor.
 con Él habitaré;
 Ya suyo soy, y de hoy en más
 a nadie temeré.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3155,7 +3343,7 @@ tiemblo, tiemblo, tiemblo.
 ¿Viste tú cuando Él resucitó?
 ***
 @TAGS
-Suave
+Hmrio. Bautista
 
 ---
 
@@ -3181,6 +3369,9 @@ y es nuestro Rey y Señor.
 de gozo por Jesús;
 Le damos gloria y loor pues
 Él nos da la luz.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3206,6 +3397,9 @@ Tu gran amor nos da felicidad.
 Y al cielo junto a ti hemos de llegar.
 Tu gran amor nos da felicidad.
 Y al cielo junto a ti hemos de llegar.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3228,6 +3422,9 @@ Su presencia le ha quitado todo el terror.
 ***
 4) La potencia de la muerte Cristo derrotó;
 Del sepulcro tenebroso Él se levantó.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3252,6 +3449,9 @@ Príncipe de nuestras almas sé tú, oh buen Salvador.
 5) Alegres hoy te cantamos, te amamos, oh buen Señor.
 Gloria a Dios por la victoria del victorioso Salvador.
 Gloria a Dios por la victoria del victorioso Salvador.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3271,6 +3471,9 @@ Mas pronto el cuadro fue cambiado por la fe
 ***
 3) La piedra se apartó, Jesús resucitó;
 Y ahora vive Él, nos da su amor muy fiel.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3294,6 +3497,9 @@ Que su iglesia alegre cante la canción:
 Sin ti no valemos; fortaleza das.
 Más que vencedores haznos por tu amor,
 Y al hogar celeste llévanos, Señor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3316,8 +3522,8 @@ El Señor resucitó.
 3) La muerte dominó Cristo, mi Cristo;
 Él su poder venció, Cristo el Señor.
 ***
-@AUTHORS
-George P. Simmonds
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3344,6 +3550,9 @@ Tienen ya salud y gozo, gracias a su Redentor.
 La victoria de la vida y el final de la maldad.
 Togas reales se reparten, la tribuna lista está,
 Y el gran coro de los cielos canta gracia, amor y paz.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3381,6 +3590,9 @@ Multiplicadas señales hay,
 De su venida se ve el fulgor,
 Ya más cercano el tiempo está,
 ¡Ojalá fuera hoy!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3406,6 +3618,9 @@ Nadie en sus bodas debe faltar.
 Este convite de tu Señor;
 Él te dará su gozo y gloria,
 Ven y recibe don de amor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3429,6 +3644,9 @@ Gozo tengo en mi corazón.
 Pues lo terrenal terminará.
 Cristo nos ofrece lo eternal,
 En aquella vida celestial.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3459,6 +3677,9 @@ las estrellas caerán.
 ¡naciones despertarán!
 Viendo a mi Señor venir,
 las estrellas caerán.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3478,6 +3699,9 @@ Que lo diga hoy la grey, que lo diga hoy la grey.
 Y este coro que se eleva pueda el mundo hoy oír
 Cristo viene, Cristo viene, Cristo viene.
 Ven, Jesús, oh pronto, ven. Ven, Jesús, oh pronto ven.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3500,6 +3724,9 @@ A mi Señor Jesucristo cara a cara le veré.
 Allí no habrá más tristezas, ni trabajos para mí,
 Con los redimidos al Cordero alabaré.
 Con los redimidos al Cordero alabaré.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3525,6 +3752,9 @@ libra del innato mal.
 al que clama en contrición,
 Toma todo lo que soy,
 llena hoy mi corazón.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3557,7 +3787,7 @@ Mi vida entera te la doy
 en fiel consagración.
 ***
 @TAGS
-Suave
+Hmrio. Bautista
 
 ---
 
@@ -3583,6 +3813,9 @@ dándonos gozo eternal.
 dale a nuestra alma solaz;
 Y tu poder nos eleve
 a tu palacio de paz.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3607,6 +3840,9 @@ Tus bendiciones brindar.
 Llénanos de santo ardor,
 Para servir en la causa
 De nuestro gran Salvador.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3620,6 +3856,9 @@ Y que al vivir, podamos hacer tu voluntad.
 ***
 1) Espíritu de amor, haz que hoy vivamos
 En paz, amor y gozo. Sostennos hasta el fin
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3644,6 +3883,9 @@ en cruz nuestro dolor sufrió.
 la senda que Él trazó.
 Danos poder, y así triunfar,
 siguiendo de Él en pos.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3663,6 +3905,9 @@ Santo Espíritu, mora en mí.
 Santo Espíritu, úsame.
 Y así verán que tú estás en mí.
 Santo Espíritu, úsame.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3682,6 +3927,9 @@ ya alégrales la vida.
 y dádiva del Padre,
 Con tu poder, con tu virtud,
 visítanos, no tardes.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3701,6 +3949,9 @@ Frutos abundantes rinde y hojas que perenne son.
 Mas funestos resultados los impíos siempre ven
 Porque Dios la senda mira por la cual los suyo van;
 Otra es la de los impíos: al infierno bajarán.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3733,7 +3984,7 @@ Dame, pues, que te oiga a ti,
 con filial solicitud
 ***
 @TAGS
-Suave
+Hmrio. Bautista
 
 ---
 
@@ -3762,6 +4013,9 @@ Bellas palabras de vida;
 Tus pecados perdonará,
 Bellas palabras de vida.
 Sí, de luz y vida son sostén y guía;
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3787,6 +4041,9 @@ Para salvarlos mi sangre vertí."
 "Busca a Jesús, pecador," le diré;
 "Por su palabra, que tienes aquí,
 Aprende y siente que te ama a ti."
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3801,6 +4058,9 @@ Aunque el mundo me abandone, tu palabra me da fe.
 Sus preceptos son seguros y son dulces cual la miel.
 Fortaleza dame, Cristo, pues servirte quiero aquí
 Y a tus pies, oh buen Maestro, pueda yo aprender de ti.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3821,6 +4081,9 @@ Tú me enseñas a triunfar de la muerte y el pecar
 4) Por tu santa letra sé que con Cristo reinaré;
 Yo, que tan indigno soy, por tu luz al cielo voy;
 ¡Santa Biblia!, para mí eres un tesoro aquí.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3845,6 +4108,9 @@ son justos, son verdad
 sus juicios, mucho más:
 Aún más dulces que la miel
 que fluye del panal.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3869,6 +4135,9 @@ siervos de la cruz.
 sirve a Cristo si le amas,
 Todos deben de servirle,
 siervos de la cruz.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3894,6 +4163,9 @@ Y por palabra y por acción
 Buen testimonio siempre dar.
 ¡Hasta la muerte, en Cristo estén
 Nuestra esperanza y nuestra fe!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3923,6 +4195,9 @@ Se afirma el brazo, vence al fin la fe:
 Las huestes fieles llegarán al Rey,
 Cantando alegres a la Trinidad:
 ¡Aleluya! ¡Aleluya!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3952,6 +4227,9 @@ Mis pasos guía hacia tu mansión.
 Dios ha guardado para ti lugar.
 Tú has cumplido con valor la misión.
 ¡Aleluya! ¡Aleluya!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -3976,6 +4254,9 @@ Domina siempre tú en todo hogar.
 Concede a nuestras faltas corrección;
 Nuestro servicio sea siempre fiel;
 Rodéanos de tu gran protección.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4001,6 +4282,9 @@ Donde habían de seguirle siempre fiel.
 Ellos se gozaban al andar con Dios.
 Comunión completa había allá también
 Al oír de Jehová la tierna voz.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4020,6 +4304,9 @@ Se muestra con esplendidez en toda la expansión.
 Y nada habrá de detener su triunfo sobre el mal.
 ¡De Dios el mundo es! Confiada mi alma está,
 Pues Dios en Cristo, nuestro Rey, por siempre reinará.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4039,6 +4326,9 @@ El sacrificio se cumplió, incomparable amor.
 Los redimidos cantarán por siempre al Rey Jesús
 Loor al gran Yo Soy, los santos cantarán.
 Digno el Cordero, el Rey Jesús, su nombre alabarán.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4058,6 +4348,9 @@ Con el rocío, su bendición.
 Todo perfecto Dios lo creó;
 Una alabanza siempre elevemos,
 Cada mañana al Creador.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4089,8 +4382,8 @@ Por la sangre que Él derramó?
 El la fuente es que limpiará tu ser,
 ¡Oh, acepta su sangre eficaz!
 ***
-@AUTHORS
-Elisha A. Hoffman
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4116,6 +4409,9 @@ Y hoy sus voces al cielo proclaman.
 Nuestro Dios juzgará al indeciso;
 El cristiano, sin miedo, tendrá un Salvador,
 Gloria a Dios, al Señor Jesucristo.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4141,6 +4437,9 @@ Cuando vaya a responder
 en tu augusto tribunal,
 Sé mi escondedero fiel,
 Roca de la eternidad.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4171,6 +4470,9 @@ sólo de Jesús la sangre.
 sólo de Jesús la sangre.
 El Cordero digno es,
 sólo de Jesús la sangre.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4196,6 +4498,9 @@ Dios quiso librarme de condenación.
 Derramó su sangre en la cruenta cruz.
 Y fue sepultado; ya resucito.
 Vive eternamente; Dios le ensalzó.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4215,6 +4520,9 @@ De las huestes que al Edén llevará, llevará.
 Riego que las nubes dan, ha de ser, ha de ser
 La palabra del Señor, productivo, pleno bien,
 Vencedora al fin será por la fe, por la fe.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4234,6 +4542,9 @@ De las huestes que al Edén llevará, llevará.
 Riego que las nubes dan, ha de ser, ha de ser
 La palabra del Señor, productivo, pleno bien,
 Vencedora al fin será por la fe, por la fe.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4259,6 +4570,9 @@ Mi senda sigo fiado en Él.
 Y se apiadó de mí;
 "Por ti", me dijo, "he muerto yo;
 Hay vida eterna para ti."
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4289,6 +4603,9 @@ Y andamos en luz tras un Guía tan fiel,
 ¡Jesús es la luz del mundo!
 La luz de su rostro lo iluminará,
 ¡Jesús es la luz del mundo!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4309,9 +4626,8 @@ Débil, me pusiste en pie; triste, tu amor me das;
 Al enfermo das salud; guías tierno al que no ve;
 Con amor y gratitud tu bondad ensalzaré.
 ***
-@AUTHORS
-Simeon B. Marsh
-Charles Wesley
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4331,6 +4647,9 @@ A librarme del temor corro a ti, mi buen Jesús.
 Débil, me pusiste en pie; triste, tu amor me das;
 Al enfermo das salud; guías tierno al que no ve;
 Con amor y gratitud tu bondad ensalzaré.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4358,7 +4677,7 @@ Y me dio la paz que el mundo rechazó.
 ***
 @TAGS
 Navidad
-Suave
+Hmrio. Bautista
 
 ---
 
@@ -4378,6 +4697,9 @@ Dio su vida en mi favor:
 en peligro de morir,
 Mas Jesús murió por mí:
 ¡Aleluya! ¡Gloria a Cristo!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4403,6 +4725,9 @@ Tan sólo hay poder en Jesús.
 Tan sólo hay poder en mi Jesús.
 Ven, y ser salvo podrás en su amor,
 Tan sólo hay poder en Jesús.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4428,6 +4753,9 @@ Que en la cruz no halle aprobación.
 El rumbo marcando está;
 En mi oscura vida será el fanal
 Y a su luz mi alma siempre irá.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4468,6 +4796,9 @@ Tu culpa llevará, tu culpa llevará,
 Y limpiará tu corazón;
 Y dirás feliz en tu canción:
 "Mi culpa Él llevó."
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4487,6 +4818,9 @@ Cómo esa vida alcanzar.
 Se encarnó y muerto fue;
 Los que confiando en Él están,
 Fuerte cimiento en Él tendrán.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4511,6 +4845,9 @@ Me das, Señor, consolación.
 Tu obra en mi corazón tendrá de ti la perfección.
 Merced y gracia hay en ti; memoria ten, Señor, de mí,
 Memoria ten, Señor, de mí.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4532,7 +4869,7 @@ Mas cuando yo llegare a ver la gran mansión,
 Entonaré por siempre a Cristo mi canción.
 ***
 @TAGS
-Suave
+Hmrio. Bautista
 
 ---
 
@@ -4564,9 +4901,8 @@ Hoy le quiero y sirvo como a Rey,
 Por los siglos siempre cantaré
 Al Salvador.
 ***
-@AUTHORS
-Daniel B. Towner
-George P. Simmonds
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4594,7 +4930,7 @@ Mas el Hijo incomparable
 Dio su vida en mi favor.
 ***
 @TAGS
-Suave
+Hmrio. Bautista
 
 ---
 
@@ -4620,6 +4956,9 @@ Y la vida abundante Jesús le dio.
 De su alma la salvación;
 Vida eterna pudo alcanzar,
 Pues la vida abundante Jesús le dio.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4650,6 +4989,9 @@ en Jesús perdón hallé."
 Date prisa en acudir.
 Necesitas como yo,
 vida que Él hará vivir.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4680,6 +5022,9 @@ morir allí por mí.
 "Ya perdonado estás;
 Mi corazón por ti sangró
 y en mí vivir podrás".
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4695,6 +5040,9 @@ Misericordia de mí, oh Señor.
 Padre, compadécete hoy;
 En mi aflicción ten piedad.
 ¡Oh compadécete ya!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4725,6 +5073,9 @@ Que Jesús me incluye a mí.
 Dicha indecible, consuelo y paz;
 Ven sin tardar y saber podrás
 Que Jesús te incluye a ti.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4750,8 +5101,8 @@ En luz como la del sol:
 Podremos cantar por tiempo sin fin
 Las glorias del Señor.
 ***
-@AUTHORS
-George P. Simmonds
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4784,7 +5135,7 @@ Si del pecado cansado estás,
 Ven, gracia ofrece tu Salvador.
 ***
 @TAGS
-Suave
+Hmrio. Bautista
 
 ---
 
@@ -4794,8 +5145,8 @@ Alabad a Jehová, porque Él es bueno;
 Porque para siempre es su misericordia,
 Es su misericordia, es su misericordia.
 ***
-@AUTHORS
-Salmo 107:1
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4821,6 +5172,9 @@ Su sangre es eficaz.
 Muriendo en dura cruz,
 Y las puertas abrió el buen Salvador,
 Al gozo celestial.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4861,6 +5215,9 @@ De la indecible profundidad,
 A tu redil de tranquilidad;
 A ver tu faz por la eternidad,
 Vengo, Jesús, a ti.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4872,6 +5229,9 @@ Y oraren y buscaren mi rostro,
 Y se convirtieren de sus malos caminos,
 Y Entonces oiré desde los cielos.
 Y Perdonaré sus pecados y sanaré su tierra.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4905,7 +5265,7 @@ Dame tu infinito amor,
 pues basta para mí.
 ***
 @TAGS
-Suave
+Hmrio. Bautista
 
 ---
 
@@ -4931,6 +5291,9 @@ En tu muerte esperando,
 de mi salvación;
 En tu sangre yo encuentro
 vida y perdón.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4961,6 +5324,9 @@ Como Pilato con su pecar?
 Te reconozco por mi Señor,
 Y afirmo gozándome en tu amor,
 ¡Así haré con Cristo!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -4981,6 +5347,9 @@ sin ti nada soy.
 Sin Cristo esclavo yo soy;
 Sin Cristo no hay esperanza,
 Mas con Él yo salvo soy.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5006,6 +5375,9 @@ Tu voluntad haré.
 Todo entrego a ti.
 Usa mis dones y veré
 Que reinas tú en mí.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5026,6 +5398,9 @@ Quiere Él entrar donde estés.
 El parabién te dará;
 Por Él tus tinieblas tendrán que salir,
 Y con su luz te guiará.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5051,6 +5426,9 @@ Y tendrás en sus brazos perdón.
 ¡Al amparo de Cristo el Señor!
 Y en los hombros llevada serás
 Por tan dulce y amante Pastor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5076,6 +5454,9 @@ Vuelve a decirte: "Ven".
 Y grato acepta lo que hoy te da;
 Tal vez mañana no habrá lugar,
 No te detengas: "Ven".
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5095,6 +5476,9 @@ Como a la oveja que retorna a su pastor,
 Y sobre Él podrás tu ansiedad echar.
 Ven, porque en tu dolor en Él encontrarás
 Un fiel consolador, alivio y solaz.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5119,6 +5503,9 @@ Siempre por ti y por mí.
 Cristo te llama a ti;
 Vienen las sombras y viene la muerte,
 Vienen por ti y por mí.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5144,6 +5531,9 @@ Y cuando tu alma gime,
 tu llanto enjugará;
 En rudas tentaciones
 tu prez Él contestará.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5169,6 +5559,9 @@ Vé al Salvador Jesús.
 ¿Quieres tú la vida? Mira al Salvador.
 Él a todos llama con divino amor;
 Vé al Salvador Jesús.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5194,6 +5587,9 @@ A todo el que quiera gozar salvación.
 No se acorta ni pierde valor,
 En tentación o dura aflicción,
 Su sangre bendita promete perdón.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5223,6 +5619,9 @@ Ven al Señor Jesús.
 Ven al Señor Jesús;
 El en la noche da seguridad;
 Ven al Señor Jesús.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5248,6 +5647,9 @@ Solo me salvará.
 Entra, oh Salvador;
 Mora en mi ser para siempre,
 Sé tú mi Rey, Señor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5278,6 +5680,9 @@ descanso hallarás.
 dejando todo mal;
 Así la.paz de Dios tendrás,
 y gloria inmortal.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5310,7 +5715,7 @@ Y Él te ofrece salvación.
 ¡Oh sé salvo hoy!
 ***
 @TAGS
-Suave
+Hmrio. Bautista
 
 ---
 
@@ -5343,6 +5748,9 @@ Tus penas pon en Dios,
 pues Él las llevará;
 Y no tendrás pesar,
 sino consolación.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5368,6 +5776,9 @@ Contigo, mi Jesús.
 Concédeme, Señor Jesús,
 Que siempre ande en tu luz,
 En fiel consagración.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5394,9 +5805,8 @@ Te ayudará el Señor.
 Ven a sus plantas con tu aflicción,
 Tu tentación, tu dolor.
 ***
-@AUTHORS
-Fanny J. Crosby
-George C. Stebbins
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5416,6 +5826,9 @@ Bastante tarde pudiera ser.
 En la presencia del justo Juez.
 ¡Ay del que muere casi creyendo!
 ¡Completamente perdido está!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5446,6 +5859,9 @@ Tendrás que renacer.
 A quienes quisieras un día encontrar,
 Hoy este mensaje pues debes creer:
 Tendrás que renacer.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5470,6 +5886,9 @@ Cordero de Dios, heme aquí.
 Vencido ha toda oposición;
 Ya pertenezco sólo a ti;
 Cordero de Dios, heme aquí.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5495,6 +5914,9 @@ Jesucristo salvará.
 La fuente de pureza.
 Su inmenso amor Jesús te demostró,
 Ven y acéptale por fe.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5525,6 +5947,9 @@ De Jesús, quien nos da salud.
 Han de quedar en el corazón
 Sus mercedes inescrutables,
 Que nos brindan su bendición.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5552,7 +5977,7 @@ Al mundo perdido vé pronto
 Y anuncia la salvación hoy.
 ***
 @TAGS
-Suave
+Hmrio. Bautista
 
 ---
 
@@ -5578,6 +6003,9 @@ Mi Salvador y Rey.
 Revíveme, buen Jesús;
 En sombra yo jamás estoy,
 Tú eres clara luz.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5600,6 +6028,9 @@ De lo que antes carecía Él me imparte en profusión.
 En la gloria me promete divinal seguridad;
 Él será mi brazo fuerte, guía por la eternidad.
 Él será mi brazo fuerte, guía por la eternidad.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5621,6 +6052,9 @@ Con su gracia nos anima, nos levanta su bondad.
 ***
 4) En sus fuerzas llevaremos aún con gozo nuestra cruz;
 Luego con Él cantaremos en la gloria de su luz.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5640,6 +6074,9 @@ Yo te pido que me ayudes a seguirte, mi Pastor.
 Aunque subas las montañas, te dará su amparo fiel.
 Al Pastor la oveja espera que la venga a proteger,
 Hasta el fin de la jornada, pues no quiere perecer.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5669,6 +6106,9 @@ Encuentra el pecador.
 Y hoy nuestro defensor,
 Ampáranos con tu poder
 Y tu eternal amor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5696,7 +6136,7 @@ Caerán mil y diez mil por doquier,
 Mas a Él no vendrá mortandad.
 ***
 @TAGS
-Suave
+Hmrio. Bautista
 
 ---
 
@@ -5721,6 +6161,9 @@ En sombra y sol, Señor, conmigo sé.
 Yo quiero ver la gloria de tu cruz;
 Pasen las sombras, triunfe al fin la fe:
 Jesús, conmigo en vida y muerte sé.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5748,7 +6191,7 @@ Pero es más grandioso y conmovedor
 El amor que me tiene el Señor.
 ***
 @TAGS
-Suave
+Hmrio. Bautista
 
 ---
 
@@ -5776,10 +6219,7 @@ Mas me ordena ir, y a escuchar yo voy,
 Su voz doquier la pena esté.
 ***
 @TAGS
-Suave
-***
-@AUTHORS
-Charles Austin Miles
+Hmrio. Bautista
 
 ---
 
@@ -5805,6 +6245,9 @@ Tras la congoja en Él hay quietud;
 Él es quien da la vida y salud.
 Dios nos dará la libertad;
 Su reino es por la eternidad.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5824,6 +6267,9 @@ De celeste y dulce amor, de celeste y dulce amor.
 Ven a henchir a tu rebaño de sincera devoción.
 Cantaremos, cantaremos
 Tu benigna protección, tu benigna protección.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5848,6 +6294,9 @@ A las alturas condúceme, Dios.
 Ni el vano halago de la adulación;
 Tú eres mi herencia, tú mi porción,
 Rey de los cielos, tesoro mejor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5879,8 +6328,8 @@ El alba eterna al vislumbrar,
 No habrá ni dudas ni temor,
 Pues me guiará mi buen Pastor.
 ***
-@AUTHORS
-William B. Bradbury
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5905,6 +6354,9 @@ Yo seguiré cantando así:
 Y cada paso dirigió,
 Pues seguiré cantando yo:
 "Me condujo el Salvador."
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5935,6 +6387,9 @@ te cuidará el Señor.
 te cuidará el Señor.
 Tus cargas todas en Cristo pon;
 te cuidará el Señor
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -5962,7 +6417,7 @@ Eres mi fuerza, mi fe, mi reposo,
 Y por los siglos mi Padre serás.
 ***
 @TAGS
-Suave
+Hmrio. Bautista
 
 ---
 
@@ -5987,6 +6442,9 @@ Ni mal la luna en su anochecer.
 Tu entrada y tu salida guardará el Eternal.
 El a quien adoramos en verdad
 Nos guardará por toda eternidad.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6001,6 +6459,9 @@ Bendecido, Rey ungido, a santificarnos ven.
 A pesar de ser tan pecadores, no nos has de desechar.
 Comunicas dotes ricas al que implora tu perdón;
 Salvadora luz, que mora en el nuevo corazón.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6025,6 +6486,9 @@ ni en la vida ni en la muerte.
 Dios a ellos no abandona;
 Su propósito es amar;
 los preservará en la gloria.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6049,6 +6513,9 @@ Su diestra es omnipotente.
 Con todo el pueblo de Dios su alabanza repito:
 Dios, mi salud, de todo bien, plenitud.
 ¡Seas por siempre bendito!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6068,6 +6535,9 @@ Padre, Dios, queremos ser cual semilla de tu mies.
 Junta al pueblo en tu alfolí, tenlo siempre unido a ti.
 Libre ya de su pecar y sin penas que pasar;
 Ven, levanta, oh Señor, la cosecha de tu amor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6093,6 +6563,9 @@ Y de las tinieblas nacerá la luz.
 Y tus pies te lleven tras de su maldad,
 Cuenta las riquezas que tendrás por fe,
 Donde el polvo es oro que hollará tu pie.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6117,6 +6590,9 @@ Nuestra humilde adoración.
 Bendiciones hoy nos da;
 Si esto Él hace aquí en la tierra,
 En los cielos ¿qué no hará?
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6142,8 +6618,8 @@ Y del mortal perecen la astucia y la maldad;
 Después de haber cesado los siglos de correr,
 Tu amor, verdad y gloria han de permanecer.
 ***
-@AUTHORS
-Isaac Watts
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6163,6 +6639,9 @@ Nos lleve a ver tu faz en tu ciudad, Señor.
 Dios Hijo, Redentor, tu salvación cantamos.
 Dios Santificador, te honramos en verdad.
 Te ensalza nuestra voz, bendita Trinidad.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6185,6 +6664,9 @@ La buscamos con denuedo, pues queremos, sí,
 Dar amor de ti, Dios, en nuestra vida aquí.
 Tu imagen graba hoy, Señor, en el corazón.
 Oh graba hoy, Señor, tu faz en el corazón.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6204,6 +6686,9 @@ Tan sólo obedeces al Rey celestial.
 Tus puertas derrumbe con odio mortal;
 Jesús es tu jefe, tu amparo será,
 Y en Él tu victoria segura estará.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6234,6 +6719,9 @@ anhelo disfrutar.
 cual tu verdad;
 Y victoriosa llegará
 a la eternidad.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6258,6 +6746,9 @@ y consuelo fraternal.
 a vivir en unidad,
 Nos congregue con su amor
 en feliz eternidad.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6282,6 +6773,9 @@ Sé tú el altar de Cristo do le adores fiel.
 Queremos que nos guíes tu obra a realizar.
 Los dones de tu gracia impártenos, Señor;
 Y que vivamos juntos, con todos en amor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6312,6 +6806,9 @@ en el Señor.
 oh Jesús, mi escudo sé,
 Y yo fiel te seguiré
 con profundo amor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6344,6 +6841,9 @@ No me abandones para siempre
 Si lo llegara a quebrantar.
 Sé que a menudo te ofendí,
 Perdón y paz yo busco en ti.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6372,6 +6872,9 @@ Yo, que estoy resucitado, otra vida he de llevar.
 Pues, no reine ya en nosotros el pecado engañador;
 Presentemos nuestros cuerpos a servir a nuestro Dios;
 Presentemos nuestros cuerpos a servir a nuestro Dios.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6396,6 +6899,9 @@ Vertiste sangre allí para salvar.
 Todo mi ser se llena de loor.
 Recibe esta expresión de adoración,
 Al contemplarte en recordación.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6420,6 +6926,9 @@ Tu mesa es franca para mí, y en humildad me acercaré.
 Que al alma nutre y da vigor;
 Yen vida y gozo inmortal diré las glorias de tu amor.
 Yen vida y gozo inmortal diré las glorias de tu amor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6445,7 +6954,7 @@ En memoria de mí, a Dios buscad,
 de corazón recordad.
 ***
 @TAGS
-Suave
+Hmrio. Bautista
 
 ---
 
@@ -6474,6 +6983,9 @@ Que por gracia ya reclamo.
 que por fe yo quiero darte;
 De mi amor es la expresión
 Por tu gracia en perdonarme.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6493,6 +7005,9 @@ Te pedimos que, fervientes, te sigamos con valor.
 Gracias mil, pues disfrutamos tu clemencia y tu favor.
 Tuya fue la cruz, mas nuestra es la dicha y es la paz,
 Tuya sea hoy la gloria, tuya por siempre jamás.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6517,6 +7032,9 @@ Mi fuerza está sólo en tu poder.
 Mía la culpa, tuyo el perdón.
 He aquí el refugio, he aquí mi paz,
 Tu sangre, mi justicia, mi Señor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6541,6 +7059,9 @@ Que tu virtud brota a raudal.
 Pues te sentimos más y más.
 Tu gracia danos, oh Señor,
 Y viviremos en tu amor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6565,6 +7086,9 @@ A los hijos que ha engendrado nuestro Padre celestial!
 Nadie pueda separado de esta comunión vivir.
 Y seamos en la tierra, de Jesús el resplandor,
 Los testigos ante el mundo del eterno Salvador.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6584,6 +7108,9 @@ No existan asperezas ni discordante voz.
 Mostremos cómo viven los que salvados son.
 Amemonos, hermanos, con todo el corazón;
 Lo ordena el Dios y Padre; su ley es ley de amor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6603,6 +7130,9 @@ Contigo estemos en mayor unión.
 De alegrías, pruebas o dolor,
 Y cuando al fin podamos descansar,
 Nos cubra el manto de tu inmenso amor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6617,6 +7147,9 @@ Nuestro espíritu está unido a Él,
 Hoy cantemos de corazón,
 Y que el mundo vea que somos uno en Él,
 Por los lazos del amor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6638,6 +7171,9 @@ Tendremos siempre aquí.
 Si le entregas fiel tu vida a tu Salvador.
 Eres tú dichoso al decir:
 "A Jesús con fe yo siempre le seguiré".
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6662,6 +7198,9 @@ por la separación.
 la gracia y bendición
 Del Padre, Hijo Redentor
 y del Consolador.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6691,6 +7230,9 @@ Si no estoy reconciliado.
 Dios no escucha la oración,
 Dios no escucha la oración
 Si no estoy reconciliado.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6715,6 +7257,9 @@ Dios os guarde en su santo amor.
 Hasta el día que lleguemos
 A la Patria do estaremos
 Reunidos en paz y amor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6745,6 +7290,9 @@ Avívanos, oh Señor.
 Gracia divina que llena el ser,
 Para, Señor, tu ley comprender,
 Avívanos, oh Señor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6769,6 +7317,9 @@ Goces y pompas vanas aquí,
 Aliente vida y busque tu paz;
 Y cuando al cielo pueda ascender,
 //Ya para siempre conmigo estarás.//
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6799,6 +7350,9 @@ llena de paz nuestro ser.
 celo, virtud y valor,
 Dándonos dones preciosos,
 dones del Consolador.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6823,6 +7377,9 @@ Frente a toda tentación, frente a toda tentación.
 Proclamando para el alma verdadera libertad.
 Danos luz y valentía
 Y firmeza en tu verdad, y firmeza en tu verdad.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6848,6 +7405,9 @@ Oh, ven y aviva mi alma con poder.
 Toda escoria haz desvanecer,
 Tu abundante gracia quiero ver,
 Oh, ven y aviva mi alma con poder.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6872,6 +7432,9 @@ Nada la puede sofocar.
 En tu gran Reino trabajar,
 Hasta que al fin tu faz veamos
 Por todo el mundo iluminar.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6908,6 +7471,9 @@ Al Señor habrá de ser.
 Conocemos nuestra meta,
 Que es luchar con fe y amor,
 Porque Cristo sea siempre de este mundo el Señor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6932,6 +7498,9 @@ Mis penas Él llevó, mis penas Él llevó.
 la gracia, rico don;
 Mi vida y alma en gratitud,
 Señor, ya tuyas son, Señor, ya tuyas son.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6957,6 +7526,9 @@ derrama ahora aquí.
 despierta más amor,
 Más celo y fe en tu pueblo aquí,
  en bien del pecador.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -6982,6 +7554,9 @@ y tu poder sentir.
 tu nombre excelso es.
 Y el fuego de tu santa voz
 nos queme otra vez.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7010,6 +7585,9 @@ y rinde todo a Él.
 dispuestos a sufrir;
 A Cristo reflejamos
 en nuestro fiel vivir.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7029,6 +7607,9 @@ Mas con amor y gracia tu reino ha de venir.
 Doquier tu rostro alumbra hay júbilo y valor.
 Tu cruz nos ilumina; ampáranos tu amor,
 Y celestial corona aguarda al vencedor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7055,6 +7636,9 @@ Lo debes compartir.
 De las montañas gritaré, el gran mensaje de amor,
 Que a todos hay que repetir:
 Lo debes compartir.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7080,6 +7664,9 @@ Sin nuestra ofrenda de amor jamás verán su luz.
 Proclaman su mensaje fiel, "Salud al pecador."
 Si yo no puedo ir sus nuevas a esparcir,
 Testigo fiel aquí seré, por ellos oraré.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7104,6 +7691,9 @@ hermano nuestro es.
 se encuentran; y su amor
 Unió a las almas por la fe
 en santa comunión.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7137,6 +7727,7 @@ Las nuevas dad, las nuevas dad.
 ***
 @TAGS
 Navidad
+Hmrio. Bautista
 
 ---
 
@@ -7161,6 +7752,9 @@ Tu santa influencia derramar.
 Tal como quieras y doquier;
 Que al fin la gloria de tu faz
 En tu presencia pueda ver.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7191,6 +7785,9 @@ La vida eterna ahora anunciad.
 Gloria dará en triunfos al Señor;
 La salvación dará un placer profundo:
 Cristo es el Rey y nuestro Salvador.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7216,6 +7813,9 @@ Dios os brinda, ¡salid y luchad!
 Y la magna ocasión pasará.
 Presto id, el mensaje es urgente,
 Que el Señor con poder os guiará.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7240,8 +7840,8 @@ Dios, fortaleza, gustoso dará;
 Él te bendecirá en tus esfuerzos,
 A gloria eterna Él te llevará.
 ***
-@AUTHORS
-Fanny J. Crosby
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7267,6 +7867,9 @@ Mas Cristo su promesa da,
 Mayor que proclamar
 El evangelio de su amor:
 El mundo por salvar.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7301,6 +7904,9 @@ Hallamos en Él favor."
 Por Él al Señor dirigimos,
 Con fe toda oración,
 Con fe toda oración.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7320,6 +7926,9 @@ Pues si así venciereis, corona allá tendréis.
 Cristo es quien os dice: "Yo os escogí".
 Sin dudar, haciendo fiel su voluntad,
 De Jesús, las nuevas, al mundo hoy llevad.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7345,6 +7954,9 @@ Y cumple cual obrero fiel de Dios la voluntad.
 Salgamos todos a anunciar la gloria de la cruz.
 Movidos por divino afán glorioso es trabajar;
 La mies dorada, ¡a segar! ¡Jesús delante va!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7364,6 +7976,9 @@ Ganancia es morir por ti. Envíame a mí.
 Del santo amor que al hombre das, hoy y en la eternidad.
 Que sea esta mi canción: mis culpas Él por mí sufrió.
 Y al ver su cruz, exclamé así: envíame a mí.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7389,6 +8004,9 @@ Y seré obediente a tu voluntad.
 Pues errante andaba en mi necedad;
 Nada es importante más que tú, Señor,
 Hazme fiel testigo de tu gran verdad.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7413,6 +8031,9 @@ Y gracia y luz de Él tendrá.
 Y nuestra gran seguridad;
 Se salvará quien fía en Él
 Hoy y por la eternidad.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7432,6 +8053,9 @@ Tu palabra llevaremos al hacer tu voluntad.
 Y nos pide todavía ir al mundo y predicar.
 Que los hombres todos sepan de Jesús y su bondad,
 Que su amor sincero y puro quiere darles libertad.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7456,6 +8080,9 @@ A salvo así de destrucción.
 Del enemigo libre ya;
 Y en cantos mil que entonaré
 Mi gratitud se mostrará.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7488,6 +8115,9 @@ Y quiere guiarnos ala luz
 De tu justicia y tu verdad.
 ¡Enciende en nuestro corazón,
 Para servirte, más pasión!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7512,6 +8142,9 @@ Viniendo a Jesucristo quien es el vivo pan.
 Que las generaciones se quieran congregar.
 Y nuestro gran esfuerzo reflejará tu amor,
 Y así los reinos todos serán del Salvador.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7537,6 +8170,9 @@ Almas disfrutando eterna redención.
 Con el evangelio de la salvación;
 Para los obreros fieles Dios promete
 Que recibirán eterno galardón.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7562,6 +8198,9 @@ Do ciegos hay, porque no quieren ver,
 Y allí gastad humildes vuestras vidas,
 Que el Calvario vuestro ha de ser.
 Como el Padre me envió, os envío yo.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7585,6 +8224,9 @@ Pues mi gozo es servirte más y más.
 ***
 3) Señor, tú me llamas por mi nombre desde lejos;
 Por mi nombre cada día tú me llamas.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7609,6 +8251,9 @@ Llevando del Señor su cruz aquí.
 Con gran placer;
 Las almas que sin luz se acercan a Jesús,
 La vida por su cruz podrán tener.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7629,6 +8274,9 @@ Yo iré de la tierra hasta el fin.
 Gentes que el amar de Dios no gozan en su ser.
 Hoy sé que debo ministrar a todos por doquier,
 Y gozoso compartir la gracia del Señor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7649,6 +8297,9 @@ Predicando, predicando tu gloriosa salvación.
 4) Tú, ¡oh Cristo!, nos ayudas; con tu iglesia siempre estás;
 Sólo en ti, Señor, confiamos, no nos dejes desmayar;
 Tú diriges, tú diriges, y tu reino triunfará.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7674,6 +8325,9 @@ es mi cantar del corazón.
 mi Dios es de los reyes Rey.
 Testigos somos de su amor.
 Es mi cantar del corazón.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7698,6 +8352,9 @@ voy a perecer.
 yo postrado estoy;
 Habla, oh Señor, a mi alma,
 que tu siervo soy.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7726,6 +8383,9 @@ Por darles vida, muerte Él sufrió.
 Y con tus bienes hazlos proseguir.
 Por ellos tu alma en oración derrama,
 Que todo Cristo te ha de retribuir.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7755,6 +8415,9 @@ Camina y vive en mi ciudad.
 Y el mundo pueda oír tu voz.
 Y de los cielos, oh Señor,
 Descienda la Ciudad de Dios.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7780,6 +8443,9 @@ Me cuenta de su gran amor.
 En Cristo hay salvación,
 Llevando este mensaje
 De muerte y resurrección.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7804,6 +8470,9 @@ a ti buscando va.
 lo grande de tu amor;
 Pues lengua no hay que explicará
 lo que eres, oh Señor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7826,6 +8495,9 @@ Tiende tu mano y da paz y amor.
 Haz un hogar al desamparado;
 Lleva la cruz al mundo en tinieblas,
 Tiende tu mano con la fe puesta en Dios.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7847,7 +8519,7 @@ Allí mi corazón eleve su oración.
 ¡Más cerca, oh Dios, de ti, más cerca, sí!
 ***
 @TAGS
-Suave
+Hmrio. Bautista
 
 ---
 
@@ -7867,6 +8539,9 @@ Ocupados en la obra que reclama fiel acción.
 La justicia defendemos con limpieza, claridad.
 Y valientes avanzamos a cumplir con el deber,
 Porque así el mundo puede a Jesús bien conocer.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7886,6 +8561,9 @@ La vista alzar, reír, amar, servir.
 Dame valor, templanza y humildad;
 Dame el amor que da y ayuda y sirve;
 Hazme vivir según tu voluntad.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7906,6 +8584,9 @@ Y así seréis mi pueblo."
 "Pues yo soy santo, santo."
 "Me seréis santos", dice Dios,
 "Pues yo soy santo, santo."
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7925,6 +8606,9 @@ las glorias del Señor.
 en Cristo la hallará;
 A su ferviente petición,
 Él pronto atenderá.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7950,6 +8634,9 @@ Y dame un nuevo corazón,
 Mostrándome tu salvación;
 Entonces alzará mi voz
 Eternas glorias a mi Dios.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7974,6 +8661,9 @@ Los que esperan en Jehová.
 Hay lugar de consuelo y luz;
 Él nos brinda su gozo y paz
 En el sitio de solaz.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -7998,6 +8688,9 @@ Dios, yo quiero ser más limpio de corazón.
 Dios, yo quiero amarte siempre de corazón.
 De corazón, de corazón,
 Dios, yo quiero amarte siempre de corazón.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8026,6 +8719,9 @@ Más de su luz, más de su paz.
 Más quiero amarle; más quiero honrarle;
 Más de la gloria de su faz,
 Más de su luz, más de su paz.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8057,6 +8753,9 @@ Toma nuestras aptitudes,
 Sean para tu loor;
 Que seamos siervos dignos
 En el Reino del Señor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8081,6 +8780,9 @@ Por sus sendas, guía fiel.
 redimidos por su amor:
 Y a Dios Trino y Uno damos
 Gloria, bendición y honor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8106,6 +8808,9 @@ En noches de pecar.
 Yo tengo que ayudar.
 Y en el servicio serle fiel
 A quien vino a salvar.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8130,9 +8835,8 @@ En los brazos de mi Salvador.
 Por su gran poder Él me guardará
 De los lazos del engañador.
 ***
-@AUTHORS
-A. J. Showalter
-Pedro Grado Valdés
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8157,6 +8861,9 @@ Y es justa su santa ley.
 No habrá tentación ni dolor,
 Ni prueba que me haga perder
 La paz de mi corazón.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8187,6 +8894,9 @@ Me ofreció en vez de pan.
 Pan de vida y todo aquí;
 Y riqueza bien segura:
 Jesucristo es para mí.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8212,6 +8922,9 @@ Quiero tener en Él protección,
 Y el alma sienta desfallecer,
 Quiero saber que ayuda tendré,
 ¡Habladme más de Cristo!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8237,6 +8950,9 @@ Y da aliento al corazón.
 Y no queremos desfallecer,
 Cristo nos dice: "Siempre os daré
 Gracia divina, santo poder."
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8265,6 +8981,9 @@ Ya feliz con Él yo voy; de su amor me llenará.
 Cielo y tierra pasarán, más veré su dulce faz;
 Gozo y luz se acabarán; suyo soy, no pido más.
 Gozo y luz se acabarán; suyo soy, no pido más.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8295,6 +9014,9 @@ Cuán negra es la maldad.
 De día o en oscuridad;
 ¿Será en el valle o en el mar,
 Que mi Jesús vendrá?
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8320,6 +9042,9 @@ Escogido fui de Dios.
 Y sentóme en las alturas con Cristo mi Señor.
 Grande fue mi admiración al ver su gracia,
 Cuando me escogió mi Dios.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8344,6 +9069,9 @@ Y en las tormentas nos da protección.
 Ven, pues, ayúdanos con tu poder;
 Y mientras vuelves, Señor, ya sabemos
 Que en tu esperanza podremos crecer.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8363,6 +9091,9 @@ Intercede en el cielo por aquellos que compró.
 Es refugio de descanso, es mar de gran bendición.
 El profundo amor de Cristo es un cielo para mí;
 Me levanta hasta la gloria, pues me atrae hacia allí.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8397,6 +9128,9 @@ su amor es mi deleite.
 tú das al alma mía,
 Y en tus mansiones moraré,
 Señor, por largo días.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8425,6 +9159,9 @@ Gloria demos al buen Salvador.
 Al irse la niebla veloz;
 Desciende Jesús con su gran majestad,
 ¡Aleluya! Estoy bien con mi Dios.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8451,8 +9188,8 @@ Gozo y fuerza en nuestra vida terrenal;
 Ellas en la dura lid nos sostendrán,
 Y triunfar podremos sobre el mal.
 ***
-@AUTHORS
-Russell Kelso Carter
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8472,6 +9209,9 @@ Con calma yo avanzo al cielo, donde estás.
 Delicias infinitas y celestial amor.
 Espero yo mirarte, oír tu dulce voz;
 Espero alabarte, ¡mi Salvador, mi Dios!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8502,6 +9242,9 @@ Como Guiador, como Guiador.
 Tu voluntad, tu voluntad;
 Y servirte a ti, Señor,
 En humildad, en humildad.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8532,6 +9275,9 @@ Y del cielo oí respuesta:
 vi la obra de Jesús;
 Supe que la paz fue hecha
 por la sangre de su cruz.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8564,6 +9310,9 @@ Limpieza tu sangre me trajo, yo sé;
 Lavado y más blanco que nieve quedé.
 Más blanco que la nieve quedé;
 Lavado en tu sangre, soy limpio por fe.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8589,6 +9338,9 @@ siempre sentiré.
 Yo le seguiré.
 El me guía, y el camino
 nunca perderé.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8613,6 +9365,9 @@ y nos da su protección.
 Él nos haga oír su voz,
 Que nosotros desde ahora
 le sirvamos con amor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8632,6 +9387,9 @@ Que tu gracia nos proteja y sostenga nuestra fe.
 Únela estrechamente con el lazo fraternal!
 Perfecciona a cada miembro, ilumina nuestro andar,
 Y que el alma se complazca en tu nombre proclamar.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8656,6 +9414,9 @@ Se vuelve anhelante, ¡se vuelve a tu amor!
 Y gracia constante de ti recibir;
 Hallar en mis noches contigo la luz,
 ¡Alivio a mis penas al pie de la cruz!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8686,6 +9447,9 @@ y de ti sienta el poder.
 ¡Cuánta paz a mi alma da!
 Yo a su causa me consagro,
 y su amor, mi amor será.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8716,6 +9480,9 @@ Por donde me guíe a mí.
 A Cristo ya entregué.
 A mi Señor rendido estoy;
 Por donde me guíe iré.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8740,6 +9507,9 @@ Repréndeme, si temo en todo hacer el bien.
 Siguiendo tus pisadas, que al cielo llegará.
 Sostenme en el camino, y al fin, con dulce amor,
 Trasládame a tu gloria, mi amigo y Salvador.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8764,6 +9534,9 @@ Me faltan luz y gracia; ¡Oh, dámelas, Señor!
 Ya ves cuánto me falta, ya ves cuan pobre soy.
 A tu piedad me entrego, de mí ten compasión;
 Tú puedes darme todo; ¡Oh, dámelo, Señor!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8789,6 +9562,9 @@ Y las plantas hace florecer.
 Es fuente de la bendición.
 Si llega prueba dura y tan temida,
 Él es quien da paz al corazón.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8819,6 +9595,9 @@ Moriré contigo, mi Jesús.
 Me darás la gracia y gloria,
 Me darás la gracia y gloria,
 Y por siempre tú me guiarás.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8844,6 +9623,9 @@ Vida y camino es Él.
 Y siempre andar en su ley?
 Acéptale hoy como tu Salvador,
 Hazle a Él tu Rey.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8869,6 +9651,9 @@ Por servirte, mi Señor.
 La sublime majestad,
 Hasta que contigo tranquilo esté
 En tu gloria celestial.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8893,6 +9678,9 @@ Y en la cruz perdón tuvimos, paz y gozo sin igual.
 Adoradle, consagrados, y su amor recibiréis.
 Dadle gloria por su gracia, su Palabra santa y fiel;
 Repetid del evangelio esta historia por doquier.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8912,6 +9700,9 @@ Oh Señor, guíame, que sólo viva por ti.
 Que sólo viva por ti.
 Heme aquí, oh Señor,
 Heme aquí, como soy, que sólo viva por ti.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8937,6 +9728,9 @@ hoy testigo suyo soy.
 Él es la felicidad;
 Del mortal lleva las cargas,
 y le da consuelo y paz.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8962,6 +9756,9 @@ con Jesús se fue a morar?
 de la muerte y del dolor,
 Entregar con fe el alma,
 victoriosos, al Señor?
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -8991,6 +9788,9 @@ De balde siempre das al triste pecador.
 Que puede dar la muerte cruel;
 me salvarás en tu redil,
 Del enemigo vil por tu promesa fiel.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9015,6 +9815,9 @@ Y en fe que venza todo mal.
 Pueda el futuro ver con fe.
 Para poder tu paz gozar,
 Contigo, Cristo, quiero andar.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9038,6 +9841,9 @@ Porque a su amparo caminaré.
 Y sus senderos siguiendo estoy;
 En las tinieblas jamás iré,
 Porque sus luces y amor tendré.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9066,6 +9872,9 @@ Mi orgullo, gloria y vanidad
 Al polvo dejo, por hallar
 La vida que en su sangre dio
 Jesús, mi Salvador.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9091,6 +9900,9 @@ suple en abundancia.
 vivo cada día;
 Toda gracia en su Señor
 halla el alma mía.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9115,6 +9927,9 @@ Heme aquí, Espíritu Consolador.
 Dame tu gracia para triunfar, y hazme en la lucha, vencedor.
 Sé tú mi escondedero fiel, y aumenta mi valor y fe;
 Mi mano ten, Espíritu Consolador.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9140,6 +9955,9 @@ Yo hoy me rindo por siempre al Señor.
 Quiero imitar a mi buen Salvador.
 Busco a las almas habiéndoles de Él,
 Y es mi deseo ser constante y fiel.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9164,6 +9982,9 @@ Tu mano extiende y sanaré.
 Guía mi vida, Señor, aquí;
 De tu potencia llena mi ser,
 Y el mundo a Cristo pueda en mí ver.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9183,6 +10004,9 @@ Y mi lugar podré yo ver en tu mundo hoy.
 Que para en tu camino andar me des más fe y amor;
 Y cumpla yo tu voluntad, y sirva con fervor;
 Rendido así tendré lugar en tu mundo hoy.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9205,6 +10029,9 @@ Ven ahora y acepta al Señor.
 Él te quiere impartir su perdón;
 Él te quiere salvar, Él te quiere ayudar;
 Hoy acepta el perdón.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9235,8 +10062,8 @@ El que quiera trabajar
 Hallará también lugar
 En la viña del Señor.
 ***
-@AUTHORS
-Isaiah Baltzell
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9256,6 +10083,9 @@ De tu mensaje y mi deber.
 Tu voluntad será mi pasión.
 Al ir por sendas que tú me asignes,
 Anunciaré tu gran salvación.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9289,10 +10119,7 @@ Y después, en la postrera siega,
 Moraré ya junto a ti.
 ***
 @TAGS
-Suave
-***
-@AUTHORS
-Karolina Wilhelmina Sandell-Berg
+Hmrio. Bautista
 
 ---
 
@@ -9324,8 +10151,8 @@ consagrado a tu loor;
 Y mi mente y su poder
 sean usados en tu honor.
 ***
-@AUTHORS
-LÁVAME EN TU SANGRE SALVADOR (603)
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9356,6 +10183,9 @@ Y tengas de Él consolación.
 En Dios ten fe, pues te socorrerá;
 Él nunca falla, aunque reinos perezcan,
 Él reina y siempre reinará.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9379,6 +10209,9 @@ Todos fueron limpios, salvos por la fe.
 Todo el que a ti viene, no rechazarás.
 Fiel es tu promesa, grande es tu amor.
 Ten mi vida entera, ¡Tú eres mi Señor!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9409,6 +10242,9 @@ Cada momento se acuerda de mí.
 Cristo me dice: "Tu amparo yo soy";
 Cada momento, en tinieblas o luz,
 Siempre conmigo está mi Jesús.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9428,6 +10264,9 @@ Ven, porque Él es bueno, y no llores más.
 Guía al angustiado hacia el buen Jesús;
 La bendita nueva de celeste paz
 A los tristes lleva, y no llores más.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9457,6 +10296,9 @@ nos levanta su bondad.
 aún con gozo nuestra cruz;
 Luego con Él cantaremos
 en la gloria de su luz.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9481,6 +10323,9 @@ Y todas tus penas podré reducir.
 Jamás en sus luchas la habré de dejar;
 Si todo el infierno la quiere perder,
 ¡Yo nunca, no, nunca, la puedo olvidar!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9511,6 +10356,9 @@ Por la mano del Salvador.
 Con poder tan abrumador,
 Paz en mi alma habrá, pues sostén tendrá
 De la mano del Salvador.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9530,6 +10378,9 @@ Aleluya, aleluya.
 Buscad y hallaréis
 Llamad, llamad y la puerta se abrirá.
 Aleluya, aleluya.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9561,6 +10412,9 @@ Mi Dios reinando está.
 Su reino santo poder tendrá;
 Por eso es que hay confianza en mí:
 Mi Dios reinando está.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9585,6 +10439,9 @@ Que en toda prueba nos hará vencer.
 En su tan corta vida terrenal.
 Tu calma y paz nos guardan del azar,
 Tus fuerzas nos harán perseverar.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9611,9 +10468,8 @@ Ordenó mi suerte el que es Dios de amor.
 Ni una sola flecha me podrá dañar.
 Si Él no lo permite, no me alcanzará.
 ***
-@AUTHORS
-James Mountain
-Enrique S. Turrall
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9645,8 +10501,8 @@ Mi precioso Salvador;
 En la vida y en la muerte
 Protección me dé tu amor.
 ***
-@AUTHORS
-William J. Kirkpatrick
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9673,9 +10529,8 @@ Y nunca le puedo olvidar;
 Callar sus favores no quiero,
 A Cristo le voy a cantar.
 ***
-@AUTHORS
-Fanny J. Crosby
-William J. Kirkpatrick
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9700,6 +10555,9 @@ bellísimo raudal.
 escucha mi clamor.
 Revísteme de santidad,
 y cólmame de amor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9725,6 +10583,9 @@ que no me apartará.
 en su Palabra fiel.
 Mi fe descansa en buen lugar,
 en Cristo mi Señor
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9745,6 +10606,9 @@ Y tus promesas mil en mí cumple en verdad.
 ***
 4) Te necesito ya, santísimo Señor;
 Tuyo hazme, nada más, bendito Salvador.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9770,6 +10634,9 @@ Y me prepara el Salvador, en gloria una mansión.
 Su nombre allá confesará Jesús el Inmortal.
 Nuestra alma por la eternidad, a Dios alabará;
 Pues por la fe y la santidad, al mundo vencerá.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9794,6 +10661,9 @@ Nunca debo desmayar.
 No me dejes extraviar;
 Aunque viva en el dolor,
 Nunca quiero desmayar.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9825,9 +10695,8 @@ Alabanzas a Jesús;
 Nuestro corazón allí rebosará
 De amor y gratitud.
 ***
-@AUTHORS
-James McGranaham
-Enrique S. Turrall
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9852,6 +10721,9 @@ al autor de toda luz
 mi esperanza y mi sostén,
 Sé mi guía, mi alegría
 en la senda del Edén.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9884,11 +10756,8 @@ mi tesoro y lo que soy.
 Todo tuyo quiero ser,
 sólo en ti permanecer.
 ***
-@AUTHORS
-Henri A. Malan
-Frances R. Havergal
-Vicente Mendoza
-LÁVAME EN TU SANGRE SALVADOR (603)
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9917,6 +10786,9 @@ De que en tu Reino tú me des qué hacer;
 Prepárame, Señor, servirte quiero,
 Y ser a todos lo que debo ser;
 Y ser a todos lo que debo ser.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9942,6 +10814,9 @@ No te dejaré nunca; siempre contigo estoy."
 Si mi pie resbala, Él me sostendrá;
 En mi vida diaria es mi protector;
 Cuán fiel es su palabra: "Siempre contigo estoy."
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9966,6 +10841,9 @@ En dulce paz.
 Luz y solaz; bendito Salvador,
 Tú eres la verdad, vida, confianza, amor,
 Mi eterna paz.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -9991,6 +10869,9 @@ y que hable tu verdad.
 es tuya nada más.
 Habla, Jesús, a mi alma,
 y hazla más eficaz.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10010,6 +10891,9 @@ Y siempre habrá de ser un peregrino.
 En gloria una mansión, fiel nos preparas.
 No quiero ya volver al mundo y su placer,
 Me esforzaré por ser un peregrino.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10035,6 +10919,9 @@ No temeré yo la tempestad:
 Él me defenderá,
 Y como escudo en la lucha cruel,
 Él me protegerá.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10055,9 +10942,8 @@ que nunca vuelva atrás;
 Que siga siempre en pos de Él:
 su gracia me dará.
 ***
-@AUTHORS
-Ira D. Sankey
-Enrique S. Turrall
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10083,6 +10969,9 @@ confiando en su poder.
 que nunca vuelva atrás,
 Que siga siempre en pos de Él:
 su gracia me dará
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10114,9 +11003,8 @@ Esa vida que te da;
 Si tan sólo en Él por siempre fiares,
 Él con bien te saciará.
 ***
-@AUTHORS
-Fanny J. Crosby
-William B. Bradbury
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10137,6 +11025,9 @@ Perdón te ruego, mi Señor y Dios.
 Si al que sufría en su dolor dejé:
 No me condenes tú por mi pecado;
 Perdón te ruego, mi Señor y Dios.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10165,6 +11056,9 @@ Porque la promesa nunca faltará.
 Y el cantar de triunfo todos repetid:
 Prez, honor y gloria dad a Cristo el Rey:
 Y por las edades cante así su grey.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10189,6 +11083,9 @@ A todo triste pecador.
 Orad al dueño de la mies;
 Y por la fe al fin llevad
 Los redimidos a sus pies.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10214,6 +11111,9 @@ En los negocios de mi Rey.
 Gozo y eterna paz habrá por siempre en Él,
 Y allí Jesús dará eterna habitación,
 Es el mensaje de mi Rey.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10238,6 +11138,9 @@ Y así mostrar tu amor, algo por ti.
 ¡En gozo o aflicción tuyo hasta el fin!
 Y cuando vea tu faz, en gloria donde estás
 Siempre me dejarás servirte a ti.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10262,6 +11165,9 @@ Deberes y peligros demandan más tesón.
 La lucha y la batalla; victoria viene ya.
 A todo el que venciere corona se dará;
 Y con el Rey de gloria, por siempre vivirá.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10286,6 +11192,9 @@ La aurora nueva de un amor sin par.
 Por el eterno y celestial Jesús;
 Dios trino, de perdón y gracia lleno,
 Que al universo inundas con tu luz.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10305,6 +11214,9 @@ Y en las flaquezas se brinden perdón.
 Guíalos en el camino del bien.
 Haz que te sirvan, oh Dios de los cielos,
 En tu presencia por siempre,
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10329,6 +11241,9 @@ Por el Espíritu consolador.
 Al fin de nuestra vida terrenal;
 Cristo en la gloria ahora nos prepara
 Un nuevo hogar, sublime, celestial.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10359,7 +11274,7 @@ Cómo Jesús los quiere ver
 A su amparo y así vencer.
 ***
 @TAGS
-Suave
+Hmrio. Bautista
 
 ---
 
@@ -10379,6 +11294,9 @@ Críe a sus hijos con tu dirección.
 Creciendo siempre en santidad y paz,
 Mirando hacia aquel feliz hogar
 Donde con Cristo vamos a morar.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10399,7 +11317,9 @@ Y la vida en el hogar en quietud honor te dé.
 4) Tú, Señor, que aquí buscaste alas almas con amor;
 Tú, que a todos atrajiste, aunque a ti te hicieron mal:
 Nuestra influencia, para bien, en el mundo usa hoy.
-
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10417,8 +11337,8 @@ Del constante y puro amor de las madres, Dios de amor.
 Te rogamos con fervor por las madres, Dios de amor;
 Que con tu divino bien coronadas hoy estén.
 ***
-@AUTHORS
-George P. Simmonds
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10451,8 +11371,8 @@ En su muerte Él sufrió;
 Cristo es un amigo eterno;
 ¡Sólo en Él confío yo!
 ***
-@AUTHORS
-Charles C. Converse
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10478,6 +11398,9 @@ Llámale, que Él está cerca,
 Cumple su fiel voluntad;
 Y con paciencia espera:
 En su poder y verdad.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10500,6 +11423,9 @@ Y le traigo mis pesares, Él me ampara con su amor.
 3) Ya no tengo más temores, tengo paz, tranquilidad;
 El Señor de los señores, Él me guarda con bondad.
 Le rendí mi corazón, en el huerto de oración.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10530,6 +11456,9 @@ Pues dormidos Jesús les miró.
 De Jesús que intercede por mí.
 Gloria siempre le doy y feliz vivo hoy
 Por el siervo de Getsemaní.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10560,6 +11489,9 @@ Escucha tú mi oración.
 ¡Espíritu Consolador!
 Escucha tú mi oración.
 Bendíceme, ¡oh Trinidad, Que estás en la eternidad!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10584,6 +11516,9 @@ Ya que eres todo compasión.
 Pues mi esperanza es sólo en ti;
 Contrito aguardo tu querer,
 Sé compasivo hacia mí.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10615,6 +11550,9 @@ Tú las convencerás de su iniquidad,
 Y tú les limpiarás de toda maldad.
 Consolador, tú que ahora las llamas
 Dales entendimiento y luz.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10629,6 +11567,9 @@ el santo pan de la verdad.
 y de tus pasos ir en pos.
 Haz que mi alma pueda oír
 el claro acento de tu voz.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10663,6 +11604,9 @@ tu calma pon, Señor.
 Podamos en serenidad,
 O en la más ruda tempestad
 oír tu voz de amor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10696,6 +11640,9 @@ Fía en Cristo, fía en Cristo;
 Te dará en el cielo franca entrada,
 Fía en Cristo el Señor.
 Fía en Cristo, fía en Cristo,
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10721,6 +11668,9 @@ Serviré al Salvador.
 Muy alegre, tan alegre;
 En la lucha nunca faltará el valor,
 Que me da el Salvador.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10740,6 +11690,9 @@ Más humilde hijo, más pronto en amar.
 Más de su dominio, más paz en la cruz;
 Más rica esperanza, más obras aquí,
 Más ansia del cielo, más gozo allí.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10753,6 +11706,9 @@ Vidas hechas pedazos,
 Te llevaron al Calvario tan cruel;
 Tu amor será mi anhelo,
 Tú me has dado vida a mí.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10781,6 +11737,9 @@ Pues lo cuida su amante Señor.
 Si rendidos no vais a su altar,
 Pues su paz y su amor sólo son para aquel
 Que a sus leyes divinas es fiel.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10805,6 +11764,9 @@ Aún a la misma tarde de la senectud.
 ¡Listos!, que muchas almas hay que rescatar.
 ¿Quién de la vida el día puede desperdiciar?
 "Viene la noche y nadie puede trabajar."
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10824,6 +11786,9 @@ Por los que tienen que vivir en sombras de opresión.
 Con los que van tras el error sin fe, sin luz, sin paz.
 A quienes lejos van de ti, concédenos traer,
 Y puedan compartir así tu gracia y tu poder.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10849,6 +11814,9 @@ Vuelve a darme paz; y luego dice:
 Todo lo mejor, sin vacilar.
 A mi Salvador doy mi promesa
 Al oír su dulce voz que dice:
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10874,6 +11842,9 @@ Pues juntos marchamos con Él.
 Pensar en los otros lo siente el corazón.
 Y podemos creer que Dios es lo mejor,
 Pues juntos marchamos con Él.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10906,7 +11877,9 @@ Del Padre, Dios de amor,
 la plena salvación;
 //Mi don de amor te traigo a ti,
 ¿Qué ofreces tú por mí?//
-
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10932,6 +11905,9 @@ Testigo digno de mi Señor.
 En tus promesas yo confiaré.
 De lo que es tuyo yo te daré,
 Y almas preciosas cosecharé.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10962,6 +11938,9 @@ mas mi alma Él rescató.
 su gloria contemplaré,
 Con gratitud y con cantos
  por siempre le alabaré.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -10997,6 +11976,9 @@ Mi Jesús dará su protección,
 que Jesús por mí vendrá,
 Mi alma alegre con Él reinará
 en la celestial ciudad.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11022,6 +12004,9 @@ Tus oraciones contestará.
 Oye su tierna invitación.
 No hay que temer, Él no te engaña,
 Y tendrás paz en tu corazón.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11047,6 +12032,9 @@ Bendición Él dióme fiel.
 Mi pecado confesé;
 Canceló mis negras transgresiones
 Y salvóme por la fe.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11077,6 +12065,9 @@ Quien con gran angustia en huerto sí por ti oró,
 Y su gloria mostró después de su resurrección:
 Pronto habremos de admirar el rostro de Jesús
 Para nuestro gozo y paz y fiel consolación.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11107,6 +12098,9 @@ Socorro me viene a prestar.
 Y entonces mi dicha la aumenta el Señor,
 Y llena mi copa, se ve rebosar,
 Con todos sus dones de amor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11123,6 +12117,9 @@ Te alabo, te alabo, te alabo, te alabo,
 ***
 4) Él es digno, Él es digno, Él es digno,
 Él es digno, Él es digno, Él es digno, Él es digno.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11153,6 +12150,9 @@ Jesús me redimió.
 Jesús me redimió;
 Allí feliz podré habitar:
 Jesús me redimió.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11162,6 +12162,9 @@ Amor, amor, amor, amor;
 Hermanos míos, gozo sí.
 Ama a tu prójimo como a ti mismo.
 Dios es amor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11192,6 +12195,9 @@ mi alma pudo rescatar.
 toda mi necesidad;
 Ser de Él, es mi ganancia,
 inefable es su bondad.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11217,6 +12223,9 @@ Y así poder hablar de Cristo el Salvador.
 Sus pasos seguiré por siempre hasta el fin.
 Con Cristo estaré, su rostro veré,
 Y así podré cantar su gloria sin igual.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11247,6 +12256,9 @@ Al Hombre de Nazaret.
 El Cristo de Nazaret;
 Y mi alma el rostro de Él verá,
 Del Hombre de Nazaret.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11270,6 +12282,9 @@ Hallé este gozo en Cristo, mi Dios.
 ***
 5) Siento el amor, dentro de mi corazón,
 Hallé este amor en Cristo, mi Dios.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11297,6 +12312,9 @@ Su voz conoce todo fiel.
 A tus contiendas pon ya fin.
 Hallé más noble posesión,
 Y parte en superior festín.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11316,6 +12334,9 @@ Creciente amor, creciente amor.
 Contigo iré a morar, tu faz veré.
 Y por la eternidad pensando en tu bondad,
 Más te amaré, más te amaré.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11347,9 +12368,8 @@ Del Rey que me vino a salvar.
 Ahora me guarda y me guía,
 Y siempre me quiere ayudar
 ***
-@AUTHORS
-William J. Kirkpatrick
-Fanny J. Crosby
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11375,6 +12395,9 @@ Por su amor que no tiene igual.
 En la luz bella y eternal,
 No me cansaré de cantar loor
 Por su amor que no tiene igual.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11400,6 +12423,9 @@ Cristo en todo es Señor.
 Cristo en todo es Señor.
 Cuando fracaso, Él me puede salvar,
 Cristo en todo es Señor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11425,6 +12451,9 @@ hallarás asilo en Él.
 cuyo sin igual poder
 Del pecado nos levanta,
 y renueva nuestro ser.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11440,6 +12469,9 @@ Dios es amor. Dios es amor.
 Vida mortal vivió y así mostró su gran amor.
 Dios es amor. Dios es amor.
 Vida mortal vivió y así mostró su gran amor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11465,6 +12497,9 @@ si tú vas junto a mí, Salvador,
 quiero oír tu dulce voz;
 Y saber qué quieres tú,
 habíame, lléname, tómame.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11484,6 +12519,9 @@ Mira al cielo y ten valor: ¡Dios te ama!
 Ya no demores en volver: ¡Dios te ama!
 Si rebelde fuiste ayer, hoy perdón podrás tener,
 Oh, confía en su poder: ¡Dios te ama!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11509,6 +12547,9 @@ No la hay, no la hay.
 No lo hay, no lo hay;
 Ha prometido estar conmigo,
 Hasta el fin, hasta el fin.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11534,6 +12575,9 @@ al redil Él me llevó.
 el Señor Jesús sanó;
 Del pecado y los temores
 su poder me libertó.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11558,6 +12602,9 @@ Nunca el hombre igualará.
 Recibiera al Salvador,
 Nuestra vida gozaría
 Dulcemente de su amor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11588,6 +12635,9 @@ Y ahora es Rey, pues ya triunfó,
 ¡Cuán glorioso es mi Cristo!
 El mal por fe no he de temer,
 ¡Cuán glorioso es mi Cristo!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11613,6 +12663,9 @@ Que en mi ser Él derramó.
 Del gran trono en derredor,
 Cantar con gozo y con gratitud
 Alabanzas al Señor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11637,9 +12690,8 @@ Di del sepulcro sellado, di como resucitó.
 En esa historia tan tierna miro las pruebas de amor,
 Mi redención ha comprado el bondadoso Salvador.
 ***
-@AUTHORS
-Fanny J. Crosby
-George P. Simmonds
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11677,9 +12729,8 @@ Gloria inmortal allá tendré,
 Con Cristo siempre reinaré,
 Gloria inmortal allá tendré con Jesús.
 ***
-@AUTHORS
-Will L. Thompson
-Speros D. Athans
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11710,6 +12761,9 @@ Fue apagada por Cristo mi sed:
 Allí te espera Jesús, Salvador.
 Allí de Dios hallarás el amor:
 ¡A su nombre gloria!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11735,6 +12789,9 @@ Ya pertenezco a Él.
 Ya libertado estoy y mi vida
 Llena está de felicidad.
 Ya pertenezco a Él.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11760,6 +12817,9 @@ Que Cristo el Rey nos puede dar, pues vivo está.
 Con el dolor batallaré.
 Y al ver la vida triunfando invicta,
 Veré gloriosas luces y veré al Rey.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11784,6 +12844,9 @@ Que vino desde allá para salvarme a mí.
 Él me ayuda con su gran poder,
 Me conduce siempre a la verdad,
 Es todo para mí.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11808,6 +12871,9 @@ Vida, paz y esperanza, y eterna gloria nos dio Jesús.
 Con la dulce esperanza de que algún día iré al país,
 Ese país amado donde moradas fue a preparar:
 Cristo, el Pastor eterno, que a sus ovejas vino a Salvar
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11833,6 +12899,9 @@ Pues Cristo me libertó.
 Rosa es también de Sarón;
 Su gracia y misericordia
 Hoy llenan mi corazón.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11858,6 +12927,9 @@ Por eso a ti deseo decírtela también.
 Parece al repetirla más dulce cada vez;
 Me agrada referirla, pues hay quien nunca oyó
 Que para hacerle salvo el buen Jesús murió.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11888,6 +12960,9 @@ Jesús me libertó.
 Y alabanzas a Jesús;
 Por su gracia a la gloria voy,
 Gozándome en la luz.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11913,6 +12988,9 @@ Le diera a mi alma la salud y fe para vencer.
 Que su santa mano preparó para los que Él salvó.
 Espero unir mi canto al del grupo sacrosanto,
 Que victorioso rendirá tributo al Redentor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11937,6 +13015,9 @@ al más vil pecador.
 y hacerte merced;
 Las puertas abrirte
 al eterno placer.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11968,6 +13049,9 @@ Y cuando esté en la gloria, ningún pesar tendré:
 Contemplaré su rostro siempre allí.
 Con los santos redimidos gozoso cantaré:
 ¡Grandes cosas Cristo ha hecho para mí!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -11999,6 +13083,9 @@ Loor a su nombre daré.
 Glorioso al mundo a reinar,
 Su gran salvación y perfecto amor,
 Por siempre yo he de gozar.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12019,6 +13106,9 @@ Confiamos sin cesar, confiamos sin cesar.
 4) La patria excelsa y eternal vislumbra ya la grey,
 Do alumbra fúlgido el fanal
 De Cristo, nuestro Rey, de Cristo, nuestro Rey.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12044,6 +13134,9 @@ Y los muertos han de oír su dulce voz.
 A la diestra de Jehová está tu Mediador,
 Intercede en tu favor, no te detengas, pues;
 No desprecies esta voz: es tu Señor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12056,6 +13149,9 @@ Es Jesús, mi Salvador.
 Cristo, Cristo, Cristo, Cristo.
 Es la vida de mi alma,
 Es Jesús, mi Salvador.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12086,6 +13182,9 @@ La carga más fatal.
 Que perdido en el mundo esté,
 Que Jesús en su gracia infinita
 No pueda hoy dar perdón.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12102,6 +13201,9 @@ No vuelvo atrás, no vuelvo atrás.
 ***
 4) ///He decidido seguir a Cristo;///
 No vuelvo atrás, no vuelvo atrás.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12132,6 +13234,9 @@ Y así me levantó.
 Con esta vida que Él me dio;
 Mas no comprendo aún por qué,
 Jesús me levantó.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12156,6 +13261,9 @@ Que procuremos.
 Mientras tengamos por morada el suelo;
 Hasta el momento en que nos des la nueva
 Patria en el cielo.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12186,6 +13294,9 @@ De su paz nada más ha de ser.
 Sola y débil tu senda al seguir,
 Haz de Cristo tu amigo, pues fiel siempre es,
 ¡Y su paz tú podrás recibir!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12210,6 +13321,9 @@ que intercedes tú por mí!
 siempre a ti te doy loor:
 Siendo grato al corazón
 ensalzarte mi Señor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12257,6 +13371,9 @@ Del día del Señor.
 Cuán bueno es estar juntos!
 ¡Cuán bueno es, cuan bueno
 es cantar loor a Dios!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12271,6 +13388,9 @@ Sólo Cristo salva, dando gozo y perdón.
 ***
 2) Sólo Cristo salva de tristeza y pesar,
 Dando paz y gozo, consolando con su amor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12291,6 +13411,9 @@ Cuanto más le sirvo, más es su dulzor.
 Y de gracia es dador,
 Mi camino Él ilumina,
 Cuanto más le sirvo, más es su dulzor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12316,6 +13439,9 @@ Junto al corazón de Dios.
 Junto al corazón de Dios;
 Do Cristo otorga gozo y paz,
 Junto al corazón de Dios.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12345,6 +13471,9 @@ Porque Él me rescató.
 A mi Rey y buen Salvador;
 Y ahora mis dones a Cristo doy,
 Y le sirvo por su amor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12382,10 +13511,7 @@ y sufro de ansiedad,
 //Tan sólo Él me levanta, me da seguridad.//
 ***
 @TAGS
-Suave
-***
-@AUTHORS
-Charles H. Gabriel
+Hmrio. Bautista
 
 ---
 
@@ -12399,7 +13525,8 @@ por librar al pecador.
 @CORO
 Cantaré a Jesucristo,
 con su sangre me compró,
-Él me compró; en la cruz me dio el indulto,
+_(Él me compró;)__
+en la cruz me dio el indulto,
 Del pecado me libró.
 ***
 2) Cantaré la excelsa historia
@@ -12416,6 +13543,9 @@ El pecado, infierno, y muerte
 de su eterno y gran amor;
 Hijo soy de Dios por gracia
 de Jesús mi Salvador.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12431,6 +13561,9 @@ Vertió su sangre allí, por darme redención,
 Y ahora canto yo con gran satisfacción,
 Yo salvo soy; tengo el perdón,
 Tengo el perdón, tengo el perdón.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12461,6 +13594,9 @@ Voy al descanso, gloriosa ciudad.
 Siempre hacia arriba con Él quiero andar.
 Viendo a mi Rey en gloriosa hermosura:
 Con Él en gloria podré descansar.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12485,6 +13621,9 @@ quien la cargó también.
 hasta que llegue al fin;
 Después corona portaré,
 pues una es para mí.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12513,6 +13652,9 @@ El sendero que a Dios le ha de llevar.
 A Jesús quien es el camino,
 Quien es el camino, verdad y la vida,
 La vida eterna.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12551,9 +13693,8 @@ Cristo ofrece salvación;
 Y es mi única esperanza
 vida eterna hallar con Dios.
 ***
-@AUTHORS
-Charles F. Weigle
-H.C. (Enrique) Ball
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12570,6 +13711,9 @@ Murió y dio al corazón descanso, paz y luz.
 ***
 4) Su Espíritu nos da los dones del Señor,
 Riquezas puras de verdad, que brotan de su amor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12596,6 +13740,9 @@ En la santa fragancia del Señor.
 Y también el obrero de valor,
 Y la iglesia, esposa del Cordero,
 Estarán en los brazos del Señor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12610,6 +13757,9 @@ Por sendas rectas lléveme tu amor.
 Pues que tú eres fuente de salud.
 Sobre la cruz, en medio del dolor,
 Brotar la hiciste por tu gran amor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12635,6 +13785,9 @@ Y que allí siempre su faz pueda ver,
 Todos los fieles que allí estarán,
 Mas la presencia de Cristo gozar,
 ¡Por las edades mi gloria será!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12651,6 +13804,9 @@ La gracia de mi amado Rey con ellos a alabar.
 ***
 4) ¡Jerusalén, hogar feliz, morada para mí!
 Mis penas todas cambiaré por gozo y paz en ti.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12682,9 +13838,8 @@ No habrá pecado, ni ningún dolor;
 Gozaré con los suyos alabanzas entonar,
 Mas primero quiero ver a mi Señor.
 ***
-@AUTHORS
-Fanny J. Crosby
-George P. Simmonds
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12709,6 +13864,9 @@ Cual la nuestra alaba a Dios.
 Uno es nuestro Salvador;
 Un hogar, un mismo amor,
 En la tierra o junto a Dios.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12739,6 +13897,9 @@ siempre firmes avanzad.
 ¡oh, soldados de la fe!
 Nuestro el triunfo, ¡oh!, escucha
 los clamores, ¡Viva el Rey!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12762,6 +13923,9 @@ El alma mía sin fin disfrutará.
 Entraré en ti salvado por Jesús.
 Yo gozaré siempre la ventura
 Iluminado con deliciosa luz.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12792,6 +13956,9 @@ Y ya estemos en su amor.
 Ha de ser así vivir!
 ¡Ver el rostro de quien quiso
 Nuestras almas redimir!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12816,6 +13983,9 @@ A los que amamos veremos allí.
 Viviremos con Cristo el Señor;
 Jesús nos guiará por el camino,
 Viviremos con Cristo el Señor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12841,6 +14011,9 @@ La más segura protección.
 Estando cerca de Jesús;
 Rodeado siempre me veré
 Con los fulgores de su luz.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12873,7 +14046,7 @@ Y ya con Cristo reinaré
 Por toda la eternidad.
 ***
 @TAGS
-Suave
+Hmrio. Bautista
 
 ---
 
@@ -12911,6 +14084,9 @@ Cuando todo aquí fenezca
 y nuestra obra cese ya,
 Y que sea pasada lista,
 allí he de estar.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12940,6 +14116,9 @@ Halló la muerte en una cruz.
 Y junto al Padre, nuestro hogar;
 Nos da su Espíritu, y en Él
 Hallamos gozo, paz, poder.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12965,6 +14144,9 @@ No volveremos a sufrir después.
 Puede traer miseria y pesar;
 El hombre es como el halcón que, libre,
 Ya listo está, y así podrá volar.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -12989,6 +14171,9 @@ Para sus hijos, me llevará.
 Donde me espera mi Salvador;
 Con mis amados seré reunido
 En las moradas de luz y amor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -13014,6 +14199,9 @@ Los pecados del mundo quitó.
 Con los santos daremos loor,
 Al triunfante y glorioso Jesús,
 A Jesús, nuestro Rey y Señor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -13037,6 +14225,7 @@ te permitió llegar.
 ***
 @TAGS
 Cumpleaños
+Hmrio. Bautista
 
 ---
 
@@ -13076,6 +14265,9 @@ En la eterna reunión
 do no habrá separación,
 Ni tristeza ni aflicción:
 ¡Bienvenidos!
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -13101,6 +14293,9 @@ y la entrada me dará.
 y me cuida en su bondad;
 Cuando muera, bien lo sé:
 viviré allá con Él.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -13116,6 +14311,9 @@ Grande es Jehová,
 Y digno de suprema alabanza;
 Y su grandeza es inescrutable.
 Cada día te bendeciré.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -13141,9 +14339,8 @@ A una bendiga la gran creación,
 Y lleve al Cordero sentado en el trono
 El dulce tributo de su adoración.
 ***
-@AUTHORS
-Henry Tucker
-Ángel Herreros de Mora
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -13174,6 +14371,9 @@ Compañeros, acudamos; vamos a vencer.
 Cristo la victoria le concederá;
 Salgamos, compañeros, luchemos bien por Él;
 Con Jesús conquistaremos inmortal laurel.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -13191,6 +14391,9 @@ Y dice que de ellos su reino será.
 ***
 3) Vayamos nosotros al lado de Cristo,
 Llevemos a otros muy cerca de Él.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -13216,6 +14419,9 @@ y todo lo entrego a ti.
 Divino donador.
 Tiempo y vigor, talento
 y ardor serán tuyos, oh Señor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -13244,6 +14450,9 @@ me hace tan feliz!
 Creo en quien murió por mí
 quien también resucitó:
 Jesucristo el Salvador.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -13270,8 +14479,8 @@ Eternas aleluyas a Cristo el Rey cantad.
 La única esperanza es del mundo pecador,
 No hay otro tan amante como el Señor.
 ***
-@AUTHORS
-George P. Simmonds
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -13296,6 +14505,9 @@ Nuestra esperanza en Cristo está.
 Que resplandezca sin cesar!
 Cristiano, cumple tu misión:
 Por Cristo el triunfo lograrás.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -13324,6 +14536,9 @@ La victoria nos dará, Conquista su verdad.
 Con la gloria en su seno que transforma en Edén.
 Él la vida santifica, anunciad tan grande bien,
 Que hay en su verdad.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -13348,6 +14563,9 @@ eternal felicidad.
 alzad a su trono con fervor,
 Y homenaje tributad a
 la gloria del Señor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -13373,6 +14591,9 @@ Buscando paz, salvación.
 Cada momento sé fiel,
 Otros que vean en ti su amor
 Pronto se rindan a Él.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -13382,6 +14603,9 @@ Dios te bendiga, protección te dé;
 Sea su gracia siempre tu sostén;
 Su ángel velando a tu redor esté,
 Dándote abrigo siempre por doquier.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -13419,6 +14643,9 @@ No murmuró al dar su vida
 pues Él sufrió con valor;
 Amale más cada día;
 dale de ti lo mejor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -13436,6 +14663,9 @@ Nos limpia de todo pecado, de todo pecado.
 Y la sangre de Jesucristo,
 de Jesucristo su Hijo
 Nos limpia de todo pecado, de todo pecado.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -13457,7 +14687,7 @@ Se acerca un año nuevo; enséñanos así:
 Do quiera que nos lleves, el año es para ti!
 ***
 @TAGS
-Suave
+Hmrio. Bautista
 
 ---
 
@@ -13467,6 +14697,9 @@ Suave
 al Hijo y al Santo Espíritu;
 Como eran al principio,
 son hoy y así serán Eternamente.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -13476,6 +14709,9 @@ son hoy y así serán Eternamente.
 al Hijo y al Santo Espíritu;
 Como eran al principio,
 son hoy y así serán Eternamente.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -13490,6 +14726,9 @@ Unidos todos alabad.
 Sus alabanzas entonad;
 Su eterna gloria proclamad
 Con gozo, gratitud y amor.
+***
+@TAGS
+Hmrio. Bautista
 
 ---
 
@@ -13504,2009 +14743,7 @@ Unidos todos alabad.
 Sus alabanzas entonad;
 Su eterna gloria proclamad
 Con gozo, gratitud y amor.
-
----
-
-## 600. LA IGLESIA SIGUE CAMINANDO
-***
-1) ¡Oh, Gloria, Aleluya!
-La Iglesia sigue caminando,
-¡Oh, Gloria, Aleluya!
-La Iglesia sigue caminando,
-Solo se detiene para predicar.
-***
-2) En las luchas y en las pruebas,
-la Iglesia sigue caminando,
-Por lo montes y los valles,
-La Iglesia sigue caminando,
-Solo se detiene para predicar.
-***
-@TAGS
-Coro
-
----
-
-## 601. HUBO QUIEN POR MIS CULPAS
-***
-1) Hubo quien por mis culpas muriera en la cruz,
-Aunque indigno y vil como soy.
-Soy feliz, pues su sangre vertióme Jesús,
-Y con ella mis culpas borró.
-***
-@CORO
-Mis pecados llevó, en la cruz do murió
-El sublime, el tierno Jesús.
-Los desprecios sufrió, y mi alma salvó.
-Él cambió mis tinieblas en luz.
-***
-2) Él es tierno y amante cual nadie lo fue,
-Pues convierte al infiel corazón.
-Y por esa paciencia y ternura yo sé
-Que soy libre de condenación.
-***
-3) Es mi anhelo constante a Cristo seguir.
-Mi camino su ejemplo marcó.
-Y por darme la vida Él quiso morir.
-En la cruz mi pecado clavó.
-***
-@TAGS
-Apéndice
-Suave
-
----
-
-## 602. REGOCÍJATE EN ÉL
-***
-1) Dios siempre obra en sincero amor,
-cuando prueba a su siervo al hacerle mejor,
-da gracias durante la dificultad,
-en sombras hosannas dará.
-***
-@CORO
-Regocíjate en Él, es justo y verdad,
-mi camino conoce, soy su propiedad;
-mas me probará, me limpiará,
-a oro igual saldré.
-***
-2) Cuando no veo el sendero allá,
-sólo miro a Cristo y me bastará.
-Me inclino a Él y a su voluntad,
-me calma y no hay ansiedad.
-***
-3) Pruebas ya sé de lo alto vendrán,
-como ama a sus hijos, nos renovarán.
-Confío en Él, siempre sabe mejor;
-si sufro, tendré más valor.
-***
-@TAGS
-Apéndice
-Suave
-
----
-
-## 603. LÁVAME EN TU SANGRE SALVADOR
-***
-1) Que mi vida entera esté
-consagrada a ti, Señor;
-que a mis manos pueda guiar
-el impulso de tu amor.
-***
-@CORO
-¡Lávame en tu sangre, Salvador!
-Límpiame de toda mi maldad
-traigo a ti mi vida, para ser señor,
-tuya por la eternidad.
-***
-2) Que mis pies tan solo en pos
-de lo santo puedan ir,
-y que a ti, Señor, mi voz
-se complazca en bendecir.
-***
-3) Que mi tiempo todo esté
-consagrado a tu loor,
-que mis labios, al hablar
-hablen sólo de tu amor.
-***
-4) Toma ¡Oh Dios! Mi voluntad
-y hazla tuya nada más;
-toma, sí, mi corazón;
-por tu trono lo tendrás.
-***
-5) Toma tú mi amor, que hoy
-a tus pies vengo a poner,
-toma todo lo que soy,
-todo tuyo quiero ser.
-***
-@TAGS
-Apéndice
-
----
-
-## 604. TIERRA BENDITA DE ISRAEL
-***
-1) Tierra que fluye leche y miel
-es la de Israel, donde nació Jesús;
-Eres, de las naciones, cumbre
-bañada por la lumbre que derramó su luz.
-***
-@CORO
-Eres la historia inolvidable,
-Porque en tu seno se derramó
-//La sangre, preciosa sangre,
-Del unigénito Hijo de Dios.//
-***
-2) Cuenta la historia del pasado
-que en tu seno sagrado vivió el Salvador,
-Y en tus hermosos olivares,
-habló a los millares la palabra de amor.
-***
-3) Quedan en ti testigos mudos,
-que son los viejos muros de la Jerusalén;
-Viejas paredes ya destruidas,
-que si tuvieran vida, nos hablarían bien.
-***
-@TAGS
-Apéndice
-
----
-
-## 605. ESTOY BIEN CON MI DIOS
-***
-1) De paz inundada mi senda ya esté
-O cúbrala un mar de aflicción,
-Mi suerte cualquiera que sea, diré:
-Estoy bien, estoy bien con mi Dios.
-***
-@CORO
-Estoy bien _(estoy bien)__,
-¡Con mi Dios! _(con mi Dios)__,
-estoy bien, estoy bien,
-¡Con mi Dios!
-***
-2) Ya venga la prueba o me tiente Satán,
-No amenguan mi fe ni mi amor;
-Pues Cristo comprende mis luchas, mi afán,
-Y su sangre obrará en mi favor.
-***
-3) Feliz yo me siento al saber que Jesús
-Libróme de yugo opresor;
-Quitó mi pecado, clavólo en la cruz:
-Gloria demos al buen Salvador.
-***
-4) La fe tornaráse en feliz realidad
-Al irse la niebla veloz;
-Desciende Jesús con su gran majestad,
-¡Aleluya, estoy bien con mi Dios!.
-***
-@TAGS
-Apéndice
-***
-@AUTHORS
-Philip P. Bliss
-Pedro Grado Valdés
-
----
-
-## 606. SEMBRARÉ LA SIMIENTE PRECIOSA
-***
-1) Sembraré la simiente preciosa
-Del glorioso Evangelio de amor,
-Sembraré, sembraré mientras viva,
-Dejaré el resultado al Señor.
-***
-@CORO
-Sembraré, sembraré,
-Mientras viva, simiente de amor;
-Segaré, segaré,
-Al hallarme en la casa de Dios.
-***
-2) Sembraré en corazones sensibles
-La doctrina del Dios del perdón.
-Sembraré, sembraré mientras viva,
-Dejaré el resultado al Señor.
-***
-3) Sembraré en corazones de mármol
-La bendita palabra de Dios.
-Sembraré, sembraré mientras viva,
-Dejaré el resultado al Señor.
-***
-@TAGS
-Apéndice
-
----
-
-## 607. MARAVILLOSA GRACIA
-***
-1) Maravillosa gracia, vino Jesús a dar,
-Más alta que los cielos, más honda que la mar,
-Más grande que mis culpas clavadas en la cruz
-Es la maravillosa gracia de Jesús.
-***
-@CORO
-Inefable es la divina gracia,
-_(la divina gracia)__
-es inmensurable cual la mar,
-_(la más profunda mar)__
-Fuente preciosa, para el pecador, el pecador
-_(Como clara fuente, siempre suficiente a los pecadores rescatar)__
-Perdonando todos mis pecados
-_(mis pecados todos)__
-Cristo me limpió de mi maldad;
-_(de mi maldad)__
-Alabaré su dulce nombre por la eternidad.
-***
-2) Maravillosa gracia, gracia de compasión,
-Gracia que sacia el alma con plena salvación,
-Gracia que lleva al cielo, gracia de paz y luz
-Es la maravillosa gracia de Jesús.
-***
-3) Maravillosa gracia llama con dulce voz,
-Llámanos a ser hechos hijos de nuestro Dios;
-Colma de su consuelo, nos llena de virtud,
-Es la maravillosa gracia de Jesús.
-***
-@TAGS
-Apéndice
-***
-@AUTHORS
-Haldor Lillenas
-(a dos voces)
-
----
-
-## 608. TE NECESITO CRISTO
-***
-1) Te necesito ya,
-bendito Salvador,
-Me infunde dulce paz,
-tu tierna voz de amor.
-***
-@CORO
-Te necesito Cristo,
-si te necesito,
-Con corazón contrito
-acudo a ti.
-***
-2) Te necesito ya,
-tu no me dejarás;
-Yo siempre venceré
-si tú conmigo estás.
-***
-3) Te necesito ya,
-tu santa voluntad,
-Y tus promesas mil
-en mí cumple en verdad.
-***
-4) Te necesito ya,
-santísimo Señor:
-Tuyo hazme, nada más,
-bendito Salvador.
-***
-@TAGS
-Apéndice
-
----
-
-## 609. SOLO EN JESÚS
-***
-1) Sólo en Jesús, está mi fe
-Mi esperanza y mi canción
-Piedra angular, firme sostén
-Inconmovible en la aflicción.
-***
-2) Cuán grande amor, inmensa paz
-En el temor o adversidad
-Consolador, amigo fiel
-Yo en su amor me sostendré.
-***
-3) Solo en Jesús, hijo de Dios
-Quien se humilló por nuestro bien
-Cordero de, mi salvación
-Por este mundo herido fue.
-***
-4) En una cruz fue a morir
-Y Dios mostró su gracia ahí
-Pues mi pecado Él llevó
-En su aflicción vida me dio.
-***
-5) En un sepulcro, Él yació
-El cuerpo inerte del señor
-Más el tercer día llegó
-Resucitó en gloriosa luz.
-***
-6) Y al triunfar, sobre el mal
-Perdió el pecado potestad
-De Él suyo soy, Él mío es
-Pues con su sangre me compró.
-***
-7) Desde al nacer, hasta el morir
-Sea el poder de cristo en mí
-No temeré, seguro estoy
-Mi vida yo a Él, le doy.
-***
-8) Ningún poder, ningún afán
-De Él me arrebatará
-Hasta que Él, venga otra vez
-//En su poder me sostendré.//
-***
-@TAGS
-Apéndice
-
----
-
-## 610. ERES MI TODO
-***
-1) Eres mi fuerza y mi poder,
-el gran tesoro que busqué,
-Eres mi todo, Dios.
-Perla de precio sin igual,
-nunca tu amor podré dejar,
-Eres mi todo, Dios.
-***
-@CORO
-Cristo Salvador,
-digno de adorar.
-Cristo Redentor,
-digno de adorar.
-***
-2) Diste tu vida allá en la Cruz,
-resucitaste mi Jesús,
-Eres mi todo, Dios.
-En sequedad o en tentación,
-tu me sostienes mi Señor,
-Eres mi todo, Dios.
-***
-@TAGS
-Apéndice
-Suave
-
----
-
-## 611. DIOS DESCENDIÓ
-***
-1) Día tan grande no puedo olvidar,
-día de gloria sin par;
-cuando en tinieblas al verme andar,
-vino a salvarme el Señor.
-Gran compasión tuvo Cristo de mí,
-gozo y paz me otorgó;
-sombras quitó, aliviando mi carga,
-la noche en día cambió.
-***
-@CORO
-Dios descendió
-y de gloria me llenó,
-cuando Jesús
-por gracia me salvó;
-fui ciego, me hizo ver
-y mi noche iluminó.
-Dios descendió
-y de gloria me llenó.
-***
-2) Del Santo Espíritu yo renací
-en la familia de Dios.
-Justificado por Cristo el Señor,
-gozo la gran redención.
-Cristo pagó con su sangre por mí,
-indigno y vil pecador;
-me entregó su regalo de gracia
-y así Él mi vida salvó.
-***
-3) Tengo esperanza de gloria eternal,
-me regocijo en Jesús;
-me ha preparado un bello lugar,
-en la mansión celestial.
-Siempre recuerdo con fe y gratitud,
-al contemplarlo en la cruz,
-que sus heridas me dieron la vida,
-¡Alabo al bendito Jesús!
-***
-@TAGS
-Apéndice
-
----
-
-## 660. CREO EN DIOS
-***
-1) ¿Cómo puedes no creer en Dios?
-¿Cómo intentas ignorar su voz?
-El ha dado muestras De sus grandes maravillas
-¿Puedes ver, su poder?
-Él eclipsa el sol hasta opacar,
-La más densa noche hace brillar,
-Todo lo transforma en su designio soberano
-Porque es Dios, solo Él es Dios.
-***
-@CORO
-Creo en Dios, su voz levanta el viento y mar en tempestad,
-Y por su mano alzada pronto acallarán
-Aun cuando todo esté perdido yo,
-Creo en Dios, porque Él es mi esperanza en medio del dolor,
-Confiado cantaré su grande salvación,
-Porque vivo y creo en Dios.
-***
-2) Dios al mundo envuelve con su amor
-Su justicia y tierna compasión,
-Más su gracia alcanza todo aquel que arrepentido
-Clama a Él, solo a Él.
-Y aunque no lo puedas vislumbrar
-Dios es siempre fiel hasta el final,
-Porque ha prometido caminar a nuestro lado
-Cerca está, porque Él es Dios.
-***
-@REPETIR_CORO_AL_FINAL
-***
-@TAGS
-Apéndice
-
----
-
-## 997. HIMNO NACIONAL DE VENEZUELA
-***
-@CORO
-//Gloria al bravo pueblo
-Que el yugo lanzó
-La Ley respetando
-La virtud y honor.//
-***
-//!Abajo cadenas!//
-//Gritaba el Señor//
-y el pobre en su choza
-libertad pidió
-A este santo nombre
-tembló de pavor
-el vil egoísmo
-que otra vez triunfó
-//A este santo nombre//
-tembló de pavor
-//el vil egoísmo
-que otra vez triunfó//
-***
-@TAGS
-Apéndice
-Himno Nacional
-***
-@AUTHORS
-"Gloria al Bravo Pueblo"
-Juan José Landaeta
-Vicente Salias
-
----
-
-## 998. HIMNO NACIONAL DE MÉXICO
-***
-@CORO
-Mexicanos, al grito de guerra
-El acero aprestad y el bridón;
-//Y retiemble en sus centros la tierra
-Al sonoro rugir del cañón.//
-***
-Ciña ¡Oh, Patria! tus sienes de oliva
-de la paz el arcángel divino,
-que en el cielo tu eterno destino
-por el dedo de Dios se escribió.
-Mas si osare un extraño enemigo
-profanar con su planta tu suelo,
-piensa ¡Oh, Patria querida! que el cielo
-//un soldado en cada hijo te dio.//
-***
-@TAGS
-Apéndice
-Himno Nacional
-***
-@AUTHORS
-"Mexicanos, al grito de guerra"
-Francisco González Bocanegra
-Jaime Nunó Roca
-
----
-
-## 999. HIMNO NACIONAL DEL PERÚ
-***
-@CORO
-¡Somos libres! ¡Seámoslo siempre!
-Y antes niegue sus luces el sol,
-Que faltemos al voto solemne
-Que la patria al eterno elevó.
-***
-En sus cima los Andes sostengan
-la bandera o pendón bicolor
-que a los siglos anuncie el esfuerzo
-que ser libres por siempre nos dio.
-A su sombra posemos tranquilos
-y al nacer por sus cumbres el sol
-renovemos el gran juramento
-que rendimos al Dios de Jacob.
-***
-@TAGS
-Apéndice
-Himno Nacional
-***
-@AUTHORS
-"Somos libres, seámoslo siempre"
-José de la Torre Ugarte
-José Bernardo Alcedo
-
----
-
-## 612. CORITOS VARIOS
-***
-1) Quita la piedra, deja el agua correr
-mira que las almas se van a perder,
-hablales de Cristo, ese es tu deber
-si el agua se estanca no podrá correr.
-***
-2) Testifiquemos que sólo hay gozo,
-que sólo hay paz y salvación en nuestras almas,
-y venceremos al enemigo
-Cristo nos guía con victoria a la batalla.
-***
-3) Sonará la trompeta en Sión,
-¡Sonará, sonará!
-Sonará la trompeta en Sión,
-cuando venga el Salvador.
-***
-4) Solamente en Cristo, solamente en Él,
-la salvación, se encuentra en Él,
-no hay otro nombre, dado a los hombres,
-solamente en Cristo, solamente en Él.
-***
-5) ¡Oh que regalo precioso! Cristo me dió,
-llenó mi alma de gozo y me salvó,
-ahora puedo cantar en alta voz
-y puedo testificar de su amor
-***
-6) //No hay Dios tan grande como tú,
-no lo hay, no lo hay.//
-//No hay Dios que pueda hacer las obras,
-como las que haces tú.//
-//No es con espada, ni con ejército,
-más con tu Santo Espíritu.//
-***
-@TAGS
-Coro
-
----
-
-## 613. DIOS ESTÁ AQUÍ
-***
-@CORO
-Dios esta aquí,
-Tan cierto como el aire que respiro,
-Tan cierto como
-la mañana se levanta el sol,
-Tan cierto como que
-le hablo y me puede oir.
-***
-1) Lo puedes sentir,
-a tu lado en este mismo instante,
-Lo puedes llevar,
-muy dentro de tu corazón.
-Te puede ayudar,
-en ese problema que tienes,
-Jesús esta aquí,
-si tu quieres lo puedes seguir.
-***
-@TAGS
-Coro
-
----
-
-## 614. SUBLIME GRACIA
-***
-1) Sublime gracia del Señor,
-que a un infeliz salvó;
-Fui ciego mas hoy miro yo,
-perdido y Él me halló.
-***
-2) Su gracia me enseñó a temer,
-mis dudas ahuyentó,
-¡Oh, cuán precioso fue a mi ser,
-cuando Él me transformó!
-***
-3) En los peligros o aflicción,
-que yo he tenido aquí;
-Su gracia siempre me libró
-y me guiará feliz.
-***
-4) Y cuando en Sión, por siglos mil,
-brillando esté cuál sol;
-Yo cantaré por siempre allí
-su amor que me salvó.
-***
-@TAGS
-Apéndice
-Suave
-***
-@AUTHORS
-John Newton
-
----
-
-## 615. EL REY YA VIENE
-***
-1) Ascendido fue a los cielos Jesucristo, mi Señor,
-cuando ángeles dijeron: "¿Qué miráis con estupor?
-Este Cristo que hoy asciende, así mismo volverá
-Victorioso, y a su pueblo a la gloria llevará."
-***
-@CORO
-Sí, el Rey ya viene, el Rey ya viene,
-y la iglesia redimida dice: "Ven, Señor Jesús".
-Sí, el Rey ya viene, el Rey ya viene,
-¡Gloria a Dios! Ya viene por mí.
-***
-2) Su palabra nos enseña; "Amarás a tu Señor",
-y tu pan al desvalido hoy comparte con amor.
-Y proclama: "Cristo viene ¡Maranatha, gloria a Dios!"
-Ya los tiempos se consuman, su promesa se cumplió.
-***
-3) "He aquí, yo vengo presto y conmigo el galardón
-a otorgar la recompensa por la fe y la devoción.
-Yo soy Alfa y soy Omega, el primero y el final,
-es el tiempo de la siega y el gran juicio llegará."
-***
-@TAGS
-Apéndice
-
----
-
-## 616. DIVINO COMPAÑERO DEL CAMINO
-***
-1) Divino compañero del camino,
-tu presencia siento yo al transitar;
-Cristo ha disipado toda sombra,
-ya tengo luz, la luz divina de su amor.
-***
-@CORO
-Quédate, Señor, ya se hace tarde,
-te ofrezco el corazón para posar;
-hazlo tu morada permanente,
-acéptalo, acéptalo mi Salvador.
-***
-2) Contigo la jornada se hace corta,
-no habrá sed, ni sol fatigará;
-si en el mar las olas amenazan.
-Tú sobre ellas majestuoso andarás.
-***
-3) La sombra de la noche se aproxima,
-y en ella el tentador acechará;
-no me dejes solo en el camino,
-ayúdame, ayúdame hasta llegar.
-***
-@TAGS
-Apéndice
-***
-@AUTHORS
-Lucas 24:13-35
-
----
-
-## 617. VIDA ABUNDANTE
-***
-1) En la cruz murió mi Jesús;
-con su muerte vida me dio,
-por su gracia me transformó
-y la vida abundante me concedió.
-***
-@CORO
-Vida abundante Jesús ofrece,
-vida triunfante de día en día;
-Él es la fuente de vida eterna
-que brota siempre en mi corazón.
-***
-2) La mujer que fue y tocó
-el vestido del señor;
-por su fe, salud recibió
-y la vida abundante Jesús le dio.
-***
-3) En la cruz pidió el malhechor
-de su alma la salvación;
-vida eterna pudo alcanzar,
-pues la vida abundante Jesús le dio.
-***
-@TAGS
-Apéndice
-
----
-
-## 618. EL QUE HABITA AL ABRIGO DE DIOS
-***
-1) El que habita al abrigo de Dios
-morará bajo sombras de amor;
-sobre Él no vendrá ningún mal
-y en sus alas feliz vivirá.
-***
-@CORO
-Oh, yo quiero habitar al abrigo de Dios,
-sólo allí encontraré paz y profundo amor.
-Mi delicia es con Él comunión disfrutar
-y por siempre su nombre alabar.
-***
-2) El que habita al abrigo de Dios
-muy feliz ciertamente será;
-ángeles guardarán su salud
-y sus pies nunca resbalarán.
-***
-3) El que habita al abrigo de Dios
-para siempre seguro estará;
-caerán a su diestra diez mil,
-más a Él no vendrá mortandad.
-***
-@TAGS
-Apéndice
-Suave
-***
-@AUTHORS
-Salmo 91
-
----
-
-
-## 619. SU GRACIA ES MAYOR
-***
-1) ¿Que amor mis pecados decide olvidar?
-Lanzados al mar no los quiere contar,
-Él siendo Omnisciente olvida mi error,
-Mis faltas son muchas, su gracia es mayor.
-***
-@CORO
-Gloria Dios, su gracia es mayor,
-Sus misericordias hoy nuevas son,
-Mis faltas son muchas;
-Su gracia es mayor.
-***
-2) Paciente me aguarda en mi desviar,
-Un padre que tierno me llama al hogar,
-Recibe al débil y vil pecador,
-Mis faltas son muchas, su gracia es mayor.
-***
-3) Que grandes riquezas Él nos otorgó,
-Su sangre fue el pago, su vida entregó.
-Pago esa deuda y la canceló,
-Mis faltas son muchas, su gracia es mayor.
-***
-@TAGS
-Apéndice
-Suave
-
----
-
-
-## 620. GOZO DA SERVIR A CRISTO
-***
-1) Gozo da servir a Cristo,
-En la vida diaria aquí;
-Gozo y grande alegría,
-Siempre Él me da a mí.
-***
-@CORO
-Gozo hay, sí, en servir a Cristo,
-Gozo en el corazón, cada día Él da poder,
-me ayuda a vencer,
-Y da gozo, gozo en el corazón.
-***
-2) Gozo da servir a Cristo;
-Gozo que triunfante está,
-En la pena o tristeza,
-Cristo en todo vence ya.
-***
-3) Gozo da servir a Cristo;
-Aunque solo ande yo,
-Es el gozo permanente
-Que el Calvario nos logró.
-***
-4) Gozo da servir a Cristo;
-Gozo en la oscuridad;
-Porque tengo el secreto
-De la luz y la verdad.
-***
-@TAGS
-Apéndice
-
----
-
-
-## 621. DIOS DESCENDIÓ
-***
-1) Día tan grande no puedo olvidar, día de gloria sin par,
-cuando en tinieblas al verme andar vino a salvarme el Señor;
-Gran compasión tuvo Cristo de mí, de gozo y paz me llenó;
-quitó las sombras, ¡oh, gloria a su nombre!, la noche en día cambió.
-***
-@CORO
-Dios descendió, y de gloria me llenó,
-cuando Jesús por gracia me salvó;
-fui ciego, me hizo ver y en Él renacer.
-Dios descendió y de gloria me llenó.
-***
-2) Nací de nuevo, en virtud de Jesús, a la familia de Dios,
-justificado por Cristo el Señor gozo la gran redención;
-Bendito sea mi Padre y Dios que cuando vine con fe,
-fui adoptado por Cristo el amado, loores por siempre daré.
-***
-3) Tengo esperanza de gloria eternal, me regocijo en Jesús;
-me ha preparado un bello lugar en la mansión celestial;
-Siempre recuerdo con fe y gratitud, al contemplarle en la cruz,
-que sus heridas me dieron la vida ¡Alabo al bendito Jesús!
-***
-@TAGS
-Apéndice
-***
-@AUTHORS
-John Willard Peterson
-
----
-
-
-## 622. ALAS DA CUAL ÁGUILA
-***
-1) La carrera está delante, y hay fuerte vendaval;
-cuando muchos me rodean faltan fuerzas y moral.
-Se ha roto cada sueño, y el valle es abismal;
-pues, mis ojos pongo en Cristo, me da fuerza espiritual.
-***
-@CORO
-Alas da, cual águila;
-fuerzas da reanimándome a seguir.
-Alas da cual águila;
-cuando caigo en el camino,
-cada sueño tiene espino,
-tengo alas del Señor.
-***
-2) Correremos con paciencia, cada peso a despojar;
-con los ojos puestos en Jesús, nos guiará, y sin fallar.
-Ha corrido antes Cristo, coronado majestad;
-a sus hijos llama a seguir, a volar en libertad.
-***
-@TAGS
-Apéndice
-
----
-
-## 623. SU GRACIA ES MAYOR
-***
-1) Su gracia es mayor si las cargas aumentan,
-Su fuerza es mayor si la lucha es más cruel,
-Si más son las penas, mayor es su gracia,
-Si más son las penas, mayor es su paz.
-***
-@CORO
-Su amor no termina, su gracia no acaba,
-Un límite no hay al poder del Señor,
-Pues de sus inmensas riquezas en gloria
-Abundan sus dones, abunda su amor.
-***
-2) Si nuestros recursos se han agotado,
-Si fuerzas nos faltan para continuar,
-Si a punto ya estamos de desesperarnos,
-El tiempo ha llegado en que Dios obrará.
-***
-3) Pero aunque las luchas fatiguen mi alma
-En nombre de Cristo las he de vencer,
-Su gracia constante me ayuda en la vida
-Pues si Él es mi guía seguro estaré.
-***
-@TAGS
-Apéndice
-
----
-
-## 624. PÓSTRATE
-***
-1) Es un privilegio estar en Su presencia;
-Meditar en Él que proveyó mi fe
-Al mirarle veo Su asombrosa gloria,
-Recordando quien es Él me postraré.
-***
-2) Póstrate, Póstrate
-Es el Rey de las Edades, Póstrate
-El Señor te salvó,
-Ante Su alto trono ve y postrate
-De rodillas te humillas
-Para amarle más y más, póstrate.
-***
-3) En su mano está el poder que nos da vida;
-Con su voz toda creación apareció
-Es el Dios que mis plegarias siempre escucha,
-Cuando humilde le venimos a adorar.
-***
-4) Adorad, Adorad
-Al Rey de las edades, Adorad
-A mi Dios mi Señor,
-Exaltado en su trono, Adorad
-De rodillas adoradle
-Con mi vida le amaré y le adoraré.
-***
-@TAGS
-Apéndice
-
-
----
-
-## 625. PERTENEZCO A MI REY
-***
-1) Pertenezco a mi Rey,
-hijo soy de su amor,
-y a sus regias moradas iré.
-Sus delicias sin fin revelome el Señor,
-y un lugar con sus hijos tendré.
-***
-@CORO
-Pertenezco a mi Rey,
-hijo soy de su amor,
-a los suyos jamás olvidó.
-En su regia mansión he de ver al Señor,
-y a su lado, feliz, viviré.
-***
-2) Pertenezco a mi Rey,
-y que me ama lo sé;
-y sus dones de amor celestial,
-por doquiera que voy sin cesar hallaré,
-como prueba de amor sin igual.
-***
-3) Pertenezco a mi Rey,
-y no dudo jamás que reunidos
-los suyos serán, en la Sion celestial,
-que es morada de paz,
-do pesares jamás se hallarán.
-***
-@TAGS
-Apéndice
-
----
-
-## 626. AMOR ES
-***
-1) La gente de nuestro tiempo
-no sabe lo que es el amor.
-Que vive perdiendo el tiempo,
-buscando y sin encontrar.
-***
-@CORO
-Amor, es entregarse en alma
-y cuerpo a la humanidad;
-vivir siempre sirviendo
-sin que tu esperes algo para ti.
-***
-2) En Cristo yo he encontrado
-ejemplo de paz y de amor.
-La muerte del crucificado
-me cuenta de su gran amor.
-***
-3) Y siempre debes hablar
-que en Cristo hay salvación,
-Llevando este mensaje de
-muerte y resurrección.
-***
-@TAGS
-Apéndice
-
----
-
-## 627. CRISTO LA ROCA
-***
-1) En las olas inmensas de embravecido mar,
-que asaltan de mi alma la pobre embarcación.
-De rodillas a Cristo clamé y el huracán,
-desecho fue al instante a la voz de Dios.
-***
-@CORO
-Es Cristo la Roca, el ancla de mi fe;
-los males, lamentos, y halles de temor,
-terminan por siempre, con mi supremo Rey.
-Es Jesucristo mi refugio.
-***
-2) Me guarda de peligros, de prueba, de dolor.
-Él manda que los vientos no agiten tempestad.
-Los mares se detienen, la ola reposó,
-y en Cristo fijo el ancla, confiando más.
-***
-3) Mi dulce Salvador, sí, mi hermoso amigo y Dios,
-que libra de tristeza y aleja amarga hiel.
-Por fe yo iré al cielo, mansión del ser de amor,
-la fuente inagotable de dicha y bien.
-***
-@TAGS
-Apéndice
-
----
-
-## 628. YO IRÉ DE LA TIERRA HASTA EL FIN
-***
-1) Escucho llantos de dolor, de niños el clamor,
-que hacen llorar, guerras mil contemplo por doquier.
-Y veo que la humanidad no ama el vivir;
-gentes sin la plenitud del gozo del Señor.
-***
-@CORO
-Yo iré, yo iré de la tierra hasta el fin,
-llevaré tu verdad de la tierra hasta el fin.
-Que tu amor y tu paz des a la humanidad;
-yo iré de la tierra hasta el fin.
-***
-2) Veo la desesperación del mundo en derredor;
-gentes que el amar de Dios no gozan en su ser.
-Hoy sé que debo ministrar a todos por doquier,
-y gozoso compartir la gracia del Señor.
-***
-@TAGS
-Apéndice
-
----
-
-## 629. HASTA ESE DÍA
-***
-1) Puedo cantar, ¡sí!, cuando yo recuerdo
-que el dolor muy pronto ha de pasar;
-en el camino que va siempre arriba:
-No puede ser el mundo mi hogar.
-***
-@CORO
-Mas siempre aquí yo seguiré cantando,
-siempre así con gozo mi alma irá.
-Hasta ese día en que veré la gloria,
-cuando el Señor me lleve allá.
-***
-2) Lo terrenal habrá de disiparse,
-al recordar que nada nuestro es;
-y lo que aquí nos da dolor, tristeza:
-No volveremos a sufrir después.
-***
-3) El mundo vil con su trabajo y lucha,
-puede traer miseria y pesar;
-el hombre es como el halcón que, libre,
-ya listo está, y así podrá volar.
-***
-@TAGS
-Apéndice
-
----
-
-## 630. UN MANDAMIENTO NUEVO
-***
-1) //Un mandamiento nuevo os doy:
-que os améis unos a otros.//
-//Como yo os he amado, como yo os he amado:
-que os améis también vosotros.//
-***
-2) //Amémonos de corazón,
-no de labios solamente//
-//Para cuando Cristo venga, para cuando Cristo
-venga nos encuentre bien unidos.//
-***
-3) //¿Cómo puedo yo orar resentido
-con mi hermano?//
-//Dios no escucha la oración, Dios no
-escucha la oración si no estoy reconciliado.//
-***
-@TAGS
-Apéndice
-
----
-
-## 631. ÉL VINO A MI CORAZÓN
-***
-1) Cuán glorioso es el cambio
-operado en mi ser viniendo
-a mi vida el Señor.
-Hay en mi alma una paz que
-yo ansiaba tener:
-la paz que me trajo su amor.
-***
-@CORO
-Él vino a mi corazón,
-Él vino a mi corazón.
-Soy feliz con la vida
-que Cristo me dio,
-Él vino a mi corazón.
-***
-2) Ya no voy por la senda
-que el mal me trazó,
-do sólo encontré confusión.
-Mis errores pasados
-Jesús los borró,
-cuando Él vino a mi corazón.
-***
-3) Ni una sombra de duda
-oscurece su amor,
-amor que me trajo el perdón.
-la esperanza que aliento
-la debo al Señor,
-porque Él vino a mi corazón.
-***
-@TAGS
-Apéndice
-
----
-
-## 632. NO TEMERÉ CON CRISTO
-***
-1) La oscuridad abrigada en maldad
-y peligros que no puedo ver.
-No temo ya, pues conmigo Él está,
-y mora en mi ser.
-***
-@CORO
-Con compasión y devoción,
-(con compasión y devoción)
-siempre me cuida en su amor.
-(siempre en su amor)
-Rey de la paz, Él es capaz.
-(rey de la paz, Él es capaz)
-No temeré con Cristo.
-***
-2) Firme en la fe no pregunto el por qué,
-no hay nada que pueda pasar.
-Su voluntad es mi seguridad,
-en Él hay bienestar.
-***
-3) Va por doquier vigilando mi ser,
-y conmigo está su solaz. Cuento con Él,
-es mi ayuda tan fiel,
-me da perfecta paz.
-***
-@TAGS
-Apéndice
-
----
-
-## 633. ¡OH, AMOR DE DIOS!
-***
-1) Oh, amor de Dios su inmensidad, el hombre no podría contar
-ni comprender la gran verdad que Dios al hombre pudo a amar.
-Cuando el pecar entró al hogar de Adán y Eva en Edén
-Dios les sacó, más prometió un Salvador también.
-***
-@CORO
-Oh, amor de Dios, brotando está,
-inmensurable eternal;
-por las edades durará,
-inagotable raudal.
-***
-2) Si fuera tinta todo el mar y todo el cielo
-un gran papel y cada hombre un escritor y cada hoja un pincel;
-nunca podrían describir el gran amor de Dios;
-que al hombre pudo redimir de su pecado atroz.
-***
-3) Y cuando el tiempo pasará con cada reino mundanal,
-y cada reino caerá con cada trama y plan carnal;
-el gran amor del Redentor por siempre durará
-la gran canción de salvación su pueblo cantará.
-***
-@TAGS
-Apéndice
-
----
-
-## 634. ÉL ME SOSTENDRÁ
-***
-1) Si mi fe ha de caer,
-Él me sostendrá;
-en la tentación yo sé,
-Él me sostendrá.
-No podría estar de pie,
-en la oscuridad;
-pues mi amor muy frágil es,
-Él me sostendrá.
-***
-@CORO
-Él me sostendrá,
-Él me sostendrá;
-pues me ama el Salvador,
-Él me sostendrá.
-***
-2) Él se goza en quien salvó,
-Él me sostendrá;
-ante Él precioso soy,
-Él me sostendrá.
-Sus promesas fieles son,
-mi alma guardará;
-alto precio Él pagó,
-Él me sostendrá.
-***
-3) Él sufrió y por mí murió,
-Él me sostendrá;
-la justicia Él cumplió,
-Él me sostendrá.
-Vida eterna tengo en Él,
-Él me sostendrá;
-hasta que le pueda ver
-¡Él regresará!
-Él regresará,
-Él regresará;
-pues me ama el Salvador,
-Él regresará.
-***
-@TAGS
-Apéndice
-Suave
-
----
-
-## 635. ABBA PADRE
-***
-1) Padre, dame tu provisión,
-oye, Padre, mi oración.
-Echo mi carga en Ti,
-quiero confiar en Ti.
-Dame sólo tu bendición.
-***
-@CORO
-Abba, Padre, mi protección,
-eres mi fuerza y mi canción;
-Abba, Padre, eres mi fe,
-en confusión o aflicción,
-a Ti iré, Abba Padre.
-***
-2) Padre, hazme verte a Ti
-en el valle o en la lid.
-Calma mi ansiedad,
-dime tu voluntad,
-tenme siempre junto a Ti.
-***
-3) Padre, quiero ser como Tú,
-haz que ande en rectitud,
-para que los demás vean
-tu luz y paz,
-dócil, útil con tu virtud.
-***
-@TAGS
-Apéndice
-
----
-
-## 636. GOZO, PAZ Y AMOR
-***
-1) Yo vengo a Ti, mi Salvador,
-para entregarte todo mi ser.
-***
-@CORO
-Gozo, paz y amor, yo encuentro en Ti;
-(Gozo, paz y amor, yo encuentro en Ti)
-Gozo, paz y amor, Tú me das a mí.
-(Gozo, paz y amor... a mí)
-Gozo, paz y amor, yo encuentro en Ti;
-(Gozo, paz y amor, yo encuentro en Ti)
-Gozo, paz y amor, Tú me das a mí.
-(Gozo, paz y amor... a mí)
-***
-2) Tú reinas en mí, y me das poder,
-para transformar al mundo del mal.
-Hoy yo tengo paz dentro de mi corazón,
-hallé esta paz en Cristo, mi Dios.
-***
-3) Gozo tengo yo, dentro de mi corazón,
-hallé este gozo en Cristo, mi Dios.
-Siento el amor, dentro de mi corazón,
-hallé este amor en Cristo, mi Dios.
-***
-@TAGS
-Apéndice
-
----
-
-## 637. USA MI VIDA
-***
-1) Muchos que viven en tu derredor
-tristes, hambrientos están.
-Tú por tu vida les puedes llevar
-gozo, luz y bienestar.
-***
-@CORO
-Usa mi vida, usa mi vida
-para tu gloria oh, Jesús.
-Todos los días y hoy quiero ser,
-testigo tuyo Señor por doquier.
-***
-2) Di a los tristes que Dios es amor
-Él quiere darles perdón.
-A los que vienen a Cristo Jesús
-buscando paz, salvación.
-***
-3) Toda tu vida hoy rinde al Señor
-cada momento se fiel.
-Otros que vean en ti Su amor
-pronto se rindan a Él.
-***
-@TAGS
-Apéndice
-
----
-
-## 638. MAESTRO SE ENCRESPAN LAS AGUAS
-***
-1) ¡Maestro se encrespan las aguas! ¡Y ruge la tempestad!
-Los grandes abismos del cielo se llenan de oscuridad.
-¿No ves que aquí perecemos? ¿Puedes dormir así,
-cuando el mar agitado nos abre, profundo sepulcro aquí?
-***
-@CORO
-Los vientos, las ondas oirán su voz: "¡Sea la paz!", "¡Sea la paz!"
-Calmas las iras del negro mar, las luchas del alma las haces cesar,
-y así la barquilla do va el Señor, hundirse no puede en el mar traidor.
-Doquier se cumple su voluntad: "¡Sea la paz!", "¡Sea la paz!"
-Tu voz resuena en la inmensidad: "¡Sea la paz!"
-***
-2) Maestro mi ser agitado te busca con ansiedad.
-De mi alma en los antros profundos se libra cruel tempestad.
-Pasa el pecado a torrentes; sobre mi frágil ser.
-¡Y perezco, Maestro bendito! ¡oh, quiéreme socorrer!
-***
-3) Maestro, paso la tormenta, los vientos no rugen ya.
-Y sobre el cristal de las aguas el sol resplandecerá.
-Maestro, prolonga esta calma, no me abandones más.
-Cruzaré los abismos contigo, gozando bendita paz.
-***
-@TAGS
-Apéndice
-***
-@AUTHORS
-Mateo 8:23-27
-Marcos 4:35-41
-Lucas 8:22-25
-
----
-
-## 639. LO QUE RESPIRA
-***
-//Lo que respira alabe al Señor.//
-***
-1) Alabad a nuestro Dios en su santuario.
-Por la hermosura de su cielo.
-Por sus proezas alabadle a Él.
-***
-2) Alabadle por la grandeza de su nombre.
-Con el sonido de bocina.
-Salterio y arpa, a la vez cantad.
-***
-3) Alabadle con el alegre pandero.
-Con el candor de la danza.
-Cantad con gozo al Señor.
-***
-4) Alabadle con cuerdas, flautas y címbalos.
-De júbilos resonantes.
-***
-En su lenguaje todo:
-//Lo que respira alabe al Señor.//
-¡Amén!
-***
-@TAGS
-Apéndice
-
-
----
-
-## 640. COMO EL CIERVO
-***
-1) Como el ciervo clama por las aguas,
-mi alma anhela a Dios.
-Solo Tú satisfaces mi ansiedad,
-llenándome de paz.
-***
-@CORO
-Solo Tú eres mi sostén,
-¿A quién iré si no sólo a Ti?
-Yo te rindo mi vida entera,
-para siempre a Ti Señor.
-***
-2) Cristo Tú eres mi amigo y mi hermano,
-aunque eres rey también.
-Yo te amó por sobre todo,
-y te alabo mi Señor.
-***
-3) Mas que al oro te anhelo a Ti,
-pues sólo Tú me podrás saciar.
-Sólo Tú eres mi alegría,
-la razón de mi existir.
-***
-@TAGS
-Apéndice
-
----
-
-## 641. NOBLE SOSTÉN
-***
-1) Noble sostén, de la esperanza mía
-fuente bendita de vida eterna.
-Tan sólo el alma que en sus fuerzas fía,
-tiene paz, sí, tiene paz.
-***
-@CORO
-Mi sostén es Jesús,
-nunca en la lucha desmayar podré.
-Mi sostén es Cristo Jesús,
-nunca en la lucha desmayar podré.
-***
-2) Yo soy muy débil, pero en ti soy fuerte,
-nunca en la lucha desmayar podré.
-Si Tú estás conmigo, ni a la misma muerte
-temeré, no, temeré.
-***
-3) Dura es la lucha, difícil la tarea,
-mas Tú me dotas de tu gran poder.
-Mi espíritu renuevas con la idea nueva
-de vencer, sí, de vencer.
-***
-@TAGS
-Apéndice
-Suave
-
----
-
-## 642. MI SER DESCANSA EN ÉL
-***
-1) Mi ser, descansa en Él, no dudes ya,
-aunque mañana haya tormentas;
-Dios contigo está, no temas más
-las llamas de dolor que asechan.
-***
-@CORO
-Dios, Tú eres mi Dios;
-no seré removido, en Ti confío.
-Dios, renueva hoy un firme espíritu en mí;
-//Descanso solo en Ti.//
-***
-2) Mi ser, descansa en Dios, no tiembles ya
-ante las sombras de peligro;
-Pon tu fe en Él, tu escudo es
-que apaga el fuego del maligno.
-***
-3) Mi ser, descansa en Dios, abraza fiel
-esta Verdad que es luz y vida;
-Ven, espera en Él, verás nacer
-con esperanza un nuevo día.
-***
-@AUTHORS
-Mateo 14:31
-Keith Getty
-Kristyn Getty
-Stuart Townend
-***
-@TAGS
-Apéndice
-Suave
-
----
-
-## 643. VEN ADOREMOS
-***
-1) Canta un himno al Salvador;
-ven adoremos a Dios.
-Puedes confiar en tu andar;
-ven adoremos a nuestro Dios.
-Sus obras muestran su esplendor;
-ven adoremos a Dios.
-Pronto vendrá y reinará;
-ven adoremos a nuestro Dios.
-***
-@CORO
-Adoremos a Dios, sólo a Dios.
-Ven, adoremos a Dios.
-A una voz, al Trino Dios;
-himnos cantemos de corazón.
-Hijo del hombre, también de Dios;
-Es vencedor el que se humilló.
-Honra, gloria, ven adoremos a Dios por siempre.
-Honra, gloria, ven adoremos a Dios.
-***
-2) Canta al Dios de la eternidad;
-ven adoremos a Dios.
-Él es el Rey; canta oh grey;
-ven adoremos a nuestro Dios.
-Al victorioso de la maldad;
-ven adoremos a Dios.
-Honra a Jesús, Él es la luz;
-ven adoremos a nuestro Dios.
-***
-@TAGS
-Apéndice
-
----
-
-## 644. AL SEÑOR SEAMOS FIELES
-***
-1) No nos ha dado Dios sentir de temor,
-sino de poder cordura y amor.
-Y no me avergüenzo de dar testimonio de Él,
-pues quiero por siempre ser fiel.
-***
-@CORO
-Al Señor seamos fieles
-Levantando en alto su ley
-Al Señor seamos fieles
-Cada día sin falta al Rey.
 ***
-2) Nadie que busca placer terrenal
-es premiado vencedor al final.
-Sé fiel trabajando sirviendo al Redentor,
-buscando de Dios lo mejor.
-***
-3) En vida o muerte la gloria te doy,
-pues me has dado amor y tu gran perdón.
-Un siervo ferviente de Cristo yo quiero ser,
-y leal siempre permanecer.
-***
-4) Al Señor seamos fieles
-Levantando en alto su ley
-Al Señor seamos fieles
-Cada día sin falta al Rey.
-Cada día sin falta al Rey.
-Cada día sin falta al Rey.
-***
-@TAGS
-Apéndice
-
----
-
-## 645. REY EXALTADO
-***
-@CORO
-Rey exaltado en gloria
-es Cristo Jesús y le alabaré.
-Rey exaltado en gloria
-es Cristo y yo le alabaré.
-***
-1) Él es Señor y siempre le alabaré
-La creación su nombre proclamará
-Rey exaltado en gloria es Cristo Jesús.
-***
-2) Él me redimió, mis culpas su amor borró.
-Con su poder, mi vida Él transformó,
-Rey exaltado en gloria es Cristo Jesús.
-***
-@TAGS
-Apéndice
-Suave
-
----
-
-## 646. ¡MAJESTAD!
-***
-1) ¡Majestad, excelsa majestad!
-Tributadle la gloria y el honor.
-¡Majestad! Por siempre ensalzad
-al Salvador, digno Señor, el Vencedor.
-***
-@CORO
-Alabad, engrandecer su santo nombre
-Adorad, magnificad al gran Redentor.
-¡Majestad! La gloria celebrad
-del Salvador, Cristo Jesús, Rey y Señor.
-***
-2) ¡Majestad, divina majestad!
-Dios eterno es Jesucristo el Señor.
-¡Majestad! De su poder cantad
-es el Creador, Sustentador, Gobernador.
-***
-3) ¡Majestad, eterna majestad!
-Al que era, que es y siempre será.
-¡Majestad! Su triunfo proclamad
-pronto vendrá nos llevará y reinará.
-***
-@TAGS
-Apéndice
-Suave
-
----
-
-## 647. CRISTO ES LA PEÑA
-***
-1) //Cristo es la peña de Horeb que está brotando, agua de vida saludable para ti.//
-***
-@CORO
-Ven a tomarla que es más dulce que la miel.
-Refresca el alma, refresca todo tu ser.
-Cristo es la peña de Horeb que está brotando,
-agua de vida saludable para ti.
-***
-2) Cristo es el lirio del valle de las flores.
-Él es la rosa blanca pura de Sarón.
-Cristo es la vida y amor de los amores.
-Él es la eterna fuente de la salvación.
-***
-@TAGS
-Apéndice
-
----
-
-## 648. GRAN DÍA DE VICTORIA
-***
-1) Con mis ojos vi llegar la gloria de mi Salvador.
-Con sus pasos va exprimiendo el lagar del detractor.
-Con su espada como rayo cual terrible vengador.
-Conquista con verdad.
-***
-@CORO
-¡Gloria, gloria, aleluya!
-¡Gloria, gloria, aleluya!
-¡Gloria, gloria, aleluya!
-Dios es quien vencerá.
-***
-2) En los campamentos arden las fogatas de verdad,
-y se pueden ver las huestes adorando con lealtad.
-La sentencia es segura sobre toda la maldad.
-Conquista la verdad.
-***
-3) Su trompeta ha sonado y jamás se rendirá.
-Él separa corazones y su juicio premiará.
-¡Oh, mi alma, nunca dudes!
-La victoria nos dará. Conquista su verdad.
-***
-4) En lo hermoso de los lirios Cristo vino a Belén,
-con la gloria en su seño que transforma en Edén.
-Él la vida santifica, anunciad tan grande bien.
-Que hay en su verdad.
-***
-@TAGS
-Apéndice
-
----
-
-## 649. MÁS ALLÁ DEL SOL
-***
-1) Aunque en esta vida no tengo riquezas;
-sé que allá en la gloria tengo una mansión.
-Cual alma perdida entre las pobrezas;
-de mí es Jesucristo tuvo compasión.
-***
-@CORO
-//Más allá del sol, más allá del sol, yo tengo un hogar, hogar bello hogar, mas allá del sol.//
-***
-2) Así, por el mundo, yo voy caminando;
-de pruebas rodeado, y de tentación.
-Pero a mi lado viene consolando;
-mi bendito Cristo en la turbación.
-***
-3) A los pueblos todos del linaje humano;
-Cristo quiere darles plena salvación.
-También una casa para cada hermano;
-fue a prepararle a la santa Sion.
-***
-@TAGS
-Apéndice
-
-
----
-
-## 650. SANTA LA NOCHE
-***
-1) Santa la noche, hermosas las estrellas,
-La noche cuando nació el Señor.
-El mundo estaba envuelto en sus pecados.
-Hasta que Dios nos mandó al Salvador.
-***
-2) Una esperanza todo el mundo siente,
-la luz de un nuevo día sin igual.
-Con gratitud postrados adoradle.
-Oíd de lo alto la voz angelical;
-¡Oíd, cantad! Nació el Salvador.
-***
-3) Hoy por la fe llegamos al pesebre
-a contemplar al bendito Jesús.
-Como también los magos del oriente
-llegaron guiados por célica luz.
-***
-4) Fue por nacer así humildemente
-que nuestras pruebas sabe comprender;
-Hoy Emanuel es Dios ya con nosotros.
-Cantemos al Rey, a Jesús el Salvador;
-¡Regocijad! Nació el Redentor.
-***
-5) Nos enseñó a amarnos tiernamente;
-nos dio su ley de amor y su paz.
-Libra al esclavo que en cadenas gime.
-Y a su nombre huirá Satanás.
-***
-6) Con cánticos de gozo alabemos
-al Rey de reyes, nuestro Salvador.
-Hoy con amor cantemos reverentes,
-alcemos la voz proclamando su poder.
-¡Dad gloria a Dios! Amén, por siempre amén.
-***
-@TAGS
-Apéndice
-Suave
-
----
-
-## 651. CONTROLA MI VIDA SEÑOR
-***
-1) En humildad, Señor te rindo,
-mi obstinado corazón.
-Mi vida es tuya amado Dueño,
-Tus mandos sean mi misión.
-***
-@CORO
-Controla mi vida, Señor, anhelo tener tu favor.
-Tu gozo y gran perdón tesoros me son,
-Pon sabiduría en mí y hazme estar junto a Ti.
-Entonces al ver tu faz "Fiel siervo" dirás.
-***
-2) Me prometiste ser fiel guía,
-acompañando mí andar.
-Mi fuerza eres cada día,
-para ampararme y triunfar.
-***
-@TAGS
-Apéndice
-Suave
-
----
-
-## 652. SOY SOLDADO DE JESÚS
-***
-1) Soy yo soldado de Jesús,
-y siervo del Señor.
-No temeré llevar su cruz
-sufriendo por su amor.
-***
-@CORO
-Después de la batalla nos coronará,
-//Dios nos coronará//
-Después de la batalla nos coronará,
-en aquella santa Sion.
-Más allá, más allá,
-en aquella santa Sion.
-Después de la batalla nos coronará,
-en aquella santa Sion.
-***
-2) Lucharon otros por la fe
-¿cobarde habré de ser?
-Por mi Señor yo pelearé
-confiando en su poder.
-***
-3) Es menester que sea fiel
-que nunca vuelva atrás;
-que siga siempre en pos de Él,
-y me guiará en paz.
-***
-@TAGS
-Apéndice
-
----
-
-## 653. CRISTO MI ÍNTIMO AMIGO
-***
-1) Exaltado es Cristo, Rey de reyes de la eternidad;
-con los serafines, alabadle en su majestad.
-Reina en los cielos, el amado Creador;
-el que es la luz, nos sufrió la cruz, oh, ¡qué gran amor!
-***
-@CORO
-Cristo mi íntimo amigo;
-a mi lado siempre va.
-Cristo jamás me abandona;
-mis temores quitará.
-Cristo mi íntimo amigo;
-mi confianza está en Él.
-Mi gran Rey, mi Señor, Salvador;
-pero es más, es mi amigo más fiel.
-***
-2) Gloria doy a Cristo, sólo Él merece mi honor;
-es mi fortaleza, es mi roca y consolador.
-Es castillo fuerte, fundamento de mi fe;
-el que no pecó, se sacrificó, a su viña iré.
-***
-@TAGS
-Apéndice
-
----
-
-## 654. UN DÍA CRISTO VOLVERÁ
-***
-1) Un día Cristo volverá es la promesa del Señor;
-tal como fue así vendrá, y su pueblo ha de ver al Salvador.
-***
-@CORO
-Muy pronto, sí, Jesús vendrá, y alegre le verá su pueblo;
-¡Velad! ¡Orad! el Rey vendrá, los suyos arrebatará.
-***
-2) Los mensajeros del Señor anuncian que vendrá Jesús;
-señales hay alrededor Él vendrá y a los suyos llevará.
-***
-3) En busca de su grey vendrá con toda gloria y honor;
-su iglesia esperando está, y aclamará con gozo a su Señor.
-***
-4) ¡Oh bienvenido Rey Jesús! tus hijos te esperan ya;
-muy pronto han de ver tu luz, y gozar en tu presencia siempre allá.
-***
-@TAGS
-Apéndice
-
----
-
-## 655. A SU LEY
-***
-1) Cada estrella Dios ha hecho,
-Él creó la tierra y mar.
-Dueño es de toda ciencia,
-el pasado y lo que habrá...
-...Y su gran sabiduría
-es tu guía para ver;
-Es la lámpara siempre diáfana,
-para en ti su plan hacer.
-***
-@CORO
-¡A su Ley! ¡A su Ley!
-Sus promesas son verdad. ¡A su Ley!
-Si no hallas tu lugar,
-si tu gozo es llorar,
-si tú tiendes a dudar,
-¡A su Ley!
-***
-2) No es alguien alejado,
-quiere ser tu amigo fiel.
-Te escucha atentamente
-cuando en oración con Él...
-...Siempre anda a tu lado,
-no se apartará jamás.
-En debilidad y necesidad,
-te da fuerza y dulce paz.
-***
-@TAGS
-Apéndice
-Suave
-
----
-
-## 656. ERES MI PROTECTOR
-***
-1) Eres mi protector,
-llenas mi corazón
-con cánticos de liberación;
-de angustias me guardarás.
-Confiaré en Ti.
-***
-@CORO
-Confiaré en Ti,
-El débil dirá fuerte soy,
-con poder del Señor.
-***
-@TAGS
-Apéndice
-Suave
-
----
-
-## 657. VEN CONTEMPLA EL MISTERIO
-***
-1) Ven contempla el gran misterio,
-el amanecer del Rey;
-alabado en el cielo,
-se vistió de humanidad.
-A este mundo de tinieblas,
-esa luz de vida entró.
-Mira a Cristo, hecho hombre,
-para darnos redención.
-***
-2) Ven contempla el gran misterio,
-el perfecto Hijo de Dios;
-en su vida y sufrimiento,
-en pecado no cayó.
-Mira a Adán, el verdadero,
-Salvador del hombre infiel.
-Cristo el firme cumplimiento,
-de la ley; la roca es Él.
-***
-3) Ven contempla el gran misterio,
-Cristo alzado en una cruz;
-en lugar de pecadores,
-traspasado fue Jesús.
-Mira el precio por salvarnos,
-mira el plan de redención.
-Lleva a muchos a la gloria,
-oh cuán vasto inmenso amor.
-***
-4) Ven contempla el gran misterio,
-Dios de vida que murió;
-más la tumba fue vencida,
-gloria al Padre, Él vivo está.
-¡Oh, esperanza tan segura!
-Vida eterna nos dará.
-el Señor resucitado,
-cuando venga a reinar.
-***
-5) Ven contempla el gran misterio,
-el amanecer del Rey.
-Mira a Cristo, hecho hombre,
-para darnos redención.
-***
-@TAGS
-Apéndice
-Suave
-
----
-
-## 658. SUMISIÓN
-***
-1) La puerta estrecha es,
-Para la salvación
-Y el camino angosto es
-Yo no lo  escogí;
-Dios me escogió a mi
-Sumiso, a Cristo seguiré.
-***
-@CORO
-No lo que quiera hacer,
-Ni donde quiera ir
-¿Pues quién soy yo
-que debo decidir?
-Mi Padre escogerá,
-La senda que es mejor
-Y así confiado puedo ir.
-***
-2) He de seguirle fiel,
-cargando aquí la cruz
-Camino es, de santidad
-Gran privilegio es,
-Servir a mi Señor
-Su Voluntad yo quiero hacer.
-***
-3) Al que me amó amaré,
-Y le obedeceré
-Dispuesto estoy a padecer,
-Sobre el pecado vil,
-Y toda vanidad
-Confiando en Cristo venceré.
-***
-@TAGS
-Apéndice
-Suave
-
----
-
-## 659. JESÚS ES LA ROCA DE MI SALVACIÓN
-***
-1) Jesús es la roca de mi salvación;
-Él es quien me libra de condenación.
-Jesús es mi fuerte, mi gran protector;
-// Yo se que soy hijo de todo su amor. //
-***
-2) Jesús me defiende de negra traición;
-Él lava las manchas de mi corazón.
-Jesús me rescata del mundo falaz;
-// Me lleva a su seno, su seno de paz. //
-***
-3) Por eso en mis horas de negro dolor,
-Yo busco el consuelo de mi redentor.
-Venid si por Cristo ser salvo queréis,
-// Al lado de Cristo lugar hallareis. //
-***
-4) Su paz os ofrece, su paz Él os da;
-Aquel que le busca, ser salvo podrá;
-Yo fui mucho tiempo esclavo del mal,
-// mas hoy Jesucristo me dio libertad. //
-***
-5) Jesús es la fuente de la rendición;
-Él sana las llagas de mi corazón.
-Él sana al leproso al ciego da luz;
-// por eso confió tan solo en Jesús. //
-***
 @TAGS
-Apéndice
-Suave
-
----
+Hmrio. Bautista
 
-## 661. NO CAMBIARÁ
-***
-1) Soy de él, Padre fiel; sabe quién yo soy.
-Por la fe, paz tendré; no cambia ayer ni hoy.
-Al caer, o vencer me apoyará;
-su perdón, protección conmigo irán.
-***
-@CORO
-No cambiará, igual será;
-Cristo no ha cambiado, Y no cambiará.
-¡Qué gran Amigo, tan puro y digno;
-Cristo no ha cambiado y no cambiará!
-***
-2) El amor del Señor no se apartará;
-en su ley confiaré, y en su fidelidad.
-En temor o dolor si no veo su faz;
-su poder por doquier conmigo está.
-***
-@TAGS
-Apéndice
-Suave

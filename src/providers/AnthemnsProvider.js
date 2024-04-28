@@ -180,6 +180,7 @@ function AnthemnsProvider({ children }) {
         return {
           id,
           index,
+          reference: index + 1,
           number,
           title: `#${number} ${title}`,
           name: title,
@@ -214,4 +215,4 @@ function AnthemnsProvider({ children }) {
   );
 }
 
-export { AnthemnsProvider, AnthemnsContext };
+export { AnthemnsContext, AnthemnsProvider };

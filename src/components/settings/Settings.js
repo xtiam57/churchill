@@ -87,8 +87,8 @@ export function Settings() {
       light
       closable
       className={showingSettings ? '' : 'closed'}
-      size={620}
-      offset={310 + 45}
+      size={600}
+      offset={320 + 55}
     >
       <h1 className="display-4">Ajustes</h1>
       <Button
@@ -360,46 +360,42 @@ export function Settings() {
           setExpanded((value) => !value);
         }}
       >
-        <CalendarMonth fontSize="small" /> Horarios{' '}
-        {/* {expanded ? (
-          <ExpandLess fontSize="small" />
-        ) : (
-          <ExpandMore fontSize="small" />
-        )} */}
+        <CalendarMonth fontSize="small" /> Horarios
       </Button>
 
-      {expanded ? (
-        <Row>
+      {expanded && (
+        <Col>
           {settings?.schedules?.map((schedule, index) => (
-            <Col key={index} xs={6} className="mb-3">
-              <div
-                style={{
-                  backgroundColor: schedule.active ? '#fff' : '#f2f3f5',
-                  borderLeftWidth: '5px !important',
-                }}
-                className="p-3 border border-primary rounded h-100"
+            <Row
+              key={index}
+              style={{
+                backgroundColor: schedule.active ? '#fff' : '#f2f3f5',
+              }}
+              className="py-3 px-2 border border-primary rounded mb-2 d-flex align-items-center"
+            >
+              <Col
+                xs={1}
+                className="d-flex flex-column justify-content-center align-items-center"
               >
-                {index > 0 ? (
-                  <Form.Row>
-                    <Form.Group as={Col} className="mb-1">
-                      <Form.Check
-                        className="d-inline-block"
-                        type="switch"
-                        id={`active-${index}`}
-                        name="active"
-                        checked={schedule.active}
-                        onChange={() =>
-                          handleSchedulesChangeValue(
-                            'active',
-                            !schedule.active,
-                            index
-                          )
-                        }
-                      />
-                    </Form.Group>
-                  </Form.Row>
-                ) : null}
+                {/* <strong className="d-block">{index + 1}</strong> */}
+                <Form.Check
+                  className="d-inline-block"
+                  type="switch"
+                  id={`active-${index}`}
+                  name="active"
+                  checked={schedule.active}
+                  disabled={index === 0}
+                  onChange={() =>
+                    handleSchedulesChangeValue(
+                      'active',
+                      !schedule.active,
+                      index
+                    )
+                  }
+                />
+              </Col>
 
+              <Col xs={11}>
                 <Form.Row>
                   <Form.Group as={Col} className="mb-1">
                     <Form.Label className=" small mb-1">Descripción</Form.Label>
@@ -418,7 +414,7 @@ export function Settings() {
                 </Form.Row>
 
                 <Form.Row>
-                  <Form.Group as={Col} className="mb-1">
+                  <Form.Group as={Col} xs={6} className="mb-1">
                     <Form.Label className=" small mb-1">Día</Form.Label>
                     <Form.Control
                       as="select"
@@ -445,28 +441,7 @@ export function Settings() {
                     </Form.Control>
                   </Form.Group>
 
-                  {/* <Form.Group as={Col} className="mb-1">
-                    <Form.Label className=" small mb-1">Sufijo</Form.Label>
-                    <Form.Control
-                      as="select"
-                      size="sm"
-                      value={schedule.daySuffix}
-                      name="daySuffix"
-                      disabled={!schedule.active}
-                      onChange={({ target }) => {
-                        const { name, value } = target;
-                        handleSchedulesChangeValue(name, value, index);
-                      }}
-                    >
-                      <option value=""></option>
-                      <option value="AM">AM</option>
-                      <option value="PM">PM</option>
-                    </Form.Control>
-                  </Form.Group> */}
-                </Form.Row>
-
-                <Form.Row>
-                  <Form.Group as={Col} className="mb-1">
+                  <Form.Group as={Col} xs={3} className="mb-1">
                     <Form.Label className=" small mb-1">Hora</Form.Label>
                     <Form.Control
                       size="sm"
@@ -487,7 +462,7 @@ export function Settings() {
                     </Form.Control>
                   </Form.Group>
 
-                  <Form.Group as={Col} className="mb-1">
+                  <Form.Group as={Col} xs={3} className="mb-1">
                     <Form.Label className=" small mb-1">Horario</Form.Label>
                     <Form.Control
                       as="select"
@@ -505,11 +480,11 @@ export function Settings() {
                     </Form.Control>
                   </Form.Group>
                 </Form.Row>
-              </div>
-            </Col>
+              </Col>
+            </Row>
           ))}
-        </Row>
-      ) : null}
+        </Col>
+      )}
 
       <hr />
 
@@ -577,7 +552,7 @@ export function Settings() {
       </Form.Row> */}
 
       {/* Intervalos */}
-      <Form.Row>
+      <Row>
         <Form.Group as={Col} xs={6} className="mb-1">
           <Form.Label className=" small mb-1">
             Intervalo entre los "Anuncios"
@@ -661,7 +636,7 @@ export function Settings() {
             )}
           </Form.Control>
         </Form.Group>
-      </Form.Row>
+      </Row>
 
       {/* <Form.Row>
         <Form.Group as={Col} className="mb-2">
@@ -704,7 +679,7 @@ export function Settings() {
 
       <hr />
 
-      <Form.Row>
+      <Row>
         <Form.Group as={Col} xs={6} className="m-0">
           <Form.Label className=" small mb-1">
             Exportar datos del usuario
@@ -727,10 +702,10 @@ export function Settings() {
           />
           <InputGroup.Prepend></InputGroup.Prepend>
         </Form.Group>
-      </Form.Row>
+      </Row>
 
       {file ? (
-        <Form.Row>
+        <Row>
           <Form.Group as={Col} className="mb-1">
             <Button
               variant="outline-primary"
@@ -741,7 +716,7 @@ export function Settings() {
               <FileUpload /> Importar
             </Button>
           </Form.Group>
-        </Form.Row>
+        </Row>
       ) : null}
 
       {/* <Button

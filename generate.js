@@ -1,12 +1,9 @@
 const fs = require('fs');
 
-fs.readFile('./himnario.txt', 'utf8', (err, data) => {
-  if (err) {
-    return console.log(err);
-  }
+const json = [];
 
+function process(data) {
   const songs = data.split('---').filter((song) => song !== '');
-  const json = [];
 
   songs.forEach((song, index) => {
     const parts = song.split('***\r\n').filter((part) => part !== '');
@@ -50,20 +47,38 @@ fs.readFile('./himnario.txt', 'utf8', (err, data) => {
 
     json.push(item);
   });
+}
 
-  fs.writeFile(
-    './src/assets/data/anthemns/index.json',
-    JSON.stringify(
-      json.sort((a, b) => a.number - b.number),
-      null,
-      2
-    ),
-    'utf-8',
-    (err) => {
-      if (err) {
-        return console.log(err);
-      }
-      console.log('Himnario generado!');
-    }
-  );
+fs.readFile('./himnario-bautista.txt', 'utf8', (err, data) => {
+  if (err) return console.log(err);
+
+  process(data);
+
+  fs.readFile('./himnario-majestuoso.txt', 'utf8', (err, data) => {
+    if (err) return console.log(err);
+
+    process(data);
+
+    fs.readFile('./himnario-apendice.txt', 'utf8', (err, data) => {
+      if (err) return console.log(err);
+
+      process(data);
+
+      fs.writeFile(
+        './src/assets/data/anthemns/index.json',
+        JSON.stringify(
+          json /* .sort((a, b) => a.number - b.number) */,
+          null,
+          2
+        ),
+        'utf-8',
+        (err) => {
+          if (err) {
+            return console.log(err);
+          }
+          console.log('Himnario generado!');
+        }
+      );
+    });
+  });
 });

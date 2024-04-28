@@ -3,14 +3,14 @@ import styled from 'styled-components';
 export const SidebarStyled = styled.aside`
   background-color: ${({ light }) => (light ? '#fff' : '#20232a')};
   height: calc(100vh - 56px);
-  min-width: ${({ size = 310 }) => `${size}px`};
-  max-width: ${({ size = 310 }) => `${size}px`};
+  min-width: ${({ size = 320 }) => `${size}px`};
+  max-width: ${({ size = 320 }) => `${size}px`};
   padding: 30px;
   overflow-y: auto;
   z-index: ${({ closable }) => (closable ? 3 : 4)};
   box-shadow: -2px 0 15px 0 rgba(0, 0, 0, 1);
 
-  ${({ closable, offset = 310 }) => {
+  ${({ closable, offset = 320 }) => {
     return closable ? `position: fixed; left: ${offset}px;bottom: 0;` : '';
   }}
 

@@ -62,7 +62,7 @@ export default function AnthemnsPage() {
   const [bookmarks, setBookmarks] = useState(
     getBookmarkedItems('anthemn', bookmarkSort)
   );
-  const [url, setUrl] = useState(folder.getPath(current.number));
+  const [url, setUrl] = useState(folder.getPath(current.reference));
   const [isMP3Loaded, setIsMP3Loaded] = useState(false);
   const [playbackRate, setPlaybackRate] = React.useState(1);
   const [volume, setVolume] = useState(1);
@@ -78,7 +78,7 @@ export default function AnthemnsPage() {
 
   useEffect(() => {
     stop();
-    setUrl(folder.getPath(current.number));
+    setUrl(folder.getPath(current.reference));
     // Bug: delay to set config of the song
     setTimeout(() => {
       // Trying to get settings from storage
@@ -235,9 +235,11 @@ export default function AnthemnsPage() {
 
         <AnthemnTags onClick={handleSearch} current={current} />
       </Sidebar>
+
       {presenting ? (
         <Alert presenting={!showLogo} label={current?.title} />
       ) : null}
+
       <Wrapper direction="column" {...settings}>
         <Bookmark
           element={current}
@@ -320,7 +322,7 @@ export default function AnthemnsPage() {
               >
                 /himnos
               </strong>{' '}
-              con el nombre <strong>{current.number}.mp3</strong>
+              con el nombre <strong>{current.reference}.mp3</strong>
             </small>
           )}
 

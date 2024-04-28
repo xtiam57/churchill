@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const RoutesbarStyled = styled.div`
-  width: 45px;
+  width: 55px;
   overflow: hidden;
   display: flex;
   flex-direction: column;

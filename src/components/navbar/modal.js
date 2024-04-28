@@ -2,13 +2,11 @@ import { useCallback, useState } from 'react';
 import { Button, Col, Form, Modal } from 'react-bootstrap';
 
 const DEFAULT_ALERTS = [
-  'Madre/padre de NOMBRE, presentarse en cuna.',
-  'Madre/padre de NOMBRE, acercarse al audio.',
+  'Madre/padre de NOMBRE, acercarse a cuna.',
   'Dueño del carro CARACTERISTICA, acercarse a la entrada.',
-  'Dueño del carro con placa PLACA, acercarse a la entrada.',
-  'Hermano NOMBRE, acercarse a la parte de atrás del auditorio.',
-  'Hermana NOMBRE, acercarse a la parte de atrás del auditorio.',
-  'Recuerde llevar a su hij@ a su respectivo salón.',
+  'NOMBRE, acercarse a la entrada.',
+  'Recuerde llevar a su hij@ a su respectiva clase.',
+  'Maestros preparse para ir a clases.',
 ];
 
 export function AlertMessageModal({ show, handleClose, handleSave }) {

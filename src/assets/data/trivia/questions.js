@@ -359,7 +359,7 @@ export const questions = [
     difficulty: 'EASY',
     question:
       '¿Cómo se llamaba el pan que caía del cielo y alimentaba a los israelitas en el desierto?',
-    options: ['Maná', 'Manac', 'Francés', 'Bimbo'],
+    options: ['Maná', 'Pita', 'Chabata', 'Bimbo'],
     reference: 'Éxodo 16',
   },
   {
