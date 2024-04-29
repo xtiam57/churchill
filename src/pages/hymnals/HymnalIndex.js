@@ -1,12 +1,12 @@
 import { Bookmark } from 'components';
-import { useAnthemn } from 'hooks';
+import { useHymnals } from 'hooks';
 import { useCallback, useState } from 'react';
 import { Form, Modal } from 'react-bootstrap';
 import styledComponents from 'styled-components';
 import { Storage } from 'utils';
-import { AnthemnCategory, createCategoryKey } from './AnthemCategory';
+import { HymnalCategory, createCategoryKey } from './HymnalCategory';
 
-const AnthemnIndexStyled = styledComponents.div`
+const HymnalIndexStyled = styledComponents.div`
   width: 100%;
 
   .sub-index {
@@ -64,7 +64,7 @@ const AnthemnIndexStyled = styledComponents.div`
   }
 `;
 
-export function AnthemnIndex({
+export function HymnalIndex({
   onChange = () => {},
   onSelect = () => {},
   sort = 'desc',
@@ -72,7 +72,7 @@ export function AnthemnIndex({
   onHide = () => {},
   ...rest
 }) {
-  const { anthemns } = useAnthemn();
+  const { hymnals } = useHymnals();
   const [category, setCategory] = useState('ALL');
 
   const handleChange = ({ target }) => {
@@ -81,7 +81,7 @@ export function AnthemnIndex({
   };
 
   const render = useCallback(() => {
-    return anthemns.map((item, index) => {
+    return hymnals.map((item, index) => {
       if (!item.category) {
         item.category = Storage.get(createCategoryKey(item));
       }
@@ -110,12 +110,12 @@ export function AnthemnIndex({
               {item.name}
             </span>
           </span>
-          <AnthemnCategory element={item} className="mr-2" />
+          <HymnalCategory element={item} className="mr-2" />
           <Bookmark icon element={item} onChange={onChange} sort={sort} />
         </li>
       );
     });
-  }, [anthemns, onChange, onSelect, sort, category]);
+  }, [hymnals, onChange, onSelect, sort, category]);
 
   return (
     <Modal
@@ -147,11 +147,11 @@ export function AnthemnIndex({
         </Modal.Title>
       </Modal.Header>
       <Modal.Body className="p-0">
-        <AnthemnIndexStyled>
+        <HymnalIndexStyled>
           <div className="sub-index">
             <ul>{render()}</ul>
           </div>
-        </AnthemnIndexStyled>
+        </HymnalIndexStyled>
       </Modal.Body>
     </Modal>
   );

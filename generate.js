@@ -2,14 +2,14 @@ const fs = require('fs');
 
 const json = [];
 
-function process(data) {
+function process(data, book) {
   const songs = data.split('---').filter((song) => song !== '');
 
   songs.forEach((song, index) => {
     const parts = song.split('***\r\n').filter((part) => part !== '');
 
     const item = {
-      number: 0,
+      number: 1 + index,
       title: '',
       chorus: null,
       stanzas: [],
@@ -17,6 +17,7 @@ function process(data) {
       repeatChorusAtEnd: false,
       authors: null,
       tags: null,
+      book,
     };
 
     parts.forEach((part, index) => {
@@ -24,8 +25,8 @@ function process(data) {
 
       if (index === 0) {
         let title = lines.join().replace('## ', '').replace('.', '');
-        item.number = +title.match(/^\d+/gm);
-        item.title = title.replace(item.number, '').trim();
+        const tempNumber = +title.match(/^\d+/gm);
+        item.title = title.replace(tempNumber, '').trim();
       } else {
         if (lines[0].includes('@CORO')) {
           lines.shift();
@@ -52,20 +53,20 @@ function process(data) {
 fs.readFile('./himnario-bautista.txt', 'utf8', (err, data) => {
   if (err) return console.log(err);
 
-  process(data);
+  process(data, 'Himnario Bautista');
 
   fs.readFile('./himnario-majestuoso.txt', 'utf8', (err, data) => {
     if (err) return console.log(err);
 
-    process(data);
+    process(data, 'Himnario Majestuoso');
 
     fs.readFile('./himnario-apendice.txt', 'utf8', (err, data) => {
       if (err) return console.log(err);
 
-      process(data);
+      process(data, 'Himnario Apéndice');
 
       fs.writeFile(
-        './src/assets/data/anthemns/index.json',
+        './src/assets/data/hymnals/index.json',
         JSON.stringify(
           json /* .sort((a, b) => a.number - b.number) */,
           null,

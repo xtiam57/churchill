@@ -910,36 +910,7 @@ Apéndice
 
 ---
 
-## 831. MAESTRO SE ENCRESPAN LAS AGUAS
-***
-1) ¡Maestro se encrespan las aguas! ¡Y ruge la tempestad!
-Los grandes abismos del cielo se llenan de oscuridad.
-¿No ves que aquí perecemos? ¿Puedes dormir así,
-cuando el mar agitado nos abre, profundo sepulcro aquí?
-***
-@CORO
-Los vientos, las ondas oirán su voz: "¡Sea la paz!", "¡Sea la paz!"
-Calmas las iras del negro mar, las luchas del alma las haces cesar,
-y así la barquilla do va el Señor, hundirse no puede en el mar traidor.
-Doquier se cumple su voluntad: "¡Sea la paz!", "¡Sea la paz!"
-Tu voz resuena en la inmensidad: "¡Sea la paz!"
-***
-2) Maestro mi ser agitado te busca con ansiedad.
-De mi alma en los antros profundos se libra cruel tempestad.
-Pasa el pecado a torrentes; sobre mi frágil ser.
-¡Y perezco, Maestro bendito! ¡oh, quiéreme socorrer!
-***
-3) Maestro, paso la tormenta, los vientos no rugen ya.
-Y sobre el cristal de las aguas el sol resplandecerá.
-Maestro, prolonga esta calma, no me abandones más.
-Cruzaré los abismos contigo, gozando bendita paz.
-***
-@TAGS
-Apéndice
-
----
-
-## 832. LO QUE RESPIRA
+## 831. LO QUE RESPIRA
 ***
 //Lo que respira alabe al Señor.//
 ***
@@ -967,7 +938,7 @@ Apéndice
 
 ---
 
-## 833. COMO EL CIERVO
+## 832. COMO EL CIERVO
 ***
 1) Como el ciervo clama por las aguas,
 mi alma anhela a Dios.
@@ -995,7 +966,7 @@ Apéndice
 
 ---
 
-## 834. NOBLE SOSTÉN
+## 833. NOBLE SOSTÉN
 ***
 1) Noble sostén, de la esperanza mía
 fuente bendita de vida eterna.
@@ -1023,7 +994,7 @@ Apéndice
 
 ---
 
-## 835. MI SER DESCANSA EN ÉL
+## 834. MI SER DESCANSA EN ÉL
 ***
 1) Mi ser, descansa en Él, no dudes ya,
 aunque mañana haya tormentas;
@@ -1051,7 +1022,7 @@ Apéndice
 
 ---
 
-## 836. REY EXALTADO
+## 835. REY EXALTADO
 ***
 @CORO
 Rey exaltado en gloria
@@ -1072,7 +1043,7 @@ Apéndice
 
 ---
 
-## 837. ¡MAJESTAD!
+## 836. ¡MAJESTAD!
 ***
 1) ¡Majestad, excelsa majestad!
 Tributadle la gloria y el honor.
@@ -1100,7 +1071,7 @@ Apéndice
 
 ---
 
-## 838. GRAN DÍA DE VICTORIA
+## 837. GRAN DÍA DE VICTORIA
 ***
 1) Con mis ojos vi llegar la gloria de mi Salvador.
 Con sus pasos va exprimiendo el lagar del detractor.
@@ -1133,7 +1104,7 @@ Apéndice
 
 ---
 
-## 839. SOY SOLDADO DE JESÚS
+## 838. SOY SOLDADO DE JESÚS
 ***
 1) Soy yo soldado de Jesús,
 y siervo del Señor.
@@ -1165,7 +1136,7 @@ Apéndice
 
 ---
 
-## 840. UN DÍA CRISTO VOLVERÁ
+## 839. UN DÍA CRISTO VOLVERÁ
 ***
 1) Un día Cristo volverá es la promesa del Señor;
 tal como fue así vendrá, y su pueblo ha de ver al Salvador.
@@ -1188,7 +1159,7 @@ Apéndice
 
 ---
 
-## 841. ERES MI PROTECTOR
+## 840. ERES MI PROTECTOR
 ***
 1) Eres mi protector,
 llenas mi corazón
@@ -1206,7 +1177,7 @@ Apéndice
 
 ---
 
-## 842. VEN CONTEMPLA EL MISTERIO
+## 841. VEN CONTEMPLA EL MISTERIO
 ***
 1) Ven contempla el gran misterio,
 el amanecer del Rey;
@@ -1254,7 +1225,7 @@ Apéndice
 
 ---
 
-## 843. SUMISIÓN
+## 842. SUMISIÓN
 ***
 1) La puerta estrecha es,
 Para la salvación
@@ -1291,7 +1262,7 @@ Apéndice
 
 ---
 
-## 844 . JESÚS ES LA ROCA DE MI SALVACIÓN
+## 843 . JESÚS ES LA ROCA DE MI SALVACIÓN
 ***
 1) Jesús es la roca de mi salvación;
 Él es quien me libra de condenación.

@@ -4,7 +4,7 @@ import { Storage } from 'utils';
 
 export const createCategoryKey = ({ id, type }) => `${type}_${id}_category`;
 
-const AnthemnSelectStyled = styledComponents.select`
+const HymnalSelectStyled = styledComponents.select`
   padding: .15rem 0.5rem;
   background-color: #20232a;
   color: #ccc;
@@ -12,7 +12,7 @@ const AnthemnSelectStyled = styledComponents.select`
   outline: none;
 `;
 
-export function AnthemnCategory({ element, ...rest }) {
+export function HymnalCategory({ element, ...rest }) {
   const [category, setCategory] = useState(
     Storage.get(createCategoryKey(element) || '')
   );
@@ -30,11 +30,11 @@ export function AnthemnCategory({ element, ...rest }) {
   };
 
   return (
-    <AnthemnSelectStyled value={category} onChange={handleChange} {...rest}>
+    <HymnalSelectStyled value={category} onChange={handleChange} {...rest}>
       <option value="">⚪ Sin categoría</option>
       <option value="CHEERFUL">🟡 Alegre</option>
       <option value="CONGREGATIONAL">🟢 Congregacional</option>
       <option value="SOLEMN">🟠 Solemne</option>
-    </AnthemnSelectStyled>
+    </HymnalSelectStyled>
   );
 }

@@ -1,10 +1,10 @@
 import { List } from 'components';
 import { useState } from 'react';
 
-import { useAnthemn } from 'hooks';
+import { useHymnals } from 'hooks';
 
-export function AnthemnTags({ onClick = () => {}, current }) {
-  const { anthemns, tags } = useAnthemn();
+export function HymnalTags({ onClick = () => {}, current }) {
+  const { hymnals, tags } = useHymnals();
   const [selected, setSelected] = useState(null);
   const [list, setList] = useState([]);
 
@@ -13,7 +13,7 @@ export function AnthemnTags({ onClick = () => {}, current }) {
     setList(() =>
       tag === selected
         ? []
-        : anthemns.filter((song) => song.tags?.split(',').includes(tag))
+        : hymnals.filter((song) => song.tags?.split(',').includes(tag))
     );
   };
 

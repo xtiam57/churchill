@@ -288,7 +288,7 @@ select {
   }
 }
 
-.anthemns-index.modal .modal-dialog {
+.hymnals-index.modal .modal-dialog {
   max-width: calc(100% - 3.5rem) !important;
 }
 

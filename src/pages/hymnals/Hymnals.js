@@ -23,7 +23,7 @@ import {
   Title,
   Wrapper,
 } from 'components';
-import { useAnthemn, useFolder, useKeyUp, usePresenter } from 'hooks';
+import { useFolder, useHymnals, useKeyUp, usePresenter } from 'hooks';
 import React, { useEffect, useRef, useState } from 'react';
 import {
   Button,
@@ -37,8 +37,8 @@ import createPersistedState from 'use-persisted-state';
 import useSound from 'use-sound';
 import { Storage, getBookmarkedItems } from 'utils';
 import { BROADCAST, MOVEMENT } from 'values';
-import { AnthemnIndex } from './AnthemnIndex';
-import { AnthemnTags } from './AnthemnTags';
+import { HymnalIndex } from './HymnalIndex';
+import { HymnalTags } from './HymnalTags';
 import { RecentBirthdays } from './RecentBirthdays';
 import { finderRender, typeaheadRender } from './renders';
 
@@ -46,14 +46,14 @@ const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
 export const createKey = ({ id, type }) => `${type}_${id}_config`;
 
-export default function AnthemnsPage() {
+export default function HymnalsPage() {
   const folder = useFolder();
 
   const typeaheadRef = useRef();
   const sliderRef = useRef();
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const { presenting } = usePresenter();
-  const { anthemns, current, setCurrent, moveAnthemn } = useAnthemn();
+  const { hymnals, current, setCurrent, moveHymnal } = useHymnals();
   const [showLogo, setShowLogo] = useState(true);
   const [openFinder, setOpenFinder] = useState(false);
   const [openIndex, setOpenIndex] = useState(false);
@@ -128,16 +128,16 @@ export default function AnthemnsPage() {
 
   const handleNextSlide = () => sliderRef.current.next();
 
-  const handlePrevAnthemn = () => {
+  const handlePrevHymnal = () => {
     if (!isPlaying) {
-      const anthemn = moveAnthemn(MOVEMENT.PREV);
+      const anthemn = moveHymnal(MOVEMENT.PREV);
       setSearch([anthemn]);
     }
   };
 
-  const handleNextAnthemn = () => {
+  const handleNextHymnal = () => {
     if (!isPlaying) {
-      const anthemn = moveAnthemn(MOVEMENT.NEXT);
+      const anthemn = moveHymnal(MOVEMENT.NEXT);
       setSearch([anthemn]);
     }
   };
@@ -167,8 +167,8 @@ export default function AnthemnsPage() {
     setBookmarks(getBookmarkedItems('anthemn', sort));
   };
 
-  useKeyUp('ArrowUp', handleNextAnthemn);
-  useKeyUp('ArrowDown', handlePrevAnthemn);
+  useKeyUp('ArrowUp', handleNextHymnal);
+  useKeyUp('ArrowDown', handlePrevHymnal);
   useKeyUp('F1', () => typeaheadRef.current.focus());
   useKeyUp('Space', handleTogglePlay);
   useKeyUp('KeyB', () => setOpenFinder(true), { ctrl: true });
@@ -186,7 +186,7 @@ export default function AnthemnsPage() {
           minLength={0}
           onChange={handleSearch}
           onFocus={(e) => e.target.select()}
-          options={anthemns}
+          options={hymnals}
           paginate={true}
           paginationText="Ver más opciones..."
           placeholder="Selecciona un versículo..."
@@ -233,7 +233,7 @@ export default function AnthemnsPage() {
           current={current}
         />
 
-        <AnthemnTags onClick={handleSearch} current={current} />
+        <HymnalTags onClick={handleSearch} current={current} />
       </Sidebar>
 
       {presenting ? (
@@ -364,7 +364,7 @@ export default function AnthemnsPage() {
               placement="top"
               overlay={<Tooltip>Himno previo</Tooltip>}
             >
-              <Button onClick={handlePrevAnthemn} variant="dark">
+              <Button onClick={handlePrevHymnal} variant="dark">
                 <FirstPage />
               </Button>
             </OverlayTrigger>
@@ -393,7 +393,7 @@ export default function AnthemnsPage() {
               placement="top"
               overlay={<Tooltip>Himno siguiente</Tooltip>}
             >
-              <Button onClick={handleNextAnthemn} variant="dark">
+              <Button onClick={handleNextHymnal} variant="dark">
                 <LastPage />
               </Button>
             </OverlayTrigger>
@@ -448,7 +448,7 @@ export default function AnthemnsPage() {
       <Finder
         show={openFinder}
         onHide={() => setOpenFinder(false)}
-        options={anthemns}
+        options={hymnals}
         onChange={(event) => {
           if (event.length) {
             handleSearch(event);
@@ -458,7 +458,7 @@ export default function AnthemnsPage() {
         render={finderRender}
       />
 
-      <AnthemnIndex
+      <HymnalIndex
         show={openIndex}
         onHide={() => setOpenIndex(false)}
         onChange={setBookmarks}

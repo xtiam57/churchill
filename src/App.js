@@ -2,9 +2,9 @@ import { HashRouter as Router } from 'react-router-dom';
 
 import { Navbar, Routesbar, Settings } from 'components';
 import {
-  AnthemnsProvider,
   AppProvider,
   BirthdaysProvider,
+  HymnalsProvider,
   PresenterProvider,
   ScripturesProvider,
 } from 'providers';
@@ -22,7 +22,7 @@ function App() {
       <Router>
         <PresenterProvider>
           <ScripturesProvider>
-            <AnthemnsProvider>
+            <HymnalsProvider>
               <BirthdaysProvider>
                 <GridStyled>
                   {/* Nav */}
@@ -35,7 +35,7 @@ function App() {
                 </GridStyled>
                 <Settings />
               </BirthdaysProvider>
-            </AnthemnsProvider>
+            </HymnalsProvider>
           </ScripturesProvider>
         </PresenterProvider>
       </Router>

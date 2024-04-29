@@ -1,8 +1,8 @@
-import json from 'assets/data/anthemns';
+import json from 'assets/data/hymnals';
 import React, { useMemo, useState } from 'react';
 import { Slide } from 'utils';
 
-const AnthemnsContext = React.createContext({});
+const HymnalsContext = React.createContext({});
 
 function getSizes(text) {
   const len = text
@@ -105,10 +105,10 @@ function splitLines(id, title, text, array, index) {
   return index;
 }
 
-function AnthemnsProvider({ children }) {
+function HymnalsProvider({ children }) {
   const tagsSet = useMemo(() => new Set(), []);
 
-  const anthemns = useMemo(() => {
+  const hymnals = useMemo(() => {
     return json.map(
       (
         {
@@ -127,7 +127,7 @@ function AnthemnsProvider({ children }) {
         const id = `A${number}`;
         let text = '';
         let slideIndex = 0;
-        const isNotAnthemn = tags?.toLowerCase().includes('coro');
+        const isNotHymnal = tags?.toLowerCase().includes('coro');
         // const isExtra = tags?.toLowerCase().includes('apéndice');
 
         if (tags) {
@@ -140,7 +140,7 @@ function AnthemnsProvider({ children }) {
         slides.push(
           Slide.create({
             id: `${id}_${slideIndex}`,
-            title: `${isNotAnthemn ? `Coro #${number}` : `Himno #${number}`}`,
+            title: `${isNotHymnal ? `Coro #${number}` : `Himno #${number}`}`,
             text: title,
             subtext: authors,
             index: slideIndex++,
@@ -197,22 +197,22 @@ function AnthemnsProvider({ children }) {
     );
   }, [tagsSet]);
 
-  const [first] = anthemns;
+  const [first] = hymnals;
   const [current, setCurrent] = useState(first);
   const [tags] = useState(Array.from(tagsSet).sort());
 
   return (
-    <AnthemnsContext.Provider
+    <HymnalsContext.Provider
       value={{
-        anthemns,
+        hymnals,
         current,
         setCurrent,
         tags,
       }}
     >
       {children}
-    </AnthemnsContext.Provider>
+    </HymnalsContext.Provider>
   );
 }
 
-export { AnthemnsContext, AnthemnsProvider };
+export { HymnalsContext, HymnalsProvider };

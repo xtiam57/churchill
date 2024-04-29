@@ -5,17 +5,17 @@ import {
   Newspaper,
   PsychologyAlt,
 } from '@mui/icons-material';
-import AnthemnsPage from 'pages/anthemns';
 import BirthdaysPage from 'pages/birthdays';
 import CastPage from 'pages/cast';
 import HomePage from 'pages/home';
+import HymnalsPage from 'pages/hymnals';
 import ScripturesPage from 'pages/scriptures';
 import TriviaPage from 'pages/trivia';
 
 export const PATHS = {
   ROOT: '/',
   SCRIPTURES_PAGE: '/scriptures',
-  ANTHEMNS_PAGE: '/anthemns',
+  ANTHEMNS_PAGE: '/hymnals',
   BIRTHDAYS_PAGE: '/birthdays',
   CAST_PAGE: '/cast-screen',
   COUNTDOWN_PAGE: '/countdown',
@@ -47,7 +47,7 @@ export const routes = flatten([
     key: PATHS.ANTHEMNS_PAGE,
     exact: true,
     path: PATHS.ANTHEMNS_PAGE,
-    component: AnthemnsPage,
+    component: HymnalsPage,
     icon: <Audiotrack />,
     label: 'Himnos',
     menu: true,
