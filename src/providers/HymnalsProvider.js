@@ -124,7 +124,7 @@ function HymnalsProvider({ children }) {
         index
       ) => {
         const slides = [];
-        const id = `A${number}`;
+        const id = `A${index}`;
         let text = '';
         let slideIndex = 0;
         const isNotHymnal = tags?.toLowerCase().includes('coro');
