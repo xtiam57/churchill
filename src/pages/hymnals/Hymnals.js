@@ -60,7 +60,7 @@ export default function HymnalsPage() {
   const [search, setSearch] = useState([current]);
   const [bookmarkSort, setBookmarkSort] = useState('asc');
   const [bookmarks, setBookmarks] = useState(
-    getBookmarkedItems('anthemn', bookmarkSort)
+    getBookmarkedItems('hymnal', bookmarkSort)
   );
   const [url, setUrl] = useState(folder.getPath(current.reference));
   const [isMP3Loaded, setIsMP3Loaded] = useState(false);
@@ -118,8 +118,8 @@ export default function HymnalsPage() {
     setSearch(event);
 
     if (event.length) {
-      const [anthemn] = event;
-      setCurrent(anthemn);
+      const [hymnal] = event;
+      setCurrent(hymnal);
       typeaheadRef.current.blur();
     }
   }
@@ -130,15 +130,15 @@ export default function HymnalsPage() {
 
   const handlePrevHymnal = () => {
     if (!isPlaying) {
-      const anthemn = moveHymnal(MOVEMENT.PREV);
-      setSearch([anthemn]);
+      const hymnal = moveHymnal(MOVEMENT.PREV);
+      setSearch([hymnal]);
     }
   };
 
   const handleNextHymnal = () => {
     if (!isPlaying) {
-      const anthemn = moveHymnal(MOVEMENT.NEXT);
-      setSearch([anthemn]);
+      const hymnal = moveHymnal(MOVEMENT.NEXT);
+      setSearch([hymnal]);
     }
   };
 
@@ -164,7 +164,7 @@ export default function HymnalsPage() {
   const handleSort = () => {
     const sort = bookmarkSort === 'desc' ? 'asc' : 'desc';
     setBookmarkSort(sort);
-    setBookmarks(getBookmarkedItems('anthemn', sort));
+    setBookmarks(getBookmarkedItems('hymnal', sort));
   };
 
   useKeyUp('ArrowUp', handleNextHymnal);
@@ -224,7 +224,7 @@ export default function HymnalsPage() {
         <RecentBirthdays onClick={handleSearch} />
 
         <BookmarkList
-          type="anthemn"
+          type="hymnal"
           items={bookmarks}
           onChange={setBookmarks}
           onClick={(item) => handleSearch([item])}
@@ -237,7 +237,11 @@ export default function HymnalsPage() {
       </Sidebar>
 
       {presenting ? (
-        <Alert presenting={!showLogo} label={current?.title} />
+        <Alert
+          presenting={!showLogo}
+          label={current?.title}
+          sublabel={current?.book}
+        />
       ) : null}
 
       <Wrapper direction="column" {...settings}>
@@ -286,36 +290,11 @@ export default function HymnalsPage() {
           </div>
         )}
 
-        <Controls>
-          {isMP3Loaded ? (
-            <div className="d-flex">
-              <VolumeMute fontSize="small" />
-              <Form.Control
-                custom
-                type="range"
-                name="volume"
-                value={volume}
-                min="0"
-                max="1"
-                step="0.05"
-                className="mx-2 volume-control"
-                onChange={({ target }) => {
-                  setVolume(() => {
-                    handleSave(target);
-                    return +target.value;
-                  });
-                }}
-              />
-              <VolumeUp fontSize="small" />
-            </div>
-          ) : null}
-
-          {isMP3Loaded ? null : (
+        {!isMP3Loaded && (
+          <div className="py-2 px-3 text-white bg-gray d-flex align-items-center">
             <small>
-              <span className="text-light">
-                Este himno <strong>NO</strong> tiene pista.
-              </span>{' '}
-              Agrega su pista en formato <i>.mp3</i> en la carpeta{' '}
+              <strong>Este himno NO tiene pista.</strong> Agrega su pista en
+              formato <i>.mp3</i> en la carpeta{' '}
               <strong
                 className="pointer text-underline"
                 onClick={handleOpenPath}
@@ -324,41 +303,85 @@ export default function HymnalsPage() {
               </strong>{' '}
               con el nombre <strong>{current.reference}.mp3</strong>
             </small>
-          )}
+          </div>
+        )}
+
+        <Controls>
+          <div className="d-flex align-items-center">
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Abrir directorio de pistas</Tooltip>}
+            >
+              <Button
+                className="mr-2"
+                variant="secondary"
+                onClick={handleOpenPath}
+              >
+                <FolderCopy />
+              </Button>
+            </OverlayTrigger>
+
+            {isMP3Loaded && (
+              <div className="d-flex align-items-center">
+                <Form.Control
+                  custom
+                  type="range"
+                  name="playbackRate"
+                  value={playbackRate}
+                  min="0.5"
+                  max="2"
+                  step="0.05"
+                  style={{ width: '80px' }}
+                  className="mx-2 volume-control"
+                  onChange={({ target }) => {
+                    setPlaybackRate(() => {
+                      handleSave(target);
+                      return +target.value;
+                    });
+                    if (isPlaying) {
+                      play();
+                      setTrackProgress(0);
+                    }
+                  }}
+                />
+                <small className="text-light">
+                  x{Number.parseFloat(playbackRate).toFixed(2)}
+                </small>
+              </div>
+            )}
+          </div>
 
           <div className="d-flex">
-            {isMP3Loaded ? (
-              <>
-                <ButtonGroup className="mx-2">
-                  {isPlaying ? (
-                    <OverlayTrigger
-                      placement="top"
-                      overlay={<Tooltip>Detener</Tooltip>}
+            {isMP3Loaded && (
+              <div className="mr-2">
+                {isPlaying ? (
+                  <OverlayTrigger
+                    placement="top"
+                    overlay={<Tooltip>Detener</Tooltip>}
+                  >
+                    <Button onClick={() => stop()} variant="light">
+                      <Stop />
+                    </Button>
+                  </OverlayTrigger>
+                ) : (
+                  <OverlayTrigger
+                    placement="top"
+                    overlay={<Tooltip>Reproducir</Tooltip>}
+                  >
+                    <Button
+                      onClick={() => {
+                        play();
+                        startTimer();
+                        sound?.seek(trackProgress);
+                      }}
+                      variant="secondary"
                     >
-                      <Button onClick={() => stop()} variant="light">
-                        <Stop />
-                      </Button>
-                    </OverlayTrigger>
-                  ) : (
-                    <OverlayTrigger
-                      placement="top"
-                      overlay={<Tooltip>Reproducir</Tooltip>}
-                    >
-                      <Button
-                        onClick={() => {
-                          play();
-                          startTimer();
-                          sound?.seek(trackProgress);
-                        }}
-                        variant="secondary"
-                      >
-                        <PlayArrow />
-                      </Button>
-                    </OverlayTrigger>
-                  )}
-                </ButtonGroup>
-              </>
-            ) : null}
+                      <PlayArrow />
+                    </Button>
+                  </OverlayTrigger>
+                )}
+              </div>
+            )}
 
             <OverlayTrigger
               placement="top"
@@ -397,51 +420,32 @@ export default function HymnalsPage() {
                 <LastPage />
               </Button>
             </OverlayTrigger>
-
-            <OverlayTrigger
-              placement="top"
-              overlay={<Tooltip>Abrir directorio de pistas</Tooltip>}
-            >
-              <Button
-                className="ml-2"
-                variant="secondary"
-                onClick={handleOpenPath}
-              >
-                <FolderCopy />
-              </Button>
-            </OverlayTrigger>
           </div>
 
           {isMP3Loaded ? (
-            <>
-              <div className="d-flex align-items-center">
-                <Form.Control
-                  custom
-                  type="range"
-                  name="playbackRate"
-                  value={playbackRate}
-                  min="0.5"
-                  max="2"
-                  step="0.05"
-                  style={{ width: '80px' }}
-                  className="mx-2 volume-control"
-                  onChange={({ target }) => {
-                    setPlaybackRate(() => {
-                      handleSave(target);
-                      return +target.value;
-                    });
-                    if (isPlaying) {
-                      play();
-                      setTrackProgress(0);
-                    }
-                  }}
-                />
-                <small className="text-light">
-                  x{Number.parseFloat(playbackRate).toFixed(2)}
-                </small>
-              </div>
-            </>
-          ) : null}
+            <div className="d-flex">
+              <VolumeMute fontSize="small" />
+              <Form.Control
+                custom
+                type="range"
+                name="volume"
+                value={volume}
+                min="0"
+                max="1"
+                step="0.05"
+                className="mx-2 volume-control"
+                onChange={({ target }) => {
+                  setVolume(() => {
+                    handleSave(target);
+                    return +target.value;
+                  });
+                }}
+              />
+              <VolumeUp fontSize="small" />
+            </div>
+          ) : (
+            <div />
+          )}
         </Controls>
       </Wrapper>
 

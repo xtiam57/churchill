@@ -69,6 +69,21 @@ export const PresenterStyled = styled.section`
       margin-top: 1rem;
     }
 
+    small.book {
+      display: block;
+      color: ${({ subtextcolor }) => subtextcolor || '#007bff'};
+      border: solid 2px ${({ subtextcolor }) => subtextcolor || '#007bff'};
+      font-size: 0.42em;
+      margin-top: 1rem;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1;
+      padding: 0.5em;
+      width: fit-content;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
     div.opts {
       font-size: 1.1em;
       color: ${({ optionscolor }) => optionscolor || '#ffff00'};

@@ -120,6 +120,7 @@ function HymnalsProvider({ children }) {
           stanzas,
           tags,
           authors,
+          book,
         },
         index
       ) => {
@@ -142,7 +143,8 @@ function HymnalsProvider({ children }) {
             id: `${id}_${slideIndex}`,
             title: `${isNotHymnal ? `Coro #${number}` : `Himno #${number}`}`,
             text: title,
-            subtext: authors,
+            // subtext: authors,
+            book: book,
             index: slideIndex++,
           })
         );
@@ -184,7 +186,7 @@ function HymnalsProvider({ children }) {
           number,
           title: `#${number} ${title}`,
           name: title,
-          type: 'anthemn',
+          type: 'hymnal',
           slides,
           text,
           tags: tags?.toLowerCase(),
@@ -192,6 +194,7 @@ function HymnalsProvider({ children }) {
           length: slides.length,
           firstSlide: slides[0],
           lastSlide: slides[slides.length - 1],
+          book,
         };
       }
     );

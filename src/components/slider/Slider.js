@@ -26,7 +26,7 @@ export const Slider = forwardRef(
     },
     ref
   ) => {
-    const type = wrapper?.type;
+    const { type } = wrapper;
     const [, setMessage] = useBroadcast(BROADCAST.INITIAL_CHANNEL);
     const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
 
@@ -92,6 +92,7 @@ export const Slider = forwardRef(
           id={slide?.id || slide?.index}
           text={slide?.text}
           subtext={slide?.subtext}
+          book={slide?.book}
           bg={slide?.bg}
           grayscale={grayscale}
           leftshadow={loop ? true : slide?.index !== 0}

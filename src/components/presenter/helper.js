@@ -1,4 +1,4 @@
-export function process(text, subtext) {
+export function process(text, subtext, book) {
   const res = text
     .replaceAll('///', '<b>///</b>')
     .replaceAll('//', '<b>//</b>')
@@ -17,7 +17,9 @@ export function process(text, subtext) {
     .replace('9)', '<strong class="fs-title">(9)</strong><br/> ')
     .replace('10)', '<strong class="fs-title">(10)</strong><br/> ');
 
-  return `${res}${subtext ? `<small>${subtext}</small>` : ''}`;
+  return `${res}${subtext ? `<small>${subtext}</small>` : ''}${
+    book ? `<small class="book">${book}</small>` : ''
+  }`;
 }
 
 const isOverflown = ({ clientHeight, scrollHeight }) => {

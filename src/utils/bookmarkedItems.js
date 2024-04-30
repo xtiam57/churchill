@@ -1,6 +1,6 @@
 import { Storage } from './storage';
 
-export const getBookmarkedItems = (view = 'anthemn', order = 'desc') => {
+export const getBookmarkedItems = (view = 'hymnal', order = 'desc') => {
   return Storage.getAll(order)
     .filter(({ key }) => key.includes(view) && key.includes('bookmarked'))
     .sort(

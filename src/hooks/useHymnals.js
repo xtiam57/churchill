@@ -8,15 +8,15 @@ export function useHymnals() {
   const [move] = useIterate(current, hymnals);
 
   const moveToNextHymnal = () => {
-    const anthemnToGo = move(MOVEMENT.NEXT);
-    setCurrent(anthemnToGo);
-    return anthemnToGo;
+    const hymnalToGo = move(MOVEMENT.NEXT);
+    setCurrent(hymnalToGo);
+    return hymnalToGo;
   };
 
   const moveToPrevHymnal = () => {
-    const anthemnToGo = move(MOVEMENT.PREV);
-    setCurrent(anthemnToGo);
-    return anthemnToGo;
+    const hymnalToGo = move(MOVEMENT.PREV);
+    setCurrent(hymnalToGo);
+    return hymnalToGo;
   };
 
   const moveHymnal = (action = MOVEMENT.NEXT) => {

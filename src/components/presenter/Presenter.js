@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { generateGUID } from 'utils';
 import { process, resizeText } from './helper';
 import { PresenterStyled } from './styled';
@@ -14,6 +14,7 @@ export function Presenter({
   id = generateGUID(),
   text = '',
   subtext = null,
+  book = '',
   ...rest
 }) {
   const handleFontScale = () => {
@@ -39,7 +40,7 @@ export function Presenter({
           key={id}
           id="presenter-text"
           dangerouslySetInnerHTML={{
-            __html: process(text, subtext),
+            __html: process(text, subtext, book),
           }}
           {...textMotion}
         />

@@ -27,7 +27,8 @@ export default function CastPage() {
             id={message.id}
             text={message.text}
             subtext={message.subtext}
-            bg={message?.bg}
+            book={message.book}
+            bg={message.bg}
             {...settings}
           />
         ) : (
