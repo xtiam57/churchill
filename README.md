@@ -80,6 +80,6 @@ Si oyereis hoy su voz,
 No endurezcáis vuestros corazones,
 Como en la provocación, en el día de la tentación en el desierto,
 
-Quiero que estés listo para ir al cierto pronto conmigo.
+Quiero que estés listo para ir al cielo pronto conmigo.
 
-Tu amigo, David (Madrid)
+
