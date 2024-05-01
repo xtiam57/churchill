@@ -73,8 +73,8 @@ export const PresenterStyled = styled.section`
       display: block;
       color: ${({ subtextcolor }) => subtextcolor || '#007bff'};
       border: solid 2px ${({ subtextcolor }) => subtextcolor || '#007bff'};
-      font-size: 0.42em;
-      margin-top: 1rem;
+      font-size: 0.36em;
+      margin-top: 1.5rem;
       margin-left: auto;
       margin-right: auto;
       line-height: 1;
@@ -88,8 +88,7 @@ export const PresenterStyled = styled.section`
       font-size: 1.1em;
       color: ${({ optionscolor }) => optionscolor || '#ffff00'};
       background-color: rgba(0, 0, 0, 0.5);
-      border: solid 1px var(--secondary);
-      border-radius: 10px;
+      border: solid 1px ${({ optionscolor }) => optionscolor || '#ffff00'};
       padding: 10px 20px 15px;
       height: 100%;
       display: flex;
@@ -145,6 +144,7 @@ export const CornerStyled = styled.section`
   }
   &.top-left {
     top: 3%;
+    bottom: auto;
     left: 2%;
   }
   &.bottom-center {
@@ -154,6 +154,7 @@ export const CornerStyled = styled.section`
   }
   &.top-center {
     top: 3%;
+    bottom: auto;
     right: 50%;
     transform: translateX(50%);
   }
@@ -163,6 +164,7 @@ export const CornerStyled = styled.section`
   }
   &.top-right {
     top: 3%;
+    bottom: auto;
     right: 2%;
   }
 `;

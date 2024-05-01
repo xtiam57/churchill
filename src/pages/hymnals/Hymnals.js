@@ -272,7 +272,7 @@ export default function HymnalsPage() {
           para cambiar de himno.
         </Slider>
 
-        {isMP3Loaded && (
+        {isMP3Loaded ? (
           <div className="p-2 bg-gray d-flex align-items-center">
             <Form.Control
               custom
@@ -288,10 +288,8 @@ export default function HymnalsPage() {
               }}
             />
           </div>
-        )}
-
-        {!isMP3Loaded && (
-          <div className="py-2 px-3 text-white bg-gray d-flex align-items-center">
+        ) : (
+          <div className="py-2 px-3 bg-warning d-flex align-items-center">
             <small>
               <strong>Este himno NO tiene pista.</strong> Agrega su pista en
               formato <i>.mp3</i> en la carpeta{' '}

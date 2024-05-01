@@ -1,6 +1,7 @@
 import { List } from 'components';
 import { useState } from 'react';
 
+import { West } from '@mui/icons-material';
 import { useHymnals } from 'hooks';
 
 export function HymnalTags({ onClick = () => {}, current }) {
@@ -35,7 +36,7 @@ export function HymnalTags({ onClick = () => {}, current }) {
               className="text-right"
               onClick={() => onChangeTag(selected)}
             >
-              (Atrás)
+              <West />
             </List.Action>
           </List.Item>
         )}
