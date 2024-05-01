@@ -363,7 +363,9 @@ export function Settings() {
           setExpanded((value) => !value);
         }}
       >
-        <CalendarMonth fontSize="small" /> Horarios
+        <CalendarMonth fontSize="small" /> Horarios (
+        {settings?.schedules?.filter((s) => s.active).length}/
+        {settings?.schedules?.length})
       </Button>
 
       {expanded && (
@@ -403,7 +405,6 @@ export function Settings() {
                     id={`active-${index}`}
                     name="active"
                     checked={schedule.active}
-                    disabled={index === 0}
                     onChange={() =>
                       handleSchedulesChangeValue(
                         'active',

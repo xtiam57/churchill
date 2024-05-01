@@ -6,6 +6,7 @@ export const RoutesbarStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* padding: 42px 0; */
   /* justify-content: center; */
   background-color: var(--light);
   grid-area: routesbar;

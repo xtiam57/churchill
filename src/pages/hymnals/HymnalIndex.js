@@ -109,6 +109,7 @@ export function HymnalIndex({
             <span className="name" onClick={() => onSelect(item)}>
               {item.name}
             </span>
+            <span className="tag active">{item.book}</span>
           </span>
           <HymnalCategory element={item} className="mr-2" />
           <Bookmark icon element={item} onChange={onChange} sort={sort} />

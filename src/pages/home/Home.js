@@ -54,18 +54,28 @@ export default function HomePage() {
 
       notices[index] = {
         ...notices[index],
-        slides: schedules.map((entry) =>
-          Slide.create({
-            //  ${entry.daySuffix ? entry.daySuffix : ''}
-            text: `
+        slides:
+          schedules.length > 0
+            ? schedules.map((entry) =>
+                Slide.create({
+                  //  ${entry.daySuffix ? entry.daySuffix : ''}
+                  text: `
                 ${entry.name ? `${entry.name}/n` : ''}
                 <b>${entry.day}</b>/n
                 <strong class="fs-xl" style="line-height:1">
                   ${entry.hour} ${entry.hourSuffix}
                 </strong>
               `,
-          })
-        ),
+                })
+              )
+            : [
+                Slide.create({
+                  id: 'BS_404',
+                  text: `No hay horarios que mostrar.`,
+                  type: 'notice',
+                  count: 0,
+                }),
+              ],
       };
       return [...notices];
     });

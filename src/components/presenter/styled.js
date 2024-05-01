@@ -73,7 +73,7 @@ export const PresenterStyled = styled.section`
       display: block;
       color: ${({ subtextcolor }) => subtextcolor || '#007bff'};
       border: solid 2px ${({ subtextcolor }) => subtextcolor || '#007bff'};
-      font-size: 0.36em;
+      font-size: 0.32em;
       margin-top: 1.5rem;
       margin-left: auto;
       margin-right: auto;
