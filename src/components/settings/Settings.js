@@ -423,7 +423,7 @@ export function Settings() {
                         size="sm"
                         value={schedule.name}
                         name="name"
-                        placeholder="Descripción del horario..."
+                        placeholder="Describe que actividad tiene la Iglesia..."
                         disabled={!schedule.active}
                         onChange={({ target }) => {
                           const { name, value } = target;

@@ -172,6 +172,22 @@ const SETTINGS_INITIAL_STATE = {
       hourSuffix: 'AM',
       active: false,
     },
+    {
+      name: null,
+      day: 'Domingo',
+      daySuffix: '',
+      hour: '01:00',
+      hourSuffix: 'AM',
+      active: false,
+    },
+    {
+      name: null,
+      day: 'Domingo',
+      daySuffix: '',
+      hour: '01:00',
+      hourSuffix: 'AM',
+      active: false,
+    },
   ],
   ...THEMES['dark'],
 };
