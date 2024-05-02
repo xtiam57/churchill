@@ -41,9 +41,6 @@ Que soy libre de condenación.
 Mi camino su ejemplo marcó.
 Y por darme la vida Él quiso morir.
 En la cruz mi pecado clavó.
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -79,9 +76,6 @@ por tu trono lo tendrás.
 a tus pies vengo a poner,
 toma todo lo que soy,
 todo tuyo quiero ser.
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -107,13 +101,10 @@ habló a los millares la palabra de amor.
 que son los viejos muros de la Jerusalén;
 Viejas paredes ya destruidas,
 que si tuvieran vida, nos hablarían bien.
-***
-@TAGS
-Apéndice
 
 ---
 
-## 805. ESTOY BIEN CON MI DIOS
+## 805. ESTOY BIEN (ALTERNATIVA)
 ***
 1) De paz inundada mi senda ya esté
 O cúbrala un mar de aflicción,
@@ -140,9 +131,6 @@ Gloria demos al buen Salvador.
 Al irse la niebla veloz;
 Desciende Jesús con su gran majestad,
 ¡Aleluya, estoy bien con mi Dios!.
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -168,9 +156,6 @@ Dejaré el resultado al Señor.
 La bendita palabra de Dios.
 Sembraré, sembraré mientras viva,
 Dejaré el resultado al Señor.
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -203,56 +188,6 @@ Es la maravillosa gracia de Jesús.
 Llámanos a ser hechos hijos de nuestro Dios;
 Colma de su consuelo, nos llena de virtud,
 Es la maravillosa gracia de Jesús.
-***
-@TAGS
-Apéndice
-
----
-
-## 808. SOLO EN JESÚS
-***
-1) Sólo en Jesús, está mi fe
-Mi esperanza y mi canción
-Piedra angular, firme sostén
-Inconmovible en la aflicción.
-***
-2) Cuán grande amor, inmensa paz
-En el temor o adversidad
-Consolador, amigo fiel
-Yo en su amor me sostendré.
-***
-3) Solo en Jesús, hijo de Dios
-Quien se humilló por nuestro bien
-Cordero de, mi salvación
-Por este mundo herido fue.
-***
-4) En una cruz fue a morir
-Y Dios mostró su gracia ahí
-Pues mi pecado Él llevó
-En su aflicción vida me dio.
-***
-5) En un sepulcro, Él yació
-El cuerpo inerte del señor
-Más el tercer día llegó
-Resucitó en gloriosa luz.
-***
-6) Y al triunfar, sobre el mal
-Perdió el pecado potestad
-De Él suyo soy, Él mío es
-Pues con su sangre me compró.
-***
-7) Desde al nacer, hasta el morir
-Sea el poder de cristo en mí
-No temeré, seguro estoy
-Mi vida yo a Él, le doy.
-***
-8) Ningún poder, ningún afán
-De Él me arrebatará
-Hasta que Él, venga otra vez
-//En su poder me sostendré.//
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -277,9 +212,6 @@ Eres mi todo, Dios.
 En sequedad o en tentación,
 tu me sostienes mi Señor,
 Eres mi todo, Dios.
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -312,9 +244,6 @@ Porque ha prometido caminar a nuestro lado
 Cerca está, porque Él es Dios.
 ***
 @REPETIR_CORO_AL_FINAL
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -354,7 +283,6 @@ más con tu Santo Espíritu.//
 ***
 @TAGS
 Coro
-Apéndice
 
 ---
 
@@ -404,9 +332,6 @@ Ya los tiempos se consuman, su promesa se cumplió.
 a otorgar la recompensa por la fe y la devoción.
 Yo soy Alfa y soy Omega, el primero y el final,
 es el tiempo de la siega y el gran juicio llegará."
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -432,9 +357,6 @@ y la vida abundante Jesús le dio.
 de su alma la salvación;
 vida eterna pudo alcanzar,
 pues la vida abundante Jesús le dio.
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -460,37 +382,6 @@ y sus pies nunca resbalarán.
 para siempre seguro estará;
 caerán a su diestra diez mil,
 más a Él no vendrá mortandad.
-***
-@TAGS
-Apéndice
-
----
-
-## 816. SU GRACIA ES MAYOR
-***
-1) ¿Que amor mis pecados decide olvidar?
-Lanzados al mar no los quiere contar,
-Él siendo Omnisciente olvida mi error,
-Mis faltas son muchas, su gracia es mayor.
-***
-@CORO
-Gloria Dios, su gracia es mayor,
-Sus misericordias hoy nuevas son,
-Mis faltas son muchas;
-Su gracia es mayor.
-***
-2) Paciente me aguarda en mi desviar,
-Un padre que tierno me llama al hogar,
-Recibe al débil y vil pecador,
-Mis faltas son muchas, su gracia es mayor.
-***
-3) Que grandes riquezas Él nos otorgó,
-Su sangre fue el pago, su vida entregó.
-Pago esa deuda y la canceló,
-Mis faltas son muchas, su gracia es mayor.
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -516,9 +407,6 @@ fui adoptado por Cristo el amado, loores por siempre daré.
 me ha preparado un bello lugar en la mansión celestial;
 Siempre recuerdo con fe y gratitud, al contemplarle en la cruz,
 que sus heridas me dieron la vida ¡Alabo al bendito Jesús!
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -547,9 +435,6 @@ A mi Dios mi Señor,
 Exaltado en su trono, Adorad
 De rodillas adoradle
 Con mi vida le amaré y le adoraré.
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -575,9 +460,6 @@ me cuenta de su gran amor.
 que en Cristo hay salvación,
 Llevando este mensaje de
 muerte y resurrección.
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -603,9 +485,6 @@ y en Cristo fijo el ancla, confiando más.
 que libra de tristeza y aleja amarga hiel.
 Por fe yo iré al cielo, mansión del ser de amor,
 la fuente inagotable de dicha y bien.
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -626,9 +505,6 @@ yo iré de la tierra hasta el fin.
 gentes que el amar de Dios no gozan en su ser.
 Hoy sé que debo ministrar a todos por doquier,
 y gozoso compartir la gracia del Señor.
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -654,9 +530,6 @@ No volveremos a sufrir después.
 puede traer miseria y pesar;
 el hombre es como el halcón que, libre,
 ya listo está, y así podrá volar.
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -676,9 +549,6 @@ venga nos encuentre bien unidos.//
 con mi hermano?//
 //Dios no escucha la oración, Dios no
 escucha la oración si no estoy reconciliado.//
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -711,9 +581,6 @@ amor que me trajo el perdón.
 la esperanza que aliento
 la debo al Señor,
 porque Él vino a mi corazón.
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -742,9 +609,6 @@ en Él hay bienestar.
 y conmigo está su solaz. Cuento con Él,
 es mi ayuda tan fiel,
 me da perfecta paz.
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -770,53 +634,6 @@ que al hombre pudo redimir de su pecado atroz.
 y cada reino caerá con cada trama y plan carnal;
 el gran amor del Redentor por siempre durará
 la gran canción de salvación su pueblo cantará.
-***
-@TAGS
-Apéndice
-
----
-
-## 827. ÉL ME SOSTENDRÁ
-***
-1) Si mi fe ha de caer,
-Él me sostendrá;
-en la tentación yo sé,
-Él me sostendrá.
-No podría estar de pie,
-en la oscuridad;
-pues mi amor muy frágil es,
-Él me sostendrá.
-***
-@CORO
-Él me sostendrá,
-Él me sostendrá;
-pues me ama el Salvador,
-Él me sostendrá.
-***
-2) Él se goza en quien salvó,
-Él me sostendrá;
-ante Él precioso soy,
-Él me sostendrá.
-Sus promesas fieles son,
-mi alma guardará;
-alto precio Él pagó,
-Él me sostendrá.
-***
-3) Él sufrió y por mí murió,
-Él me sostendrá;
-la justicia Él cumplió,
-Él me sostendrá.
-Vida eterna tengo en Él,
-Él me sostendrá;
-hasta que le pueda ver
-¡Él regresará!
-Él regresará,
-Él regresará;
-pues me ama el Salvador,
-Él regresará.
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -846,9 +663,6 @@ haz que ande en rectitud,
 para que los demás vean
 tu luz y paz,
 dócil, útil con tu virtud.
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -876,9 +690,6 @@ hallé esta paz en Cristo, mi Dios.
 hallé este gozo en Cristo, mi Dios.
 Siento el amor, dentro de mi corazón,
 hallé este amor en Cristo, mi Dios.
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -904,9 +715,6 @@ buscando paz, salvación.
 cada momento se fiel.
 Otros que vean en ti Su amor
 pronto se rindan a Él.
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -932,9 +740,6 @@ De júbilos resonantes.
 En su lenguaje todo:
 //Lo que respira alabe al Señor.//
 ¡Amén!
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -960,9 +765,6 @@ y te alabo mi Señor.
 pues sólo Tú me podrás saciar.
 Sólo Tú eres mi alegría,
 la razón de mi existir.
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -988,37 +790,6 @@ temeré, no, temeré.
 mas Tú me dotas de tu gran poder.
 Mi espíritu renuevas con la idea nueva
 de vencer, sí, de vencer.
-***
-@TAGS
-Apéndice
-
----
-
-## 834. MI SER DESCANSA EN ÉL
-***
-1) Mi ser, descansa en Él, no dudes ya,
-aunque mañana haya tormentas;
-Dios contigo está, no temas más
-las llamas de dolor que asechan.
-***
-@CORO
-Dios, Tú eres mi Dios;
-no seré removido, en Ti confío.
-Dios, renueva hoy un firme espíritu en mí;
-//Descanso solo en Ti.//
-***
-2) Mi ser, descansa en Dios, no tiembles ya
-ante las sombras de peligro;
-Pon tu fe en Él, tu escudo es
-que apaga el fuego del maligno.
-***
-3) Mi ser, descansa en Dios, abraza fiel
-esta Verdad que es luz y vida;
-Ven, espera en Él, verás nacer
-con esperanza un nuevo día.
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -1037,9 +808,6 @@ Rey exaltado en gloria es Cristo Jesús.
 2) Él me redimió, mis culpas su amor borró.
 Con su poder, mi vida Él transformó,
 Rey exaltado en gloria es Cristo Jesús.
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -1065,9 +833,6 @@ es el Creador, Sustentador, Gobernador.
 Al que era, que es y siempre será.
 ¡Majestad! Su triunfo proclamad
 pronto vendrá nos llevará y reinará.
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -1098,9 +863,6 @@ La victoria nos dará. Conquista su verdad.
 con la gloria en su seño que transforma en Edén.
 Él la vida santifica, anunciad tan grande bien.
 Que hay en su verdad.
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -1130,9 +892,6 @@ confiando en su poder.
 que nunca vuelva atrás;
 que siga siempre en pos de Él,
 y me guiará en paz.
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -1153,9 +912,6 @@ su iglesia esperando está, y aclamará con gozo a su Señor.
 ***
 4) ¡Oh bienvenido Rey Jesús! tus hijos te esperan ya;
 muy pronto han de ver tu luz, y gozar en tu presencia siempre allá.
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -1171,9 +927,6 @@ Confiaré en Ti.
 Confiaré en Ti,
 El débil dirá fuerte soy,
 con poder del Señor.
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -1219,9 +972,6 @@ cuando venga a reinar.
 el amanecer del Rey.
 Mira a Cristo, hecho hombre,
 para darnos redención.
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -1256,9 +1006,6 @@ Dispuesto estoy a padecer,
 Sobre el pecado vil,
 Y toda vanidad
 Confiando en Cristo venceré.
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -1288,9 +1035,6 @@ Yo fui mucho tiempo esclavo del mal,
 Él sana las llagas de mi corazón.
 Él sana al leproso al ciego da luz;
 // por eso confió tan solo en Jesús. //
-***
-@TAGS
-Apéndice
 
 ---
 
@@ -1317,7 +1061,6 @@ que otra vez triunfó//
 ***
 @TAGS
 Himno Nacional
-Apéndice
 ***
 @AUTHORS
 "Gloria al Bravo Pueblo"
@@ -1345,7 +1088,6 @@ piensa ¡Oh, Patria querida! que el cielo
 ***
 @TAGS
 Himno Nacional
-Apéndice
 ***
 @AUTHORS
 "Mexicanos, al grito de guerra"
@@ -1373,7 +1115,6 @@ que rendimos al Dios de Jacob.
 ***
 @TAGS
 Himno Nacional
-Apéndice
 ***
 @AUTHORS
 "Somos libres, seámoslo siempre"

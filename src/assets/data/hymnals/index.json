@@ -191,7 +191,7 @@
     "title": "ENGRANDECIDO SEA JEHOVÁ",
     "chorus": null,
     "stanzas": [
-      "Engrandecido sea Jehová,/nnuestro Dios;/nPor todas las edades,/npor siempre."
+      "1) Engrandecido sea Jehová,/nnuestro Dios;/nPor todas las edades,/npor siempre."
     ],
     "startsWithChorus": false,
     "repeatChorusAtEnd": false,
@@ -2847,7 +2847,7 @@
     "title": "ALABAD A JEHOVÁ",
     "chorus": null,
     "stanzas": [
-      "Alabad a Jehová, porque Él es bueno;/nPorque para siempre es su misericordia,/nEs su misericordia, es su misericordia."
+      "1) Alabad a Jehová, porque Él es bueno;/nPorque para siempre es su misericordia,/nEs su misericordia, es su misericordia."
     ],
     "startsWithChorus": false,
     "repeatChorusAtEnd": false,
@@ -6734,7 +6734,7 @@
     "title": "AMOR, AMOR",
     "chorus": null,
     "stanzas": [
-      "Amor, amor, amor, amor;/nHermanos míos, gozo sí./nAma a tu prójimo como a ti mismo./nDios es amor."
+      "1) Amor, amor, amor, amor;/nHermanos míos, gozo sí./nAma a tu prójimo como a ti mismo./nDios es amor."
     ],
     "startsWithChorus": false,
     "repeatChorusAtEnd": false,
@@ -7885,7 +7885,7 @@
     "title": "TE EXALTARE, MI DIOS, MI REY",
     "chorus": null,
     "stanzas": [
-      "Te exaltaré, mi Dios, mi Rey,/nY bendeciré tu nombre/nEternamente y para siempre./nCada día te bendeciré,/nY alabaré tu nombre/nEternamente y para siempre./nGrande es Jehová,/nY digno de suprema alabanza;/nY su grandeza es inescrutable./nCada día te bendeciré."
+      "1) Te exaltaré, mi Dios, mi Rey,/nY bendeciré tu nombre/nEternamente y para siempre./nCada día te bendeciré,/nY alabaré tu nombre/nEternamente y para siempre./nGrande es Jehová,/nY digno de suprema alabanza;/nY su grandeza es inescrutable./nCada día te bendeciré."
     ],
     "startsWithChorus": false,
     "repeatChorusAtEnd": false,
@@ -8054,7 +8054,7 @@
     "title": "DIOS TE BENDIGA",
     "chorus": null,
     "stanzas": [
-      "Dios te bendiga, protección te dé;/nSea su gracia siempre tu sostén;/nSu ángel velando a tu redor esté,/nDándote abrigo siempre por doquier."
+      "1) Dios te bendiga, protección te dé;/nSea su gracia siempre tu sostén;/nSu ángel velando a tu redor esté,/nDándote abrigo siempre por doquier."
     ],
     "startsWithChorus": false,
     "repeatChorusAtEnd": false,
@@ -15467,7 +15467,7 @@
     "title": "BENDICIONES, ¡CUÁNTAS TIENES YA!",
     "chorus": "Bendiciones, ¡cuantas tienes ya! Bendiciones, Dios te manda más; Bendiciones, te sorprenderás cuando veas lo que Dios por ti hará.",
     "stanzas": [
-      "Cuando combatido por la adversidad, creas ya perdida tu felicidad; mira lo que el cielo para ti guardó, cuenta las riquezas que el Señor te dio.",
+      "1) Cuando combatido por la adversidad, creas ya perdida tu felicidad; mira lo que el cielo para ti guardó, cuenta las riquezas que el Señor te dio.",
       "2) ¿Andas agobiado por algún pesar? ¿Duro te parece amarga cruz llevar? Cuenta las promesas del Señor Jesús, y de las tinieblas nacerá la luz.",
       "3) Cuando de otros veas la prosperidad y tus pies claudiquen tras de su maldad, cuenta las riquezas que tendrás por fe donde el oro es polvo que hollará tu pie."
     ],
@@ -17619,6 +17619,1671 @@
   },
   {
     "number": 1,
+    "title": "OH GRAN DIOS",
+    "chorus": null,
+    "stanzas": [
+      "1) Oh gran Dios altísimo, reina en mi corazón;/nSé Tú el dueño de mi ser, vence toda rebelión./nNo haya vicio ni maldad, ante Ti, oh Santo Dios;/nMe has comprado por amor, ¡Hazme Tuyo, oh Señor!",
+      "2) Mi pecado me cegó, no escuchaba yo Tu voz;/nIgnoraba Tu amor, me alejé de Ti, Señor./nMas Tu Espíritu me dio vida y Tu Palabra obró;/nA Tu Hijo conocí, Su evangelio me salvó.",
+      "3) Ahora ayúdame a vivir, de tu gracia depender;/nGuarda mi alma y corazón, del maligno líbrame./nDigno de mi adoración, Tuyo es todo mi existir:/nOh gran Dios altísimo, glorifícate en mí."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 2,
+    "title": "CUÁN GRANDE ES ÉL",
+    "chorus": "Mi corazón entona esta canción, ¡Cuán grande es Él!/n¡Cuán grande es Él! Mi corazón entona esta canción,/n¡Cuán grande es Él! ¡Cuán grande es Él!",
+    "stanzas": [
+      "1) Señor, mi Dios, al contemplar los cielos,/nEl firmamento y las estrellas mil,/nAl oír Tu voz en los potentes truenos/nY ver brillar el sol en su cenit,",
+      "2) Al recorrer los montes y los valles/nY ver las bellas flores al pasar,/nAl escuchar el canto de las aves/nY el murmurar del claro manantial,",
+      "3) Cuando recuerdo del amor divino/nQue desde el cielo al Salvador envió,/nAquel Jesús que por salvarme vino/nY en una cruz sufrió por mí y murió,",
+      "4) Cuando el Señor me llame a Su presencia,/nAl dulce hogar al cielo de esplendor;/nLe adoraré cantando la grandeza/nDe Su poder y Su infinito amor."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 4,
+    "title": "EL DIOS QUE ADORAMOS",
+    "chorus": "Todo poderoso y Soberano,/nGrande en misericordia y poder para salvar./nTú eres el Dios que adoramos,/nQuien derrotó la muerte y el pecado./nGlorioso Redentor y Rey,/nTe adoramos.",
+    "stanzas": [
+      "1) El Dios que hizo los cielos y la tierra/nCon el poder de Su palabra,/nReina con autoridad./nEl Dios, que aún los vientos le obedecen,/nUna palabra es suficiente/nPara los muertos levantar./nNadie es como Él,/nOh, gran Yo Soy./nTú eres el Dios que adoramos,",
+      "2) El Dios que descendió desde Su trono/nPara llevar sobre Sus hombros/nNuestra culpa y transgresión./nJesús, exaltado sobre todo,/nNombre sobre todo nombre/nSolo en Él hay salvación./nNadie es como Él,/nOh, gran Yo Soy./nTú eres el Dios que adoramos,",
+      "3) A Él sea la gloria y el poder./nTodo es de Él y para Él./nTú eres el Dios que adoramos,"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 5,
+    "title": "CANTA, CANTA ALMA MÍA",
+    "chorus": null,
+    "stanzas": [
+      "1) Canta, canta, alma mía,/nA tu Rey y tu Señor;/nReconoce Sus bondades;/nTe bendice con favor./nCanta, canta, alma mía,/nCanta de Su gran amor.",
+      "2) Canta Su misericordia,/nQue a tus padres protegió;/nEn Su amor te dio la vida,/nTe cuidó y perdonó./nCanta, canta, alma mía,/nCanta al Dios que te salvó.",
+      "3) Como padre te conoce,/nSabe tu debilidad,/nCon Su brazo te conduce,/nTe protege de maldad./nCanta, canta, alma mía,/nCanta Su fidelidad.",
+      "4) Ángeles y querubines,/nQue Su majestad cantáis,/nOh, estrellas, sol y luna,/nQue los cielos domináis;/nTodos juntos, alabemos,/nAdorando a nuestro Dios."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 6,
+    "title": "OH, CRIATURAS DEL SEÑOR",
+    "chorus": null,
+    "stanzas": [
+      "1) Oh, criaturas del Señor,/nCantad con melodiosa voz/n¡Alabadle! ¡Aleluya!/nArdiente sol con tu fulgor;/nOh, luna de suave esplendor:/n¡Alabadle! ¡Alabadle!/n¡Aleluya! ¡Aleluya! ¡Aleluya!",
+      "2) Viento veloz, potente alud,/nnubes en claro cielo azul:/n¡Alabadle! ¡Aleluya!/nSuave, dorado amanecer;/nTu manto, noche al extender:/n¡Alabadle! ¡Alabadle!/n¡Aleluya! ¡Aleluya! ¡Aleluya!",
+      "3) Hombres de tierno corazón,/nllenos de gracia y de perdón,/n¡Alabadle! ¡Aleluya!/nLos que en dolor y pena van,/nEchad en Él toda ansiedad;/n¡Alabadle! ¡Alabadle!/n¡Aleluya! ¡Aleluya! ¡Aleluya!",
+      "4) Cante la entera creación/ncon humildad y adoración:/n¡Alabadle! ¡Aleluya!/nAl Padre, al Hijo Redentor,/ny al Eternal Consolador:/n¡Alabadle! ¡Alabadle!/n¡Aleluya! ¡Aleluya! ¡Aleluya!"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 8,
+    "title": "LA CREACIÓN CANTA",
+    "chorus": "¡Aleluya! Que cante toda creación/n¡Aleluya! Hoy cantemos, demos ¡Gloria!/npor las maravillas que creó.",
+    "stanzas": [
+      "1) La creación canta al Señor,/nÉl llama al sol a despertar;/nHasta que el día cae./nNos da su luz y su calor./nDeja Sus huellas en el mar,/nLe da a las flores su color,/nY al ave guía Él,/nHasta el refugio de su hogar.",
+      "2) El Trino Dios un plan creó,/nEnvió a Su Hijo, Emanuel;/nSu vida entregó,/nSin yo existir murió por mí./nCon Su perdón ya libre soy,/nSu santidad me transformó,/nY un hombre nuevo soy,/nY ante el Padre limpio estoy.",
+      "3) La creación espera al Rey,/nMirar Su faz y Su poder;/nY verle a Él reinar/nCon Su justicia y Su verdad./nToda la tierra cantará,/nY las naciones se unirán,/nA dar a Cristo, el Rey/nToda la gloria y majestad."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 10,
+    "title": "HOY CANTO EL GRAN PODER DE DIOS",
+    "chorus": null,
+    "stanzas": [
+      "1) Hoy canto el gran poder de Dios; Los montes Él creó;/nHabló al mar con fuerte voz; Los cielos extendió./nSu mente sabia cantaré; Poder al sol le dio./nLas luces de la noche, sé Que Él las decretó.",
+      "2) De Dios hoy canto la bondad Que bienes proveyó,/nPara uso de la infinidad De todo lo que creó./nSus maravillas por doquier ¡Cuán numerosas son!/nMis ojos bien las pueden ver En toda Su creación.",
+      "3) Oh Dios, Tu gloria, la creación Demuestra por doquier:/nMas gloria de Tu salvación Declare todo ser./nEn ella vemos, oh Señor, Que la vida solo das;/nY en la nueva creación, Allí presente estás."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 12,
+    "title": "ALMA, BENDICE AL SEÑOR",
+    "chorus": null,
+    "stanzas": [
+      "1) Alma, bendice al Señor, Rey potente de gloria:/nDe Sus mercedes esté viva en ti la memoria./n¡Oh, despertad, arpa y salterio!/nEntonad Himnos de honor y victoria.",
+      "2) Alma, bendice al Señor, que los orbes gobierna,/nY te conduce paciente con mano paterna;/nTe perdonó, de todo mal te libró,/nPor que Su gracia es eterna.",
+      "3) Alma, bendice al Señor, de Tu vida la fuente,/nQue te creó, y en salud te sostiene clemente;/nTu defensor en todo trance y dolor,/nSu diestra es omnipotente.",
+      "4) Alma, bendice al Señor por Su amor infinito;/nCon todo el pueblo de Dios Su alabanza repito:/nDios, mi salud, de todo bien plenitud,/n¡Seas por siempre bendito!"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 14,
+    "title": "OH, SABIO, INMORTAL, INVISIBLE",
+    "chorus": null,
+    "stanzas": [
+      "1) Oh, Sabio, Inmortal, Invisible eres Tú,/nOculto a la vista, rodeado de luz;/nAnciano de Días, glorioso Señor,/nGran Rey victorioso, te damos loor.",
+      "2) Activo, paciente, de cálida voz/nTú reinas potente, sin disipación;/nTus juicios, cual montes, altísimos son,/nTus nubes son fuentes de gracia y amor.",
+      "3) A grandes y a chicos la vida Tú das,/nTú vives en todos, oh, vida en verdad;/nCual flores brotamos, crecemos aquí,/nCaemos, morimos, mas no hay cambio en Ti.",
+      "4) Gran padre de gloria, buen Padre de luz,/nLos cielos te adoran, terrible eres Tú;/nOh, déjanos verte y rendirte loor,/nDetrás de Tu luz y Tu gran esplendor."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 15,
+    "title": "JUBILOSOS, TE ADORAMOS",
+    "chorus": null,
+    "stanzas": [
+      "1) Jubilosos, te adoramos,/nDios de gloria y Salvador;/nNuestras vidas entregamos/nComo se abre al sol la flor./nAhuyenta nuestros males/nY tristezas, oh Jesús;/nDanos bienes celestiales,/nLlénanos de gozo y luz.",
+      "2) Tierra y cielo están gozosos,/nReflejando Tu amor;/nÁngeles y estrellas todos/nCantan siempre Tu loor./nMonte, valle, río y fuente,/nCampo, selva y ancho mar/nNos recuerdan que constante/nTe debemos alabar.",
+      "3) Dios, que libre proporcionas/nBienestar y bendición,/nY en Tu gracia nos perdonas,/nGozo das al corazón./nTú, de todo amor la fuente,/nHaz que amemos en verdad;/nIlumina nuestra mente/nCon divina claridad.",
+      "4) Oh, mortales, hoy cantemos/nCon el coro celestial;/nComo hermanos habitemos/nEn amor santo y real./nAlabando siempre vamos/nEn la vida a conquistar;/nSi confiando en Ti andamos/nNos ayudas a triunfar."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 16,
+    "title": "SANTO, SANTO, SANTO",
+    "chorus": null,
+    "stanzas": [
+      "1) ¡Santo! ¡Santo! ¡Santo! Señor omnipotente,/nSiempre el labio mío loores te dará./n¡Santo! ¡Santo! ¡Santo! Te adoro reverente,/nDios en tres personas bendita Trinidad.",
+      "2) ¡Santo! ¡Santo! ¡Santo! En numeroso coro,/nSantos escogidos te adoran sin cesar;/nDe alegría llenos, y sus coronas de oro/nRinden ante el trono y el cristalino mar.",
+      "3) ¡Santo! ¡Santo! ¡Santo! La inmensa muchedumbre/nDe ángeles que cumple Tu santa voluntad,/nAnte Ti se postra, bañada de Tu lumbre,/nAnte Ti, que has sido, que eres y serás.",
+      "4) ¡Santo! ¡Santo! ¡Santo! Por más que estés velado/nE imposible sea Tu gloria contemplar;/nSanto, Tu eres solo, y nada hay a Tu lado/nEn poder perfecto, pureza y caridad.",
+      "5) ¡Santo! ¡Santo! ¡Santo! La gloria de Tu nombre/nVemos en Tus obras en cielo, tierra y mar;/n¡Santo! ¡Santo! ¡Santo! te adorará todo hombre,/nDios en tres personas, bendita Trinidad."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 18,
+    "title": "CANTAD ALEGRES AL SEÑOR",
+    "chorus": null,
+    "stanzas": [
+      "1) Cantad alegres al Señor,/nMortales todos por doquier,/nServidle siempre con fervor,/nObedecedle con placer.",
+      "2) Con gratitud, canción alzad,/nAl Hacedor que el ser nos dio./nAl Dios excelso adorad,/nQue como padre nos amó.",
+      "3) Reconoced que es Dios y Rey,/nNuestro potente Creador;/nOvejas somos de Su grey,/nY pueblo Suyo por su amor.",
+      "4) Con alabanza y gozo entrad/nA la presencia del Señor;/nAl Soberano aclamad,/nY bendecidle con fervor."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 19,
+    "title": "SALMO 146",
+    "chorus": null,
+    "stanzas": [
+      "1) Aleluya, alaba mi alma, A Jehová alabaré./nCantaré a mi Dios salmos mientras haya aliento en mí./nNo en los príncipes confíen, ni en el hombre hay salvación;/nMuere y vuelve a la tierra y ya deja de pensar.",
+      "2) Bien aventurado el hombre cuyo ayudador es Dios,/nY aquel cuya esperanza está en Jehová, su Dios,/nEl cual hizo cielos, tierra, y el mar y todo en él,/nEl que guarda para siempre la justicia, la verdad.",
+      "3) Él da pan a los hambrientos; a cautivos, libertad./nÉl levanta a los caídos, a los ciegos vista da./nJehová ama a los justos, al extranjero guardará,/nA los huérfanos ayuda y al impío frustrará.",
+      "4) Aleluya alaba mi alma, A Jehová alabaré./nCantaré a mi Dios salmos mientras haya aliento en mí./nReinará Jehová por siempre, por cada generación./nReinará por las edades, ¡Aleluya, Dios es Rey!"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 20,
+    "title": "ALABAD AL REY DEL CIELO",
+    "chorus": null,
+    "stanzas": [
+      "1) Alabad al Rey del Cielo,/nA Sus pies rendid loor;/nRedimidos, perdonados,/nAlabadle con amor./n¡Aleluya! ¡Aleluya!/nAlabadle sin cesar.",
+      "2) Grande es Su misericordia,/nQue a tus padres protegió/nCántale, pues, de Su gloria,/nTe bendice con favor./n¡Aleluya! ¡Aleluya!/nCanta Su fidelidad.",
+      "3) Frágiles, como las flores/nQue mañana ya no están,/nSon las vidas de los hombres,/nPero Dios no cambiará./n¡Aleluya! ¡Aleluya!/nCanta al Dios de eternidad.",
+      "4) En la altura le adora/nLa gran hueste celestial;/nCon los santos alabemos/nAl Señor con voz triunfal./n¡Aleluya! ¡Aleluya!/nCántale al Dios de la gracia."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 22,
+    "title": "ALABAD AL GRAN REY",
+    "chorus": "Alabad, alabad, alabad al gran Rey./nAdorad, adorad, adoradle su grey./nEs nuestro escudo, baluarte y sostén;/nEl omnipotente por siglos, Amén.",
+    "stanzas": [
+      "1) Solemnes resuenen las voces de amor,/nCon gran regocijo tributen loor./nAl Rey Soberano, el buen Salvador;/nDignísimo es Él del más alto honor.",
+      "2) Su amor infinito, ¿qué lengua dirá?/nY, ¿quién Sus bondades jamás sondeará?/nSu misericordia no puede faltar/nMil himnos alaben Su nombre sin par.",
+      "3) Inmensa la obra de Crísto en la cruz,/nEnorme la culpa se ve por su luz./nAl mundo Él vino, nos iluminó,/nY por nuestras culpas Él Justo murió.",
+      "4) Velad, fieles todos, velad con fervor,/nQue viene muy pronto Jesus, el Señor./nCon notas alegres vendrá a reinar;/nA Su eterna gloria nos ha de llevar."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 24,
+    "title": "CASTILLO FUERTE",
+    "chorus": null,
+    "stanzas": [
+      "1) Castillo fuerte es nuestro Dios,/nDefensa y buen escudo;/nCon Su poder nos librará/nEn este trance agudo./nCon furia y con afán/nAcósanos Satán;/nPor armas deja ver/nAstucia y gran poder;/nCual él no hay en la tierra.",
+      "2) Nuestra valor es nada aquí,/nCon él todo es perdido;/nMas por nosotros pugnará/nDe Dios el Escogido./nEs nuestro Rey Jesús,/nEl que venció la cruz,/nSeñor y Salvador,/nY siendo Él solo Dios,/nÉl triunfa en la batalla.",
+      "3) Aunque estén demonios mil/nProntos a devorarnos,/nNo temeremos, porque Dios/nSabrá cómo ampararnos./nQue muestre su vigor/nSatán y su furor;/nDañarnos no podrá;/nPues condenado es ya/nPor la Palabra Santa.",
+      "4) Esa Palabra del Señor,/nQue el mundo no apatece,/nPor el Espíritu de Dios/nMuy firme permanece./nNos pueden despojar/nDe bienes y hogar,/nEl cuerpo destruir,/nMas siempre ha de existir/nDe Dios el Reino eterno."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 25,
+    "title": "CASTILLO FUERTE (LETRA ALTERNATIVA)",
+    "chorus": null,
+    "stanzas": [
+      "1) Castillo fuerte es nuestro Dios,/nDefensa y buen escudo./nCon Su poder nos librará/nEn este trance agudo./nCon furia y con afán/nSatán acosará,/nPor armas deja ver/nSu astucia y su poder;/nCual él no hay en la tierra.",
+      "2) Nuestro valor es nada aquí,/nCon él todo es perdido;/nMas por nosotros luchará/nDe Dios el Escogido:/nEs nuestro rey Jesús,/nEl que venció la cruz;/nSeñor y Salvador,/nY siendo Él solo Dios./nÉl triunfa en la batalla.",
+      "3) Aunque estén demonios mil/nProntos a devorarnos,/nNo temeremos porque Dios/nSabrá cómo ampararnos./nSi muestra su vigor/nSatán, y su furor,/nDañarnos no podrá,/nPues condenado está/nPor la Palabra Santa.",
+      "4) Esa Palabra del Señor,/nQue el mundo no apetece,/nPor el Espíritu de Dios/nMuy firme permanece./nNos pueden despojar/nDe bienes y hogar,/nEl cuerpo destruir,/nMas siempre ha de existir/nDe Dios el Reino eterno."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 26,
+    "title": "DOXOLOGÍA",
+    "chorus": null,
+    "stanzas": [
+      "1) A Dios el Padre Celestial,/nAl Hijo nuestro Redentor,/nY al Eternal Consolador,/nUnidos todos alabad./nAmén.",
+      "2) Cantad al trino y uno Dios,/nSus alabanzas entonad,/nSu eterna gloria proclamad/nCon gozo, gratitud y amor.",
+      "3) Que la alabanza al Creador/nFluya de todo corazón;/nCantad el nombre del Señor/nEn toda lengua y nación.",
+      "4) Eterna es Tu bondad, Señor;/nVerdad eterna es Tu voz./nTu adoración se escuchará/nPor toda la eternidad."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 27,
+    "title": "NUESTRA ESPERANZA Y PROTECCIÓN",
+    "chorus": null,
+    "stanzas": [
+      "1) Nuestra esperanza y protección/nY nuestro eterno hogar/nHas sido, eres y serás/nTan solo Tú, Señor.",
+      "2) Aún no habías la creación/nFormado con bondad,/nMas desde la eternidad,/nTú eras solo Dios.",
+      "3) Delante de Tus ojos son/nMil años, al pasar,/nTan solo un día que fugaz/nFenece con el sol.",
+      "4) El tiempo corre arrollador/nComo impetuoso mar;/nY así, cual sueño ves pasar/nCada generación.",
+      "5) Nuestra esperanza y protección/nY nuestro eterno hogar,/nEn la tormenta o en la paz,/nSé siempre Tú, Señor."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 29,
+    "title": "VENID, GLORIFICAD A DIOS",
+    "chorus": "Te daremos la gloria,/nPor Tu gracia, bondad y amor,/nTe daremos la gloria,/n¡Eres el Salvador!",
+    "stanzas": [
+      "1) Venid, glorificad a Dios, el Padre del Señor;/nEn Cristo Él no derramó Su eterna bendición./nSin manchas, puros, en Su luz, nos destinó a ser/nSus hijos adoptados por la sangre de Jesús.",
+      "2) Venid, glorificad a Dios, que en Cristo gracia da;/nLavadas nuestras culpas son, tenemos redención./nEn Él Dios ya nos reveló Su eterna voluntad:/nQue sea Cristo el Señor; Su plan se cumplirá.",
+      "3) Venid, glorificad a Dios, creyentes del Señor;/nEl sello de Su Espíritu por fe tenemos hoy./nÉl garantiza nuestra fe hasta el día final;/nNos uniremos a alabar a nuestro trino Dios."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 31,
+    "title": "GRANDE ES TU FIDELIDAD",
+    "chorus": "¡Oh, Tu fidelidad! ¡Oh, Tu fidelidad!/nCada momento la veo en mí./nNada me falta, pues todo provees,/n¡Grande, Señor, es Tu fidelidad!",
+    "stanzas": [
+      "1) Oh, Dios Eterno, Tu misericordia/nNi una sombra de duda tendrá;/nTu compasión y bondad nunca fallan/nY por los siglos el mismo serás.",
+      "2) La noche oscura, el sol y la luna,/nLas estaciones del año también,/nUnen su canto cual fieles criaturas,/nPorque eres bueno, por siempre eres fiel.",
+      "3) Tú me perdonas, me impartes el gozo,/nTierno me guías por sendas de paz;/nEres mi fuerza, mi fe, mi reposo,/nY por los siglos mi Padre serás."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 33,
+    "title": "SEÑOR, MI REDENTOR Y ROCA",
+    "chorus": null,
+    "stanzas": [
+      "1) Señor, mi Redentor y Roca,/nGran Tesoro de mi corazón;/nMi Dios como Tú no hay otro,/nSolo en Ti hay gozo y salvación./nTu amor, más alto que los cielos,/nTu gracia más honda que el mar,/nTu ley es mi sabiduría,/nMi bien mayor y mi necesidad.",
+      "2) Señor, mi Redentor y Roca,/nDe mi vida fuerte defensor;/nSeñor, Tú eres mi espada/nContra el mal, mi escudo protector./nMi canción si acechan enemigos,/nEsperanza en medio del dolor;/nMi bien en todo sufrimiento,/nRefugio fiel en densa oscuridad.",
+      "3) Señor, mi Redentor y Roca,/nDe mi ruina dulce Salvador;/nMi cruz y culpa en Tus hombros,/nTú por mí sufriste hasta morir./nMas Tú venciste a la muerte,/nEn Ti encuentro libertad;/nSeñor, mi Redentor y Roca,/nQuiero vivir mis días para Ti."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 35,
+    "title": "MI SALVACIÓN ES EL SEÑOR",
+    "chorus": "¿Quién es como el Señor, mi Dios?/nSalvador, amoroso y fiel./nMi mal pagó, en la cruz venció./nMi salvación es el Señor.",
+    "stanzas": [
+      "1) Divina gracia me alcanzó,/nDe bravo mar me rescató;/nA salvo estoy, pues mi Roca es Él./nMi salvación es el Señor./nNo temeré al oscurecer,/nYo con Su fuerza escalaré./nEl sol veré el amanecer./nMi salvación es el Señor.",
+      "2) En Él mi esperanza está,/nPues Sus promesas cumplirá./nEl cielo gris pronto pasará./nMi salvación es el Señor./nEn tiempos de necesidad,/nPerdido en mi debilidad,/nSu gracia fiel me restaurará./nMi salvación es el Señor.",
+      "3) Y al llegar mi día final/nLa tumba no me encerrará,/nCon Él me iré a mi dulce hogar./nMi salvación es el Señor.",
+      "4) Gloria sea a Dios El Padre./nGloria al Hijo Salvador./nGloria sea a Dios Espíritu./nMi salvación es el Señor./nGloria sea a Dios El Padre./nGloria al Hijo Salvador./nGloria sea a Dios Espíritu./nMi salvación es el Señor./n¡Mi salvación es el Señor!/n¡Mi salvación es el Señor!"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 36,
+    "title": "SUBLIME GRACIA",
+    "chorus": null,
+    "stanzas": [
+      "1) Sublime gracia del Señor que un infeliz salvó;/nFui ciego mas hoy puedo ver, perdido y Él me halló.",
+      "2) Su gracia me ensenó a temer; mis dudas ahuyentó;/n¡Oh cuán precioso fue a mi ser cuando Él me transformó!",
+      "3) En los peligros o aflicción que yo he tenido aquí,/nSu gracia siempre me libró y me guiará feliz.",
+      "4) Y cuando en Sión por siglos mil brillando esté cual sol,/nYo cantaré por siempre allí Su amor que me salvó."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 37,
+    "title": "GRACIA ADMIRABLE",
+    "chorus": "¡Gracia! ¡Gracia! ¡Gracia de Dios que nos da perdón!/n¡Gracia! ¡Gracia! ¡Gracia que limpia el corazón!",
+    "stanzas": [
+      "1) ¡Gracia admirable del Dios de amor/nQue excede a todo nuestro pecar!/nCristo en la cruz por el pecador/nSu vida ha dado. ¡Qué amor sin par!",
+      "2) Negras las olas de la maldad/nMe amenazaron con perdición;/nPudo en la gracia de Dios hallar/nDulce refugio me corazón.",
+      "3) Nunca tu mancha podrás limpiar/nSi no en la sangre del buen Jesús;/nEn ella, sí, la podrás lavar,/nHoy sin cesar fluye de la cruz.",
+      "4) Gracia infinita recibirá/nTodo el que cree en Cristo el Señor;/nSi del pecado cansado estás,/nVen, gracia ofrece tu Salvador."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 39,
+    "title": "SU GRACIA ES MAYOR",
+    "chorus": "¡Gloria a Dios! Su gracia es mayor./nSus misericordias hoy nuevas son,/nMis faltas son muchas, Su gracia es mayor.",
+    "stanzas": [
+      "1) ¿Qué amor mis pecados decide olvidar?/nLanzados al mar no los quiere contar./nÉl siendo omnisciente olvida mi error;/nMis faltas son muchas, Su gracia es mayor.",
+      "2) Paciente me aguarda en mi desviar,/nUn padre, que tierno, me llama al hogar./nRecibe al débil y vil pecador;/nMis faltas son muchas, Su gracia es mayor.",
+      "3) Qué grandes riquezas Él nos otorgó,/nSu sangre fue el pago, Su vida entregó./nPagó esa deuda y la canceló;/nMis faltas son muchas, Su gracia es mayor."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 41,
+    "title": "EN TI ESPERARÉ (SALMO 130)",
+    "chorus": null,
+    "stanzas": [
+      "1) De lo profundo clamo a Ti,/nEscucha, oh buen Señor;/nPresta atención a mi oración,/nDe mi alma ten piedad.",
+      "2) De lo profundo clamo a Ti,/nTe llamaré en mi oscuridad;/nInclina, oh Dios, Tu oído a mí,/nSeñor, te pido ten piedad.",
+      "3) Si Tú contaras mi maldad,/n¿Cómo vendría ante Tu altar?/nMe asombra ver que en Ti hay perdón;/nPor gracia redimido soy.",
+      "4) Coro 1: En Ti esperaré, en Ti esperaré;/nEn Tu verdad descanzaré./nEn Ti esperaré, sí, yo esperaré,/nHasta saciar todo mi ser.",
+      "5) Pon tu esperanza solo en Dios,/nY en Su poder de salvación;/nCompletamente Él venció,/nCristo el Señor resucitó.",
+      "6) Coro 1: En Ti esperaré, en Ti esperaré;/nEn Tu verdad descanzaré./nEn Ti esperaré, sí, yo esperaré,/nHasta saciar todo mi ser.",
+      "7) Ya el camino Él abrió,/nDios mismo el precio ya pagó;/nY aquellos que confíen hoy,/nEn Él tendrán restauración.",
+      "8) Coro 1: En Ti esperaré, en Ti esperaré;/nEn Tu verdad descanzaré./nEn Ti esperaré, sí, yo esperaré,/nHasta saciar todo mi ser.",
+      "9) Coro 2: Yo te esperaré, yo te esperaré;/nEn la prueba y tempestad./nYo te esperaré, sí, te esperaré;/nTu amor me saciará.",
+      "10) Mi alma hoy espera en Dios,/nMi esperanza es Él;/nMás que el vigía espera el sol,/nMi alma espera en Dios."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 42,
+    "title": "EL DIOS PODEROSO",
+    "chorus": null,
+    "stanzas": [
+      "1) Oh, la gracia que Dios mostró/nA los que están en tinieblas;/nSu luz brilló, resplandeció,/nLa piedra angular nació.",
+      "2) Coro 1: Un hijo nos es dado, Un niño nace hoy;/nEl Dios poderoso y grande en amor se encarnó,/nLa muerte venció, Resucitó y mi culpa llevó./nSanto es el Señor.",
+      "3) Libertad nos dio el Salvador,/nRompió el poder del pecado;/nSu gracia nos rescató,/nNo hay más condenación.",
+      "4) Coro 1: Un hijo nos es dado,/nUn niño nace hoy;/nEl Dios poderoso y grande en amor se encarnó,/nLa muerte venció, Resucitó y mi culpa llevó./nSanto es el Señor.",
+      "5) Puente: Mi alma hoy gloria da al Señor,/nSolo en Él Yo me gozaré;/nConfiaré, en Su eterno amor,/nMientras viva yo le cantaré.",
+      "6) Mi alma hoy gloria da al Señor,/nSolo en Él Yo me gozaré;/nConfiaré, en Su eterno amor,/nMientras viva yo le cantaré.",
+      "7) Coro 2: El Dios poderoso y grande en amor se encarnó,/nLa muerte venció, Resucitó y mi culpa llevó./nSanto es el Señor/nSanto es el Señor."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 43,
+    "title": "MI SER DESCANSA EN ÉL",
+    "chorus": "Dios, Tú eres mi Dios;/nno seré removido, en Ti confío./nDios, renueva hoy un firme espíritu en mí;/n//Descanso solo en Ti.//",
+    "stanzas": [
+      "1) Mi ser, descansa en Él, no dudes ya,/naunque mañana haya tormentas;/nDios contigo está, no temas más/nlas llamas de dolor que asechan.",
+      "2) Mi ser, descansa en Dios, no tiembles ya/nante las sombras de peligro;/nPon tu fe en Él, tu escudo es/nque apaga el fuego del maligno.",
+      "3) Mi ser, descansa en Dios, abraza fiel/nesta Verdad que es luz y vida;/nVen, espera en Él, verás nacer/ncon esperanza un nuevo día."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 45,
+    "title": "MÁS GRANDE DE LO QUE IMAGINO",
+    "chorus": "Porque eres más grande de lo que imagino/nY más hermoso, Dios, de lo que he pensado/n¡Oh Tú eres grande y digno de alabar!",
+    "stanzas": [
+      "1) Cada día Tu nombre bendeciré/nY moraré en Tu gloria y esplendor./nEn Tus maravillas meditaré,/nQue de Tu gran poder proclamaré./nDe Tu salvación diré/nY de Tus bondades.",
+      "2) Las generaciones Te cantarán./nY Tu misericordia alabarán./nCantaremos juntos del Salvador/nQue vino y del pecado nos libró./nTú llenas nuestras vidas,/nPor siempre te alabaremos."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 46,
+    "title": "CUAL LA MAR HERMOSA",
+    "chorus": "Descansando en Cristo siempre paz tendré;/nEn Jehová confiando, nada temeré.",
+    "stanzas": [
+      "1) Cual la mar hermosa, es la paz de Dios,/nFuerte y gloriosa, es eterna paz;/nGrande y perfecta, premio de la cruz;/nFruto del Calvario, obra de Jesús.",
+      "2) En el gran refugio de la paz de Dios,/nNunca hay molestias, es perfecta paz:/nNunca negra duda, pena ni pesar,/nVejaciones crueles pueden acosar.",
+      "3) Toda nuestra vida cuidará Jesús,/nCristo nunca cambia, Él es nuestra paz;/nFuertes y seguros, en el Salvador,/nSiempre moraremos en Su grande amor."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 48,
+    "title": "FUE TU GRACIA",
+    "chorus": "Fue Tu gracia/nQue mi vida renovó,/nFue Tu gracia/nQue mi deuda canceló,/nFue Tu gracia/nQue de muerte me llevó/nA vivir para Tu gloria, oh Señor.",
+    "stanzas": [
+      "1) Siendo yo un pecador,/nExtraviado en el error;/nIncapaz fui de quitar la culpa que cargaba/nMi corazón./n¿Tu gracia, quién puede medir?/nTu amor no tiene uno igual./nCuando perdido estaba yo viniste a mi encuentro,/nMi Salvador.",
+      "2) En la cruz donde murió/nEl perfecto Hijo de Dios,/nLa sentencia Él sufrió, la que yo merecía/nPor mi maldad.",
+      "3) Tu gracia me ha traído aquí,/nDe rodillas ante Ti;/nMaravillado al comprender que a Tu Hijo entregaste/nEn mi lugar."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 49,
+    "title": "MAGNÍFICO, MARAVILLOSO AMOR",
+    "chorus": "¡Cuán grande es!/nSu amor es fiel,/nPor siempre, amén./nMagnífico, maravilloso amor.",
+    "stanzas": [
+      "1) Magnífico, maravilloso amor,/nGrandioso, ineffable en verdad;/nPor siempre en los cielos Su amor reinó/nY hoy el Señor nos lo da./nOh, fuente de eterna belleza/nEs Dios, la Santa Trinidad,/nInmenso, abundante y sin final,/nMagnífico, maravilloso amor./nLa Tierra rebosa de gratitud,/nLos montes gozosos están;/nLos días celebran Tu fiel virtud,/nTu mano sustento nos da./nCoronas las verdes praderas,/nTú pintas de azul la expansión;/nY cada mañana hace ecos del/nMagnífico, maravilloso amor.",
+      "2) ¡Qué gracia mostraste al descender!/nViniste a Tu tiempo, Señor./n¡Cuán lejos estábamos de Tu ser,/nSino por Tu gracia y amor!/nTu cruz redención ha pagado,/nTu muerte la vida nos da./nPerdón ese día nos inundó;/nMagnífico, maravilloso amor.",
+      "3) Tu resurrección hoy nos une/nA Ti en Tu hogar celestial./nYa nada podrá separarnos del/nMagnífico, maravilloso amor."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": true,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 50,
+    "title": "OH, QUE TUVIERA LENGUAS MIL",
+    "chorus": null,
+    "stanzas": [
+      "1) ¡Oh, que tuviera lenguas mil para poder cantar/nLas glorias de mi Dios y Rey, y Sus triunfos alabar!",
+      "2) Su nombre trae consuelo y paz, nos libra del temor;/nSalud, aliento y gozo es; vida da al pecador.",
+      "3) Quebranta el poder del mal, a preso libra hoy;/nSu sangre limpia al ser más vil, ¡Aleluya! Limpio estoy.",
+      "4) Oh mudos, de su amor hablad; y sordos oíd Su voz/nOh cojos, de emoción saltad; ciegos, ved al Salvador.",
+      "5) Señor Jesús, ayúdame a Tu nombre proclamar;/nA todo el mundo en derredor, Tu grandeza ensalzar."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 52,
+    "title": "PROFUNDO ES EL AMOR DE DIOS",
+    "chorus": null,
+    "stanzas": [
+      "1) Profundo es el amor de Dios, tan vasto y sin medida,/nPues a Su Hijo entregó a cambio de un perdido./nQué gran dolor sobrellevó; de Dios Sufrió el rechazo./nY las heridas sobre Él son para tantos gloria.",
+      "2) He allí al Hombre en la cruz, mis faltas en Sus hombros,/nVergüenza siento al escuchar mi voz entre las burlas./nPor mi pecado estuvo allí llevando todo a cabo,/nSu muerte me dio vida a mí ya todo es consumado.",
+      "3) En nada he de gloriarme: talento, fuerza, ciencia./nMe gloriaré solo en Jesús, pues Él venció a la muerte./n¿Por qué me da de su favor? No puedo contestarlo,/nPero algo sé de corazón: He sido rescatado."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 53,
+    "title": "PROFUNDO ES EL AMOR DE DIOS (LETRA ALTERNATIVA)",
+    "chorus": null,
+    "stanzas": [
+      "1) Profundo es el amor de Dios, tan vasto y sin medida,/nPues a Su Hijo entregó a cambio de un perdido./nQué gran dolor sobrellevó; de Dios Sufrió el rechazo./nY las heridas sobre Él son para tantos gloria.",
+      "2) He allí al Hombre en la cruz, mis faltas en Sus hombros,/nVergüenza siento al escuchar mi voz entre las burlas./nPor mi pecado estuvo allí llevando todo a cabo,/nSu muerte me dio vida a mí ya todo es consumado.",
+      "3) En nada he de gloriarme: talento, fuerza, ciencia./nMe gloriaré solo en Jesús, pues Él venció a la muerte./n¿Por qué me da de su favor? No puedo contestarlo,/nPero algo sé de corazón: He sido rescatado."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 55,
+    "title": "CONTEMPLA A DIOS",
+    "chorus": "Contempla a Dios, en Su trono está, venid y adoradle./nContempla al Rey, nadie es como Él, venid y adoradle.",
+    "stanzas": [
+      "1) ¿Quién formó las olas al hablar?/n¿Quién contó la arena en el mar?/nReyes, pueblos, tiemblan a Su voz/nLa creación le rinde adoración.",
+      "2) ¿Quién sufrió los clavos en dolor?/n¿Quién cuestiona lo que Él habló?/n¿Quién al sabio Dios puede enseñar?/n¿Quién comprende Su gran majestad?",
+      "3) ¿Quién le dio consejo al Señor?/n¿Quién llevo el mal del pecador?/nJesucristo humilde al perecer/nHa triunfado y reina con poder.",
+      "4) Puente: ¡Reinarás por siempre! _(¡Que Tu gloria brille hoy!)__/n¡Reinarás por siempre! _(¡Que Tu gloria brille hoy!)__/n¡Reinarás por siempre! _(¡Que Tu gloria brille hoy!)__/n¡Reinarás por siempre! _(¡Que Tu gloria brille!)__"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 56,
+    "title": "AL REY ADORAD",
+    "chorus": null,
+    "stanzas": [
+      "1) Al Rey adorad, grandioso Señor,/nY con gratitud cantad de Su amor./nAnciano de días, el gran Defensor,/nDe gloria vestido, le damos loor.",
+      "2) Decid de Su amor, Su gracia cantad;/nVestido de luz y de majestad./nSu carro de fuego las nubes mirad;/nSon negras Sus huelas en la tempestad.",
+      "3) ¿Quién puede Tu providencia contar?/nPues Tu aire me das para respirar./nEn valles y en montes alumbra Tu luz,/nY con gran dulzura me cuida Jesús.",
+      "4) Muy frágiles son los hombres aquí,/nMás por tu bondad confiamos en Ti./nTu misericordia ¡Cuán firme! ¡Cuán fiel!/nCreador, Salvador y Amigo es Él."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 57,
+    "title": "DIOS, TE SALUDO, ERES REDENTOR",
+    "chorus": null,
+    "stanzas": [
+      "1) Dios, te saludo, eres Redentor,/nNuestra confianza y nuestro Salvador,/nTú que por nos sufriste en la cruz/nQuita de nuestras almas el pesar.",
+      "2) Eres el Rey de gracia y de perdón,/nOmnipotente en cielo, tierra y mar;/nVen y transforma todo nuestro ser,/nBríllen nos Tu pura y clara luz.",
+      "3) Eres la vida que nos da el vivir,/nY la razón de nuestro existir;/nSostén nos por Tu fe y Tu poder,/nDándonos fuerza para el mal vencer.",
+      "4) Tu mansedumbre verdadera es,/nNo tienes ira, nada de rencor;/nDanos, oh Dios, la gracia que hay en Ti,/nPara en perfecta unidad vivir.",
+      "5) Nuestra esperanza solo en Ti está;/nDe Tus promesas vive nuestra fe;/nDanos Tu paz y la seguridad/nDe estar contigo por la eternidad."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 58,
+    "title": "JESÚS ES REY",
+    "chorus": null,
+    "stanzas": [
+      "1) Jesús es Rey donde quiera que el sol/nHace brillar su resplandor./nSu reino va de mar a mar/nHasta que el sol no brille más.",
+      "2) Su reino bendición traerá;/nAl prisionero, libertad;/nAl que cargado y triste va,/nDicha y reposo eternal.",
+      "3) De toda lengua y nación/nVendrán a Él con dulce son;/nTodos los niños cantarán/nGloria a Su nombre sin igual.",
+      "4) Alce su voz la creación,/nAl Rey honor y bendición;/nÁngeles canten otra vez/n¡Diga la tierra un fuerte amén!",
+      "5) _(Sea al Rey todo el honor/nY eterna adoración;/nJusto y fiel es nuestro Rey/n¡Jesús es Rey!)__"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 59,
+    "title": "A CRISTO CORONAD",
+    "chorus": null,
+    "stanzas": [
+      "1) A Cristo coronad, divino Salvador;/nSentado en alta majestad es digno de loor;/nAl Rey de gloria y paz loores tributad,/nY bendecid al Inmortal por toda eternidad.",
+      "2) A Cristo coronad, Señor de nuestro amor;/nAl Rey triunfante celebrad, glorioso vencedor;/nPotente Rey de paz, el triunfo consumó,/nY por Su muerte de dolor Su grande amor mostró.",
+      "3) A Cristo coronad, Señor de vida y luz;/nCon alabanzas proclamad los triunfos de la cruz;/nA Él solo adorad, Señor de salvación;/nLoor eterno tributad de todo corazón."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 60,
+    "title": "LOORES DAD A CRISTO EL REY",
+    "chorus": null,
+    "stanzas": [
+      "1) Loores dad a Cristo el Rey, suprema potestad;/nDe Su divino amor la ley postrados aceptad;/nDe Su divino amor la ley postrados aceptad.",
+      "2) Vosotros, hijos de Israel, ovejas de la grey;/nLoores dad a Emanuel y proclamadle Rey;/nLoores dad a Emanuel y proclamadle Rey.",
+      "3) Gentiles que por Su perdón gozáis de libertad,/nAl que de la condenación os libra, hoy load;/nAl que de la condenación os libra, hoy load.",
+      "4) Naciones todas, escuchad y obedeced Su ley/nDe gracia y de santidad, y proclamadle Rey;/nDe gracia y de santidad, y proclamadle Rey."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 61,
+    "title": "TUYA ES LA GLORIA",
+    "chorus": "Tuya es la gloria, victorioso Redentor,/nPorque Tú la muerte venciste, Señor.",
+    "stanzas": [
+      "1) Tuya es la gloria, victorioso Redentor,/nPorque Tú la muerte venciste, Señor./nQuitan la gran piedra ángeles de luz,/nY en la tumba el lienzo guardan, oh Jesús.",
+      "2) Vemos que llega el resucitado ya;/nAnsias y temores Él nos quitará./nQue Su iglesia alegre cante la canción:/n¡Vivo está! ¡La muerte pierde su aguijón!",
+      "3) ¡Ya no dudamos, Príncipe de vida y paz!/nSin Ti no valemos; fortaleza das./nMás que vencedores haznos por Tu amor,/nY al hogar celeste llévanos, Señor."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 63,
+    "title": "GÓCENSE LOS PUEBLOS",
+    "chorus": "Gócense los pueblos, cante toda nación;/nPor Tu bendición cantamos hoy,/nCantamos hoy a Cristo.",
+    "stanzas": [
+      "1) Nos llamaste de la oscuridad/nA Tu gloriosa luz,/nPara cantar que vivo está Cristo Jesús./nTodo aliento nuestro contará/nTu gracia que nos da,/nProfundo gozo, amor sin fin, vida eternal.",
+      "2) Tuya es la tierra y su esplendor,/nSus frutos Tuyos son,/nTe lo entregamos todo a Ti, dueño, y Señor./nPon amor por los perdidos hoy/nEn nuestro corazón,/nQue al cantar nos cambies con Tu gracia, Dios.",
+      "3) Privilegio santo es declarar/nTu nombre y salvación,/nA cada lengua y nación, Oh llévanos.",
+      "4) Santo, santo,/nNuestro Dios poderoso./nDigno, Digno, inmolado fue./nSanto, santo,/nNuestro Dios poderoso/nLas naciones alabemos al Rey."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 64,
+    "title": "FUENTE DE LA VIDA ETERNA",
+    "chorus": null,
+    "stanzas": [
+      "1) Fuente de la vida eterna/nY de toda bendición,/nEnsalzar Tu gracia tierna/nDebe cada corazón./nTu piedad inagotable,/nAbundante en perdonar,/nÚnico Ser adorable,/nGloria a Ti debemos dar.",
+      "2) De los cánticos celestes/nTe quisiéramos cantar,/nEntonados por los huestes/nQue lograste rescatar./nAlmas que a buscar viniste,/nPorque les tuviste amor,/nDe ellas te compadeciste/nCon tiernísimo favor.",
+      "3) Toma nuestros corazones,/nLlénalos de Tu verdad;/nDe Tu Espíritu, los dones,/nY de toda santidad./nGuíanos en obediencia,/nHumildad y puro amor;/nNos ampare Tu presencia,/nOh bandito Salvador."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 65,
+    "title": "CUÁN GRANDE AMOR",
+    "chorus": "¡Cuán grande amor! ¡Tan grande amor! el de Cristo para mí;/n¡Cuán grande amor! ¡Tan grande amor! pues por Él salvado fui.",
+    "stanzas": [
+      "1) Que Cristo me haya salvado, tan malo como yo fui,/nMe deja maravillado, pues Él se entregó por mí.",
+      "2) Oró por mí en el huerta: “No se haga Mi voluntad.”/nY todo aquel Sufrimiento causado fue por mi mal.",
+      "3) Por mí se hizo pecado; mis culpas Su amor llevó./nEn cruenta cruz fue clavado, mas mi alma Él rescató.",
+      "4) Cuando al final con los santos Su gloria contemplaré,/nCon gratitud y con cantos por siempre le alabaré."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 66,
+    "title": "LA ROCA DE MI SALVACIÓN",
+    "chorus": "Jesús será mi protección, La Roca de mi salvación/nLa Roca de mi salvación.",
+    "stanzas": [
+      "1) Segura mi esperanza está, en la justicia de Jesús,/nY mis pecados expiará, el sacrificio de Su cruz.",
+      "2) La tempestad jamás podrá, Su dulce faz de mí ocultar;/nSu luz gloriosa en mi alma está. En Él confío sin cesar.",
+      "3) En Sus promesas confiaré, en medio de la tentación;/nYa salvo soy, en Él hallé, la Roca de mi salvación.",
+      "4) Cuando ante Dios y el juicio esté, confiado Cristo me hallará,/nPues, Su justicia dándome, sin mancha me presentará."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 67,
+    "title": "CONMIGO SÉ",
+    "chorus": null,
+    "stanzas": [
+      "1) Señor Jesús, el día ya se fue./nLa noche cierra, oh, conmigo sé./nSin otro amparo/nTú, por compasión,/nAl desvalido das consolación.",
+      "2) Veloz el día nuestro huyendo va,/nSu gloria, sus ensueños pasan ya;/nMudanza y muerte veo alrededor;/nNo mudas Tú; sé mío, Señor.",
+      "3) Tu gracia todo el día he menester;/n¿Quién otro puede al tentador vencer?/n¿Cuál otro amante guía encontraré?/nEn sombra o sol, Dios, conmigo sé.",
+      "4) Vea yo al fin en mi postrer visión/nDe luz la senda que lleva a Sion,/nSerá mi canto al triunfar la fe:/n“Jesús conmigo en vida y muerte fue”."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 68,
+    "title": "MUESTRA A CRISTO",
+    "chorus": "Muestra a Cristo, muestra a Cristo;/nRevela, oh Dios, Tu gloria/nA través de Tu verdad/nHasta que todos confiesen:/n“Cristo es Señor”.",
+    "stanzas": [
+      "1) Prepara, oh Dios, mi corazón para recibir,/nRompe el duro suelo en mí, ayúdame a creer./nTu palabra siembra en mí, su fruto haz crecer;/nHaz que pueda escuchar, guíame en tu verdad.",
+      "2) Viva luz es Tu verdad en mi oscuridad;/nMe guarda en la tentación; sabiduría me da./nManjar a los hambrientos y a esclavos, libertad,/nRiqueza al alma pobre es; ven, háblame, Señor.",
+      "3) ¿Dónde más iré, Dios? ¿Dónde más iré?/nTienes palabras de vida eterna./n¿Dónde más iré, Dios? ¿Dónde más iré?/nTienes palabras de vida eterna./n¿Dónde más iré, Dios? ¿Dónde más iré?/nTienes palabras de vida eterna."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 69,
+    "title": "NO VALGO POR MI POSESIÓN",
+    "chorus": "Redentor, Tú eres mi gozo,/nGran tesoro, fuente de mi ser;/nConfiaré en Él, no hay otro,/nMi alma satisfecha está en Él.",
+    "stanzas": [
+      "1) No valgo por mi posesión,/nNi porque fuerte sea yo;/nSino el precio de Su amor,/nEn la cruz./nNo valgo por ser muy capaz,/nNi por perder, ni por ganar;/nSino en la sangre que vertió,/nEn la cruz.",
+      "2) La fama y juventud se irán/nComo la flor que hoy no está;/nMas vida eterna Tú nos das,/nEn la cruz./nYo no me jactaré en saber,/nNi en opulencia, ni poder;/nMas yo me jactaré en Jesús/nY en la cruz.",
+      "3) Esta verdead confieso hoy:/nDe dignidad indigno soy./nTengo valor pues me compró,/nEn la cruz."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 71,
+    "title": "GLORIOSO CRISTO",
+    "chorus": null,
+    "stanzas": [
+      "1) Glorioso Cristo,/nRey de lo creado,/nHombre y Dios, te doy loor;/nQuiero amarte,/nMi dulce amigo,/nCorona mía y Salvador.",
+      "2) Bello es el campo,/nMás aún los bosques/nEn la estación primaveral;/nCristo es más bello,/nCristo es más puro,/nQue al alma triste gozo da.",
+      "3) Bella es la luna,/nEs el sol más bello,/nY las estrellas, sin igual;/nPero el Cristo/nEs quien más brilla/nEn todo el reino celestial.",
+      "4) Bellas las flores,/nBello es el hombre/nEn su lozana juventud;/nMas su belleza/nPronto perece,/nSolo es eterna en Jesús."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 72,
+    "title": "CORRO A CRISTO",
+    "chorus": null,
+    "stanzas": [
+      "1) Corro a Cristo para huir del temor; mi amparo es Él, yo sé./n“Solo cree en Mí”, me dice en amor. Seguro así estaré./nCorro a Cristo roto por dolor; abunda en Él la paz;/n“Yo también lloré”, susurra el Señor. “Mi pena trae solaz.”",
+      "2) Corro a Cristo del afán de vivir; reposa mi alma en Él./n“Solo ven a Mí”, Su voz puedo oír. Encuentro descanso en Él./nCorro a Cristo oprimido por el Diablo y el pecar;/nCon temor él huye de mi Señor. Jamás me podrá dañar.",
+      "3) Corro a Cristo cuando hay tentación; yo tengo un escape en Él./n“Solo líbrame!” es mi oración, y cedo a Su gracia fiel./nCorro a Cristo avergonzado y encuentro un Defensor;/nSoportó la santa ira de Dios y hoy es mi intercesor."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 73,
+    "title": "SOLO EN JESÙS",
+    "chorus": null,
+    "stanzas": [
+      "1) Solo en Jesús está mi fe, esperanza y mi canción./nPiedra angular, firme sostén, inconmovible en la aflicción./nCuán grande amor, inmensa paz, en el temor o adversidad./nConsolador, amigo fiel, yo en Su amor me sostendré.",
+      "2) Solo en Jesús, Hijo de Dios, quien se humilló por nuestro bien./nCordero de mi salvación, por este mundo herido fue./nEn una cruz fue a morir, y Dios mostró Su gracia ahí./nPues mi pecado Él llevó, en Su aflicción vida me dio.",
+      "3) En un sepulcro, Él yació, el cuerpo inerte del Señor./nMas el tercer día llegó: ¡resucitó en gloriosa luz!/nY al triunfar sobre el mal, perdió el pecado potestad./nDe Él suyo soy, Él mío es, pues con Su sangre me compró.",
+      "4) Desde el nacer hasta el morir, sea el poder de Cristo en mí./nNo temeré, seguro estoy, mi vida yo a Él le doy./nNingún poder, ningún afán de Él me arrebatará./nHasta que Él venga otra vez, en Su poder me sostendrá."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 74,
+    "title": "EN CRISTO ESTÁ MI SALVACIÓN",
+    "chorus": null,
+    "stanzas": [
+      "1) En Cristo está mi salvación;/nÉl es mi fuerza, luz, canción./nLa Roca Eterna, fundación;/nFirme en prueba y tentación./nOh, alto amor, profunda paz;/nLa lucha cesa y el temor./nMi esperanza y protección./nEn el amor de Cristo estoy.",
+      "2) En Cristo está mi redención;/nDios infinito se humilló./nSu don de amor y libertad/nEl mundo entero despreció./nAllá en la cruz, mientras murió,/nEl justo Dios se conformó,/nY mi pecado Él cargó,/nHoy en Su muerte vivo yo.",
+      "3) Fue sepultado al morir,/nLa luz del mundo se apagó./nMas con poder resucitó:/nDe muerte Él se levantó./n¡Glorioso Rey! El Vencedor/nDe mi pecado me libró./nPues Suyo soy y mío es Él./nDios con Su sangre me compró.",
+      "4) Vivir sin culpa y sin temor,/nEs el poder de Cristo en mí./nDesde nacer hasta morir,/nCristo conduce mi existir./nNo hay poder ni voluntad/nQue de Él me pueda apartar,/nHasta que vuelva o muera yo,/nEn el poder de Cristo estoy."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 75,
+    "title": "AGUA VIVA",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/agua-viva/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 76,
+    "title": "SÉ, TÚ MI VISIÓN",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/se-tu-mi-vision/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 78,
+    "title": "EL AMOR DE CRISTO",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/el-amor-de-cristo/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 79,
+    "title": "CUÁN PROFUNDO AMOR",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/cuan-profundo-amor/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 81,
+    "title": "NOMBRE SOBRE TODO",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/nombre-sobre-todo/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 82,
+    "title": "CUÁN DULCE ES CONFIAR",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/cuan-dulce-es-confiar/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 83,
+    "title": "EL PROFUNDO AMOR DE CRISTO",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/el-profundo-amor-de-cristo/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 85,
+    "title": "LA GLORIA ES DE JESÚS",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/la-gloria-es-de-jesus/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 87,
+    "title": "POR TODO EL MUNDO",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/por-todo-el-mundo/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 89,
+    "title": "ME GLORÍO EN JESUCRISTO",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/me-glorio-en-jesucristo/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 91,
+    "title": "GLORIOSO INTERCAMBIO",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/glorioso-intercambio/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 92,
+    "title": "ANTE EL TRONO CELESTIAL",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/ante-el-trono-celestial/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 94,
+    "title": "DÍA DE GLORIA",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/dia-de-gloria/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 95,
+    "title": "ROCA DE LA ETERNIDAD",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/roca-de-la-eternidad/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 96,
+    "title": "MARAVILLOSO ES EL GRAN AMOR",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/maravilloso-es-el-gran-amor/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 97,
+    "title": "OH, QUÉ AMOR INCOMPARABLE",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/oh-que-amor-incomparable/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 98,
+    "title": "JESÚS ES MI REY SOBERANO",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/jesus-es-mi-rey-soberano/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 99,
+    "title": "EL PODER DE LA CRUZ",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/el-poder-de-la-cruz/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 100,
+    "title": "EL PODER DE LA CRUZ (LETRA ALTERNATIVA)",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/el-poder-de-la-cruz-letra-alternativa/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 102,
+    "title": "SU MANTO POR EL MÍO",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/su-manto-por-el-mio/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 104,
+    "title": "VEN CONTEMPLA EL GRAN MISTERIO",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/ven-contempla-el-gran-misterio/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 105,
+    "title": "ES NUESTRO DIOS",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/es-nuestro-dios/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 106,
+    "title": "LA GLORIA DE LA CRUZ",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/la-gloria-de-la-cruz/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 107,
+    "title": "LA CRUZ EXCELSA",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/la-cruz-excelsa/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 108,
+    "title": "LA CRUZ EXCELSA",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/la-cruz-excelsa-2/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 109,
+    "title": "EN LA CRUZ",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/en-la-cruz/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 111,
+    "title": "REY DE MI VIDA",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/rey-de-mi-vida/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 112,
+    "title": "CUAL VARÓN DE GRAN DOLOR",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/cual-varon-de-gran-dolor/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 114,
+    "title": "¡OH ROSTRO ENSANGRENTADO!",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/oh-rostro-ensangrentado/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 116,
+    "title": "SOLO DE JESÚS LA SANGRE",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/solo-de-jesus-la-sangre/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 117,
+    "title": "CRISTO, TU SANGRE",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/cristo-tu-sangre/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 118,
+    "title": "HAY UN PRECIOSO MANANTIAL",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/hay-un-precioso-manantial/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 119,
+    "title": "CANTAD Y GRACIAS DAD",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/cantad-y-gracias-dad/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 120,
+    "title": "VIVIR ES CRISTO",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/vivir-es-cristo/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 121,
+    "title": "¡CRISTO VIVE, ÉL RESUCITÓ!",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/cristo-vive-el-resucito/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 123,
+    "title": "VED LA MAÑANA",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/ved-la-manana/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 125,
+    "title": "ES CRISTO DE SU IGLESIA",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/es-cristo-de-su-iglesia/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 127,
+    "title": "POR FE",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/por-fe/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 129,
+    "title": "¡CUÁN FIRME CIMIENTO!",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/cuan-firme-cimiento/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 130,
+    "title": "VEN TÚ, POTENTE REY",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/ven-tu-potente-rey/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 131,
+    "title": "HABLA, OH DIOS",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/habla-oh-dios/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 132,
+    "title": "HABLA, OH DIOS (LETRA ALTERNATIVA)",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/habla-oh-dios-letra-alternativa/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 133,
+    "title": "LEVÁNTATE, IGLESIA",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/levantate-iglesia/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 135,
+    "title": "UN RETO NOS AGUARDA",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/un-reto-nos-aguarda/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 136,
+    "title": "POR LA CAUSA",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/por-la-causa/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 138,
+    "title": "TRANSFÓRMAME, ESPÍRITU",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/transformame-espiritu/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 139,
+    "title": "SANTO ESPÍRITU",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/santo-espiritu/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 140,
+    "title": "HOY, POR LOS SANTOS QUE DESCANSAN YA",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/hoy-por-los-santos-que-descansan-ya/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 142,
+    "title": "CIUDAD DE DIOS",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/ciudad-de-dios/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 143,
+    "title": "MI VIDA ES CRISTO",
+    "chorus": null,
+    "stanzas": [
+      "1) https://himnosdegracia.com/mi-vida-es-cristo/"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 144,
+    "title": "HAY LIBERTAD",
+    "chorus": "Rompió mis cadenas, me dio vida nueva/nY al fondo del mar echó mi maldad./nLavó mis pecados y me ha perdonado,/nSolo en el nombre de Jesús, hay libertad.",
+    "stanzas": [
+      "1) Las cadenas de la muerte me quitó./nPara mí ya no hay condenación, hay libertad, libertad./nSiendo esclavo del pecado me libró./nEn la cruz compró mi redención, y libertad, libertad.",
+      "2) Yo proclamo al que en la cruz por mí murió/nY cambió mi duro corazón por libertad, libertad./nSiendo esclavo del pecado me libró./nEn la cruz compró mi redención, y libertad, libertad.",
+      "3) Al que el Hijo, hace libre, el libre en verdad./nAl que el Hijo, hace libre, es libre en verdad./nAl que el Hijo, hace libre, el libre en verdad./nAl que el Hijo, hace libre, es libre en verdad."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 145,
+    "title": "MI FE HA HALLADO UN SOLAZ",
+    "chorus": "Me basta solo esto saber,/nNo necesito más;/nSaber que el Salvador murió,/nMurió en mi lugar.",
+    "stanzas": [
+      "1) Mi fe ha hallado un solaz,/nDe culpa libre soy;/nConfío en Él, que vivo está,/nSu muerte me salvó",
+      "2) Su obra suficiente es,/nMis dudas quitará;/nCual pecador me acerco a Él,/nJamás me apartará.",
+      "3) En Su Palabra confiaré,/nPalabra del Señor;/nTan solo en Él hay salvación,/nPues en la cruz murió.",
+      "4) Él sana toda enfermedad,/nY trae redención;/nPor mí Su sangre derramó,/nPor mí Su vida dio."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 146,
+    "title": "GRATA CERTEZA",
+    "chorus": "Esta es mi historia y es mi canción:/n“¡Gloria a Jesús por Su salvación!”;/nAún para mí fue Su redención,/n¡Bendita historia, bella canción!",
+    "stanzas": [
+      "1) Grata certeza, ¡soy de Jesús!/nHecho heredero de eterna salud,/nSu sangre pudo mi alma librar/nDe pena eterna y darme la paz.",
+      "2) Siempre sumiso a Su voluntad,/nGlorias celestes empiezo a gustar,/nCuanto más cerca sigo al Señor/nMás goza mi alma Su amplio perdón.",
+      "3) Siempre confiando encuentro en Jesús:/nPaz, alegría, descanso y salud,/nDel cielo mi alma llega a gozar,/nMientras a Cristo logra mirar."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 148,
+    "title": "ESTOY BIEN",
+    "chorus": "Estoy bien, _(Estoy bien,)__/n¡Gloria a Dios! _(¡Gloria a Dios!)__/nTengo paz en mi ser, ¡Gloria a Dios!",
+    "stanzas": [
+      "1) De paz inundada mi senda esté,/nO cúbrala un mar de aflicción;/nCualquiera que sea mi suerte, diré:/n“Estoy bien, tengo paz, ¡gloria a Dios!”.",
+      "2) Ya venga la prueba o me tiente Satán,/nNo amengua mi fe ni mi amor;/nPues Cristo comprende mis luchas, mi afán,/nY Su sangre obrará en mi favor.",
+      "3) Feliz ya me siento al saber que Jesús/nLibrome de yugo opresor;/nQuitó mi pecado, clavolo en la cruz;/nGloria demos al buen Salvador.",
+      "4) La fe tornarase en feliz realidad/nAl irse la niebla veloz;/nDesciende Jesús con Su gran majestad,/n¡Aleluya, estoy bien con mi Dios!"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 150,
+    "title": "TENGO UN REFUGIO",
+    "chorus": null,
+    "stanzas": [
+      "1) Tengo un refugio en tempestad,/nCuando aflicciones tengo;/nCuando me llena mi temor,/nMi alma en Ti descansa./nOh Cristo, en Ti me esconderé,/nMi paz y mi consuelo;/nNada es más grande que Tu amor,/nConfortas mi tristeza.",
+      "2) Tengo un refugio en tempestad,/nSi mi pecado acusa;/nCulpable soy de mi maldad,/nTu gracia aún me acepta./nOh Cristo, en Ti me esconderé,/nYa no soy condenado;/nRefugio tengo en Tu cruz/nY salvación encuentro.",
+      "3) Tengo un refugio en tempestad,/nSi temo a la tormenta;/nEn mi debilidad yo sé,/nTu fuerza me sustenta./nOh Cristo, en Ti me esconderé,/nPues llevas Tú mis cargas;/nTus manos firmes me guiarán/nHasta llevarme al cielo.",
+      "4) Oh Cristo, en Ti me esconderé,/nPues llevas Tú mis cargas;/nTus manos firmes me guiarán/nHasta llevarme al cielo."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 151,
+    "title": "ÉL ME SOSTENDRÁ",
+    "chorus": "Él me sostendrá,/nÉl me sostendrá;/nMe ama tanto el Salvador,/nÉl me sostendrá.",
+    "stanzas": [
+      "1) Si mi fe ha de caer,/nÉl me sostendrá;/nen la tentación yo sé,/nÉl me sostendrá./nNo podría estar de pie,/nen la oscuridad;/npues mi amor muy frágil es,/nÉl me sostendrá.",
+      "2) Él se goza en quien salvó,/nÉl me sostendrá;/nante Él precioso soy,/nÉl me sostendrá./nSus promesas fieles son,/nmi alma guardará;/nalto precio Él pagó,/nÉl me sostendrá.",
+      "3) Él sufrió y por mí murió,/nÉl me sostendrá;/nla justicia Él cumplió,/nÉl me sostendrá./nVida eterna tengo en Él,/nÉl me sostendrá;/nhasta que le pueda ver/n¡Él regresará!/nÉl regresará,/nÉl regresará;/nMe ama tanto el Salvador,/nÉl regresará."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 153,
+    "title": "CRISTO, EL ANCLA FIRME Y FUERTE",
+    "chorus": null,
+    "stanzas": [
+      "1) Cristo, el ancla firme y fuerte, en furiosa tempestad;/nCuando soplan fuertes dudas y mis velas no dan más./nEn la pena y en la tristeza, cuando sufra en el dolor;/nYo me aferraré al ancla, pues jamás se moverá.",
+      "2) Cristo, el ancla firme y fuerte, cuando ruge el temporal;/nCuando tentación me ataca y parezco desmayar./nMás profundo llega el ancla que mi culpa y mi maldad;/nYo me aferraré al ancla, pues jamás se moverá.",
+      "3) Cristo, el ancla firme y fuerte, bajo la incredulidad;/nNo desmayes alma mía, en la cruz segura estás./nEs mi prueba y mi certeza que Su amor no fallará;/nMe esperanza está en el ancla, pues jamás se moverá.",
+      "4) Cristo, el ancla firme y fuerte, cuando llegue el día final;/nCuando se abra al fin la gloria y yo pueda descansar./nCruzaré el horizonte muy seguro con mi Dios;/nTodo calma será entonces, Ya no habrá más tempestad./nCristo, el puerto que nos salva para siempre fiel será;/nConfiaremos en el ancla, pues jamas se moverá."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 154,
+    "title": "OH CRISTO, YO TE AMO",
+    "chorus": null,
+    "stanzas": [
+      "1) ¡Oh Cristo! hoy te amo, que mío eres sé/nYa todo pecado por Ti dejaré./n¡Oh Cristo, precioso! por Ti salvo soy;/nJesús, si te amaba, yo te amo más hoy.",
+      "2) Me amaste primero y así te amo a Ti./nPues sobre el Calvario moriste por mí;/nPor lo que sufriste, mi vida te doy;/nJesús, si te amaba, yo te amo más hoy.",
+      "3) Y mientras que viva en este vaivén,/nEn la hora final de la muerte también,/nYo te amaré siempre; cantándote estoy,/nJesús, si te amaba, yo te amo más hoy.",
+      "4) Al fin en Tu gloria por gracia entraré/nY allí con los santos loor te daré;/nPor siglos eternos a cantarte voy,/nJesús, si te amaba, yo te amo más hoy."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 155,
+    "title": "CRISTO, MI CRUZ HE TOMADO",
+    "chorus": null,
+    "stanzas": [
+      "1) Cristo, mi cruz he tomado, dejo el mundo y sigo a Ti;/nTodo en Ti he encontrado, Todo has dado Tú por mí./nYa mis vanas ambiciones por amor de Ti dejé,/nSin igual mi condición es por Ti, Dios, y cielo hallé.",
+      "2) Quiere el mundo abandonarme, A Ti fue también infiel;/nQuieren muchos engañarme, Cristo, Tú eres siempre fiel./nSi me tratan con desprecio, Dios de compasión y amor,/nTú me miras con aprecio y no pido bien mayor.",
+      "3) Aunque el hombre me moleste, puedo en Ti descanso hallar;/nSi me asedia el mal cual hueste, Tú me ofreces refugiar./nYa no puede el mal dañarme si confío en Tu amor,/nY no puede fascinarme si contigo voy, Señor.",
+      "4) Pase el terrenal tesoro, vengan burlas y dolor,/nEn Tu mies la pena es gozo. Mi ganancia es Tu favor./nTe he llamado “Abba Padre”, toda mi alma en Ti pondré./nAunque la tormenta aseche, todo obra para bien.",
+      "5) Alma mía, eres salva, deja el miedo y el pecar;/nA cada momento encuentras algo más que soportar./n¿O qué Espíritu en ti habita y qué Padre has de gozar?/nPues Jesús vino a salvarte, ¿Qué más puedes hoy desear?",
+      "6) Por la vida pasajera, con fe lucha en oración;/nEn el cielo Dios te espera con eterno galardón./nLa jornada terminada vivirás con tu Señor,/nTu esperanza ya alcanzada, siempre a Dios darás loor."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 156,
+    "title": "LA CENA DEL SEÑOR",
+    "chorus": null,
+    "stanzas": [
+      "1) Ante Tus pies, una vez más,/nVenimos hoy a recordar/nEl sacrificio que nos dio/nPerdón y eterna comunión./nTu pueblo aquí reunido va,/nA celebrar en humildad;/nEl pan, Tu cuerpo que sufrió,/nTu sangre el pacto de Tu amor.",
+      "2) Coro:/n//Hoy venimos como hermanos/nA la Cena del Señor;/nAcerquémonos, cristianos,/nRespirando tierno amor//.",
+      "3) La mesa ya servida está,/nRendimos nuestro corazón/nY confesamos nuestro mal,/nConfiando siempre en Tu perdón.",
+      "4) Frente a la mesa celestial,/nUn día en la eternidad,/nTendremos dicha, plenitud,/nEterno gozo y gratitud;/nCon Dios el Padre en comunión,/nCon Cristo y el Consolador."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Himnos de gracia"
+  },
+  {
+    "number": 1,
     "title": "LA IGLESIA SIGUE CAMINANDO",
     "chorus": null,
     "stanzas": [
@@ -17680,7 +19345,7 @@
   },
   {
     "number": 5,
-    "title": "ESTOY BIEN CON MI DIOS",
+    "title": "ESTOY BIEN (ALTERNATIVA)",
     "chorus": "Estoy bien _(estoy bien)__,/n¡Con mi Dios! _(con mi Dios)__,/nestoy bien, estoy bien,/n¡Con mi Dios!",
     "stanzas": [
       "1) De paz inundada mi senda ya esté/nO cúbrala un mar de aflicción,/nMi suerte cualquiera que sea, diré:/nEstoy bien, estoy bien con mi Dios.",
@@ -17726,26 +19391,6 @@
   },
   {
     "number": 8,
-    "title": "SOLO EN JESÚS",
-    "chorus": null,
-    "stanzas": [
-      "1) Sólo en Jesús, está mi fe/nMi esperanza y mi canción/nPiedra angular, firme sostén/nInconmovible en la aflicción.",
-      "2) Cuán grande amor, inmensa paz/nEn el temor o adversidad/nConsolador, amigo fiel/nYo en su amor me sostendré.",
-      "3) Solo en Jesús, hijo de Dios/nQuien se humilló por nuestro bien/nCordero de, mi salvación/nPor este mundo herido fue.",
-      "4) En una cruz fue a morir/nY Dios mostró su gracia ahí/nPues mi pecado Él llevó/nEn su aflicción vida me dio.",
-      "5) En un sepulcro, Él yació/nEl cuerpo inerte del señor/nMás el tercer día llegó/nResucitó en gloriosa luz.",
-      "6) Y al triunfar, sobre el mal/nPerdió el pecado potestad/nDe Él suyo soy, Él mío es/nPues con su sangre me compró.",
-      "7) Desde al nacer, hasta el morir/nSea el poder de cristo en mí/nNo temeré, seguro estoy/nMi vida yo a Él, le doy.",
-      "8) Ningún poder, ningún afán/nDe Él me arrebatará/nHasta que Él, venga otra vez/n//En su poder me sostendré.//"
-    ],
-    "startsWithChorus": false,
-    "repeatChorusAtEnd": false,
-    "authors": null,
-    "tags": "Apéndice",
-    "book": "Himnario Apéndice"
-  },
-  {
-    "number": 9,
     "title": "ERES MI TODO",
     "chorus": "Cristo Salvador,/ndigno de adorar./nCristo Redentor,/ndigno de adorar.",
     "stanzas": [
@@ -17759,7 +19404,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 10,
+    "number": 9,
     "title": "CREO EN DIOS",
     "chorus": "Creo en Dios, su voz levanta el viento y mar en tempestad,/nY por su mano alzada pronto acallarán/nAun cuando todo esté perdido yo,/nCreo en Dios, porque Él es mi esperanza en medio del dolor,/nConfiado cantaré su grande salvación,/nPorque vivo y creo en Dios.",
     "stanzas": [
@@ -17773,7 +19418,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 11,
+    "number": 10,
     "title": "CORITOS VARIOS",
     "chorus": null,
     "stanzas": [
@@ -17791,7 +19436,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 12,
+    "number": 11,
     "title": "DIOS ESTÁ AQUÍ",
     "chorus": "Dios esta aquí,/nTan cierto como el aire que respiro,/nTan cierto como/nla mañana se levanta el sol,/nTan cierto como que/nle hablo y me puede oir.",
     "stanzas": [
@@ -17804,7 +19449,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 13,
+    "number": 12,
     "title": "EL REY YA VIENE",
     "chorus": "Sí, el Rey ya viene, el Rey ya viene,/ny la iglesia redimida dice: \"Ven, Señor Jesús\"./nSí, el Rey ya viene, el Rey ya viene,/n¡Gloria a Dios! Ya viene por mí.",
     "stanzas": [
@@ -17819,7 +19464,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 14,
+    "number": 13,
     "title": "VIDA ABUNDANTE",
     "chorus": "Vida abundante Jesús ofrece,/nvida triunfante de día en día;/nÉl es la fuente de vida eterna/nque brota siempre en mi corazón.",
     "stanzas": [
@@ -17834,7 +19479,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 15,
+    "number": 14,
     "title": "EL QUE HABITA AL ABRIGO DE DIOS",
     "chorus": "Oh, yo quiero habitar al abrigo de Dios,/nsólo allí encontraré paz y profundo amor./nMi delicia es con Él comunión disfrutar/ny por siempre su nombre alabar.",
     "stanzas": [
@@ -17849,22 +19494,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 16,
-    "title": "SU GRACIA ES MAYOR",
-    "chorus": "Gloria Dios, su gracia es mayor,/nSus misericordias hoy nuevas son,/nMis faltas son muchas;/nSu gracia es mayor.",
-    "stanzas": [
-      "1) ¿Que amor mis pecados decide olvidar?/nLanzados al mar no los quiere contar,/nÉl siendo Omnisciente olvida mi error,/nMis faltas son muchas, su gracia es mayor.",
-      "2) Paciente me aguarda en mi desviar,/nUn padre que tierno me llama al hogar,/nRecibe al débil y vil pecador,/nMis faltas son muchas, su gracia es mayor.",
-      "3) Que grandes riquezas Él nos otorgó,/nSu sangre fue el pago, su vida entregó./nPago esa deuda y la canceló,/nMis faltas son muchas, su gracia es mayor."
-    ],
-    "startsWithChorus": false,
-    "repeatChorusAtEnd": false,
-    "authors": null,
-    "tags": "Apéndice",
-    "book": "Himnario Apéndice"
-  },
-  {
-    "number": 17,
+    "number": 15,
     "title": "DIOS DESCENDIÓ",
     "chorus": "Dios descendió, y de gloria me llenó,/ncuando Jesús por gracia me salvó;/nfui ciego, me hizo ver y en Él renacer./nDios descendió y de gloria me llenó.",
     "stanzas": [
@@ -17879,7 +19509,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 18,
+    "number": 16,
     "title": "PÓSTRATE",
     "chorus": null,
     "stanzas": [
@@ -17895,7 +19525,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 19,
+    "number": 17,
     "title": "AMOR ES",
     "chorus": "Amor, es entregarse en alma/ny cuerpo a la humanidad;/nvivir siempre sirviendo/nsin que tu esperes algo para ti.",
     "stanzas": [
@@ -17910,7 +19540,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 20,
+    "number": 18,
     "title": "CRISTO LA ROCA",
     "chorus": "Es Cristo la Roca, el ancla de mi fe;/nlos males, lamentos, y halles de temor,/nterminan por siempre, con mi supremo Rey./nEs Jesucristo mi refugio.",
     "stanzas": [
@@ -17925,7 +19555,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 21,
+    "number": 19,
     "title": "YO IRÉ DE LA TIERRA HASTA EL FIN",
     "chorus": "Yo iré, yo iré de la tierra hasta el fin,/nllevaré tu verdad de la tierra hasta el fin./nQue tu amor y tu paz des a la humanidad;/nyo iré de la tierra hasta el fin.",
     "stanzas": [
@@ -17939,7 +19569,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 22,
+    "number": 20,
     "title": "HASTA ESE DÍA",
     "chorus": "Mas siempre aquí yo seguiré cantando,/nsiempre así con gozo mi alma irá./nHasta ese día en que veré la gloria,/ncuando el Señor me lleve allá.",
     "stanzas": [
@@ -17954,7 +19584,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 23,
+    "number": 21,
     "title": "UN MANDAMIENTO NUEVO",
     "chorus": null,
     "stanzas": [
@@ -17969,7 +19599,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 24,
+    "number": 22,
     "title": "ÉL VINO A MI CORAZÓN",
     "chorus": "Él vino a mi corazón,/nÉl vino a mi corazón./nSoy feliz con la vida/nque Cristo me dio,/nÉl vino a mi corazón.",
     "stanzas": [
@@ -17984,7 +19614,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 25,
+    "number": 23,
     "title": "NO TEMERÉ CON CRISTO",
     "chorus": "Con compasión y devoción,/n(con compasión y devoción)/nsiempre me cuida en su amor./n(siempre en su amor)/nRey de la paz, Él es capaz./n(rey de la paz, Él es capaz)/nNo temeré con Cristo.",
     "stanzas": [
@@ -17999,7 +19629,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 26,
+    "number": 24,
     "title": "¡OH, AMOR DE DIOS!",
     "chorus": "Oh, amor de Dios, brotando está,/ninmensurable eternal;/npor las edades durará,/ninagotable raudal.",
     "stanzas": [
@@ -18014,22 +19644,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 27,
-    "title": "ÉL ME SOSTENDRÁ",
-    "chorus": "Él me sostendrá,/nÉl me sostendrá;/npues me ama el Salvador,/nÉl me sostendrá.",
-    "stanzas": [
-      "1) Si mi fe ha de caer,/nÉl me sostendrá;/nen la tentación yo sé,/nÉl me sostendrá./nNo podría estar de pie,/nen la oscuridad;/npues mi amor muy frágil es,/nÉl me sostendrá.",
-      "2) Él se goza en quien salvó,/nÉl me sostendrá;/nante Él precioso soy,/nÉl me sostendrá./nSus promesas fieles son,/nmi alma guardará;/nalto precio Él pagó,/nÉl me sostendrá.",
-      "3) Él sufrió y por mí murió,/nÉl me sostendrá;/nla justicia Él cumplió,/nÉl me sostendrá./nVida eterna tengo en Él,/nÉl me sostendrá;/nhasta que le pueda ver/n¡Él regresará!/nÉl regresará,/nÉl regresará;/npues me ama el Salvador,/nÉl regresará."
-    ],
-    "startsWithChorus": false,
-    "repeatChorusAtEnd": false,
-    "authors": null,
-    "tags": "Apéndice",
-    "book": "Himnario Apéndice"
-  },
-  {
-    "number": 28,
+    "number": 25,
     "title": "ABBA PADRE",
     "chorus": "Abba, Padre, mi protección,/neres mi fuerza y mi canción;/nAbba, Padre, eres mi fe,/nen confusión o aflicción,/na Ti iré, Abba Padre.",
     "stanzas": [
@@ -18044,7 +19659,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 29,
+    "number": 26,
     "title": "GOZO, PAZ Y AMOR",
     "chorus": "Gozo, paz y amor, yo encuentro en Ti;/n(Gozo, paz y amor, yo encuentro en Ti)/nGozo, paz y amor, Tú me das a mí./n(Gozo, paz y amor... a mí)/nGozo, paz y amor, yo encuentro en Ti;/n(Gozo, paz y amor, yo encuentro en Ti)/nGozo, paz y amor, Tú me das a mí./n(Gozo, paz y amor... a mí)",
     "stanzas": [
@@ -18059,7 +19674,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 30,
+    "number": 27,
     "title": "USA MI VIDA",
     "chorus": "Usa mi vida, usa mi vida/npara tu gloria oh, Jesús./nTodos los días y hoy quiero ser,/ntestigo tuyo Señor por doquier.",
     "stanzas": [
@@ -18074,16 +19689,16 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 31,
+    "number": 28,
     "title": "LO QUE RESPIRA",
     "chorus": null,
     "stanzas": [
-      "//Lo que respira alabe al Señor.//",
+      "1) //Lo que respira alabe al Señor.//",
       "1) Alabad a nuestro Dios en su santuario./nPor la hermosura de su cielo./nPor sus proezas alabadle a Él.",
       "2) Alabadle por la grandeza de su nombre./nCon el sonido de bocina./nSalterio y arpa, a la vez cantad.",
       "3) Alabadle con el alegre pandero./nCon el candor de la danza./nCantad con gozo al Señor.",
       "4) Alabadle con cuerdas, flautas y címbalos./nDe júbilos resonantes.",
-      "En su lenguaje todo:/n//Lo que respira alabe al Señor.///n¡Amén!"
+      "6) En su lenguaje todo:/n//Lo que respira alabe al Señor.///n¡Amén!"
     ],
     "startsWithChorus": false,
     "repeatChorusAtEnd": false,
@@ -18092,7 +19707,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 32,
+    "number": 29,
     "title": "COMO EL CIERVO",
     "chorus": "Solo Tú eres mi sostén,/n¿A quién iré si no sólo a Ti?/nYo te rindo mi vida entera,/npara siempre a Ti Señor.",
     "stanzas": [
@@ -18107,7 +19722,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 33,
+    "number": 30,
     "title": "NOBLE SOSTÉN",
     "chorus": "Mi sostén es Jesús,/nnunca en la lucha desmayar podré./nMi sostén es Cristo Jesús,/nnunca en la lucha desmayar podré.",
     "stanzas": [
@@ -18122,22 +19737,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 34,
-    "title": "MI SER DESCANSA EN ÉL",
-    "chorus": "Dios, Tú eres mi Dios;/nno seré removido, en Ti confío./nDios, renueva hoy un firme espíritu en mí;/n//Descanso solo en Ti.//",
-    "stanzas": [
-      "1) Mi ser, descansa en Él, no dudes ya,/naunque mañana haya tormentas;/nDios contigo está, no temas más/nlas llamas de dolor que asechan.",
-      "2) Mi ser, descansa en Dios, no tiembles ya/nante las sombras de peligro;/nPon tu fe en Él, tu escudo es/nque apaga el fuego del maligno.",
-      "3) Mi ser, descansa en Dios, abraza fiel/nesta Verdad que es luz y vida;/nVen, espera en Él, verás nacer/ncon esperanza un nuevo día."
-    ],
-    "startsWithChorus": false,
-    "repeatChorusAtEnd": false,
-    "authors": null,
-    "tags": "Apéndice",
-    "book": "Himnario Apéndice"
-  },
-  {
-    "number": 35,
+    "number": 31,
     "title": "REY EXALTADO",
     "chorus": "Rey exaltado en gloria/nes Cristo Jesús y le alabaré./nRey exaltado en gloria/nes Cristo y yo le alabaré.",
     "stanzas": [
@@ -18151,7 +19751,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 36,
+    "number": 32,
     "title": "¡MAJESTAD!",
     "chorus": "Alabad, engrandecer su santo nombre/nAdorad, magnificad al gran Redentor./n¡Majestad! La gloria celebrad/ndel Salvador, Cristo Jesús, Rey y Señor.",
     "stanzas": [
@@ -18166,7 +19766,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 37,
+    "number": 33,
     "title": "GRAN DÍA DE VICTORIA",
     "chorus": "¡Gloria, gloria, aleluya!/n¡Gloria, gloria, aleluya!/n¡Gloria, gloria, aleluya!/nDios es quien vencerá.",
     "stanzas": [
@@ -18182,7 +19782,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 38,
+    "number": 34,
     "title": "SOY SOLDADO DE JESÚS",
     "chorus": "Después de la batalla nos coronará,/n//Dios nos coronará///nDespués de la batalla nos coronará,/nen aquella santa Sion./nMás allá, más allá,/nen aquella santa Sion./nDespués de la batalla nos coronará,/nen aquella santa Sion.",
     "stanzas": [
@@ -18197,7 +19797,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 39,
+    "number": 35,
     "title": "UN DÍA CRISTO VOLVERÁ",
     "chorus": "Muy pronto, sí, Jesús vendrá, y alegre le verá su pueblo;/n¡Velad! ¡Orad! el Rey vendrá, los suyos arrebatará.",
     "stanzas": [
@@ -18213,7 +19813,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 40,
+    "number": 36,
     "title": "ERES MI PROTECTOR",
     "chorus": "Confiaré en Ti,/nEl débil dirá fuerte soy,/ncon poder del Señor.",
     "stanzas": [
@@ -18226,7 +19826,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 41,
+    "number": 37,
     "title": "VEN CONTEMPLA EL MISTERIO",
     "chorus": null,
     "stanzas": [
@@ -18243,7 +19843,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 42,
+    "number": 38,
     "title": "SUMISIÓN",
     "chorus": "No lo que quiera hacer,/nNi donde quiera ir/n¿Pues quién soy yo/nque debo decidir?/nMi Padre escogerá,/nLa senda que es mejor/nY así confiado puedo ir.",
     "stanzas": [
@@ -18258,7 +19858,7 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 43,
+    "number": 39,
     "title": "JESÚS ES LA ROCA DE MI SALVACIÓN",
     "chorus": null,
     "stanzas": [
@@ -18275,11 +19875,11 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 44,
+    "number": 40,
     "title": "HIMNO NACIONAL DE VENEZUELA",
     "chorus": "//Gloria al bravo pueblo/nQue el yugo lanzó/nLa Ley respetando/nLa virtud y honor.//",
     "stanzas": [
-      "//!Abajo cadenas!///n//Gritaba el Señor///ny el pobre en su choza/nlibertad pidió/nA este santo nombre/ntembló de pavor/nel vil egoísmo/nque otra vez triunfó/n//A este santo nombre///ntembló de pavor/n//el vil egoísmo/nque otra vez triunfó//"
+      "1) //!Abajo cadenas!///n//Gritaba el Señor///ny el pobre en su choza/nlibertad pidió/nA este santo nombre/ntembló de pavor/nel vil egoísmo/nque otra vez triunfó/n//A este santo nombre///ntembló de pavor/n//el vil egoísmo/nque otra vez triunfó//"
     ],
     "startsWithChorus": true,
     "repeatChorusAtEnd": false,
@@ -18288,11 +19888,11 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 45,
+    "number": 41,
     "title": "HIMNO NACIONAL DE MÉXICO",
     "chorus": "Mexicanos, al grito de guerra/nEl acero aprestad y el bridón;/n//Y retiemble en sus centros la tierra/nAl sonoro rugir del cañón.//",
     "stanzas": [
-      "Ciña ¡Oh, Patria! tus sienes de oliva/nde la paz el arcángel divino,/nque en el cielo tu eterno destino/npor el dedo de Dios se escribió./nMas si osare un extraño enemigo/nprofanar con su planta tu suelo,/npiensa ¡Oh, Patria querida! que el cielo/n//un soldado en cada hijo te dio.//"
+      "1) Ciña ¡Oh, Patria! tus sienes de oliva/nde la paz el arcángel divino,/nque en el cielo tu eterno destino/npor el dedo de Dios se escribió./nMas si osare un extraño enemigo/nprofanar con su planta tu suelo,/npiensa ¡Oh, Patria querida! que el cielo/n//un soldado en cada hijo te dio.//"
     ],
     "startsWithChorus": true,
     "repeatChorusAtEnd": false,
@@ -18301,11 +19901,11 @@
     "book": "Himnario Apéndice"
   },
   {
-    "number": 46,
+    "number": 42,
     "title": "HIMNO NACIONAL DEL PERÚ",
     "chorus": "¡Somos libres! ¡Seámoslo siempre!/nY antes niegue sus luces el sol,/nQue faltemos al voto solemne/nQue la patria al eterno elevó.",
     "stanzas": [
-      "En sus cima los Andes sostengan/nla bandera o pendón bicolor/nque a los siglos anuncie el esfuerzo/nque ser libres por siempre nos dio./nA su sombra posemos tranquilos/ny al nacer por sus cumbres el sol/nrenovemos el gran juramento/nque rendimos al Dios de Jacob."
+      "1) En sus cima los Andes sostengan/nla bandera o pendón bicolor/nque a los siglos anuncie el esfuerzo/nque ser libres por siempre nos dio./nA su sombra posemos tranquilos/ny al nacer por sus cumbres el sol/nrenovemos el gran juramento/nque rendimos al Dios de Jacob."
     ],
     "startsWithChorus": true,
     "repeatChorusAtEnd": false,

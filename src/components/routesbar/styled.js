@@ -19,6 +19,12 @@ export const RoutesbarStyled = styled.div`
     padding: 0;
     margin: 0;
 
+    a {
+      height: 55px;
+      display: flex;
+      align-items: center;
+    }
+
     li,
     li a {
       outline: none;

@@ -104,7 +104,10 @@ export function HymnalIndex({
 
       return (
         <li key={index}>
-          <span title={item?.text?.replaceAll('/n', '\n').replaceAll('_', '')}>
+          <span
+            className="d-flex align-items-center"
+            title={item?.text?.replaceAll('/n', '\n').replaceAll('_', '')}
+          >
             <span className="number text-light">#{item.number}</span>
             <span className="name" onClick={() => onSelect(item)}>
               {item.name}

@@ -1,8 +1,30 @@
 const fs = require('fs');
 
 const json = [];
+const FILES = [
+  {
+    path: './himnario-bautista.txt',
+    book: 'Himnario Bautista',
+    keepNum: false,
+  },
+  {
+    path: './himnario-majestuoso.txt',
+    book: 'Himnario Majestuoso',
+    keepNum: false,
+  },
+  {
+    path: './himnario-gracia.txt',
+    book: 'Himnos de gracia',
+    keepNum: true,
+  },
+  {
+    path: './himnario-apendice.txt',
+    book: 'Himnario Apéndice',
+    keepNum: false,
+  },
+];
 
-function process(data, book) {
+function process(data, book, keepNum = false) {
   const songs = data.split('---').filter((song) => song !== '');
 
   songs.forEach((song, index) => {
@@ -27,6 +49,10 @@ function process(data, book) {
         let title = lines.join().replace('## ', '').replace('.', '');
         const tempNumber = +title.match(/^\d+/gm);
         item.title = title.replace(tempNumber, '').trim();
+
+        if (keepNum) {
+          item.number = tempNumber;
+        }
       } else {
         if (lines[0].includes('@CORO')) {
           lines.shift();
@@ -46,40 +72,65 @@ function process(data, book) {
       }
     });
 
+    item.stanzas = item.stanzas.map((stanza, index) => {
+      const tempNumber = stanza.match(/^\d+/gm);
+      return `${!tempNumber ? `${index + 1}) ` : ''}${stanza}`;
+    });
+
     json.push(item);
   });
 }
 
-fs.readFile('./himnario-bautista.txt', 'utf8', (err, data) => {
-  if (err) return console.log(err);
+FILES.forEach((file, index) => {
+  const data = fs.readFileSync(file.path, 'utf8');
 
-  process(data, 'Himnario Bautista');
+  process(data, file.book, file.keepNum);
 
-  fs.readFile('./himnario-majestuoso.txt', 'utf8', (err, data) => {
-    if (err) return console.log(err);
-
-    process(data, 'Himnario Majestuoso');
-
-    fs.readFile('./himnario-apendice.txt', 'utf8', (err, data) => {
-      if (err) return console.log(err);
-
-      process(data, 'Himnario Apéndice');
-
-      fs.writeFile(
-        './src/assets/data/hymnals/index.json',
-        JSON.stringify(
-          json /* .sort((a, b) => a.number - b.number) */,
-          null,
-          2
-        ),
-        'utf-8',
-        (err) => {
-          if (err) {
-            return console.log(err);
-          }
-          console.log('Himnario generado!');
+  if (index === FILES.length - 1) {
+    fs.writeFile(
+      './src/assets/data/hymnals/index.json',
+      JSON.stringify(json, null, 2),
+      'utf-8',
+      (err) => {
+        if (err) {
+          return console.log(err);
         }
-      );
-    });
-  });
+        console.log('Himnario generado!');
+      }
+    );
+  }
 });
+
+// fs.readFile('./himnario-bautista.txt', 'utf8', (err, data) => {
+//   if (err) return console.log(err);
+
+//   process(data, 'Himnario Bautista');
+
+//   fs.readFile('./himnario-majestuoso.txt', 'utf8', (err, data) => {
+//     if (err) return console.log(err);
+
+//     process(data, 'Himnario Majestuoso');
+
+//     fs.readFile('./himnario-apendice.txt', 'utf8', (err, data) => {
+//       if (err) return console.log(err);
+
+//       process(data, 'Himnario Apéndice');
+
+//       fs.writeFile(
+//         './src/assets/data/hymnals/index.json',
+//         JSON.stringify(
+//           json /* .sort((a, b) => a.number - b.number) */,
+//           null,
+//           2
+//         ),
+//         'utf-8',
+//         (err) => {
+//           if (err) {
+//             return console.log(err);
+//           }
+//           console.log('Himnario generado!');
+//         }
+//       );
+//     });
+//   });
+// });
