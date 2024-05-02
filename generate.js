@@ -19,7 +19,7 @@ const FILES = [
   },
   {
     path: './himnario-apendice.txt',
-    book: 'Himnario Apéndice',
+    book: 'Apéndice',
     keepNum: false,
   },
 ];

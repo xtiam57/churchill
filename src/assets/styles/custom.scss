@@ -3,23 +3,51 @@
 $white: #ffffff;
 
 $theme-colors: (
-    "light":      #8be1f0,
-    "dark":       #20232a,
-    "primary":    #233d57,
-    "secondary":  #ff8a65,
-    "info":       #397951,
-    "success":    #259758,
-    "warning":    #e0c728,
-    "danger":     #ec1615,
-    "gray":       #737c85
+  "light": #8be1f0,
+  "dark": #20232a,
+  "primary": #233d57,
+  "secondary": #ff8a65,
+  "info": #397951,
+  "success": #259758,
+  "warning": #e0c728,
+  "danger": #ec1615,
+  "gray": #737c85
 );
 
 $grid-gutter-width: 1rem;
 
 // Import Bootstrap and its default variables
-@import '~bootstrap/scss/bootstrap.scss';
+@import "~bootstrap/scss/bootstrap.scss";
 
 ::selection {
   color: var(--dark) !important;
   background-color: var(--light) !important;
+}
+
+.super-custom {
+  height: calc(1.5em + 0.5rem + 2px);
+
+  .custom-file-input {
+    height: calc(1.5em + 0.5rem + 2px);
+  }
+
+  .custom-file-label {
+    height: calc(1.5em + 0.5rem + 2px);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin: 0;
+
+    &::after {
+      padding: 0.25rem 0.5rem;
+      height: calc(1.5em + 0.5rem + 2px);
+      line-height: 1.5;
+    }
+  }
+}
+
+.custom-file-label {
+  &::after {
+    content: "Buscar" !important;
+  }
 }

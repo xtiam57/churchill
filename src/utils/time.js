@@ -73,4 +73,16 @@ Time.formatTime = (minutes, seconds) => {
   }
 };
 
+Time.formatDate = (date) => {
+  return new Date(date)
+    .toLocaleDateString('es-ES', {
+      day: '2-digit',
+      month: 'long',
+      // year: '2-digit',
+    })
+    .replaceAll(' ', '')
+    .replaceAll('de', '/')
+    .toUpperCase();
+};
+
 export { Time };

@@ -13,7 +13,7 @@ import { useBirthday, useIterate, useKeyUp, usePresenter } from 'hooks';
 import { useEffect, useRef, useState } from 'react';
 import { Button, ButtonGroup, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
-import { Slide } from 'utils';
+import { Slide, Time } from 'utils';
 import { BROADCAST, MOVEMENT } from 'values';
 import { getNotices } from './data';
 
@@ -58,14 +58,23 @@ export default function HomePage() {
           schedules.length > 0
             ? schedules.map((entry) =>
                 Slide.create({
-                  //  ${entry.daySuffix ? entry.daySuffix : ''}
-                  text: `
-                ${entry.name ? `${entry.name}/n` : ''}
-                <b>${entry.day}</b>/n
-                <strong class="fs-xl" style="line-height:1">
-                  ${entry.hour} ${entry.hourSuffix}
-                </strong>
-              `,
+                  text: `${entry.name ? `${entry.name}/n` : ''}
+                          <b>${
+                            entry.name
+                              ? entry.type !== 'EVENT'
+                                ? entry.day
+                                : entry.date
+                                ? Time.formatDate(entry.date + 'T23:59:59')
+                                : 'Todos los días'
+                              : ''
+                          }</b>/n
+                          <strong class="fs-xl" style="line-height:1">
+                            ${entry.name ? entry.hour : ''} ${
+                    entry.name ? entry.hourSuffix : ''
+                  }
+                          </strong>
+                        `,
+                  bg: entry.background,
                 })
               )
             : [
