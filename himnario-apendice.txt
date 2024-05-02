@@ -1,4 +1,3 @@
-
 ## 800. LA IGLESIA SIGUE CAMINANDO
 ***
 1) ¡Oh, Gloria, Aleluya!
@@ -15,7 +14,6 @@ Solo se detiene para predicar.
 ***
 @TAGS
 Coro
-Apéndice
 
 ---
 
@@ -134,63 +132,6 @@ Desciende Jesús con su gran majestad,
 
 ---
 
-## 806. SEMBRARÉ LA SIMIENTE PRECIOSA
-***
-1) Sembraré la simiente preciosa
-Del glorioso Evangelio de amor,
-Sembraré, sembraré mientras viva,
-Dejaré el resultado al Señor.
-***
-@CORO
-Sembraré, sembraré,
-Mientras viva, simiente de amor;
-Segaré, segaré,
-Al hallarme en la casa de Dios.
-***
-2) Sembraré en corazones sensibles
-La doctrina del Dios del perdón.
-Sembraré, sembraré mientras viva,
-Dejaré el resultado al Señor.
-***
-3) Sembraré en corazones de mármol
-La bendita palabra de Dios.
-Sembraré, sembraré mientras viva,
-Dejaré el resultado al Señor.
-
----
-
-## 807. MARAVILLOSA GRACIA
-***
-1) Maravillosa gracia, vino Jesús a dar,
-Más alta que los cielos, más honda que la mar,
-Más grande que mis culpas clavadas en la cruz
-Es la maravillosa gracia de Jesús.
-***
-@CORO
-Inefable es la divina gracia,
-_(la divina gracia)__
-es inmensurable cual la mar,
-_(la más profunda mar)__
-Fuente preciosa, para el pecador, el pecador
-_(Como clara fuente, siempre suficiente a los pecadores rescatar)__
-Perdonando todos mis pecados
-_(mis pecados todos)__
-Cristo me limpió de mi maldad;
-_(de mi maldad)__
-Alabaré su dulce nombre por la eternidad.
-***
-2) Maravillosa gracia, gracia de compasión,
-Gracia que sacia el alma con plena salvación,
-Gracia que lleva al cielo, gracia de paz y luz
-Es la maravillosa gracia de Jesús.
-***
-3) Maravillosa gracia llama con dulce voz,
-Llámanos a ser hechos hijos de nuestro Dios;
-Colma de su consuelo, nos llena de virtud,
-Es la maravillosa gracia de Jesús.
-
----
-
 ## 809. ERES MI TODO
 ***
 1) Eres mi fuerza y mi poder,
@@ -219,7 +160,7 @@ Eres mi todo, Dios.
 ***
 1) ¿Cómo puedes no creer en Dios?
 ¿Cómo intentas ignorar su voz?
-El ha dado muestras De sus grandes maravillas
+Él ha dado muestras De sus grandes maravillas
 ¿Puedes ver, su poder?
 Él eclipsa el sol hasta opacar,
 La más densa noche hace brillar,
@@ -335,81 +276,6 @@ es el tiempo de la siega y el gran juicio llegará."
 
 ---
 
-## 814. VIDA ABUNDANTE
-***
-1) En la cruz murió mi Jesús;
-con su muerte vida me dio,
-por su gracia me transformó
-y la vida abundante me concedió.
-***
-@CORO
-Vida abundante Jesús ofrece,
-vida triunfante de día en día;
-Él es la fuente de vida eterna
-que brota siempre en mi corazón.
-***
-2) La mujer que fue y tocó
-el vestido del Señor;
-por su fe, salud recibió
-y la vida abundante Jesús le dio.
-***
-3) En la cruz pidió el malhechor
-de su alma la salvación;
-vida eterna pudo alcanzar,
-pues la vida abundante Jesús le dio.
-
----
-
-## 815. EL QUE HABITA AL ABRIGO DE DIOS
-***
-1) El que habita al abrigo de Dios
-morará bajo sombras de amor;
-sobre Él no vendrá ningún mal
-y en sus alas feliz vivirá.
-***
-@CORO
-Oh, yo quiero habitar al abrigo de Dios,
-sólo allí encontraré paz y profundo amor.
-Mi delicia es con Él comunión disfrutar
-y por siempre su nombre alabar.
-***
-2) El que habita al abrigo de Dios
-muy feliz ciertamente será;
-ángeles guardarán su salud
-y sus pies nunca resbalarán.
-***
-3) El que habita al abrigo de Dios
-para siempre seguro estará;
-caerán a su diestra diez mil,
-más a Él no vendrá mortandad.
-
----
-
-## 817. DIOS DESCENDIÓ
-***
-1) Día tan grande no puedo olvidar, día de gloria sin par,
-cuando en tinieblas al verme andar vino a salvarme el Señor;
-Gran compasión tuvo Cristo de mí, de gozo y paz me llenó;
-quitó las sombras, ¡oh, gloria a su nombre!, la noche en día cambió.
-***
-@CORO
-Dios descendió, y de gloria me llenó,
-cuando Jesús por gracia me salvó;
-fui ciego, me hizo ver y en Él renacer.
-Dios descendió y de gloria me llenó.
-***
-2) Nací de nuevo, en virtud de Jesús, a la familia de Dios,
-justificado por Cristo el Señor gozo la gran redención;
-Bendito sea mi Padre y Dios que cuando vine con fe,
-fui adoptado por Cristo el amado, loores por siempre daré.
-***
-3) Tengo esperanza de gloria eternal, me regocijo en Jesús;
-me ha preparado un bello lugar en la mansión celestial;
-Siempre recuerdo con fe y gratitud, al contemplarle en la cruz,
-que sus heridas me dieron la vida ¡Alabo al bendito Jesús!
-
----
-
 ## 818. PÓSTRATE
 ***
 1) Es un privilegio estar en Su presencia;
@@ -438,31 +304,6 @@ Con mi vida le amaré y le adoraré.
 
 ---
 
-## 819. AMOR ES
-***
-1) La gente de nuestro tiempo
-no sabe lo que es el amor.
-Que vive perdiendo el tiempo,
-buscando y sin encontrar.
-***
-@CORO
-Amor, es entregarse en alma
-y cuerpo a la humanidad;
-vivir siempre sirviendo
-sin que tu esperes algo para ti.
-***
-2) En Cristo yo he encontrado
-ejemplo de paz y de amor.
-La muerte del crucificado
-me cuenta de su gran amor.
-***
-3) Y siempre debes hablar
-que en Cristo hay salvación,
-Llevando este mensaje de
-muerte y resurrección.
-
----
-
 ## 820. CRISTO LA ROCA
 ***
 1) En las olas inmensas de embravecido mar,
@@ -488,130 +329,6 @@ la fuente inagotable de dicha y bien.
 
 ---
 
-## 821. YO IRÉ DE LA TIERRA HASTA EL FIN
-***
-1) Escucho llantos de dolor, de niños el clamor,
-que hacen llorar, guerras mil contemplo por doquier.
-Y veo que la humanidad no ama el vivir;
-gentes sin la plenitud del gozo del Señor.
-***
-@CORO
-Yo iré, yo iré de la tierra hasta el fin,
-llevaré tu verdad de la tierra hasta el fin.
-Que tu amor y tu paz des a la humanidad;
-yo iré de la tierra hasta el fin.
-***
-2) Veo la desesperación del mundo en derredor;
-gentes que el amar de Dios no gozan en su ser.
-Hoy sé que debo ministrar a todos por doquier,
-y gozoso compartir la gracia del Señor.
-
----
-
-## 822. HASTA ESE DÍA
-***
-1) Puedo cantar, ¡sí!, cuando yo recuerdo
-que el dolor muy pronto ha de pasar;
-en el camino que va siempre arriba:
-No puede ser el mundo mi hogar.
-***
-@CORO
-Mas siempre aquí yo seguiré cantando,
-siempre así con gozo mi alma irá.
-Hasta ese día en que veré la gloria,
-cuando el Señor me lleve allá.
-***
-2) Lo terrenal habrá de disiparse,
-al recordar que nada nuestro es;
-y lo que aquí nos da dolor, tristeza:
-No volveremos a sufrir después.
-***
-3) El mundo vil con su trabajo y lucha,
-puede traer miseria y pesar;
-el hombre es como el halcón que, libre,
-ya listo está, y así podrá volar.
-
----
-
-## 823. UN MANDAMIENTO NUEVO
-***
-1) //Un mandamiento nuevo os doy:
-que os améis unos a otros.//
-//Como yo os he amado, como yo os he amado:
-que os améis también vosotros.//
-***
-2) //Amémonos de corazón,
-no de labios solamente//
-//Para cuando Cristo venga, para cuando Cristo
-venga nos encuentre bien unidos.//
-***
-3) //¿Cómo puedo yo orar resentido
-con mi hermano?//
-//Dios no escucha la oración, Dios no
-escucha la oración si no estoy reconciliado.//
-
----
-
-## 824. ÉL VINO A MI CORAZÓN
-***
-1) Cuán glorioso es el cambio
-operado en mi ser viniendo
-a mi vida el Señor.
-Hay en mi alma una paz que
-yo ansiaba tener:
-la paz que me trajo su amor.
-***
-@CORO
-Él vino a mi corazón,
-Él vino a mi corazón.
-Soy feliz con la vida
-que Cristo me dio,
-Él vino a mi corazón.
-***
-2) Ya no voy por la senda
-que el mal me trazó,
-do sólo encontré confusión.
-Mis errores pasados
-Jesús los borró,
-cuando Él vino a mi corazón.
-***
-3) Ni una sombra de duda
-oscurece su amor,
-amor que me trajo el perdón.
-la esperanza que aliento
-la debo al Señor,
-porque Él vino a mi corazón.
-
----
-
-## 825. NO TEMERÉ CON CRISTO
-***
-1) La oscuridad abrigada en maldad
-y peligros que no puedo ver.
-No temo ya, pues conmigo Él está,
-y mora en mi ser.
-***
-@CORO
-Con compasión y devoción,
-(con compasión y devoción)
-siempre me cuida en su amor.
-(siempre en su amor)
-Rey de la paz, Él es capaz.
-(rey de la paz, Él es capaz)
-No temeré con Cristo.
-***
-2) Firme en la fe no pregunto el por qué,
-no hay nada que pueda pasar.
-Su voluntad es mi seguridad,
-en Él hay bienestar.
-***
-3) Va por doquier vigilando mi ser,
-y conmigo está su solaz. Cuento con Él,
-es mi ayuda tan fiel,
-me da perfecta paz.
-
----
-
 ## 826. ¡OH, AMOR DE DIOS!
 ***
 1) Oh, amor de Dios su inmensidad, el hombre no podría contar
@@ -634,87 +351,6 @@ que al hombre pudo redimir de su pecado atroz.
 y cada reino caerá con cada trama y plan carnal;
 el gran amor del Redentor por siempre durará
 la gran canción de salvación su pueblo cantará.
-
----
-
-## 828. ABBA PADRE
-***
-1) Padre, dame tu provisión,
-oye, Padre, mi oración.
-Echo mi carga en Ti,
-quiero confiar en Ti.
-Dame sólo tu bendición.
-***
-@CORO
-Abba, Padre, mi protección,
-eres mi fuerza y mi canción;
-Abba, Padre, eres mi fe,
-en confusión o aflicción,
-a Ti iré, Abba Padre.
-***
-2) Padre, hazme verte a Ti
-en el valle o en la lid.
-Calma mi ansiedad,
-dime tu voluntad,
-tenme siempre junto a Ti.
-***
-3) Padre, quiero ser como Tú,
-haz que ande en rectitud,
-para que los demás vean
-tu luz y paz,
-dócil, útil con tu virtud.
-
----
-
-## 829. GOZO, PAZ Y AMOR
-***
-1) Yo vengo a Ti, mi Salvador,
-para entregarte todo mi ser.
-***
-@CORO
-Gozo, paz y amor, yo encuentro en Ti;
-(Gozo, paz y amor, yo encuentro en Ti)
-Gozo, paz y amor, Tú me das a mí.
-(Gozo, paz y amor... a mí)
-Gozo, paz y amor, yo encuentro en Ti;
-(Gozo, paz y amor, yo encuentro en Ti)
-Gozo, paz y amor, Tú me das a mí.
-(Gozo, paz y amor... a mí)
-***
-2) Tú reinas en mí, y me das poder,
-para transformar al mundo del mal.
-Hoy yo tengo paz dentro de mi corazón,
-hallé esta paz en Cristo, mi Dios.
-***
-3) Gozo tengo yo, dentro de mi corazón,
-hallé este gozo en Cristo, mi Dios.
-Siento el amor, dentro de mi corazón,
-hallé este amor en Cristo, mi Dios.
-
----
-
-## 830. USA MI VIDA
-***
-1) Muchos que viven en tu derredor
-tristes, hambrientos están.
-Tú por tu vida les puedes llevar
-gozo, luz y bienestar.
-***
-@CORO
-Usa mi vida, usa mi vida
-para tu gloria oh, Jesús.
-Todos los días y hoy quiero ser,
-testigo tuyo Señor por doquier.
-***
-2) Di a los tristes que Dios es amor
-Él quiere darles perdón.
-A los que vienen a Cristo Jesús
-buscando paz, salvación.
-***
-3) Toda tu vida hoy rinde al Señor
-cada momento se fiel.
-Otros que vean en ti Su amor
-pronto se rindan a Él.
 
 ---
 
@@ -836,36 +472,6 @@ pronto vendrá nos llevará y reinará.
 
 ---
 
-## 837. GRAN DÍA DE VICTORIA
-***
-1) Con mis ojos vi llegar la gloria de mi Salvador.
-Con sus pasos va exprimiendo el lagar del detractor.
-Con su espada como rayo cual terrible vengador.
-Conquista con verdad.
-***
-@CORO
-¡Gloria, gloria, aleluya!
-¡Gloria, gloria, aleluya!
-¡Gloria, gloria, aleluya!
-Dios es quien vencerá.
-***
-2) En los campamentos arden las fogatas de verdad,
-y se pueden ver las huestes adorando con lealtad.
-La sentencia es segura sobre toda la maldad.
-Conquista la verdad.
-***
-3) Su trompeta ha sonado y jamás se rendirá.
-Él separa corazones y su juicio premiará.
-¡Oh, mi alma, nunca dudes!
-La victoria nos dará. Conquista su verdad.
-***
-4) En lo hermoso de los lirios Cristo vino a Belén,
-con la gloria en su seño que transforma en Edén.
-Él la vida santifica, anunciad tan grande bien.
-Que hay en su verdad.
-
----
-
 ## 838. SOY SOLDADO DE JESÚS
 ***
 1) Soy yo soldado de Jesús,
@@ -897,21 +503,31 @@ y me guiará en paz.
 
 ## 839. UN DÍA CRISTO VOLVERÁ
 ***
-1) Un día Cristo volverá es la promesa del Señor;
-tal como fue así vendrá, y su pueblo ha de ver al Salvador.
+1) Un día Cristo volverá
+es la promesa del Señor;
+tal como fue así vendrá,
+y su pueblo ha de ver al Salvador.
 ***
 @CORO
-Muy pronto, sí, Jesús vendrá, y alegre le verá su pueblo;
-¡Velad! ¡Orad! el Rey vendrá, los suyos arrebatará.
+Muy pronto, sí, Jesús vendrá,
+y alegre le verá su pueblo;
+¡Velad! ¡Orad! el Rey vendrá,
+los suyos arrebatará.
 ***
-2) Los mensajeros del Señor anuncian que vendrá Jesús;
-señales hay alrededor Él vendrá y a los suyos llevará.
+2) Los mensajeros del Señor
+anuncian que vendrá Jesús;
+señales hay alrededor
+Él vendrá y a los suyos llevará.
 ***
-3) En busca de su grey vendrá con toda gloria y honor;
-su iglesia esperando está, y aclamará con gozo a su Señor.
+3) En busca de su grey vendrá
+con toda gloria y honor;
+su iglesia esperando está,
+y aclamará con gozo a su Señor.
 ***
-4) ¡Oh bienvenido Rey Jesús! tus hijos te esperan ya;
-muy pronto han de ver tu luz, y gozar en tu presencia siempre allá.
+4) ¡Oh bienvenido Rey Jesús!
+tus hijos te esperan ya;
+muy pronto han de ver tu luz,
+y gozar en tu presencia siempre allá.
 
 ---
 
@@ -927,51 +543,6 @@ Confiaré en Ti.
 Confiaré en Ti,
 El débil dirá fuerte soy,
 con poder del Señor.
-
----
-
-## 841. VEN CONTEMPLA EL MISTERIO
-***
-1) Ven contempla el gran misterio,
-el amanecer del Rey;
-alabado en el cielo,
-se vistió de humanidad.
-A este mundo de tinieblas,
-esa luz de vida entró.
-Mira a Cristo, hecho hombre,
-para darnos redención.
-***
-2) Ven contempla el gran misterio,
-el perfecto Hijo de Dios;
-en su vida y sufrimiento,
-en pecado no cayó.
-Mira a Adán, el verdadero,
-Salvador del hombre infiel.
-Cristo el firme cumplimiento,
-de la ley; la roca es Él.
-***
-3) Ven contempla el gran misterio,
-Cristo alzado en una cruz;
-en lugar de pecadores,
-traspasado fue Jesús.
-Mira el precio por salvarnos,
-mira el plan de redención.
-Lleva a muchos a la gloria,
-oh cuán vasto inmenso amor.
-***
-4) Ven contempla el gran misterio,
-Dios de vida que murió;
-más la tumba fue vencida,
-gloria al Padre, Él vivo está.
-¡Oh, esperanza tan segura!
-Vida eterna nos dará.
-el Señor resucitado,
-cuando venga a reinar.
-***
-5) Ven contempla el gran misterio,
-el amanecer del Rey.
-Mira a Cristo, hecho hombre,
-para darnos redención.
 
 ---
 
@@ -1009,32 +580,32 @@ Confiando en Cristo venceré.
 
 ---
 
-## 843 . JESÚS ES LA ROCA DE MI SALVACIÓN
+## 843. JESÚS ES LA ROCA DE MI SALVACIÓN
 ***
 1) Jesús es la roca de mi salvación;
 Él es quien me libra de condenación.
 Jesús es mi fuerte, mi gran protector;
-// Yo se que soy hijo de todo su amor. //
+//Yo se que soy hijo de todo su amor//.
 ***
 2) Jesús me defiende de negra traición;
 Él lava las manchas de mi corazón.
 Jesús me rescata del mundo falaz;
-// Me lleva a su seno, su seno de paz. //
+//Me lleva a su seno, su seno de paz//.
 ***
 3) Por eso en mis horas de negro dolor,
 Yo busco el consuelo de mi redentor.
 Venid si por Cristo ser salvo queréis,
-// Al lado de Cristo lugar hallareis. //
+//Al lado de Cristo lugar hallareis//.
 ***
 4) Su paz os ofrece, su paz Él os da;
 Aquel que le busca, ser salvo podrá;
 Yo fui mucho tiempo esclavo del mal,
-// mas hoy Jesucristo me dio libertad. //
+//mas hoy Jesucristo me dio libertad//.
 ***
 5) Jesús es la fuente de la rendición;
 Él sana las llagas de mi corazón.
 Él sana al leproso al ciego da luz;
-// por eso confió tan solo en Jesús. //
+//por eso confió tan solo en Jesús//.
 
 ---
 

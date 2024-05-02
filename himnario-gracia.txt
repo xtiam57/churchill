@@ -784,7 +784,7 @@ Si Tú contaras mi maldad,
 Me asombra ver que en Ti hay perdón;
 Por gracia redimido soy.
 ***
-Coro 1: En Ti esperaré, en Ti esperaré;
+En Ti esperaré, en Ti esperaré;
 En Tu verdad descanzaré.
 En Ti esperaré, sí, yo esperaré,
 Hasta saciar todo mi ser.
@@ -794,7 +794,7 @@ Y en Su poder de salvación;
 Completamente Él venció,
 Cristo el Señor resucitó.
 ***
-Coro 1: En Ti esperaré, en Ti esperaré;
+En Ti esperaré, en Ti esperaré;
 En Tu verdad descanzaré.
 En Ti esperaré, sí, yo esperaré,
 Hasta saciar todo mi ser.
@@ -804,12 +804,12 @@ Dios mismo el precio ya pagó;
 Y aquellos que confíen hoy,
 En Él tendrán restauración.
 ***
-Coro 1: En Ti esperaré, en Ti esperaré;
+En Ti esperaré, en Ti esperaré;
 En Tu verdad descanzaré.
 En Ti esperaré, sí, yo esperaré,
 Hasta saciar todo mi ser.
 ***
-Coro 2: Yo te esperaré, yo te esperaré;
+Yo te esperaré, yo te esperaré;
 En la prueba y tempestad.
 Yo te esperaré, sí, te esperaré;
 Tu amor me saciará.
@@ -828,7 +828,7 @@ A los que están en tinieblas;
 Su luz brilló, resplandeció,
 La piedra angular nació.
 ***
-Coro 1: Un hijo nos es dado, Un niño nace hoy;
+Un hijo nos es dado, Un niño nace hoy;
 El Dios poderoso y grande en amor se encarnó,
 La muerte venció, Resucitó y mi culpa llevó.
 Santo es el Señor.
@@ -838,7 +838,7 @@ Rompió el poder del pecado;
 Su gracia nos rescató,
 No hay más condenación.
 ***
-Coro 1: Un hijo nos es dado,
+Un hijo nos es dado,
 Un niño nace hoy;
 El Dios poderoso y grande en amor se encarnó,
 La muerte venció, Resucitó y mi culpa llevó.
@@ -854,7 +854,7 @@ Solo en Él Yo me gozaré;
 Confiaré, en Su eterno amor,
 Mientras viva yo le cantaré.
 ***
-Coro 2: El Dios poderoso y grande en amor se encarnó,
+El Dios poderoso y grande en amor se encarnó,
 La muerte venció, Resucitó y mi culpa llevó.
 Santo es el Señor
 Santo es el Señor.
@@ -1310,7 +1310,7 @@ Me deja maravillado, pues Él se entregó por mí.
 ¡Cuán grande amor! ¡Tan grande amor! el de Cristo para mí;
 ¡Cuán grande amor! ¡Tan grande amor! pues por Él salvado fui.
 ***
-Oró por mí en el huerta: “No se haga Mi voluntad.”
+Oró por mí en el huerta: "No se haga Mi voluntad."
 Y todo aquel Sufrimiento causado fue por mi mal.
 ***
 Por mí se hizo pecado; mis culpas Su amor llevó.
@@ -1362,7 +1362,7 @@ En sombra o sol, Dios, conmigo sé.
 Vea yo al fin en mi postrer visión
 De luz la senda que lleva a Sion,
 Será mi canto al triunfar la fe:
-“Jesús conmigo en vida y muerte fue”.
+"Jesús conmigo en vida y muerte fue".
 
 ---
 
@@ -1378,7 +1378,7 @@ Muestra a Cristo, muestra a Cristo;
 Revela, oh Dios, Tu gloria
 A través de Tu verdad
 Hasta que todos confiesen:
-“Cristo es Señor”.
+"Cristo es Señor".
 ***
 Viva luz es Tu verdad en mi oscuridad;
 Me guarda en la tentación; sabiduría me da.
@@ -1462,17 +1462,17 @@ Solo es eterna en Jesús.
 ## 72. CORRO A CRISTO
 ***
 Corro a Cristo para huir del temor; mi amparo es Él, yo sé.
-“Solo cree en Mí”, me dice en amor. Seguro así estaré.
+"Solo cree en Mí", me dice en amor. Seguro así estaré.
 Corro a Cristo roto por dolor; abunda en Él la paz;
-“Yo también lloré”, susurra el Señor. “Mi pena trae solaz.”
+"Yo también lloré", susurra el Señor. "Mi pena trae solaz."
 ***
 Corro a Cristo del afán de vivir; reposa mi alma en Él.
-“Solo ven a Mí”, Su voz puedo oír. Encuentro descanso en Él.
+"Solo ven a Mí", Su voz puedo oír. Encuentro descanso en Él.
 Corro a Cristo oprimido por el Diablo y el pecar;
 Con temor él huye de mi Señor. Jamás me podrá dañar.
 ***
 Corro a Cristo cuando hay tentación; yo tengo un escape en Él.
-“Solo líbrame!” es mi oración, y cedo a Su gracia fiel.
+"Solo líbrame!" es mi oración, y cedo a Su gracia fiel.
 Corro a Cristo avergonzado y encuentro un Defensor;
 Soportó la santa ira de Dios y hoy es mi intercesor.
 
@@ -1608,11 +1608,11 @@ Más ancho es el amor de Cristo
 Que el foso que nos separó;
 Me alcanzó en mis tinieblas,
 Solo en Él hay salvación.
-
-Coro 1: Más profundo que el mar,
+***
+Más profundo que el mar,
 Más allá del cielo está;
 Tu amor me bastará.
-
+***
 Más fuerte es el amor de Cristo,
 Que mi enemigo más feroz;
 Me sostiene en la tormenta,
@@ -1621,13 +1621,13 @@ Me guiará el amor de Cristo
 En el más honda valle aquí;
 Me pastoreará por siempre
 Y me guarda junto a Él.
-
-Coro 2: Más profundo que el mar,
+***
+Más profundo que el mar,
 Más allá del cielo está;
 Tu amor me bastará.
 Más fuerte que la tempestad, venció el pecado y la maldad,
 Tu amor me bastaré.
-
+***
 Más dulce es el amor de Cristo,
 Mientras más cerca estoy del fin;
 Disfrutaré Su amor por siempre,
@@ -1636,8 +1636,8 @@ Me llenará el amor de Cristo,
 Al Su rostro contemplar;
 Yo le amaré por siempre,
 Su alabanza cantaré.
-
-Coro 2: Más profundo que el mar,
+***
+Más profundo que el mar,
 Más allá del cielo está;
 Tu amor me bastará.
 Más fuerte que la tempestad, venció el pecado y la maldad,
@@ -1694,7 +1694,7 @@ Con Tu sangre has comprado
 Gente de toda lengua y nación.
 Toda rodilla
 A Ti se doblará;
-Toda lengua Te confesará ¡“Señor!”
+Toda lengua Te confesará ¡"Señor!"
 Has vencido la muerte y la maldad
 Y en victoria reinarás por siempre.
 ***
@@ -1992,8 +1992,10 @@ Yo de Su muerte causa fui.
 Por mí murió el Salvador.
 ***
 @CORO
-¡Oh, maravilla de Su amor, (¡Oh maravilla de Su amor;)
-Por mí murió el Salvador! (por mí murió el Salvador!)
+¡Oh, maravilla de Su amor,
+_(¡Oh maravilla de Su amor;)__
+Por mí murió el Salvador!
+_(por mí murió el Salvador!)__
 ***
 Él Su celeste hogar abandonó,
 Dejando posición, gloria y honor;
@@ -2090,38 +2092,29 @@ Oh, al ver aquel negro amanecer,
 Cristo entregado a morir.
 Él juzgado fue siendo justo y fiel,
 Clavado a una cruz.
-
-Coro 1: El poder de la cruz,
+***
+@CORO
+El poder de la cruz,
 Pecado Él se hizo por mí.
 Ira y culpa cargó
 Fui perdonado en la cruz.
-
+***
 Oh, aquel dolor que Tu rostro mostró,
 Cargando el peso de mi maldad.
 Toda corrupción, todo mal pensar,
 Su sangre cubrió allí.
-
-Coro 1: El poder de la cruz,
-Pecado Él se hizo por mí.
-Ira y culpa cargó
-Fui perdonado en la cruz.
-
+***
 La tierra tembló, el cielo oscureció,
 Viendo el dolor de Su Creador.
 El velo se rasgó, se escuchó el clamor;
 Su obra consumó.
-
-Coro 1: El poder de la cruz,
-Pecado Él se hizo por mí.
-Ira y culpa cargó
-Fui perdonado en la cruz.
-
+***
 Al ver mi nombre allí, escrito sobre Ti
 Por Tus dolores libre soy.
 La muerte derrotó, la vida me otorgó
 Tu incomparable amor.
-
-Coro 2: El poder de la cruz:
+***
+El poder de la cruz:
 Inmolado por mí.
 ¡Qué gran precio y amor!
 Fui perdonado en la cruz.
@@ -2134,38 +2127,29 @@ Si pudiera ver ese amanecer,
 Cristo en camino el Gólgota.
 Pecador Su juez, golpes, burla cruel,
 Clavos, colgado en cruz.
-
-Coro 1: El poder de la cruz,
+***
+@CORO
+El poder de la cruz,
 Mi pecado en Jesús,
 Ira y culpa cargó.
 Perdón recibo en la cruz.
-
+***
 En Tu rostro ver del dolor señal,
 Carga tremenda la del mal.
 Cada hecho vil, pensamiento ruin,
 Cruenta corona en Ti.
-
-Coro 1: El poder de la cruz,
-Mi pecado en Jesús,
-Ira y culpa cargó.
-Perdón recibo en la cruz.
-
+***
 Ya se oculta el sol, tiembla la creación
 Mientras expira su Hacedor.
 Roto el velo en dos, un clamor triunfal:
-“¡Todo cumplido está!”.
-
-Coro 1: El poder de la cruz,
-Mi pecado en Jesús,
-Ira y culpa cargó.
-Perdón recibo en la cruz.
-
+"¡Todo cumplido está!".
+***
 En Tus llagas ver cómo escrito estoy,
 Pues me hace libre Tu aflicción.
 Muerto está el morir, mío es el vivir
 Por Tu abnegado amor.
-
-Coro 2: El poder de la cruz,
+***
+El poder de la cruz,
 Dio Su vida Jesús.
 Cuánto coste, qué amor.
 Perdón recibo en la cruz.
@@ -2254,9 +2238,10 @@ Es nuestro Dios, Verbo encarnado;
 Luz verdadera que vino a brillar.
 Es nuestro Dios, Amor revelado;
 La plenitud de la gracia y verdad.
-
-Coro: ¡Canta aleluya; Es nuestro Dios!
-
+***
+@CORO
+¡Canta aleluya; Es nuestro Dios!
+***
 ¿Quién es el Hombre que fue condenado?
 Herido fue por nuestro pecado;
 Sobre Sus hombros sufrió el castigo de Dios.
@@ -2267,14 +2252,11 @@ Es nuestro Dios, Crucificado;
 El inocente martirio enfrentó.
 Es nuestro Dios, Perdón derramado;
 Cordero Santo que nos redimió.
-
-Coro: ¡Canta aleluya; Es nuestro Dios!
-
-Puente: ¡Aleluya! ¡Aleluya!
+***
+¡Aleluya! ¡Aleluya!
 ¡Canta aleluya; Es nuestro Dios!
 ¡Aleluya! ¡Aleluya!
 ¡Canta aleluya; Es nuestro Dios!
-
 ¿Quién es el Héroe que ha resucitado?
 Muerte y tinieblas Él ha derrotado;
 En Su gran triunfo inicia la nueva creación.
@@ -2285,10 +2267,8 @@ Es nuestro Dios, Rey Soberano;
 Suya es la gloria y la salvación.
 Es nuestro Dios, Nombre exaltado;
 Digno de honra y eterno loor.
-
-Coro: ¡Canta aleluya; Es nuestro Dios!
-
-Puente: ¡Aleluya! ¡Aleluya!
+***
+¡Aleluya! ¡Aleluya!
 ¡Canta aleluya; Es nuestro Dios!
 ¡Aleluya! ¡Aleluya!
 ¡Canta aleluya; Es nuestro Dios!
@@ -2426,7 +2406,7 @@ Hizo plena la expiación.
 ¡Aleluya! ¡Cristo salva!
 ***
 En la cruz Su vida dio,
-“Consumado es”, clamó.
+"Consumado es", clamó.
 Y hasta el cielo se exaltó.
 ¡Aleluya! ¡Cristo salva!
 ***
@@ -2601,41 +2581,41 @@ Que Cristo nos trazó.
 Y el mal rechazaré,
 Si sé que Tú eres Señor
 Soberano y justo?
-
+***
 ¿Cómo he de alabarte en bendición
 Y olvidarte en el dolor,
 Si sé que tienes el control
 de toda Tu creación?
-
+***
 ¿Cómo he de creer en Ti al tener
 Y dudar en la escasez,
 Si sé que Tú eres siempre fiel
 Y que nunca cambias?
-
+***
 ¿Cómo he de seguir en libertad
 Y huir en la opresión,
 Si sé que guardas para mí
 Una eterna posesión?
-
-Coro: Bendito sea el nombre del Señor en todo tiempo,
+***
+Bendito sea el nombre del Señor en todo tiempo,
 Se haga Tu perfecta voluntad en mí;
 Trae gloria a Tu nombre a través de mi aflicción,
 Dame Tu gracia para ver que vivir es Cristo.
-
+***
 ¿Cómo no he de confiar en Tu bondad
 Y Tu gran amor por mí,
 Si enviaste a Jesús en mi lugar
 A morir en una cruz?
-
-Pre-Coro: Tu gracia es suficiente.
+***
 Tu gracia es suficiente.
-
-Coro: Bendito sea el nombre del Señor en todo tiempo,
+Tu gracia es suficiente.
+***
+Bendito sea el nombre del Señor en todo tiempo,
 Se haga Tu perfecta voluntad en mí;
 Trae gloria a Tu nombre a través de mi aflicción,
 Dame Tu gracia para ver que vivir es Cristo.
-
-Puente: Fija mis ojos solo en Ti,
+***
+Fija mis ojos solo en Ti,
 En lo eterno, en el cielo.
 La aflicción de este mundo jamás se compara
 Con la gloria que ha de venir.
@@ -2643,8 +2623,8 @@ Vivir es Cristo.
 Vivir es Cristo.
 Vivir es Cristo.
 Vivir es Cristo.
-
-Coro: Bendito sea el nombre del Señor en todo tiempo,
+***
+Bendito sea el nombre del Señor en todo tiempo,
 Se haga Tu perfecta voluntad en mí;
 Trae gloria a Tu nombre a través de mi aflicción,
 Dame Tu gracia para ver que vivir es Cristo.
@@ -2783,20 +2763,20 @@ De Dios en Su eterna Palabra de amor!
 ¿Qué más Él pudiera en Su libro añadir,
 Si todo a Sus hijos lo ha dicho el Señor?
 ***
-“No temas por nada, contigo Yo soy;
+"No temas por nada, contigo Yo soy;
 Tu Dios Yo soy solo, tu ayuda seré;
 Tu fuerza y firmeza en Mi diestra estarán,
-Y en ella sostén y poder te daré”.
+Y en ella sostén y poder te daré".
 ***
-“La llama no puede dañarte jamás,
+"La llama no puede dañarte jamás,
 Si en medio del fuego te ordeno pasar;
 El oro de tu alma más puro será,
-Pues solo la escoria se habrá de quemar”.
+Pues solo la escoria se habrá de quemar".
 ***
-“Al alma que anhele la paz que hay en Mí,
+"Al alma que anhele la paz que hay en Mí,
 Jamás en sus luchas la habré de dejar;
 Si todo el infierno la quiere perder,
-¡Yo nunca, no, nunca, la puedo olvidar!”.
+¡Yo nunca, no, nunca, la puedo olvidar!".
 
 ---
 
@@ -2920,35 +2900,27 @@ Un reto nos aguarda aún sin terminar,
 Tarea no pequeña nos mueve a despertar;
 Nosotros que te amamos, postrados en Tu altar,
 Un voto renovamos, Tu nombre proclamar.
-
 Donde hay otros señores que engendran el temor,
 Y con pujante fuerza, difunden el error;
 Sin alguien que descubra su gran necesidad,
 Innumerables almas van a la oscuridad.
-
-Coro 1: Es nuestra la misión, llevar la redención;
+***
+@CORO
+Es nuestra la misión, llevar la redención;
 Su nombre trae la salvación,
 Pues Cristo es el Señor.
-
+***
 Portamos hoy la llama de otros que, al pasar,
 Murieron proclamando que Cristo vivo está.
 Es nuestro Su mensaje, la misma comisión;
 Que inflama nuestro anhelo, que rinde el corazón.
-
-Coro 1: Es nuestra la misión, llevar la redención;
-Su nombre trae la salvación,
-Pues Cristo es el Señor.
-
+***
 Oh Padre que sustentas, Oh Salvador de amor,
 Espíritu que inspiras con celo abrumador.
 Defiéndenos del miedo, aviva la pasión;
 Tu salvación llevemos al mundo con fervor.
-
-Coro 1: Es nuestra la misión, llevar la redención;
-Su nombre trae la salvación,
-Pues Cristo es el Señor.
-
-Coro 2: Es nuestra la misión, llevar la redención;
+***
+Es nuestra la misión, llevar la redención;
 Su nombre trae la salvación,
 Pues ¡Cristo es el Señor!
 
@@ -3112,7 +3084,7 @@ Al Tú morir en mi lugar Tu gracia recibí.
 Ahora Señor Tuyo seré, y viviré por Ti.
 Tus mandamientos seguiré por Tu poder en mí.
 Usa mi vida, oh Señor, como lo quieras Tú;
-Y que sea siempre mi canción: “Mi gloria eres Tú.”
+Y que sea siempre mi canción: "Mi gloria eres Tú."
 ***
 @REPETIR_CORO_AL_FINAL
 
@@ -3182,7 +3154,7 @@ De pena eterna y darme la paz.
 ***
 @CORO
 Esta es mi historia y es mi canción:
-“¡Gloria a Jesús por Su salvación!”;
+"¡Gloria a Jesús por Su salvación!";
 Aún para mí fue Su redención,
 ¡Bendita historia, bella canción!
 ***
@@ -3203,7 +3175,7 @@ Mientras a Cristo logra mirar.
 De paz inundada mi senda esté,
 O cúbrala un mar de aflicción;
 Cualquiera que sea mi suerte, diré:
-“Estoy bien, tengo paz, ¡gloria a Dios!”.
+"Estoy bien, tengo paz, ¡gloria a Dios!".
 ***
 @CORO
 Estoy bien, _(Estoy bien,)__
@@ -3373,7 +3345,7 @@ Y no puede fascinarme si contigo voy, Señor.
 ***
 Pase el terrenal tesoro, vengan burlas y dolor,
 En Tu mies la pena es gozo. Mi ganancia es Tu favor.
-Te he llamado “Abba Padre”, toda mi alma en Ti pondré.
+Te he llamado "Abba Padre", toda mi alma en Ti pondré.
 Aunque la tormenta aseche, todo obra para bien.
 ***
 Alma mía, eres salva, deja el miedo y el pecar;
