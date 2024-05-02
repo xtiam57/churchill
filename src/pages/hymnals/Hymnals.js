@@ -201,7 +201,7 @@ export default function HymnalsPage() {
           extraButton={
             <OverlayTrigger
               placement="bottom"
-              overlay={<Tooltip>Abrir Himnario</Tooltip>}
+              overlay={<Tooltip>Abrir Himnarios</Tooltip>}
             >
               <Button
                 variant="link"

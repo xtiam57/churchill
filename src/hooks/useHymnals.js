@@ -4,7 +4,8 @@ import { useContext } from 'react';
 import { MOVEMENT } from 'values';
 
 export function useHymnals() {
-  const { hymnals, current, setCurrent, tags } = useContext(HymnalsContext);
+  const { hymnals, current, setCurrent, tags, books } =
+    useContext(HymnalsContext);
   const [move] = useIterate(current, hymnals);
 
   const moveToNextHymnal = () => {
@@ -28,6 +29,7 @@ export function useHymnals() {
     current,
     setCurrent,
     tags,
+    books,
     moveHymnal,
   };
 }

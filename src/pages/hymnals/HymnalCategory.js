@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styledComponents from 'styled-components';
 import { Storage } from 'utils';
 
@@ -14,7 +14,7 @@ const HymnalSelectStyled = styledComponents.select`
 
 export function HymnalCategory({ element, ...rest }) {
   const [category, setCategory] = useState(
-    Storage.get(createCategoryKey(element) || '')
+    Storage.get(createCategoryKey(element)) ?? ''
   );
 
   const handleChange = ({ target }) => {
@@ -28,6 +28,10 @@ export function HymnalCategory({ element, ...rest }) {
       Storage.remove(createCategoryKey(element));
     }
   };
+
+  useEffect(() => {
+    setCategory(Storage.get(createCategoryKey(element)) ?? '');
+  }, [element]);
 
   return (
     <HymnalSelectStyled value={category} onChange={handleChange} {...rest}>

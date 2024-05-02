@@ -72,54 +72,65 @@ export function HymnalIndex({
   onHide = () => {},
   ...rest
 }) {
-  const { hymnals } = useHymnals();
+  const { hymnals, books } = useHymnals();
   const [category, setCategory] = useState('ALL');
+  const [book, setBook] = useState('ALL');
 
-  const handleChange = ({ target }) => {
+  const handleCategoryChange = ({ target }) => {
     const { value } = target;
     setCategory(value);
   };
 
+  const handleBookChange = ({ target }) => {
+    const { value } = target;
+    setBook(value);
+  };
+
   const render = useCallback(() => {
-    return hymnals.map((item, index) => {
-      if (!item.category) {
-        item.category = Storage.get(createCategoryKey(item));
-      }
+    return hymnals
+      .filter((item) => (book !== 'ALL' ? item.book === book : true))
+      .map((item, index) => {
+        if (!item.category) {
+          item.category = Storage.get(createCategoryKey(item));
+        }
 
-      if (category === 'CHEERFUL' && item.category !== 'CHEERFUL') {
-        return null;
-      }
+        if (category === 'CHEERFUL' && item.category !== 'CHEERFUL') {
+          return null;
+        }
 
-      if (category === 'CONGREGATIONAL' && item.category !== 'CONGREGATIONAL') {
-        return null;
-      }
+        if (
+          category === 'CONGREGATIONAL' &&
+          item.category !== 'CONGREGATIONAL'
+        ) {
+          return null;
+        }
 
-      if (category === 'SOLEMN' && item.category !== 'SOLEMN') {
-        return null;
-      }
+        if (category === 'SOLEMN' && item.category !== 'SOLEMN') {
+          return null;
+        }
 
-      if (category === '' && item.category) {
-        return null;
-      }
+        if (category === '' && item.category) {
+          return null;
+        }
 
-      return (
-        <li key={index}>
-          <span
-            className="d-flex align-items-center"
-            title={item?.text?.replaceAll('/n', '\n').replaceAll('_', '')}
-          >
-            <span className="number text-light">#{item.number}</span>
-            <span className="name" onClick={() => onSelect(item)}>
-              {item.name}
+        return (
+          <li key={index}>
+            <span
+              className="d-flex align-items-center"
+              title={item?.text?.replaceAll('/n', '\n').replaceAll('_', '')}
+            >
+              <span className="number text-light">#{item.number}</span>
+              <span className="name" onClick={() => onSelect(item)}>
+                {item.name}
+              </span>
+              <span className="tag active">{item.book}</span>
             </span>
-            <span className="tag active">{item.book}</span>
-          </span>
-          <HymnalCategory element={item} className="mr-2" />
-          <Bookmark icon element={item} onChange={onChange} sort={sort} />
-        </li>
-      );
-    });
-  }, [hymnals, onChange, onSelect, sort, category]);
+            <HymnalCategory element={item} className="mr-2" />
+            <Bookmark icon element={item} onChange={onChange} sort={sort} />
+          </li>
+        );
+      });
+  }, [hymnals, book, category, onChange, sort, onSelect]);
 
   return (
     <Modal
@@ -132,16 +143,30 @@ export function HymnalIndex({
     >
       <Modal.Header closeButton className="border-0">
         <Modal.Title className="d-flex align-items-center justify-content-between w-100">
-          Himnario
-          <div>
+          Himnarios
+          <div className="input-group" style={{ width: '50%' }}>
+            <Form.Control
+              size="sm"
+              as="select"
+              value={book}
+              onChange={handleBookChange}
+              {...rest}
+            >
+              <option value="ALL">Todos los himnarios</option>
+              {books.map((book) => (
+                <option key={book} value={book}>
+                  {book}
+                </option>
+              ))}
+            </Form.Control>
             <Form.Control
               size="sm"
               as="select"
               value={category}
-              onChange={handleChange}
+              onChange={handleCategoryChange}
               {...rest}
             >
-              <option value="ALL">Todo</option>
+              <option value="ALL">Todas las categorías</option>
               <option value="">⚪ Sin categoría</option>
               <option value="CHEERFUL">🟡 Alegre</option>
               <option value="CONGREGATIONAL">🟢 Congregacional</option>

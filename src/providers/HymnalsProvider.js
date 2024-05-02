@@ -107,6 +107,7 @@ function splitLines(id, title, text, array, index) {
 
 function HymnalsProvider({ children }) {
   const tagsSet = useMemo(() => new Set(), []);
+  const booksSet = useMemo(() => new Set(), []);
 
   const hymnals = useMemo(() => {
     return json.map(
@@ -136,6 +137,10 @@ function HymnalsProvider({ children }) {
             ?.toLowerCase()
             .split(',')
             .forEach((tag) => tagsSet.add(tag));
+        }
+
+        if (book) {
+          booksSet.add(book);
         }
 
         slides.push(
@@ -198,11 +203,12 @@ function HymnalsProvider({ children }) {
         };
       }
     );
-  }, [tagsSet]);
+  }, [booksSet, tagsSet]);
 
   const [first] = hymnals;
   const [current, setCurrent] = useState(first);
   const [tags] = useState(Array.from(tagsSet).sort());
+  const [books] = useState(Array.from(booksSet).sort());
 
   return (
     <HymnalsContext.Provider
@@ -211,6 +217,7 @@ function HymnalsProvider({ children }) {
         current,
         setCurrent,
         tags,
+        books,
       }}
     >
       {children}
