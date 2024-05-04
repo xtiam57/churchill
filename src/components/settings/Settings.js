@@ -1,10 +1,4 @@
-import {
-  CalendarMonth,
-  Close,
-  Download,
-  Favorite,
-  FileUpload,
-} from '@mui/icons-material';
+import { Close, Download, Favorite, FileUpload } from '@mui/icons-material';
 import { Logo, LogoPreview, Sidebar, TextPreview } from 'components';
 import { usePresenter, useSettingsSidebar } from 'hooks';
 import React, { useState } from 'react';
@@ -20,7 +14,6 @@ export function Settings() {
   const [settings, setSettings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const [file, setFile] = useState(null);
   const { reload } = usePresenter();
-  const [expanded, setExpanded] = useState(false);
 
   const handleChangeValue = ({ target }) => {
     const { name, value } = target;
@@ -51,12 +44,10 @@ export function Settings() {
     }));
   };
 
-  const handleSchedulesChangeValue = (name, value, index) => {
-    settings.schedules[index][name] = value;
-
+  const handleChangeCustomLogo = (value) => {
     setSettings((state) => ({
       ...state,
-      schedules: [...settings.schedules],
+      customlogo: value,
     }));
   };
 
@@ -103,7 +94,7 @@ export function Settings() {
       <Row>
         {/* Logo */}
         <Col xs={6}>
-          <Form.Row className="mb-2">
+          <Form.Row className="mb-0">
             <Form.Group as={Col} className="m-0">
               <Form.Label className="small mb-1">Logo </Form.Label>
 
@@ -122,24 +113,101 @@ export function Settings() {
               </Form.Control>
             </Form.Group>
 
-            <Form.Group as={Col} className="m-0">
-              <Form.Label className=" small mb-1">Modo</Form.Label>
-              <Form.Control
-                as="select"
-                size="sm"
-                value={settings?.color}
-                name="color"
-                onChange={handleChangeValue}
-              >
-                <option value="default">Normal</option>
-                <option value="#ffffff">Negativo</option>
-              </Form.Control>
-            </Form.Group>
+            {settings?.logo !== 'CUSTOM' && (
+              <Form.Group as={Col} className="m-0">
+                <Form.Label className=" small mb-1">Modo</Form.Label>
+                <Form.Control
+                  as="select"
+                  size="sm"
+                  value={settings?.color}
+                  name="color"
+                  onChange={handleChangeValue}
+                >
+                  <option value="default">Normal</option>
+                  <option value="#ffffff">Negativo</option>
+                </Form.Control>
+              </Form.Group>
+            )}
           </Form.Row>
 
-          <LogoPreview {...settings}>
-            <Logo height="70%" {...settings} />
+          {settings?.logo === 'CUSTOM' && (
+            <Form.Row className="my-0">
+              <Form.Group as={Col} xs={12} className="mb-0 mt-2">
+                {settings?.customlogo ? (
+                  <div
+                    className="d-flex align-items-center w-100"
+                    style={{ gap: '0.5rem' }}
+                  >
+                    <img
+                      src={settings?.customlogo}
+                      alt=""
+                      style={{
+                        objectFit: 'cover',
+                        flexGrow: 1,
+                        height: 38,
+                        border: '1px solid #ced4da',
+                      }}
+                      className="rounded"
+                    />
+
+                    <Button
+                      size="sm"
+                      className="m-0"
+                      variant="outline-danger"
+                      style={{ height: 38 }}
+                      onClick={() => handleChangeCustomLogo(null)}
+                    >
+                      Eliminar
+                    </Button>
+                  </div>
+                ) : (
+                  <Form.File
+                    id="customlogo"
+                    label="Selecciona un logo..."
+                    accept="image/png, image/svg+xml"
+                    size="sm"
+                    custom
+                    className="super-custom"
+                    onChange={({ target }) => {
+                      toBase64(target.files[0]).then((logo) => {
+                        handleChangeCustomLogo(logo);
+                      });
+                    }}
+                  />
+                )}
+              </Form.Group>
+            </Form.Row>
+          )}
+
+          <LogoPreview {...settings} className="my-2">
+            {settings?.logo === 'CUSTOM' && settings?.customlogo ? (
+              <img
+                height={`${settings?.logoheight ?? 60}%`}
+                src={settings?.customlogo}
+                alt="logo"
+              />
+            ) : (
+              <Logo height={`${settings?.logoheight ?? 60}%`} {...settings} />
+            )}
           </LogoPreview>
+
+          <Form.Row>
+            <Form.Group as={Col} className="mb-0">
+              <Form.Label className="small mb-1">
+                Tamaño del Logo ({settings?.logoheight}%)
+              </Form.Label>
+              <Form.Control
+                custom
+                type="range"
+                min="10"
+                max="100"
+                step="1"
+                name="logoheight"
+                value={settings?.logoheight}
+                onChange={handleChangeNumericValue}
+              />
+            </Form.Group>
+          </Form.Row>
         </Col>
 
         {/* Fondo */}
@@ -349,313 +417,6 @@ export function Settings() {
           </Form.Row>
         </Col>
       </Row>
-
-      <hr />
-
-      <Button
-        variant={expanded ? 'primary' : 'outline-primary'}
-        block
-        style={{
-          borderBottomLeftRadius: expanded ? '0' : '0.25rem',
-          borderBottomRightRadius: expanded ? '0' : '0.25rem',
-        }}
-        onClick={() => {
-          setExpanded((value) => !value);
-        }}
-      >
-        <CalendarMonth fontSize="small" /> Horarios y Eventos (
-        {settings?.schedules?.filter((s) => s.active).length}/
-        {settings?.schedules?.length})
-      </Button>
-
-      {expanded && (
-        <div
-          className="p-3"
-          style={{
-            border: 'solid 1px var(--primary)',
-            borderTop: 'none',
-            borderRadius: '0.25rem',
-            borderTopLeftRadius: '0',
-            borderTopRightRadius: '0',
-          }}
-        >
-          {settings?.schedules?.map((schedule, index) => (
-            <div
-              key={index}
-              className="p-2"
-              style={{
-                backgroundColor: schedule.active ? '#fff' : '#f2f3f5',
-                border: schedule.active
-                  ? 'solid 2px var(--primary)'
-                  : 'dotted 2px #dee2e6',
-                marginBottom:
-                  index === settings.schedules.length - 1 ? '0' : '0.5rem',
-                borderRadius: '0.25rem',
-              }}
-            >
-              <div className="w-100 d-flex" style={{ gap: '0.5rem' }}>
-                <div className="d-flex align-items-center pl-2">
-                  {/* <strong className="d-block">{index + 1}</strong> */}
-                  <Form.Check
-                    className="d-inline-block"
-                    type="switch"
-                    id={`active-${index}`}
-                    name="active"
-                    checked={schedule.active}
-                    onChange={() =>
-                      handleSchedulesChangeValue(
-                        'active',
-                        !schedule.active,
-                        index
-                      )
-                    }
-                  />
-                </div>
-
-                <div style={{ flexGrow: 1 }}>
-                  <Form.Row className="mb-2">
-                    <Form.Group as={Col} className="mb-0">
-                      {/* <Form.Label className=" small mb-1">Descripción</Form.Label> */}
-                      <Form.Control
-                        as="input"
-                        size="sm"
-                        value={schedule.name}
-                        name="name"
-                        placeholder="Describe que actividad tiene la Iglesia..."
-                        disabled={!schedule.active}
-                        onChange={({ target }) => {
-                          const { name, value } = target;
-                          handleSchedulesChangeValue(name, value, index);
-                        }}
-                      />
-                      {!schedule.name && schedule.active && (
-                        <small
-                          class="form-text text-muted"
-                          style={{ fontSize: '75%' }}
-                        >
-                          Deja la descripción vacía si sólo deseas mostrar el
-                          fondo.
-                        </small>
-                      )}
-                    </Form.Group>
-                  </Form.Row>
-
-                  <Form.Row>
-                    {schedule.type !== 'EVENT' ? (
-                      <>
-                        <Form.Group as={Col} xs={6} className="mb-0">
-                          {/* <Form.Label className=" small mb-1">Día</Form.Label> */}
-                          <Form.Control
-                            as="select"
-                            size="sm"
-                            value={schedule.day}
-                            name="day"
-                            disabled={!schedule.active}
-                            onChange={({ target }) => {
-                              const { name, value } = target;
-                              handleSchedulesChangeValue(name, value, index);
-                            }}
-                          >
-                            {SETTINGS_OPTIONS.DAYS.map(
-                              ({ value, label, divider }) => (
-                                <React.Fragment key={value}>
-                                  {divider ? (
-                                    <hr />
-                                  ) : (
-                                    <option value={value}>{label}</option>
-                                  )}
-                                </React.Fragment>
-                              )
-                            )}
-                          </Form.Control>
-                        </Form.Group>
-                        <Form.Group as={Col} xs={3} className="mb-0">
-                          {/* <Form.Label className=" small mb-1">Hora</Form.Label> */}
-                          <Form.Control
-                            size="sm"
-                            as="select"
-                            name="hour"
-                            disabled={!schedule.active}
-                            value={schedule.hour}
-                            onChange={({ target }) => {
-                              const { name, value } = target;
-                              handleSchedulesChangeValue(name, value, index);
-                            }}
-                          >
-                            {SETTINGS_OPTIONS.HOURS.map((value) => (
-                              <option key={value} value={value}>
-                                {value}
-                              </option>
-                            ))}
-                          </Form.Control>
-                        </Form.Group>
-                        <Form.Group as={Col} xs={3} className="mb-0">
-                          {/* <Form.Label className=" small mb-1">Horario</Form.Label> */}
-                          <Form.Control
-                            as="select"
-                            size="sm"
-                            value={schedule.hourSuffix}
-                            name="hourSuffix"
-                            disabled={!schedule.active}
-                            onChange={({ target }) => {
-                              const { name, value } = target;
-                              handleSchedulesChangeValue(name, value, index);
-                            }}
-                          >
-                            <option value="AM">AM</option>
-                            <option value="PM">PM</option>
-                          </Form.Control>
-                        </Form.Group>
-                      </>
-                    ) : (
-                      <>
-                        <Form.Group as={Col} xs={6} className="mb-0">
-                          {/* <Form.Label className=" small mb-1">Día</Form.Label> */}
-                          <Form.Control
-                            as="input"
-                            type="date"
-                            size="sm"
-                            value={schedule.date}
-                            name="date"
-                            disabled={!schedule.active}
-                            onChange={({ target }) => {
-                              const { name, value } = target;
-                              handleSchedulesChangeValue(name, value, index);
-                            }}
-                          />
-                        </Form.Group>
-
-                        <Form.Group as={Col} xs={3} className="mb-0">
-                          {/* <Form.Label className=" small mb-1">Hora</Form.Label> */}
-                          <Form.Control
-                            size="sm"
-                            as="select"
-                            name="hour"
-                            disabled={!schedule.active}
-                            value={schedule.hour}
-                            onChange={({ target }) => {
-                              const { name, value } = target;
-                              handleSchedulesChangeValue(name, value, index);
-                            }}
-                          >
-                            {SETTINGS_OPTIONS.HOURS.map((value) => (
-                              <option key={value} value={value}>
-                                {value}
-                              </option>
-                            ))}
-                          </Form.Control>
-                        </Form.Group>
-
-                        <Form.Group as={Col} xs={3} className="mb-0">
-                          {/* <Form.Label className=" small mb-1">Horario</Form.Label> */}
-                          <Form.Control
-                            as="select"
-                            size="sm"
-                            value={schedule.hourSuffix}
-                            name="hourSuffix"
-                            disabled={!schedule.active}
-                            onChange={({ target }) => {
-                              const { name, value } = target;
-                              handleSchedulesChangeValue(name, value, index);
-                            }}
-                          >
-                            <option value="AM">AM</option>
-                            <option value="PM">PM</option>
-                          </Form.Control>
-                        </Form.Group>
-                      </>
-                    )}
-
-                    <Form.Group as={Col} xs={12} className="mb-0 mt-2">
-                      {schedule.background ? (
-                        <div
-                          className="d-flex align-items-center w-100"
-                          style={{ gap: '0.5rem' }}
-                        >
-                          <img
-                            src={schedule.background}
-                            alt=""
-                            style={{
-                              objectFit: 'cover',
-                              flexGrow: 1,
-                              height: 38,
-                              border: '1px solid #ced4da',
-                            }}
-                            className="rounded"
-                          />
-
-                          <Button
-                            size="sm"
-                            className="m-0"
-                            variant="outline-danger"
-                            disabled={!schedule.active}
-                            style={{ height: 38 }}
-                            onClick={() =>
-                              handleSchedulesChangeValue(
-                                'background',
-                                null,
-                                index
-                              )
-                            }
-                          >
-                            Eliminar
-                          </Button>
-                        </div>
-                      ) : (
-                        <Form.File
-                          id="background"
-                          label="Selecciona un fondo..."
-                          accept="image/png, image/jpeg"
-                          size="sm"
-                          custom
-                          className="super-custom"
-                          disabled={!schedule.active}
-                          onChange={({ target }) => {
-                            toBase64(target.files[0]).then((img) => {
-                              handleSchedulesChangeValue(
-                                'background',
-                                img,
-                                index
-                              );
-                            });
-                          }}
-                        />
-                      )}
-                    </Form.Group>
-                  </Form.Row>
-                </div>
-
-                <div className="d-flex flex-column justify-content-center">
-                  <Button
-                    block
-                    size="sm"
-                    className="m-0"
-                    variant={schedule.type !== 'EVENT' ? 'light' : 'link'}
-                    disabled={!schedule.active}
-                    onClick={() =>
-                      handleSchedulesChangeValue('type', 'SCHEDULE', index)
-                    }
-                  >
-                    Horario
-                  </Button>
-                  <Button
-                    block
-                    size="sm"
-                    className="m-0"
-                    variant={schedule.type === 'EVENT' ? 'secondary' : 'link'}
-                    disabled={!schedule.active}
-                    onClick={() =>
-                      handleSchedulesChangeValue('type', 'EVENT', index)
-                    }
-                  >
-                    Evento
-                  </Button>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
 
       <hr />
 

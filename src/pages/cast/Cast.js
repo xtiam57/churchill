@@ -31,8 +31,14 @@ export default function CastPage() {
             bg={message.bg}
             {...settings}
           />
+        ) : settings?.logo === 'CUSTOM' && settings?.customlogo ? (
+          <img
+            height={`${settings?.logoheight ?? 60}%`}
+            src={settings?.customlogo}
+            alt="logo"
+          />
         ) : (
-          <Logo height="60%" {...settings} />
+          <Logo height={`${settings?.logoheight ?? 60}%`} {...settings} />
         )}
 
         {countdown && (

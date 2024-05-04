@@ -1,6 +1,4 @@
-import { HashRouter as Router } from 'react-router-dom';
-
-import { Navbar, Routesbar, Settings } from 'components';
+import { Navbar, Routesbar, Schedule, Settings } from 'components';
 import {
   AppProvider,
   BirthdaysProvider,
@@ -8,11 +6,12 @@ import {
   PresenterProvider,
   ScripturesProvider,
 } from 'providers';
+import { HashRouter as Router } from 'react-router-dom';
 import { RouteMapper } from 'router';
+import styled from 'styled-components';
 
 // CSS
 import 'react-bootstrap-typeahead/css/Typeahead.css';
-import styled from 'styled-components';
 import './assets/styles/custom.scss';
 import './assets/styles/index.css';
 
@@ -34,6 +33,7 @@ function App() {
                   {/* Sidebar settings */}
                 </GridStyled>
                 <Settings />
+                <Schedule />
               </BirthdaysProvider>
             </HymnalsProvider>
           </ScripturesProvider>

@@ -4,6 +4,7 @@ const NOTICES = [
   {
     id: 1,
     index: 0,
+    tag: 'WELCOME',
     type: 'notice',
     title: 'Bienvenida',
     slides: [
@@ -48,6 +49,7 @@ const NOTICES = [
   {
     id: 2,
     index: 1,
+    tag: 'BAPTISM',
     type: 'notice',
     title: 'Bautizo',
     slides: [
@@ -60,6 +62,7 @@ const NOTICES = [
   {
     id: 3,
     index: 2,
+    tag: 'SPECIAL_SONG',
     type: 'notice',
     title: 'Canto Especial',
     slides: [
@@ -72,9 +75,11 @@ const NOTICES = [
   {
     id: 4,
     index: 3,
+    tag: 'SCHEDULES',
     type: 'notice',
-    title: 'Horarios',
+    title: 'Horarios y Eventos',
     slides: [],
+    openSchedule: true,
   },
   // {
   //   id: 5,

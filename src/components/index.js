@@ -12,6 +12,7 @@ export * from './logoPreview';
 export * from './navbar';
 export * from './presenter';
 export * from './routesbar';
+export * from './schedule';
 export * from './semaphore';
 export * from './settings';
 export * from './sidebar';

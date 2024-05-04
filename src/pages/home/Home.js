@@ -1,4 +1,11 @@
-import { East, Pause, PlayArrow, Repeat, West } from '@mui/icons-material';
+import {
+  East,
+  Pause,
+  PlayArrow,
+  Repeat,
+  Settings,
+  West,
+} from '@mui/icons-material';
 import {
   Alert,
   Controls,
@@ -9,7 +16,13 @@ import {
   Title,
   Wrapper,
 } from 'components';
-import { useBirthday, useIterate, useKeyUp, usePresenter } from 'hooks';
+import {
+  useBirthday,
+  useIterate,
+  useKeyUp,
+  usePresenter,
+  useSettingsSidebar,
+} from 'hooks';
 import { useEffect, useRef, useState } from 'react';
 import { Button, ButtonGroup, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
@@ -18,10 +31,12 @@ import { BROADCAST, MOVEMENT } from 'values';
 import { getNotices } from './data';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
+const useSchedule = createPersistedState(BROADCAST.SCHEDULES_AND_EVENTS);
 
 export default function HomePage() {
   const sliderRef = useRef();
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
+  const [schedules] = useSchedule(BROADCAST.INITIAL_SCHEDULES_AND_EVENTS);
   const [showLogo, setShowLogo] = useState(true);
   const { current } = useBirthday();
   const [notices, setNotices] = useState(getNotices(current));
@@ -30,6 +45,7 @@ export default function HomePage() {
   const [loop, setLoop] = useState(true);
   const [moveNotice] = useIterate(notice, notices);
   const { presenting } = usePresenter();
+  const { openSchedule } = useSettingsSidebar();
 
   useEffect(() => {
     if (notice.id === 1) {
@@ -47,16 +63,15 @@ export default function HomePage() {
 
   useEffect(() => {
     setNotices((notices) => {
-      const index = notices.findIndex((n) => n.title === 'Horarios');
+      const index = notices.findIndex((n) => n.tag === 'SCHEDULES');
 
-      const schedules =
-        settings?.schedules?.filter((entry) => entry.active) || [];
+      const list = schedules?.filter((entry) => entry.active) || [];
 
       notices[index] = {
         ...notices[index],
         slides:
-          schedules.length > 0
-            ? schedules.map((entry) =>
+          list.length > 0
+            ? list.map((entry) =>
                 Slide.create({
                   text: `${entry.name ? `${entry.name}/n` : ''}
                           <b>${
@@ -86,9 +101,10 @@ export default function HomePage() {
                 }),
               ],
       };
+
       return [...notices];
     });
-  }, [settings]);
+  }, [schedules]);
 
   const handlePrevSlide = () => sliderRef.current.prev();
 
@@ -132,6 +148,16 @@ export default function HomePage() {
               >
                 {item.title}
               </List.Action>
+
+              {item.openSchedule && (
+                <List.Action
+                  style={{ flex: '0 1 20px' }}
+                  onClick={() => openSchedule()}
+                  className="text-right"
+                >
+                  <Settings fontSize="small" />
+                </List.Action>
+              )}
             </List.Item>
           ))}
         </List>

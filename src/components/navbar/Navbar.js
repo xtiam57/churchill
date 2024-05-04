@@ -1,4 +1,5 @@
 import {
+  CalendarMonth,
   CancelPresentation,
   Chat,
   Settings,
@@ -22,7 +23,7 @@ export function Navbar() {
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
 
   const location = useLocation();
-  const { toggleSettings } = useSettingsSidebar();
+  const { toggleSettings, toggleSchedule } = useSettingsSidebar();
   const { toggle, presenting } = usePresenter();
   const [showModal, setShowModal] = useState(false);
 
@@ -75,6 +76,20 @@ export function Navbar() {
                   variant="link"
                 >
                   <Settings />
+                </Button>
+              </OverlayTrigger>
+            </li>
+            <li className="nav-item">
+              <OverlayTrigger
+                placement="bottom"
+                overlay={<Tooltip>Horarios y Eventos</Tooltip>}
+              >
+                <Button
+                  onClick={toggleSchedule}
+                  className={presenting ? 'text-dark' : 'text-light'}
+                  variant="link"
+                >
+                  <CalendarMonth />
                 </Button>
               </OverlayTrigger>
             </li>
