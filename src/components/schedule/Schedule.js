@@ -92,12 +92,12 @@ export function Schedule() {
                         handleSchedulesChangeValue(name, value, index);
                       }}
                     />
-                    {!schedule.name && schedule.active && (
+                    {schedule.background && schedule.active && (
                       <small
                         class="form-text text-muted"
                         style={{ fontSize: '75%' }}
                       >
-                        Deja la descripción vacía si sólo deseas mostrar el
+                        Dejar la descripción vacía para mostrar unicamente el
                         fondo.
                       </small>
                     )}
