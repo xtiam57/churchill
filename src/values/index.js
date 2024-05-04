@@ -329,7 +329,7 @@ export const SETTINGS_OPTIONS = {
     { value: 'default', label: 'Churchill (isologo)' },
     { value: 'small', label: 'Churchill (isotipo)' },
     { divider: true },
-    { value: 'CUSTOM', label: 'Personalizado' },
+    { value: 'CUSTOM', label: 'Personalizado...' },
     // { value: 'antioquia', label: 'I.B. Antioquía' },
     // { value: 'esperanza', label: 'I.B. Esperanza' },
     // { value: 'ibi', label: 'Iglesia Bautista Internacional (IBI)' },

@@ -170,7 +170,13 @@ export function Settings() {
                     className="super-custom"
                     onChange={({ target }) => {
                       toBase64(target.files[0]).then((logo) => {
-                        handleChangeCustomLogo(logo);
+                        // Check if base64 is an image
+                        const isPNG = logo.startsWith('data:image/png;');
+                        const isSVG = logo.startsWith('data:image/svg+xml;');
+
+                        if (isPNG || isSVG) {
+                          handleChangeCustomLogo(logo);
+                        }
                       });
                     }}
                   />

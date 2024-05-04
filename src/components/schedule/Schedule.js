@@ -55,8 +55,28 @@ export function Schedule() {
                 : 'dotted 2px #dee2e6',
               marginBottom: index === schedules.length - 1 ? '0' : '0.5rem',
               borderRadius: '0.25rem',
+              position: 'relative',
+              overflow: 'hidden',
             }}
           >
+            <div
+              style={{
+                backgroundColor: 'rgb(222, 226, 230)',
+                width: 26,
+                height: 26,
+                fontSize: '0.7rem',
+                position: 'absolute',
+                top: 3,
+                left: 3,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                borderRadius: '0.25rem',
+              }}
+            >
+              {index + 1}
+            </div>
+
             <div className="w-100 d-flex" style={{ gap: '0.5rem' }}>
               <div className="d-flex align-items-center pl-2">
                 {/* <strong className="d-block">{index + 1}</strong> */}
@@ -94,7 +114,7 @@ export function Schedule() {
                     />
                     {schedule.background && schedule.active && (
                       <small
-                        class="form-text text-muted"
+                        className="form-text text-muted"
                         style={{ fontSize: '75%' }}
                       >
                         Dejar la descripción vacía para mostrar unicamente el
