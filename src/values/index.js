@@ -1,3 +1,4 @@
+import { TEST_EVENT_POSTER } from './event64';
 import { BACKGROUNDS } from './images';
 
 export const MOVEMENT = {
@@ -126,10 +127,10 @@ const SCHEDULES_AND_EVENTS = [
     day: 'Domingo',
     hour: '01:00',
     hourSuffix: 'AM',
-    type: 'SCHEDULE',
-    background: null,
+    type: 'EVENT',
+    background: TEST_EVENT_POSTER,
     date: null,
-    active: false,
+    active: true,
   },
   {
     name: null,

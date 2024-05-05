@@ -28,12 +28,20 @@ export function Schedule() {
       size={600}
       offset={320 + 55}
     >
-      <h1 className="display-4 mb-4">
+      <h1 className="display-4">
         Horarios y Eventos{' '}
         {/* <small className="text-muted">
           ({schedules?.filter((s) => s.active).length}/{schedules?.length})
         </small> */}
       </h1>
+
+      <p className="text-muted">
+        La resolución recomendada para las imagenes de fondo es de{' '}
+        <strong>1920x1080</strong>. Si deseas mostrar{' '}
+        <strong>unicamente</strong> el fondo, deja la descripción del
+        evento/horario vacía.
+      </p>
+
       <Button
         className="p-0 text-dark"
         variant="link"
@@ -296,6 +304,7 @@ export function Schedule() {
                         disabled={!schedule.active}
                         onChange={({ target }) => {
                           toBase64(target.files[0]).then((img) => {
+                            console.log(img);
                             handleSchedulesChangeValue(
                               'background',
                               img,
