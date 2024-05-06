@@ -37,8 +37,8 @@ export function Schedule() {
 
       <p className="text-muted">
         La resolución recomendada para las imagenes de fondo es de{' '}
-        <strong>1920x1080</strong>. Si deseas mostrar{' '}
-        <strong>unicamente</strong> el fondo, deja la descripción del
+        <strong>1920x1080</strong> o <strong>1280×720</strong>. Si deseas
+        mostrar <strong>unicamente</strong> el fondo, deja la descripción del
         evento/horario vacía.
       </p>
 
@@ -268,6 +268,7 @@ export function Schedule() {
                           src={schedule.background}
                           alt=""
                           style={{
+                            filter: schedule.active ? 'none' : 'grayscale(1)',
                             objectFit: 'cover',
                             flexGrow: 1,
                             height: 38,

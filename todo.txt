@@ -1,6 +1,5 @@
 - Peticiones de oraciones
 - Exportar programa a PDF
 - Exportar himnarios a PDF
-- Posters de conferencias
 - Video y laminas (imagenes)
--
+

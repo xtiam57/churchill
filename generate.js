@@ -18,6 +18,11 @@ const FILES = [
     keepNum: true,
   },
   {
+    path: './corario-bautista.txt',
+    book: 'Corario Bautista',
+    keepNum: false,
+  },
+  {
     path: './himnario-apendice.txt',
     book: 'Apéndice',
     keepNum: false,
