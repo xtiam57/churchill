@@ -132,10 +132,7 @@ function HymnalsProvider({ children }) {
         const isNotHymnal = book.toLowerCase().startsWith('corario');
 
         if (tags) {
-          tags
-            ?.toLowerCase()
-            .split(',')
-            .forEach((tag) => tagsSet.add(tag));
+          tags.split(',').forEach((tag) => tagsSet.add(tag));
         }
 
         if (book) {
