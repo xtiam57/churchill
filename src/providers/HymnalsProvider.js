@@ -129,8 +129,7 @@ function HymnalsProvider({ children }) {
         const id = `A${index}`;
         let text = '';
         let slideIndex = 0;
-        const isNotHymnal = tags?.toLowerCase().includes('coro');
-        // const isExtra = tags?.toLowerCase().includes('apéndice');
+        const isNotHymnal = book.toLowerCase().startsWith('corario');
 
         if (tags) {
           tags
@@ -194,7 +193,7 @@ function HymnalsProvider({ children }) {
           type: 'hymnal',
           slides,
           text,
-          tags: tags?.toLowerCase(),
+          tags,
           authors,
           length: slides.length,
           firstSlide: slides[0],

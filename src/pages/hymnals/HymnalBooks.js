@@ -4,25 +4,23 @@ import { useState } from 'react';
 import { West } from '@mui/icons-material';
 import { useHymnals } from 'hooks';
 
-export function HymnalTags({ onClick = () => {}, current }) {
-  const { hymnals, tags } = useHymnals();
+export function HymnalBooks({ onClick = () => {}, current }) {
+  const { hymnals, books } = useHymnals();
   const [selected, setSelected] = useState(null);
   const [list, setList] = useState([]);
 
-  const onChangeTag = (tag) => {
-    setSelected(tag === selected ? null : tag);
+  const onChangeBook = (book) => {
+    setSelected(book === selected ? null : book);
     setList(() =>
-      tag === selected
-        ? []
-        : hymnals.filter((song) => song.tags?.split(',').includes(tag))
+      book === selected ? [] : hymnals.filter((song) => song.book === book)
     );
   };
 
   return (
-    <List className="mb-4">
+    <List>
       {!selected ? (
         <List.Item>
-          <List.Title>Etiquetas</List.Title>
+          <List.Title>Himnarios</List.Title>
         </List.Item>
       ) : (
         <List.Item>
@@ -33,7 +31,7 @@ export function HymnalTags({ onClick = () => {}, current }) {
           </List.Title>
           <List.Action
             className="text-right"
-            onClick={() => onChangeTag(selected)}
+            onClick={() => onChangeBook(selected)}
           >
             <West />
           </List.Action>
@@ -45,15 +43,15 @@ export function HymnalTags({ onClick = () => {}, current }) {
           className="my-2"
           style={{ flexWrap: 'wrap', justifyContent: 'start' }}
         >
-          {tags.map((tag, index) => (
+          {books.map((book, index) => (
             <span
               key={index}
-              onClick={() => onChangeTag(tag)}
+              onClick={() => onChangeBook(book)}
               className={`tag mr-1 mb-1 pointer ${
-                tag === selected ? 'active' : ''
+                book === selected ? 'active' : ''
               }`}
             >
-              {tag}
+              {book}
             </span>
           ))}
         </List.Item>

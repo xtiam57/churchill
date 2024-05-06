@@ -3,7 +3,7 @@
 @CORO
 Dios esta aquí,
 Tan cierto como el aire que respiro,
-Tan cierto comola mañana se levanta el sol,
+Tan cierto como la mañana se levanta el sol,
 Tan cierto como que le hablo y me puede oir.
 ***
 1) Lo puedes sentir,
@@ -89,10 +89,10 @@ A Ti, oh Jehová, Levantaré mi alma.
 ***
 ///El amor de Dios es maravilloso///
 ¡Cuán grande es el amor de Dios!
-Tan alto que no puedo ir arriba de Él,
-Profundo que no puedo ir debajo de él,
-tan ancho que no puedo ir afuera de, el.
-¡Cuán grande es el amor de Dios¡
+Tan alto que no puedo ir arriba de el,
+Tan profundo que no puedo ir debajo de el,
+Tan ancho que no puedo ir afuera de el.
+¡Cuán grande es el amor de Dios!
 
 ---
 
@@ -121,7 +121,7 @@ Brillará, brillará, brillará.
 ## 11. AÚN DIOS EN MÍ ESTA OBRANDO
 ***
 @CORO
-Aun Dios es mí está obrando,
+Aún Dios es mí está obrando,
 Su imagen en mí está formando,
 Tardó un solo día para hacer Orión;
 El Sol, la Luna, Marte y Plutón.
@@ -129,9 +129,9 @@ Amante y paciente está aquí.
 Dios está obrando en mí.
 ***
 Es cierto que al creer Selló mi corazón;
-Aun no me juzgues me falta formación
+Aún no me juzgues me falta formación
 de acuerdo con su plan seré perfecto y fiel,
-soy formado por a mano de Él.
+soy formado por la mano de Él.
 ***
 Reflejo de su obra, Espejo que al mirar;
 Yo pienso por qué nunca Me ha de rechazar.
@@ -462,10 +462,10 @@ me dio a Jesús y me hizo su hijo;
 @CORO
 Y te agradezco, Padre, por hacerme a mí, así.
 ***
-Si yo fuera un elefante, gracias a Dios
-por mis orejas tan grandes.
-Si yo fuera un gorrión, gracias a Dios,
-por mi linda canción.
+Si yo fuera un elefante,
+gracias a Dios por mis orejas tan grandes.
+Si yo fuera un gorrión,
+gracias a Dios, por mi linda canción.
 ***
 Si yo fuera mariposa,
 gracias a Dios por mis alas hermosas;
@@ -601,10 +601,11 @@ las dudas, las sombras y el temor.
 @CORO
 //Mi vida comenzó, cuando el Señor llegó;
 y hoy puedo cantar de su amor//.
+***
 Hoy quiero que Cristo te transforme a ti,
 que cambie tu vida también.
-Piensa en la cruz donde murió
-por ti y ábrele hoy tu corazón.
+Piensa en la cruz donde murió por ti
+y ábrele hoy tu corazón.
 
 ---
 
@@ -1765,8 +1766,8 @@ Ando con Cristo,
 Con fe marchemos,
 Adelante sin temor, cristianos,
 Cristo es el capitán está guíando;
-Siempre Él nos da la orden
-¡ADELANTE! A la batalla
+Siempre Él nos da la orden:
+¡ADELANTE A la batalla!
 No tememos nada de Satán.
 Oh, sí, cristianos,
 Vamos adelante con Jesús.
@@ -1792,15 +1793,12 @@ Con Jesús por Capitán.
 Es aquella que da el Salvador!
 Libertad a las almas perdidas,
 Libertad de la condenación.
-Estad, pues, firmes en la libertad
-con que Cristo nos hizo libres,
-y no estéis otra vez sujetos
-al yugo de esclavitud. Gal 5:1
 ***
 Una vez era yo peregrino,
 Cautivado en cadenas de error;
 Mi maldad me tenía cautivo
 A una eterna y sin fin perdición.
+***
 Mas ahora el Señor me ha librado,
 Del poder del pecado y del mal;
 Y por eso ahora yo canto
@@ -2308,17 +2306,18 @@ al mundo Es amor y luz.
 
 ---
 
-## 191. GOZO HAY
+## 191. GOZO HAY SIGUIENDO A CRISTO
 ***
 Gozo hay siguiendo a Cristo;
 Cada día es más feliz;
+***
 Gozo hay siguiendo a Cristo,
 Paso a paso en la dura vida,
 ***
 A dondequiera me guía,
 Por la tierra, por la mar;
 Gozo hay siguiendo a Cristo,
-Pues me guía El.
+Pues me guía Él.
 
 ---
 
@@ -2434,7 +2433,7 @@ A una iglesia que nos trae a Dios.
 La fórmula precisa, la formula concisa;
 La fórmula de salvación en Dios,
 //Es fe en Jesucristo Confiar en lo que hizo,
-Creerle y seguir de El en pos//
+Creerle y seguir de Él en pos//.
 
 ---
 
@@ -2615,17 +2614,15 @@ No tendré, sed jamás.
 
 ## 216. MARCHARÉ CON JESÚS
 ***
-Marcharé con Jesús,
-Por la senda de la luz,
+Marcharé con Jesús, Por la senda de la luz,
 La victoria con Cristo a ganar.
-***
 Marcharé sin temor, inflamado de valor
 Y por siempre su nombre ensalzar.
 ***
 Es el Vencedor, Jesús el Salvador,
 Incomparable y sin par.
 Con el Capitán vamos a triunfar.
-///La victoria con Cristo a ganar.///
+///La victoria con Cristo a ganar///.
 
 ---
 
@@ -2984,308 +2981,542 @@ Sólo creed, sólo creed, Todo posible es, sólo creed; Sólo creed, solo creed,
 
 ## 263. CUAL OCÉANO INMENSO, ES SU AMOR
 ***
-Cual océano inmenso, Alto cual cielo azul, Hondo como profundo mar De Cristo es su amor.
-Aunque soy tan indigno, Nunca me abandonará, Pues el camina conmigo Guiándome por doquier.
+Cual océano inmenso,
+Alto cual cielo azul,
+Hondo como profundo mar
+De Cristo es su amor.
+***
+Aunque soy tan indigno,
+Nunca me abandonará,
+Pues el camina conmigo
+Guiándome por doquier.
 
 ---
 
 ## 264. CONTIGO ESTOY
 ***
-Contigo estoy y tu amigo soy; No temas, siempre te ayudaré, Tu Dios soy, y te sustentaré.
-Contigo estoy, y tu amigo soy; Te consolaré, y te bendeciré, Y contigo estoy.
+Contigo estoy y tu amigo soy;
+No temas, siempre te ayudaré,
+Tu Dios soy, y te sustentaré.
+Contigo estoy, y tu amigo soy;
+Te consolaré, y te bendeciré,
+Y contigo estoy.
 
 ---
 
 ## 265. PUERTA YO SOY
 ***
-Puerta Yo Soy, puerta Yo Soy, Si por Mí entrare el pecador. Se salvará, se salvará,
-
-se salvará Puerta Él es, puerta Él es.
-Miles adentro entrado han; Hay más lugar, ven sin tardar, Te salvará.
+Puerta Yo Soy, puerta Yo Soy,
+Si por Mí entrare el pecador.
+Se salvará, se salvará, se salvará
+Puerta Él es, puerta Él es.
+Miles adentro entrado han;
+Hay más lugar, ven sin tardar,
+Te salvará.
 
 ---
 
 ## 266. CRISTO SE ENTREGÓ POR MÍ
 ***
-En el Calvario un día Cristo por mí se entregó. Ya tengo yo alegría, La salvación me dio.
+En el Calvario un día
+Cristo por mí se entregó.
+Ya tengo yo alegría,
+La salvación me dio.
 
 ---
 
 ## 267. UNA COSA SÉ
 ***
-Una cosa sé, una cosa sé; Por su poder Dios me perdonó, De mis pecados me libro. Yo ciego fui, más veo ya, Una cosa sé.
+Una cosa sé, una cosa sé;
+Por su poder Dios me perdonó,
+De mis pecados me libro.
+Yo ciego fui, más veo ya,
+Una cosa sé.
 
 ---
 
 ## 268. NUESTRA PATRIA SERÁ PARA CRISTO
 ***
-Nuestra patria será para Cristo, Si unidos luchamos por El.
-Una tierra que honre al Bendito Y que muestre de Dios al poder.
-A luchar, pues, con santo entusiasmo, Prediquemos de Cristo doquier.//¡Oh cristianos, luchad! Vuestras patria salvad, Que Jesús pronto vendrá//
+Nuestra patria será para Cristo,
+Si unidos luchamos por El.
+Una tierra que honre al Bendito
+Y que muestre de Dios al poder.
+***
+A luchar, pues, con santo entusiasmo,
+Prediquemos de Cristo doquier.
+//¡Oh cristianos, luchad! Vuestras patria
+salvad, Que Jesús pronto vendrá//
 
 
 ---
 
 ## 269. HERMOSA, HERMOSA, HERMOSA
 ***
-Hermosa, hermosa, hermosa, es la Palabra del Señor.
-Divino, divino, divino, el evan- gelio de su amor. Eterna, eterna, eterna. La vida y paz que Cristo da. Sublime, subli- me, sublime, a nuestro Rey mirar será.
+Hermosa, hermosa, hermosa,
+es la Palabra del Señor.
+Divino, divino, divino,
+el evangelio de su amor.
+***
+Eterna, eterna, eterna.
+La vida y paz que Cristo da.
+Sublime, sublime, sublime,
+a nuestro Rey mirar será.
 
 ---
 
 ## 270. OH, VEN A CONOCER
 ***
-Oh, ven a conocer A mi Salvador,//A mi Salvador//Oh, ven a conocer a mi Salvador Y tendrás su dulce paz.
+Oh, ven a conocer A mi Salvador,
+//A mi Salvador//
+Oh, ven a conocer a mi Salvador
+Y tendrás su dulce paz.
 
 ---
 
 ## 271. LA FUENTE DE ARRIBA
 ***
-//La fuente de arriba fluyendo está: El agua de vida tu sed saciará. Si tomas de ella la paz hallarás, Y el gozo del cielo tú recibirás.//
+//La fuente de arriba fluyendo está:
+El agua de vida tu sed saciará.
+Si tomas de ella la paz hallarás,
+Y el gozo del cielo tú recibirás.//
 
 ---
 
 ## 272. CON MARCHA DE VICTORIA
 ***
-Con marcha de victoria seguiremos, Pues somos los soldados de Jesús. El triunfo que nosotros obtendremos,
-
-El capitán lo hizo allá en la cruz. Jesús, que siempre cuida nuestra luchas, Dirige nuestros pasos hasta el fin.
-//El fiel soldado de El escucha con amor Y listo siempre está a su clarín.//
+Con marcha de victoria seguiremos,
+Pues somos los soldados de Jesús.
+El triunfo que nosotros obtendremos,
+***
+El capitán lo hizo allá en la cruz.
+Jesús, que siempre cuida nuestra luchas,
+Dirige nuestros pasos hasta el fin.
+***
+//El fiel soldado de Él
+escucha con amor
+Y listo siempre está a su clarín.//
 
 ---
 
 ## 273. SÉ FIEL - APOCALIPSIS 2:10
 ***
-Se fiel hasta la muerte, Y yo te daré La corona de vida Sé fiel, sé fiel.
+Se fiel hasta la muerte,
+Y yo te daré La corona de vida
+Sé fiel, sé fiel.
 
 ---
 
 ## 274. ADELANTE CON VALOR
 ***
-Adelante con valor, sin temor porque Dios es amor; En el amor no hay temor, Porque el amor echa fuera el temor.
+Adelante con valor,
+sin temor porque Dios es amor;
+En el amor no hay temor,
+Porque el amor echa fuera el temor.
+***
 //¿Por Qué? ¡Dios es amor!
-¿Por Qué? ¡Dios es amor! ¿Por Qué? ¡Dios es amor! Dios es amor//
+¿Por Qué? ¡Dios es amor!
+¿Por Qué? ¡Dios es amor!
+Dios es amor//.
 
 ---
 
 ## 275. ENVÍA, ENVÍAME SEÑOR
 ***
-Envía, envíame Señor, La mies es mucha Y grande es la labor; Más constreñido por tu amor Quiero servirte; buen Salvador.
+Envía, envíame Señor,
+La mies es mucha Y grande es la labor;
+Más constreñido por tu amor
+Quiero servirte; buen Salvador.
 
 ---
 
 ## 276. YA QUITÓ
 ***
-//Ya quitó, ya quitó, ya quitó, toda carga de mi vida ya
-
-quitó//. Mi Jesús me salvó. Pues por mí Él murió.
-Ya quitó, ya quitó, ya quitó. Toda carga de mi vida ya quitó.
+//Ya quitó, ya quitó, ya quitó,
+toda carga de mi vida ya quitó//.
+Mi Jesús me salvó.
+Pues por mí Él murió.
+Ya quitó, ya quitó, ya quitó.
+Toda carga de mi vida ya quitó.
 
 ---
 
 ## 277. YO TENGO GOZO EN MI ALMA
 ***
-Yo tengo gozo en mi alma, gozo en mi alma, gozo en mi alma y en mi ser; es como ríos de agua viva ríos de agua viva, ríos de agua viva en mí ser.
+Yo tengo gozo en mi alma, gozo en mi alma,
+gozo en mi alma y en mi ser;
+es como ríos de agua viva ríos de agua viva,
+ríos de agua viva en mí ser.
 
 ---
 
 ## 278. EBENEZER
 ***
-Ebenezer, hasta aquí nos ayudó Jehová, con su poder y su mano nos sostendrá. Esta canción por los siglos durará.
+Ebenezer, hasta aquí nos ayudó Jehová,
+con su poder y su mano nos sostendrá.
+Esta canción por los siglos durará.
 //Ebenezer, hasta aquí nos ayudó a Jehová.//
 
 ---
 
 ## 279. YO TENGO GOZO EN MI CORAZÓN
 ***
-Yo tengo gozo, gozo en mico-razón, En mi corazón, en mi corazón, Yo tengo gozo, gozo en mi corazón, Porque Cristo me salvó.
-(Remplazar por paz y alegría)
+Yo tengo gozo, gozo en micorazón,
+En mi corazón, en mi corazón,
+Yo tengo gozo, gozo en mi corazón,
+Porque Cristo me salvó.
+***
+Yo tengo paz, paz en micorazón,
+En mi corazón, en mi corazón,
+Yo tengo paz, paz en mi corazón,
+Porque Cristo me salvó.
+***
+Yo tengo alegría, alegría en micorazón,
+En mi corazón, en mi corazón,
+Yo tengo alegría, alegría en mi corazón,
+Porque Cristo me salvó.
 
 ---
 
 ## 280. SOY FELIZ, SOY FELIZ
 ***
-Soy feliz, soy feliz, desde que encontré la salvación en Cristo, con amor, el Señor mostró me la verdad y vida.
-
-Soy feliz, soy feliz, siempre cantar, con dicha indecible e indestructible, tengo paz per- fecta y siempre soy feliz.
+Soy feliz, soy feliz,
+desde que encontré la salvación
+en Cristo, con amor,
+el Señor mostró me la verdad y vida.
+***
+Soy feliz, soy feliz,
+siempre cantar, con dicha indecible
+e indestructible, tengo paz perfecta
+y siempre soy feliz.
 
 ---
 
 ## 281. ADMIRABLE ES JESÚS
 ***
-Admirable es Jesús Y tan lle- nos de amor; Admirable es Jesús, mi Señor.
-Es su nombre sin par, Siempre a El quiero alabar; Admirable es Jesús, mi Señor.
+Admirable es Jesús
+Y tan llenos de amor;
+Admirable es Jesús, mi Señor.
+Es su nombre sin par,
+Siempre a Él quiero alabar;
+Admirable es Jesús, mi Señor.
 
 ---
 
-## 282. CRISTO AMA A LOS NIÑITOS.
+## 282. CRISTO AMA A LOS NIÑITOS
 ***
-Cristo ama a los niñitos, Por salvarnos El murió; En su reino de amor Para todos hay lugar, De cualquiera tribu, lengua o color.
+Cristo ama a los niñitos,
+Por salvarnos El murió;
+En su reino de amor
+Para todos hay lugar,
+De cualquiera tribu, lengua o color.
 
 ---
 
 ## 283. LOS NIÑOS DE SIETE AÑOS
 ***
-Los niños de siete años, de cinco y tres también, Entrar al cielo pueden, Jesús la Puerta es.
-Creyendo siempre en Cristo, de todo corazón, reciben de Él la vida, la paz y el perdón.
-
+Los niños de siete años,
+de cinco y tres también,
+Entrar al cielo pueden,
+Jesús la Puerta es.
+***
+Creyendo siempre en Cristo,
+de todo corazón,
+reciben de Él la vida,
+la paz y el perdón.
 
 ---
 
 ## 284. DE CRISTO HABLEMOS
 ***
-De Cristo hablemos, el Sobe- rano Rey; Es vida y verdad, en El ten-gamos fe. También es el camino al celeste hogar; Mi vida a El quiero entregar.
+De Cristo hablemos, el Soberano Rey;
+Es vida y verdad, en El tengamos fe.
+También es el camino al celeste hogar;
+Mi vida a El quiero entregar.
 
 ---
 
 ## 285. BRILLANDO
 ***
-Brillando y luchando, por Cristo el Señor, velando y ora- ndo, soldados sin temor; siempre andando y hablando, con nuestro Salvador, viviendo siempre por Cristo el Rey.
+Brillando y luchando, por Cristo el Señor,
+velando y orando, soldados sin temor;
+siempre andando y hablando, con nuestro Salvador,
+viviendo siempre por Cristo el Rey.
 
 ---
 
-## 286. MARCHA DE SEGURIDAD
+## 286. MARCHA DE SEGURIDAD - JUAN 1:12
 ***
-¿Quién dirá que ya es salvo por la fe En la cruz de Cristo y no por la ley? ¿Quién dirá que del pecado tengo remisión? ¿Quién está seguro de su salvación?
-Oh, sí; es verdad que todos los que creen en Él, No serán jamás juzgados por el mal; La palabra de San Juan* Nos enseña el refrán: Yo diré que ya soy salvo por la fe En la cruz de Cristo y no por la ley Yo diré que del pecado tengo remisión. Yo estoy seguro de mi salvación. *Juan 1:12
+¿Quién dirá que ya es salvo por la fe
+En la cruz de Cristo y no por la ley?
+¿Quién dirá que del pecado tengo remisión?
+¿Quién está seguro de su salvación?
+***
+Oh, sí; es verdad que todos los que creen en Él,
+No serán jamás juzgados por el mal;
+La palabra de San Juan
+Nos enseña el refrán:
+Yo diré que ya soy salvo por la fe.
+En la cruz de Cristo y no por la ley
+Yo diré que del pecado tengo remisión.
+Yo estoy seguro de mi salvación.
 
 
 ---
 
 ## 287. FUE MOISÉS UN INSTRUMENTO
 ***
-Fue Moisés un instrumento En las manos del Señor, Para libertar a los hebreos Dios lo preparó, Por desierto Dios cuarenta años Fiel sus pasos guió; Y el Mar Rojo así cruzó,
-///¿Cómo, pues, cruzó el Mar Rojo?///Pues, ¿Cómo lo cruzó? ¿El Nadó? ¡No! ¡No!
-¿Navegó? ¡No! ¡No!; ¿Pues
-voló? ¡No! ¡No! ¡No! ¡No!
-¿Caminó? ¡No! ¡No!  Pues
-¿Corrió? ¡No! ¡No! Pues
-¿Cómo lo cruzó?
-Dios viento muy fuerte causó al soplar, Sus aguas hizo apartar, Camino Él le abrió, y así Moisés el mar cruzo.
+Fue Moisés un instrumento
+En las manos del Señor,
+Para libertar a los hebreos
+Dios lo preparó,
+Por desierto Dios cuarenta años
+Fiel sus pasos guió;
+Y el Mar Rojo así cruzó,
+///¿Cómo, pues, cruzó el Mar Rojo?///
+Pues, ¿Cómo lo cruzó? ¿El Nadó? ¡No! ¡No!
+¿Navegó? ¡No! ¡No!;
+¿Pues voló? ¡No! ¡No! ¡No! ¡No!
+¿Caminó? ¡No! ¡No!
+Pues ¿Corrió? ¡No! ¡No!
+Pues ¿Cómo lo cruzó?
+Dios viento muy fuerte causó al soplar,
+Sus aguas hizo apartar,
+Camino Él le abrió,
+y así Moisés el mar cruzo.
 
 ---
 
 ## 288. MARCHA, OH JUVENTUD
 ***
-¡Marchad, oh juventud! De Jesucristo nunca pierdas la visión. Luchad contra Satán, Ese es el lema del cristiano en oración. Confiad en el Señor, Por cada triunfo cantareis  nueva canción.
-¡Marchad, oh juventud en pos del galardón!
-
+¡Marchad, oh juventud!
+De Jesucristo nunca
+pierdas la visión.
+Luchad contra Satán,
+Ese es el lema del
+cristiano en oración.
+Confiad en el Señor,
+Por cada triunfo
+cantareis nueva canción.
+¡Marchad, oh juventud
+en pos del galardón!
 
 ---
 
 ## 289. JESÚS VOLVERÁ
 ***
-Le veremos algún día. A Jesús quien nos salvó. Volverá a esta tierra, pues, así lo prometió. Cada prueba terminada, y más cruces no habrá, cuando Cristo vuelva en gloria, y nos lleve más allá.
+Le veremos algún día. A Jesús quien nos salvó.
+Volverá a esta tierra, pues, así lo prometió.
+Cada prueba terminada, y más cruces no habrá,
+cuando Cristo vuelva en gloria, y nos lleve más allá.
 
 ---
 
 ## 290. SALMO 100
 ***
-Cantad alegres a Dios, Habitantes de toda la tierra.
-//Servidle con alegría;//Venid ante su presencia Con regocijo.
-//Reconoced que Jehová es Dios;////Él nos hizo y no nosotros;//Pueblo suyo somos, Y ovejas de su prado.
-//Entrad por sus puertas con gratitud,////Por sus atrios con alabanzas;//--Alabadle y bendecid su nombre.
+Cantad alegres a Dios,
+Habitantes de toda la tierra.
+//Servidle con alegría;//
+Venid ante su presencia
+Con regocijo.
+//Reconoced que Jehová es Dios;//
+//Él nos hizo y no nosotros;//
+Pueblo suyo somos,
+Y ovejas de su prado.
+//Entrad por sus puertas con gratitud,//
+//Por sus atrios con alabanzas;//
+Alabadle y bendecid su nombre.
 //Porque Jehová es bueno;//
-//Para siempre es su misericordia,//Y su verdad por todas las edades.
+//Para siempre es su misericordia,//
+Y su verdad por todas las edades.
 
 ---
 
 ## 291. MUESTRA HOY TU AMOR
 ***
-Tú que amaste el mundo al dar tu vida aquí, muestra hoy de nuevo tu amor, Jesús, en mí.
-
-Almas hay que sufren, sin conocer tu amor, mi vida al ver, oh, hazles saber tu amor, Jesús, en mí, en mí; tu amor, Jesús, en mí.
+Tú que amaste el mundo
+al dar tu vida aquí,
+muestra hoy de nuevo tu amor,
+Jesús, en mí.
+***
+Almas hay que sufren,
+sin conocer tu amor,
+mi vida al ver,
+oh, hazles saber tu amor,
+***
+Jesús, en mí, en mí;
+tu amor, Jesús, en mí.
 
 ---
 
-## 292. PERDER LOS
+## 292. PERDER LOS BIENES
 ***
-Perder los bienes es mucho, perder la salud es más,//Perder el alma es pérdida tal, que no se recobra jamás//.
+Perder los bienes es mucho,
+perder la salud es más,
+//Perder el alma es pérdida tal,
+que no se recobra jamás//.
 
 ---
 
 ## 293. DIOS ES MUY GRANDE
 ***
-Dios es muy grande me ama yo sé,//¿Cómo lo sé//Dios es muy grande me ama yo sé, la biblia dice así.
-Cristo murió y pagó por mi mal
-¿Cómo lo sé? Cristo murió y pagó por mi mal la biblia dice así.
-Hoy Cristo vive, me ayuda a crecer, ¿Cómo lo sé? Hoy Cristo vive, me ayuda a crecer la biblia dice así.
+Dios es muy grande me ama yo sé,
+//¿Cómo lo sé// Dios es muy grande
+me ama yo sé, la biblia dice así.
+Cristo murió y pagó por mi mal.
+¿Cómo lo sé? Cristo murió y pagó
+por mi mal la biblia dice así.
+Hoy Cristo vive, me ayuda a crecer,
+¿Cómo lo sé? Hoy Cristo vive, me ayuda a crecer
+la biblia dice así.
 Cuando el venga al cielo iré,
-¿Cómo losé? Cuando el venga al cielo iré la biblia dice así.
+¿Cómo lo sé? Cuando el venga
+al cielo iré la biblia dice así.
 
 ---
 
 ## 294. AMARÁS AL SEÑOR TU DIOS
 ***
-//Amarás al Señor tu Dios, con todo tu, (tu) corazón////Amarás al Señor tu Dios, con toda tu,
-
-(con toda tu) alma//Amarás a tu prójimo como a ti mismo, Amarás al Señor tu Dios con todo tu corazón,
-//Amarás al Señor tu Dios con toda tu, (toda tu) mente,//Amarás a tu prójimo como a ti mismo, Amarás al Señor tu Dios con todo tu corazón,
+//Amarás al Señor tu Dios,
+con todo tu, _(tu)__ corazón//
+//Amarás al Señor tu Dios,
+con toda tu, _(con toda tu)__ alma//
+Amarás a tu prójimo como a ti mismo,
+Amarás al Señor tu Dios con todo tu corazón,
+//Amarás al Señor tu Dios
+con toda tu, _(toda tu)__ mente,//
+Amarás a tu prójimo como a ti mismo,
+Amarás al Señor tu Dios con todo tu corazón.
 
 ---
 
 ## 295. TU ME TEJISTE EN MI MADRE
 ***
-Tú me tejiste en el vientre, en el vientre de mi madre, te alabo, te alabo tú me tejiste en mi madre.//Maravillosas son tus obras//, te alabo, te alabo, tú me tejiste en mi madre
+Tú me tejiste en el vientre, en el vientre de mi madre,
+te alabo, te alabo tú me tejiste en mi madre.
+//Maravillosas son tus obras//, te alabo,
+te alabo, tú me tejiste en mi madre
 
 ---
 
 ## 296. FUE NEGRO MI CORAZÓN
 ***
-Fue negro mi corazón, más Cristo de Dios el don, con sangre lo lavo, cual nieve lo dejo, Confiando en su palabra sé, que en calles de oro caminaré; leer la biblia y orar es crecer en Cristo Jesús.
+Fue negro mi corazón, más Cristo de Dios el don,
+con sangre lo lavo, cual nieve lo dejo,
+Confiando en su palabra sé, que en calles de oro caminaré;
+leer la biblia y orar es crecer en Cristo Jesús.
 
 ---
 
 ## 297. A LA ESCUELA DOMINICAL
 ***
-A la escuela dominical me gusta ir me enseñan de mi sal- vador, a la escuela dominical me gusta ir pues la biblia entiendo mejor.
-
-Allí sentimos tanto amor es una gran familia del Señor, si yo pudiera arreglar domingo habría sin cesar, (sin cesar)
-A la escuela dominical me gusta ir mi ofrenda doy a mi señor, a la escuela dominical me gusta ir donde a él le canto loor.
+A la escuela dominical me gusta ir
+me enseñan de mi salvador,
+a la escuela dominical me gusta ir
+pues la biblia entiendo mejor.
+***
+Allí sentimos tanto amor
+es una gran familia del Señor,
+si yo pudiera arreglar
+domingo habría sin cesar, _(sin cesar)__
+***
+A la escuela dominical me gusta ir
+mi ofrenda doy a mi señor,
+a la escuela dominical me gusta ir
+donde a él le canto loor.
 
 ---
 
 ## 298. DAVID
 ***
-David era un pastor que adoraba con cantar; Goliat era un gigante; su orgullo fue sin más, David tan solo tuvo una honda de pastor; Goliat, una armadura; David tuvo al Señor.
-CORO
-(Oh) pon tu fe en nuestro Dios; gigantes tumbarás pues Dios es mucho más grande, y a todos vencerá,
-(Oh) sabe la verdad si quieres ser gran vencedor; confía nada más en Dios, la lucha es del Señor.
-David tomó su honda, y al campo la llevó; Goliat su armadura y espada se ciñó David con gran cuidado apuntó y disparó, así mato al Gigante y al suelo lo tiró.
+David era un pastor que adoraba con cantar;
+Goliat era un gigante; su orgullo fue sin más,
+David tan solo tuvo una honda de pastor;
+Goliat, una armadura; David tuvo al Señor.
+***
+@CORO
+_(Oh)__ pon tu fe en nuestro Dios;
+gigantes tumbarás pues Dios es mucho más grande,
+y a todos vencerá,
+_(Oh)__ sabe la verdad si quieres ser gran vencedor;
+confía nada más en Dios,
+la lucha es del Señor.
+***
+David tomó su honda, y al campo la llevó;
+Goliat su armadura y espada se ciñó
+David con gran cuidado apuntó y disparó,
+así mato al Gigante y al suelo lo tiró.
 
 
 ---
 
 ## 299. EL SABIO, Y EL NECIO
 ***
-El hombre sabio casa construyó, sobre la roca él la edificó el hombre sabio casa construyó y la lluvia descendió.
-///Llovió a torrentes y se inundó,///y su casa no cayó
-El hombre necio su casa construyó, sobre la arena él la edificó, el hombre necio su casa construyó, y la lluvia descendió.///Llovió a torrentes y se inundó///y su casa se cayó
+El hombre sabio casa construyó,
+sobre la roca él la edificó
+el hombre sabio casa construyó
+y la lluvia descendió.
+***
+///Llovió a torrentes y se inundó,/// y su casa no cayó.
+***
+El hombre necio su casa construyó,
+sobre la arena él la edificó,
+el hombre necio su casa construyó,
+y la lluvia descendió.
+***
+///Llovió a torrentes y se inundó,/// y su casa se cayó.
 
 ---
 
 ## 300. EL HOMBRECITO CHUECO
 ***
-Había un hombrecito chueco que vivía en una casa chueca,
-un día el hombrecito chueco, La biblia encontró y todo lo que era chueco Jesús lo transformó.
-Había un hombrecito triste que vivía en una casa triste, un día el hombrecito triste la biblia encontró y todo lo que era triste Jesús lo transformó.
-Había un hombrecito malo que vivía en una casa mala, un día el hombrecito malo la biblia encontró y todo lo que era malo Jesús lo transformó.
-
-Había un hombrecito amargo que vivía en una casa amarga, un día el hombrecito amargo la biblia encontró y todo lo que era amargo Jesús lo transformó
-Había un hombrecito chueco, que vivía en una casa triste, que andaba en un camino malo, un día el hombrecito amargo;
-La biblia encontró y todo lo que era chueco, triste, malo, amargo, Jesús lo transformó.
+Había un hombrecito chueco
+que vivía en una casa chueca,
+un día el hombrecito chueco,
+La biblia encontró y todo lo que era chueco
+Jesús lo transformó.
+***
+Había un hombrecito triste
+que vivía en una casa triste,
+un día el hombrecito triste
+la biblia encontró y todo lo que era triste
+Jesús lo transformó.
+***
+Había un hombrecito malo
+que vivía en una casa mala,
+un día el hombrecito malo
+la biblia encontró y todo lo que era malo
+Jesús lo transformó.
+***
+Había un hombrecito amargo
+que vivía en una casa amarga,
+un día el hombrecito amargo
+la biblia encontró y todo lo que era amargo
+Jesús lo transformó.
+***
+Había un hombrecito chueco,
+que vivía en una casa triste,
+que andaba en un camino malo,
+un día el hombrecito amargo;
+La biblia encontró y todo lo que era
+chueco, triste, malo, amargo,
+Jesús lo transformó.
 
 ---
 
 ## 301. ENTREGÓ SU AMOR - 1 JUAN 3:16
 ***
-///En esto conocemos///, lo que es amor, en que Jesucristo entregó su vida///por nosotros///,
+///En esto conocemos///,
+lo que es amor,
+en que Jesucristo entregó su vida
+///por nosotros///.
 
 ---
 
 ## 302. EN TI CONFÍO
 ***
-En el día que temo yo///en ti confío///En el día que temo yo en ti confío, en Dios alabaré//
+En el día que temo yo
+///en ti confío///
+En el día que temo yo en ti confío, en Dios alabaré//
 En Dios confío, y alabaré, en Dios confío en Dios no temeré
 (Confío en ti Señor, realmente confío en ti)
 
@@ -3294,230 +3525,395 @@ En Dios confío, y alabaré, en Dios confío en Dios no temeré
 ## 303. DIOS ES AMOR - 1 JUAN 4:16
 ***
 ////D-I-O-S. ES A-M-O-R////,
-//Dios es amor//; D-I-O-S. ES A-M-O-R,//Dios es amor//
-
-
----
-
-## 304. TODO LO PUEDO EN CRISTO - FIL 4:13
-***
-//Todo lo puedo en Cristo//que me fortalece, todo lo puedo en Cristo
+//Dios es amor//;
+D-I-O-S. ES A-M-O-R,
+//Dios es amor//.
 
 ---
 
-## 305. GUARDA TU LENGUA DEL MAL - SAL. 34:13
+## 304. TODO LO PUEDO EN CRISTO - FILIPENSES 4:13
 ***
-//Guarda tu lengua del mal//y de hablar engaños, guarda tu lengua del mal.
+//Todo lo puedo en Cristo//
+que me fortalece,
+todo lo puedo en Cristo.
+
+---
+
+## 305. GUARDA TU LENGUA DEL MAL - SALMO 34:13
+***
+//Guarda tu lengua del mal//
+y de hablar engaños,
+guarda tu lengua del mal.
 
 ---
 
 ## 306. HOSANNA
 ***
-//Bendito es que viene en el nombre del Señor//Hosanna hijo de David, Hosanna en las alturas, Hosanna hijo de Da- vid, Hosanna ese es Jesús.//Hosanna//en las alturas//Hosanna//ese es Jesús//
+//Bendito es que viene en el nombre del Señor//
+Hosanna hijo de David,
+Hosanna en las alturas,
+Hosanna hijo de David,
+Hosanna ese es Jesús.
+//Hosanna// en las alturas
+//Hosanna// ese es Jesús.
 
 ---
 
 ## 307. ALTO
 ***
-//¡ALTO! voy a contarte de Jesús mi Salvador//, que por mí murió mi maldad pagó, que me perdonó y me transformó,
-¡ALTO! voy a contarte de Jesús mi Salvador,
-//¡ANDA! de Cristo cuenta todo el mundo debe oír//, que Jesús murió su maldad pagó; que le salvará y le cambiará.
-
-¡ANDA! De Cristo cuenta todo el mundo debe oír,3
-//¡CEDE! ya tu derecho deja a Cristo conducir//él te guiara y te cuidará, él nos usará y almas salvará ¡CEDE! ya tu derecho deja a Cristo conducir.
+//¡ALTO! voy a contarte de Jesús mi Salvador//,
+que por mí murió mi maldad pagó,
+que me perdonó y me transformó,
+¡ALTO! voy a contarte de Jesús mi Salvador.
+***
+//¡ANDA! de Cristo cuenta todo el mundo debe oír//,
+que Jesús murió su maldad pagó;
+que le salvará y le cambiará.
+¡ANDA! De Cristo cuenta todo el mundo debe oír.
+***
+//¡CEDE! ya tu derecho deja a Cristo conducir//
+Él te guiara y te cuidará,
+Él nos usará y almas salvará
+¡CEDE! ya tu derecho deja a Cristo conducir.
 
 ---
 
 ## 308. VEN Y TOCA TU ARPA DAVID
 ***
-Ven y toca tu arpa David, aleluya, Ven y toca tu arpa David, alelu... el niño David era un pastor, mató a Goliat, el pueblo lo celebró.
-///Ven y toca tu arpa David, aleluya, Ven y toca tu arpa David///
+Ven y toca tu arpa David, aleluya,
+Ven y toca tu arpa David, alelu...
+el niño David era un pastor,
+mató a Goliat, el pueblo lo celebró.
+///Ven y toca tu arpa David, aleluya,
+Ven y toca tu arpa David///,
 
 ---
 
 ## 309. JESÚS NOS AMA A CADA UNO
 ***
-Jesús nos ama a cada uno, a cada uno, a cada uno; Jesús nos ama a cada uno Jesús nos ama a todos. ama a papá, ama a mamá, hermano mayor, her- mano menor, te ama a ti, me ama a mí JESÚS nos ama a todos.
+Jesús nos ama a cada uno,
+a cada uno, a cada uno;
+Jesús nos ama a cada uno
+Jesús nos ama a todos.
+***
+Ama a papá, ama a mamá,
+hermano mayor, hermano menor,
+te ama a ti, me ama a mí
+Jesús nos ama a todos.
 
 ---
 
 ## 310. ¿QUIEN HIZO LAS FLORES?
 ***
-¿Quién hizo///las flores///quien hizo las flores nuestro Dios. ¿Quién manda///la lluvia///nuestro Dios
-
-¿quién ama a///los niños///quien ama a los niños nuestro Dios.
+¿Quién hizo ///las flores///
+¿Quién hizo las flores nuestro Dios.
+¿Quién manda ///la lluvia///, nuestro Dios.
+***
+¿Quién ama a ///los niños///
+¿Quién ama a los niños, nuestro Dios.
 
 ---
 
 ## 311. CABEZA HOMBRO
 ***
-Cabeza hombro///rodillas pies///, Cabeza hombros rodillas pies son para Cristo//
+Cabeza, hombro,
+///rodillas, pies///,
+Cabeza, hombros, rodillas,
+pies son para Cristo
 
 ---
 
 ## 312. NUESTRO PADRE ABRAHAM
 ***
-Nuestro padre Abraham tiene muchos, muchos hijos nuestro padre Abraham, uno de ellos soy, igual que tú y doy gracias al Señor (brazo derecho) (brazo izquierdo) (pie derecho) (pie izquierdo,) (la cabeza) (una vuelta) (a su casa)
+Nuestro padre Abraham tiene muchos,
+muchos hijos nuestro padre Abraham,
+uno de ellos soy, igual que tú
+y doy gracias al Señor.
+_(brazo derecho)__ _(brazo izquierdo)__ _(pie derecho)__ _(pie izquierdo,)__ _(la cabeza)__ _(una vuelta)__ _(a su casa)__.
 
 ---
 
 ## 313. BUENOS DÍAS SEÑOR JESÚS
 ***
-La noche ha pasado, la tempestad se fue, muy débil y cansado esperando amanecer, pero al abrir mis ojos un rayo puedo ver, el sol brilla en el cielo, su luz ya puedo ver.
-Buenos días Señor Jesús, buenos días por darnos luz, buenos días a toda su creación, buenos días te digo en devoción.
-
-Los pajaritos cantan elevan su canción también las palomitas (ardillitas) le cantan al Señor; la flor, la mariposa exhiben su color, y en fondo de mi alma yo canto esta canción.
+La noche ha pasado,
+la tempestad se fue,
+muy débil y cansado esperando amanecer,
+pero al abrir mis ojos un rayo puedo ver,
+el sol brilla en el cielo,
+su luz ya puedo ver.
+Buenos días Señor Jesús,
+buenos días por darnos luz,
+buenos días a toda su creación,
+buenos días te digo en devoción.
+Los pajaritos cantan elevan su canción
+también las palomitas _(ardillitas)__
+le cantan al Señor;
+la flor, la mariposa exhiben su color,
+y en fondo de mi alma yo canto esta canción.
 
 ---
 
 ## 314. CANTA ALELUYA AL SEÑOR
 ***
 //Canta aleluya al Señor,//
-//Canta aleluya//Canta aleluya al Señor. Canta aleluya A-LE-LU-YA
+//Canta aleluya//
+Canta aleluya al Señor.
+Canta aleluya A-LE-LU-YA,
 //Cántale a Dios de Corazón//
-//Canta aleluya//Cántale a Dios de Corazón.
+//Canta aleluya//
+Cántale a Dios de Corazón.
 
 ---
 
 ## 315. GLORIA, GLORIA
 ***
-(1) Gloria, Gloria (2) in excelsis Deo; (en lo alto gloria)
-(3) Gloria, Gloria, (4) Aleluya, Aleluya.
-(Canon a cuatro voces)
+Gloria, Gloria
+in excelsis Deo;
+_(en lo alto gloria)__
+Gloria, Gloria,
+Aleluya, Aleluya.
 
 ---
 
 ## 316. ERES MI PROTECTOR
 ***
-(1) Eres mi Protector, llenas mi Corazón con canticos de liberación; de angustia me guardarás, confiaré en ti. (2) Confiaré en ti débil soy más fuerte seré, con poder del Señor.
-
-(Canon a dos voces)
+Eres mi Protector, llenas mi
+Corazón con canticos de liberación;
+de angustia me guardarás, confiaré en ti.
+Confiaré en ti débil soy más
+fuerte seré, con poder del Señor.
 
 ---
 
 ## 317. PADRE, TE ADORO
 ***
-Padre te adoro; (2) doy a ti mi vida; (3) cuanto te amo. Cristo te adoro; doy a ti mi vida; cuanto te amo.
-Espíritu Santo; doy a ti mi vida; cuanto te amo.
-(Canon a tres voces)
+Padre te adoro;
+doy a ti mi vida;
+cuanto te amo.
+***
+Cristo te adoro;
+doy a ti mi vida;
+cuanto te amo.
+***
+Espíritu Santo;
+doy a ti mi vida;
+cuanto te amo.
 
 ---
 
 ## 318. A DIOS CANTAD
 ***
-(1) Al Padre adorad, (2) al hijo Load, (3) a Dios cantad; Al Santo Espíritu adorad, a Dios celebrad.
-¡Shalom javerim! ¡Shalom javerim! ¡Shalom! ¡Shalom!
+Al Padre adorad, al hijo Load, a Dios cantad;
+Al Santo Espíritu adorad, a Dios celebrad.
+¡Shalom javerim! ¡Shalom javerim!
+¡Shalom! ¡Shalom!
 La paz del Señor contigo esté
 ¡Shalom! ¡Shalom!
-(Canon a tres voces)
 
 ---
 
 ## 319. ANTE SU PRESENCIA
 ***
-(1) Ante su presencia canta, (2)
-Aleluya, (3) Aleluya, (4) Aleluya,
-Ante su presencia canta, Cristo es Señor; Cristo es Señor, Cristo es Señor;
-
-Ante su presencia canta, Dios es mi Rey, Dios es mi Rey, Dios es mi Rey
-Ante su presencia canta, Gloria al Señor, Gloria al Señor, Gloria al Señor. (Canon a cuatro voces)
+Ante su presencia canta,
+Aleluya, Aleluya, Aleluya,
+Ante su presencia canta,
+Cristo es Señor;
+Cristo es Señor,
+Cristo es Señor;
+***
+Ante su presencia canta,
+Dios es mi Rey,
+Dios es mi Rey,
+Dios es mi Rey
+Ante su presencia canta,
+Gloria al Señor,
+Gloria al Señor,
+Gloria al Señor.
 
 ---
 
 ## 320. REY DE REYES
 ***
-(1) Rey de Reyes Señor de señores, ¡Gloria, Aleluya!; (2) Cristo, Príncipe de paz, Gloria Aleluya. (Canon a dos voces)
+Rey de Reyes Señor de señores,
+¡Gloria, Aleluya!;
+Cristo, Príncipe de paz,
+Gloria Aleluya.
 
 ---
 
 ## 321. AMOR, AMOR
 ***
-(1) Amor, amor, amor, amor,
-(2) Cristo dice debes amar; (3) Ama a tu vecino como a tu hermano, (4) Dios es amor.
+Amor, amor, amor, amor,
+Cristo dice debes amar;
+Ama a tu vecino como a tu hermano,
+Dios es amor.
 
 ---
 
 ## 322. MI PAZ
 ***
-Mi paz te doy a ti, es la paz que el mundo no da, es la paz que el mundo no entiende; para ti, recíbala, mi paz te doy a ti.
-Mi amor te doy a ti, es amor que el mundo no da, es amor que el mundo no entiende. Para ti recíbelo, mi amor te doy a ti.
+Mi paz te doy a ti,
+es la paz que el mundo no da,
+es la paz que el mundo no entiende;
+para ti, recíbala,
+mi paz te doy a ti.
+***
+Mi amor te doy a ti,
+es amor que el mundo no da,
+es amor que el mundo no entiende.
+Para ti recíbelo,
+mi amor te doy a ti.
 
 ---
 
 ## 323. POR ESTOS ALIMENTOS
 ***
-(1) Por estos (2) alimentos
-Dios (3) te damos (4) gracias hoy
-(Canon a cuatro voces)
-
+Por estos alimentos
+Dios te damos gracias hoy
 
 ---
 
 ## 324. CRISTO VIENE OTRA VEZ
 ***
-(1) Es mi Salvador eterno Cristo viene otra vez, (2) Es mi Salvador eterno Cristo viene otra vez, (3) viene, viene, viene otra vez.
+Es mi Salvador eterno Cristo viene otra vez,
+Es mi Salvador eterno Cristo viene otra vez,
+viene, viene, viene otra vez.
 
 ---
 
 ## 325. EN MOMENTOS ASÍ
 ***
-En momentos así levanto mi voz, levanto mi canto a Cristo;
-En momentos así levanto mi ser, levanto mi alma a él.
-///Cuanto te amo Dios///cuanto te amo, Dios te amo.
+En momentos así levanto mi voz,
+levanto mi canto a Cristo;
+En momentos así levanto mi ser,
+levanto mi alma a él.
+///Cuanto te amo Dios///
+cuanto te amo, Dios te amo.
 
 ---
 
 ## 326. SI EN VERDAD ERES SALVO
 ***
-//Si en verdad eres salvo de
-¡AMEN! (¡Amen!)//Si en verdad eres salvo testifica con tu vida, si en verdad eres salvo di: ¡AMEN! (Amen)
+//Si en verdad eres salvo de ¡AMÉN! _(¡Amén!)__//
+Si en verdad eres salvo testifica con tu vida,
+si en verdad eres salvo di: ¡AMÉN! _(¡Amén!)__.
 
 ---
 
 ## 327. NOS CONVIENE CONOCERNOS
 ***
-Nos conviene conocernos, nos conviene cantar, y a cada com- pañero sonreír y saludar; adiós melancolías, adiós frialdad,//soy de Cristo dame tú la mano viva nuestra amistad//
+Nos conviene conocernos, nos conviene cantar,
+y a cada compañero sonreír y saludar;
+adiós melancolías, adiós frialdad,
+//soy de Cristo dame tú la mano viva nuestra amistad//.
 
 ---
 
 ## 328. ESTOY ALEGRE
 ***
-Varones:
+_Varones:__
 ¡Estoy alegre!
 Mujeres:
 ¿Por qué estás alegre?
-Varones:
-¡Estoy alegre! Mujeres: Cuéntame porque
-
-Varones:
+_Varones:__
 ¡Estoy alegre!
-Mujeres:
+_Mujeres: __
+Cuéntame por qué.
+***
+_Varones:__
+¡Estoy alegre!
+_Mujeres:__
 ¿Por qué estás alegre?
-Todos:
-Eso quiero yo saber
-
-Varones:
+_Todos:__
+Eso quiero yo saber.
+***
+_Varones:__
 Voy a contarte
-Mujeres:
+_Mujeres:__
 Puedes contarme
-Todos:
+_Todos:__
 la razón de estar alegres así;
-¡Aleluya! Porque Cristo un día me salvo, él también me transformó. y por eso alegre estoy
+***
+¡Aleluya! Porque Cristo un día me salvo,
+él también me transformó.
+Y por eso alegre estoy.
 
 ---
 
 ## 329. BIENVENIDO
 ***
-Bienvenido, bienvenido a la casa del Señor Juntos en gran armonía alabemos al Señor
+Bienvenido, bienvenido a la casa del Señor
+Juntos en gran armonía alabemos al Señor.
 
 ---
 
 ## 330. ESTAD SIEMPRE GOZOSOS
 ***
-Estad siempre gozosos orad sin cesar, dad gracias en todo por- que esta es la voluntad, de Dios para con nosotros en Cristo Jesús; estad siempre gozosos orad sin cesar
+Estad siempre gozosos orad sin cesar,
+dad gracias en todo porque esta es la voluntad,
+de Dios para con nosotros en Cristo Jesús;
+estad siempre gozosos orad sin cesar.
 
 ---
 
-## 331. FELIZ CUMPELAÑO
+## 331. FELIZ CUMPELAÑOS
 ***
-Un feliz cumpleaño Cristo te dará, todos te deseamos la feli- cidad y rogamos todos por un día feliz, que Dios te bendiga, ahora siempre AMEN.
+Un feliz cumpleaños Cristo te dará,
+todos te deseamos la felicidad
+y rogamos todos por un día feliz,
+que Dios te bendiga, ahora siempre AMÉN.
+***
+@TAGS
+Cumpleaños
+
+---
+
+## 332. QUITA LA PIEDRA
+***
+Quita la piedra, deja el agua correr
+mira que las almas se van a perder,
+hablales de Cristo, ese es tu deber
+si el agua se estanca no podrá correr.
+
+---
+
+## 333. TESTIFIQUEMOS
+***
+Testifiquemos que sólo hay gozo,
+que sólo hay paz y salvación en nuestras almas,
+y venceremos al enemigo
+Cristo nos guía con victoria a la batalla.
+
+---
+
+## 334. SONARÁ LA TROMPETA EN SIÓN
+***
+Sonará la trompeta en Sión,
+¡Sonará, sonará!
+Sonará la trompeta en Sión,
+cuando venga el Salvador.
+
+---
+
+## 335. OH QUE REGALO PRECIOSO
+***
+¡Oh que regalo precioso! Cristo me dió,
+llenó mi alma de gozo y me salvó,
+ahora puedo cantar en alta voz
+y puedo testificar de su amor
+
+---
+
+## 336. LA IGLESIA SIGUE CAMINANDO
+***
+1) ¡Oh, Gloria, Aleluya!
+La Iglesia sigue caminando,
+¡Oh, Gloria, Aleluya!
+La Iglesia sigue caminando,
+Solo se detiene para predicar.
+***
+2) En las luchas y en las pruebas,
+la Iglesia sigue caminando,
+Por lo montes y los valles,
+La Iglesia sigue caminando,
+Solo se detiene para predicar.

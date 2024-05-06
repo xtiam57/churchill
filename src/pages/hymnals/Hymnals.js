@@ -37,6 +37,7 @@ import createPersistedState from 'use-persisted-state';
 import useSound from 'use-sound';
 import { Storage, getBookmarkedItems } from 'utils';
 import { BROADCAST, MOVEMENT } from 'values';
+import { HymnalBooks } from './HymnalBooks';
 import { HymnalIndex } from './HymnalIndex';
 import { HymnalTags } from './HymnalTags';
 import { RecentBirthdays } from './RecentBirthdays';
@@ -234,6 +235,8 @@ export default function HymnalsPage() {
         />
 
         <HymnalTags onClick={handleSearch} current={current} />
+
+        <HymnalBooks onClick={handleSearch} current={current} />
       </Sidebar>
 
       {presenting ? (

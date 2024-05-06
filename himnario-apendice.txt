@@ -1,22 +1,3 @@
-## 800. LA IGLESIA SIGUE CAMINANDO
-***
-1) ¡Oh, Gloria, Aleluya!
-La Iglesia sigue caminando,
-¡Oh, Gloria, Aleluya!
-La Iglesia sigue caminando,
-Solo se detiene para predicar.
-***
-2) En las luchas y en las pruebas,
-la Iglesia sigue caminando,
-Por lo montes y los valles,
-La Iglesia sigue caminando,
-Solo se detiene para predicar.
-***
-@TAGS
-Coro
-
----
-
 ## 801. HUBO QUIEN POR MIS CULPAS
 ***
 1) Hubo quien por mis culpas muriera en la cruz,
@@ -185,33 +166,6 @@ Porque ha prometido caminar a nuestro lado
 Cerca está, porque Él es Dios.
 ***
 @REPETIR_CORO_AL_FINAL
-
----
-
-## 811. CORITOS VARIOS
-***
-1) Quita la piedra, deja el agua correr
-mira que las almas se van a perder,
-hablales de Cristo, ese es tu deber
-si el agua se estanca no podrá correr.
-***
-2) Testifiquemos que sólo hay gozo,
-que sólo hay paz y salvación en nuestras almas,
-y venceremos al enemigo
-Cristo nos guía con victoria a la batalla.
-***
-3) Sonará la trompeta en Sión,
-¡Sonará, sonará!
-Sonará la trompeta en Sión,
-cuando venga el Salvador.
-***
-5) ¡Oh que regalo precioso! Cristo me dió,
-llenó mi alma de gozo y me salvó,
-ahora puedo cantar en alta voz
-y puedo testificar de su amor
-***
-@TAGS
-Coro
 
 ---
 
