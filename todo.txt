@@ -2,5 +2,3 @@
 - Exportar programa a PDF
 - Exportar himnarios a PDF
 - Video y laminas (imagenes)
-
- 302. EN TI CONFÍO
