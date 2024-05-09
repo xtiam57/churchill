@@ -3,27 +3,27 @@ const fs = require('fs');
 const json = [];
 const FILES = [
   {
-    path: './himnario-bautista.txt',
-    book: 'Himnario Bautista',
+    path: './himnarios/himnario-bautista.txt',
+    book: 'Himnos Bautistas',
     keepNum: false,
   },
   {
-    path: './himnario-majestuoso.txt',
-    book: 'Himnario Majestuoso',
+    path: './himnarios/himnario-majestuoso.txt',
+    book: 'Himnos Majestuosos',
     keepNum: false,
   },
   {
-    path: './himnario-gracia.txt',
-    book: 'Himnos de gracia',
+    path: './himnarios/himnario-gracia.txt',
+    book: 'Himnos de Gracia',
     keepNum: true,
   },
   {
-    path: './corario-bautista.txt',
+    path: './himnarios/corario-bautista.txt',
     book: 'Corario Bautista',
     keepNum: false,
   },
   {
-    path: './himnario-apendice.txt',
+    path: './himnarios/himnario-apendice.txt',
     book: 'Apéndice',
     keepNum: false,
   },

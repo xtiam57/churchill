@@ -144,13 +144,13 @@ function HymnalsProvider({ children }) {
             id: `${id}_${slideIndex}`,
             title: `${isNotHymnal ? `Coro #${number}` : `Himno #${number}`}`,
             text: title,
-            // subtext: authors,
             book: book,
             index: slideIndex++,
           })
         );
 
         if (startsWithChorus) {
+          text += `${chorus} /n/n`;
           slideIndex = splitLines(id, '(Coro)', chorus, slides, slideIndex);
         }
 
@@ -168,6 +168,7 @@ function HymnalsProvider({ children }) {
         });
 
         if (repeatChorusAtEnd) {
+          text += chorus;
           slideIndex = splitLines(id, '(Coro)', chorus, slides, slideIndex);
         }
 
@@ -189,7 +190,7 @@ function HymnalsProvider({ children }) {
           name: title,
           type: 'hymnal',
           slides,
-          text,
+          text: text.endsWith('/n/n') ? text.slice(0, -4) : text,
           tags,
           authors,
           length: slides.length,

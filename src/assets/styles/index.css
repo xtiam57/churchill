@@ -84,6 +84,7 @@ select {
   vertical-align: baseline;
   border-radius: 0.25rem;
   border-radius: 0;
+
 }
 
 .tag:not(.active):hover {

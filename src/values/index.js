@@ -331,18 +331,6 @@ export const SETTINGS_OPTIONS = {
     { value: 'small', label: 'Churchill (isotipo)' },
     { divider: true },
     { value: 'CUSTOM', label: 'Personalizado...' },
-    // { value: 'antioquia', label: 'I.B. Antioquía' },
-    // { value: 'esperanza', label: 'I.B. Esperanza' },
-    // { value: 'ibi', label: 'Iglesia Bautista Internacional (IBI)' },
-    // { value: 'jesus-salva', label: 'I.B.B.F.I. Jesús Salva' },
-    // { value: 'monte-calvario', label: 'I.B.F. Monte Calvario' },
-    // { value: 'monte-de-los-olivos', label: 'I.B. Monte de los Olivos' },
-    // { value: 'monte-horeb-1', label: 'I.B.F.I. Monte Horeb' },
-    // { value: 'monte-horeb-2', label: 'I.B.F. Monte Horeb' },
-    // { value: 'principe-de-paz', label: 'Príncipe de Paz' },
-    // { value: 'sinai', label: 'I.B.F. Sinaí' },
-    // { value: 'sion', label: 'I.B.F.I. Sión' },
-    // { value: 'torre-fuerte', label: 'I.B.B. Torre Fuerte' },
   ],
   TIME_INTERVALS: [
     { value: 1000, label: '1 segundo' },
@@ -418,3 +406,5 @@ export const SETTINGS_OPTIONS = {
     })
     .flat(),
 };
+
+export * from './pdfs';

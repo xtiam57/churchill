@@ -1,45 +1,7 @@
 import * as React from 'react';
-import { AntioquiaLogo } from './variants/AntioquiaLogo';
-import { EsperanzaLogo } from './variants/EsperanzaLogo';
-import { IbiLogo } from './variants/IbiLogo';
-import { JesusSalvaLogo } from './variants/JesusSalvaLogo';
-import { MonteCalvarioLogo } from './variants/MonteCalvarioLogo';
-import { MonteHoreb1Logo } from './variants/MonteHoreb1Logo';
-import { MonteHoreb2Logo } from './variants/MonteHoreb2Logo';
-import { MonteOlivosLogo } from './variants/MonteOlivosLogo';
-import { PrincipePazLogo } from './variants/PrincipePazLogo';
-import { SinaiLogo } from './variants/SinaiLogo';
-import { SionLogo } from './variants/SionLogo';
-import { TorreFuerteLogo } from './variants/TorreFuerteLogo';
 
 function Logo({ height = 500, color = 'default', logo = 'default', ...rest }) {
   switch (logo) {
-    // Others
-    case 'ibi':
-      return <IbiLogo height={height} color={color} {...rest} />;
-    case 'esperanza':
-      return <EsperanzaLogo height={height} color={color} {...rest} />;
-    case 'monte-calvario':
-      return <MonteCalvarioLogo height={height} color={color} {...rest} />;
-    case 'jesus-salva':
-      return <JesusSalvaLogo height={height} color={color} {...rest} />;
-    case 'monte-de-los-olivos':
-      return <MonteOlivosLogo height={height} color={color} {...rest} />;
-    case 'antioquia':
-      return <AntioquiaLogo height={height} color={color} {...rest} />;
-    case 'monte-horeb-2':
-      return <MonteHoreb2Logo height={height} color={color} {...rest} />;
-    case 'monte-horeb-1':
-      return <MonteHoreb1Logo height={height} color={color} {...rest} />;
-    case 'torre-fuerte':
-      return <TorreFuerteLogo height={height} color={color} {...rest} />;
-    case 'sion':
-      return <SionLogo height={height} color={color} {...rest} />;
-    case 'sinai':
-      return <SinaiLogo height={height} color={color} {...rest} />;
-    case 'principe-de-paz':
-      return <PrincipePazLogo height={height} color={color} {...rest} />;
-
     // Churchill logos
     case 'small':
       return (

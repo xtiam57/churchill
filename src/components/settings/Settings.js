@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
 import { Storage, toBase64 } from 'utils';
-import { BROADCAST, SETTINGS_OPTIONS, THEMES } from 'values';
+import { BROADCAST, PDF_HYMNALS, SETTINGS_OPTIONS, THEMES } from 'values';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
@@ -663,6 +663,25 @@ export function Settings() {
       >
         Reiniciar
       </Button> */}
+
+      <hr />
+
+      <Form.Label className="small mb-2">Descargar himnarios</Form.Label>
+
+      <div className="donwload-links-wrapper">
+        {PDF_HYMNALS.map((hymnal) => (
+          <a
+            download={`${hymnal.label}.pdf`}
+            href={hymnal.url}
+            key={hymnal.label}
+            className="download-link btn btn-outline-primary "
+            target="_blank"
+            rel="noreferrer"
+          >
+            {hymnal.label}
+          </a>
+        ))}
+      </div>
 
       <hr />
 

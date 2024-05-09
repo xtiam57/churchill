@@ -4,9 +4,11 @@ import {
   Cake,
   Newspaper,
   PsychologyAlt,
+  SystemUpdateAlt,
 } from '@mui/icons-material';
 import BirthdaysPage from 'pages/birthdays';
 import CastPage from 'pages/cast';
+import ExportPage from 'pages/export';
 import HomePage from 'pages/home';
 import HymnalsPage from 'pages/hymnals';
 import ScripturesPage from 'pages/scriptures';
@@ -20,6 +22,7 @@ export const PATHS = {
   CAST_PAGE: '/cast-screen',
   COUNTDOWN_PAGE: '/countdown',
   TRIVIA_PAGE: '/trivia',
+  EXPORT_PAGE: '/export',
 };
 
 export const routes = flatten([
@@ -60,6 +63,16 @@ export const routes = flatten([
     component: BirthdaysPage,
     icon: <Cake />,
     label: 'Cumpleaños',
+    menu: true,
+    showLabel: true,
+  },
+  {
+    key: PATHS.EXPORT_PAGE,
+    exact: true,
+    path: PATHS.EXPORT_PAGE,
+    component: ExportPage,
+    icon: <SystemUpdateAlt />,
+    label: 'Exportar',
     menu: true,
     showLabel: true,
   },

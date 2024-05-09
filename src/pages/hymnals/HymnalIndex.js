@@ -74,7 +74,7 @@ export function HymnalIndex({
 }) {
   const { hymnals, books } = useHymnals();
   const [category, setCategory] = useState('ALL');
-  const [book, setBook] = useState('ALL');
+  const [book, setBook] = useState(books[2]);
 
   const handleCategoryChange = ({ target }) => {
     const { value } = target;

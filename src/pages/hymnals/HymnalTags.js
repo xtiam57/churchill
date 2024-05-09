@@ -21,43 +21,50 @@ export function HymnalTags({ onClick = () => {}, current }) {
   return (
     <List className="mb-4">
       {!selected ? (
-        <List.Item>
-          <List.Title>Etiquetas</List.Title>
-        </List.Item>
+        <>
+          <List.Item>
+            <List.Title>Etiquetas</List.Title>
+          </List.Item>
+
+          <List.Item
+            className="my-2"
+            style={{ flexWrap: 'wrap', justifyContent: 'start' }}
+          >
+            {tags.map((tag, index) => (
+              <span
+                key={index}
+                onClick={() => onChangeTag(tag)}
+                className={`tag mr-1 mb-1 pointer ${
+                  tag === selected ? 'active' : ''
+                }`}
+              >
+                {tag}
+              </span>
+            ))}
+          </List.Item>
+        </>
       ) : (
-        <List.Item>
-          <List.Title>
-            <span className="tag pointer active">
+        <List.Item style={{ gap: 5 }}>
+          <List.Title style={{ flex: '1 1 100%' }}>
+            <span className="tag pointer active w-100">
               {selected} {list.length ? <span>({list.length})</span> : null}
             </span>
           </List.Title>
+
           <List.Action
+            style={{ flex: '1 0 42px' }}
             className="text-right"
             onClick={() => onChangeTag(selected)}
           >
-            <West />
+            <span
+              className="tag pointer active"
+              style={{ paddingTop: '1px', paddingBottom: '1px' }}
+            >
+              <West fontSize="small" />
+            </span>
           </List.Action>
         </List.Item>
       )}
-
-      {!selected ? (
-        <List.Item
-          className="my-2"
-          style={{ flexWrap: 'wrap', justifyContent: 'start' }}
-        >
-          {tags.map((tag, index) => (
-            <span
-              key={index}
-              onClick={() => onChangeTag(tag)}
-              className={`tag mr-1 mb-1 pointer ${
-                tag === selected ? 'active' : ''
-              }`}
-            >
-              {tag}
-            </span>
-          ))}
-        </List.Item>
-      ) : null}
 
       {list.map((item) => (
         <List.Item key={item.index}>
