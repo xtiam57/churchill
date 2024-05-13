@@ -1,18 +1,9 @@
-import {
-  Audiotrack,
-  AutoStories,
-  Cake,
-  Newspaper,
-  PsychologyAlt,
-  SystemUpdateAlt,
-} from '@mui/icons-material';
+import { Audiotrack, AutoStories, Cake, Newspaper } from '@mui/icons-material';
 import BirthdaysPage from 'pages/birthdays';
 import CastPage from 'pages/cast';
-import ExportPage from 'pages/export';
 import HomePage from 'pages/home';
 import HymnalsPage from 'pages/hymnals';
 import ScripturesPage from 'pages/scriptures';
-import TriviaPage from 'pages/trivia';
 
 export const PATHS = {
   ROOT: '/',
@@ -66,16 +57,16 @@ export const routes = flatten([
     menu: true,
     showLabel: true,
   },
-  {
-    key: PATHS.EXPORT_PAGE,
-    exact: true,
-    path: PATHS.EXPORT_PAGE,
-    component: ExportPage,
-    icon: <SystemUpdateAlt />,
-    label: 'Exportar',
-    menu: true,
-    showLabel: true,
-  },
+  // {
+  //   key: PATHS.EXPORT_PAGE,
+  //   exact: true,
+  //   path: PATHS.EXPORT_PAGE,
+  //   component: ExportPage,
+  //   icon: <SystemUpdateAlt />,
+  //   label: 'Exportar',
+  //   menu: true,
+  //   showLabel: true,
+  // },
   {
     key: PATHS.CAST_PAGE,
     exact: true,
@@ -93,16 +84,16 @@ export const routes = flatten([
   //   menu: true,
   //   showLabel: false,
   // },
-  {
-    key: PATHS.TRIVIA_PAGE,
-    exact: true,
-    path: PATHS.TRIVIA_PAGE,
-    component: TriviaPage,
-    icon: <PsychologyAlt />,
-    label: 'Trivia',
-    menu: true,
-    showLabel: true,
-  },
+  // {
+  //   key: PATHS.TRIVIA_PAGE,
+  //   exact: true,
+  //   path: PATHS.TRIVIA_PAGE,
+  //   component: TriviaPage,
+  //   icon: <PsychologyAlt />,
+  //   label: 'Trivia',
+  //   menu: true,
+  //   showLabel: true,
+  // },
 ]);
 
 function flatten(routes) {

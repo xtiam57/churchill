@@ -37,9 +37,7 @@ export function Schedule() {
 
       <p className="text-muted">
         La resolución recomendada para las imagenes de fondo es de{' '}
-        <strong>1920x1080</strong> o <strong>1280×720</strong>. Si deseas
-        mostrar <strong>unicamente</strong> el fondo, deja la descripción del
-        evento/horario vacía.
+        <strong>1920x1080</strong> o <strong>1280×720</strong>.
       </p>
 
       <Button
@@ -87,7 +85,6 @@ export function Schedule() {
 
             <div className="w-100 d-flex" style={{ gap: '0.5rem' }}>
               <div className="d-flex align-items-center pl-2">
-                {/* <strong className="d-block">{index + 1}</strong> */}
                 <Form.Check
                   className="d-inline-block"
                   type="switch"
@@ -104,8 +101,11 @@ export function Schedule() {
                 />
               </div>
 
-              <div style={{ flexGrow: 1 }}>
-                <Form.Row className="mb-2">
+              <div
+                className="d-flex flex-column justify-content-center"
+                style={{ flexGrow: 1 }}
+              >
+                <Form.Row>
                   <Form.Group as={Col} className="mb-0">
                     {/* <Form.Label className=" small mb-1">Descripción</Form.Label> */}
                     <Form.Control
@@ -113,29 +113,24 @@ export function Schedule() {
                       size="sm"
                       value={schedule.name}
                       name="name"
-                      placeholder="Describe que actividad tiene la Iglesia..."
+                      placeholder={
+                        schedule.type === 'POSTER'
+                          ? 'Identificador del poster...'
+                          : 'Describe que actividad tiene la Iglesia...'
+                      }
                       disabled={!schedule.active}
                       onChange={({ target }) => {
                         const { name, value } = target;
                         handleSchedulesChangeValue(name, value, index);
                       }}
                     />
-                    {schedule.background && schedule.active && (
-                      <small
-                        className="form-text text-muted"
-                        style={{ fontSize: '75%' }}
-                      >
-                        Dejar la descripción vacía para mostrar unicamente el
-                        fondo.
-                      </small>
-                    )}
                   </Form.Group>
                 </Form.Row>
 
                 <Form.Row>
-                  {schedule.type !== 'EVENT' ? (
+                  {schedule.type === 'SCHEDULE' ? (
                     <>
-                      <Form.Group as={Col} xs={6} className="mb-0">
+                      <Form.Group as={Col} xs={6} className="mb-0 mt-2">
                         {/* <Form.Label className=" small mb-1">Día</Form.Label> */}
                         <Form.Control
                           as="select"
@@ -161,7 +156,8 @@ export function Schedule() {
                           )}
                         </Form.Control>
                       </Form.Group>
-                      <Form.Group as={Col} xs={3} className="mb-0">
+
+                      <Form.Group as={Col} xs={3} className="mb-0 mt-2">
                         {/* <Form.Label className=" small mb-1">Hora</Form.Label> */}
                         <Form.Control
                           size="sm"
@@ -181,7 +177,8 @@ export function Schedule() {
                           ))}
                         </Form.Control>
                       </Form.Group>
-                      <Form.Group as={Col} xs={3} className="mb-0">
+
+                      <Form.Group as={Col} xs={3} className="mb-0 mt-2">
                         {/* <Form.Label className=" small mb-1">Horario</Form.Label> */}
                         <Form.Control
                           as="select"
@@ -199,9 +196,9 @@ export function Schedule() {
                         </Form.Control>
                       </Form.Group>
                     </>
-                  ) : (
+                  ) : schedule.type === 'EVENT' ? (
                     <>
-                      <Form.Group as={Col} xs={6} className="mb-0">
+                      <Form.Group as={Col} xs={6} className="mb-0 mt-2">
                         {/* <Form.Label className=" small mb-1">Día</Form.Label> */}
                         <Form.Control
                           as="input"
@@ -217,7 +214,7 @@ export function Schedule() {
                         />
                       </Form.Group>
 
-                      <Form.Group as={Col} xs={3} className="mb-0">
+                      <Form.Group as={Col} xs={3} className="mb-0 mt-2">
                         {/* <Form.Label className=" small mb-1">Hora</Form.Label> */}
                         <Form.Control
                           size="sm"
@@ -238,7 +235,7 @@ export function Schedule() {
                         </Form.Control>
                       </Form.Group>
 
-                      <Form.Group as={Col} xs={3} className="mb-0">
+                      <Form.Group as={Col} xs={3} className="mb-0 mt-2">
                         {/* <Form.Label className=" small mb-1">Horario</Form.Label> */}
                         <Form.Control
                           as="select"
@@ -256,8 +253,10 @@ export function Schedule() {
                         </Form.Control>
                       </Form.Group>
                     </>
-                  )}
+                  ) : null}
+                </Form.Row>
 
+                <Form.Row>
                   <Form.Group as={Col} xs={12} className="mb-0 mt-2">
                     {schedule.background ? (
                       <div
@@ -324,7 +323,7 @@ export function Schedule() {
                   block
                   size="sm"
                   className="m-0"
-                  variant={schedule.type !== 'EVENT' ? 'light' : 'link'}
+                  variant={schedule.type === 'SCHEDULE' ? 'light' : 'link'}
                   disabled={!schedule.active}
                   onClick={() =>
                     handleSchedulesChangeValue('type', 'SCHEDULE', index)
@@ -343,6 +342,18 @@ export function Schedule() {
                   }
                 >
                   Evento
+                </Button>
+                <Button
+                  block
+                  size="sm"
+                  className="m-0"
+                  variant={schedule.type === 'POSTER' ? 'primary' : 'link'}
+                  disabled={!schedule.active}
+                  onClick={() =>
+                    handleSchedulesChangeValue('type', 'POSTER', index)
+                  }
+                >
+                  Poster
                 </Button>
               </div>
             </div>

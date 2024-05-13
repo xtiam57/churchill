@@ -73,20 +73,21 @@ export default function HomePage() {
           list.length > 0
             ? list.map((entry) =>
                 Slide.create({
-                  text: `${entry.name ? `${entry.name}/n` : ''}
+                  text:
+                    entry.type === 'POSTER'
+                      ? ''
+                      : `${entry.name ? `${entry.name}/n` : ''}
                           <b>${
-                            entry.name
-                              ? entry.type !== 'EVENT'
-                                ? entry.day
-                                : entry.date
-                                ? Time.formatDate(entry.date + 'T23:59:59')
-                                : 'Todos los días'
-                              : ''
+                            entry.type === 'SCHEDULE'
+                              ? entry.day
+                              : entry.date
+                              ? Time.formatDate(entry.date + 'T23:59:59')
+                              : 'Todos los días'
                           }</b>/n
                           <strong class="fs-xl" style="line-height:1">
                             ${entry.name ? entry.hour : ''} ${
-                    entry.name ? entry.hourSuffix : ''
-                  }
+                          entry.name ? entry.hourSuffix : ''
+                        }
                           </strong>
                         `,
                   bg: entry.background,

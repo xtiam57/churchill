@@ -123,11 +123,11 @@ const SCHEDULES_AND_EVENTS = [
     active: true,
   },
   {
-    name: null,
+    name: 'Conferencia Misionera',
     day: 'Domingo',
     hour: '01:00',
     hourSuffix: 'AM',
-    type: 'EVENT',
+    type: 'POSTER',
     background: TEST_EVENT_POSTER,
     date: null,
     active: true,
