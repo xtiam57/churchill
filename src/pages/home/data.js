@@ -81,19 +81,6 @@ const NOTICES = [
     slides: [],
     openSchedule: true,
   },
-  // {
-  //   id: 5,
-  //   index: 4,
-  //   type: 'notice',
-  //   title: 'Logo de la Rondalla',
-  //   slides: [
-  //     Slide.create({
-  //       title: '',
-  //       text: `<img src="${rondalla}" alt="rondalla" style="width: 60%"/>`,
-  //       bg: guitar,
-  //     }),
-  //   ],
-  // },
 ];
 
 export function getNotices(birthdaySLide) {
@@ -105,7 +92,7 @@ export function getNotices(birthdaySLide) {
 
   return notices;
 }
-export function getText(entry) {
+export function getScheduleText(entry) {
   return entry.type === 'POSTER'
     ? ''
     : `${entry.name ? `${entry.name}/n` : ''}

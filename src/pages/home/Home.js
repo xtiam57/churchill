@@ -28,7 +28,7 @@ import { Button, ButtonGroup, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
 import { Slide } from 'utils';
 import { BROADCAST, MOVEMENT } from 'values';
-import { getNotices, getText } from './data';
+import { getNotices, getScheduleText } from './data';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
 const useSchedule = createPersistedState(BROADCAST.SCHEDULES_AND_EVENTS);
@@ -58,7 +58,7 @@ export default function HomePage() {
         title: entry.name ?? 'Sin título',
         slides: [
           Slide.create({
-            text: getText(entry),
+            text: getScheduleText(entry),
             bg: entry.background,
           }),
         ],
@@ -91,7 +91,7 @@ export default function HomePage() {
           list.length > 0
             ? list.map((entry) =>
                 Slide.create({
-                  text: getText(entry),
+                  text: getScheduleText(entry),
                   bg: entry.background,
                 })
               )
