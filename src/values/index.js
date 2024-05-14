@@ -133,7 +133,7 @@ const SCHEDULES_AND_EVENTS = [
     active: true,
   },
   {
-    name: null,
+    name: '',
     day: 'Domingo',
     hour: '01:00',
     hourSuffix: 'AM',
@@ -143,7 +143,7 @@ const SCHEDULES_AND_EVENTS = [
     active: false,
   },
   {
-    name: null,
+    name: '',
     day: 'Domingo',
     hour: '01:00',
     hourSuffix: 'AM',
@@ -153,7 +153,7 @@ const SCHEDULES_AND_EVENTS = [
     active: false,
   },
   {
-    name: null,
+    name: '',
     day: 'Domingo',
     hour: '01:00',
     hourSuffix: 'AM',
@@ -163,7 +163,7 @@ const SCHEDULES_AND_EVENTS = [
     active: false,
   },
   {
-    name: null,
+    name: '',
     day: 'Domingo',
     hour: '01:00',
     hourSuffix: 'AM',
@@ -173,7 +173,7 @@ const SCHEDULES_AND_EVENTS = [
     active: false,
   },
   {
-    name: null,
+    name: '',
     day: 'Domingo',
     hour: '01:00',
     hourSuffix: 'AM',
@@ -183,7 +183,7 @@ const SCHEDULES_AND_EVENTS = [
     active: false,
   },
   {
-    name: null,
+    name: '',
     day: 'Domingo',
     hour: '01:00',
     hourSuffix: 'AM',
@@ -193,7 +193,7 @@ const SCHEDULES_AND_EVENTS = [
     active: false,
   },
   {
-    name: null,
+    name: '',
     day: 'Domingo',
     hour: '01:00',
     hourSuffix: 'AM',
@@ -203,7 +203,7 @@ const SCHEDULES_AND_EVENTS = [
     active: false,
   },
   {
-    name: null,
+    name: '',
     day: 'Domingo',
     hour: '01:00',
     hourSuffix: 'AM',
@@ -213,7 +213,7 @@ const SCHEDULES_AND_EVENTS = [
     active: false,
   },
   {
-    name: null,
+    name: '',
     day: 'Domingo',
     hour: '01:00',
     hourSuffix: 'AM',
@@ -223,7 +223,7 @@ const SCHEDULES_AND_EVENTS = [
     active: false,
   },
   {
-    name: null,
+    name: '',
     day: 'Domingo',
     hour: '01:00',
     hourSuffix: 'AM',
@@ -233,7 +233,7 @@ const SCHEDULES_AND_EVENTS = [
     active: false,
   },
   {
-    name: null,
+    name: '',
     day: 'Domingo',
     hour: '01:00',
     hourSuffix: 'AM',
@@ -243,7 +243,7 @@ const SCHEDULES_AND_EVENTS = [
     active: false,
   },
   {
-    name: null,
+    name: '',
     day: 'Domingo',
     hour: '01:00',
     hourSuffix: 'AM',
@@ -253,7 +253,7 @@ const SCHEDULES_AND_EVENTS = [
     active: false,
   },
   {
-    name: null,
+    name: '',
     day: 'Domingo',
     hour: '01:00',
     hourSuffix: 'AM',
@@ -263,7 +263,7 @@ const SCHEDULES_AND_EVENTS = [
     active: false,
   },
   {
-    name: null,
+    name: '',
     day: 'Domingo',
     hour: '01:00',
     hourSuffix: 'AM',
@@ -273,7 +273,7 @@ const SCHEDULES_AND_EVENTS = [
     active: false,
   },
   {
-    name: null,
+    name: '',
     day: 'Domingo',
     hour: '01:00',
     hourSuffix: 'AM',

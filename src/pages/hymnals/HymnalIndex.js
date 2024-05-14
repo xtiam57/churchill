@@ -152,7 +152,7 @@ export function HymnalIndex({
               onChange={handleBookChange}
               {...rest}
             >
-              <option value="ALL">Todos los himnarios</option>
+              {/* <option value="ALL">Todos los himnarios</option> */}
               {books.map((book) => (
                 <option key={book} value={book}>
                   {book}

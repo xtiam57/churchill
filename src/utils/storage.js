@@ -32,7 +32,9 @@ Storage.get = (key) => {
 
   if (item) {
     item = JSON.parse(item);
-    item = item.value;
+    if (item.value) {
+      item = item.value;
+    }
   }
 
   return item;

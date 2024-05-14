@@ -43,6 +43,11 @@ export const ActionStyled = styled.button`
   &:hover {
     color: ${({ active }) => (active ? 'var(--light)' : 'var(--light)')};
   }
+
+  &.sub {
+    padding-left: 20px;
+    border-left: 1px solid var(--light);
+  }
 `;
 
 export const TextStyled = styled.span`

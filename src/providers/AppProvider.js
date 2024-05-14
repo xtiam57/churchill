@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
+import { Storage } from 'utils';
+import { BROADCAST } from 'values';
 
 const AppContext = React.createContext({});
 
 const AppProvider = ({ children }) => {
   const [showSettings, setShowSettings] = useState(false);
   const [showSchedule, setShowSchedule] = useState(false);
+  const [refreshSchedules, setRefreshSchedules] = useState(
+    Storage.get(BROADCAST.SCHEDULES_AND_EVENTS)
+  );
 
   const toggleSettings = () => {
     setShowSettings((state) => {
@@ -53,6 +58,8 @@ const AppProvider = ({ children }) => {
         toggleSchedule,
         openSchedule,
         closeSchedule,
+        refreshSchedules,
+        setRefreshSchedules,
       }}
     >
       {children}

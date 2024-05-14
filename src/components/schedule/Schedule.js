@@ -10,7 +10,9 @@ import { BROADCAST, SETTINGS_OPTIONS } from 'values';
 const useSchedule = createPersistedState(BROADCAST.SCHEDULES_AND_EVENTS);
 
 export function Schedule() {
-  const { toggleSchedule, showingSchedule } = useSettingsSidebar();
+  const { toggleSchedule, showingSchedule, setRefreshSchedules } =
+    useSettingsSidebar();
+
   const [schedules, setSchedules] = useSchedule(
     BROADCAST.INITIAL_SCHEDULES_AND_EVENTS
   );
@@ -18,6 +20,7 @@ export function Schedule() {
   const handleSchedulesChangeValue = (name, value, index) => {
     schedules[index][name] = value;
     setSchedules([...schedules]);
+    setRefreshSchedules([...schedules]);
   };
 
   return (
@@ -296,7 +299,7 @@ export function Schedule() {
                     ) : (
                       <Form.File
                         id="background"
-                        label="Selecciona un fondo..."
+                        label="Selecciona una imagen de fondo..."
                         accept="image/png, image/jpeg"
                         size="sm"
                         custom

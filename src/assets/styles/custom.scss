@@ -54,12 +54,19 @@ $grid-gutter-width: 1rem;
 
 .donwload-links-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   width: 100%;
   gap: 5px;
 
-
   .download-link {
+    padding: 0.75rem;
 
+    span {
+      font-size: 0.8rem;
+      height: 39px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }

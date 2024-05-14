@@ -23,12 +23,12 @@ import {
   usePresenter,
   useSettingsSidebar,
 } from 'hooks';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Button, ButtonGroup, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
-import { Slide, Time } from 'utils';
+import { Slide } from 'utils';
 import { BROADCAST, MOVEMENT } from 'values';
-import { getNotices } from './data';
+import { getNotices, getText } from './data';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
 const useSchedule = createPersistedState(BROADCAST.SCHEDULES_AND_EVENTS);
@@ -36,7 +36,6 @@ const useSchedule = createPersistedState(BROADCAST.SCHEDULES_AND_EVENTS);
 export default function HomePage() {
   const sliderRef = useRef();
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
-  const [schedules] = useSchedule(BROADCAST.INITIAL_SCHEDULES_AND_EVENTS);
   const [showLogo, setShowLogo] = useState(true);
   const { current } = useBirthday();
   const [notices, setNotices] = useState(getNotices(current));
@@ -45,7 +44,27 @@ export default function HomePage() {
   const [loop, setLoop] = useState(true);
   const [moveNotice] = useIterate(notice, notices);
   const { presenting } = usePresenter();
-  const { openSchedule } = useSettingsSidebar();
+  const { openSchedule, refreshSchedules } = useSettingsSidebar();
+
+  const schedulesSubs = useMemo(() => {
+    const list = refreshSchedules?.filter((entry) => entry.active) || [];
+
+    return list.map((entry, index) => {
+      return {
+        id: notices.length + index + 1,
+        index: notices.length + index,
+        tag: 'SCHEDULES_SUBITEM',
+        type: 'notice_subitem',
+        title: entry.name ?? 'Sin título',
+        slides: [
+          Slide.create({
+            text: getText(entry),
+            bg: entry.background,
+          }),
+        ],
+      };
+    });
+  }, [refreshSchedules, notices]);
 
   useEffect(() => {
     if (notice.id === 1) {
@@ -64,8 +83,7 @@ export default function HomePage() {
   useEffect(() => {
     setNotices((notices) => {
       const index = notices.findIndex((n) => n.tag === 'SCHEDULES');
-
-      const list = schedules?.filter((entry) => entry.active) || [];
+      const list = refreshSchedules?.filter((entry) => entry.active) || [];
 
       notices[index] = {
         ...notices[index],
@@ -73,23 +91,7 @@ export default function HomePage() {
           list.length > 0
             ? list.map((entry) =>
                 Slide.create({
-                  text:
-                    entry.type === 'POSTER'
-                      ? ''
-                      : `${entry.name ? `${entry.name}/n` : ''}
-                          <b>${
-                            entry.type === 'SCHEDULE'
-                              ? entry.day
-                              : entry.date
-                              ? Time.formatDate(entry.date + 'T23:59:59')
-                              : 'Todos los días'
-                          }</b>/n
-                          <strong class="fs-xl" style="line-height:1">
-                            ${entry.name ? entry.hour : ''} ${
-                          entry.name ? entry.hourSuffix : ''
-                        }
-                          </strong>
-                        `,
+                  text: getText(entry),
                   bg: entry.background,
                 })
               )
@@ -103,9 +105,14 @@ export default function HomePage() {
               ],
       };
 
+      // Update current notice if SCHEDULES% is selected
+      setNotice((prev) =>
+        prev.tag.startsWith('SCHEDULES') ? notices[index] : prev
+      );
+
       return [...notices];
     });
-  }, [schedules]);
+  }, [refreshSchedules]);
 
   const handlePrevSlide = () => sliderRef.current.prev();
 
@@ -159,6 +166,18 @@ export default function HomePage() {
                   <Settings fontSize="small" />
                 </List.Action>
               )}
+            </List.Item>
+          ))}
+
+          {schedulesSubs.map((item) => (
+            <List.Item key={item.id}>
+              <List.Action
+                active={item.id === notice.id}
+                onClick={() => setNotice(item)}
+                className="sub"
+              >
+                {item.title}
+              </List.Action>
             </List.Item>
           ))}
         </List>

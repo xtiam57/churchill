@@ -1,4 +1,4 @@
-import { Slide } from 'utils';
+import { Slide, Time } from 'utils';
 
 const NOTICES = [
   {
@@ -104,4 +104,20 @@ export function getNotices(birthdaySLide) {
   }
 
   return notices;
+}
+export function getText(entry) {
+  return entry.type === 'POSTER'
+    ? ''
+    : `${entry.name ? `${entry.name}/n` : ''}
+      <b>${
+        entry.type === 'SCHEDULE'
+          ? entry.day
+          : entry.date
+          ? Time.formatDate(entry.date + 'T23:59:59')
+          : 'Todos los días'
+      }</b>/n
+      <strong class="fs-xl" style="line-height:1">
+        ${entry.name ? entry.hour : ''} ${entry.name ? entry.hourSuffix : ''}
+      </strong>
+      `;
 }

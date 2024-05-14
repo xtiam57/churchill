@@ -11,6 +11,8 @@ export function useSettingsSidebar() {
     toggleSchedule,
     openSchedule,
     closeSchedule,
+    refreshSchedules,
+    setRefreshSchedules,
   } = useContext(AppContext);
   return {
     showingSettings,
@@ -21,5 +23,7 @@ export function useSettingsSidebar() {
     toggleSchedule,
     openSchedule,
     closeSchedule,
+    refreshSchedules,
+    setRefreshSchedules,
   };
 }
