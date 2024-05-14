@@ -104,7 +104,7 @@ export function getScheduleText(entry) {
           : 'Todos los días'
       }</b>/n
       <strong class="fs-xl" style="line-height:1">
-        ${entry.name ? entry.hour : ''} ${entry.name ? entry.hourSuffix : ''}
+        ${entry.hour} ${entry.hourSuffix}
       </strong>
       `;
 }

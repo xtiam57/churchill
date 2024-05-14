@@ -42,7 +42,7 @@ export default function StopwatchPage() {
   return (
     <Wrapper>
       <Sidebar>
-        <Title>Temp.</Title>
+        <Title>Temporizador</Title>
 
         <DisplayButton
           value={showLogo}
