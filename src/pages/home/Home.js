@@ -26,7 +26,7 @@ import {
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Button, ButtonGroup, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
-import { Slide } from 'utils';
+import { Slide, combineLists } from 'utils';
 import { BROADCAST, MOVEMENT } from 'values';
 import { getNotices, getScheduleText } from './data';
 
@@ -84,48 +84,26 @@ export default function HomePage() {
     setNotices((notices) => {
       const index = notices.findIndex((n) => n.tag === 'SCHEDULES');
       const list =
-        refreshSchedules?.filter((entry) => entry.active && !entry.repeat) ||
+        refreshSchedules?.filter((entry) => entry.active && !entry.repeat) ??
         [];
       const repeatList =
-        refreshSchedules?.filter((entry) => entry.active && entry.repeat) || [];
-
-      let slides = [];
-
-      if (list.length > 0) {
-        slides = list.map((entry) => {
-          return Slide.create({
-            text: getScheduleText(entry),
-            bg: entry.background,
-          });
-        });
-
-        repeatList.forEach((entry) => {
-          let pages = [];
-          let index = 0;
-
-          for (let i = entry.repeat; i < 30; i += entry.repeat + 1) {
-            pages.push(i);
-          }
-
-          while (pages[index] <= slides.length) {
-            slides.splice(
-              pages[index],
-              0,
-              Slide.create({
-                text: getScheduleText(entry),
-                bg: entry.background,
-              })
-            );
-            index++;
-          }
-        });
-      }
+        refreshSchedules?.filter((entry) => entry.active && entry.repeat) ?? [];
+      const combined = combineLists(
+        list,
+        repeatList,
+        repeatList.map((entry) => entry.repeat)
+      );
 
       notices[index] = {
         ...notices[index],
         slides:
-          slides.length > 0
-            ? slides
+          combined.length > 0
+            ? combined.map((entry) => {
+                return Slide.create({
+                  text: getScheduleText(entry),
+                  bg: entry.background,
+                });
+              })
             : [
                 Slide.create({
                   id: 'BS_404',

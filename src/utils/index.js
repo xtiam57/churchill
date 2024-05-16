@@ -1,5 +1,6 @@
 export * from './birthdayHelper';
 export { getBookmarkedItems } from './bookmarkedItems';
+export * from './combineLists';
 export { generateGUID } from './generateGUID';
 export { shuffle } from './shuffle';
 export { Slide } from './slide';
