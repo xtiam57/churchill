@@ -84,12 +84,10 @@ export default function HomePage() {
     setNotices((notices) => {
       const index = notices.findIndex((n) => n.tag === 'SCHEDULES');
       const list =
-        refreshSchedules?.filter(
-          (entry) => entry.active && entry.repeat === 0
-        ) || [];
-      const repeatList =
-        refreshSchedules?.filter((entry) => entry.active && entry.repeat > 0) ||
+        refreshSchedules?.filter((entry) => entry.active && !entry.repeat) ||
         [];
+      const repeatList =
+        refreshSchedules?.filter((entry) => entry.active && entry.repeat) || [];
 
       let slides = [];
 
