@@ -1,6 +1,9 @@
 import { TEST_EVENT_POSTER } from './event64';
 import { BACKGROUNDS } from './images';
 
+export const DEFAULT_SYSTEM_FONT =
+  '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"';
+
 export const MOVEMENT = {
   NEXT: '>',
   PREV: '<',
@@ -91,6 +94,7 @@ const SCHEDULES_AND_EVENTS = [
     background: null,
     date: null,
     active: true,
+    repeat: 0,
   },
   {
     name: 'Culto General Mañana',
@@ -101,6 +105,7 @@ const SCHEDULES_AND_EVENTS = [
     background: null,
     date: null,
     active: true,
+    repeat: 0,
   },
   {
     name: 'Culto General Noche',
@@ -111,6 +116,7 @@ const SCHEDULES_AND_EVENTS = [
     background: null,
     date: null,
     active: true,
+    repeat: 0,
   },
   {
     name: 'Reunión para "Ganar Almas"',
@@ -121,6 +127,7 @@ const SCHEDULES_AND_EVENTS = [
     background: null,
     date: null,
     active: true,
+    repeat: 0,
   },
   {
     name: 'Conferencia Misionera',
@@ -131,6 +138,7 @@ const SCHEDULES_AND_EVENTS = [
     background: TEST_EVENT_POSTER,
     date: null,
     active: true,
+    repeat: 0,
   },
   {
     name: '',
@@ -141,6 +149,7 @@ const SCHEDULES_AND_EVENTS = [
     background: null,
     date: null,
     active: false,
+    repeat: 0,
   },
   {
     name: '',
@@ -151,6 +160,7 @@ const SCHEDULES_AND_EVENTS = [
     background: null,
     date: null,
     active: false,
+    repeat: 0,
   },
   {
     name: '',
@@ -161,6 +171,7 @@ const SCHEDULES_AND_EVENTS = [
     background: null,
     date: null,
     active: false,
+    repeat: 0,
   },
   {
     name: '',
@@ -171,6 +182,7 @@ const SCHEDULES_AND_EVENTS = [
     background: null,
     date: null,
     active: false,
+    repeat: 0,
   },
   {
     name: '',
@@ -181,6 +193,7 @@ const SCHEDULES_AND_EVENTS = [
     background: null,
     date: null,
     active: false,
+    repeat: 0,
   },
   {
     name: '',
@@ -191,6 +204,7 @@ const SCHEDULES_AND_EVENTS = [
     background: null,
     date: null,
     active: false,
+    repeat: 0,
   },
   {
     name: '',
@@ -201,6 +215,7 @@ const SCHEDULES_AND_EVENTS = [
     background: null,
     date: null,
     active: false,
+    repeat: 0,
   },
   {
     name: '',
@@ -211,6 +226,7 @@ const SCHEDULES_AND_EVENTS = [
     background: null,
     date: null,
     active: false,
+    repeat: 0,
   },
   {
     name: '',
@@ -221,6 +237,7 @@ const SCHEDULES_AND_EVENTS = [
     background: null,
     date: null,
     active: false,
+    repeat: 0,
   },
   {
     name: '',
@@ -231,6 +248,7 @@ const SCHEDULES_AND_EVENTS = [
     background: null,
     date: null,
     active: false,
+    repeat: 0,
   },
   {
     name: '',
@@ -241,6 +259,7 @@ const SCHEDULES_AND_EVENTS = [
     background: null,
     date: null,
     active: false,
+    repeat: 0,
   },
   {
     name: '',
@@ -251,6 +270,7 @@ const SCHEDULES_AND_EVENTS = [
     background: null,
     date: null,
     active: false,
+    repeat: 0,
   },
   {
     name: '',
@@ -261,6 +281,7 @@ const SCHEDULES_AND_EVENTS = [
     background: null,
     date: null,
     active: false,
+    repeat: 0,
   },
   {
     name: '',
@@ -271,6 +292,7 @@ const SCHEDULES_AND_EVENTS = [
     background: null,
     date: null,
     active: false,
+    repeat: 0,
   },
   {
     name: '',
@@ -281,6 +303,117 @@ const SCHEDULES_AND_EVENTS = [
     background: null,
     date: null,
     active: false,
+    repeat: 0,
+  },
+  {
+    name: '',
+    day: 'Domingo',
+    hour: '01:00',
+    hourSuffix: 'AM',
+    type: 'SCHEDULE',
+    background: null,
+    date: null,
+    active: false,
+    repeat: 0,
+  },
+  {
+    name: '',
+    day: 'Domingo',
+    hour: '01:00',
+    hourSuffix: 'AM',
+    type: 'SCHEDULE',
+    background: null,
+    date: null,
+    active: false,
+    repeat: 0,
+  },
+  {
+    name: '',
+    day: 'Domingo',
+    hour: '01:00',
+    hourSuffix: 'AM',
+    type: 'SCHEDULE',
+    background: null,
+    date: null,
+    active: false,
+    repeat: 0,
+  },
+  {
+    name: '',
+    day: 'Domingo',
+    hour: '01:00',
+    hourSuffix: 'AM',
+    type: 'SCHEDULE',
+    background: null,
+    date: null,
+    active: false,
+    repeat: 0,
+  },
+  {
+    name: '',
+    day: 'Domingo',
+    hour: '01:00',
+    hourSuffix: 'AM',
+    type: 'SCHEDULE',
+    background: null,
+    date: null,
+    active: false,
+    repeat: 0,
+  },
+  {
+    name: '',
+    day: 'Domingo',
+    hour: '01:00',
+    hourSuffix: 'AM',
+    type: 'SCHEDULE',
+    background: null,
+    date: null,
+    active: false,
+    repeat: 0,
+  },
+  {
+    name: '',
+    day: 'Domingo',
+    hour: '01:00',
+    hourSuffix: 'AM',
+    type: 'SCHEDULE',
+    background: null,
+    date: null,
+    active: false,
+    repeat: 0,
+  },
+  {
+    name: '',
+    day: 'Domingo',
+    hour: '01:00',
+    hourSuffix: 'AM',
+    type: 'SCHEDULE',
+    background: null,
+    date: null,
+    active: false,
+    repeat: 0,
+  },
+  {
+    name: '',
+    day: 'Domingo',
+    hour: '01:00',
+    hourSuffix: 'AM',
+    type: 'SCHEDULE',
+    background: null,
+    date: null,
+    active: false,
+    repeat: 0,
+  },
+  {
+    name: '',
+    day: 'Domingo',
+    hour: '01:00',
+    hourSuffix: 'AM',
+    type: 'SCHEDULE',
+    background: null,
+    date: null,
+    active: false,
+    repeat: 0,
   },
 ];
 
@@ -309,12 +442,15 @@ export const SETTINGS_OPTIONS = {
   ],
   FONT_FAMILIES: [
     { value: '', label: 'Predeterminada' },
-    { value: 'Arial', label: 'Arial' },
     { value: 'Arial Black', label: 'Arial Black' },
+    { value: 'Arial', label: 'Arial' },
     { value: 'Courier New', label: 'Courier New' },
     { value: 'Garamond', label: 'Garamond' },
     { value: 'Georgia', label: 'Georgia' },
     { value: 'Helvetica', label: 'Helvetica' },
+    { value: 'Poppins', label: 'Poppins' },
+    { value: 'Roca + Poppins', label: 'Roca + Poppins' },
+    { value: 'Roca', label: 'Roca' },
     { value: 'Tahoma', label: 'Tahoma' },
     { value: 'Times New Roman', label: 'Times New Roman' },
   ],
@@ -377,6 +513,14 @@ export const SETTINGS_OPTIONS = {
     { value: 15, label: '15 minutos' },
     { value: 10, label: '10 minutos' },
     { value: 5, label: '5 minutos' },
+  ],
+  REPEAT_EVERY: [
+    { value: 0, label: 'Se muestra normalmente' },
+    { value: 1, label: 'Se muestra cada 1 página' },
+    { value: 2, label: 'Se muestra cada 2 páginas' },
+    { value: 3, label: 'Se muestra cada 3 páginas' },
+    { value: 4, label: 'Se muestra cada 4 páginas' },
+    { value: 5, label: 'Se muestra cada 5 páginas' },
   ],
   PREACH_RED: [
     { value: 10, label: '10 minutos' },

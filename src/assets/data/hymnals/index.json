@@ -24218,5 +24218,18 @@
     "authors": "\"Somos libres, seámoslo siempre\", José de la Torre Ugarte, José Bernardo Alcedo",
     "tags": "Himno Nacional",
     "book": "Apéndice"
+  },
+  {
+    "number": 24,
+    "title": "HIMNO NACIONAL DE ESTADOS UNIDOS",
+    "chorus": "God bless America/nLand that I love/nStand beside her/nAnd guide her/nThrough the night/nWith the light/nFrom above",
+    "stanzas": [
+      "1) From the mountains/nTo the prairies/nTo the oceans/nWhite with foam/nGod bless America/nMy home sweet home"
+    ],
+    "startsWithChorus": true,
+    "repeatChorusAtEnd": false,
+    "authors": "\"God Bless America\", Irving Berlin",
+    "tags": "Himno Nacional",
+    "book": "Apéndice"
   }
 ]

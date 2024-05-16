@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { DEFAULT_SYSTEM_FONT } from 'values';
 
 export const PresenterStyled = styled.section`
   display: flex;
@@ -17,8 +18,7 @@ export const PresenterStyled = styled.section`
       ? `blur(${blur}px) grayscale(${grayscale ? 1 : 0})`
       : `grayscale(${grayscale ? 1 : 0})`};
   font-family: ${({ font }) =>
-    font ||
-    '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"'};
+    font === 'Roca + Poppins' ? 'Poppins' : font || DEFAULT_SYSTEM_FONT};
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 
@@ -55,6 +55,8 @@ export const PresenterStyled = styled.section`
 
     strong {
       color: ${({ titlecolor }) => titlecolor || '#007bff'} !important;
+      font-family: ${({ font }) =>
+        font === 'Roca + Poppins' ? 'Roca' : font || DEFAULT_SYSTEM_FONT};
     }
 
     b {
@@ -124,8 +126,7 @@ export const CornerStyled = styled.section`
   align-items: center;
   justify-content: center;
   font-family: ${({ font }) =>
-    font ||
-    '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"'};
+    font === 'Roca + Poppins' ? 'Poppins' : font || DEFAULT_SYSTEM_FONT};
   position: absolute;
   bottom: 3%;
   right: 2%;

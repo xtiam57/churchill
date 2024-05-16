@@ -83,18 +83,51 @@ export default function HomePage() {
   useEffect(() => {
     setNotices((notices) => {
       const index = notices.findIndex((n) => n.tag === 'SCHEDULES');
-      const list = refreshSchedules?.filter((entry) => entry.active) || [];
+      const list =
+        refreshSchedules?.filter(
+          (entry) => entry.active && entry.repeat === 0
+        ) || [];
+      const repeatList =
+        refreshSchedules?.filter((entry) => entry.active && entry.repeat > 0) ||
+        [];
+
+      let slides = [];
+
+      if (list.length > 0) {
+        slides = list.map((entry) => {
+          return Slide.create({
+            text: getScheduleText(entry),
+            bg: entry.background,
+          });
+        });
+
+        repeatList.forEach((entry) => {
+          let pages = [];
+          let index = 0;
+
+          for (let i = entry.repeat; i < 30; i += entry.repeat + 1) {
+            pages.push(i);
+          }
+
+          while (pages[index] <= slides.length) {
+            slides.splice(
+              pages[index],
+              0,
+              Slide.create({
+                text: getScheduleText(entry),
+                bg: entry.background,
+              })
+            );
+            index++;
+          }
+        });
+      }
 
       notices[index] = {
         ...notices[index],
         slides:
-          list.length > 0
-            ? list.map((entry) =>
-                Slide.create({
-                  text: getScheduleText(entry),
-                  bg: entry.background,
-                })
-              )
+          slides.length > 0
+            ? slides
             : [
                 Slide.create({
                   id: 'BS_404',

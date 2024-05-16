@@ -1,10 +1,4 @@
-import {
-  Close,
-  Download,
-  Favorite,
-  FileUpload,
-  OpenInNew,
-} from '@mui/icons-material';
+import { Close, Download, Favorite, FileUpload } from '@mui/icons-material';
 import { Logo, LogoPreview, Sidebar, TextPreview } from 'components';
 import { usePresenter, useSettingsSidebar } from 'hooks';
 import React, { useState } from 'react';
@@ -676,18 +670,26 @@ export function Settings() {
 
       <div className="donwload-links-wrapper">
         {PDF_HYMNALS.map((hymnal) => (
-          <a
+          <Button
+            variant="outline-primary"
             key={hymnal.label}
-            download={`${hymnal.label}.pdf`}
-            href={hymnal.url}
-            className="download-link btn btn-outline-primary"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <OpenInNew fontSize="large" />
+            className="download-link"
+            onClick={async () => {
+              console.log(hymnal.url);
 
+              const data = await fetch(hymnal.url);
+              const blob = await data.blob();
+              console.log(blob);
+
+              const a = document.createElement('a');
+              a.href = URL.createObjectURL(blob);
+              a.download = `${hymnal.label}.pdf`;
+              a.click();
+            }}
+          >
+            {hymnal.icon}
             <span>{hymnal.label}</span>
-          </a>
+          </Button>
         ))}
       </div>
 

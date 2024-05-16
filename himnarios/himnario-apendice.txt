@@ -609,3 +609,30 @@ Himno Nacional
 "Somos libres, seámoslo siempre"
 José de la Torre Ugarte
 José Bernardo Alcedo
+
+---
+
+## 123. HIMNO NACIONAL DE ESTADOS UNIDOS
+***
+@CORO
+God bless America
+Land that I love
+Stand beside her
+And guide her
+Through the night
+With the light
+From above
+***
+From the mountains
+To the prairies
+To the oceans
+White with foam
+God bless America
+My home sweet home
+***
+@TAGS
+Himno Nacional
+***
+@AUTHORS
+"God Bless America"
+Irving Berlin

@@ -319,6 +319,37 @@ export function Schedule() {
                     )}
                   </Form.Group>
                 </Form.Row>
+
+                <Form.Row className="mt-2">
+                  <Form.Group as={Col} xs={12} className="mb-0">
+                    {/* <Form.Label className=" small mb-1">
+                      Repetir cada...
+                    </Form.Label> */}
+                    <Form.Control
+                      size="sm"
+                      as="select"
+                      value={schedule.repeat}
+                      name="repeat"
+                      disabled={!schedule.active}
+                      onChange={({ target }) => {
+                        const { name, value } = target;
+                        handleSchedulesChangeValue(name, +value, index);
+                      }}
+                    >
+                      {SETTINGS_OPTIONS.REPEAT_EVERY.map(
+                        ({ value, label, divider }) => (
+                          <React.Fragment key={value}>
+                            {divider ? (
+                              <hr />
+                            ) : (
+                              <option value={value}>{label}</option>
+                            )}
+                          </React.Fragment>
+                        )
+                      )}
+                    </Form.Control>
+                  </Form.Group>
+                </Form.Row>
               </div>
 
               <div className="d-flex flex-column justify-content-center">

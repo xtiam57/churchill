@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { DEFAULT_SYSTEM_FONT } from 'values';
 
 export const TextPreviewWrapperStyled = styled.div`
   border-radius: 8px;
@@ -21,8 +22,7 @@ export const TextPreviewStyled = styled.div`
   height: 100%;
   backdrop-filter: ${({ blur }) => `blur(${blur}px)`};
   font-family: ${({ font }) =>
-    font ||
-    '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"'};
+    font === 'Roca + Poppins' ? 'Poppins' : font || DEFAULT_SYSTEM_FONT};
 
   p {
     font-size: 90%;
@@ -31,6 +31,8 @@ export const TextPreviewStyled = styled.div`
 
     strong {
       color: ${({ titlecolor }) => titlecolor || '#007bff'} !important;
+      font-family: ${({ font }) =>
+        font === 'Roca + Poppins' ? 'Roca' : font || DEFAULT_SYSTEM_FONT};
     }
 
     b {
