@@ -1,18 +1,9 @@
-import {
-  Audiotrack,
-  AutoStories,
-  Cake,
-  Newspaper,
-  PsychologyAlt,
-  Restore,
-} from '@mui/icons-material';
+import { Audiotrack, AutoStories, Cake, Newspaper } from '@mui/icons-material';
 import BirthdaysPage from 'pages/birthdays';
 import CastPage from 'pages/cast';
-import CountdownPage from 'pages/countdown';
 import HomePage from 'pages/home';
 import HymnalsPage from 'pages/hymnals';
 import ScripturesPage from 'pages/scriptures';
-import TriviaPage from 'pages/trivia';
 
 export const PATHS = {
   ROOT: '/',
@@ -83,26 +74,26 @@ export const routes = flatten([
     component: CastPage,
     label: 'Proyectar',
   },
-  {
-    key: PATHS.COUNTDOWN_PAGE,
-    exact: true,
-    path: PATHS.COUNTDOWN_PAGE,
-    component: CountdownPage,
-    icon: <Restore />,
-    label: 'Temporizador',
-    menu: true,
-    showLabel: false,
-  },
-  {
-    key: PATHS.TRIVIA_PAGE,
-    exact: true,
-    path: PATHS.TRIVIA_PAGE,
-    component: TriviaPage,
-    icon: <PsychologyAlt />,
-    label: 'Trivia',
-    menu: true,
-    showLabel: true,
-  },
+  // {
+  //   key: PATHS.COUNTDOWN_PAGE,
+  //   exact: true,
+  //   path: PATHS.COUNTDOWN_PAGE,
+  //   component: CountdownPage,
+  //   icon: <Restore />,
+  //   label: 'Temporizador',
+  //   menu: true,
+  //   showLabel: false,
+  // },
+  // {
+  //   key: PATHS.TRIVIA_PAGE,
+  //   exact: true,
+  //   path: PATHS.TRIVIA_PAGE,
+  //   component: TriviaPage,
+  //   icon: <PsychologyAlt />,
+  //   label: 'Trivia',
+  //   menu: true,
+  //   showLabel: true,
+  // },
 ]);
 
 function flatten(routes) {
