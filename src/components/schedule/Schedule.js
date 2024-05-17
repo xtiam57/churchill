@@ -1,4 +1,4 @@
-import { Close } from '@mui/icons-material';
+import { AlarmAdd, Close } from '@mui/icons-material';
 import { Sidebar } from 'components';
 import { useSettingsSidebar } from 'hooks';
 import React from 'react';
@@ -19,6 +19,28 @@ export function Schedule() {
 
   const handleSchedulesChangeValue = (name, value, index) => {
     schedules[index][name] = value;
+    setSchedules([...schedules]);
+    setRefreshSchedules([...schedules]);
+  };
+
+  const handleAdd = () => {
+    schedules.push({
+      name: '',
+      day: 'Domingo',
+      hour: '01:00',
+      hourSuffix: 'AM',
+      type: 'SCHEDULE',
+      background: null,
+      date: null,
+      active: false,
+      repeat: 0,
+    });
+    setSchedules([...schedules]);
+    setRefreshSchedules([...schedules]);
+  };
+
+  const handleDelete = (index) => {
+    schedules.splice(index, 1);
     setSchedules([...schedules]);
     setRefreshSchedules([...schedules]);
   };
@@ -75,8 +97,8 @@ export function Schedule() {
                 height: 26,
                 fontSize: '0.7rem',
                 position: 'absolute',
-                top: 3,
-                left: 3,
+                top: 4,
+                left: 4,
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -85,6 +107,28 @@ export function Schedule() {
             >
               {index + 1}
             </div>
+
+            <Button
+              size="sm"
+              variant="outline-danger"
+              style={{
+                position: 'absolute',
+                bottom: 4,
+                left: 4,
+                width: 26,
+                height: 26,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+              onClick={() => handleDelete(index)}
+            >
+              <Close
+                style={{
+                  fontSize: '.9rem',
+                }}
+              />
+            </Button>
 
             <div className="w-100 d-flex" style={{ gap: '0.5rem' }}>
               <div className="d-flex align-items-center pl-2">
@@ -259,6 +303,37 @@ export function Schedule() {
                   ) : null}
                 </Form.Row>
 
+                <Form.Row className="mt-2">
+                  <Form.Group as={Col} xs={12} className="mb-0">
+                    {/* <Form.Label className=" small mb-1">
+                      Repetir cada...
+                    </Form.Label> */}
+                    <Form.Control
+                      size="sm"
+                      as="select"
+                      value={schedule.repeat}
+                      name="repeat"
+                      disabled={!schedule.active}
+                      onChange={({ target }) => {
+                        const { name, value } = target;
+                        handleSchedulesChangeValue(name, +value, index);
+                      }}
+                    >
+                      {SETTINGS_OPTIONS.REPEAT_EVERY.map(
+                        ({ value, label, divider }) => (
+                          <React.Fragment key={value}>
+                            {divider ? (
+                              <hr />
+                            ) : (
+                              <option value={value}>{label}</option>
+                            )}
+                          </React.Fragment>
+                        )
+                      )}
+                    </Form.Control>
+                  </Form.Group>
+                </Form.Row>
+
                 <Form.Row>
                   <Form.Group as={Col} xs={12} className="mb-0 mt-2">
                     {schedule.background ? (
@@ -319,37 +394,6 @@ export function Schedule() {
                     )}
                   </Form.Group>
                 </Form.Row>
-
-                <Form.Row className="mt-2">
-                  <Form.Group as={Col} xs={12} className="mb-0">
-                    {/* <Form.Label className=" small mb-1">
-                      Repetir cada...
-                    </Form.Label> */}
-                    <Form.Control
-                      size="sm"
-                      as="select"
-                      value={schedule.repeat}
-                      name="repeat"
-                      disabled={!schedule.active}
-                      onChange={({ target }) => {
-                        const { name, value } = target;
-                        handleSchedulesChangeValue(name, +value, index);
-                      }}
-                    >
-                      {SETTINGS_OPTIONS.REPEAT_EVERY.map(
-                        ({ value, label, divider }) => (
-                          <React.Fragment key={value}>
-                            {divider ? (
-                              <hr />
-                            ) : (
-                              <option value={value}>{label}</option>
-                            )}
-                          </React.Fragment>
-                        )
-                      )}
-                    </Form.Control>
-                  </Form.Group>
-                </Form.Row>
               </div>
 
               <div className="d-flex flex-column justify-content-center">
@@ -394,6 +438,16 @@ export function Schedule() {
           </div>
         ))}
       </div>
+
+      <Button
+        block
+        size="lg"
+        className="m-0 mt-3"
+        variant="success"
+        onClick={handleAdd}
+      >
+        <AlarmAdd /> Agregar
+      </Button>
     </Sidebar>
   );
 }
