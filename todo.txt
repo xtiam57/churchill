@@ -1,5 +1,4 @@
 - Peticiones de oraciones
 - Exportar programa a PDF
-- Exportar himnarios a PDF
 - Video y laminas (imagenes)
 - Importar lista de cumpleaños
