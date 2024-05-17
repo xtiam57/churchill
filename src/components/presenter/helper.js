@@ -1,21 +1,22 @@
 export function process(text, subtext, book) {
   const res = text
+    .replaceAll('////', '<b>////</b>')
     .replaceAll('///', '<b>///</b>')
     .replaceAll('//', '<b>//</b>')
     .replaceAll('__', '</i>')
     .replaceAll('_', '<i class="jesus">')
     .replaceAll('**********', '<b>__________</b>')
-    .replace('(Coro)', '<strong class="fs-title">(Coro)</strong>')
-    .replace('1)', '<strong class="fs-title">(1)</strong><br/> ')
-    .replace('2)', '<strong class="fs-title">(2)</strong><br/> ')
-    .replace('3)', '<strong class="fs-title">(3)</strong><br/> ')
-    .replace('4)', '<strong class="fs-title">(4)</strong><br/> ')
-    .replace('5)', '<strong class="fs-title">(5)</strong><br/> ')
-    .replace('6)', '<strong class="fs-title">(6)</strong><br/> ')
-    .replace('7)', '<strong class="fs-title">(7)</strong><br/> ')
-    .replace('8)', '<strong class="fs-title">(8)</strong><br/> ')
-    .replace('9)', '<strong class="fs-title">(9)</strong><br/> ')
-    .replace('10)', '<strong class="fs-title">(10)</strong><br/> ');
+    .replaceAll('(Coro)', '<strong class="fs-title">(Coro)</strong>')
+    .replaceAll('1) ', '<strong class="fs-title">(1)</strong><br/> ')
+    .replaceAll('2) ', '<strong class="fs-title">(2)</strong><br/> ')
+    .replaceAll('3) ', '<strong class="fs-title">(3)</strong><br/> ')
+    .replaceAll('4) ', '<strong class="fs-title">(4)</strong><br/> ')
+    .replaceAll('5) ', '<strong class="fs-title">(5)</strong><br/> ')
+    .replaceAll('6) ', '<strong class="fs-title">(6)</strong><br/> ')
+    .replaceAll('7) ', '<strong class="fs-title">(7)</strong><br/> ')
+    .replaceAll('8) ', '<strong class="fs-title">(8)</strong><br/> ')
+    .replaceAll('9) ', '<strong class="fs-title">(9)</strong><br/> ')
+    .replaceAll('10) ', '<strong class="fs-title">(10)</strong><br/> ');
 
   return `${res}${subtext ? `<small>${subtext}</small>` : ''}${
     book ? `<small class="book">${book}</small>` : ''
