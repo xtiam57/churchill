@@ -32,7 +32,9 @@ function App() {
                   <RouteMapper />
                   {/* Sidebar settings */}
                 </GridStyled>
+
                 <Schedule />
+
                 <Settings />
               </BirthdaysProvider>
             </HymnalsProvider>

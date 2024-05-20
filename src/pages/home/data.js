@@ -75,20 +75,26 @@ const NOTICES = [
   {
     id: 4,
     index: 3,
+    tag: 'BIRTHDAYS',
+    type: 'notice',
+    title: 'Cumpleaños',
+    slides: [],
+  },
+  {
+    id: 5,
+    index: 4,
     tag: 'SCHEDULES',
     type: 'notice',
-    title: 'Horarios y Eventos',
+    title: 'Todos los Anuncios',
     slides: [],
     openSchedule: true,
   },
 ];
 
-export function getNotices(birthdaySLide) {
+export function getNotices(birthdaySlide) {
   const notices = JSON.parse(JSON.stringify(NOTICES));
 
-  if (birthdaySLide.count > 0) {
-    notices[0].slides.push(birthdaySLide);
-  }
+  notices[3].slides.push(birthdaySlide);
 
   return notices;
 }

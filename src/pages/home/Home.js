@@ -37,8 +37,8 @@ export default function HomePage() {
   const sliderRef = useRef();
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const [showLogo, setShowLogo] = useState(true);
-  const { current } = useBirthday();
-  const [notices, setNotices] = useState(getNotices(current));
+  const { current: birthdays } = useBirthday();
+  const [notices, setNotices] = useState(getNotices(birthdays));
   const [notice, setNotice] = useState(notices[0]);
   const [autoplay, setAutoplay] = useState(true);
   const [loop, setLoop] = useState(true);
@@ -49,7 +49,7 @@ export default function HomePage() {
   const schedulesSubs = useMemo(() => {
     const list = refreshSchedules?.filter((entry) => entry.active) || [];
 
-    return list.map((entry, index) => {
+    const subset = list.map((entry, index) => {
       return {
         id: notices.length + index + 1,
         index: notices.length + index,
@@ -64,15 +64,17 @@ export default function HomePage() {
         ],
       };
     });
+
+    return subset;
   }, [refreshSchedules, notices]);
 
   useEffect(() => {
     if (notice.id === 1) {
-      const notices = getNotices(current);
+      const notices = getNotices(birthdays);
       setNotice(notices[0]);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [current]);
+  }, [birthdays]);
 
   useEffect(() => {
     if (!presenting) {
@@ -93,21 +95,26 @@ export default function HomePage() {
         repeatList,
         repeatList.map((entry) => entry.repeat)
       );
+      const slides = combined.map((entry) => {
+        return Slide.create({
+          text: getScheduleText(entry),
+          bg: entry.background,
+        });
+      });
+
+      if (birthdays.count > 0) {
+        slides.push(birthdays);
+      }
 
       notices[index] = {
         ...notices[index],
         slides:
-          combined.length > 0
-            ? combined.map((entry) => {
-                return Slide.create({
-                  text: getScheduleText(entry),
-                  bg: entry.background,
-                });
-              })
+          slides.length > 0
+            ? slides
             : [
                 Slide.create({
                   id: 'BS_404',
-                  text: `No hay horarios que mostrar.`,
+                  text: `No hay anuncios que mostrar.`,
                   type: 'notice',
                   count: 0,
                 }),
@@ -121,7 +128,7 @@ export default function HomePage() {
 
       return [...notices];
     });
-  }, [refreshSchedules]);
+  }, [refreshSchedules, birthdays]);
 
   const handlePrevSlide = () => sliderRef.current.prev();
 
@@ -144,7 +151,7 @@ export default function HomePage() {
   return (
     <Wrapper>
       <Sidebar>
-        <Title>Anuncios</Title>
+        <Title>Inicio</Title>
 
         <DisplayButton
           value={showLogo}
@@ -154,7 +161,7 @@ export default function HomePage() {
 
         <List className="mb-4">
           <List.Item>
-            <List.Title>Listado</List.Title>
+            <List.Title>Mensajes generales</List.Title>
           </List.Item>
 
           {notices.map((item) => (
@@ -178,17 +185,24 @@ export default function HomePage() {
             </List.Item>
           ))}
 
-          {schedulesSubs.map((item) => (
-            <List.Item key={item.id}>
-              <List.Action
-                active={item.id === notice.id}
-                onClick={() => setNotice(item)}
-                className="sub"
-              >
-                {item.title}
-              </List.Action>
-            </List.Item>
-          ))}
+          {schedulesSubs.length > 1 && (
+            <>
+              <List.Item className="mt-4">
+                <List.Title>Listado de anuncios</List.Title>
+              </List.Item>
+
+              {schedulesSubs.map((item) => (
+                <List.Item key={item.id}>
+                  <List.Action
+                    active={item.id === notice.id}
+                    onClick={() => setNotice(item)}
+                  >
+                    {item.title}
+                  </List.Action>
+                </List.Item>
+              ))}
+            </>
+          )}
         </List>
       </Sidebar>
 

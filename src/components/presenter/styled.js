@@ -132,7 +132,7 @@ export const CornerStyled = styled.section`
   right: 2%;
 
   p {
-    font-size: calc(0.15em + 2.3vh);
+    font-size: calc(0.25em + 2.5vh);
     margin: 0;
     color: ${({ textcolor }) => textcolor || '#000'};
     width: 100%;

@@ -46,7 +46,7 @@ export const ActionStyled = styled.button`
 
   &.sub {
     padding-left: 20px;
-    border-left: 1px solid var(--light);
+    border-left: 2px solid var(--gray);
   }
 `;
 

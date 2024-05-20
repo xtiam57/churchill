@@ -33,7 +33,11 @@ const PresenterProvider = ({ children }) => {
     let url = parent.webContents.getURL();
 
     if (presenter) {
-      presenter.isVisible() ? presenter.hide() : presenter.show();
+      if (presenter.isVisible()) {
+        presenter.hide();
+      } else {
+        presenter.show();
+      }
       setPresenting(presenter.isVisible());
       return;
     }
@@ -54,8 +58,10 @@ const PresenterProvider = ({ children }) => {
           parent,
         });
 
+        console.log(displays);
+
         // Open the DevTools.
-        // win.webContents.openDevTools();
+        win.webContents.openDevTools();
 
         win.loadURL(url.replace(/#.*$/, `#${PATHS.CAST_PAGE}`));
 

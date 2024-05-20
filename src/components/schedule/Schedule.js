@@ -32,7 +32,7 @@ export function Schedule() {
       type: 'SCHEDULE',
       background: null,
       date: null,
-      active: false,
+      active: true,
       repeat: 0,
     });
     setSchedules([...schedules]);
@@ -54,7 +54,7 @@ export function Schedule() {
       offset={320 + 55}
     >
       <h1 className="display-4">
-        Horarios y Eventos{' '}
+        Anuncios{' '}
         {/* <small className="text-muted">
           ({schedules?.filter((s) => s.active).length}/{schedules?.length})
         </small> */}

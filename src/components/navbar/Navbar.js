@@ -82,7 +82,7 @@ export function Navbar() {
             <li className="nav-item">
               <OverlayTrigger
                 placement="bottom"
-                overlay={<Tooltip>Horarios y Eventos</Tooltip>}
+                overlay={<Tooltip>Anuncios</Tooltip>}
               >
                 <Button
                   onClick={toggleSchedule}
