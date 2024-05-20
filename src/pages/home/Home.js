@@ -164,26 +164,32 @@ export default function HomePage() {
             <List.Title>Mensajes generales</List.Title>
           </List.Item>
 
-          {notices.map((item) => (
-            <List.Item key={item.id}>
-              <List.Action
-                active={item.id === notice.id}
-                onClick={() => setNotice(item)}
-              >
-                {item.title}
-              </List.Action>
-
-              {item.openSchedule && (
+          {notices.map((item) =>
+            item.tag === 'BIRTHDAYS' && birthdays.count === 0 ? null : (
+              <List.Item key={item.id}>
                 <List.Action
-                  style={{ flex: '0 1 20px' }}
-                  onClick={() => openSchedule()}
-                  className="text-right"
+                  active={item.id === notice.id}
+                  onClick={() => setNotice(item)}
                 >
-                  <Settings fontSize="small" />
+                  {item.title}
                 </List.Action>
-              )}
-            </List.Item>
-          ))}
+
+                {item.tag === 'BIRTHDAYS' && (
+                  <List.Text>({birthdays.count})</List.Text>
+                )}
+
+                {item.openSchedule && (
+                  <List.Action
+                    style={{ flex: '0 1 20px' }}
+                    onClick={() => openSchedule()}
+                    className="text-right"
+                  >
+                    <Settings fontSize="small" />
+                  </List.Action>
+                )}
+              </List.Item>
+            )
+          )}
 
           {schedulesSubs.length > 1 && (
             <>
