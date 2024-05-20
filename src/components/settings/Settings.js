@@ -1,11 +1,12 @@
 import { Close, Download, Favorite, FileUpload } from '@mui/icons-material';
 import { Logo, LogoPreview, Sidebar, TextPreview } from 'components';
 import { usePresenter, useSettingsSidebar } from 'hooks';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
 import { Storage, toBase64 } from 'utils';
 import { BROADCAST, PDF_HYMNALS, SETTINGS_OPTIONS, THEMES } from 'values';
+import { version } from 'version';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
@@ -105,11 +106,15 @@ export function Settings() {
                 value={settings?.logo}
                 onChange={handleChangeValue}
               >
-                {SETTINGS_OPTIONS.LOGOS.map(({ value, label, divider }) => (
-                  <React.Fragment key={value}>
-                    {divider ? <hr /> : <option value={value}>{label}</option>}
-                  </React.Fragment>
-                ))}
+                {SETTINGS_OPTIONS.LOGOS.map(({ value, label, divider }) =>
+                  divider ? (
+                    <hr key={value} />
+                  ) : (
+                    <option key={value} value={value}>
+                      {label}
+                    </option>
+                  )
+                )}
               </Form.Control>
             </Form.Group>
 
@@ -233,15 +238,13 @@ export function Settings() {
                 name="image"
                 onChange={handleChangeValue}
               >
-                {SETTINGS_OPTIONS.BACKGROUNDS.map(
-                  ({ value, label, divider }) => (
-                    <React.Fragment key={value}>
-                      {divider ? (
-                        <hr />
-                      ) : (
-                        <option value={value}>{label}</option>
-                      )}
-                    </React.Fragment>
+                {SETTINGS_OPTIONS.BACKGROUNDS.map(({ value, label, divider }) =>
+                  divider ? (
+                    <hr key={value} />
+                  ) : (
+                    <option key={value} value={value}>
+                      {label}
+                    </option>
                   )
                 )}
               </Form.Control>
@@ -307,11 +310,15 @@ export function Settings() {
                 name="theme"
                 onChange={handleChangeTheme}
               >
-                {SETTINGS_OPTIONS.THEMES.map(({ value, label, divider }) => (
-                  <React.Fragment key={value}>
-                    {divider ? <hr /> : <option value={value}>{label}</option>}
-                  </React.Fragment>
-                ))}
+                {SETTINGS_OPTIONS.THEMES.map(({ value, label, divider }) =>
+                  divider ? (
+                    <hr key={value} />
+                  ) : (
+                    <option key={value} value={value}>
+                      {label}
+                    </option>
+                  )
+                )}
               </Form.Control>
             </Form.Group>
           </Form.Row>
@@ -336,15 +343,14 @@ export function Settings() {
                 onChange={handleChangeValue}
               >
                 {SETTINGS_OPTIONS.FONT_FAMILIES.map(
-                  ({ value, label, divider }) => (
-                    <React.Fragment key={value}>
-                      {divider ? (
-                        <hr />
-                      ) : (
-                        <option value={value}>{label}</option>
-                      )}
-                    </React.Fragment>
-                  )
+                  ({ value, label, divider }) =>
+                    divider ? (
+                      <hr key={value} />
+                    ) : (
+                      <option key={value} value={value}>
+                        {label}
+                      </option>
+                    )
                 )}
               </Form.Control>
             </Form.Group>
@@ -502,11 +508,13 @@ export function Settings() {
             value={settings?.interval}
             onChange={handleChangeNumericValue}
           >
-            {SETTINGS_OPTIONS.TIME_INTERVALS.map(
-              ({ value, label, divider }) => (
-                <React.Fragment key={value}>
-                  {divider ? <hr /> : <option value={value}>{label}</option>}
-                </React.Fragment>
+            {SETTINGS_OPTIONS.TIME_INTERVALS.map(({ value, label, divider }) =>
+              divider ? (
+                <hr key={value} />
+              ) : (
+                <option key={value} value={value}>
+                  {label}
+                </option>
               )
             )}
           </Form.Control>
@@ -524,11 +532,14 @@ export function Settings() {
             onChange={handleChangeNumericValue}
           >
             {SETTINGS_OPTIONS.ALERTS_TIME_INTERVALS.map(
-              ({ value, label, divider }) => (
-                <React.Fragment key={value}>
-                  {divider ? <hr /> : <option value={value}>{label}</option>}
-                </React.Fragment>
-              )
+              ({ value, label, divider }) =>
+                divider ? (
+                  <hr key={value} />
+                ) : (
+                  <option key={value} value={value}>
+                    {label}
+                  </option>
+                )
             )}
           </Form.Control>
         </Form.Group>
@@ -545,11 +556,14 @@ export function Settings() {
             onChange={handleChangeNumericValue}
           >
             {SETTINGS_OPTIONS.BIRTHDAYS_TIME_INTERVALS.map(
-              ({ value, label, divider }) => (
-                <React.Fragment key={value}>
-                  {divider ? <hr /> : <option value={value}>{label}</option>}
-                </React.Fragment>
-              )
+              ({ value, label, divider }) =>
+                divider ? (
+                  <hr key={value} />
+                ) : (
+                  <option key={value} value={value}>
+                    {label}
+                  </option>
+                )
             )}
           </Form.Control>
         </Form.Group>
@@ -565,11 +579,13 @@ export function Settings() {
             value={settings?.clockposition}
             onChange={handleChangeValue}
           >
-            {SETTINGS_OPTIONS.CLOCK_POSITIONS.map(
-              ({ value, label, divider }) => (
-                <React.Fragment key={value}>
-                  {divider ? <hr /> : <option value={value}>{label}</option>}
-                </React.Fragment>
+            {SETTINGS_OPTIONS.CLOCK_POSITIONS.map(({ value, label, divider }) =>
+              divider ? (
+                <hr key={value} />
+              ) : (
+                <option key={value} value={value}>
+                  {label}
+                </option>
               )
             )}
           </Form.Control>
@@ -675,11 +691,8 @@ export function Settings() {
             key={hymnal.label}
             className="download-link"
             onClick={async () => {
-              console.log(hymnal.url);
-
               const data = await fetch(hymnal.url);
               const blob = await data.blob();
-              console.log(blob);
 
               const a = document.createElement('a');
               a.href = URL.createObjectURL(blob);
@@ -700,6 +713,8 @@ export function Settings() {
         para Dios y su Iglesia. <br />
         Por Christiam Mena (@xtiam57). <br />
         <a href="mailto:christiam.mena@gmail.com">christiam.mena@gmail.com</a>
+        <br />
+        <span>v{version}</span>
       </small>
     </Sidebar>
   );

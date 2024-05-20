@@ -58,10 +58,8 @@ const PresenterProvider = ({ children }) => {
           parent,
         });
 
-        console.log(displays);
-
         // Open the DevTools.
-        win.webContents.openDevTools();
+        // win.webContents.openDevTools();
 
         win.loadURL(url.replace(/#.*$/, `#${PATHS.CAST_PAGE}`));
 

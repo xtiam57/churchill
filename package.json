@@ -24,8 +24,8 @@
     "react-test": "react-scripts test",
     "react-eject": "react-scripts eject",
     "generate": "node generate.js",
-    "build": "rimraf dist && yarn react-build && electron-builder",
-    "start": "concurrently \"set BROWSER=none && yarn run react-start\" \"wait-on http://localhost:3006 && set ELECTRON_START_URL=http://localhost:3006 && electron .\""
+    "build": "rimraf dist && cross-env REACT_APP_VERSION=$npm_package_version yarn react-build && electron-builder",
+    "start": "concurrently \"set BROWSER=none && cross-env REACT_APP_VERSION=$npm_package_version yarn run react-start\" \"wait-on http://localhost:3006 && set ELECTRON_START_URL=http://localhost:3006 && electron .\""
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -38,6 +38,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "bootstrap": "^4.6.0",
+    "cross-env": "^7.0.3",
     "framer-motion": "^3.7.0",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.3",

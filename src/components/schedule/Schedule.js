@@ -1,7 +1,6 @@
 import { AlarmAdd, Close } from '@mui/icons-material';
 import { Sidebar } from 'components';
 import { useSettingsSidebar } from 'hooks';
-import React from 'react';
 import { Button, Col, Form } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
 import { toBase64 } from 'utils';
@@ -191,15 +190,14 @@ export function Schedule() {
                           }}
                         >
                           {SETTINGS_OPTIONS.DAYS.map(
-                            ({ value, label, divider }) => (
-                              <React.Fragment key={value}>
-                                {divider ? (
-                                  <hr />
-                                ) : (
-                                  <option value={value}>{label}</option>
-                                )}
-                              </React.Fragment>
-                            )
+                            ({ value, label, divider }) =>
+                              divider ? (
+                                <hr key={value} />
+                              ) : (
+                                <option key={value} value={value}>
+                                  {label}
+                                </option>
+                              )
                           )}
                         </Form.Control>
                       </Form.Group>
@@ -320,15 +318,14 @@ export function Schedule() {
                       }}
                     >
                       {SETTINGS_OPTIONS.REPEAT_EVERY.map(
-                        ({ value, label, divider }) => (
-                          <React.Fragment key={value}>
-                            {divider ? (
-                              <hr />
-                            ) : (
-                              <option value={value}>{label}</option>
-                            )}
-                          </React.Fragment>
-                        )
+                        ({ value, label, divider }) =>
+                          divider ? (
+                            <hr key={value} />
+                          ) : (
+                            <option key={value} value={value}>
+                              {label}
+                            </option>
+                          )
                       )}
                     </Form.Control>
                   </Form.Group>
@@ -382,7 +379,6 @@ export function Schedule() {
                         disabled={!schedule.active}
                         onChange={({ target }) => {
                           toBase64(target.files[0]).then((img) => {
-                            console.log(img);
                             handleSchedulesChangeValue(
                               'background',
                               img,

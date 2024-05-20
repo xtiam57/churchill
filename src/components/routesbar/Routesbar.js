@@ -1,6 +1,7 @@
 import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { NavLink, useLocation } from 'react-router-dom';
 import { PATHS, routes } from 'router';
+import { version } from 'version';
 import { RoutesbarStyled } from './styled';
 
 export function Routesbar() {
@@ -33,6 +34,8 @@ export function Routesbar() {
             </li>
           ))}
       </ul>
+
+      <small className="w-100 text-center py-2">{version}</small>
     </RoutesbarStyled>
   );
 }
