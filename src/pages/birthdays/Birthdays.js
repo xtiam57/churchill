@@ -103,7 +103,7 @@ export default function BirthdaysPage() {
         <List>
           {count ? (
             <List.Item>
-              <List.Title className="text-warning">listado completo</List.Title>
+              <List.Title>listado completo</List.Title>
             </List.Item>
           ) : null}
 
