@@ -1,59 +1,94 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { Time } from 'utils';
 
-export function useCountdown(disabled, callback = () => {}) {
+export function useCountdown(disabled) {
   const audio = useMemo(() => new Audio('./audio/beep.mp3'), []);
-  const [minutes, setMinutes] = useState(0);
-  const [seconds, setSeconds] = useState(0);
-  const [time, setTime] = useState(Time.formatTime(minutes, seconds));
-  const [running, setRunning] = useState(false);
+
+  const [state, setState] = useState({
+    minutes: 0,
+    seconds: 0,
+    time: Time.formatTime(0, 0),
+    running: false,
+    message: null,
+  });
 
   useEffect(() => {
     let interval = setInterval(() => {
-      setTime(Time.formatTime(minutes, seconds));
+      setState((prev) => {
+        const { minutes, seconds, running } = prev;
 
-      if (seconds > 0) {
-        setSeconds(seconds - 1);
-      }
-
-      if (seconds === 0) {
-        if (minutes === 0) {
-          setTime(Time.formatTime(0, 0));
-          if (running) {
-            audio.play();
-            setRunning(false);
+        if (running) {
+          if (seconds > 0) {
+            return {
+              minutes,
+              seconds: seconds - 1,
+              time: Time.formatTime(minutes, seconds - 1),
+              running,
+              message: {
+                id: 'TEMP',
+                text: `<strong class="fs-timer">${Time.formatTime(
+                  minutes,
+                  seconds - 1
+                )}</strong>`,
+                type: 'corner',
+              },
+            };
           }
-        } else {
-          setMinutes(minutes - 1);
-          setSeconds(59);
+
+          if (minutes === 0) {
+            audio.play();
+
+            return {
+              minutes: 0,
+              seconds: 0,
+              time: Time.formatTime(0, 0),
+              running: false,
+              message: {
+                id: 'TEMP',
+                text: `<strong class="fs-timer">${Time.formatTime(
+                  0,
+                  0
+                )}</strong>`,
+                type: 'corner',
+              },
+            };
+          }
+
+          return {
+            minutes: minutes - 1,
+            seconds: 59,
+            time: Time.formatTime(minutes - 1, 59),
+            running,
+            message: {
+              id: 'TEMP',
+              text: `<strong class="fs-timer">${Time.formatTime(
+                minutes - 1,
+                59
+              )}</strong>`,
+              type: 'corner',
+            },
+          };
         }
-      }
+
+        return prev;
+      });
     }, 1000);
 
-    callback(
-      disabled
-        ? null
-        : {
-            id: 'TEMP',
-            text: `<strong class="fs-timer">${time}</strong>`,
-            type: 'corner',
-          }
-    );
+    return () => clearInterval(interval);
 
-    return () => {
-      clearInterval(interval);
-    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [minutes, seconds, disabled, running]);
+  }, []);
 
   const stop = useCallback(() => {
     audio.pause();
     audio.currentTime = 0;
 
-    setMinutes(0);
-    setSeconds(0);
-    setTime(Time.formatTime(0, 0));
-    setRunning(false);
+    setState({
+      minutes: 0,
+      seconds: 0,
+      time: Time.formatTime(0, 0),
+      running: false,
+    });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -61,12 +96,20 @@ export function useCountdown(disabled, callback = () => {}) {
     audio.pause();
     audio.currentTime = 0;
 
-    setMinutes(initialMinutes);
-    setSeconds(initialSeconds);
-    setTime(Time.formatTime(initialMinutes, initialSeconds));
-    setRunning(true);
+    setState({
+      minutes: initialMinutes,
+      seconds: initialSeconds,
+      time: Time.formatTime(initialMinutes, initialSeconds),
+      running: true,
+    });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return { start, stop, time, running };
+  return {
+    start,
+    stop,
+    time: state.time,
+    running: state.running,
+    message: disabled ? null : state.message,
+  };
 }

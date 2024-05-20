@@ -13,9 +13,8 @@ export function Countdown() {
 
   const [minutes, setMinutes] = useState(1);
   const [disabled, setDisabled] = useState(true);
-  const { time, running, start, stop } = useCountdown(disabled, (msg) =>
-    setCountdown(msg)
-  );
+
+  const { time, running, start, stop, message } = useCountdown(disabled);
 
   const handleIncrease = useCallback(() => {
     setMinutes((prev) => (prev === 1 ? 5 : Math.min(60, prev + 5)));
@@ -30,6 +29,10 @@ export function Countdown() {
       setDisabled(true);
     }
   }, [running]);
+
+  useEffect(() => {
+    setCountdown(message);
+  }, [message]);
 
   return (
     <CountdownStyled>

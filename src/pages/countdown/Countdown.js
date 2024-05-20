@@ -22,9 +22,7 @@ const useSettings = createPersistedState(BROADCAST.SETTINGS);
 export default function StopwatchPage() {
   const [, setMessage] = useBroadcast(BROADCAST.INITIAL_CHANNEL);
   const [showLogo, setShowLogo] = useState(true);
-  const { time, start, stop } = useCountdown(showLogo, (msg) =>
-    setMessage(msg)
-  );
+  const { time, start, stop, message } = useCountdown(showLogo);
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const { presenting } = usePresenter();
 
@@ -38,6 +36,10 @@ export default function StopwatchPage() {
       setShowLogo(true);
     }
   }, [presenting]);
+
+  useEffect(() => {
+    setMessage(message);
+  }, [message]);
 
   return (
     <Wrapper>
