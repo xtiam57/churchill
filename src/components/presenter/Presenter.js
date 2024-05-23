@@ -15,15 +15,16 @@ export function Presenter({
   text = '',
   subtext = null,
   book = '',
+  processedText = null,
   ...rest
 }) {
   const handleFontScale = () => {
     setTimeout(() => {
       resizeText({
-        element: document.getElementById('presenter-text'),
-        step: 5,
+        element: document.getElementById('presenter-html'),
+        step: 10,
         minSize: 50,
-        maxSize: 310,
+        maxSize: 400,
         unit: '%',
       });
     });
@@ -38,9 +39,11 @@ export function Presenter({
       <AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
         <motion.p
           key={id}
-          id="presenter-text"
+          id="presenter-html"
           dangerouslySetInnerHTML={{
-            __html: process(text, subtext, book),
+            __html: processedText
+              ? processedText
+              : process(text, subtext, book),
           }}
           {...textMotion}
         />

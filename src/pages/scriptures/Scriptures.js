@@ -146,6 +146,7 @@ function ScripturesView() {
           live={!showLogo}
           text={current.text}
           subtext={current.subtext}
+          processedText={current.processedText}
           grayscale={presenting && showLogo}
           {...settings}
         />

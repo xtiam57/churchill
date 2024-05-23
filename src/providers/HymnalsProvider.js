@@ -40,7 +40,7 @@ function getWords(text) {
   return str.split(' ').length;
 }
 
-function split(lines, array, id, index, title, divider = 2) {
+function split(lines, array, id, book, index, title, divider = 2) {
   let iteration = 0;
   let c = 0;
 
@@ -53,6 +53,7 @@ function split(lines, array, id, index, title, divider = 2) {
         index: index++,
         title: iteration === 0 ? title : null,
         text: lines.slice(from, to).join('/n'),
+        book,
       })
     );
     iteration++;
@@ -61,7 +62,7 @@ function split(lines, array, id, index, title, divider = 2) {
   return index;
 }
 
-function splitLines(id, title, text, array, index) {
+function splitLines(id, title, text, book, array, index) {
   // (6-8 lines per slide, no more than 30 words per slide).
 
   const MAX_LINES_PER_SLIDE = 5;
@@ -85,19 +86,20 @@ function splitLines(id, title, text, array, index) {
           title,
           text: text,
           index: index++,
+          book,
         })
       );
     } else {
-      index = split(lines, array, id, index, title, 2);
+      index = split(lines, array, id, book, index, title, 2);
     }
   } else {
     if (totalWords <= MAX_WORDS_PER_SLIDE) {
-      index = split(lines, array, id, index, title, 4);
+      index = split(lines, array, id, book, index, title, 4);
     } else {
       if (itFitsWords) {
-        index = split(lines, array, id, index, title, 4);
+        index = split(lines, array, id, book, index, title, 4);
       } else {
-        index = split(lines, array, id, index, title, 2);
+        index = split(lines, array, id, book, index, title, 2);
       }
     }
   }
@@ -144,22 +146,36 @@ function HymnalsProvider({ children }) {
             id: `${id}_${slideIndex}`,
             title: `${isNotHymnal ? `Coro #${number}` : `Himno #${number}`}`,
             text: title,
-            book: book,
+            book,
             index: slideIndex++,
           })
         );
 
         if (startsWithChorus) {
           text += `${chorus} /n/n`;
-          slideIndex = splitLines(id, '(Coro)', chorus, slides, slideIndex);
+          slideIndex = splitLines(
+            id,
+            '(Coro)',
+            chorus,
+            null,
+            slides,
+            slideIndex
+          );
         }
 
         stanzas.forEach((stanza, i) => {
-          slideIndex = splitLines(id, null, stanza, slides, slideIndex);
+          slideIndex = splitLines(id, null, stanza, null, slides, slideIndex);
           text += `${stanza} /n/n`;
 
           if (chorus) {
-            slideIndex = splitLines(id, '(Coro)', chorus, slides, slideIndex);
+            slideIndex = splitLines(
+              id,
+              '(Coro)',
+              chorus,
+              null,
+              slides,
+              slideIndex
+            );
 
             if (i === 0) {
               text += `(CORO) /n${chorus} /n/n`;
@@ -169,7 +185,14 @@ function HymnalsProvider({ children }) {
 
         if (repeatChorusAtEnd) {
           text += chorus;
-          slideIndex = splitLines(id, '(Coro)', chorus, slides, slideIndex);
+          slideIndex = splitLines(
+            id,
+            '(Coro)',
+            chorus,
+            null,
+            slides,
+            slideIndex
+          );
         }
 
         slides.push(
@@ -194,8 +217,6 @@ function HymnalsProvider({ children }) {
           tags,
           authors,
           length: slides.length,
-          firstSlide: slides[0],
-          lastSlide: slides[slides.length - 1],
           book,
         };
       }

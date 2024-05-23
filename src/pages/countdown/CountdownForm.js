@@ -20,7 +20,7 @@ export function CountdownForm({ onSubmit = () => {} }) {
     <Form noValidate validated={true} onSubmit={handleSubmit}>
       <Form.Row>
         <Form.Group hasValidation as={Col}>
-          <Form.Label className="text-warning text-small">Minutos</Form.Label>
+          <Form.Label className="text-white text-small">Minutos</Form.Label>
           <Form.Control
             type="number"
             value={minutes}
@@ -33,7 +33,7 @@ export function CountdownForm({ onSubmit = () => {} }) {
         </Form.Group>
 
         <Form.Group hasValidation as={Col}>
-          <Form.Label className="text-warning text-small">Segundos</Form.Label>
+          <Form.Label className="text-white text-small">Segundos</Form.Label>
           <Form.Control
             type="number"
             value={seconds}
@@ -44,9 +44,16 @@ export function CountdownForm({ onSubmit = () => {} }) {
           />
         </Form.Group>
       </Form.Row>
+
       <Form.Row>
         <Col>
-          <Button type="submit" className="mb-4" block variant="primary">
+          <Button
+            type="submit"
+            className="mb-4"
+            size="lg"
+            block
+            variant="primary"
+          >
             <PlayArrow /> Iniciar
           </Button>
         </Col>

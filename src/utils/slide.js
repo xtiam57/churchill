@@ -1,3 +1,4 @@
+import { process } from 'components/presenter/helper';
 import { generateGUID } from './generateGUID';
 
 const Slide = {};
@@ -8,6 +9,7 @@ Slide.create = ({
   title = '',
   text = '',
   subtext = null,
+  book = null,
   bg = null,
   ...rest
 }) => {
@@ -18,10 +20,9 @@ Slide.create = ({
   return {
     id,
     index,
-    text,
-    subtext,
     length,
     bg,
+    processedText: process(text, subtext, book),
     ...rest,
   };
 };

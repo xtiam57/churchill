@@ -1,5 +1,6 @@
-import React, { useState, useMemo } from 'react';
 import json from 'assets/data/bible';
+import { process } from 'components/presenter/helper';
+import React, { useMemo, useState } from 'react';
 
 const ScripturesContext = React.createContext({});
 
@@ -17,13 +18,19 @@ function ScripturesProvider({ children }) {
     return data.reduce((verses, book) => {
       const chaptersExpanded = book.content.map((chapter, chapterIndex) => {
         return chapter.map((verse, verseIndex) => {
+          const text = verse.replaceAll('/n', '<br/>');
+          const subtext = `${book.shortTitle} ${chapterIndex + 1}:${
+            verseIndex + 1
+          }`;
+
           return {
             id: `V${book.number}_${chapterIndex + 1}_${verseIndex + 1}`,
             // Verse data
             index: index++,
             title: `${book.shortTitle} ${chapterIndex + 1}:${verseIndex + 1}`,
-            text: verse.replaceAll('/n', '<br/>'),
-            subtext: `${book.shortTitle} ${chapterIndex + 1}:${verseIndex + 1}`,
+            text,
+            subtext,
+            processedText: process(text, subtext),
             type: 'verse',
             // Metadata
             bookNumber: book.number,
@@ -67,4 +74,4 @@ function ScripturesProvider({ children }) {
   );
 }
 
-export { ScripturesProvider, ScripturesContext };
+export { ScripturesContext, ScripturesProvider };

@@ -48,7 +48,7 @@ export const PresenterStyled = styled.section`
   } */
 
   p {
-    font-size: calc(1.4em + 3vh);
+    /* font-size: calc(3.8em + 3vh); */
     margin: 0;
     color: ${({ textcolor }) => textcolor || '#000'};
     width: 100%;
@@ -75,7 +75,7 @@ export const PresenterStyled = styled.section`
       display: block;
       color: ${({ subtextcolor }) => subtextcolor || '#007bff'};
       border: solid 2px ${({ subtextcolor }) => subtextcolor || '#007bff'};
-      font-size: 0.32em;
+      font-size: 0.35em;
       margin-top: 1.5rem;
       margin-left: auto;
       margin-right: auto;

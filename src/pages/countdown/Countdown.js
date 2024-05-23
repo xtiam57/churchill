@@ -27,11 +27,6 @@ export default function StopwatchPage() {
   const { presenting } = usePresenter();
 
   useEffect(() => {
-    return () => setMessage(null);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  useEffect(() => {
     if (!presenting) {
       setShowLogo(true);
     }
@@ -40,6 +35,11 @@ export default function StopwatchPage() {
   useEffect(() => {
     setMessage(message);
   }, [message]);
+
+  useEffect(() => {
+    return () => setMessage(null);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <Wrapper>

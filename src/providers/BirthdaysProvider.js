@@ -8,7 +8,7 @@ const BirthdaysProvider = ({ children }) => {
   const [now] = useState(new Date());
 
   const { hymnals } = useContext(HymnalsContext);
-  const bDaySong = useMemo(() => hymnals[BIRTHDAY.ANTHEMN_INDEX], [hymnals]);
+  const bDaySong = useMemo(() => hymnals[BIRTHDAY.HYMNAL_INDEX], [hymnals]);
 
   return (
     <BirthdaysContext.Provider value={{ now, bDaySong }}>

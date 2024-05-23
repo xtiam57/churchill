@@ -93,6 +93,7 @@ export const Slider = forwardRef(
           text={slide?.text}
           subtext={slide?.subtext}
           book={slide?.book}
+          processedText={slide?.processedText}
           bg={slide?.bg}
           grayscale={grayscale}
           leftshadow={loop ? true : slide?.index !== 0}

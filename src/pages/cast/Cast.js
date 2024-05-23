@@ -28,6 +28,7 @@ export default function CastPage() {
             text={message.text}
             subtext={message.subtext}
             book={message.book}
+            processedText={message.processedText}
             bg={message.bg}
             {...settings}
           />

@@ -10,7 +10,7 @@ export const MOVEMENT = {
 };
 
 export const BIRTHDAY = {
-  ANTHEMN_INDEX: 508,
+  HYMNAL_INDEX: 508,
 };
 
 export const MAX_BOOKMARKS = 15;
@@ -93,7 +93,7 @@ const SCHEDULES_AND_EVENTS = [
     type: 'SCHEDULE',
     background: null,
     date: null,
-    active: true,
+    active: false,
     repeat: 0,
   },
   {
@@ -104,7 +104,7 @@ const SCHEDULES_AND_EVENTS = [
     type: 'SCHEDULE',
     background: null,
     date: null,
-    active: true,
+    active: false,
     repeat: 0,
   },
   {
@@ -115,7 +115,7 @@ const SCHEDULES_AND_EVENTS = [
     type: 'SCHEDULE',
     background: null,
     date: null,
-    active: true,
+    active: false,
     repeat: 0,
   },
   {
@@ -126,7 +126,7 @@ const SCHEDULES_AND_EVENTS = [
     type: 'SCHEDULE',
     background: null,
     date: null,
-    active: true,
+    active: false,
     repeat: 0,
   },
   {
@@ -137,7 +137,7 @@ const SCHEDULES_AND_EVENTS = [
     type: 'POSTER',
     background: TEST_EVENT_POSTER,
     date: null,
-    active: true,
+    active: false,
     repeat: 0,
   },
   {
