@@ -112,7 +112,7 @@ export function Countdown() {
                 minutes % 1 !== 0
               }
               onClick={() => {
-                start(minutes, seconds);
+                start(minutes, seconds + 1);
                 setDisabled(false);
               }}
             >

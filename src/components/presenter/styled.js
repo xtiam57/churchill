@@ -9,7 +9,7 @@ export const PresenterStyled = styled.section`
   overflow: hidden;
   height: 100%;
   width: 100%;
-  padding: 4em;
+  padding: 4% 6%;
   text-align: center;
   border: 1px solid var(--dark);
   filter: ${({ grayscale }) => `grayscale(${grayscale ? 1 : 0})`};
@@ -26,6 +26,10 @@ export const PresenterStyled = styled.section`
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (min-width: 1900px) {
+    padding: 4% 10%;
+  }
 
   /* &:before,
   &:after {
@@ -48,15 +52,16 @@ export const PresenterStyled = styled.section`
   } */
 
   p {
-    /* font-size: calc(3.8em + 3vh); */
     margin: 0;
     color: ${({ textcolor }) => textcolor || '#000'};
     width: 100%;
+    text-wrap: balance;
 
     strong {
       color: ${({ titlecolor }) => titlecolor || '#007bff'} !important;
       font-family: ${({ font }) =>
         font === 'Roca + Poppins' ? 'Roca' : font || DEFAULT_SYSTEM_FONT};
+      text-wrap: balance;
     }
 
     b {
@@ -69,6 +74,12 @@ export const PresenterStyled = styled.section`
       color: ${({ subtextcolor }) => subtextcolor || '#007bff'};
       font-size: 0.6em;
       margin-top: 1rem;
+    }
+
+    small.day {
+      display: inline-block;
+      color: ${({ subtextcolor }) => subtextcolor || '#007bff'};
+      font-size: 0.6em;
     }
 
     small.book {

@@ -7,14 +7,12 @@ export const CountdownStyled = styled.div`
   border-radius: 0.25rem;
   overflow: hidden;
   height: 38px;
-  /* border: 1px solid var(--light); */
 
   .display {
     font-size: 90%;
     padding: 0 1rem;
     background-color: var(--dark);
     color: #fff;
-    /* color: var(--light); */
     display: flex;
     justify-content: center;
     align-items: center;

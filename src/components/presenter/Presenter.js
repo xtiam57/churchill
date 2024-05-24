@@ -23,8 +23,8 @@ export function Presenter({
       resizeText({
         element: document.getElementById('presenter-html'),
         step: 10,
-        minSize: 50,
-        maxSize: 400,
+        minSize: 60,
+        maxSize: 430,
         unit: '%',
       });
     });

@@ -37,13 +37,16 @@ BirthdayHelper.getSlide = (
   return bdays.length
     ? Slide.create({
         id: `BS_${frame}_${now.getTime()}${suffix}`,
-        title: '<span class="fs-lg">🥳</span>/n¡Feliz Cumpleaños!',
+        title: '<span class="fs-lg">🎂</span>/n¡Feliz Cumpleaños!',
         text: bdays
           .map(({ name, day, month }) => {
-            return `${name} <i>(${Time.formatBirthday(day, month)})</i>`;
+            return `${name} <small class="day">(${Time.formatBirthday(
+              day,
+              month
+            )})</small>`;
           })
           .join('/n'),
-        // subtext: `Deseamos que Dios le${bdays.length > 1 ? 's' : ''} bendiga.`,
+        // subtext: `Que Dios le${bdays.length > 1 ? 's' : ''} bendiga.`,
         type: 'birthday',
         count: bdays.length,
       })
