@@ -1,7 +1,7 @@
-import { Add, PlayArrow, Remove, Restore, Stop } from '@mui/icons-material';
+import { PlayArrow, Restore, Stop } from '@mui/icons-material';
 import { useCountdown } from 'hooks';
-import { useCallback, useEffect, useState } from 'react';
-import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { useEffect, useState } from 'react';
+import { Button, Form, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
 import { BROADCAST } from 'values';
 import { CountdownStyled } from './styled';
@@ -12,17 +12,10 @@ export function Countdown() {
   const [, setCountdown] = useBroadcastCountdown(BROADCAST.INITIAL_COUNTDOWN);
 
   const [minutes, setMinutes] = useState(1);
+  const [seconds, setSeconds] = useState(0);
   const [disabled, setDisabled] = useState(true);
 
   const { time, running, start, stop, message } = useCountdown(disabled);
-
-  const handleIncrease = useCallback(() => {
-    setMinutes((prev) => (prev === 1 ? 5 : Math.min(60, prev + 5)));
-  }, []);
-
-  const handleDecrease = useCallback(() => {
-    setMinutes((prev) => Math.max(1, prev - 5));
-  }, []);
 
   useEffect(() => {
     if (!running) {
@@ -43,7 +36,8 @@ export function Countdown() {
             overlay={<Tooltip>Temporizador</Tooltip>}
           >
             <div className="display">
-              <Restore fontSize="small" /> {time}
+              <Restore fontSize="small" />{' '}
+              <div className="text-light pl-1">{time}</div>
             </div>
           </OverlayTrigger>
 
@@ -66,49 +60,65 @@ export function Countdown() {
         </>
       ) : (
         <>
-          <Button
-            size="sm"
-            variant="dark"
-            className="flat-right"
-            onClick={handleDecrease}
-          >
-            <Remove />
-          </Button>
           <OverlayTrigger
             placement="bottom"
             overlay={<Tooltip>Temporizador</Tooltip>}
           >
-            <div className="display">
-              <Restore fontSize="small" /> {minutes} min
+            <div className="display time">
+              <Restore fontSize="small" />
             </div>
           </OverlayTrigger>
 
-          <div className="btn-group">
+          <Form.Control
+            type="number"
+            value={minutes}
+            onChange={({ target }) => setMinutes(+target.value)}
+            required
+            min="0"
+            max="59"
+            step="1"
+            className="flat-left flat-right text-center"
+          />
+
+          <div className="display small">min</div>
+
+          <Form.Control
+            type="number"
+            value={seconds}
+            onChange={({ target }) => setSeconds(+target.value)}
+            required
+            min="0"
+            max="59"
+            step="1"
+            className="flat-left flat-right text-center"
+          />
+
+          <div className="display pl-0">seg</div>
+
+          {/* Play */}
+          <OverlayTrigger
+            placement="bottom"
+            overlay={<Tooltip>Empezar</Tooltip>}
+          >
             <Button
               size="sm"
-              variant="dark"
+              variant="light"
               className="flat-left"
-              onClick={handleIncrease}
+              disabled={
+                seconds > 59 ||
+                minutes > 59 ||
+                (seconds === 0 && minutes === 0) ||
+                seconds % 1 !== 0 ||
+                minutes % 1 !== 0
+              }
+              onClick={() => {
+                start(minutes, seconds);
+                setDisabled(false);
+              }}
             >
-              <Add />
+              <PlayArrow />
             </Button>
-
-            <OverlayTrigger
-              placement="bottom"
-              overlay={<Tooltip>Empezar</Tooltip>}
-            >
-              <Button
-                size="sm"
-                variant="light"
-                onClick={() => {
-                  start(minutes, 1);
-                  setDisabled(false);
-                }}
-              >
-                <PlayArrow />
-              </Button>
-            </OverlayTrigger>
-          </div>
+          </OverlayTrigger>
         </>
       )}
     </CountdownStyled>

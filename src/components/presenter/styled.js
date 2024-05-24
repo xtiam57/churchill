@@ -128,44 +128,45 @@ export const CornerStyled = styled.section`
   font-family: ${({ font }) =>
     font === 'Roca + Poppins' ? 'Poppins' : font || DEFAULT_SYSTEM_FONT};
   position: absolute;
-  bottom: 3%;
-  right: 2%;
+  bottom: 4%;
+  right: 4%;
 
   p {
-    font-size: calc(0.25em + 2.5vh);
+    font-size: calc(0.5em + 2.5vh);
     margin: 0;
     color: ${({ textcolor }) => textcolor || '#000'};
     width: 100%;
     line-height: 1;
+    text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.8);
   }
 
   &.bottom-left {
-    bottom: 3%;
-    left: 2%;
+    bottom: 4%;
+    left: 4%;
   }
   &.top-left {
-    top: 3%;
+    top: 4%;
     bottom: auto;
-    left: 2%;
+    left: 4%;
   }
   &.bottom-center {
-    bottom: 3%;
+    bottom: 4%;
     right: 50%;
     transform: translateX(50%);
   }
   &.top-center {
-    top: 3%;
+    top: 4%;
     bottom: auto;
     right: 50%;
     transform: translateX(50%);
   }
   &.bottom-right {
-    bottom: 3%;
-    right: 2%;
+    bottom: 4%;
+    right: 4%;
   }
   &.top-right {
-    top: 3%;
+    top: 4%;
     bottom: auto;
-    right: 2%;
+    right: 4%;
   }
 `;

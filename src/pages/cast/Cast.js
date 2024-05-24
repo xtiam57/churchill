@@ -43,7 +43,11 @@ export default function CastPage() {
         )}
 
         {countdown && (
-          <Corner id={countdown.id} text={countdown.text} {...settings} />
+          <Corner
+            id={countdown.id}
+            text={countdown.processedText}
+            {...settings}
+          />
         )}
       </Wrapper>
     </>

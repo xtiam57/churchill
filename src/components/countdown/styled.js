@@ -13,11 +13,39 @@ export const CountdownStyled = styled.div`
     font-size: 90%;
     padding: 0 1rem;
     background-color: var(--dark);
-    color: var(--light);
+    color: #fff;
+    /* color: var(--light); */
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
+
+    &.small {
+      padding: 0;
+    }
+
+    &.time {
+      background-color: #000;
+    }
+  }
+
+  input {
+    background-color: var(--dark);
+    color: var(--light);
+    width: 50px;
+    border: none;
+    outline: none;
+
+    :focus {
+      background-color: var(--dark);
+      color: var(--light);
+    }
+
+    ::-webkit-outer-spin-button,
+    ::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
   }
 
   .flat-left {
