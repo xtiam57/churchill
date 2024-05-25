@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import { useEffect } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { generateGUID } from 'utils';
 import { process, resizeText } from './helper';
 import { PresenterStyled } from './styled';
@@ -10,6 +10,46 @@ const textMotion = {
   exit: { opacity: 0, scale: 0.25 },
 };
 
+function getConf(width) {
+  // 4K screens
+  if (width > 2560) {
+    return {
+      minSize: 180,
+      maxSize: 520,
+    };
+  }
+
+  // 2K screens
+  if (width > 1920) {
+    return {
+      minSize: 140,
+      maxSize: 470,
+    };
+  }
+
+  // HD screens
+  if (width > 1280) {
+    return {
+      minSize: 100,
+      maxSize: 410,
+    };
+  }
+
+  // 720p screens
+  if (width > 1024) {
+    return {
+      minSize: 50,
+      maxSize: 350,
+    };
+  }
+
+  // Small screens
+  return {
+    minSize: 30,
+    maxSize: 310,
+  };
+}
+
 export function Presenter({
   id = generateGUID(),
   text = '',
@@ -18,24 +58,30 @@ export function Presenter({
   processedText = null,
   ...rest
 }) {
-  const handleFontScale = () => {
+  const divRef = useRef(null);
+  const [divWidth, setDivWidth] = useState(1024);
+
+  const handleFontScale = useCallback(() => {
     setTimeout(() => {
       resizeText({
         element: document.getElementById('presenter-html'),
-        step: 10,
-        minSize: 60,
-        maxSize: 430,
         unit: '%',
+        step: 10,
+        ...getConf(divWidth),
       });
     });
-  };
-
-  useEffect(handleFontScale, []);
+  }, [divWidth]);
 
   const handleExitComplete = () => handleFontScale();
 
+  useEffect(() => {
+    setDivWidth(divRef.current.clientWidth);
+  }, []);
+
+  useEffect(handleFontScale, [handleFontScale]);
+
   return (
-    <PresenterStyled {...rest}>
+    <PresenterStyled ref={divRef} {...rest}>
       <AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
         <motion.p
           key={id}

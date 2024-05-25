@@ -1,5 +1,5 @@
 - Peticiones de oraciones
 - Exportar programa a PDF
 - Video y laminas (imagenes)
-- Importar lista de cumpleaños
 Pero lo que si es que cuando exporto y quiero importar tengo que borrar las lineas de Broadcast_message  las tengo que borrar porque sale error si nos las borro
+- Ir a una estrofa directamente

@@ -1,6 +1,6 @@
 {
   "name": "churchill",
-  "version": "4.1.8",
+  "version": "4.1.9",
   "description": "Sistema de proyección para Iglesias.",
   "author": "xtiam57",
   "private": true,
@@ -24,8 +24,9 @@
     "react-test": "react-scripts test",
     "react-eject": "react-scripts eject",
     "generate": "node generate.js",
-    "build": "rimraf dist && cross-env REACT_APP_VERSION=$npm_package_version yarn react-build && electron-builder",
-    "start": "concurrently \"set BROWSER=none && cross-env REACT_APP_VERSION=$npm_package_version yarn run react-start\" \"wait-on http://localhost:3006 && set ELECTRON_START_URL=http://localhost:3006 && electron .\""
+    "build": "rimraf dist && cross-env REACT_APP_VERSION=$npm_package_version yarn react-build && electron-builder && yarn post-build",
+    "start": "concurrently \"set BROWSER=none && cross-env REACT_APP_VERSION=$npm_package_version yarn run react-start\" \"wait-on http://localhost:3006 && set ELECTRON_START_URL=http://localhost:3006 && electron .\"",
+    "post-build": "node post-build.js"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -41,6 +42,7 @@
     "cross-env": "^7.0.3",
     "file-saver": "^2.0.5",
     "framer-motion": "^3.7.0",
+    "fs-extra": "^11.2.0",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.3",
     "react-bootstrap-typeahead": "^5.1.4",
