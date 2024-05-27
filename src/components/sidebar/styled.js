@@ -7,6 +7,7 @@ export const SidebarStyled = styled.aside`
   max-width: ${({ size = 320 }) => `${size}px`};
   padding: 30px;
   overflow-y: auto;
+  overflow-x: hidden;
   z-index: ${({ closable }) => (closable ? 3 : 4)};
   box-shadow: -2px 0 15px 0 rgba(0, 0, 0, 1);
 
