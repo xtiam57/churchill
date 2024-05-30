@@ -88,6 +88,13 @@ import bg12 from 'assets/images/bg/xmas.jpg';
 import bg20 from 'assets/images/bg/xmas2.jpg';
 import bg21 from 'assets/images/bg/xmas3.jpg';
 
+import b1 from 'assets/images/bg/1.jpg';
+import b2 from 'assets/images/bg/2.jpg';
+import b3 from 'assets/images/bg/3.jpg';
+import b4 from 'assets/images/bg/4.jpg';
+import b5 from 'assets/images/bg/5.jpg';
+import b6 from 'assets/images/bg/6.jpg';
+
 export const BACKGROUNDS = [
   { value: '', label: 'Color Sólido' },
   { divider: true },
@@ -103,12 +110,15 @@ export const BACKGROUNDS = [
   { label: 'Amanecer 1', value: bg02 },
   { label: 'Amanecer 2', value: bg37 },
   { label: 'Amanecer 3', value: bg38 },
+  { label: 'Amanecer 4', value: b5 },
   { label: 'Arca', value: bg62 },
   { label: 'Arena', value: bg25 },
   { label: 'Atardecer 1', value: bg03 },
   { label: 'Atardecer 2', value: bg98 },
   { label: 'Biblia 1', value: bg57 },
   { label: 'Biblia 2', value: bg71 },
+  { label: 'Biblia 3', value: b2 },
+  { label: 'Biblia 4', value: b6 },
   { label: 'Boda', value: bg22 },
   { label: 'Boreal', value: bg34 },
   { label: 'Bosque 1', value: bg41 },
@@ -121,6 +131,7 @@ export const BACKGROUNDS = [
   { label: 'Cielo', value: bg59 },
   { label: 'Cruz 1', value: bg05 },
   { label: 'Cruz 2', value: bg72 },
+  { label: 'Cruz 3', value: b4 },
   { label: 'Cueva 2', value: bg55 },
   { label: 'Divertido', value: bg06 },
   { label: 'Espacio', value: bg60 },
@@ -145,6 +156,7 @@ export const BACKGROUNDS = [
   { label: 'Montañas 5', value: bg49 },
   { label: 'Montañas 6', value: bg50 },
   { label: 'Montañas 7', value: bg51 },
+  { label: 'Montañas 8', value: b1 },
   { label: 'Naturaleza', value: bg100 },
   { label: 'Navidad 1', value: bg01 },
   { label: 'Navidad 2', value: bg12 },
@@ -166,6 +178,7 @@ export const BACKGROUNDS = [
   { label: 'Plantas 1', value: bg53 },
   { label: 'Plantas 2', value: bg54 },
   { label: 'Plantas 3', value: bg101 },
+  { label: 'Plantas 4', value: b3 },
   { label: 'Resurreción', value: bg19 },
   { label: 'Río 1', value: bg88 },
   { label: 'Río 2', value: bg89 },

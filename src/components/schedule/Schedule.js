@@ -3,30 +3,19 @@ import { Sidebar } from 'components';
 import { useSettingsSidebar } from 'hooks';
 import { Button } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
+import { generateGUID } from 'utils';
 import { BROADCAST } from 'values';
 import { EntryContainer } from './EntryContainer';
 import { EntryList } from './EntryList';
 
 const useSchedule = createPersistedState(BROADCAST.SCHEDULES_AND_EVENTS);
 
-function uuidv4() {
-  return '10000000-1000-4000-8000-100000000000'.replace(/[018]/g, (c) =>
-    (
-      +c ^
-      (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (+c / 4)))
-    ).toString(16)
-  );
-}
-
 export function Schedule() {
   const { toggleSchedule, showingSchedule, setRefreshSchedules } =
     useSettingsSidebar();
 
   const [schedules, setSchedules] = useSchedule(
-    BROADCAST.INITIAL_SCHEDULES_AND_EVENTS.map((s) => ({
-      id: uuidv4(),
-      ...s,
-    }))
+    BROADCAST.INITIAL_SCHEDULES_AND_EVENTS
   );
 
   const handleSchedulesChangeValue = (name, value, index) => {
@@ -35,26 +24,9 @@ export function Schedule() {
     setRefreshSchedules([...schedules]);
   };
 
-  const handleDragEnd = (result) => {
-    if (!result.destination) {
-      return;
-    }
-
-    if (result.destination.index === result.source.index) {
-      return;
-    }
-
-    const newSchedules = [...schedules];
-    const [removed] = newSchedules.splice(result.source.index, 1);
-    newSchedules.splice(result.destination.index, 0, removed);
-
-    setSchedules(newSchedules);
-    setRefreshSchedules(newSchedules);
-  };
-
   const handleAdd = () => {
     schedules.push({
-      id: uuidv4(),
+      id: generateGUID(),
       name: '',
       day: 'Domingo',
       hour: '01:00',
@@ -65,6 +37,7 @@ export function Schedule() {
       active: true,
       repeat: 0,
     });
+
     setSchedules([...schedules]);
     setRefreshSchedules([...schedules]);
   };
@@ -73,6 +46,32 @@ export function Schedule() {
     schedules.splice(index, 1);
     setSchedules([...schedules]);
     setRefreshSchedules([...schedules]);
+  };
+
+  const handleMoveUp = (currentIndex) => {
+    if (currentIndex === 0) {
+      return;
+    }
+
+    const newSchedules = [...schedules];
+    const removed = newSchedules.splice(currentIndex, 1);
+    newSchedules.splice(currentIndex - 1, 0, removed[0]);
+
+    setSchedules(newSchedules);
+    setRefreshSchedules(newSchedules);
+  };
+
+  const handleMoveDown = (currentIndex) => {
+    if (currentIndex === schedules.length - 1) {
+      return;
+    }
+
+    const newSchedules = [...schedules];
+    const removed = newSchedules.splice(currentIndex, 1);
+    newSchedules.splice(currentIndex + 1, 0, removed[0]);
+
+    setSchedules(newSchedules);
+    setRefreshSchedules(newSchedules);
   };
 
   return (
@@ -104,11 +103,13 @@ export function Schedule() {
         <Close />
       </Button>
 
-      <EntryContainer onDragEnd={handleDragEnd}>
+      <EntryContainer>
         <EntryList
           onDelete={handleDelete}
           onChangeValue={handleSchedulesChangeValue}
           schedules={schedules}
+          onMoveUp={handleMoveUp}
+          onMoveDown={handleMoveDown}
         />
       </EntryContainer>
 

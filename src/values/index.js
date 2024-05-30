@@ -1,3 +1,4 @@
+import { generateGUID } from 'utils';
 import { TEST_EVENT_POSTER } from './event64';
 import { BACKGROUNDS } from './images';
 
@@ -86,6 +87,7 @@ const SETTINGS_INITIAL_STATE = {
 
 const SCHEDULES_AND_EVENTS = [
   {
+    id: generateGUID(),
     name: 'Escuela Dominical',
     day: 'Domingo',
     hour: '10:00',
@@ -97,6 +99,7 @@ const SCHEDULES_AND_EVENTS = [
     repeat: 0,
   },
   {
+    id: generateGUID(),
     name: 'Culto General Mañana',
     day: 'Domingo',
     hour: '11:00',
@@ -108,6 +111,7 @@ const SCHEDULES_AND_EVENTS = [
     repeat: 0,
   },
   {
+    id: generateGUID(),
     name: 'Culto General Noche',
     day: 'Domingo',
     hour: '06:30',
@@ -119,6 +123,7 @@ const SCHEDULES_AND_EVENTS = [
     repeat: 0,
   },
   {
+    id: generateGUID(),
     name: 'Reunión para "Ganar Almas"',
     day: 'Sábado',
     hour: '04:00',
@@ -130,6 +135,7 @@ const SCHEDULES_AND_EVENTS = [
     repeat: 0,
   },
   {
+    id: generateGUID(),
     name: 'Conferencia Misionera',
     day: 'Domingo',
     hour: '01:00',
@@ -141,6 +147,7 @@ const SCHEDULES_AND_EVENTS = [
     repeat: 0,
   },
   {
+    id: generateGUID(),
     name: '',
     day: 'Domingo',
     hour: '01:00',

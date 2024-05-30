@@ -55,7 +55,7 @@ export default function HomePage() {
         index: notices.length + index,
         tag: 'SCHEDULES_SUBITEM',
         type: 'notice_subitem',
-        title: entry.name ?? 'Sin título',
+        title: entry.name || 'Sin título',
         slides: [
           Slide.create({
             text: getScheduleText(entry),
@@ -191,7 +191,7 @@ export default function HomePage() {
             )
           )}
 
-          {schedulesSubs.length > 1 && (
+          {schedulesSubs.length > 0 && (
             <>
               <List.Item className="mt-4">
                 <List.Title>Listado de anuncios</List.Title>

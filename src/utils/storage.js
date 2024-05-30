@@ -18,13 +18,17 @@ Storage.getAll = () => {
   });
 };
 
-Storage.set = (key, value) => {
+Storage.set = (key, value, flat = false) => {
   const item = {
     value,
     timestamp: new Date().getTime(),
   };
 
-  localStorage.setItem(key, JSON.stringify(item));
+  if (flat) {
+    localStorage.setItem(key, JSON.stringify(value));
+  } else {
+    localStorage.setItem(key, JSON.stringify(item));
+  }
 };
 
 Storage.get = (key) => {

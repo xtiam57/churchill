@@ -372,5 +372,5 @@ select {
 .schedules-droppable-normal {
   background-color: rgb(255, 255, 255);
   padding: 0;
-  transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transition: 200ms ease-out;
 }
