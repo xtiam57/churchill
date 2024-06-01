@@ -23984,12 +23984,10 @@
   {
     "number": 8,
     "title": "PÓSTRATE",
-    "chorus": null,
+    "chorus": "Póstrate, Póstrate/nEs el Rey de las Edades, Póstrate/nEl Señor te salvó,/nAnte Su alto trono ve y postrate/nDe rodillas te humillas/nPara amarle más y más, póstrate.",
     "stanzas": [
       "1) Es un privilegio estar en Su presencia;/nMeditar en Él que proveyó mi fe/nAl mirarle veo Su asombrosa gloria,/nRecordando quien es Él me postraré.",
-      "2) Póstrate, Póstrate/nEs el Rey de las Edades, Póstrate/nEl Señor te salvó,/nAnte Su alto trono ve y postrate/nDe rodillas te humillas/nPara amarle más y más, póstrate.",
-      "3) En su mano está el poder que nos da vida;/nCon su voz toda creación apareció/nEs el Dios que mis plegarias siempre escucha,/nCuando humilde le venimos a adorar.",
-      "4) Adorad, Adorad/nAl Rey de las edades, Adorad/nA mi Dios mi Señor,/nExaltado en su trono, Adorad/nDe rodillas adoradle/nCon mi vida le amaré y le adoraré."
+      "2) En su mano fiel la creación sostiene,/ncon su voz habló y el universo fue;/nAun así oirá mi oración sencilla,/ncontemplando a mi Señor, me postraré."
     ],
     "startsWithChorus": false,
     "repeatChorusAtEnd": false,
@@ -23999,6 +23997,20 @@
   },
   {
     "number": 9,
+    "title": "ADORAD (VARIANTE DE PÓSTRATE)",
+    "chorus": "Adorad, Adorad/nA el Rey de las Edades, Adorad/nA mi Dios, mi Señor,/nexaltado en su trono, adorad;/nDe rodillas adoradle/ncon mi vida le amaré y adoraré.",
+    "stanzas": [
+      "1) Dios me invita a entrar en su presencia,/ny a convivir con mi dulce Salvador,/nmiro su poder y gran mangnificencia/nmi rodilla doblo en adoración.",
+      "2) En su mano está el poder que nos da vida;/nPor su voz toda creación apareció,/nEs el Dios que mis plegarias siempre escucha,/nCuando humildes le venimos a adorar."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 10,
     "title": "CRISTO LA ROCA",
     "chorus": "Es Cristo la Roca, el ancla de mi fe;/nlos males, lamentos, y halles de temor,/nterminan por siempre, con mi supremo Rey./nEs Jesucristo mi refugio.",
     "stanzas": [
@@ -24013,7 +24025,7 @@
     "book": "Apéndice"
   },
   {
-    "number": 10,
+    "number": 11,
     "title": "¡OH, AMOR DE DIOS!",
     "chorus": "Oh, amor de Dios, brotando está,/ninmensurable eternal;/npor las edades durará,/ninagotable raudal.",
     "stanzas": [
@@ -24028,7 +24040,7 @@
     "book": "Apéndice"
   },
   {
-    "number": 11,
+    "number": 12,
     "title": "LO QUE RESPIRA",
     "chorus": null,
     "stanzas": [
@@ -24046,7 +24058,7 @@
     "book": "Apéndice"
   },
   {
-    "number": 12,
+    "number": 13,
     "title": "COMO EL CIERVO",
     "chorus": "Solo Tú eres mi sostén,/n¿A quién iré si no sólo a Ti?/nYo te rindo mi vida entera,/npara siempre a Ti Señor.",
     "stanzas": [
@@ -24061,7 +24073,7 @@
     "book": "Apéndice"
   },
   {
-    "number": 13,
+    "number": 14,
     "title": "NOBLE SOSTÉN",
     "chorus": "Mi sostén es Jesús,/nnunca en la lucha desmayar podré./nMi sostén es Cristo Jesús,/nnunca en la lucha desmayar podré.",
     "stanzas": [
@@ -24076,7 +24088,7 @@
     "book": "Apéndice"
   },
   {
-    "number": 14,
+    "number": 15,
     "title": "REY EXALTADO",
     "chorus": "Rey exaltado en gloria/nes Cristo Jesús y le alabaré./nRey exaltado en gloria/nes Cristo y yo le alabaré.",
     "stanzas": [
@@ -24090,7 +24102,7 @@
     "book": "Apéndice"
   },
   {
-    "number": 15,
+    "number": 16,
     "title": "¡MAJESTAD!",
     "chorus": "Alabad, engrandecer su santo nombre/nAdorad, magnificad al gran Redentor./n¡Majestad! La gloria celebrad/ndel Salvador, Cristo Jesús, Rey y Señor.",
     "stanzas": [
@@ -24105,7 +24117,7 @@
     "book": "Apéndice"
   },
   {
-    "number": 16,
+    "number": 17,
     "title": "SOY SOLDADO DE JESÚS",
     "chorus": "Después de la batalla nos coronará,/n//Dios nos coronará///nDespués de la batalla nos coronará,/nen aquella santa Sion./nMás allá, más allá,/nen aquella santa Sion./nDespués de la batalla nos coronará,/nen aquella santa Sion.",
     "stanzas": [
@@ -24120,7 +24132,7 @@
     "book": "Apéndice"
   },
   {
-    "number": 17,
+    "number": 18,
     "title": "UN DÍA CRISTO VOLVERÁ",
     "chorus": "Muy pronto, sí, Jesús vendrá,/ny alegre le verá su pueblo;/n¡Velad! ¡Orad! el Rey vendrá,/nlos suyos arrebatará.",
     "stanzas": [
@@ -24136,7 +24148,7 @@
     "book": "Apéndice"
   },
   {
-    "number": 18,
+    "number": 19,
     "title": "ERES MI PROTECTOR",
     "chorus": "Confiaré en Ti,/nEl débil dirá fuerte soy,/ncon poder del Señor.",
     "stanzas": [
@@ -24149,7 +24161,7 @@
     "book": "Apéndice"
   },
   {
-    "number": 19,
+    "number": 20,
     "title": "SUMISIÓN",
     "chorus": "No lo que quiera hacer,/nNi donde quiera ir/n¿Pues quién soy yo/nque debo decidir?/nMi Padre escogerá,/nLa senda que es mejor/nY así confiado puedo ir.",
     "stanzas": [
@@ -24164,7 +24176,7 @@
     "book": "Apéndice"
   },
   {
-    "number": 20,
+    "number": 21,
     "title": "JESÚS ES LA ROCA DE MI SALVACIÓN",
     "chorus": null,
     "stanzas": [
@@ -24181,7 +24193,7 @@
     "book": "Apéndice"
   },
   {
-    "number": 21,
+    "number": 22,
     "title": "HIMNO NACIONAL DE VENEZUELA",
     "chorus": "//Gloria al bravo pueblo/nQue el yugo lanzó/nLa Ley respetando/nLa virtud y honor.//",
     "stanzas": [
@@ -24194,7 +24206,7 @@
     "book": "Apéndice"
   },
   {
-    "number": 22,
+    "number": 23,
     "title": "HIMNO NACIONAL DE MÉXICO",
     "chorus": "Mexicanos, al grito de guerra/nEl acero aprestad y el bridón;/n//Y retiemble en sus centros la tierra/nAl sonoro rugir del cañón.//",
     "stanzas": [
@@ -24207,7 +24219,7 @@
     "book": "Apéndice"
   },
   {
-    "number": 23,
+    "number": 24,
     "title": "HIMNO NACIONAL DEL PERÚ",
     "chorus": "¡Somos libres! ¡Seámoslo siempre!/nY antes niegue sus luces el sol,/nQue faltemos al voto solemne/nQue la patria al eterno elevó.",
     "stanzas": [
@@ -24220,7 +24232,7 @@
     "book": "Apéndice"
   },
   {
-    "number": 24,
+    "number": 25,
     "title": "HIMNO NACIONAL DE ESTADOS UNIDOS",
     "chorus": "God bless America/nLand that I love/nStand beside her/nAnd guide her/nThrough the night/nWith the light/nFrom above",
     "stanzas": [
