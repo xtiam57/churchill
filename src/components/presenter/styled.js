@@ -56,6 +56,8 @@ export const PresenterStyled = styled.section`
     color: ${({ textcolor }) => textcolor || '#000'};
     width: 100%;
     text-wrap: balance;
+    text-shadow: ${({ textshadow }) =>
+      textshadow ? '0px 4px 7px rgba(0, 0, 0, 0.35)' : 'none'};
 
     strong {
       color: ${({ titlecolor }) => titlecolor || '#007bff'} !important;

@@ -28,6 +28,8 @@ export const TextPreviewStyled = styled.div`
     font-size: 90%;
     text-align: center;
     color: ${({ textcolor }) => textcolor || '#000'};
+    text-shadow: ${({ textshadow }) =>
+      textshadow ? '0px 4px 7px rgba(0, 0, 0, 0.35)' : 'none'};
 
     strong {
       color: ${({ titlecolor }) => titlecolor || '#007bff'} !important;

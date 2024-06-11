@@ -47,7 +47,6 @@ import bg49 from 'assets/images/bg/montains5.jpg';
 import bg50 from 'assets/images/bg/montains6.jpg';
 import bg51 from 'assets/images/bg/montains7.jpg';
 import bg58 from 'assets/images/bg/moon.jpg';
-import bg86 from 'assets/images/bg/mother1.jpg';
 import bg87 from 'assets/images/bg/mother2.jpg';
 import bg94 from 'assets/images/bg/mother3.jpg';
 import bg95 from 'assets/images/bg/mother4.jpg';
@@ -89,11 +88,18 @@ import bg20 from 'assets/images/bg/xmas2.jpg';
 import bg21 from 'assets/images/bg/xmas3.jpg';
 
 import b1 from 'assets/images/bg/1.jpg';
+import b10 from 'assets/images/bg/10.jpg';
+import b11 from 'assets/images/bg/11.jpg';
+import b12 from 'assets/images/bg/12.jpg';
+import b13 from 'assets/images/bg/13.jpg';
 import b2 from 'assets/images/bg/2.jpg';
 import b3 from 'assets/images/bg/3.jpg';
 import b4 from 'assets/images/bg/4.jpg';
 import b5 from 'assets/images/bg/5.jpg';
 import b6 from 'assets/images/bg/6.jpg';
+import b7 from 'assets/images/bg/7.jpg';
+import b8 from 'assets/images/bg/8.jpg';
+import b9 from 'assets/images/bg/9.jpg';
 
 export const BACKGROUNDS = [
   { value: '', label: 'Color Sólido' },
@@ -145,10 +151,9 @@ export const BACKGROUNDS = [
   { label: 'Madera con luces', value: bg10 },
   { label: 'Madera Verde', value: bg11 },
   { label: 'Madera', value: bg09 },
-  { label: 'Mamá 1', value: bg86 },
-  { label: 'Mamá 2', value: bg87 },
-  { label: 'Mamá 3', value: bg94 },
-  { label: 'Mamá 4', value: bg95 },
+  { label: 'Mamá 1', value: bg87 },
+  { label: 'Mamá 2', value: bg94 },
+  { label: 'Mamá 3', value: bg95 },
   { label: 'Montañas 1', value: bg26 },
   { label: 'Montañas 2', value: bg46 },
   { label: 'Montañas 3', value: bg47 },
@@ -174,6 +179,13 @@ export const BACKGROUNDS = [
   { label: 'Patrón Negro', value: bg14 },
   { label: 'Patrón', value: bg52 },
   { label: 'Perú 1', value: bg18 },
+  { label: 'Perú 2', value: b7 },
+  { label: 'Perú 3', value: b8 },
+  { label: 'Perú 4', value: b9 },
+  { label: 'Perú 5', value: b10 },
+  { label: 'Perú 6', value: b11 },
+  { label: 'Perú 7', value: b12 },
+  { label: 'Perú 8', value: b13 },
   { label: 'Piano', value: bg75 },
   { label: 'Plantas 1', value: bg53 },
   { label: 'Plantas 2', value: bg54 },

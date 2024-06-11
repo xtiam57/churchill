@@ -415,6 +415,23 @@ export function Settings() {
               />
             </Form.Group>
 
+            <Form.Group as={Col} xs={12} className="mt-2 mb-0">
+              <Form.Check
+                label="Texto con sombra"
+                className="m-0"
+                type="switch"
+                id="textshadow"
+                name="textshadow"
+                checked={settings?.textshadow}
+                onChange={(e) => {
+                  setSettings((state) => ({
+                    ...state,
+                    textshadow: e.target.checked,
+                  }));
+                }}
+              />
+            </Form.Group>
+
             {/* <Form.Group as={Col} xs={6} className="mb-1">
               <Form.Label className=" small mb-1">Opciones (Trivia)</Form.Label>
               <Form.Control

@@ -82,6 +82,7 @@ const SETTINGS_INITIAL_STATE = {
   preachyellow: 10,
   preachred: 0,
   clockposition: 'bottom-right',
+  textshadow: false,
   ...THEMES['dark'],
 };
 
