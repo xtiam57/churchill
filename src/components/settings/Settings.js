@@ -731,6 +731,11 @@ export function Settings() {
         Por Christiam Mena (@xtiam57). <br />
         <a href="mailto:christiam.mena@gmail.com">christiam.mena@gmail.com</a>
         <br />
+        Con la colaboración de Renzo Santos (@renzo971). <br />
+        <a href="mailto:orrego.st.santos@gmail.com">
+          orrego.st.santos@gmail.com
+        </a>
+        <br />
         <span>v{version}</span>
       </small>
     </Sidebar>
