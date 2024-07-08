@@ -102,7 +102,8 @@ import b8 from 'assets/images/bg/8.jpg';
 import b9 from 'assets/images/bg/9.jpg';
 
 export const BACKGROUNDS = [
-  { value: '', label: 'Color Sólido' },
+  { label: 'Color Sólido', value: '' },
+  // { label: 'Animado', value: 'gradient' },
   { divider: true },
   { label: 'Abstracto 1', value: bg27 },
   { label: 'Abstracto 10', value: bg97 },

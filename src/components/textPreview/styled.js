@@ -29,7 +29,9 @@ export const TextPreviewStyled = styled.div`
     text-align: center;
     color: ${({ textcolor }) => textcolor || '#000'};
     text-shadow: ${({ textshadow }) =>
-      textshadow ? '0px 4px 7px rgba(0, 0, 0, 0.35)' : 'none'};
+      textshadow
+        ? '0.5px 0.5px 1px rgba(0, 0, 0, 0.5), 0px 0px 2px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.1)'
+        : 'none'};
 
     strong {
       color: ${({ titlecolor }) => titlecolor || '#007bff'} !important;

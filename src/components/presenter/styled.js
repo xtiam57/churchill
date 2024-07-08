@@ -26,6 +26,10 @@ export const PresenterStyled = styled.section`
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
+  animation: gradient 15s ease infinite;
+
+  /* background: linear-gradient(-45deg, #0a5a61, #233d57, #74379f, #10939f);
+  background-size: 400% 400%; */
 
   @media (min-width: 1900px) {
     padding: 4% 10%;
@@ -57,7 +61,9 @@ export const PresenterStyled = styled.section`
     width: 100%;
     text-wrap: balance;
     text-shadow: ${({ textshadow }) =>
-      textshadow ? '0px 4px 7px rgba(0, 0, 0, 0.35)' : 'none'};
+      textshadow
+        ? '0.5px 0.5px 1px rgba(0, 0, 0, 0.5), 0px 0px 2px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.4)'
+        : 'none'};
 
     strong {
       color: ${({ titlecolor }) => titlecolor || '#007bff'} !important;
@@ -150,7 +156,8 @@ export const CornerStyled = styled.section`
     color: ${({ textcolor }) => textcolor || '#000'};
     width: 100%;
     line-height: 1;
-    text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.8);
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.5),
+      0px 0px 2px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.1);
   }
 
   &.bottom-left {

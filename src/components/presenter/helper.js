@@ -1,3 +1,5 @@
+import { Storage } from 'utils';
+
 export function process(text, subtext, book) {
   const res = text
     .replaceAll('////', '<b>////</b>')
@@ -28,6 +30,7 @@ const isOverflown = ({ clientHeight, scrollHeight }) => {
 };
 
 export const resizeText = ({
+  key,
   element,
   minSize = 10,
   maxSize = 512,
@@ -37,7 +40,7 @@ export const resizeText = ({
 }) => {
   element.style.opacity = 0;
 
-  let i = minSize;
+  let i = Storage.get(key) ?? minSize;
   let overflow = false;
 
   const parent = element.parentNode;
@@ -51,7 +54,13 @@ export const resizeText = ({
     }
   }
 
+  const fontSize = `calc(${i - step}${unit} + ${vh}vh)`;
+
+  // Save the font size to storage
+  if (key) {
+    Storage.set(key, i);
+  }
   // revert to last state where no overflow happened
-  element.style.fontSize = `calc(${i - step}${unit} + ${vh}vh)`;
-  return `calc(${i - step}${unit} + ${vh}vh)`;
+  element.style.fontSize = fontSize;
+  return fontSize;
 };

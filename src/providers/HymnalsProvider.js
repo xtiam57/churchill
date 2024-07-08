@@ -197,7 +197,7 @@ function HymnalsProvider({ children }) {
 
         slides.push(
           Slide.create({
-            id: `${id}_${slideIndex}`,
+            id: 'AEOHAmen',
             text: '&#119070;',
             subtext: '¡Amén!',
             index: slideIndex,

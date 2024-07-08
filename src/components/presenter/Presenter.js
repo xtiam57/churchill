@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { generateGUID } from 'utils';
 import { process, resizeText } from './helper';
 import { PresenterStyled } from './styled';
@@ -61,16 +61,20 @@ export function Presenter({
   const divRef = useRef(null);
   const [divWidth, setDivWidth] = useState(1024);
 
-  const handleFontScale = useCallback(() => {
+  const handleFontScale = () => {
     setTimeout(() => {
       resizeText({
+        key:
+          id.startsWith('A') || id.startsWith('V') || id.startsWith('H')
+            ? `font-size-${id}-${divWidth}`
+            : null,
         element: document.getElementById('presenter-html'),
         unit: '%',
         step: 10,
         ...getConf(divWidth),
       });
     });
-  }, [divWidth]);
+  };
 
   const handleExitComplete = () => handleFontScale();
 
@@ -78,7 +82,7 @@ export function Presenter({
     setDivWidth(divRef.current.clientWidth);
   }, []);
 
-  useEffect(handleFontScale, [handleFontScale]);
+  useEffect(handleFontScale, []);
 
   return (
     <PresenterStyled ref={divRef} {...rest}>
