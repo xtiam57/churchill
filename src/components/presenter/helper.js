@@ -38,29 +38,35 @@ export const resizeText = ({
   unit = 'px',
   vh = 3.565,
 }) => {
-  element.style.opacity = 0;
+  if (key) {
+    const fontSize = Storage.get(key);
 
-  let i = Storage.get(key) ?? minSize;
-  let overflow = false;
-
-  const parent = element.parentNode;
-
-  while (!overflow && i < maxSize) {
-    element.style.fontSize = `calc(${i}${unit} + ${vh}vh)`;
-    overflow = isOverflown(parent);
-
-    if (!overflow) {
-      i += step;
+    if (fontSize) {
+      element.style.fontSize = `calc(${fontSize}${unit} + ${vh}vh)`;
+      return;
     }
   }
 
-  const fontSize = `calc(${i - step}${unit} + ${vh}vh)`;
+  element.style.opacity = 0;
+
+  let overflow = false;
+  const parent = element.parentNode;
+
+  while (minSize <= maxSize) {
+    const midSize = Math.floor((minSize + maxSize) / 2);
+
+    element.style.fontSize = `calc(${midSize}${unit} + ${vh}vh)`;
+    overflow = isOverflown(parent);
+
+    if (!overflow) {
+      minSize = midSize + step;
+    } else {
+      maxSize = midSize - step;
+    }
+  }
 
   // Save the font size to storage
   if (key) {
-    Storage.set(key, i);
+    Storage.set(key, maxSize);
   }
-  // revert to last state where no overflow happened
-  element.style.fontSize = fontSize;
-  return fontSize;
 };

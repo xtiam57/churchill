@@ -30,6 +30,7 @@ export default function CastPage() {
             book={message.book}
             processedText={message.processedText}
             bg={message.bg}
+            castScreen
             {...settings}
           />
         ) : settings?.logo === 'CUSTOM' && settings?.customlogo ? (
