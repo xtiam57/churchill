@@ -61,16 +61,10 @@ export function Presenter({
 }) {
   const divRef = useRef(null);
   const [divWidth, setDivWidth] = useState(1024);
-  const [divHeight, setDivHeight] = useState(768);
 
   const handleFontScale = () => {
     setTimeout(() => {
       resizeText({
-        key:
-          castScreen &&
-          (id.startsWith('A') || id.startsWith('V') || id.startsWith('H'))
-            ? `font-size-${id}-${divWidth}x${divHeight}`
-            : null,
         element: document.getElementById('presenter-html'),
         unit: '%',
         step: 10,
@@ -83,7 +77,6 @@ export function Presenter({
 
   useEffect(() => {
     setDivWidth(divRef.current.clientWidth);
-    setDivHeight(divRef.current.clientHeight);
   }, []);
 
   useEffect(handleFontScale, []);
