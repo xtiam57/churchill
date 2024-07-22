@@ -15,7 +15,7 @@ function getConf(width) {
   if (width > 2560) {
     return {
       minSize: 180,
-      maxSize: 520,
+      maxSize: 510,
     };
   }
 
@@ -23,7 +23,7 @@ function getConf(width) {
   if (width > 1920) {
     return {
       minSize: 140,
-      maxSize: 470,
+      maxSize: 460,
     };
   }
 
@@ -31,7 +31,7 @@ function getConf(width) {
   if (width > 1280) {
     return {
       minSize: 100,
-      maxSize: 410,
+      maxSize: 400,
     };
   }
 
@@ -39,14 +39,14 @@ function getConf(width) {
   if (width > 1024) {
     return {
       minSize: 50,
-      maxSize: 350,
+      maxSize: 340,
     };
   }
 
   // Small screens
   return {
     minSize: 30,
-    maxSize: 310,
+    maxSize: 300,
   };
 }
 
@@ -66,8 +66,6 @@ export function Presenter({
     setTimeout(() => {
       resizeText({
         element: document.getElementById('presenter-html'),
-        unit: '%',
-        step: 10,
         ...getConf(divWidth),
       });
     });

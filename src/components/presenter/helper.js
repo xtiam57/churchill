@@ -31,8 +31,8 @@ export const resizeText = ({
   element,
   minSize = 10,
   maxSize = 512,
-  step = 1,
-  unit = 'px',
+  step = 10,
+  unit = '%',
   vh = 3.565,
 }) => {
   element.style.opacity = 0;
