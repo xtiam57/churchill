@@ -236,10 +236,12 @@ Despierta, y canta su loor
 tu ardiente corazón.
 ***
 @CORO
-Oh cantad, oh cantad
+Oh cantad, _(Oh cantad)__
+oh cantad _(Oh cantad)__
 al Señor con fervor;
 Bendice, oh alma,
-a nuestro Rey y Salvador.
+a nuestro Rey y Salvador 
+_(nuestro salvador)__.
 ***
 2) No olvides nunca su bondad
 mostrando ingratitud,
@@ -363,8 +365,9 @@ En esta reunión.
 Alegres, juntos a una voz
 ***
 @CORO
-¡Dad gloria, gloria,
-gloria, gloria,
+¡Dad glooooooooooria,
+_(Gloria, gloria, gloria, gloria)__
+gloria, gloria, gloria,
 Dad gloria a nuestro Dios!
 ***
 2) Durante el día que pasó
@@ -853,9 +856,11 @@ Poderoso, admirable eres tú,
 ¡oh Salvador!
 ***
 @CORO
-Gloria, gloria,
+Gloria, _(¡gloria a tu nombre oh Dios!)__
+gloria, _(¡gloria a tu nombre oh Dios!)__
 ¡gloria a tu nombre oh Dios!
-Gloria, gloria,
+Gloria, _(¡gloria a tu nombre oh Dios!)__
+gloria, _(¡gloria a tu nombre oh Dios!)__
 gloria a tu nombre, ¡Oh Dios!
 ***
 2) Redentor, Señor del cielo,
@@ -883,7 +888,7 @@ Y el símbolo de salvación
 de Cristo desplegad.
 ***
 @CORO
-¡A Dios load!
+¡A Dios _(a Dios)__ load _(load)__!
 ¡Dad gracias y hoy cantad!
 ***
 2) Con los que están con Dios,
@@ -2570,8 +2575,13 @@ Por salvar al más vil pecador.
 ***
 @CORO
 ¡Oh! yo siempre amaré esa cruz,
-En sus triunfos mi gloria será;
-Y algún día en vez de una cruz,
+_(la cruz de Jesús)__
+En sus triunfos
+mi gloria será;
+
+Y algún día en vez 
+de una cruz,
+_(de una aspera cruz)__
 Mi corona Jesús me dará.
 ***
 2) Aunque el mundo desprecie la cruz de Jesús,
@@ -8221,7 +8231,8 @@ Mi suerte cualquiera que sea, diré:
 Alcancé, alcancé salvación.
 ***
 @CORO
-Alcancé salvación.
+Alcancé _(alcancé)__
+salvación _(salvación)__.
 Alcancé, alcancé salvación.
 ***
 2) Ya venga la prueba o me tiente Satán,
@@ -8249,9 +8260,18 @@ Mientras viva aquí cercado de su luz,
 Siempre en sus promesas confiaré.
 ***
 @CORO
-Grandes, fieles,
-Las promesas que el Señor Jesús ha dado,
-Grandes, fieles,
+Grandes, 
+_(Grandes, grandes, fieles son)__
+fieles, 
+_(Grandes, grandes, fieles son)__
+Las promesas
+que el Señor
+Jesús
+ha dado,
+Grandes, 
+_(Grandes, grandes, fieles son)__
+fieles, 
+_(Grandes, grandes, fieles son)__
 En ellas para siempre confiaré.
 ***
 2) Todas sus promesas para el hombre fiel,
@@ -8386,9 +8406,13 @@ no demoraré.
 ***
 @CORO
 Siempre yo te seguiré, Señor,
+_(Siempre, siempre yo te seguiré, te seguiré señor)__
 Por tus sendas de amor.
+_(Por tus sendas,sendas de amor, de gran amor)__
 En tus manos mi futuro está,
+_(En preciosas manos mi futuro sí, está, está,)__
 Yo te seguiré, Señor.
+_(siempre yo te seguiré, te seguiré, Señor)__
 ***
 2) El me llama a cada hora.
 Yo le seguiré.
@@ -8478,7 +8502,9 @@ todo encuentra mi alma en ti.
 ***
 @CORO
 Yo me entrego a ti,
+_(Yo me entrego a ti,)__
 yo me entrego a ti;
+_(Yo me entrego a ti,)__
 Mis flaquezas y pecados,
 todo traigo a ti.
 ***
@@ -8665,7 +8691,9 @@ Y deseo en alas de fe subir
 Y más cerca estar de ti.
 ***
 @CORO
-Más cerca, cerca de tu cruz
+Más cerca,
+_(Más cerca cerca)__
+cerca de tu cruz
 Llévame, oh Salvador;
 Más cerca, cerca, cerca de tu cruz
 Do salvaste al pecador.
@@ -9028,6 +9056,7 @@ En la viña del Señor.
 ***
 @CORO
 Trabajar y orar,
+_(Trabajar y orar,Trabajar y orar,)__
 en la viña, en la viña del Señor;
 Mi anhelo es orar,
 y ocupado siempre estar,
@@ -9291,7 +9320,9 @@ De la mano del Salvador.
 ***
 @CORO
 En la mano del Salvador
+_(de mi buen salvador)__
 Hay poder tan consolador;
+_(pleno y tan consolador)
 En la tentación viene bendición
 De la mano del Salvador.
 ***
