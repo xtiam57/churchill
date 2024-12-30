@@ -158,7 +158,7 @@
   {
     "number": 11,
     "title": "BENDICE, OH ALMA A TU CREADOR",
-    "chorus": "Oh cantad, oh cantad/nal Señor con fervor;/nBendice, oh alma,/na nuestro Rey y Salvador.",
+    "chorus": "Oh cantad, _(Oh cantad)__/noh cantad _(Oh cantad)__/nal Señor con fervor;/nBendice, oh alma,/na nuestro Rey y Salvador /n_(nuestro salvador)__.",
     "stanzas": [
       "1) Bendice, oh alma a tu Creador/ncon férvida canción;/nDespierta, y canta su loor/ntu ardiente corazón.",
       "2) No olvides nunca su bondad/nmostrando ingratitud,/nPues Él perdona tu maldad,/nte salva y da salud.",
@@ -234,7 +234,7 @@
   {
     "number": 16,
     "title": "ENGRANDECIDO SEA DIOS",
-    "chorus": "¡Dad gloria, gloria,/ngloria, gloria,/nDad gloria a nuestro Dios!",
+    "chorus": "¡Dad glooooooooooria,/n_(Gloria, gloria, gloria, gloria)__/ngloria, gloria, gloria,/nDad gloria a nuestro Dios!",
     "stanzas": [
       "1) Engrandecido sea Dios/nen esta reunión,/nEn esta reunión./nAlegres, juntos a una voz",
       "2) Durante el día que pasó/nla mano del Señor,/nLa mano del Señor/nDe muchos males nos salvó:",
@@ -547,7 +547,7 @@
   {
     "number": 36,
     "title": "GLORIA A TU NOMBRE",
-    "chorus": "Gloria, gloria,/n¡gloria a tu nombre oh Dios!/nGloria, gloria,/ngloria a tu nombre, ¡Oh Dios!",
+    "chorus": "Gloria, _(¡gloria a tu nombre oh Dios!)__/ngloria, _(¡gloria a tu nombre oh Dios!)__/n¡gloria a tu nombre oh Dios!/nGloria, _(¡gloria a tu nombre oh Dios!)__/ngloria, _(¡gloria a tu nombre oh Dios!)__/ngloria a tu nombre, ¡Oh Dios!",
     "stanzas": [
       "1) ¡Oh bendito Rey divino!/nTe adoramos con fervor./nPoderoso, admirable eres tú,/n¡oh Salvador!",
       "2) Redentor, Señor del cielo,/nLuz eterna, dulce bien;/nLas naciones de la tierra/ncantan gloria a su Rey.",
@@ -563,7 +563,7 @@
   {
     "number": 37,
     "title": "¡DAD GRACIAS Y HOY CANTAD!",
-    "chorus": "¡A Dios load!/n¡Dad gracias y hoy cantad!",
+    "chorus": "¡A Dios _(a Dios)__ load _(load)__!/n¡Dad gracias y hoy cantad!",
     "stanzas": [
       "1) Cristianos, la canción/nalegre entonad,/nY el símbolo de salvación/nde Cristo desplegad.",
       "2) Con los que están con Dios,/ncon los que están aquí,/nHoy levantad alegre voz,/na Dios honor rendid.",
@@ -1533,7 +1533,7 @@
   {
     "number": 100,
     "title": "EN EL MONTE CALVARIO",
-    "chorus": "¡Oh! yo siempre amaré esa cruz,/nEn sus triunfos mi gloria será;/nY algún día en vez de una cruz,/nMi corona Jesús me dará.",
+    "chorus": "¡Oh! yo siempre amaré esa cruz,/n_(la cruz de Jesús)__/nEn sus triunfos/nmi gloria será;/nY algún día en vez /nde una cruz,/n_(de una aspera cruz)__/nMi corona Jesús me dará.",
     "stanzas": [
       "1) En el monte Calvario se vio una cruz,/nEmblema de afrenta y dolor,/nY yo quiero esa cruz do murió mi Jesús/nPor salvar al más vil pecador.",
       "2) Aunque el mundo desprecie la cruz de Jesús,/nPara mí tiene suma atracción,/nPorque en ella llevó el Cordero de Dios/nMi pecado y mi condenación.",
@@ -5074,7 +5074,7 @@
   {
     "number": 330,
     "title": "ALCANCE SALVACIÓN",
-    "chorus": "Alcancé salvación./nAlcancé, alcancé salvación.",
+    "chorus": "Alcancé _(alcancé)__/nsalvación _(salvación)__./nAlcancé, alcancé salvación.",
     "stanzas": [
       "1) De paz inundada mi senda ya esté,/nO cúbrala un mar de aflicción,/nMi suerte cualquiera que sea, diré:/nAlcancé, alcancé salvación.",
       "2) Ya venga la prueba o me tiente Satán,/nNo amenguan mi fe ni mi amor;/nPues Cristo comprende mis luchas, mi afán/nY su sangre vertió en mi favor.",
@@ -5090,7 +5090,7 @@
   {
     "number": 331,
     "title": "TODAS LAS PROMESAS DEL SEÑOR JESÚS",
-    "chorus": "Grandes, fieles,/nLas promesas que el Señor Jesús ha dado,/nGrandes, fieles,/nEn ellas para siempre confiaré.",
+    "chorus": "Grandes, /n_(Grandes, grandes, fieles son)__/nfieles, /n_(Grandes, grandes, fieles son)__/nLas promesas/nque el Señor/nJesús/nha dado,/nGrandes, /n_(Grandes, grandes, fieles son)__/nfieles, /n_(Grandes, grandes, fieles son)__/nEn ellas para siempre confiaré.",
     "stanzas": [
       "1) Todas las promesas del Señor Jesús,/nSon apoyo poderoso de mi fe;/nMientras viva aquí cercado de su luz,/nSiempre en sus promesas confiaré.",
       "2) Todas sus promesas para el hombre fiel,/nEl Señor en sus bondades cumplirá,/nY confiado sé que para siempre en Él,/nPaz eterna mi alma gozará.",
@@ -5168,7 +5168,7 @@
   {
     "number": 336,
     "title": "YO TE SEGUIRÉ",
-    "chorus": "Siempre yo te seguiré, Señor,/nPor tus sendas de amor./nEn tus manos mi futuro está,/nYo te seguiré, Señor.",
+    "chorus": "Siempre yo te seguiré, Señor,/n_(Siempre, siempre yo te seguiré, te seguiré señor)__/nPor tus sendas de amor./n_(Por tus sendas,sendas de amor, de gran amor)__/nEn tus manos mi futuro está,/n_(En preciosas manos mi futuro sí, está, está,)__/nYo te seguiré, Señor./n_(siempre yo te seguiré, te seguiré, Señor)__",
     "stanzas": [
       "1) Puedo oír la voz de Cristo./nYo le seguiré./nHoy me llama con ternura;/nno demoraré.",
       "2) El me llama a cada hora./nYo le seguiré./nY el poder de su presencia/nsiempre sentiré.",
@@ -5230,7 +5230,7 @@
   {
     "number": 340,
     "title": "SALVADOR, A TI ME ENTREGO",
-    "chorus": "Yo me entrego a ti,/nyo me entrego a ti;/nMis flaquezas y pecados,/ntodo traigo a ti.",
+    "chorus": "Yo me entrego a ti,/n_(Yo me entrego a ti,)__/nyo me entrego a ti;/n_(Yo me entrego a ti,)__/nMis flaquezas y pecados,/ntodo traigo a ti.",
     "stanzas": [
       "1) Salvador, a ti me entrego/ny obedezco sólo a ti;/nMi guiador, mi fortaleza,/ntodo encuentra mi alma en ti.",
       "2) Te confiesa sus delitos/nmi contrito corazón;/nOye, Cristo, mi plegaria,/nyo suplico tu perdón.",
@@ -5340,7 +5340,7 @@
   {
     "number": 347,
     "title": "TUYO SOY, JESÚS",
-    "chorus": "Más cerca, cerca de tu cruz/nLlévame, oh Salvador;/nMás cerca, cerca, cerca de tu cruz/nDo salvaste al pecador.",
+    "chorus": "Más cerca,/n_(Más cerca cerca)__/ncerca de tu cruz/nLlévame, oh Salvador;/nMás cerca, cerca, cerca de tu cruz/nDo salvaste al pecador.",
     "stanzas": [
       "1) Tuyo soy, Jesús, ya tu voz oí,/nCual mensaje de tu paz;/nY deseo en alas de fe subir/nY más cerca estar de ti.",
       "2) A seguirte en pos me consagro hoy,/nImpulsado por tu amor;/nY mi espíritu, alma y cuerpo doy,/nPor servirte, mi Señor.",
@@ -5571,7 +5571,7 @@
   {
     "number": 362,
     "title": "ANHELO TRABAJAR POR EL SEÑOR",
-    "chorus": "Trabajar y orar,/nen la viña, en la viña del Señor;/nMi anhelo es orar,/ny ocupado siempre estar,/nEn la viña del Señor.",
+    "chorus": "Trabajar y orar,/n_(Trabajar y orar,Trabajar y orar,)__/nen la viña, en la viña del Señor;/nMi anhelo es orar,/ny ocupado siempre estar,/nEn la viña del Señor.",
     "stanzas": [
       "1) Anhelo trabajar por el Señor,/nConfiando en su palabra y en su amor,/nQuiero yo cantar y orar,/nY ocupado siempre estar/nEn la viña del Señor.",
       "2) Anhelo cada día trabajar,/nY esclavos del pecado libertar,/nConducirlos a Jesús,/nNuestro guía, nuestra luz,/nEn la viña del Señor.",

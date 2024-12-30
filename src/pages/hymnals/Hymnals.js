@@ -1,4 +1,5 @@
 import {
+  Download,
   East,
   FirstPage,
   FolderCopy,
@@ -23,6 +24,7 @@ import {
   Title,
   Wrapper,
 } from 'components';
+import AudioPlayer from '../../components/AudioPlayer';
 import { useFolder, useHymnals, useKeyUp, usePresenter } from 'hooks';
 import React, { useEffect, useRef, useState } from 'react';
 import {
@@ -64,6 +66,10 @@ export default function HymnalsPage() {
     getBookmarkedItems('hymnal', bookmarkSort)
   );
   const [url, setUrl] = useState(folder.getPath(current.reference));
+  const [url2, setUrl2] = useState(
+    'https://renzo971.github.io/boda/pistas/' + current.reference + '.mp3'
+  );
+  const [show, setShow] = useState(false);
   const [isMP3Loaded, setIsMP3Loaded] = useState(false);
   const [playbackRate, setPlaybackRate] = React.useState(1);
   const [volume, setVolume] = useState(1);
@@ -80,6 +86,11 @@ export default function HymnalsPage() {
   useEffect(() => {
     stop();
     setUrl(folder.getPath(current.reference));
+    setShow(false);
+    setIsMP3Loaded(false);
+    setUrl2(
+      'https://renzo971.github.io/boda/pistas/' + current.reference + '.mp3'
+    );
     // Bug: delay to set config of the song
     setTimeout(() => {
       // Trying to get settings from storage
@@ -166,6 +177,18 @@ export default function HymnalsPage() {
     const sort = bookmarkSort === 'desc' ? 'asc' : 'desc';
     setBookmarkSort(sort);
     setBookmarks(getBookmarkedItems('hymnal', sort));
+  };
+  const Downloadtrack = () => {
+    try {
+      const link = document.createElement('a');
+      link.href = url2;
+      link.download = `${current.reference}.mp3`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (error) {
+      console.error('Error al descargar la pista:', error);
+    }
   };
 
   useKeyUp('ArrowUp', handleNextHymnal);
@@ -291,6 +314,12 @@ export default function HymnalsPage() {
               }}
             />
           </div>
+        ) : show ? (
+          <AudioPlayer url={url2} current={current}>
+            <Button variant="danger" onClick={(e) => setShow(false)}>
+              No deseo consumir internet
+            </Button>
+          </AudioPlayer>
         ) : (
           <div className="py-2 px-3 bg-warning d-flex align-items-center">
             <small>
@@ -300,9 +329,16 @@ export default function HymnalsPage() {
                 className="pointer text-underline"
                 onClick={handleOpenPath}
               >
-                /himnos
+                /pistas
               </strong>{' '}
-              con el nombre <strong>{current.reference}.mp3</strong>
+              con el nombre <strong>{current.reference}.mp3</strong> o{' '}
+              <Button onClick={(e) => setShow(true)}>
+                Reproducir desde la web
+              </Button>{' '}
+              o{' '}
+              <Button onClick={Downloadtrack}>
+                <Download />
+              </Button>
             </small>
           </div>
         )}
