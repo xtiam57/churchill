@@ -15,7 +15,7 @@ function getConf(width) {
   if (width > 2560) {
     return {
       minSize: 180,
-      maxSize: 510,
+      maxSize: 500,
     };
   }
 
