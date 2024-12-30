@@ -32,7 +32,7 @@ export const Slider = forwardRef(
 
     const [slides, setSlides] = useState(wrapper?.slides || []);
     const [slide, setSlide] = useState(slides[0]);
-    const [moveSlide] = useIterate(slide, slides);
+    const [moveSlide, , , gotoSlide] = useIterate(slide, slides);
     const next = moveSlide(MOVEMENT.NEXT, loop);
 
     const onNextSlide = () => {
@@ -45,9 +45,15 @@ export const Slider = forwardRef(
       setSlide(slideToGo);
     };
 
+    const onGotoSlide = (index) => {
+      const slideToGo = gotoSlide(index);
+      setSlide(slideToGo);
+    };
+
     useImperativeHandle(ref, () => ({
       next: onNextSlide,
       prev: onPrevSlide,
+      goto: onGotoSlide,
     }));
 
     useEffect(() => {

@@ -59,7 +59,6 @@ export default function AudioPlayer({ url, current, children }) {
 
   return (
     <>
-      {' '}
       {isMP3Loaded ? (
         <div className="p-2 bg-gray d-flex align-items-center">
           <Form.Control

@@ -4,6 +4,23 @@ export function useIterate(current, list) {
   const len = list.length;
   const lastIndex = len - 1;
 
+  const goto = (idx) => {
+    if (!current.hasOwnProperty('index') || current.index === null) {
+      current['index'] = list.findIndex(({ id }) => id === current.id);
+    }
+
+    let index = Math.min(idx, lastIndex);
+    index = Math.max(idx, 0);
+
+    const value = list[index];
+
+    if (!value.hasOwnProperty('index') || value.index === null) {
+      value['index'] = index;
+    }
+
+    return value;
+  };
+
   const next = (loop = false) => {
     if (!current.hasOwnProperty('index') || current.index === null) {
       current['index'] = list.findIndex(({ id }) => id === current.id);
@@ -48,5 +65,5 @@ export function useIterate(current, list) {
     return action === MOVEMENT.NEXT ? next(loop) : previous(loop);
   };
 
-  return [move, previous, next];
+  return [move, previous, next, goto];
 }

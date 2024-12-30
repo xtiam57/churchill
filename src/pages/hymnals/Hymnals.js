@@ -24,7 +24,6 @@ import {
   Title,
   Wrapper,
 } from 'components';
-import AudioPlayer from '../../components/AudioPlayer';
 import { useFolder, useHymnals, useKeyUp, usePresenter } from 'hooks';
 import React, { useEffect, useRef, useState } from 'react';
 import {
@@ -39,11 +38,13 @@ import createPersistedState from 'use-persisted-state';
 import useSound from 'use-sound';
 import { Storage, getBookmarkedItems } from 'utils';
 import { BROADCAST, MOVEMENT } from 'values';
+import AudioPlayer from '../../components/AudioPlayer';
 import { HymnalBooks } from './HymnalBooks';
 import { HymnalIndex } from './HymnalIndex';
 import { HymnalTags } from './HymnalTags';
 import { RecentBirthdays } from './RecentBirthdays';
 import { finderRender, typeaheadRender } from './renders';
+import { StanzasViewer } from './StanzasViewer';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
@@ -178,6 +179,7 @@ export default function HymnalsPage() {
     setBookmarkSort(sort);
     setBookmarks(getBookmarkedItems('hymnal', sort));
   };
+
   const Downloadtrack = () => {
     try {
       const link = document.createElement('a');
@@ -196,6 +198,8 @@ export default function HymnalsPage() {
   useKeyUp('F1', () => typeaheadRef.current.focus());
   useKeyUp('Space', handleTogglePlay);
   useKeyUp('KeyB', () => setOpenFinder(true), { ctrl: true });
+
+  console.log('current', current);
 
   return (
     <Wrapper>
@@ -261,6 +265,30 @@ export default function HymnalsPage() {
 
         <HymnalBooks onClick={handleSearch} current={current} />
       </Sidebar>
+
+      <StanzasViewer
+        light
+        closable
+        // className={showingSettings ? '' : 'closed'}
+        size={300}
+      >
+        {current.slides
+          .filter((slide) => slide.id !== 'AEOHAmen')
+          .map((slide, index) =>
+            index === 0 ? null : (
+              <div
+                key={index}
+                onClick={() => sliderRef.current.goto(slide.index)}
+              >
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: slide.processedText,
+                  }}
+                />
+              </div>
+            )
+          )}
+      </StanzasViewer>
 
       {presenting ? (
         <Alert
