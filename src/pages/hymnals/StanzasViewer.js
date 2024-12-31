@@ -1,21 +1,39 @@
-import { QueueMusic } from '@mui/icons-material';
+import { Close, QueueMusic } from '@mui/icons-material';
 import { useState } from 'react';
 import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import styled from 'styled-components';
 
+const StanzasWrapperStyled = styled.div`
+  position: absolute;
+  left: calc(55px + 320px + 20px);
+  top: calc(56px + 20px);
+  z-index: 3;
+  display: flex;
+  align-items: start;
+
+  transform: translate3d(0px, 0px, 0px);
+  transition: transform 0.5s ease 0s;
+
+  button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-top: 50px;
+  }
+
+  &.closed {
+    transform: translate3d(calc(-100% + 30px), 0px, 0px);
+    /* visibility: hidden; */
+  }
+`;
+
 const StanzasViewerStyled = styled.aside`
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #ffffff;
   max-height: calc(100vh - 126px - 66px - 30px);
   width: 280px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.8);
   overflow-y: auto;
   overflow-x: hidden;
-  z-index: 3;
-  backdrop-filter: blur(10px);
-  position: fixed;
-  left: calc(55px + 320px + 20px);
-  top: calc(56px + 20px);
-  border-radius: 10px;
+  border-radius: 8px;
 
   > div {
     padding: 10px 20px;
@@ -54,15 +72,6 @@ const StanzasViewerStyled = styled.aside`
     }
   }
 
-  transform: translate3d(0px, 0px, 0px);
-  visibility: visible;
-  transition: transform 0.5s ease 0s, visibility 0.5s ease 0s;
-
-  &.closed {
-    transform: translate3d(-120%, 0px, 0px);
-    visibility: hidden;
-  }
-
   &::-webkit-scrollbar {
     background-color: transparent;
     width: 14px;
@@ -87,8 +96,8 @@ export const StanzasViewer = ({ slides = [], onGoto = () => {}, ...rest }) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <>
-      <StanzasViewerStyled className={open ? '' : 'closed'}>
+    <StanzasWrapperStyled className={open ? '' : 'closed'}>
+      <StanzasViewerStyled>
         {slides
           .filter((slide) => slide.id !== 'AEOHAmen')
           .map((slide, index) =>
@@ -110,7 +119,7 @@ export const StanzasViewer = ({ slides = [], onGoto = () => {}, ...rest }) => {
 
       <OverlayTrigger
         placement="top"
-        overlay={<Tooltip>Ver/Ocultar estrofas</Tooltip>}
+        overlay={<Tooltip>Selector de estrofas</Tooltip>}
       >
         <Button
           variant="secondary"
@@ -118,9 +127,9 @@ export const StanzasViewer = ({ slides = [], onGoto = () => {}, ...rest }) => {
           title="Ver/Ocultar estrofas"
           {...rest}
         >
-          <QueueMusic />
+          {open ? <Close /> : <QueueMusic />}
         </Button>
       </OverlayTrigger>
-    </>
+    </StanzasWrapperStyled>
   );
 };

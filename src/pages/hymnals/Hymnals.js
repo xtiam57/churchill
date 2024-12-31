@@ -65,18 +65,17 @@ export default function HymnalsPage() {
     getBookmarkedItems('hymnal', bookmarkSort)
   );
   const [url, setUrl] = useState(folder.getPath(current.reference));
-  const [url2, setUrl2] = useState(
-    'https://renzo971.github.io/boda/pistas/' + current.reference + '.mp3'
-  );
   const [isMP3Loaded, setIsMP3Loaded] = useState(false);
   const [playbackRate, setPlaybackRate] = React.useState(1);
   const [volume, setVolume] = useState(1);
-  const [play, { stop, isPlaying, sound }] = useSound(url2 ?? url, {
+  const [play, { stop, isPlaying, sound }] = useSound(url, {
     volume,
     playbackRate,
     interrupt: true,
     onload: () => setIsMP3Loaded(true),
-    onloaderror: () => setIsMP3Loaded(false),
+    onloaderror: () => {
+      setIsMP3Loaded(false);
+    },
   });
   const [trackProgress, setTrackProgress] = useState(0);
   const intervalRef = useRef();
@@ -84,9 +83,6 @@ export default function HymnalsPage() {
   useEffect(() => {
     stop();
     setUrl(folder.getPath(current.reference));
-    setUrl2(
-      'https://renzo971.github.io/boda/pistas/' + current.reference + '.mp3'
-    );
     // Bug: delay to set config of the song
     setTimeout(() => {
       // Trying to get settings from storage
@@ -95,6 +91,17 @@ export default function HymnalsPage() {
       setVolume(config ? config.volume : 1);
     });
   }, [current, folder, stop]);
+
+  // useEffect(() => {
+  //   if (loadError) {
+  //     const path = `https://renzo971.github.io/boda/pistas/${current.reference}.mp3`;
+
+  //     if (url !== path) {
+  //       setUrl(path);
+  //     }
+  //     setLoadError(false);
+  //   }
+  // }, [loadError]);
 
   useEffect(() => {
     return () => stop();
@@ -246,7 +253,12 @@ export default function HymnalsPage() {
         <HymnalBooks onClick={handleSearch} current={current} />
       </Sidebar>
 
-      {presenting ? (
+      <StanzasViewer
+        slides={current.slides}
+        onGoto={(index) => sliderRef.current.goto(index)}
+      />
+
+      {!presenting ? (
         <Alert
           presenting={!showLogo}
           label={current?.title}
@@ -428,12 +440,6 @@ export default function HymnalsPage() {
                 <LastPage />
               </Button>
             </OverlayTrigger>
-
-            <StanzasViewer
-              slides={current.slides}
-              onGoto={(index) => sliderRef.current.goto(index)}
-              className="ml-2"
-            />
           </div>
 
           {isMP3Loaded ? (
