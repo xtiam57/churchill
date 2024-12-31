@@ -258,7 +258,7 @@ export default function HymnalsPage() {
         onGoto={(index) => sliderRef.current.goto(index)}
       />
 
-      {!presenting ? (
+      {presenting ? (
         <Alert
           presenting={!showLogo}
           label={current?.title}
