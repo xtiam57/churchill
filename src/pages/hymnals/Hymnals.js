@@ -1,5 +1,4 @@
 import {
-  Download,
   East,
   FirstPage,
   FolderCopy,
@@ -38,7 +37,6 @@ import createPersistedState from 'use-persisted-state';
 import useSound from 'use-sound';
 import { Storage, getBookmarkedItems } from 'utils';
 import { BROADCAST, MOVEMENT } from 'values';
-import AudioPlayer from '../../components/AudioPlayer';
 import { HymnalBooks } from './HymnalBooks';
 import { HymnalIndex } from './HymnalIndex';
 import { HymnalTags } from './HymnalTags';
@@ -70,11 +68,10 @@ export default function HymnalsPage() {
   const [url2, setUrl2] = useState(
     'https://renzo971.github.io/boda/pistas/' + current.reference + '.mp3'
   );
-  const [show, setShow] = useState(false);
   const [isMP3Loaded, setIsMP3Loaded] = useState(false);
   const [playbackRate, setPlaybackRate] = React.useState(1);
   const [volume, setVolume] = useState(1);
-  const [play, { stop, isPlaying, sound }] = useSound(url, {
+  const [play, { stop, isPlaying, sound }] = useSound(url2 ?? url, {
     volume,
     playbackRate,
     interrupt: true,
@@ -87,8 +84,6 @@ export default function HymnalsPage() {
   useEffect(() => {
     stop();
     setUrl(folder.getPath(current.reference));
-    setShow(false);
-    setIsMP3Loaded(false);
     setUrl2(
       'https://renzo971.github.io/boda/pistas/' + current.reference + '.mp3'
     );
@@ -180,26 +175,11 @@ export default function HymnalsPage() {
     setBookmarks(getBookmarkedItems('hymnal', sort));
   };
 
-  const Downloadtrack = () => {
-    try {
-      const link = document.createElement('a');
-      link.href = url2;
-      link.download = `${current.reference}.mp3`;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    } catch (error) {
-      console.error('Error al descargar la pista:', error);
-    }
-  };
-
   useKeyUp('ArrowUp', handleNextHymnal);
   useKeyUp('ArrowDown', handlePrevHymnal);
   useKeyUp('F1', () => typeaheadRef.current.focus());
   useKeyUp('Space', handleTogglePlay);
   useKeyUp('KeyB', () => setOpenFinder(true), { ctrl: true });
-
-  console.log('current', current);
 
   return (
     <Wrapper>
@@ -266,30 +246,6 @@ export default function HymnalsPage() {
         <HymnalBooks onClick={handleSearch} current={current} />
       </Sidebar>
 
-      <StanzasViewer
-        light
-        closable
-        // className={showingSettings ? '' : 'closed'}
-        size={300}
-      >
-        {current.slides
-          .filter((slide) => slide.id !== 'AEOHAmen')
-          .map((slide, index) =>
-            index === 0 ? null : (
-              <div
-                key={index}
-                onClick={() => sliderRef.current.goto(slide.index)}
-              >
-                <span
-                  dangerouslySetInnerHTML={{
-                    __html: slide.processedText,
-                  }}
-                />
-              </div>
-            )
-          )}
-      </StanzasViewer>
-
       {presenting ? (
         <Alert
           presenting={!showLogo}
@@ -342,12 +298,6 @@ export default function HymnalsPage() {
               }}
             />
           </div>
-        ) : show ? (
-          <AudioPlayer url={url2} current={current}>
-            <Button variant="danger" onClick={(e) => setShow(false)}>
-              No deseo consumir internet
-            </Button>
-          </AudioPlayer>
         ) : (
           <div className="py-2 px-3 bg-warning d-flex align-items-center">
             <small>
@@ -357,16 +307,9 @@ export default function HymnalsPage() {
                 className="pointer text-underline"
                 onClick={handleOpenPath}
               >
-                /pistas
+                /himnos
               </strong>{' '}
-              con el nombre <strong>{current.reference}.mp3</strong> o{' '}
-              <Button onClick={(e) => setShow(true)}>
-                Reproducir desde la web
-              </Button>{' '}
-              o{' '}
-              <Button onClick={Downloadtrack}>
-                <Download />
-              </Button>
+              con el nombre <strong>{current.reference}.mp3</strong>
             </small>
           </div>
         )}
@@ -485,6 +428,12 @@ export default function HymnalsPage() {
                 <LastPage />
               </Button>
             </OverlayTrigger>
+
+            <StanzasViewer
+              slides={current.slides}
+              onGoto={(index) => sliderRef.current.goto(index)}
+              className="ml-2"
+            />
           </div>
 
           {isMP3Loaded ? (

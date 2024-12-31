@@ -40,7 +40,16 @@ function getWords(text) {
   return str.split(' ').length;
 }
 
-function split(lines, array, id, book, index, title, divider = 2) {
+function split(
+  lines,
+  array,
+  id,
+  book,
+  index,
+  title,
+  divider = 2,
+  isChorus = false
+) {
   let iteration = 0;
   let c = 0;
 
@@ -54,6 +63,7 @@ function split(lines, array, id, book, index, title, divider = 2) {
         title: iteration === 0 ? title : null,
         text: lines.slice(from, to).join('/n'),
         book,
+        isChorus,
       })
     );
     iteration++;
@@ -62,7 +72,7 @@ function split(lines, array, id, book, index, title, divider = 2) {
   return index;
 }
 
-function splitLines(id, title, text, book, array, index) {
+function splitLines(id, title, text, book, array, index, isChorus = false) {
   // (6-8 lines per slide, no more than 30 words per slide).
 
   const MAX_LINES_PER_SLIDE = 5;
@@ -87,19 +97,20 @@ function splitLines(id, title, text, book, array, index) {
           text: text,
           index: index++,
           book,
+          isChorus,
         })
       );
     } else {
-      index = split(lines, array, id, book, index, title, 2);
+      index = split(lines, array, id, book, index, title, 2, isChorus);
     }
   } else {
     if (totalWords <= MAX_WORDS_PER_SLIDE) {
-      index = split(lines, array, id, book, index, title, 4);
+      index = split(lines, array, id, book, index, title, 4, isChorus);
     } else {
       if (itFitsWords) {
-        index = split(lines, array, id, book, index, title, 4);
+        index = split(lines, array, id, book, index, title, 4, isChorus);
       } else {
-        index = split(lines, array, id, book, index, title, 2);
+        index = split(lines, array, id, book, index, title, 2, isChorus);
       }
     }
   }
@@ -159,7 +170,8 @@ function HymnalsProvider({ children }) {
             chorus,
             null,
             slides,
-            slideIndex
+            slideIndex,
+            true
           );
         }
 
@@ -174,7 +186,8 @@ function HymnalsProvider({ children }) {
               chorus,
               null,
               slides,
-              slideIndex
+              slideIndex,
+              true
             );
 
             if (i === 0) {
@@ -191,7 +204,8 @@ function HymnalsProvider({ children }) {
             chorus,
             null,
             slides,
-            slideIndex
+            slideIndex,
+            true
           );
         }
 
