@@ -62,13 +62,7 @@ export const Slider = forwardRef(
     }, [wrapper]);
 
     useEffect(() => {
-      setMessage((prev) =>
-        JSON.stringify(prev) === JSON.stringify(slide)
-          ? prev
-          : live
-          ? slide
-          : null
-      );
+      setMessage(live ? slide : null);
     }, [slide, live, setMessage]);
 
     useEffect(() => {
