@@ -1,4 +1,5 @@
 import {
+  CopyAll,
   East,
   FirstPage,
   FolderCopy,
@@ -24,7 +25,7 @@ import {
   Wrapper,
 } from 'components';
 import { useFolder, useHymnals, useKeyUp, usePresenter } from 'hooks';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
   Button,
   ButtonGroup,
@@ -64,25 +65,41 @@ export default function HymnalsPage() {
   const [bookmarks, setBookmarks] = useState(
     getBookmarkedItems('hymnal', bookmarkSort)
   );
-  const [url, setUrl] = useState(folder.getPath(current.reference));
+  const [localUrl, setLocalUrl] = useState(folder.getPath(current.reference));
+  const onlineUrl = useMemo(
+    () =>
+      'https://renzo971.github.io/boda/pistas/' + current.reference + '.mp3',
+    [current?.reference]
+  );
   const [isMP3Loaded, setIsMP3Loaded] = useState(false);
+  const [isOnlineMP3Loaded, setIsOnlineMP3Loaded] = useState(false);
   const [playbackRate, setPlaybackRate] = React.useState(1);
   const [volume, setVolume] = useState(1);
-  const [play, { stop, isPlaying, sound }] = useSound(url, {
+  const [play, { stop, isPlaying, sound }] = useSound(localUrl, {
     volume,
     playbackRate,
     interrupt: true,
     onload: () => setIsMP3Loaded(true),
-    onloaderror: () => {
-      setIsMP3Loaded(false);
-    },
+    onloaderror: () => setIsMP3Loaded(false),
+  });
+  const [
+    onlinePlay,
+    { stop: onlineStop, isPlaying: isOnlinePlaying, sound: onlineSound },
+  ] = useSound(onlineUrl, {
+    volume,
+    playbackRate,
+    interrupt: true,
+    onload: () => setIsOnlineMP3Loaded(true),
+    onloaderror: () => setIsOnlineMP3Loaded(false),
   });
   const [trackProgress, setTrackProgress] = useState(0);
   const intervalRef = useRef();
 
+  const isUsingOnline = isOnlineMP3Loaded && !isMP3Loaded;
+
   useEffect(() => {
     stop();
-    setUrl(folder.getPath(current.reference));
+    setLocalUrl(folder.getPath(current.reference));
     // Bug: delay to set config of the song
     setTimeout(() => {
       // Trying to get settings from storage
@@ -104,8 +121,8 @@ export default function HymnalsPage() {
   // }, [loadError]);
 
   useEffect(() => {
-    return () => stop();
-  }, [stop]);
+    return () => (isUsingOnline ? onlineStop() : stop());
+  }, [isUsingOnline, onlineStop, stop]);
 
   useEffect(() => {
     if (!presenting) {
@@ -114,16 +131,17 @@ export default function HymnalsPage() {
   }, [presenting]);
 
   useEffect(() => {
-    if (!isPlaying) {
+    if (!isPlaying && !isOnlinePlaying) {
       setTrackProgress(0);
       clearInterval(intervalRef.current);
     }
-  }, [isPlaying]);
+  }, [isOnlinePlaying, isPlaying]);
 
   const startTimer = () => {
     // Clear any timers already running
     clearInterval(intervalRef.current);
 
+    // BUG TODO: cuando se pausa, esto sigue moviendose
     intervalRef.current = setInterval(() => {
       setTrackProgress((state) => state + 1);
     }, [1000]);
@@ -144,14 +162,14 @@ export default function HymnalsPage() {
   const handleNextSlide = () => sliderRef.current.next();
 
   const handlePrevHymnal = () => {
-    if (!isPlaying) {
+    if (!isPlaying || !isOnlinePlaying) {
       const hymnal = moveHymnal(MOVEMENT.PREV);
       setSearch([hymnal]);
     }
   };
 
   const handleNextHymnal = () => {
-    if (!isPlaying) {
+    if (!isPlaying || !isOnlinePlaying) {
       const hymnal = moveHymnal(MOVEMENT.NEXT);
       setSearch([hymnal]);
     }
@@ -160,6 +178,9 @@ export default function HymnalsPage() {
   const handleTogglePlay = () => {
     if (isMP3Loaded) {
       isPlaying ? stop() : play();
+    }
+    if (isOnlineMP3Loaded) {
+      isOnlinePlaying ? onlineStop() : onlinePlay();
     }
   };
 
@@ -194,7 +215,7 @@ export default function HymnalsPage() {
         <Title>Himnos</Title>
 
         <Typeahead
-          emptyLabel="No existe esa opcion."
+          emptyLabel="No existe ese himno."
           highlightOnlyResult={true}
           id="combo"
           labelKey="title"
@@ -203,8 +224,8 @@ export default function HymnalsPage() {
           onFocus={(e) => e.target.select()}
           options={hymnals}
           paginate={true}
-          paginationText="Ver más opciones..."
-          placeholder="Selecciona un versículo..."
+          paginationText="Ver más himnos..."
+          placeholder="Selecciona un himno..."
           ref={typeaheadRef}
           selected={search}
           size="large"
@@ -214,19 +235,44 @@ export default function HymnalsPage() {
         <FinderButton
           onOpen={setOpenFinder}
           extraButton={
-            <OverlayTrigger
-              placement="bottom"
-              overlay={<Tooltip>Abrir Himnarios</Tooltip>}
-            >
-              <Button
-                variant="link"
-                className="text-white p-0 text-small mr-2"
-                onClick={(e) => setOpenIndex(true)}
-                title="Abrir Himnario"
+            <>
+              <OverlayTrigger
+                placement="bottom"
+                overlay={<Tooltip>Abrir Himnarios</Tooltip>}
               >
-                <MenuBook fontSize="small" />
-              </Button>
-            </OverlayTrigger>
+                <Button
+                  variant="link"
+                  className="text-white p-0 text-small mr-2"
+                  onClick={(e) => setOpenIndex(true)}
+                  title="Abrir Himnario"
+                >
+                  <MenuBook fontSize="small" />
+                </Button>
+              </OverlayTrigger>
+
+              {current && (
+                <OverlayTrigger
+                  placement="bottom"
+                  overlay={<Tooltip>Copiar</Tooltip>}
+                >
+                  <Button
+                    variant="link"
+                    className="text-white p-0 text-small mr-2"
+                    onClick={(e) => {
+                      navigator.clipboard.writeText(
+                        `${current.title}\n\n${current.text}`.replaceAll(
+                          '/n',
+                          '\n'
+                        )
+                      );
+                    }}
+                    title="Abrir Himnario"
+                  >
+                    <CopyAll fontSize="small" />
+                  </Button>
+                </OverlayTrigger>
+              )}
+            </>
           }
         />
 
@@ -294,7 +340,7 @@ export default function HymnalsPage() {
           para cambiar de himno.
         </Slider>
 
-        {isMP3Loaded ? (
+        {isMP3Loaded || isUsingOnline ? (
           <div className="p-2 bg-gray d-flex align-items-center">
             <Form.Control
               custom
@@ -302,10 +348,14 @@ export default function HymnalsPage() {
               name="position"
               value={trackProgress}
               min="0"
-              max={Math.floor(sound?.duration())}
+              max={Math.floor(
+                isUsingOnline ? onlineSound?.duration() : sound?.duration()
+              )}
               step="1"
               onChange={({ target }) => {
-                sound?.seek(+target.value);
+                isUsingOnline
+                  ? onlineSound?.seek(+target.value)
+                  : sound?.seek(+target.value);
                 setTrackProgress(+target.value);
               }}
             />
@@ -341,7 +391,7 @@ export default function HymnalsPage() {
               </Button>
             </OverlayTrigger>
 
-            {isMP3Loaded && (
+            {(isMP3Loaded || isUsingOnline) && (
               <div className="d-flex align-items-center">
                 <Form.Control
                   custom
@@ -358,8 +408,8 @@ export default function HymnalsPage() {
                       handleSave(target);
                       return +target.value;
                     });
-                    if (isPlaying) {
-                      play();
+                    if (isPlaying || isOnlinePlaying) {
+                      isUsingOnline ? onlinePlay() : play();
                       setTrackProgress(0);
                     }
                   }}
@@ -372,14 +422,17 @@ export default function HymnalsPage() {
           </div>
 
           <div className="d-flex">
-            {isMP3Loaded && (
+            {(isMP3Loaded || isUsingOnline) && (
               <div className="mr-2">
-                {isPlaying ? (
+                {isPlaying || isOnlinePlaying ? (
                   <OverlayTrigger
                     placement="top"
                     overlay={<Tooltip>Detener</Tooltip>}
                   >
-                    <Button onClick={() => stop()} variant="light">
+                    <Button
+                      onClick={() => (isUsingOnline ? onlineStop() : stop())}
+                      variant="light"
+                    >
                       <Stop />
                     </Button>
                   </OverlayTrigger>
@@ -390,9 +443,11 @@ export default function HymnalsPage() {
                   >
                     <Button
                       onClick={() => {
-                        play();
+                        isUsingOnline ? onlinePlay() : play();
                         startTimer();
-                        sound?.seek(trackProgress);
+                        isUsingOnline
+                          ? onlineSound?.seek(trackProgress)
+                          : sound?.seek(trackProgress);
                       }}
                       variant="secondary"
                     >
@@ -442,9 +497,18 @@ export default function HymnalsPage() {
             </OverlayTrigger>
           </div>
 
-          {isMP3Loaded ? (
+          {isMP3Loaded || isUsingOnline ? (
             <div className="d-flex">
-              <VolumeMute fontSize="small" />
+              <VolumeMute
+                fontSize="small"
+                className="cursor-pointer"
+                onClick={() =>
+                  setVolume(() => {
+                    handleSave(0);
+                    return 0;
+                  })
+                }
+              />
               <Form.Control
                 custom
                 type="range"
@@ -461,7 +525,16 @@ export default function HymnalsPage() {
                   });
                 }}
               />
-              <VolumeUp fontSize="small" />
+              <VolumeUp
+                fontSize="small"
+                className="cursor-pointer"
+                onClick={() =>
+                  setVolume(() => {
+                    handleSave(1);
+                    return 1;
+                  })
+                }
+              />
             </div>
           ) : (
             <div />
