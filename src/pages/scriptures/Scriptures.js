@@ -1,4 +1,4 @@
-import { East, FirstPage, LastPage, West } from '@mui/icons-material';
+import { CopyAll, East, FirstPage, LastPage, West } from '@mui/icons-material';
 import {
   Alert,
   Bookmark,
@@ -93,7 +93,7 @@ function ScripturesView() {
         <Title>Escrituras</Title>
 
         <Typeahead
-          emptyLabel="No existe esa opcion."
+          emptyLabel="No existe ese versículo."
           highlightOnlyResult={true}
           id="combo"
           labelKey="subtext"
@@ -108,7 +108,7 @@ function ScripturesView() {
           onFocus={(e) => e.target.select()}
           options={scriptures}
           paginate={false}
-          paginationText="Ver más opciones..."
+          paginationText="Ver más versículos..."
           placeholder="Selecciona un versículo..."
           ref={typeaheadRef}
           selected={search}
@@ -116,7 +116,33 @@ function ScripturesView() {
           renderMenuItemChildren={typeaheadRender}
         />
 
-        <FinderButton onOpen={setOpenFinder} />
+        <FinderButton
+          onOpen={setOpenFinder}
+          extraButton={
+            current && (
+              <OverlayTrigger
+                placement="bottom"
+                overlay={<Tooltip>Copiar</Tooltip>}
+              >
+                <Button
+                  variant="link"
+                  className="text-white p-0 text-small mr-2"
+                  onClick={(e) => {
+                    navigator.clipboard.writeText(
+                      `${current.title}:\n${current.text}`.replaceAll(
+                        '/n',
+                        '\n'
+                      )
+                    );
+                  }}
+                  title="Abrir Himnario"
+                >
+                  <CopyAll fontSize="small" />
+                </Button>
+              </OverlayTrigger>
+            )
+          }
+        />
 
         <DisplayButton
           value={showLogo}
