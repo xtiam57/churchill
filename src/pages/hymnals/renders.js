@@ -31,5 +31,6 @@ export const typeaheadRender = (option, { text }) => (
     >
       {option.text.replaceAll('1)', '').replaceAll('/n', ' ')}
     </small>
+    {option?.book && <small className="tag mb-1">{option?.book}</small>}
   </>
 );
