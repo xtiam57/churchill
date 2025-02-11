@@ -46,6 +46,8 @@ export default function HomePage() {
   const { presenting } = usePresenter();
   const { openSchedule, refreshSchedules } = useSettingsSidebar();
 
+  const [state, setState] = useState(null);
+
   const schedulesSubs = useMemo(() => {
     const list = refreshSchedules?.filter((entry) => entry.active) || [];
 
@@ -152,6 +154,27 @@ export default function HomePage() {
     <Wrapper>
       <Sidebar>
         <Title>Inicio</Title>
+
+        <button
+          onClick={async () => {
+            const path = 'Churchill\\Fondos';
+
+            const loadedImages = await window.electronAPI.getImages(path);
+            console.log(loadedImages);
+
+            setState(loadedImages[0]);
+          }}
+        >
+          cargar
+        </button>
+
+        <div
+          style={{
+            border: 'solid 1px red',
+            height: '300px',
+            backgroundImage: `url(${state?.base64})`,
+          }}
+        ></div>
 
         <DisplayButton
           value={showLogo}

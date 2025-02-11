@@ -1,8 +1,6 @@
 const electron = require('electron');
 // Module to control application life.
-const app = electron.app;
-// Module to create native browser window.
-const BrowserWindow = electron.BrowserWindow;
+const { app, ipcMain, BrowserWindow, shell } = electron;
 
 const path = require('path');
 const url = require('url');
@@ -19,6 +17,8 @@ function createWindow() {
     height: 768,
     show: false,
     webPreferences: {
+      preload: path.join(__dirname, 'preload.js'),
+      contextIsolation: true,
       nodeIntegration: true,
       enableRemoteModule: true,
     },
@@ -36,7 +36,7 @@ function createWindow() {
   mainWindow.loadURL(startUrl);
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools();
+  mainWindow.webContents.openDevTools();
 
   // Hide menu
   mainWindow.removeMenu();
@@ -85,3 +85,52 @@ app.on('activate', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+ipcMain.handle('get-images', async (_, relativePath) => {
+  try {
+    const documentsPath = app.getPath('documents'); // Ruta base "Mis Documentos"
+    const folderPath = path.join(documentsPath, relativePath); // Ruta completa
+
+    // Verificar si la carpeta existe, si no, crearla
+    if (!fs.existsSync(folderPath)) {
+      fs.mkdirSync(folderPath, { recursive: true });
+      return []; // Retorna vacío ya que la carpeta estaba vacía
+    }
+
+    const files = fs.readdirSync(folderPath);
+    const imageFiles = files.filter((file) => /\.(jpg|jpeg|png)$/i.test(file));
+
+    const images = imageFiles.map((file) => {
+      const filePath = path.join(folderPath, file);
+      const extension = path.extname(file).replace('.', '');
+      const name = path.basename(file, `.${extension}`);
+      const base64 = `data:image/${extension};base64,${fs.readFileSync(
+        filePath,
+        { encoding: 'base64' }
+      )}`;
+
+      return { name, extension, base64 };
+    });
+
+    return images;
+  } catch (error) {
+    console.error('Error reading folder:', error);
+    return [];
+  }
+});
+
+// Obtener la ruta de la carpeta en "Mis Documentos"
+ipcMain.handle('get-folder-path', (_, subPath) => {
+  return path.join(app.getPath('documents'), subPath);
+});
+
+// Abrir la carpeta en el explorador
+ipcMain.handle('open-folder', async (_, subPath) => {
+  const folderPath = path.join(app.getPath('documents'), subPath);
+
+  // Crear la carpeta si no existe
+  if (!fs.existsSync(folderPath)) {
+    fs.mkdirSync(folderPath, { recursive: true });
+  }
+
+  return shell.openPath(folderPath);
+});

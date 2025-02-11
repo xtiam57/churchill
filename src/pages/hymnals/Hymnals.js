@@ -65,7 +65,10 @@ export default function HymnalsPage() {
   const [bookmarks, setBookmarks] = useState(
     getBookmarkedItems('hymnal', bookmarkSort)
   );
-  const [localUrl, setLocalUrl] = useState(folder.getPath(current.reference));
+  const localUrl = useMemo(
+    async () => await folder.getPath(current.reference),
+    [current.reference, folder]
+  );
   const onlineUrl = useMemo(
     () =>
       'https://renzo971.github.io/boda/pistas/' + current.reference + '.mp3',
@@ -99,7 +102,6 @@ export default function HymnalsPage() {
 
   useEffect(() => {
     stop();
-    setLocalUrl(folder.getPath(current.reference));
     // Bug: delay to set config of the song
     setTimeout(() => {
       // Trying to get settings from storage
@@ -108,17 +110,6 @@ export default function HymnalsPage() {
       setVolume(config ? config.volume : 1);
     });
   }, [current, folder, stop]);
-
-  // useEffect(() => {
-  //   if (loadError) {
-  //     const path = `https://renzo971.github.io/boda/pistas/${current.reference}.mp3`;
-
-  //     if (url !== path) {
-  //       setUrl(path);
-  //     }
-  //     setLoadError(false);
-  //   }
-  // }, [loadError]);
 
   useEffect(() => {
     return () => (isUsingOnline ? onlineStop() : stop());
