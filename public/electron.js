@@ -56,7 +56,7 @@ function createWindow() {
   });
 
   // Creando carpeta para los himnos
-  fs.mkdirSync(`${app.getPath('documents')}\\Churchill\\Pistas`, {
+  fs.mkdirSync(path.join(app.getPath('documents'), 'Churchill/Pistas'), {
     recursive: true,
   });
 }
@@ -85,7 +85,7 @@ app.on('activate', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
-ipcMain.handle('get-images', async (_, relativePath) => {
+ipcMain.handle('get-background-images', async (_, relativePath) => {
   try {
     const documentsPath = app.getPath('documents'); // Ruta base "Mis Documentos"
     const folderPath = path.join(documentsPath, relativePath); // Ruta completa
@@ -119,12 +119,12 @@ ipcMain.handle('get-images', async (_, relativePath) => {
 });
 
 // Obtener la ruta de la carpeta en "Mis Documentos"
-ipcMain.handle('get-folder-path', (_, subPath) => {
+ipcMain.handle('get-directory-path', (_, subPath) => {
   return path.join(app.getPath('documents'), subPath);
 });
 
 // Abrir la carpeta en el explorador
-ipcMain.handle('open-folder', async (_, subPath) => {
+ipcMain.handle('open-directory', async (_, subPath) => {
   const folderPath = path.join(app.getPath('documents'), subPath);
 
   // Crear la carpeta si no existe

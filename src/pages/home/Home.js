@@ -159,7 +159,9 @@ export default function HomePage() {
           onClick={async () => {
             const path = 'Churchill\\Fondos';
 
-            const loadedImages = await window.electronAPI.getImages(path);
+            const loadedImages = await window.electronAPI.getBackgroundImages(
+              path
+            );
             console.log(loadedImages);
 
             setState(loadedImages[0]);
