@@ -723,13 +723,13 @@ export function Settings() {
         ))}
       </div>
 
-      <Button
+      {/* <Button
         block
         className="mt-3"
         onClick={async () => await window.electronAPI.openDevTools()}
       >
         Herramientas de desarrollo
-      </Button>
+      </Button> */}
 
       <hr />
 

@@ -35,7 +35,13 @@ export function Routesbar() {
           ))}
       </ul>
 
-      <small className="w-100 text-center py-2">{version}</small>
+      <small
+        className="w-100 text-center py-2"
+        style={{ cursor: 'default' }}
+        onDoubleClick={async () => await window.electronAPI.openDevTools()}
+      >
+        {version}
+      </small>
     </RoutesbarStyled>
   );
 }
