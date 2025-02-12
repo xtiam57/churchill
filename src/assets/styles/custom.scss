@@ -78,23 +78,32 @@ $grid-gutter-width: 1rem;
 .monitor-container {
   position: relative;
   width: 466px;
-  height: 466px;
+  height: 150px;
   display: flex;
-}
 
-.monitor {
-  position: absolute;
-  background: #dee2e6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
+  .monitor {
+    position: absolute;
+    background: #dee2e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-.monitor:hover {
-  background: var(--primary);
-  color: #ffffff;
+    strong {
+      font-size: 1.15rem;
+    }
+
+    &.primary {
+      pointer-events: none;
+      background-color: var(--light);
+    }
+
+    &:hover {
+      background: var(--primary);
+      color: #ffffff;
+    }
+  }
 }
