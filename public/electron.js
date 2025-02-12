@@ -1,6 +1,7 @@
 const electron = require('electron');
 // Module to control application life.
-const { app, ipcMain, BrowserWindow, shell, screen } = electron;
+const { app, ipcMain, BrowserWindow, shell, screen, desktopCapturer } =
+  electron;
 
 const path = require('path');
 const url = require('url');
@@ -210,5 +211,15 @@ ipcMain.handle('get-displays', () => {
     id: index,
     label: display.label,
     bounds: display.bounds,
+  }));
+});
+
+ipcMain.handle('get-screen-sources', async () => {
+  const sources = await desktopCapturer.getSources({ types: ['screen'] });
+
+  return sources.map((source, index) => ({
+    id: index,
+    name: source.name,
+    thumbnail: source.thumbnail.toDataURL(), // Convertimos la imagen en base64
   }));
 });

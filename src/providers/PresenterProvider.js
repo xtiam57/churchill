@@ -7,6 +7,7 @@ const PresenterProvider = ({ children }) => {
   const [presenting, setPresenting] = useState(false);
   const [monitors, setMonitors] = useState([]);
   const [showModal, setShowModal] = useState(false);
+  const [previews, setPreviews] = useState({});
 
   const close = useCallback(async () => {
     const result = await window.electronAPI.closePresenter();
@@ -32,16 +33,16 @@ const PresenterProvider = ({ children }) => {
     }
 
     // Si solo hay un monitor extra, inicia directamente
-    if (displays.length === 2) {
-      const secondDisplay = displays.find(
-        (d) => d.bounds.x !== 0 || d.bounds.y !== 0
-      );
-      const isPresenting = await window.electronAPI.togglePresenter(
-        secondDisplay.id
-      );
-      setPresenting(isPresenting);
-      return;
-    }
+    // if (displays.length === 2) {
+    //   const secondDisplay = displays.find(
+    //     (d) => d.bounds.x !== 0 || d.bounds.y !== 0
+    //   );
+    //   const isPresenting = await window.electronAPI.togglePresenter(
+    //     secondDisplay.id
+    //   );
+    //   setPresenting(isPresenting);
+    //   return;
+    // }
 
     // Si hay más de un monitor, mostrar modal de selección
     const minX = Math.min(...displays.map((d) => d.bounds.x));
@@ -67,6 +68,16 @@ const PresenterProvider = ({ children }) => {
 
     setMonitors(normalizedDisplays);
     setShowModal(true);
+
+    // Capturar vistas previas
+    const sources = await window.electronAPI.getScreenSources();
+    const previewsMap = {};
+
+    sources.forEach((source) => {
+      previewsMap[source.id] = source.thumbnail; // Base64 image
+    });
+
+    setPreviews(previewsMap);
   }, [close, presenting]);
 
   const startPresentation = useCallback(async (monitorId) => {
@@ -74,6 +85,8 @@ const PresenterProvider = ({ children }) => {
     setPresenting(isPresenting);
     setShowModal(false);
   }, []);
+
+  console.log(previews);
 
   return (
     <PresenterContext.Provider value={{ toggle, close, reload, presenting }}>
@@ -101,6 +114,10 @@ const PresenterProvider = ({ children }) => {
                   height: monitor.height,
                   left: monitor.x,
                   top: monitor.y,
+                  backgroundImage: `url(${previews[monitor.id]})`,
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'center',
+                  backgroundSize: 'cover',
                 }}
                 onClick={() => startPresentation(monitor.id)}
               >
