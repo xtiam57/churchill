@@ -1,88 +1,27 @@
 import React, { useCallback, useState } from 'react';
-import { PATHS } from 'router';
 
 const PresenterContext = React.createContext({});
 
 const PresenterProvider = ({ children }) => {
-  const [presenter, setPresenter] = useState(null);
   const [presenting, setPresenting] = useState(false);
 
-  const close = useCallback(() => {
-    if (presenter) {
-      presenter.close();
-      setPresenting(false);
-      setPresenter(null);
-    }
-  }, [presenter]);
+  const close = useCallback(async () => {
+    const result = await window.electronAPI.closePresenter();
+    setPresenting(result);
+  }, []);
 
-  const reload = useCallback(() => {
-    const electron = window.require('electron');
-    const remote = electron.remote;
-    const { BrowserWindow } = remote;
-    const main = BrowserWindow.getFocusedWindow();
-
+  const reload = useCallback(async () => {
+    await window.electronAPI.reload();
     close();
-    main.reload();
   }, [close]);
 
-  const toggle = useCallback(() => {
-    const electron = window.require('electron');
-    const remote = electron.remote;
-    const { BrowserWindow, screen, app } = remote;
-    const [parent] = BrowserWindow.getAllWindows();
-    let url = parent.webContents.getURL();
-
-    if (presenter) {
-      if (presenter.isVisible()) {
-        presenter.hide();
-      } else {
-        presenter.show();
-      }
-      setPresenting(presenter.isVisible());
-      return;
-    }
-
-    app.whenReady().then(() => {
-      const displays = screen.getAllDisplays();
-      const extDisplay = displays.find(
-        ({ bounds }) => bounds.x !== 0 || bounds.y !== 0
-      );
-
-      if (extDisplay) {
-        let win = new BrowserWindow({
-          x: extDisplay.bounds.x + 50,
-          y: extDisplay.bounds.y + 50,
-          frame: false,
-          fullscreen: true,
-          show: false,
-          parent,
-        });
-
-        // Open the DevTools.
-        // win.webContents.openDevTools();
-
-        win.loadURL(url.replace(/#.*$/, `#${PATHS.CAST_PAGE}`));
-
-        win.once('ready-to-show', () => {
-          win.show();
-          setPresenting(true);
-        });
-
-        setPresenter(win);
-      }
-    });
-  }, [presenter]);
+  const toggle = useCallback(async () => {
+    const isPresenting = await window.electronAPI.togglePresenter();
+    setPresenting(isPresenting);
+  }, []);
 
   return (
-    <PresenterContext.Provider
-      value={{
-        toggle,
-        close,
-        reload,
-        presenter,
-        presenting,
-      }}
-    >
+    <PresenterContext.Provider value={{ toggle, close, reload, presenting }}>
       {children}
     </PresenterContext.Provider>
   );

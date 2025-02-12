@@ -1,6 +1,6 @@
 const electron = require('electron');
 // Module to control application life.
-const { app, ipcMain, BrowserWindow, shell } = electron;
+const { app, ipcMain, BrowserWindow, shell, screen } = electron;
 
 const path = require('path');
 const url = require('url');
@@ -8,7 +8,8 @@ const fs = require('fs');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
-let mainWindow;
+let mainWindow = null;
+let presenterWindow = null;
 
 function createWindow() {
   // Create the browser window.
@@ -36,7 +37,7 @@ function createWindow() {
   mainWindow.loadURL(startUrl);
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 
   // Hide menu
   mainWindow.removeMenu();
@@ -133,4 +134,74 @@ ipcMain.handle('open-directory', async (_, subPath) => {
   }
 
   return shell.openPath(folderPath);
+});
+
+ipcMain.handle('toggle-presenter', (event) => {
+  const [parent] = BrowserWindow.getAllWindows();
+  let url = parent.webContents.getURL();
+
+  if (presenterWindow) {
+    if (presenterWindow.isVisible()) {
+      presenterWindow.hide();
+    } else {
+      presenterWindow.show();
+    }
+    return presenterWindow.isVisible();
+  }
+
+  const displays = screen.getAllDisplays();
+  const extDisplay = displays.find(
+    ({ bounds }) => bounds.x !== 0 || bounds.y !== 0
+  );
+
+  if (extDisplay) {
+    presenterWindow = new BrowserWindow({
+      x: extDisplay.bounds.x + 50,
+      y: extDisplay.bounds.y + 50,
+      frame: false,
+      fullscreen: true,
+      show: false,
+      parent,
+    });
+
+    presenterWindow.loadURL(url.replace(/#.*$/, '#/cast-screen'));
+
+    presenterWindow.once('ready-to-show', () => {
+      presenterWindow.show();
+    });
+
+    return true;
+  }
+
+  return false;
+});
+
+ipcMain.handle('close-presenter', () => {
+  if (presenterWindow) {
+    presenterWindow.close();
+    presenterWindow = null;
+    return false;
+  }
+  return true;
+});
+
+ipcMain.handle('reload', () => {
+  const main = BrowserWindow.getFocusedWindow();
+  if (main) {
+    main.reload();
+  }
+});
+
+ipcMain.handle('open-devtools', () => {
+  const main = BrowserWindow.getFocusedWindow();
+  if (main) {
+    main.webContents.openDevTools();
+  }
+});
+
+ipcMain.handle('get-displays', () => {
+  return screen.getAllDisplays().map((display, index) => ({
+    id: index,
+    bounds: display.bounds,
+  }));
 });
