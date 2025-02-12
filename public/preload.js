@@ -6,7 +6,8 @@ contextBridge.exposeInMainWorld('electronAPI', {
   getDirectoryPath: (subPath) =>
     ipcRenderer.invoke('get-directory-path', subPath),
   openDirectory: (subPath) => ipcRenderer.invoke('open-directory', subPath),
-  togglePresenter: () => ipcRenderer.invoke('toggle-presenter'),
+  togglePresenter: (monitorId) =>
+    ipcRenderer.invoke('toggle-presenter', monitorId),
   closePresenter: () => ipcRenderer.invoke('close-presenter'),
   reload: () => ipcRenderer.invoke('reload'),
   openDevTools: () => ipcRenderer.invoke('open-devtools'),

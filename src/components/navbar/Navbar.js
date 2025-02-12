@@ -24,7 +24,7 @@ export function Navbar() {
 
   const location = useLocation();
   const { toggleSettings, toggleSchedule } = useSettingsSidebar();
-  const { toggle, presenting } = usePresenter();
+  const { toggle, presenting, fetchMonitors } = usePresenter();
   const [showModal, setShowModal] = useState(false);
 
   const handleSendMessage = useCallback(
@@ -133,7 +133,7 @@ export function Navbar() {
             }
           >
             <Button
-              onClick={toggle}
+              onClick={fetchMonitors}
               variant={presenting ? 'outline-dark' : 'secondary'}
             >
               {presenting ? <CancelPresentation /> : <Slideshow />}

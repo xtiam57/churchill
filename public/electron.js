@@ -136,7 +136,7 @@ ipcMain.handle('open-directory', async (_, subPath) => {
   return shell.openPath(folderPath);
 });
 
-ipcMain.handle('toggle-presenter', (event) => {
+ipcMain.handle('toggle-presenter', (event, selectedMonitorId) => {
   const [parent] = BrowserWindow.getAllWindows();
   let url = parent.webContents.getURL();
 
@@ -150,9 +150,15 @@ ipcMain.handle('toggle-presenter', (event) => {
   }
 
   const displays = screen.getAllDisplays();
-  const extDisplay = displays.find(
-    ({ bounds }) => bounds.x !== 0 || bounds.y !== 0
-  );
+  const extDisplay = displays[selectedMonitorId];
+  // const extDisplay = displays.find(
+  //   ({ bounds }) => bounds.x !== 0 || bounds.y !== 0
+  // );
+
+  if (!extDisplay) {
+    console.error('Monitor seleccionado no válido.');
+    return false;
+  }
 
   if (extDisplay) {
     presenterWindow = new BrowserWindow({
@@ -202,6 +208,7 @@ ipcMain.handle('open-devtools', () => {
 ipcMain.handle('get-displays', () => {
   return screen.getAllDisplays().map((display, index) => ({
     id: index,
+    label: display.label,
     bounds: display.bounds,
   }));
 });
