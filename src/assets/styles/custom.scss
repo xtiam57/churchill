@@ -78,8 +78,11 @@ $grid-gutter-width: 1rem;
 .monitor-container {
   position: relative;
   width: 466px;
-  height: 150px;
+  height: 466px;
   display: flex;
+  border-radius: 8px;
+  background: #f2f4f8;
+  overflow: hidden;
 
   .monitor {
     position: absolute;
@@ -92,15 +95,8 @@ $grid-gutter-width: 1rem;
     border-radius: 8px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-    .preview-image {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      border: 2px solid black;
-    }
-
     strong {
-      font-size: 1.15rem;
+      font-size: 1.05rem;
     }
 
     &.primary {

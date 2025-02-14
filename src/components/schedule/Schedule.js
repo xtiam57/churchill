@@ -1,6 +1,6 @@
 import { AlarmAdd, Close } from '@mui/icons-material';
 import { Sidebar } from 'components';
-import { useSettingsSidebar } from 'hooks';
+import { useApp } from 'hooks';
 import { Button } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
 import { generateGUID } from 'utils';
@@ -11,8 +11,7 @@ import { EntryList } from './EntryList';
 const useSchedule = createPersistedState(BROADCAST.SCHEDULES_AND_EVENTS);
 
 export function Schedule() {
-  const { toggleSchedule, showingSchedule, setRefreshSchedules } =
-    useSettingsSidebar();
+  const { toggleSchedule, showingSchedule, setRefreshSchedules } = useApp();
 
   const [schedules, setSchedules] = useSchedule(
     BROADCAST.INITIAL_SCHEDULES_AND_EVENTS

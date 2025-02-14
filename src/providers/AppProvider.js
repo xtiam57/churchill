@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import { useFolder } from 'hooks';
+import React, { useEffect, useState } from 'react';
 import { Storage, generateGUID } from 'utils';
 import { BROADCAST } from 'values';
 
 const AppContext = React.createContext({});
 
 const AppProvider = ({ children }) => {
+  const folder = useFolder();
+  const [myDocumentsPath, setMyDocumentsPath] = useState('');
+
   const [showSettings, setShowSettings] = useState(false);
   const [showSchedule, setShowSchedule] = useState(false);
   const [refreshSchedules, setRefreshSchedules] = useState(() => {
@@ -57,6 +61,10 @@ const AppProvider = ({ children }) => {
     setShowSchedule(false);
   };
 
+  useEffect(() => {
+    folder.getPath().then((url) => setMyDocumentsPath(url));
+  }, [folder]);
+
   return (
     <AppContext.Provider
       value={{
@@ -70,6 +78,7 @@ const AppProvider = ({ children }) => {
         closeSchedule,
         refreshSchedules,
         setRefreshSchedules,
+        myDocumentsPath,
       }}
     >
       {children}

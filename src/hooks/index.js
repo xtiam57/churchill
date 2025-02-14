@@ -1,3 +1,4 @@
+export { useApp } from './useApp';
 export { useBirthday } from './useBirthday';
 export { useClickOutside } from './useClickOutside';
 export { useClock } from './useClock';
@@ -9,4 +10,3 @@ export { useKeyUp } from './useKeyUp';
 export { usePresenter } from './usePresenter';
 export { useScriptures } from './useScriptures';
 export { useSemaphore } from './useSemaphore';
-export { useSettingsSidebar } from './useSettingsSidebar';

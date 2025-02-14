@@ -13,4 +13,5 @@ contextBridge.exposeInMainWorld('electronAPI', {
   openDevTools: () => ipcRenderer.invoke('open-devtools'),
   getDisplays: () => ipcRenderer.invoke('get-displays'),
   getScreenSources: () => ipcRenderer.invoke('get-screen-sources'),
+  openLink: (url) => ipcRenderer.send('open-link', url),
 });

@@ -15,13 +15,13 @@ export function useFolder() {
   // }, []);
 
   const folder = useMemo(() => {
-    const subPath = 'Churchill/Pistas';
+    const subPath = 'Churchill\\Pistas';
 
     return {
       open: () => window.electronAPI.openDirectory(subPath),
-      getPath: async (file) => {
+      getPath: async () => {
         const basePath = await window.electronAPI.getDirectoryPath(subPath);
-        return `${basePath}/${file}.mp3`;
+        return `file://${basePath}`;
       },
     };
   }, []);

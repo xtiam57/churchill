@@ -61,6 +61,10 @@ function createWindow() {
   fs.mkdirSync(path.join(app.getPath('documents'), 'Churchill/Pistas'), {
     recursive: true,
   });
+  // Creando carpeta para los fondos
+  fs.mkdirSync(path.join(app.getPath('documents'), 'Churchill/Fondos'), {
+    recursive: true,
+  });
 }
 
 // This method will be called when Electron has finished
@@ -152,9 +156,6 @@ ipcMain.handle('toggle-presenter', (event, selectedMonitorId) => {
 
   const displays = screen.getAllDisplays();
   const extDisplay = displays[selectedMonitorId];
-  // const extDisplay = displays.find(
-  //   ({ bounds }) => bounds.x !== 0 || bounds.y !== 0
-  // );
 
   if (!extDisplay) {
     console.error('Monitor seleccionado no válido.');
@@ -222,4 +223,8 @@ ipcMain.handle('get-screen-sources', async () => {
     name: source.name,
     thumbnail: source.thumbnail.toDataURL(), // Convertimos la imagen en base64
   }));
+});
+
+ipcMain.on('open-link', (event, url) => {
+  shell.openExternal(url); // Abre el enlace en el navegador predeterminado
 });

@@ -7,7 +7,6 @@ const PresenterProvider = ({ children }) => {
   const [presenting, setPresenting] = useState(false);
   const [monitors, setMonitors] = useState([]);
   const [showModal, setShowModal] = useState(false);
-  const [previews, setPreviews] = useState({});
 
   const close = useCallback(async () => {
     const result = await window.electronAPI.closePresenter();
@@ -53,7 +52,7 @@ const PresenterProvider = ({ children }) => {
     const virtualWidth = maxX - minX;
     const virtualHeight = maxY - minY;
 
-    const scaleFactor = Math.min(466 / virtualWidth, 150 / virtualHeight);
+    const scaleFactor = Math.min(466 / virtualWidth, 466 / virtualHeight);
 
     const normalizedDisplays = displays.map((display) => ({
       isPrimary: display.bounds.x === 0 && display.bounds.y === 0,
@@ -70,14 +69,13 @@ const PresenterProvider = ({ children }) => {
     setShowModal(true);
 
     // Capturar vistas previas
-    const sources = await window.electronAPI.getScreenSources();
-    const previewsMap = {};
+    // const sources = await window.electronAPI.getScreenSources();
+    // const previewsMap = {};
 
-    sources.forEach((source) => {
-      previewsMap[source.id] = source.thumbnail; // Base64 image
-    });
-
-    setPreviews(previewsMap);
+    // sources.forEach((source) => {
+    //   previewsMap[source.id] = source.thumbnail; // Base64 image
+    // });
+    // setPreviews(previewsMap);
   }, [close, presenting]);
 
   const startPresentation = useCallback(async (monitorId) => {
@@ -85,8 +83,6 @@ const PresenterProvider = ({ children }) => {
     setPresenting(isPresenting);
     setShowModal(false);
   }, []);
-
-  console.log(previews);
 
   return (
     <PresenterContext.Provider value={{ toggle, close, reload, presenting }}>
@@ -114,10 +110,10 @@ const PresenterProvider = ({ children }) => {
                   height: monitor.height,
                   left: monitor.x,
                   top: monitor.y,
-                  backgroundImage: `url(${previews[monitor.id]})`,
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'center',
-                  backgroundSize: 'cover',
+                  // backgroundImage: `url(${previews[monitor.id]})`,
+                  // backgroundRepeat: 'no-repeat',
+                  // backgroundPosition: 'center',
+                  // backgroundSize: 'cover',
                 }}
                 onClick={() => startPresentation(monitor.id)}
               >

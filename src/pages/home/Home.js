@@ -16,13 +16,7 @@ import {
   Title,
   Wrapper,
 } from 'components';
-import {
-  useBirthday,
-  useIterate,
-  useKeyUp,
-  usePresenter,
-  useSettingsSidebar,
-} from 'hooks';
+import { useApp, useBirthday, useIterate, useKeyUp, usePresenter } from 'hooks';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Button, ButtonGroup, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
@@ -44,9 +38,7 @@ export default function HomePage() {
   const [loop, setLoop] = useState(true);
   const [moveNotice] = useIterate(notice, notices);
   const { presenting } = usePresenter();
-  const { openSchedule, refreshSchedules } = useSettingsSidebar();
-
-  const [state, setState] = useState(null);
+  const { openSchedule, refreshSchedules } = useApp();
 
   const schedulesSubs = useMemo(() => {
     const list = refreshSchedules?.filter((entry) => entry.active) || [];
@@ -154,29 +146,6 @@ export default function HomePage() {
     <Wrapper>
       <Sidebar>
         <Title>Inicio</Title>
-
-        <button
-          onClick={async () => {
-            const path = 'Churchill\\Fondos';
-
-            const loadedImages = await window.electronAPI.getBackgroundImages(
-              path
-            );
-            console.log(loadedImages);
-
-            setState(loadedImages[0]);
-          }}
-        >
-          cargar
-        </button>
-
-        <div
-          style={{
-            border: 'solid 1px red',
-            height: '300px',
-            backgroundImage: `url(${state?.base64})`,
-          }}
-        ></div>
 
         <DisplayButton
           value={showLogo}

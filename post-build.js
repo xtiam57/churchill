@@ -47,8 +47,8 @@ async function copyAndDeleteExeFiles() {
 copyAndDeleteExeFiles();
 
 // Update index.html file with new package versions
-
 const htmlFilePath = './docs/index.html';
+const jsonFilePath = './docs/version.json';
 const packageJsonPath = 'package.json';
 
 async function updatePackageVersions() {
@@ -60,13 +60,24 @@ async function updatePackageVersions() {
     // Read the HTML file
     let htmlContent = await fs.readFile(htmlFilePath, 'utf8');
     // Create a regex to find and replace all version strings in the format digit.digit.digit
-    const regex = /(v| )\d+\.\d+\.\d+/g;
+    const regexHTML = /(v| )\d+\.\d+\.\d+/g;
     // Replace the found versions with the new version
-    htmlContent = htmlContent.replace(regex, `$1${newVersion}`);
+    htmlContent = htmlContent.replace(regexHTML, `$1${newVersion}`);
 
     // Write the modified HTML back to the file
     await fs.writeFile(htmlFilePath, htmlContent);
     console.log('Version updated in "index.html".');
+
+    // Read the JSON file
+    let jsonContent = await fs.readFile(jsonFilePath, 'utf8');
+    // Create a regex to find and replace all version strings in the format digit.digit.digit
+    const regexJSON = /\d+\.\d+\.\d+/g;
+    // Replace the found versions with the new version
+    jsonContent = jsonContent.replace(regexJSON, `${newVersion}`);
+
+    // Write the modified JSON back to the file
+    await fs.writeFile(jsonFilePath, jsonContent);
+    console.log('Version updated in "version.json".');
   } catch (error) {
     console.error('Error during HTML manipulation:', error);
   }

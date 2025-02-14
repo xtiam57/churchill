@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const StanzasWrapperStyled = styled.div`
   position: absolute;
   left: calc(55px + 320px + 20px);
-  top: calc(56px + 20px);
+  top: calc(56px + 30px);
   z-index: 3;
   display: flex;
   align-items: start;

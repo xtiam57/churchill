@@ -6,7 +6,7 @@ import {
   Slideshow,
 } from '@mui/icons-material';
 import { Countdown, Logo } from 'components';
-import { usePresenter, useSettingsSidebar } from 'hooks';
+import { useApp, usePresenter } from 'hooks';
 import { useCallback, useState } from 'react';
 import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
@@ -23,7 +23,7 @@ export function Navbar() {
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
 
   const location = useLocation();
-  const { toggleSettings, toggleSchedule } = useSettingsSidebar();
+  const { toggleSettings, toggleSchedule } = useApp();
   const { toggle, presenting } = usePresenter();
   const [showModal, setShowModal] = useState(false);
 

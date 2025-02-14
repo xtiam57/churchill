@@ -24,7 +24,7 @@ import {
   Title,
   Wrapper,
 } from 'components';
-import { useFolder, useHymnals, useKeyUp, usePresenter } from 'hooks';
+import { useApp, useFolder, useHymnals, useKeyUp, usePresenter } from 'hooks';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
   Button,
@@ -51,6 +51,7 @@ export const createKey = ({ id, type }) => `${type}_${id}_config`;
 
 export default function HymnalsPage() {
   const folder = useFolder();
+  const { myDocumentsPath } = useApp();
 
   const typeaheadRef = useRef();
   const sliderRef = useRef();
@@ -66,8 +67,8 @@ export default function HymnalsPage() {
     getBookmarkedItems('hymnal', bookmarkSort)
   );
   const localUrl = useMemo(
-    async () => await folder.getPath(current.reference),
-    [current.reference, folder]
+    () => `${myDocumentsPath}\\${current.reference}.mp3`,
+    [current.reference, myDocumentsPath]
   );
   const onlineUrl = useMemo(
     () =>

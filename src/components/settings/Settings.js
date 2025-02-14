@@ -1,6 +1,6 @@
 import { Close, Download, Favorite, FileUpload } from '@mui/icons-material';
 import { Logo, LogoPreview, Sidebar, TextPreview } from 'components';
-import { usePresenter, useSettingsSidebar } from 'hooks';
+import { useApp, usePresenter } from 'hooks';
 import { useState } from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
@@ -11,7 +11,7 @@ import { version } from 'version';
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
 export function Settings() {
-  const { toggleSettings, showingSettings } = useSettingsSidebar();
+  const { toggleSettings, showingSettings } = useApp();
   const [settings, setSettings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const [file, setFile] = useState(null);
   const { reload } = usePresenter();

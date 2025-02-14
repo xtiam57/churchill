@@ -1,4 +1,6 @@
-import { OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { Download } from '@mui/icons-material';
+import { useEffect, useState } from 'react';
+import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { NavLink, useLocation } from 'react-router-dom';
 import { PATHS, routes } from 'router';
 import { version } from 'version';
@@ -6,6 +8,25 @@ import { RoutesbarStyled } from './styled';
 
 export function Routesbar() {
   const location = useLocation();
+  const [isNewVersion, setIsNewVersion] = useState(false);
+
+  useEffect(() => {
+    fetch(
+      'https://raw.githubusercontent.com/xtiam57/churchill/refs/heads/main/docs/version.json'
+    )
+      .then((response) => response.json())
+      .then((result) => {
+        if (result?.version && result?.version !== version) {
+          const currentVersion = version?.replaceAll('.', '');
+          const newVersion = result.version.replaceAll('.', '');
+
+          if (+newVersion > +currentVersion) {
+            console.log('new version', newVersion, currentVersion);
+            setIsNewVersion(true);
+          }
+        }
+      });
+  }, []);
 
   if (location.pathname === PATHS.CAST_PAGE) {
     return null;
@@ -35,13 +56,34 @@ export function Routesbar() {
           ))}
       </ul>
 
-      <small
-        className="w-100 text-center py-2"
-        style={{ cursor: 'default' }}
-        onDoubleClick={async () => await window.electronAPI.openDevTools()}
-      >
-        {version}
-      </small>
+      <div className="text-center">
+        {isNewVersion && (
+          <OverlayTrigger
+            placement="right"
+            overlay={<Tooltip> Nueva versión disponible</Tooltip>}
+          >
+            <Button
+              onClick={() =>
+                window.electronAPI.openLink(
+                  'https://xtiam57.github.io/churchill/'
+                )
+              }
+              variant="secondary"
+              className="px-2"
+            >
+              <Download />
+            </Button>
+          </OverlayTrigger>
+        )}
+
+        <small
+          className="w-100 text-center py-2 d-block"
+          style={{ cursor: 'default' }}
+          onDoubleClick={async () => await window.electronAPI.openDevTools()}
+        >
+          {version}
+        </small>
+      </div>
     </RoutesbarStyled>
   );
 }
