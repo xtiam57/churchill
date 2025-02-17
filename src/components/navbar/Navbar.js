@@ -116,7 +116,7 @@ export function Navbar() {
             </div>
           ) : null}
 
-          <span className="mr-3">
+          <span>
             <Countdown />
           </span>
 
@@ -135,6 +135,7 @@ export function Navbar() {
             <Button
               onClick={toggle}
               variant={presenting ? 'outline-dark' : 'secondary'}
+              className="ml-3"
             >
               {presenting ? <CancelPresentation /> : <Slideshow />}
             </Button>

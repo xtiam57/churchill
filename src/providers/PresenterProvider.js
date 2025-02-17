@@ -32,16 +32,16 @@ const PresenterProvider = ({ children }) => {
     }
 
     // Si solo hay un monitor extra, inicia directamente
-    // if (displays.length === 2) {
-    //   const secondDisplay = displays.find(
-    //     (d) => d.bounds.x !== 0 || d.bounds.y !== 0
-    //   );
-    //   const isPresenting = await window.electronAPI.togglePresenter(
-    //     secondDisplay.id
-    //   );
-    //   setPresenting(isPresenting);
-    //   return;
-    // }
+    if (displays.length === 2) {
+      const secondDisplay = displays.find(
+        (d) => d.bounds.x !== 0 || d.bounds.y !== 0
+      );
+      const isPresenting = await window.electronAPI.togglePresenter(
+        secondDisplay.id
+      );
+      setPresenting(isPresenting);
+      return;
+    }
 
     // Si hay más de un monitor, mostrar modal de selección
     const minX = Math.min(...displays.map((d) => d.bounds.x));

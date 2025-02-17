@@ -69,7 +69,7 @@ export function Routesbar() {
                 )
               }
               variant="secondary"
-              className="px-2"
+              className="px-2 bounce"
             >
               <Download />
             </Button>

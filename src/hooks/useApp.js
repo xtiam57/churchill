@@ -14,6 +14,7 @@ export function useApp() {
     refreshSchedules,
     setRefreshSchedules,
     myDocumentsPath,
+    displaysQty,
   } = useContext(AppContext);
   return {
     showingSettings,
@@ -27,5 +28,6 @@ export function useApp() {
     refreshSchedules,
     setRefreshSchedules,
     myDocumentsPath,
+    displaysQty,
   };
 }

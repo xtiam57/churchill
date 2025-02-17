@@ -1,5 +1,5 @@
 import { useFolder } from 'hooks';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Storage, generateGUID } from 'utils';
 import { BROADCAST } from 'values';
 
@@ -8,6 +8,7 @@ const AppContext = React.createContext({});
 const AppProvider = ({ children }) => {
   const folder = useFolder();
   const [myDocumentsPath, setMyDocumentsPath] = useState('');
+  const [displaysQty, setDisplaysQty] = useState(1);
 
   const [showSettings, setShowSettings] = useState(false);
   const [showSchedule, setShowSchedule] = useState(false);
@@ -25,41 +26,47 @@ const AppProvider = ({ children }) => {
     return schedules;
   });
 
-  const toggleSettings = () => {
+  const toggleSettings = useCallback(() => {
     setShowSettings((state) => {
       if (!state) {
         setShowSchedule(false);
       }
       return !state;
     });
-  };
+  }, []);
 
-  const openSettings = () => {
+  const openSettings = useCallback(() => {
     setShowSettings(true);
     setShowSchedule(false);
-  };
+  }, []);
 
-  const closeSettings = () => {
+  const closeSettings = useCallback(() => {
     setShowSettings(false);
-  };
+  }, []);
 
-  const toggleSchedule = () => {
+  const toggleSchedule = useCallback(() => {
     setShowSchedule((state) => {
       if (!state) {
         setShowSettings(false);
       }
       return !state;
     });
-  };
+  }, []);
 
-  const openSchedule = () => {
+  const openSchedule = useCallback(() => {
     setShowSchedule(true);
     setShowSettings(false);
-  };
+  }, []);
 
-  const closeSchedule = () => {
+  const closeSchedule = useCallback(() => {
     setShowSchedule(false);
-  };
+  }, []);
+
+  useEffect(() => {
+    window.electronAPI
+      .getDisplays()
+      .then((displays) => setDisplaysQty(displays.length));
+  }, []);
 
   useEffect(() => {
     folder.getPath().then((url) => setMyDocumentsPath(url));
@@ -79,6 +86,7 @@ const AppProvider = ({ children }) => {
         refreshSchedules,
         setRefreshSchedules,
         myDocumentsPath,
+        displaysQty,
       }}
     >
       {children}
