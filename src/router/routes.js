@@ -21,6 +21,7 @@ export const PATHS = {
   COUNTDOWN_PAGE: '/countdown',
   TRIVIA_PAGE: '/trivia',
   EXPORT_PAGE: '/export',
+  RESOURCES_PAGE: '/resources',
 };
 
 export const routes = flatten([
@@ -91,6 +92,16 @@ export const routes = flatten([
     menu: true,
     showLabel: false,
   },
+  // {
+  //   key: PATHS.RESOURCES_PAGE,
+  //   exact: true,
+  //   path: PATHS.RESOURCES_PAGE,
+  //   component: ResourcesPage,
+  //   icon: <Image />,
+  //   label: 'Recursos',
+  //   menu: true,
+  //   showLabel: false,
+  // },
   // {
   //   key: PATHS.TRIVIA_PAGE,
   //   exact: true,
