@@ -15816,7 +15816,7 @@
     "title": "MÁS ALLÁ DEL SOL",
     "chorus": "//Más allá del sol,/nmás allá del sol,/nyo tengo un hogar,/nhogar bello hogar,/nmas allá del sol.//",
     "stanzas": [
-      "1) Aunque en esta vida no tengo riquezas;/nsé que allá en la gloria tengo una mansión./nCual alma perdida entre las pobrezas;/nde mí es Jesucristo tuvo compasión.",
+      "1) Aunque en esta vida no tengo riquezas;/nsé que allá en la gloria tengo una mansión./nCual alma perdida entre las pobrezas;/nde mí Jesucristo tuvo compasión.",
       "2) Así, por el mundo, yo voy caminando;/nde pruebas rodeado, y de tentación./nPero a mi lado viene consolando;/nmi bendito Cristo en la turbación.",
       "3) A los pueblos todos del linaje humano;/nCristo quiere darles plena salvación./nTambién una casa para cada hermano;/nfue a prepararle a la santa Sión."
     ],
@@ -20046,7 +20046,7 @@
   {
     "number": 51,
     "title": "CUANDO CRISTO VINO A MI CORAZÓN",
-    "chorus": "//Mi vida comenzó, cuando el Señor llegó;/ny hoy puedo cantar de su amor//.",
+    "chorus": "//Mi vida comenzó,/ncuando el Señor llegó;/ny hoy puedo cantar de su amor//.",
     "stanzas": [
       "1) Cuando Cristo vino a mi corazón,/nmi vida entera cambió;/nsu paz y su amor alejaron de mí,/nlas dudas, las sombras y el temor.",
       "2) Hoy quiero que Cristo te transforme a ti,/nque cambie tu vida también./nPiensa en la cruz donde murió por ti/ny ábrele hoy tu corazón."
@@ -20150,7 +20150,7 @@
   },
   {
     "number": 59,
-    "title": "EL DIOS SIN IGUAL",
+    "title": "EL DIOS SIN IGUAL (NO HAY DIOS TAN GRANDE)",
     "chorus": null,
     "stanzas": [
       "1) //No hay Dios tan grande como Tú,/nNo lo hay, no lo hay.///n//No hay Dios que pueda hacer las obras,/nComo las que haces Tú.///n//No es con espada, ni con ejército,/nMas con tu Santo Espíritu.///n///Y muchas almas se salvaran.////nCon tu Santo Espíritu."
@@ -24358,6 +24358,294 @@
       "2) Mi pecado me cegó,/nno escuchaba yo Tu voz./nIgnoraba Tu amor,/nme alejé de Ti, Señor./nMas Tu Espíritu me dio/nvida en Tu palabra obró./nA Tu Hijo conocí,/nSu evangelio me salvó.",
       "3) Ahora ayúdame a vivir,/nde Tu gracia depender./nGuarda mi alma y corazón,/ndel maligno líbrame./nDigno de mi adoración,/nTuyo es todo mi existir./nOh gran Dios altísimo,/nglorifícate en mí.",
       "4) Digno de mi adoración,/nTuyo es todo mi existir./nOh gran Dios altísimo,/nglorifícate en mí."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 34,
+    "title": "EL PODER DE LA CRUZ (VARIANTE DOULOS)",
+    "chorus": null,
+    "stanzas": [
+      "1) Oh, al ver aquel negro amanecer/nCristo entregado a morir/nCondenado fue siendo justo y fiel/nClavado a una cruz",
+      "2) El poder de la cruz/nMi pecado llevó/nIra y culpa cargó/nSoy perdonado en la cruz",
+      "3) Oh, aquel dolor, que Tu rostro mostró/nCargando el peso de mi mal/nToda corrupción, todo mal pensar/nTú los pagaste ahí",
+      "4) El poder de la cruz/nDios al hijo inmoló/n¡Qué gran precio pagó!/nSoy perdonado en la cruz",
+      "5) La tierra tembló, el cielo oscureció/nViendo agonía en Su hacedor/nVelo roto en dos, se escuchó el clamor/nSu obra consumó",
+      "6) El poder de la cruz/nMi pecado llevó/nIra y culpa cargó/nSoy perdonado en la cruz",
+      "7) Anulaste ahí, el acta contra mí/nPor Tus dolores libre soy/nMuerte derrotó, vida me otorgó/nTu inefable amor",
+      "8) El poder de la cruz/nDios al hijo inmoló/n¡Qué gran precio pagó!/nSoy perdonado en la cruz"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 35,
+    "title": "UNIDOS EN VERDAD",
+    "chorus": "Vamos al cielo, Jesús nos espera;/nhay un lugar para ti./nContigo, yo quiero cantar en el cielo;/nvamos, mi hermano, al hogar.",
+    "stanzas": [
+      "1) Por nuestro Señor, unidos en verdad,/nlo adoramos con fervor./nGozo da vivir unidos por la fe;/nsiempre Jesús nos guiará.",
+      "2) Al gran capitán habremos de seguir;/nla gran victoria cerca está./nSin vacilación al cielo vamos,/nsí; que nadie falte allá."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 36,
+    "title": "EL CULTO DE HOY",
+    "chorus": null,
+    "stanzas": [
+      "1) //El culto de hoy va a ser maravilloso,/nPorque el Señor va a derramar de su poder.//",
+      "2) Derrama Señor, derrama Señor/nDerrama sobre nosotros tu poder."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 37,
+    "title": "JEREMÍAS 33:3",
+    "chorus": null,
+    "stanzas": [
+      "1) Clama a mí, y yo te responderé./nClama a mí, y yo te responderé.",
+      "2) Y te enseñaré cosa grandes y ocultas/nQue tú no conoces.",
+      "3) Clama a mí, Clama a mí,/nY te responderé."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 38,
+    "title": "SALMO 63",
+    "chorus": null,
+    "stanzas": [
+      "1) //Dios, Dios mío eres tú;/nde madrugada te buscaré;//",
+      "2) //Mi alma tiene sed de ti,/nMi carne te anhela./nEn tierra seca y árida/nDonde aguas no hay.//"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 39,
+    "title": "Salmo 138",
+    "chorus": null,
+    "stanzas": [
+      "1) //Te Alabarán Oh Jehová Todos los Reyes;/nTodos los reyes de la Tierra;/nPorque han oído los dichos de tu boca./nY cantarán de los caminos de Jehová.//",
+      "2) //Porque la Gloria de Jehová es Grande./nPorque Jehová es Excelso en sus caminos./nPorque Jehová atiende al humilde./nMas mira de lejos al altivo.//"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 40,
+    "title": "YO TENGO UN AMIGO QUE ME AMA",
+    "chorus": null,
+    "stanzas": [
+      "1) Yo tengo un amigo que me ama/nMe ama, me ama/nYo tengo un amigo que me ama/nSu Nombre es Jesús.",
+      "2) //Que me ama, que me ama/nQue me ama, con inmenso amor.//",
+      "3) Tú tienes un amigo que te ama/nTe ama, te ama/nTú tienes un amigo que te ama/nSu nombre es Jesús.",
+      "4) //Que te ama, que te ama/nQue te ama, con su inmenso amor.//",
+      "5) Tenemos un amigo que nos ama,/nnos ama, nos ama./nTenemos un amigo que nos ama,/nSu nombre es Jesús.",
+      "6) //Que nos ama, que nos ama,/nQue nos ama con su inmenso amor.//"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 41,
+    "title": "DEMOS GRACIAS AL SEÑOR",
+    "chorus": null,
+    "stanzas": [
+      "1) //Demos gracias al Señor,/nDemos gracias,/nDemos gracias por su amor.//",
+      "2) Por las mañanas las aves cantan/nlas alabanzas de Cristo el Salvador,/nY tú hermano, ¿por qué no cantas/nlas alabanzas de Cristo el Salvador?",
+      "3) //Demos gracias al Señor,/nDemos gracias,/nDemos gracias por su amor.//"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 42,
+    "title": "CUANDO CRISTO VINO A MI CORAZÓN",
+    "chorus": "Mi vida comenzó cuando el Señor llegó,/ny hoy puedo cantar yo de su amor./nMi vida comenzó cuando el Señor llegó,/ny hoy puedo cantar yo de su amor.",
+    "stanzas": [
+      "1) Cuando Cristo vino a mi corazón,/nmi vida entera cambió;/nSu paz y su amor alejaron de mí las dudas,/nlas sombras y el temor.",
+      "2) Hoy quiero que Cristo te transforme a ti,/nque cambie tu vida también./nOh, piensa en la cruz donde murió por ti/ny ábrele tu corazón. "
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 43,
+    "title": "ALABA A DIOS",
+    "chorus": null,
+    "stanzas": [
+      "1) Dios no rechaza oración/nOración es alimento/nNunca vi un justo sin respuesta/nO quedar en sufrimiento",
+      "2) Basta solamente esperar/nLo que Dios irá a hacer/nCuando Él levanta sus manos/nEs hora de vencer",
+      "3) Oh, alaba/nSimplemente alaba/nEstás llorando, alaba/nEn la prueba, alaba/nEstás sufriendo, alaba/nNo importa, alaba/nTu alabanza, Él escuchará",
+      "4) Dios va al frente abriendo caminos/nQuebrando cadenas, sacando espinas/nManda sus Ángeles, contigo a luchar/nÉl abre puertas, nadie puede cerrar",
+      "5) Él trabaja para los que confían/nCamina contigo de noche y de día/nLevanta tus manos, tu victoria llegó/nComienza a cantar y alaba a Dios",
+      "6) Alaba a Dios/nAlaba a Dios/nAlaba a Dios",
+      "7) La gente necesita entender/nLo que Dios está hablando/nCuando Él queda en silencio/nEs porque está trabajando",
+      "8) Basta solamente esperar/nLo que Dios irá a hacer/nCuando Él extiende sus manos/nEs hora de vencer",
+      "9) Oh, alaba (alaba)/nSimplemente alaba (alaba)/nEstás llorando alaba (alaba)/nEn la prueba alaba (alaba)/nEstás sufriendo alaba (alaba)/nNo importa alaba (alaba)/nTu alabanza, Él escuchará",
+      "10) Dios va al frente abriendo caminos/nQuebrando cadenas, sacando espinas/nManda sus Ángeles, contigo a luchar/nÉl abre puertas, nadie puede cerrar",
+      "11) Él trabaja para los que confían/nCamina contigo de noche y de día/nLevanta tus manos, tu victoria llegó/nComienza a cantar y alaba a Dios."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 44,
+    "title": "PAZ EN LA TORMENTA",
+    "chorus": null,
+    "stanzas": [
+      "1) Cuando lloras por las/nveces que intentaste/nY tratas de olvidar/nlas lágrimas que lloraste.",
+      "2) Solo tienes pena y tristeza/nEl futuro incierto espera/nPuedes tener, paz en la tormenta/nMuchas veces yo me siento igual que tú.",
+      "3) Y mi corazón, anhela algo real/nEl Señor viene a mí y me ayuda a seguir/nEn paz en medio de la tormenta/nPuedes tener, paz en la tormenta.",
+      "4) Fe y esperanza cuando no puedas seguir/nAún con tu mundo hecho pedazos/nEl Señor guiará tus pasos/nEn paz en medio de la tormenta."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 45,
+    "title": "SALVADO FUI",
+    "chorus": null,
+    "stanzas": [
+      "1) Cuando pienso en mis faltas y fracasos/ncuantas veces a mi Dios decepcione/nyo me siento incapaz y avergonzado/nno merezco del señor tener perdón/nmas Jesús dejo la gloria celestial/nmurió en la cruz y así me rescato./nSalvado fuí por la sangre de cristo/nSalvado fuí por su inmenso amor/nun esclavo fuí de las garras del pecado/nJesus me liberto salvado fui.",
+      "2) Cuando miro a mi vida interior/nNada bueno hay en mí que ofrecer/ny me siento como un vaso en mil pedazos/nmas Jesus me dice hijo ven a mi/nmis marcas de dolor el quiere borrar/nme da su amor me acepta como soy./nSalvado fuí por la sangre de cristo/nSalvado fuí por su inmenso amor/nun esclavo fuí de las garras del pecado/nJesus me liberto salvado fui."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 46,
+    "title": "ERES MI TODO",
+    "chorus": "Cristo Salvador, digno de adorar;/nCristo Redentor, digno de adorar.",
+    "stanzas": [
+      "1) Eres mi fuerza y mi poder;/nEl gran tesoro que busqué;/nEres mi todo Dios./nPerla de precio sin igual;/nNunca tu amor podre dejar;/nEres mi todo Dios.",
+      "2) Diste tu vida allá en la Cruz;/nResucitaste mi Jesús;/nEres mi todo Dios./nEn sequedad o en tentación;/nTú me sostienes mi Señor;/nEres mi todo Dios."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 47,
+    "title": "SALMOS 40:8",
+    "chorus": "Me hizo sacar del pozo,/nde la desesperación,/ndel lodo cenagoso,/npuso mis pies sobre peña,/ny enderezó mis pasos./n//Puso luego en mi boca,/ncántico nuevo, alabanza/na nuestro Dios.//",
+    "stanzas": [
+      "1) Pacientemente esperé al Señor,/nY se inclinó a mí./nPacientemente esperé al Señor,/nY oyó mi clamor."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 48,
+    "title": "PROFUNDO ES EL AMOR DE DIOS (VARIANTE DOULOS)",
+    "chorus": null,
+    "stanzas": [
+      "1) Profundo es el amor de Dios;/nTan vasto e infinito;/nQue dio su Hijo amado por;/nAmor a los perdidos.",
+      "2) Qué gran dolor causó a mi Dios;/nVer padecer a Cristo;/nHerido en una cruz murió;/nPor quienes han creído.",
+      "3) Ahí, en esa cruz está;/nY Él carga con mis culpas;/nVergüenza siento al escuchar;/nMi voz entre las burlas.",
+      "4) Mi pecado lo llevó;/nA ser crucificado;/nMas vida su muerte me dio;/nYo sé que ha terminado.",
+      "5) De nada yo presumiré;/nPues muerte yo merezco;/nMas en la cruz me gloriaré;/nLa cruz de Jesucristo.",
+      "6) ¿Por qué me da su favor?/nNo puedo contestarlo;/nMas esto sé de corazónl/nJesús me ha rescatado.",
+      "7) ¿Por qué me da su favor?/nNo puedo contestarlo;/nMas esto sé de corazón;/nJesús me ha rescatado."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 49,
+    "title": "UNA MIRADA DE FE",
+    "chorus": "Y si tu miras a Cristo Jesús;/nÉl te perdonara;/nPorque una mirada de Fé;/nEs la que puede salvar al pecador.",
+    "stanzas": [
+      "1) Una mirada de Fé;/nUna mirada de Fé;/nEs la que puede salvar al pecador./nUna mirada de Fé;/nUna mirada de Fé;/nEs la que puede salvar al pecador.",
+      "2) Una mirada de Amor;/nUna mirada de Amor;/nEs la que puede salvar al pecador./nUna mirada de Amor;/nUna mirada de Amor;/nEs la que puede salvar al pecador.",
+      "3) Es la mirada de Dios;/nEs la mirada de Dios;/nEs la que puede salvar al pecador./nEs la mirada de Dios;/nEs la mirada de Dios;/nEs la que puede salvar al pecador."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 50,
+    "title": "HAY VIDA, HAY VIDA EN JESÚS",
+    "chorus": null,
+    "stanzas": [
+      "1) Hay vida, hay vida en Jesús/nHay vida, hay vida en Jesús/nYo quiero morar en la patria celestial,/nPorque hay vida hay vida en Jesús.",
+      "2) Hay gozo, hay gozo en Jesús/nHay gozo, hay gozo en Jesús/nYo quiero morar en la patria celestial,/nPorque hay, gozo hay gozo en Jesús.",
+      "3) Hay triunfo, hay triunfo en Jesús/nHay triunfo, hay triunfo en Jesús/nYo quiero morar en la patria celestial,/nPorque hay, triunfo hay triunfo en Jesús.",
+      "4) Hay vida, gozo y triunfo en Jesús;/nhay vida, gozo y triunfo en Jesús/nHay vida, gozo y triunfo en Jesús/nhay vida, gozo y triunfo en Jesús/nYo quiero morar en la patria celestial,/nPorque hay, vida, gozo y triunfo en Jesús."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 51,
+    "title": "QUE BUENO ES DIOS",
+    "chorus": null,
+    "stanzas": [
+      "1) Entre nosotros camina/nsu amor no termina,/nsu misericordia/nnueva es cada día,/nsi cada escritor/npudiera escribirlo,/ntodo el universo/nno pudiera contenerlo,/nque bueno es Dios.",
+      "2) Las flores tan bellas/nen la primavera,/nel canto de aves,/nla risa de niños,/ncomida en mi mesa,/nun lugar para dormir,/ncalzado en mis pies,/nropa para vestir,/nque bueno es Dios.",
+      "3) Tan bendecida/nha sido mi vida,/nque bueno ha sido/nmi Dios conmigo,/nno puedo contarlas,/nno alcanza el tiempo/nsólo agradecerle/nen todo momento/nque bueno ha sido/nmi Dios conmigo,/nque bueno es Dios.",
+      "4) Brazos para levantar/nuna voz para cantar,/nmanos para tocar,/npies para caminar,/noídos que escuchan/ny ojos para ver,/nle puedo alabar/ncon todo mi ser,/nque bueno es Dios.",
+      "5) Padre y madre,/nhermanas y hermanos/nen el hogar/npuestos para amarnos,/nun pastor que nos guía/nun altar para orar,/nheridas que sanan,/nsangre para salvar/nque bueno es Dios.",
+      "6) Tan bendecida/nha sido mi vida,/nque bueno ha sido/nmi Dios conmigo,/nno puedo contarlas,/nno alcanza el tiempo/nsólo agradecerle/nen todo momento/nque bueno ha sido/nmi Dios conmigo,/nque bueno es Dios.",
+      "7) Llegó el Evangelio/na nuestro país/npor los misioneros/ndispuestos a impartir/npor la gracia de Dios/ncreímos por fe/nque don inmerecido/nsoy salvo por él,/nque bueno es Dios.",
+      "8) Es mi hombro de fuerza/nsi estoy abatida/nes mi roca mi escudo/ndonde soy protegida,/nel lugar que me escondo/nes bajo sus alas/nno sólo es un canto/nes mi razón de cantar,/nque bueno es Dios."
     ],
     "startsWithChorus": false,
     "repeatChorusAtEnd": false,
