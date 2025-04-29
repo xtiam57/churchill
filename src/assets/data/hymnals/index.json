@@ -24652,5 +24652,59 @@
     "authors": null,
     "tags": null,
     "book": "Apéndice"
+  },
+  {
+    "number": 52,
+    "title": "EN MI VIDA",
+    "chorus": null,
+    "stanzas": [
+      "1) En mi vida, gloria te doy, gloria de doy./nEn mi vida, gloria te doy, Señor.",
+      "2) En su iglesia, gloria te doy, gloria de doy./nEn su iglesia, gloria te doy, Señor.",
+      "3) En mi canto, gloria te doy, gloria de doy./nEn mi canto, gloria te doy, Señor."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 53,
+    "title": "ESTE ES EL DÍA",
+    "chorus": null,
+    "stanzas": [
+      "1) Este es el día, este es el día/nQue hizo Jehová, que hizo Jehová./nNos gozaremos, nos gozaremos/nCon alegre voz, con alegre voz./nEste es el día que hizo Jehová;/nNos gozaremos con alegre voz./nEste es el día,/neste es el día que hizo Jehová."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 54,
+    "title": "SALMO 139",
+    "chorus": null,
+    "stanzas": [
+      "1) ¡Cuán preciosos me son,/noh Dios, tus pensamientos!/n¡Cuán grande es la suma de ellos!/nSi los enumero, se multiplican/nmás que la arena;/nDespierto, y aún estoy contigo./nExamíname, oh Dios, y conoce mi corazón;/nPruébame y conoce mis pensamientos;/nY ve si hay en mí camino de perversidad,/nY guíame en el camino eterno."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 55,
+    "title": "QUIERO CANTAR UNA LINDA CANCIÓN",
+    "chorus": null,
+    "stanzas": [
+      "1) Quiero cantar una linda canción;/nDe aquel que mi vida cambió./nQuiero cantar una linda canción;/nDe aquel que me transformó./nEs mi amigo Jesús, Es mi amigo más fiel/nÉl es Dios, Él es Rey, Es amor y verdad./nSólo en Él encontré Esa paz que busqué;/nSólo en Él Encontré la felicidad."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
   }
 ]
