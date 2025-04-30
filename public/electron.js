@@ -178,6 +178,8 @@ ipcMain.handle('toggle-presenter', (event, selectedMonitorId) => {
       presenterWindow.show();
     });
 
+    // presenterWindow.webContents.openDevTools();
+
     return true;
   }
 

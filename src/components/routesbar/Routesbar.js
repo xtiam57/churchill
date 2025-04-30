@@ -64,7 +64,7 @@ export function Routesbar() {
           >
             <Button
               onClick={() =>
-                window.electronAPI.openLink(
+                window.electronAPI?.openLink(
                   'https://xtiam57.github.io/churchill/'
                 )
               }
@@ -79,7 +79,7 @@ export function Routesbar() {
         <small
           className="w-100 text-center py-2 d-block"
           style={{ cursor: 'default' }}
-          onDoubleClick={async () => await window.electronAPI.openDevTools()}
+          onDoubleClick={async () => await window.electronAPI?.openDevTools()}
         >
           {version}
         </small>

@@ -64,8 +64,8 @@ const AppProvider = ({ children }) => {
 
   useEffect(() => {
     window.electronAPI
-      .getDisplays()
-      .then((displays) => setDisplaysQty(displays.length));
+      ?.getDisplays()
+      ?.then((displays) => setDisplaysQty(displays.length));
   }, []);
 
   useEffect(() => {

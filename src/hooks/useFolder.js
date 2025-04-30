@@ -18,9 +18,9 @@ export function useFolder() {
     const subPath = 'Churchill\\Pistas';
 
     return {
-      open: () => window.electronAPI.openDirectory(subPath),
+      open: () => window.electronAPI?.openDirectory(subPath),
       getPath: async () => {
-        const basePath = await window.electronAPI.getDirectoryPath(subPath);
+        const basePath = await window.electronAPI?.getDirectoryPath(subPath);
         return `file://${basePath}`;
       },
     };

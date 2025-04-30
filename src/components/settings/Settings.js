@@ -726,7 +726,7 @@ export function Settings() {
       {/* <Button
         block
         className="mt-3"
-        onClick={async () => await window.electronAPI.openDevTools()}
+        onClick={async () => await window.electronAPI?.openDevTools()}
       >
         Herramientas de desarrollo
       </Button> */}

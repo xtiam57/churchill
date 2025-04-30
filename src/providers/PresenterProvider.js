@@ -9,12 +9,12 @@ const PresenterProvider = ({ children }) => {
   const [showModal, setShowModal] = useState(false);
 
   const close = useCallback(async () => {
-    const result = await window.electronAPI.closePresenter();
+    const result = await window.electronAPI?.closePresenter();
     setPresenting(result);
   }, []);
 
   const reload = useCallback(async () => {
-    await window.electronAPI.reload();
+    await window.electronAPI?.reload();
     close();
   }, [close]);
 
@@ -23,7 +23,7 @@ const PresenterProvider = ({ children }) => {
       return close();
     }
 
-    const displays = await window.electronAPI.getDisplays();
+    const displays = await window.electronAPI?.getDisplays();
 
     // Si no hay monitores extra, no hacer nada
     if (displays.length === 1) {
@@ -36,7 +36,7 @@ const PresenterProvider = ({ children }) => {
       const secondDisplay = displays.find(
         (d) => d.bounds.x !== 0 || d.bounds.y !== 0
       );
-      const isPresenting = await window.electronAPI.togglePresenter(
+      const isPresenting = await window.electronAPI?.togglePresenter(
         secondDisplay.id
       );
       setPresenting(isPresenting);
@@ -69,7 +69,7 @@ const PresenterProvider = ({ children }) => {
     setShowModal(true);
 
     // Capturar vistas previas
-    // const sources = await window.electronAPI.getScreenSources();
+    // const sources = await window.electronAPI?.getScreenSources();
     // const previewsMap = {};
 
     // sources.forEach((source) => {
@@ -79,7 +79,7 @@ const PresenterProvider = ({ children }) => {
   }, [close, presenting]);
 
   const startPresentation = useCallback(async (monitorId) => {
-    const isPresenting = await window.electronAPI.togglePresenter(monitorId);
+    const isPresenting = await window.electronAPI?.togglePresenter(monitorId);
     setPresenting(isPresenting);
     setShowModal(false);
   }, []);
