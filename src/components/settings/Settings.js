@@ -22,6 +22,7 @@ export function Settings() {
     setSettings((state) => ({
       ...state,
       [name]: value,
+      ...(name === 'image' ? { tint: 0 } : {}),
     }));
   };
 
@@ -71,6 +72,7 @@ export function Settings() {
     setSettings((state) => ({
       ...state,
       image: SETTINGS_OPTIONS.BACKGROUNDS[index].value,
+      tint: 0,
     }));
   };
 
@@ -256,27 +258,49 @@ export function Settings() {
             hideText
             {...settings}
             blur={settings?.image ? settings?.blur : 0}
+            tint={settings?.image ? settings?.tint : 0}
           />
 
           {settings?.image ? (
-            <Form.Row>
-              <Form.Group as={Col} className="mb-0">
-                <Form.Label className="small mb-1">
-                  Difuminado del Fondo (
-                  {Number.parseFloat(settings?.blur).toFixed(1)})
-                </Form.Label>
-                <Form.Control
-                  custom
-                  type="range"
-                  min="0"
-                  max="20"
-                  step="1"
-                  name="blur"
-                  value={settings?.blur}
-                  onChange={handleChangeNumericValue}
-                />
-              </Form.Group>
-            </Form.Row>
+            <>
+              <Form.Row>
+                <Form.Group as={Col} className="mb-0">
+                  <Form.Label className="small mb-1">
+                    Difuminado del Fondo (
+                    {Number.parseFloat(settings?.blur).toFixed(1)})
+                  </Form.Label>
+                  <Form.Control
+                    custom
+                    type="range"
+                    min="0"
+                    max="20"
+                    step="1"
+                    name="blur"
+                    value={settings?.blur}
+                    onChange={handleChangeNumericValue}
+                  />
+                </Form.Group>
+              </Form.Row>
+
+              <Form.Row>
+                <Form.Group as={Col} className="mb-0">
+                  <Form.Label className="small mb-1">
+                    Opacidad de la imagen (
+                    {Number.parseFloat(settings?.tint || 0).toFixed(1)})
+                  </Form.Label>
+                  <Form.Control
+                    custom
+                    type="range"
+                    min="0"
+                    max="1"
+                    step="0.1"
+                    name="tint"
+                    value={settings?.tint || 0}
+                    onChange={handleChangeNumericValue}
+                  />
+                </Form.Group>
+              </Form.Row>
+            </>
           ) : (
             <Form.Row>
               <Form.Group as={Col} className="mb-0">

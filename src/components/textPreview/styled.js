@@ -23,8 +23,20 @@ export const TextPreviewStyled = styled.div`
   backdrop-filter: ${({ blur }) => `blur(${blur}px)`};
   font-family: ${({ font }) =>
     font === 'Roca + Poppins' ? 'Poppins' : font || DEFAULT_SYSTEM_FONT};
+  z-index: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: ${({ tint = 0, bg }) =>
+      bg ? 'rgba(0, 0, 0,0)' : `rgba(0, 0, 0, ${tint})`};
+    pointer-events: none;
+    z-index: 1;
+  }
 
   p {
+    z-index: 2;
     font-size: 90%;
     text-align: center;
     color: ${({ textcolor }) => textcolor || '#000'};

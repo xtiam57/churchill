@@ -27,12 +27,23 @@ export const PresenterStyled = styled.section`
   background-repeat: no-repeat;
   background-size: cover;
   animation: gradient 15s ease infinite;
+  z-index: 0;
 
   /* background: linear-gradient(-45deg, #0a5a61, #233d57, #74379f, #10939f);
   background-size: 400% 400%; */
 
   @media (min-width: 1900px) {
     padding: 4% 10%;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: ${({ tint = 0, bg }) =>
+      bg ? 'rgba(0, 0, 0,0)' : `rgba(0, 0, 0, ${tint})`};
+    pointer-events: none;
+    z-index: 1;
   }
 
   /* &:before,
@@ -57,6 +68,7 @@ export const PresenterStyled = styled.section`
 
   p {
     margin: 0;
+    z-index: 2;
     color: ${({ textcolor }) => textcolor || '#000'};
     width: 100%;
     text-wrap: balance;

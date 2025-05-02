@@ -13,5 +13,22 @@ export const LogoPreviewStyled = styled.div`
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
   overflow: hidden;
+  z-index: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: ${({ tint = 0, bg }) =>
+      bg ? 'rgba(0, 0, 0,0)' : `rgba(0, 0, 0, ${tint})`};
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  svg,
+  img {
+    z-index: 2;
+  }
 `;
