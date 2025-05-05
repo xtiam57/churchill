@@ -24447,8 +24447,10 @@
     "title": "SALMO 138",
     "chorus": null,
     "stanzas": [
-      "1) //Te Alabarán Oh Jehová Todos los Reyes;/nTodos los reyes de la Tierra;/nPorque han oído los dichos de tu boca./nY cantarán de los caminos de Jehová.//",
-      "2) //Porque la Gloria de Jehová es Grande./nPorque Jehová es Excelso en sus caminos./nPorque Jehová atiende al humilde./nMas mira de lejos al altivo.//"
+      "1) Te Alabarán Oh Jehová Todos los Reyes;/nTodos los reyes de la Tierra;/nPorque han oído los dichos de tu boca./nY cantarán de los caminos de Jehová.",
+      "2) Te Alabarán Oh Jehová Todos los Reyes;/nTodos los reyes de la Tierra;/nPorque han oído los dichos de tu boca./nY cantarán de los caminos de Jehová.",
+      "3) Porque la Gloria de Jehová es Grande./nPorque Jehová es Excelso en sus caminos./nPorque Jehová atiende al humilde./nMas mira de lejos al altivo.",
+      "4) Porque la Gloria de Jehová es Grande./nPorque Jehová es Excelso en sus caminos./nPorque Jehová atiende al humilde./nMas mira de lejos al altivo."
     ],
     "startsWithChorus": false,
     "repeatChorusAtEnd": false,
@@ -24700,6 +24702,26 @@
     "chorus": null,
     "stanzas": [
       "1) Quiero cantar una linda canción;/nDe aquel que mi vida cambió./nQuiero cantar una linda canción;/nDe aquel que me transformó./nEs mi amigo Jesús, Es mi amigo más fiel/nÉl es Dios, Él es Rey, Es amor y verdad./nSólo en Él encontré Esa paz que busqué;/nSólo en Él Encontré la felicidad."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 56,
+    "title": "DIME QUE REY",
+    "chorus": null,
+    "stanzas": [
+      "1) Seguir una estrella a un lugar muy incierto,/ncontra los planes, difícil creerlo,/nun niño ha nacido...",
+      "2) Humilde y pequeño, un héroe indefenso,/nenvuelto entre mantos y junto a su madre,/nes solo un niño, no lo esperamos así...",
+      "3) ¿Dime qué Rey, su trono dejó?/n¿O qué Señor su casa abandonó?/nY si alguien grande dejó todo por mí/n¿Dime qué Dios su amor derramó,/nhacia un mundo que lo aborreció?/n¿O si algún padre dio a su hijo por mí?",
+      "4) Regalos para el Salvador que ha nacido,/ny nuestras vidas son para Él/nporque hemos creído.",
+      "5) Oro es honor y el incienso es su placer,/ntraen mirra porque Él va a padecer,/nes así, ¿lo puedes tú creer?",
+      "6) ¿Dime qué Rey, su trono dejó?/n¿O qué Señor su casa abandonó?/nY si alguien grande dejó todo por mí/n¿Dime qué Dios su amor derramó,/nhacia un mundo que lo aborreció?/n¿O si algún padre dio a su hijo por mí?",
+      "7) Nadie dio tanto por mí.",
+      "8) ¿Dime qué Rey, su trono dejó?/n¿O qué Señor su casa abandonó?/nY si alguien grande dejó todo por mí/n¿Dime qué Dios su amor derramó,/nhacia un mundo que lo aborreció?/n¿O si algún padre dio a su hijo por mí?"
     ],
     "startsWithChorus": false,
     "repeatChorusAtEnd": false,
