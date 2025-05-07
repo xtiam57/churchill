@@ -631,28 +631,17 @@ José Bernardo Alcedo
 
 ## 123. HIMNO NACIONAL DE ESTADOS UNIDOS
 ***
-@CORO
-God bless America
-Land that I love
-Stand beside her
-And guide her
-Through the night
-With the light
-From above
-***
-From the mountains
-To the prairies
-To the oceans
-White with foam
-God bless America
-My home sweet home
+Oh say, can you see, by the dawn's early light
+What so proudly we hailed at the twilight’s last gleaming?
+Whose broad stripes and bright stars, through the perilous fight,
+O'er the ramparts we watched were so gallantly streaming?
+And the rockets' red glare, the bombs bursting in air,
+Gave proof through the night that our flag was still there.
+O say, does that star-spangled banner yet wave
+O'er the land of the free, and the home of the brave?
 ***
 @TAGS
 Himno Nacional
-***
-@AUTHORS
-"God Bless America"
-Irving Berlin
 
 
 ---
@@ -1518,3 +1507,27 @@ Y si alguien grande dejó todo por mí
 ¿Dime qué Dios su amor derramó,
 hacia un mundo que lo aborreció?
 ¿O si algún padre dio a su hijo por mí?
+
+---
+
+
+## 145. GOD BLESS AMERICA
+***
+@CORO
+God bless America
+Land that I love
+Stand beside her
+And guide her
+Through the night
+With the light
+From above
+***
+From the mountains
+To the prairies
+To the oceans
+White with foam
+God bless America
+My home sweet home
+***
+@TAGS
+Himno Nacional

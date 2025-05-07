@@ -24234,13 +24234,13 @@
   {
     "number": 25,
     "title": "HIMNO NACIONAL DE ESTADOS UNIDOS",
-    "chorus": "God bless America/nLand that I love/nStand beside her/nAnd guide her/nThrough the night/nWith the light/nFrom above",
+    "chorus": null,
     "stanzas": [
-      "1) From the mountains/nTo the prairies/nTo the oceans/nWhite with foam/nGod bless America/nMy home sweet home"
+      "1) Oh say, can you see, by the dawn's early light/nWhat so proudly we hailed at the twilight’s last gleaming?/nWhose broad stripes and bright stars, through the perilous fight,/nO'er the ramparts we watched were so gallantly streaming?/nAnd the rockets' red glare, the bombs bursting in air,/nGave proof through the night that our flag was still there./nO say, does that star-spangled banner yet wave/nO'er the land of the free, and the home of the brave?"
     ],
-    "startsWithChorus": true,
+    "startsWithChorus": false,
     "repeatChorusAtEnd": false,
-    "authors": "\"God Bless America\", Irving Berlin",
+    "authors": null,
     "tags": "Himno Nacional",
     "book": "Apéndice"
   },
@@ -24727,6 +24727,19 @@
     "repeatChorusAtEnd": false,
     "authors": null,
     "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 57,
+    "title": "GOD BLESS AMERICA",
+    "chorus": "God bless America/nLand that I love/nStand beside her/nAnd guide her/nThrough the night/nWith the light/nFrom above",
+    "stanzas": [
+      "1) From the mountains/nTo the prairies/nTo the oceans/nWhite with foam/nGod bless America/nMy home sweet home"
+    ],
+    "startsWithChorus": true,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": "Himno Nacional",
     "book": "Apéndice"
   }
 ]
