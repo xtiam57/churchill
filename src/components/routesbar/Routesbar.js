@@ -14,7 +14,16 @@ export function Routesbar() {
     fetch(
       'https://raw.githubusercontent.com/xtiam57/churchill/refs/heads/main/docs/version.json'
     )
-      .then((response) => response.json())
+      .then((response) => {
+        try {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        } catch (error) {
+          console.error('Error fetching version:', error);
+        }
+      })
       .then((result) => {
         if (result?.version && result?.version !== version) {
           const currentVersion = version?.replaceAll('.', '');

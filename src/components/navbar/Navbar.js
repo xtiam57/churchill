@@ -117,7 +117,7 @@ export function Navbar() {
           ) : null}
 
           <span>
-            <Countdown />
+            <Countdown presenting={presenting} />
           </span>
 
           {/* <span className="mr-3">

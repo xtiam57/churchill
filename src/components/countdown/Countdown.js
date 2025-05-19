@@ -17,7 +17,7 @@ const useBroadcastIsFullCountdown = createPersistedState(
   BROADCAST.FULL_COUNTDOWN
 );
 
-export function Countdown() {
+export function Countdown({ presenting }) {
   const [, setCountdown] = useBroadcastCountdown(BROADCAST.INITIAL_COUNTDOWN);
   const [isFullCountdown, setFullCountdown] =
     useBroadcastIsFullCountdown(false);
@@ -53,25 +53,27 @@ export function Countdown() {
             </div>
           </OverlayTrigger>
 
-          <OverlayTrigger
-            placement="bottom"
-            overlay={
-              <Tooltip>{isFullCountdown ? 'Achicar' : 'Expandir'}</Tooltip>
-            }
-          >
-            <Button
-              size="sm"
-              variant={isFullCountdown ? 'light' : 'dark'}
-              onClick={() => setFullCountdown((value) => !value)}
-              className="flat-left flat-right"
+          {presenting && (
+            <OverlayTrigger
+              placement="bottom"
+              overlay={
+                <Tooltip>{isFullCountdown ? 'Reducir' : 'Expandir'}</Tooltip>
+              }
             >
-              {isFullCountdown ? (
-                <ImageAspectRatio fontSize="small" />
-              ) : (
-                <SettingsOverscan fontSize="small" />
-              )}
-            </Button>
-          </OverlayTrigger>
+              <Button
+                size="sm"
+                variant={isFullCountdown ? 'light' : 'dark'}
+                onClick={() => setFullCountdown((value) => !value)}
+                className="flat-left flat-right"
+              >
+                {isFullCountdown ? (
+                  <ImageAspectRatio fontSize="small" />
+                ) : (
+                  <SettingsOverscan fontSize="small" />
+                )}
+              </Button>
+            </OverlayTrigger>
+          )}
 
           <OverlayTrigger
             placement="bottom"
