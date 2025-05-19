@@ -4,7 +4,7 @@ import { Time } from 'utils';
 function getMessage(time) {
   return {
     id: 'TEMP',
-    processedText: `<strong class="fs-timer">${time}</strong>`,
+    processedText: `<span class="fs-timer">${time}</span>`,
     type: 'corner',
   };
 }

@@ -1,4 +1,10 @@
-import { PlayArrow, Restore, Stop } from '@mui/icons-material';
+import {
+  ImageAspectRatio,
+  PlayArrow,
+  Restore,
+  SettingsOverscan,
+  Stop,
+} from '@mui/icons-material';
 import { useCountdown } from 'hooks';
 import { useEffect, useState } from 'react';
 import { Button, Form, OverlayTrigger, Tooltip } from 'react-bootstrap';
@@ -7,9 +13,14 @@ import { BROADCAST } from 'values';
 import { CountdownStyled } from './styled';
 
 const useBroadcastCountdown = createPersistedState(BROADCAST.COUNTDOWN);
+const useBroadcastIsFullCountdown = createPersistedState(
+  BROADCAST.FULL_COUNTDOWN
+);
 
 export function Countdown() {
   const [, setCountdown] = useBroadcastCountdown(BROADCAST.INITIAL_COUNTDOWN);
+  const [isFullCountdown, setFullCountdown] =
+    useBroadcastIsFullCountdown(false);
 
   const [minutes, setMinutes] = useState(1);
   const [seconds, setSeconds] = useState(0);
@@ -20,6 +31,7 @@ export function Countdown() {
   useEffect(() => {
     if (!running) {
       setDisabled(true);
+      setFullCountdown(false);
     }
   }, [running]);
 
@@ -43,6 +55,26 @@ export function Countdown() {
 
           <OverlayTrigger
             placement="bottom"
+            overlay={
+              <Tooltip>{isFullCountdown ? 'Achicar' : 'Expandir'}</Tooltip>
+            }
+          >
+            <Button
+              size="sm"
+              variant={isFullCountdown ? 'light' : 'dark'}
+              onClick={() => setFullCountdown((value) => !value)}
+              className="flat-left flat-right"
+            >
+              {isFullCountdown ? (
+                <ImageAspectRatio fontSize="small" />
+              ) : (
+                <SettingsOverscan fontSize="small" />
+              )}
+            </Button>
+          </OverlayTrigger>
+
+          <OverlayTrigger
+            placement="bottom"
             overlay={<Tooltip>Detener</Tooltip>}
           >
             <Button
@@ -50,6 +82,7 @@ export function Countdown() {
               variant="danger"
               onClick={() => {
                 setDisabled(true);
+                setFullCountdown(false);
                 stop();
               }}
               className="flat-left"

@@ -35,34 +35,38 @@ export const resizeText = ({
   unit = '%',
   vh = 3.565,
 }) => {
-  element.style.opacity = 0;
+  try {
+    element.style.opacity = 0;
 
-  const parent = element.parentNode;
-  const array = Array((maxSize - minSize) / step + 1)
-    .fill(0)
-    .map((_, i) => i * step + minSize);
+    const parent = element.parentNode;
+    const array = Array((maxSize - minSize) / step + 1)
+      .fill(0)
+      .map((_, i) => i * step + minSize);
 
-  let overflow = false;
-  let min = 0;
-  let max = array.length - 1;
+    let overflow = false;
+    let min = 0;
+    let max = array.length - 1;
 
-  while (min <= max) {
-    const midIndex = Math.floor((min + max) / 2);
-    const testVal = array[midIndex];
+    while (min <= max) {
+      const midIndex = Math.floor((min + max) / 2);
+      const testVal = array[midIndex];
 
-    element.style.fontSize = `calc(${testVal}${unit} + ${vh}vh)`;
-    overflow = isOverflown(parent);
+      element.style.fontSize = `calc(${testVal}${unit} + ${vh}vh)`;
+      overflow = isOverflown(parent);
 
-    if (!overflow) {
-      min = midIndex + 1;
-    } else {
-      max = midIndex - 1;
+      if (!overflow) {
+        min = midIndex + 1;
+      } else {
+        max = midIndex - 1;
+      }
     }
+
+    max = Math.max(0, max);
+    const value = array[max];
+
+    // revert to last state where no overflow happened
+    element.style.fontSize = `calc(${value}${unit} + ${vh}vh)`;
+  } catch (error) {
+    console.error('Error resizing text:', error);
   }
-
-  max = Math.max(0, max);
-  const value = array[max];
-
-  // revert to last state where no overflow happened
-  element.style.fontSize = `calc(${value}${unit} + ${vh}vh)`;
 };

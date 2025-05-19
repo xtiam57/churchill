@@ -102,6 +102,13 @@ export const PresenterStyled = styled.section`
       font-size: 0.6em;
     }
 
+    span.fs-timer {
+      font-family: ${({ font }) =>
+        font === 'Roca + Poppins' ? 'Poppins' : font || DEFAULT_SYSTEM_FONT};
+      color: ${({ titlecolor }) => titlecolor || '#007bff'};
+      font-weight: bold;
+    }
+
     small.book {
       display: block;
       color: ${({ subtextcolor }) => subtextcolor || '#007bff'};
@@ -161,11 +168,12 @@ export const CornerStyled = styled.section`
   position: absolute;
   bottom: 4%;
   right: 4%;
+  font-weight: bold;
 
   p {
     font-size: calc(0.5em + 2.5vh);
     margin: 0;
-    color: ${({ textcolor }) => textcolor || '#000'};
+    color: ${({ titlecolor }) => titlecolor || '#007bff'};
     width: 100%;
     line-height: 1;
     text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.5),
