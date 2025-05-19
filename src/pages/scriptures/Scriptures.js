@@ -20,6 +20,7 @@ import createPersistedState from 'use-persisted-state';
 import { getBookmarkedItems } from 'utils';
 import { BROADCAST, MOVEMENT } from 'values';
 import { finderRender, typeaheadRender } from './renders';
+import { VersesViewer } from './VersesViewer';
 
 const useBroadcast = createPersistedState(BROADCAST.CHANNEL);
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
@@ -159,6 +160,16 @@ function ScripturesView() {
           current={current}
         />
       </Sidebar>
+
+      <VersesViewer
+        verses={scriptures.filter(
+          (e) =>
+            e.bookNumber === current.bookNumber &&
+            e.chapterNumber === current.chapterNumber
+        )}
+        current={current}
+        onGoto={(verse) => setCurrent(verse)}
+      />
 
       {presenting ? (
         <Alert presenting={!showLogo} label={current?.subtext} />
