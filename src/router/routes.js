@@ -1,8 +1,15 @@
-import { Audiotrack, AutoStories, Cake, Newspaper } from '@mui/icons-material';
+import {
+  Audiotrack,
+  AutoStories,
+  Cake,
+  Image,
+  Newspaper,
+} from '@mui/icons-material';
 import BirthdaysPage from 'pages/birthdays';
 import CastPage from 'pages/cast';
 import HomePage from 'pages/home';
 import HymnalsPage from 'pages/hymnals';
+import MiscPage from 'pages/misc';
 import ScripturesPage from 'pages/scriptures';
 
 export const PATHS = {
@@ -85,16 +92,16 @@ export const routes = flatten([
   //   menu: true,
   //   showLabel: false,
   // },
-  // {
-  //   key: PATHS.RESOURCES_PAGE,
-  //   exact: true,
-  //   path: PATHS.RESOURCES_PAGE,
-  //   component: ResourcesPage,
-  //   icon: <Image />,
-  //   label: 'Recursos',
-  //   menu: true,
-  //   showLabel: false,
-  // },
+  {
+    key: PATHS.RESOURCES_PAGE,
+    exact: true,
+    path: PATHS.RESOURCES_PAGE,
+    component: MiscPage,
+    icon: <Image />,
+    label: 'Recursos',
+    menu: true,
+    showLabel: false,
+  },
   // {
   //   key: PATHS.TRIVIA_PAGE,
   //   exact: true,

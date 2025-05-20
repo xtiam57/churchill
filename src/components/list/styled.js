@@ -65,3 +65,25 @@ export const TextStyled = styled.span`
     flex: inherit;
   }
 `;
+
+export const ImageStyled = styled.div`
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  color: #999;
+  overflow: hidden;
+  font-size: 0.9em;
+  padding: 10px;
+  border-radius: 8px;
+  user-select: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &:hover {
+    color: var(--white);
+    background-color: #000;
+  }
+`;
