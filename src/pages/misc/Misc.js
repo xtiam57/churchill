@@ -1,3 +1,4 @@
+import { Add } from '@mui/icons-material';
 import {
   Alert,
   DisplayButton,
@@ -9,6 +10,7 @@ import {
 } from 'components';
 import { usePresenter } from 'hooks';
 import { useState } from 'react';
+import { Button } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
 import { BROADCAST } from 'values';
 
@@ -26,13 +28,27 @@ export default function MiscPage() {
       <Sidebar>
         <Title>Recursos</Title>
 
+        <Button
+          block
+          size="lg"
+          variant="success"
+          className="mb-4"
+          onClick={() => {}}
+        >
+          <Add /> Agregar
+        </Button>
+
         <DisplayButton
           value={showLogo}
           presenting={presenting}
           onToggle={setShowLogo}
         />
 
-        <List className="mb-4">
+        <List>
+          <List.Item className="mb-1">
+            <List.Title>listado de recursos</List.Title>
+          </List.Item>
+
           <List.Image
             src="https://picsum.photos/200/200?random=1"
             title="Mapa de viajes 1"

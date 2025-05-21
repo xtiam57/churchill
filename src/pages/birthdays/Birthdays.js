@@ -121,7 +121,7 @@ export default function BirthdaysPage() {
               accept=".xlsx, .xls"
               onChange={handleFileUpload}
             />
-            <small class="form-text text-muted">
+            <small className="form-text text-muted">
               El archivo Excel debe tener las columnas "nombres", "dia" y "mes".
             </small>
           </div>
