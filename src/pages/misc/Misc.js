@@ -23,10 +23,8 @@ export default function MiscPage() {
   const [, setMessage] = useBroadcast(BROADCAST.INITIAL_CHANNEL);
   const [resources, setResources] = useResources(BROADCAST.INITIAL_RESOURCES);
   const [showLogo, setShowLogo] = useState(true);
-  const [current, setCurrent] = useState(null);
+  const [current, setCurrent] = useState(resources[0] || null);
   const { presenting } = usePresenter();
-
-  console.log('resources', resources);
 
   useEffect(() => {
     setMessage(showLogo ? null : current);
