@@ -9,24 +9,39 @@ import {
   Wrapper,
 } from 'components';
 import { usePresenter } from 'hooks';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
 import { BROADCAST } from 'values';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
-const useSchedule = createPersistedState(BROADCAST.SCHEDULES_AND_EVENTS);
+const useBroadcast = createPersistedState(BROADCAST.CHANNEL);
+const useResources = createPersistedState(BROADCAST.RESOURCES);
 
 export default function MiscPage() {
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
+  const [, setMessage] = useBroadcast(BROADCAST.INITIAL_CHANNEL);
+  const [resources, setResources] = useResources(BROADCAST.INITIAL_RESOURCES);
   const [showLogo, setShowLogo] = useState(true);
+  const [current, setCurrent] = useState(null);
   const { presenting } = usePresenter();
-  const current = null;
+
+  console.log('resources', resources);
+
+  useEffect(() => {
+    setMessage(showLogo ? null : current);
+  }, [current, showLogo, setMessage]);
 
   return (
     <Wrapper>
       <Sidebar>
         <Title>Recursos</Title>
+
+        <DisplayButton
+          value={showLogo}
+          presenting={presenting}
+          onToggle={setShowLogo}
+        />
 
         <Button
           block
@@ -38,32 +53,22 @@ export default function MiscPage() {
           <Add /> Agregar
         </Button>
 
-        <DisplayButton
-          value={showLogo}
-          presenting={presenting}
-          onToggle={setShowLogo}
-        />
-
         <List>
           <List.Item className="mb-1">
             <List.Title>listado de recursos</List.Title>
           </List.Item>
 
-          <List.Image
-            src="https://picsum.photos/200/200?random=1"
-            title="Mapa de viajes 1"
-            description="Descripción del mapa de viajes 1"
-          />
-          <List.Image
-            src="https://picsum.photos/400/200?random=2"
-            title="Mapa de viajes 2"
-            description="Descripción del mapa de viajes 1"
-          />
-          <List.Image
-            src="https://picsum.photos/200/400?random=3"
-            title="Foto de Pablo"
-            description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam reiciendis sed cum exercitationem possimus placeat velit laborum iste aperiam, doloremque consequuntur fugiat obcaecati quisquam maxime officia unde suscipit nisi eveniet!"
-          />
+          {resources.map((resource) => (
+            <List.Image
+              key={resource.id}
+              onClick={() => setCurrent(resource)}
+              onEdit={() => {}}
+              src={resource.bg}
+              title={resource.title}
+              description={resource.description}
+              active={current?.id === resource.id}
+            />
+          ))}
         </List>
       </Sidebar>
 
@@ -75,9 +80,7 @@ export default function MiscPage() {
         <Presenter
           id={current?.id}
           live={!showLogo}
-          text={current?.text}
-          subtext={current?.subtext}
-          processedText={current?.processedText}
+          bg={current?.bg}
           grayscale={presenting && showLogo}
           {...settings}
         />

@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const ImageWrapperStyled = styled.div`
   display: flex;
   user-select: none;
+  margin-bottom: 5px;
 
   .settings {
     display: flex;
@@ -15,6 +16,7 @@ const ImageWrapperStyled = styled.div`
     button {
       padding: 6px 8px;
       height: 100%;
+      color: #999;
 
       &:hover {
         background-color: var(--secondary);
@@ -34,12 +36,12 @@ const ImageStyled = styled.div`
   overflow: hidden;
   font-size: 0.9em;
   padding: 8px;
-  margin-bottom: 5px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex: 1 0;
   align-items: center;
   gap: 10px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
 
   p {
     font-size: 0.8rem;
@@ -49,31 +51,59 @@ const ImageStyled = styled.div`
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  &:hover {
-    color: var(--dark);
-    background-color: var(--light);
+  &.active {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px 0px inset;
+    pointer-events: none;
+
+    strong {
+      color: var(--light);
+    }
+
+    p {
+      color: #fff;
+    }
 
     .image {
-      transform: scale(1.05) rotate(-3deg);
+      border: 3px solid var(--secondary);
+    }
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: #111;
+
+    .image {
+      transform: scale(1.1);
       box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
     }
   }
 `;
 
-export function ListImage({ src, title, description }) {
+export function ListImage({
+  src,
+  title,
+  description,
+  onClick,
+  onEdit,
+  active = false,
+}) {
   return (
     <ImageWrapperStyled>
-      <ImageStyled title={title}>
+      <ImageStyled
+        title={title}
+        onClick={onClick}
+        className={active ? 'active' : ''}
+      >
         <div
           className="image"
           style={{
             backgroundImage: `url(${src})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            width: 65,
-            height: 65,
+            width: 55,
+            height: 55,
             borderRadius: 8,
-            flex: '0 1 65px',
+            flex: '0 1 55px',
           }}
         />
         <div
@@ -113,7 +143,7 @@ export function ListImage({ src, title, description }) {
 
       <div className="settings">
         <OverlayTrigger placement="right" overlay={<Tooltip>Editar</Tooltip>}>
-          <Button variant="dark" onClick={() => {}}>
+          <Button variant="dark" onClick={onEdit}>
             <Edit fontSize="small" />
           </Button>
         </OverlayTrigger>
