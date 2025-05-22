@@ -24,6 +24,13 @@ $grid-gutter-width: 1rem;
   background-color: var(--light) !important;
 }
 
+.preview-resource {
+  height: 38px;
+  width: auto;
+  object-fit: cover;
+  flex: 1 0;
+}
+
 .super-custom {
   height: calc(1.5em + 0.5rem + 2px);
 
@@ -41,6 +48,28 @@ $grid-gutter-width: 1rem;
     &::after {
       padding: 0.25rem 0.5rem;
       height: calc(1.5em + 0.5rem + 2px);
+      line-height: 1.5;
+    }
+  }
+}
+
+.resource-custom {
+  height: 38px;
+
+  .custom-file-input {
+    height: 38px;
+  }
+
+  .custom-file-label {
+    height: 38px;
+    padding: 0.4rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin: 0;
+
+    &::after {
+      padding: 0.4rem 0.5rem;
+      height: 38px;
       line-height: 1.5;
     }
   }
