@@ -102,7 +102,7 @@ export default function MiscPage() {
               title={resource.title}
               description={resource.description}
               active={current?.id === resource.id}
-              disabled={presenting}
+              disabled={!showLogo && presenting}
             />
           ))}
         </List>
