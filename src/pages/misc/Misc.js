@@ -9,10 +9,11 @@ import {
   Wrapper,
 } from 'components';
 import { usePresenter } from 'hooks';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
 import { BROADCAST } from 'values';
+import { ResourceModal } from './modal';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
 const useBroadcast = createPersistedState(BROADCAST.CHANNEL);
@@ -22,9 +23,44 @@ export default function MiscPage() {
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const [, setMessage] = useBroadcast(BROADCAST.INITIAL_CHANNEL);
   const [resources, setResources] = useResources(BROADCAST.INITIAL_RESOURCES);
+  const [showModal, setShowModal] = useState(false);
   const [showLogo, setShowLogo] = useState(true);
   const [current, setCurrent] = useState(resources[0] || null);
   const { presenting } = usePresenter();
+
+  const handleSave = useCallback(
+    (data) => {
+      setShowModal(false);
+      setResources((state) => {
+        //  Verifica si el recurso ya existe
+        const existingResource = state.find((item) => item.id === data.id);
+        if (existingResource) {
+          // Si existe, actualiza el recurso
+          const newState = state.map((item) =>
+            item.id === data.id ? { ...item, ...data } : item
+          );
+          // setear el recurso actualizado
+          setCurrent(newState.find((item) => item.id === data.id));
+          return newState;
+        }
+
+        const newState = [...state, data];
+        return newState;
+      });
+    },
+    [setResources]
+  );
+
+  const handleDelete = useCallback(
+    (data) => {
+      setResources((state) => {
+        const newState = state.filter((item) => item.id !== data.id);
+        setCurrent(newState[0] || null);
+        return newState;
+      });
+    },
+    [setResources]
+  );
 
   useEffect(() => {
     setMessage(showLogo ? null : current);
@@ -46,7 +82,7 @@ export default function MiscPage() {
           size="lg"
           variant="success"
           className="mb-4"
-          onClick={() => {}}
+          onClick={() => setShowModal(true)}
         >
           <Add /> Agregar
         </Button>
@@ -60,11 +96,13 @@ export default function MiscPage() {
             <List.Image
               key={resource.id}
               onClick={() => setCurrent(resource)}
-              onEdit={() => {}}
+              onEdit={() => setShowModal(resource)}
+              onDelete={handleDelete}
               src={resource.bg}
               title={resource.title}
               description={resource.description}
               active={current?.id === resource.id}
+              disabled={presenting}
             />
           ))}
         </List>
@@ -82,64 +120,14 @@ export default function MiscPage() {
           grayscale={presenting && showLogo}
           {...settings}
         />
-
-        {/* <Controls centered>
-          <ButtonGroup className="mx-2">
-            {autoplay ? (
-              <OverlayTrigger
-                placement="top"
-                overlay={<Tooltip>Pausar cambio automático</Tooltip>}
-              >
-                <Button onClick={() => setAutoplay(false)} variant="secondary">
-                  <Pause />
-                </Button>
-              </OverlayTrigger>
-            ) : (
-              <OverlayTrigger
-                placement="top"
-                overlay={<Tooltip>Empezar cambio automático</Tooltip>}
-              >
-                <Button onClick={() => setAutoplay(true)} variant="dark">
-                  <PlayArrow />
-                </Button>
-              </OverlayTrigger>
-            )}
-          </ButtonGroup>
-
-          <ButtonGroup>
-            <OverlayTrigger
-              placement="top"
-              overlay={<Tooltip>Página anterior</Tooltip>}
-            >
-              <Button onClick={handlePrevSlide} variant="primary">
-                <West />
-              </Button>
-            </OverlayTrigger>
-            <OverlayTrigger
-              placement="top"
-              overlay={<Tooltip>Página siguiente</Tooltip>}
-            >
-              <Button onClick={handleNextSlide} variant="primary">
-                <East />
-              </Button>
-            </OverlayTrigger>
-          </ButtonGroup>
-
-          <ButtonGroup className="mx-2">
-            <OverlayTrigger
-              placement="top"
-              overlay={<Tooltip>Repetir</Tooltip>}
-            >
-              <Button
-                onClick={() => setLoop((state) => !state)}
-                variant={loop ? 'secondary' : 'dark'}
-              >
-                <Repeat />
-              </Button>
-            </OverlayTrigger>
-          </ButtonGroup>
-        </Controls> */}
       </Wrapper>
+
+      <ResourceModal
+        show={!!showModal}
+        handleClose={() => setShowModal(false)}
+        handleSave={handleSave}
+        resource={typeof showModal === 'boolean' ? undefined : showModal}
+      />
     </Wrapper>
   );
 }

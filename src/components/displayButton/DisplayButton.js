@@ -3,6 +3,7 @@ import { Button } from 'react-bootstrap';
 
 export function DisplayButton({ value, presenting, onToggle }) {
   useKeyUp('KeyP', () => onToggle((value) => !value), { ctrl: true });
+
   if (!presenting) {
     return null;
   }

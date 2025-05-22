@@ -56,6 +56,16 @@ export const routes = flatten([
     showLabel: true,
   },
   {
+    key: PATHS.RESOURCES_PAGE,
+    exact: true,
+    path: PATHS.RESOURCES_PAGE,
+    component: MiscPage,
+    icon: <Image />,
+    label: 'Recursos',
+    menu: true,
+    showLabel: false,
+  },
+  {
     key: PATHS.BIRTHDAYS_PAGE,
     exact: true,
     path: PATHS.BIRTHDAYS_PAGE,
@@ -92,16 +102,7 @@ export const routes = flatten([
   //   menu: true,
   //   showLabel: false,
   // },
-  {
-    key: PATHS.RESOURCES_PAGE,
-    exact: true,
-    path: PATHS.RESOURCES_PAGE,
-    component: MiscPage,
-    icon: <Image />,
-    label: 'Recursos',
-    menu: true,
-    showLabel: false,
-  },
+
   // {
   //   key: PATHS.TRIVIA_PAGE,
   //   exact: true,

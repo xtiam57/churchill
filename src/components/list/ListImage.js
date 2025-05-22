@@ -1,4 +1,4 @@
-import { Edit } from '@mui/icons-material';
+import { Delete, Edit } from '@mui/icons-material';
 import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import styled from 'styled-components';
 
@@ -85,7 +85,9 @@ export function ListImage({
   description,
   onClick,
   onEdit,
+  onDelete,
   active = false,
+  disabled = false,
 }) {
   return (
     <ImageWrapperStyled>
@@ -141,19 +143,24 @@ export function ListImage({
         </div>
       </ImageStyled>
 
-      <div className="settings">
-        <OverlayTrigger placement="right" overlay={<Tooltip>Editar</Tooltip>}>
-          <Button variant="dark" onClick={onEdit}>
-            <Edit fontSize="small" />
-          </Button>
-        </OverlayTrigger>
+      {active && !disabled && (
+        <div className="settings">
+          <OverlayTrigger placement="right" overlay={<Tooltip>Editar</Tooltip>}>
+            <Button variant="dark" onClick={onEdit}>
+              <Edit fontSize="small" />
+            </Button>
+          </OverlayTrigger>
 
-        {/* <OverlayTrigger placement="right" overlay={<Tooltip>Eliminar</Tooltip>}>
-          <Button variant="dark" onClick={() => {}}>
-            <Close fontSize="small" />
-          </Button>
-        </OverlayTrigger> */}
-      </div>
+          <OverlayTrigger
+            placement="right"
+            overlay={<Tooltip>Eliminar</Tooltip>}
+          >
+            <Button variant="dark" onClick={onDelete}>
+              <Delete fontSize="small" />
+            </Button>
+          </OverlayTrigger>
+        </div>
+      )}
     </ImageWrapperStyled>
   );
 }
