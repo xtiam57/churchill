@@ -64,6 +64,7 @@ const ImageStyled = styled.div`
     }
 
     .image {
+      transform: scale(1.1);
       border: 3px solid var(--secondary);
     }
   }
@@ -73,8 +74,6 @@ const ImageStyled = styled.div`
     background-color: #111;
 
     .image {
-      transform: scale(1.1);
-      box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
     }
   }
 `;

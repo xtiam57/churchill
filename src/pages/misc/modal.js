@@ -72,17 +72,15 @@ export function ResourceModal({ show, resource, handleClose, handleSave }) {
           </Form.Row>
         </Form>
 
-        <Form noValidate validated={validated}>
+        <Form>
           <Form.Row>
-            <Form.Group hasValidation as={Col}>
+            <Form.Group as={Col}>
               <Form.Label>Descripción</Form.Label>
               <Form.Control
                 as="textarea"
-                rows={5}
+                rows={3}
                 value={description}
                 onChange={({ target }) => setDescription(target.value)}
-                required
-                isInvalid
               />
             </Form.Group>
           </Form.Row>
@@ -125,11 +123,7 @@ export function ResourceModal({ show, resource, handleClose, handleSave }) {
         )}
       </Modal.Body>
       <Modal.Footer>
-        <Button
-          variant="primary"
-          onClick={save}
-          disabled={!title || !description || !image}
-        >
+        <Button variant="primary" onClick={save} disabled={!title || !image}>
           {resource ? 'Actualizar' : 'Agregar'}
         </Button>
       </Modal.Footer>

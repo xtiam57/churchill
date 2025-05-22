@@ -97,7 +97,7 @@ export default function MiscPage() {
               key={resource.id}
               onClick={() => setCurrent(resource)}
               onEdit={() => setShowModal(resource)}
-              onDelete={handleDelete}
+              onDelete={() => handleDelete(resource)}
               src={resource.bg}
               title={resource.title}
               description={resource.description}
