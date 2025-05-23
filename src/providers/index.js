@@ -3,3 +3,7 @@ export { BirthdaysContext, BirthdaysProvider } from './BirthdaysProvider';
 export { HymnalsContext, HymnalsProvider } from './HymnalsProvider';
 export { PresenterContext, PresenterProvider } from './PresenterProvider';
 export { ScripturesContext, ScripturesProvider } from './ScripturesProvider';
+export {
+  BackgroundAudioContext,
+  BackgroundAudioProvider,
+} from './BackgroundAudioProvider';

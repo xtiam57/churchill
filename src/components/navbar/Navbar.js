@@ -2,18 +2,20 @@ import {
   CalendarMonth,
   CancelPresentation,
   Chat,
+  PlayArrow,
   Settings,
   Slideshow,
 } from '@mui/icons-material';
 import { Countdown, Logo } from 'components';
 import { useApp, usePresenter } from 'hooks';
-import { useCallback, useState } from 'react';
+import { useCallback, useContext, useState } from 'react';
 import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
 import { PATHS } from 'router';
 import createPersistedState from 'use-persisted-state';
 import { BROADCAST } from 'values';
 import { AlertMessageModal } from './modal';
+import { BackgroundAudioContext } from 'providers';
 
 const useAlert = createPersistedState(BROADCAST.ALERT);
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
@@ -21,6 +23,7 @@ const useSettings = createPersistedState(BROADCAST.SETTINGS);
 export function Navbar() {
   const [alert, setAlert] = useAlert(BROADCAST.INITIAL_ALERT);
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
+  const { setShowOptions } = useContext(BackgroundAudioContext);
 
   const location = useLocation();
   const { toggleSettings, toggleSchedule } = useApp();
@@ -90,6 +93,20 @@ export function Navbar() {
                   variant="link"
                 >
                   <CalendarMonth />
+                </Button>
+              </OverlayTrigger>
+            </li>
+            <li className="nav-item">
+              <OverlayTrigger
+                placement="bottom"
+                overlay={<Tooltip>Fondos musicales</Tooltip>}
+              >
+                <Button
+                  onClick={() => setShowOptions(true)}
+                  className={presenting ? 'text-dark' : 'text-light'}
+                  variant="link"
+                >
+                  <PlayArrow />
                 </Button>
               </OverlayTrigger>
             </li>

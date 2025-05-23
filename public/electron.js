@@ -6,7 +6,6 @@ const { app, ipcMain, BrowserWindow, shell, screen, desktopCapturer } =
 const path = require('path');
 const url = require('url');
 const fs = require('fs');
-
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow = null;
@@ -123,7 +122,28 @@ ipcMain.handle('get-background-images', async (_, relativePath) => {
     return [];
   }
 });
+// 👇 Este handler debe estar aquí:
+ipcMain.handle('get-background-audios', async () => {
+  try {
+    const folderPath = path.join(
+      app.getPath('documents'),
+      'Churchill/Pistas/Fondomusical'
+    );
 
+    if (!fs.existsSync(folderPath)) {
+      fs.mkdirSync(folderPath, { recursive: true });
+      return []; // ⬅️ Esto hace que retorne vacío la primera vez, ¡lo cual está bien!
+    }
+
+    const files = fs.readdirSync(folderPath);
+    const audioFiles = files.filter((file) => /\.mp3$/i.test(file));
+
+    return audioFiles;
+  } catch (error) {
+    console.error('Error leyendo carpeta fondomusical:', error);
+    return [];
+  }
+});
 // Obtener la ruta de la carpeta en "Mis Documentos"
 ipcMain.handle('get-directory-path', (_, subPath) => {
   return path.join(app.getPath('documents'), subPath);
