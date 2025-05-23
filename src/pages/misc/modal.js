@@ -7,6 +7,7 @@ export function ResourceModal({ show, resource, handleClose, handleSave }) {
   const [description, setDescription] = useState(null);
   const [image, setImage] = useState(null);
   const [validated] = useState(true);
+  const [error, setError] = useState(null);
 
   const save = () => {
     handleSave({
@@ -19,6 +20,7 @@ export function ResourceModal({ show, resource, handleClose, handleSave }) {
     setTitle(null);
     setDescription(null);
     setImage(null);
+    setError(null);
   };
 
   const close = () => {
@@ -26,6 +28,7 @@ export function ResourceModal({ show, resource, handleClose, handleSave }) {
     setTitle(null);
     setDescription(null);
     setImage(null);
+    setError(null);
   };
 
   useEffect(() => {
@@ -38,6 +41,7 @@ export function ResourceModal({ show, resource, handleClose, handleSave }) {
       setDescription(null);
       setImage(null);
     }
+    setError(null);
   }, [resource]);
 
   return (
@@ -72,17 +76,15 @@ export function ResourceModal({ show, resource, handleClose, handleSave }) {
           </Form.Row>
         </Form>
 
-        <Form noValidate validated={validated}>
+        <Form>
           <Form.Row>
-            <Form.Group hasValidation as={Col}>
+            <Form.Group as={Col}>
               <Form.Label>Descripción</Form.Label>
               <Form.Control
                 as="textarea"
-                rows={5}
+                rows={3}
                 value={description}
                 onChange={({ target }) => setDescription(target.value)}
-                required
-                isInvalid
               />
             </Form.Group>
           </Form.Row>
@@ -111,25 +113,34 @@ export function ResourceModal({ show, resource, handleClose, handleSave }) {
             </Button>
           </div>
         ) : (
-          <Form.File
-            id="background"
-            label="Selecciona una imagen de fondo..."
-            accept="image/png, image/jpeg"
-            size="sm"
-            custom
-            className="resource-custom"
-            onChange={({ target }) => {
-              toBase64(target.files[0]).then(setImage);
-            }}
-          />
+          <>
+            <Form.File
+              id="background"
+              label="Selecciona una imagen de fondo..."
+              accept="image/png, image/jpeg"
+              size="sm"
+              custom
+              className="resource-custom"
+              onChange={({ target }) => {
+                const file = target.files[0];
+                if (file) {
+                  if (file.size > 1.5 * 1024 * 1024) {
+                    setError('La imagen no puede pesar más de 1.5 MB.');
+                    target.value = null;
+                    return;
+                  }
+                  setError(null);
+                  toBase64(file).then(setImage);
+                }
+              }}
+            />
+
+            {error && <small className="text-danger">{error}</small>}
+          </>
         )}
       </Modal.Body>
       <Modal.Footer>
-        <Button
-          variant="primary"
-          onClick={save}
-          disabled={!title || !description || !image}
-        >
+        <Button variant="primary" onClick={save} disabled={!title || !image}>
           {resource ? 'Actualizar' : 'Agregar'}
         </Button>
       </Modal.Footer>
