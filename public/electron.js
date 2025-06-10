@@ -6,7 +6,7 @@ const { app, ipcMain, BrowserWindow, shell, screen, desktopCapturer } =
 const path = require('path');
 const url = require('url');
 const fs = require('fs');
-const resourcesBase64 = require('./resources-sample'); // Asegúrate de la ruta correcta
+const resourcesBase64 = require('./resources-sample');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -100,6 +100,11 @@ function createWindow() {
     });
 
     fs.writeFileSync(initFlag, '.churchill-resources-init');
+    // Hacer el archivo oculto en Windows
+    if (process.platform === 'win32') {
+      const { exec } = require('child_process');
+      exec(`attrib +h "${initFlag}"`);
+    }
   }
 }
 
