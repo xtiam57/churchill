@@ -16,8 +16,8 @@ contextBridge.exposeInMainWorld('electronAPI', {
   openLink: (url) => ipcRenderer.send('open-link', url),
   getResources: (relativePath) =>
     ipcRenderer.invoke('get-resources', relativePath),
-  saveResource: (relativePath, fileName, buffer) =>
-    ipcRenderer.invoke('save-resource', relativePath, fileName, buffer),
+  saveResource: (relativePath, fileName, dataBase64) =>
+    ipcRenderer.invoke('save-resource', relativePath, fileName, dataBase64),
   deleteResource: (relativePath, fileName) =>
     ipcRenderer.invoke('delete-resource', relativePath, fileName),
 });

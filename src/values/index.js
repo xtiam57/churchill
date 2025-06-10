@@ -1,5 +1,5 @@
 import { generateGUID } from 'utils';
-import { TEST_EVENT_POSTER, TEST_MAP, TEST_TABERNACULO } from './event64';
+import { TEST_EVENT_POSTER } from './event64';
 import { BACKGROUNDS } from './images';
 
 export const DEFAULT_SYSTEM_FONT =
@@ -86,23 +86,6 @@ const SETTINGS_INITIAL_STATE = {
   tint: 0,
   ...THEMES['dark'],
 };
-
-const RESOURCES = [
-  {
-    id: generateGUID(),
-    title: 'Primer viaje de Pablo',
-    description:
-      'En este mapa se muestra el primer viaje misionero de Pablo, donde visitó varias ciudades y estableció iglesias.',
-    bg: TEST_MAP,
-  },
-  {
-    id: generateGUID(),
-    title: 'EL tabernáculo',
-    description:
-      'En este mapa se muestra el tabernáculo, donde los israelitas adoraban a Dios en el desierto.',
-    bg: TEST_TABERNACULO,
-  },
-];
 
 const SCHEDULES_AND_EVENTS = [
   {
@@ -191,8 +174,6 @@ export const BROADCAST = {
   SCHEDULES_AND_EVENTS: 'SCHEDULES_AND_EVENTS',
   INITIAL_SCHEDULES_AND_EVENTS: SCHEDULES_AND_EVENTS,
   FULL_COUNTDOWN: 'BROADCASTING_FULL_COUNTDOWN',
-  RESOURCES: 'BROADCASTING_RESOURCES',
-  INITIAL_RESOURCES: RESOURCES,
 };
 
 export const SETTINGS_OPTIONS = {

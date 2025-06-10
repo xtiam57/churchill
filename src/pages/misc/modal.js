@@ -4,7 +4,6 @@ import { generateGUID, toBase64 } from 'utils';
 
 export function ResourceModal({ show, resource, handleClose, handleSave }) {
   const [title, setTitle] = useState(null);
-  const [description, setDescription] = useState(null);
   const [image, setImage] = useState(null);
   const [file, setFile] = useState(null);
   const [validated] = useState(true);
@@ -14,14 +13,11 @@ export function ResourceModal({ show, resource, handleClose, handleSave }) {
     handleSave({
       id: resource ? resource.id : generateGUID(),
       title,
-      description,
-      bg: image,
-      file,
+      base64: image,
       extension: file ? file.name.split('.').pop().toLowerCase() : null,
     });
 
     setTitle(null);
-    setDescription(null);
     setImage(null);
     setFile(null);
     setError(null);
@@ -30,7 +26,6 @@ export function ResourceModal({ show, resource, handleClose, handleSave }) {
   const close = () => {
     handleClose();
     setTitle(null);
-    setDescription(null);
     setImage(null);
     setFile(null);
     setError(null);
@@ -39,11 +34,9 @@ export function ResourceModal({ show, resource, handleClose, handleSave }) {
   useEffect(() => {
     if (resource) {
       setTitle(resource.title);
-      setDescription(resource.description);
       setImage(resource.bg);
     } else {
       setTitle(null);
-      setDescription(null);
       setImage(null);
       setFile(null);
     }
@@ -81,20 +74,6 @@ export function ResourceModal({ show, resource, handleClose, handleSave }) {
             </Form.Group>
           </Form.Row>
         </Form>
-
-        {/* <Form>
-          <Form.Row>
-            <Form.Group as={Col}>
-              <Form.Label>Descripción</Form.Label>
-              <Form.Control
-                as="textarea"
-                rows={3}
-                value={description}
-                onChange={({ target }) => setDescription(target.value)}
-              />
-            </Form.Group>
-          </Form.Row>
-        </Form> */}
 
         {image ? (
           <div

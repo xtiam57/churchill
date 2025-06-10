@@ -62,17 +62,16 @@ export default function MiscPage() {
   }, [applyOrder]);
 
   const handleSave = useCallback(
-    async (data) => {
+    (data) => {
       setShowModal(false);
 
-      const arrayBuffer = await data.file.arrayBuffer();
-      const buffer = Buffer.from(arrayBuffer);
+      console.log('Saving resource:', data);
 
       try {
-        await window.electronAPI?.saveResource(
+        window.electronAPI?.saveResource(
           FOLDER_PATH,
           `${data.title}.${data.extension}`,
-          buffer
+          data.base64
         );
         handleLoad();
       } catch (error) {

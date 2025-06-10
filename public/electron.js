@@ -6,6 +6,7 @@ const { app, ipcMain, BrowserWindow, shell, screen, desktopCapturer } =
 const path = require('path');
 const url = require('url');
 const fs = require('fs');
+const resourcesBase64 = require('./resources-sample'); // Asegúrate de la ruta correcta
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -67,6 +68,39 @@ function createWindow() {
   fs.mkdirSync(path.join(app.getPath('documents'), 'Churchill/Fondos'), {
     recursive: true,
   });
+  // Creando carpeta para los recursos
+  const resourcesPath = path.join(
+    app.getPath('documents'),
+    'Churchill/Recursos'
+  );
+  fs.mkdirSync(resourcesPath, { recursive: true });
+
+  // Guardar imágenes base64 la primera vez
+  const initFlag = path.join(resourcesPath, '.churchill-resources-init');
+  if (!fs.existsSync(initFlag)) {
+    const images = [
+      {
+        base64: resourcesBase64.TEST_MAPA,
+        name: 'Viaje misionero de Pablo - Muestra',
+      },
+      {
+        base64: resourcesBase64.TEST_TABERNACULO,
+        name: 'Tabernaculo - Muestra',
+      },
+    ];
+
+    images.forEach(({ base64, name }) => {
+      const match = base64.match(/^data:image\/(\w+);base64,(.+)$/);
+      if (match) {
+        const extension = match[1];
+        const data = match[2];
+        const filePath = path.join(resourcesPath, `${name}.${extension}`);
+        fs.writeFileSync(filePath, Buffer.from(data, 'base64'));
+      }
+    });
+
+    fs.writeFileSync(initFlag, '.churchill-resources-init');
+  }
 }
 
 // This method will be called when Electron has finished
@@ -346,7 +380,7 @@ ipcMain.handle('delete-resource', (_, relativePath, fileName) => {
   }
 });
 
-ipcMain.handle('save-resource', (_, relativePath, fileName, buffer) => {
+ipcMain.handle('save-resource', (_, relativePath, fileName, dataBase64) => {
   try {
     const documentsPath = app.getPath('documents');
     const folderPath = path.join(documentsPath, relativePath);
@@ -357,13 +391,16 @@ ipcMain.handle('save-resource', (_, relativePath, fileName, buffer) => {
       fs.mkdirSync(folderPath, { recursive: true });
     }
 
-    // Verifica si el buffer es válido
-    if (!buffer || buffer.length === 0) {
+    // Verifica si el dataBase64 es válido
+    if (!dataBase64 || dataBase64.length === 0) {
       throw new Error('El archivo está vacío o no se pudo cargar.');
     }
 
-    // Guarda el archivo
-    fs.writeFileSync(filePath, Buffer.from(buffer));
+    const match = dataBase64.match(/^data:image\/(\w+);base64,(.+)$/);
+    if (match) {
+      const data = match[2];
+      fs.writeFileSync(filePath, Buffer.from(data, 'base64'));
+    }
 
     return 'Imagen guardada correctamente en: ' + filePath;
   } catch (err) {
