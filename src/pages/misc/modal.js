@@ -6,6 +6,7 @@ export function ResourceModal({ show, resource, handleClose, handleSave }) {
   const [title, setTitle] = useState(null);
   const [description, setDescription] = useState(null);
   const [image, setImage] = useState(null);
+  const [file, setFile] = useState(null);
   const [validated] = useState(true);
   const [error, setError] = useState(null);
 
@@ -15,11 +16,14 @@ export function ResourceModal({ show, resource, handleClose, handleSave }) {
       title,
       description,
       bg: image,
+      file,
+      extension: file ? file.name.split('.').pop().toLowerCase() : null,
     });
 
     setTitle(null);
     setDescription(null);
     setImage(null);
+    setFile(null);
     setError(null);
   };
 
@@ -28,6 +32,7 @@ export function ResourceModal({ show, resource, handleClose, handleSave }) {
     setTitle(null);
     setDescription(null);
     setImage(null);
+    setFile(null);
     setError(null);
   };
 
@@ -40,6 +45,7 @@ export function ResourceModal({ show, resource, handleClose, handleSave }) {
       setTitle(null);
       setDescription(null);
       setImage(null);
+      setFile(null);
     }
     setError(null);
   }, [resource]);
@@ -63,7 +69,7 @@ export function ResourceModal({ show, resource, handleClose, handleSave }) {
         <Form noValidate validated={validated}>
           <Form.Row>
             <Form.Group hasValidation as={Col}>
-              <Form.Label>Título</Form.Label>
+              <Form.Label>Nombre</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="e.j. Mapa de viajes"
@@ -76,7 +82,7 @@ export function ResourceModal({ show, resource, handleClose, handleSave }) {
           </Form.Row>
         </Form>
 
-        <Form>
+        {/* <Form>
           <Form.Row>
             <Form.Group as={Col}>
               <Form.Label>Descripción</Form.Label>
@@ -88,7 +94,7 @@ export function ResourceModal({ show, resource, handleClose, handleSave }) {
               />
             </Form.Group>
           </Form.Row>
-        </Form>
+        </Form> */}
 
         {image ? (
           <div
@@ -107,7 +113,10 @@ export function ResourceModal({ show, resource, handleClose, handleSave }) {
               variant="outline-danger"
               disabled={!image}
               style={{ height: 38 }}
-              onClick={() => setImage(null)}
+              onClick={() => {
+                setImage(null);
+                setFile(null);
+              }}
             >
               Eliminar
             </Button>
@@ -130,7 +139,10 @@ export function ResourceModal({ show, resource, handleClose, handleSave }) {
                     return;
                   }
                   setError(null);
-                  toBase64(file).then(setImage);
+                  toBase64(file).then((image) => {
+                    setImage(image);
+                    setFile(file);
+                  });
                 }
               }}
             />

@@ -12,6 +12,8 @@ const fs = require('fs');
 let mainWindow = null;
 let presenterWindow = null;
 
+const MAX_IMAGE_SIZE = 1.5 * 1024 * 1024; // 1.5 MB en bytes
+
 function createWindow() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
@@ -103,7 +105,17 @@ ipcMain.handle('get-background-images', async (_, relativePath) => {
     }
 
     const files = fs.readdirSync(folderPath);
-    const imageFiles = files.filter((file) => /\.(jpg|jpeg|png)$/i.test(file));
+    const imageFiles = files.filter((file) => {
+      const filePath = path.join(folderPath, file);
+      const isImage = /\.(jpg|jpeg|png)$/i.test(file);
+      if (!isImage) return false;
+      try {
+        const stats = fs.statSync(filePath);
+        return stats.size < MAX_IMAGE_SIZE;
+      } catch {
+        return false;
+      }
+    });
 
     const images = imageFiles.map((file) => {
       const filePath = path.join(folderPath, file);
@@ -229,4 +241,133 @@ ipcMain.handle('get-screen-sources', async () => {
 
 ipcMain.on('open-link', (event, url) => {
   shell.openExternal(url); // Abre el enlace en el navegador predeterminado
+});
+
+ipcMain.handle('get-resources', async (_, relativePath) => {
+  try {
+    const documentsPath = app.getPath('documents'); // Ruta base "Mis Documentos"
+    const folderPath = path.join(documentsPath, relativePath); // Ruta completa
+
+    // Verificar si la carpeta existe, si no, crearla
+    if (!fs.existsSync(folderPath)) {
+      fs.mkdirSync(folderPath, { recursive: true });
+      return []; // Retorna vacío ya que la carpeta estaba vacía
+    }
+
+    const files = fs.readdirSync(folderPath);
+    const imageFiles = files.filter((file) => {
+      const filePath = path.join(folderPath, file);
+      const isImage = /\.(jpg|jpeg|png)$/i.test(file);
+      if (!isImage) return false;
+      try {
+        const stats = fs.statSync(filePath);
+        return stats.size < MAX_IMAGE_SIZE;
+      } catch {
+        return false;
+      }
+    });
+
+    const images = imageFiles.map((file, idx) => {
+      const filePath = path.join(folderPath, file);
+      const extension = path.extname(file).replace('.', '');
+      const title = path.basename(file, `.${extension}`);
+      let id = title;
+      let bg = '';
+      let birthtimeMs = 0;
+      let createdAt = '';
+      try {
+        const base64 = fs.readFileSync(filePath, { encoding: 'base64' });
+        bg = `data:image/${extension};base64,${base64}`;
+        // Crear id único usando title y fecha de creación
+        const stats = fs.statSync(filePath);
+        birthtimeMs = stats.birthtimeMs;
+        id = `${title}-${Math.floor(birthtimeMs)}`;
+        // Formatear fecha de creación a dd/MMM/yyyy HH:mm
+        const date = new Date(birthtimeMs);
+        const months = [
+          'Ene',
+          'Feb',
+          'Mar',
+          'Abr',
+          'May',
+          'Jun',
+          'Jul',
+          'Ago',
+          'Sep',
+          'Oct',
+          'Nov',
+          'Dic',
+        ];
+        const day = String(date.getDate()).padStart(2, '0');
+        const month = months[date.getMonth()];
+        const year = date.getFullYear();
+        const hours = String(date.getHours()).padStart(2, '0');
+        const minutes = String(date.getMinutes()).padStart(2, '0');
+        createdAt = `${day}/${month}/${year} ${hours}:${minutes}`;
+      } catch (e) {
+        console.error(`Error reading image: ${filePath}`, e);
+      }
+
+      return {
+        id,
+        title,
+        createdAt,
+        extension,
+        bg,
+        birthtimeMs,
+      };
+    });
+
+    // Ordenar por birthtimeMs de más vieja a más actual
+    images.sort((a, b) => a.birthtimeMs - b.birthtimeMs);
+
+    return images;
+  } catch (error) {
+    console.error('Error reading folder:', error);
+    return [];
+  }
+});
+
+ipcMain.handle('delete-resource', (_, relativePath, fileName) => {
+  try {
+    const documentsPath = app.getPath('documents');
+    const folderPath = path.join(documentsPath, relativePath);
+    const filePath = path.join(folderPath, fileName);
+
+    if (fs.existsSync(filePath)) {
+      fs.unlinkSync(filePath);
+      return { success: true, message: 'Imagen eliminada correctamente.' };
+    } else {
+      return { success: false, message: 'El archivo no existe.' };
+    }
+  } catch (error) {
+    console.error('Error eliminando imagen:', error);
+    return { success: false, message: 'Error eliminando imagen.' };
+  }
+});
+
+ipcMain.handle('save-resource', (_, relativePath, fileName, buffer) => {
+  try {
+    const documentsPath = app.getPath('documents');
+    const folderPath = path.join(documentsPath, relativePath);
+    const filePath = path.join(folderPath, fileName);
+
+    // Crear la carpeta si no existe
+    if (!fs.existsSync(folderPath)) {
+      fs.mkdirSync(folderPath, { recursive: true });
+    }
+
+    // Verifica si el buffer es válido
+    if (!buffer || buffer.length === 0) {
+      throw new Error('El archivo está vacío o no se pudo cargar.');
+    }
+
+    // Guarda el archivo
+    fs.writeFileSync(filePath, Buffer.from(buffer));
+
+    return 'Imagen guardada correctamente en: ' + filePath;
+  } catch (err) {
+    // Muestra alerta al usuario si falla
+    console.error('Error al guardar la imagen', err.message);
+  }
 });

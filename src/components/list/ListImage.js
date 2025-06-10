@@ -1,4 +1,4 @@
-import { Delete, Edit } from '@mui/icons-material';
+import { Delete } from '@mui/icons-material';
 import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import styled from 'styled-components';
 
@@ -41,7 +41,7 @@ const ImageStyled = styled.div`
   flex: 1 0;
   align-items: center;
   gap: 10px;
-  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  /* box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset; */
 
   p {
     font-size: 0.8rem;
@@ -52,7 +52,7 @@ const ImageStyled = styled.div`
   }
 
   &.active {
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px 0px inset;
+    /* box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px 0px inset; */
     pointer-events: none;
 
     strong {
@@ -144,11 +144,11 @@ export function ListImage({
 
       {active && !disabled && (
         <div className="settings">
-          <OverlayTrigger placement="right" overlay={<Tooltip>Editar</Tooltip>}>
+          {/* <OverlayTrigger placement="right" overlay={<Tooltip>Editar</Tooltip>}>
             <Button variant="dark" onClick={onEdit}>
               <Edit fontSize="small" />
             </Button>
-          </OverlayTrigger>
+          </OverlayTrigger> */}
 
           <OverlayTrigger
             placement="right"

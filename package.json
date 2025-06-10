@@ -21,8 +21,6 @@
   "scripts": {
     "react-start": "set PORT=3006 && react-scripts start",
     "react-build": "react-scripts build",
-    "react-test": "react-scripts test",
-    "react-eject": "react-scripts eject",
     "generate": "node generate.js",
     "build": "rimraf dist && cross-env REACT_APP_VERSION=$npm_package_version yarn react-build && electron-builder && yarn post-build",
     "start": "concurrently \"set BROWSER=none && cross-env REACT_APP_VERSION=$npm_package_version yarn run react-start\" \"wait-on http://localhost:3006 && set ELECTRON_START_URL=http://localhost:3006 && electron .\"",
