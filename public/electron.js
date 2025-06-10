@@ -14,6 +14,9 @@ let mainWindow = null;
 let presenterWindow = null;
 
 const MAX_IMAGE_SIZE = 1.5 * 1024 * 1024; // 1.5 MB en bytes
+const HYMNS_PATH = 'Churchill/Pistas';
+const BACKGROUNDS_PATH = 'Churchill/Fondos';
+const RESOURCES_PATH = 'Churchill/Recursos';
 
 function createWindow() {
   // Create the browser window.
@@ -61,18 +64,15 @@ function createWindow() {
   });
 
   // Creando carpeta para los himnos
-  fs.mkdirSync(path.join(app.getPath('documents'), 'Churchill/Pistas'), {
+  fs.mkdirSync(path.join(app.getPath('documents'), HYMNS_PATH), {
     recursive: true,
   });
   // Creando carpeta para los fondos
-  fs.mkdirSync(path.join(app.getPath('documents'), 'Churchill/Fondos'), {
+  fs.mkdirSync(path.join(app.getPath('documents'), BACKGROUNDS_PATH), {
     recursive: true,
   });
   // Creando carpeta para los recursos
-  const resourcesPath = path.join(
-    app.getPath('documents'),
-    'Churchill/Recursos'
-  );
+  const resourcesPath = path.join(app.getPath('documents'), RESOURCES_PATH);
   fs.mkdirSync(resourcesPath, { recursive: true });
 
   // Guardar imágenes base64 la primera vez
@@ -99,7 +99,7 @@ function createWindow() {
       }
     });
 
-    fs.writeFileSync(initFlag, '.churchill-resources-init');
+    fs.writeFileSync(initFlag, 'sample_created=true');
     // Hacer el archivo oculto en Windows
     if (process.platform === 'win32') {
       const { exec } = require('child_process');
