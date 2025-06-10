@@ -170,7 +170,7 @@ ipcMain.handle('get-background-images', async (_, relativePath) => {
 
     return images;
   } catch (error) {
-    console.error('Error reading folder:', error);
+    console.error('Error leyendo directorio:', error);
     return [];
   }
 });
@@ -344,7 +344,7 @@ ipcMain.handle('get-resources', async (_, relativePath) => {
         const minutes = String(date.getMinutes()).padStart(2, '0');
         createdAt = `${day}/${month}/${year} ${hours}:${minutes}`;
       } catch (e) {
-        console.error(`Error reading image: ${filePath}`, e);
+        console.error(`Error leyendo la imagen: ${filePath}`, e);
       }
 
       return {
@@ -362,7 +362,7 @@ ipcMain.handle('get-resources', async (_, relativePath) => {
 
     return images;
   } catch (error) {
-    console.error('Error reading folder:', error);
+    console.error('Error leyendo el directorio:', error);
     return [];
   }
 });

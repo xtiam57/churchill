@@ -6,6 +6,9 @@ const ImageWrapperStyled = styled.div`
   display: flex;
   user-select: none;
   margin-bottom: 5px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--dark);
 
   .settings {
     display: flex;
@@ -17,12 +20,16 @@ const ImageWrapperStyled = styled.div`
       padding: 6px 8px;
       height: 100%;
       color: #999;
-
-      &:hover {
-        background-color: var(--secondary);
-        color: var(--dark);
-      }
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      color: var(--dark);
+      outline: none;
     }
+  }
+
+  &.active {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px 0px inset;
+    border: 1px solid var(--secondary);
   }
 `;
 
@@ -32,7 +39,6 @@ const ImageStyled = styled.div`
   text-align: left;
   color: #999;
   cursor: pointer;
-  border-radius: 8px;
   overflow: hidden;
   font-size: 0.9em;
   padding: 8px;
@@ -41,7 +47,6 @@ const ImageStyled = styled.div`
   flex: 1 0;
   align-items: center;
   gap: 10px;
-  /* box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset; */
 
   p {
     font-size: 0.8rem;
@@ -52,28 +57,14 @@ const ImageStyled = styled.div`
   }
 
   &.active {
-    /* box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px 0px inset; */
     pointer-events: none;
 
     strong {
-      color: var(--light);
+      color: #fff;
     }
 
     p {
       color: #fff;
-    }
-
-    .image {
-      transform: scale(1.1);
-      border: 3px solid var(--secondary);
-    }
-  }
-
-  &:hover {
-    color: #fff;
-    background-color: #111;
-
-    .image {
     }
   }
 `;
@@ -89,12 +80,8 @@ export function ListImage({
   disabled = false,
 }) {
   return (
-    <ImageWrapperStyled>
-      <ImageStyled
-        title={title}
-        onClick={onClick}
-        className={active ? 'active' : ''}
-      >
+    <ImageWrapperStyled title={title} className={active ? 'active' : ''}>
+      <ImageStyled onClick={onClick} className={active ? 'active' : ''}>
         <div
           className="image"
           style={{
@@ -127,7 +114,6 @@ export function ListImage({
             {title}
           </strong>
           <p
-            title={description}
             style={{
               overflow: 'hidden',
               display: '-webkit-box',
@@ -144,17 +130,11 @@ export function ListImage({
 
       {active && !disabled && (
         <div className="settings">
-          {/* <OverlayTrigger placement="right" overlay={<Tooltip>Editar</Tooltip>}>
-            <Button variant="dark" onClick={onEdit}>
-              <Edit fontSize="small" />
-            </Button>
-          </OverlayTrigger> */}
-
           <OverlayTrigger
             placement="right"
             overlay={<Tooltip>Eliminar</Tooltip>}
           >
-            <Button variant="dark" onClick={onDelete}>
+            <Button variant="secondary" onClick={onDelete}>
               <Delete fontSize="small" />
             </Button>
           </OverlayTrigger>

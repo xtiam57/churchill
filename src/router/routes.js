@@ -31,7 +31,7 @@ export const routes = flatten([
     path: PATHS.ROOT,
     component: HomePage,
     icon: <Newspaper />,
-    label: 'Inicio',
+    label: 'Mensajes',
     menu: true,
     showLabel: true,
   },

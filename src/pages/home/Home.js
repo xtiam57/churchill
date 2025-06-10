@@ -145,7 +145,7 @@ export default function HomePage() {
   return (
     <Wrapper>
       <Sidebar>
-        <Title>Inicio</Title>
+        <Title>Mensajes</Title>
 
         <DisplayButton
           value={showLogo}

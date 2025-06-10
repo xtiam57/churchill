@@ -167,7 +167,7 @@ export default function MiscPage() {
 
         <Button
           variant="link"
-          className="text-white p-0 text-small mb-4"
+          className="text-muted p-0 text-small mb-4"
           onClick={handleOpenFolder}
         >
           <FolderCopy fontSize="small" />{' '}
@@ -175,9 +175,11 @@ export default function MiscPage() {
         </Button>
 
         <List>
-          <List.Item className="mb-1">
-            <List.Title>listado de recursos</List.Title>
-          </List.Item>
+          {resources.length ? (
+            <List.Item className="mb-1">
+              <List.Title>listado de recursos</List.Title>
+            </List.Item>
+          ) : null}
 
           <DragDropContext onDragEnd={handleDragEnd}>
             <Droppable droppableId="resources">

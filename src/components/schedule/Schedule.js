@@ -1,5 +1,5 @@
 import { AlarmAdd, Close } from '@mui/icons-material';
-import { Sidebar } from 'components';
+import { Sidebar, Title } from 'components';
 import { useApp } from 'hooks';
 import { Button } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
@@ -81,12 +81,7 @@ export function Schedule() {
       size={600}
       offset={320 + 55}
     >
-      <h1 className="display-4">
-        Anuncios{' '}
-        {/* <small className="text-muted">
-          ({schedules?.filter((s) => s.active).length}/{schedules?.length})
-        </small> */}
-      </h1>
+      <Title color="text-dark">Anuncios</Title>
 
       <p className="text-muted">
         La resolución recomendada para las imagenes de fondo es de{' '}

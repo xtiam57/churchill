@@ -1,5 +1,5 @@
 import { Close, Download, Favorite, FileUpload } from '@mui/icons-material';
-import { Logo, LogoPreview, Sidebar, TextPreview } from 'components';
+import { Logo, LogoPreview, Sidebar, TextPreview, Title } from 'components';
 import { useApp, usePresenter } from 'hooks';
 import { useState } from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
@@ -84,7 +84,7 @@ export function Settings() {
       size={600}
       offset={320 + 55}
     >
-      <h1 className="display-4">Ajustes</h1>
+      <Title color="text-dark">Ajustes</Title>
       <Button
         className="p-0 text-dark"
         variant="link"
