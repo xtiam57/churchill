@@ -1,12 +1,12 @@
 import { useIterate } from 'hooks';
-import { HymnalsContext } from 'providers';
+import { HymnalContext } from 'providers';
 import { useContext } from 'react';
 import { MOVEMENT } from 'values';
 
-export function useHymnals() {
-  const { hymnals, current, setCurrent, tags, books } =
-    useContext(HymnalsContext);
-  const [move] = useIterate(current, hymnals);
+export function useHymnal() {
+  const { hymnal, current, setCurrent, tags, books } =
+    useContext(HymnalContext);
+  const [move] = useIterate(current, hymnal);
 
   const moveToNextHymnal = () => {
     const hymnalToGo = move(MOVEMENT.NEXT);
@@ -25,7 +25,7 @@ export function useHymnals() {
   };
 
   return {
-    hymnals,
+    hymnal,
     current,
     setCurrent,
     tags,

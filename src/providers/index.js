@@ -1,5 +1,5 @@
 export { AppContext, AppProvider } from './AppProvider';
 export { BirthdaysContext, BirthdaysProvider } from './BirthdaysProvider';
-export { HymnalsContext, HymnalsProvider } from './HymnalsProvider';
+export { HymnalContext, HymnalProvider } from './HymnalProvider';
 export { PresenterContext, PresenterProvider } from './PresenterProvider';
 export { ScripturesContext, ScripturesProvider } from './ScripturesProvider';

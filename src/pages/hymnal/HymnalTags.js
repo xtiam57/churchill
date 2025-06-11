@@ -2,41 +2,43 @@ import { List } from 'components';
 import { useState } from 'react';
 
 import { West } from '@mui/icons-material';
-import { useHymnals } from 'hooks';
+import { useHymnal } from 'hooks';
 
-export function HymnalBooks({ onClick = () => {}, current }) {
-  const { hymnals, books } = useHymnals();
+export function HymnalTags({ onClick = () => {}, current }) {
+  const { hymnal, tags } = useHymnal();
   const [selected, setSelected] = useState(null);
   const [list, setList] = useState([]);
 
-  const onChangeBook = (book) => {
-    setSelected(book === selected ? null : book);
+  const onChangeTag = (tag) => {
+    setSelected(tag === selected ? null : tag);
     setList(() =>
-      book === selected ? [] : hymnals.filter((song) => song.book === book)
+      tag === selected
+        ? []
+        : hymnal.filter((song) => song.tags?.split(',').includes(tag))
     );
   };
 
   return (
-    <List>
+    <List className="mb-4">
       {!selected ? (
         <>
           <List.Item>
-            <List.Title>Himnarios</List.Title>
+            <List.Title>Etiquetas</List.Title>
           </List.Item>
 
           <List.Item
             className="my-2"
             style={{ flexWrap: 'wrap', justifyContent: 'start' }}
           >
-            {books.map((book, index) => (
+            {tags.map((tag, index) => (
               <span
                 key={index}
-                onClick={() => onChangeBook(book)}
+                onClick={() => onChangeTag(tag)}
                 className={`tag mr-1 mb-1 pointer ${
-                  book === selected ? 'active' : ''
+                  tag === selected ? 'active' : ''
                 }`}
               >
-                {book}
+                {tag}
               </span>
             ))}
           </List.Item>
@@ -52,7 +54,7 @@ export function HymnalBooks({ onClick = () => {}, current }) {
           <List.Action
             style={{ flex: '1 0 42px' }}
             className="text-right"
-            onClick={() => onChangeBook(selected)}
+            onClick={() => onChangeTag(selected)}
           >
             <span
               className="tag pointer active"

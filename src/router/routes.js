@@ -8,7 +8,7 @@ import {
 import BirthdaysPage from 'pages/birthdays';
 import CastPage from 'pages/cast';
 import HomePage from 'pages/home';
-import HymnalsPage from 'pages/hymnals';
+import HymnalPage from 'pages/hymnal';
 import MiscPage from 'pages/misc';
 import ScripturesPage from 'pages/scriptures';
 
@@ -49,7 +49,7 @@ export const routes = flatten([
     key: PATHS.ANTHEMNS_PAGE,
     exact: true,
     path: PATHS.ANTHEMNS_PAGE,
-    component: HymnalsPage,
+    component: HymnalPage,
     icon: <Audiotrack />,
     label: 'Himnos',
     menu: true,

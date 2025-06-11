@@ -1,5 +1,5 @@
 import { Bookmark } from 'components';
-import { useHymnals } from 'hooks';
+import { useHymnal } from 'hooks';
 import { useCallback, useState } from 'react';
 import { Form, Modal } from 'react-bootstrap';
 import styledComponents from 'styled-components';
@@ -72,7 +72,7 @@ export function HymnalIndex({
   onHide = () => {},
   ...rest
 }) {
-  const { hymnals, books } = useHymnals();
+  const { hymnal, books } = useHymnal();
   const [category, setCategory] = useState('ALL');
   const [book, setBook] = useState(books[2]);
 
@@ -87,7 +87,7 @@ export function HymnalIndex({
   };
 
   const render = useCallback(() => {
-    return hymnals
+    return hymnal
       .filter((item) => (book !== 'ALL' ? item.book === book : true))
       .map((item, index) => {
         if (!item.category) {
@@ -130,7 +130,7 @@ export function HymnalIndex({
           </li>
         );
       });
-  }, [hymnals, book, category, onChange, sort, onSelect]);
+  }, [hymnal, book, category, onChange, sort, onSelect]);
 
   return (
     <Modal

@@ -1,6 +1,6 @@
 import { Sort } from '@mui/icons-material';
 import { Bookmark, createKey, List } from 'components';
-import { useHymnals, useScriptures } from 'hooks';
+import { useHymnal, useScriptures } from 'hooks';
 import { getBookmarkedItems, Storage } from 'utils';
 import { MAX_BOOKMARKS } from 'values';
 
@@ -15,7 +15,7 @@ export function BookmarkList({
   ...rest
 }) {
   const { scriptures } = useScriptures();
-  const { hymnals } = useHymnals();
+  const { hymnal } = useHymnal();
 
   const handleRemove = () => {
     items.forEach((item) => {
@@ -48,7 +48,7 @@ export function BookmarkList({
                 if (type === 'verse') {
                   onClick(scriptures[item.index]);
                 } else {
-                  onClick(hymnals[item.index]);
+                  onClick(hymnal[item.index]);
                 }
               }}
               title={

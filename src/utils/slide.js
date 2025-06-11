@@ -13,16 +13,17 @@ Slide.create = ({
   bg = null,
   ...rest
 }) => {
-  const length = (title ? title.length : 0) + text.replaceAll('/n', '').length;
-  title = title ? `<strong>${title}</strong>/n` : '';
-  text = `${title}${text}`.replaceAll('/n', '<br/>');
+  const cleanText = text.replaceAll('/n', '');
+  const slideTitle = title ? `<strong>${title}</strong>/n` : '';
+  const htmlText = `${slideTitle}${text}`.replaceAll('/n', '<br/>');
+  const length = (title?.length || 0) + cleanText.length;
 
   return {
     id,
     index,
     length,
     bg,
-    processedText: process(text, subtext, book),
+    processedText: process(htmlText, subtext, book),
     ...rest,
   };
 };

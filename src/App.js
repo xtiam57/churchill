@@ -2,7 +2,7 @@ import { Navbar, Routesbar, Schedule, Settings } from 'components';
 import {
   AppProvider,
   BirthdaysProvider,
-  HymnalsProvider,
+  HymnalProvider,
   PresenterProvider,
   ScripturesProvider,
 } from 'providers';
@@ -21,7 +21,7 @@ function App() {
       <Router>
         <PresenterProvider>
           <ScripturesProvider>
-            <HymnalsProvider>
+            <HymnalProvider>
               <BirthdaysProvider>
                 <GridStyled>
                   {/* Nav */}
@@ -37,7 +37,7 @@ function App() {
 
                 <Settings />
               </BirthdaysProvider>
-            </HymnalsProvider>
+            </HymnalProvider>
           </ScripturesProvider>
         </PresenterProvider>
       </Router>

@@ -4,7 +4,7 @@ export { useClickOutside } from './useClickOutside';
 export { useClock } from './useClock';
 export { useCountdown } from './useCountdown';
 export { useFolder } from './useFolder';
-export { useHymnals } from './useHymnals';
+export { useHymnal } from './useHymnal';
 export { useIterate } from './useIterate';
 export { useKeyUp } from './useKeyUp';
 export { usePresenter } from './usePresenter';

@@ -24,7 +24,7 @@ import {
   Title,
   Wrapper,
 } from 'components';
-import { useApp, useFolder, useHymnals, useKeyUp, usePresenter } from 'hooks';
+import { useApp, useFolder, useHymnal, useKeyUp, usePresenter } from 'hooks';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
   Button,
@@ -49,7 +49,7 @@ const useSettings = createPersistedState(BROADCAST.SETTINGS);
 
 export const createKey = ({ id, type }) => `${type}_${id}_config`;
 
-export default function HymnalsPage() {
+export default function HymnalPage() {
   const folder = useFolder();
   const { myDocumentsPath } = useApp();
 
@@ -57,14 +57,14 @@ export default function HymnalsPage() {
   const sliderRef = useRef();
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const { presenting } = usePresenter();
-  const { hymnals, current, setCurrent, moveHymnal } = useHymnals();
+  const { hymnal, current, setCurrent, moveHymnal } = useHymnal();
   const [showLogo, setShowLogo] = useState(true);
   const [openFinder, setOpenFinder] = useState(false);
   const [openIndex, setOpenIndex] = useState(false);
   const [search, setSearch] = useState([current]);
   const [bookmarkSort, setBookmarkSort] = useState('asc');
   const [bookmarks, setBookmarks] = useState(
-    getBookmarkedItems('hymnal', bookmarkSort)
+    getBookmarkedItems('hymn', bookmarkSort)
   );
   const localUrl = useMemo(
     () => `${myDocumentsPath}\\${current.reference}.mp3`,
@@ -192,7 +192,7 @@ export default function HymnalsPage() {
   const handleSort = () => {
     const sort = bookmarkSort === 'desc' ? 'asc' : 'desc';
     setBookmarkSort(sort);
-    setBookmarks(getBookmarkedItems('hymnal', sort));
+    setBookmarks(getBookmarkedItems('hymn', sort));
   };
 
   useKeyUp('ArrowUp', handleNextHymnal);
@@ -214,7 +214,7 @@ export default function HymnalsPage() {
           minLength={0}
           onChange={handleSearch}
           onFocus={(e) => e.target.select()}
-          options={hymnals}
+          options={hymnal}
           paginate={true}
           paginationText="Ver más himnos..."
           placeholder="Selecciona un himno..."
@@ -537,7 +537,7 @@ export default function HymnalsPage() {
       <Finder
         show={openFinder}
         onHide={() => setOpenFinder(false)}
-        options={hymnals}
+        options={hymnal}
         onChange={(event) => {
           if (event.length) {
             handleSearch(event);

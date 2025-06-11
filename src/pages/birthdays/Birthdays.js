@@ -90,7 +90,7 @@ export default function BirthdaysPage() {
 
         <DisplayButton
           value={showLogo}
-          presenting={presenting}
+          presenting={presenting && birthdays?.length}
           onToggle={setShowLogo}
         />
 

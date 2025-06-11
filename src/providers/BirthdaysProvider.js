@@ -1,4 +1,4 @@
-import { HymnalsContext } from 'providers';
+import { HymnalContext } from 'providers';
 import React, { useContext, useMemo, useState } from 'react';
 import { BIRTHDAY } from 'values';
 
@@ -7,8 +7,8 @@ const BirthdaysContext = React.createContext({});
 const BirthdaysProvider = ({ children }) => {
   const [now] = useState(new Date());
 
-  const { hymnals } = useContext(HymnalsContext);
-  const bDaySong = useMemo(() => hymnals[BIRTHDAY.HYMNAL_INDEX], [hymnals]);
+  const { hymnal } = useContext(HymnalContext);
+  const bDaySong = useMemo(() => hymnal[BIRTHDAY.HYMNAL_INDEX], [hymnal]);
 
   return (
     <BirthdaysContext.Provider value={{ now, bDaySong }}>

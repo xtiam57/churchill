@@ -1,12 +1,12 @@
 import { PDFDownloadLink, PDFViewer } from '@react-pdf/renderer';
 import { Sidebar, Title, Wrapper } from 'components';
-import { useHymnals } from 'hooks';
+import { useHymnal } from 'hooks';
 import { useState } from 'react';
 import { Form } from 'react-bootstrap';
 import { PDFDocument } from './PDFDocument';
 
 export default function ExportPage() {
-  const { hymnals, books } = useHymnals();
+  const { hymnal, books } = useHymnal();
   const [book, setBook] = useState('Apéndice');
 
   const handleBookChange = ({ target }) => {
@@ -33,9 +33,9 @@ export default function ExportPage() {
           ))}
         </Form.Control>
 
-        {hymnals.length && (
+        {hymnal.length && (
           <PDFDownloadLink
-            document={<PDFDocument hymnals={hymnals} book={book} />}
+            document={<PDFDocument hymnals={hymnal} book={book} />}
             fileName={`${book}.pdf`}
           >
             {({ blob, url, loading, error }) =>
@@ -46,7 +46,7 @@ export default function ExportPage() {
       </Sidebar>
 
       <PDFViewer className="w-100 border-0">
-        <PDFDocument hymnals={hymnals} book={book} />
+        <PDFDocument hymnals={hymnal} book={book} />
       </PDFViewer>
     </Wrapper>
   );

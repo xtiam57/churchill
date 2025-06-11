@@ -65,8 +65,6 @@ export default function MiscPage() {
     (data) => {
       setShowModal(false);
 
-      console.log('Saving resource:', data);
-
       try {
         window.electronAPI?.saveResource(
           FOLDER_PATH,
@@ -133,7 +131,7 @@ export default function MiscPage() {
 
         <DisplayButton
           value={showLogo}
-          presenting={presenting}
+          presenting={presenting && current}
           onToggle={setShowLogo}
         />
 
@@ -149,7 +147,7 @@ export default function MiscPage() {
               onClick={() => setShowModal(true)}
             >
               <Add /> Agregar
-            </Button>{' '}
+            </Button>
           </div>
 
           <div>
@@ -235,14 +233,19 @@ export default function MiscPage() {
       </Sidebar>
 
       {presenting ? (
-        <Alert presenting={!showLogo} label={current?.title} />
+        <Alert
+          presenting={!showLogo}
+          label={current?.title ?? 'No hay recursos que mostrar.'}
+        />
       ) : null}
 
       <Wrapper direction="column" {...settings}>
         <Presenter
-          id={current?.id}
+          id={current?.id ?? 'MISC_404'}
           live={!showLogo}
           bg={current?.bg}
+          type="resource"
+          text={!!current ? undefined : 'No hay recursos que mostrar.'}
           grayscale={presenting && showLogo}
           {...settings}
         />
