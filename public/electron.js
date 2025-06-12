@@ -413,3 +413,24 @@ ipcMain.handle('save-resource', (_, relativePath, fileName, dataBase64) => {
     console.error('Error al guardar la imagen', err.message);
   }
 });
+ipcMain.handle('get-background-audios', async () => {
+  try {
+    const folderPath = path.join(
+      app.getPath('documents'),
+      'Churchill/Pistas/Fondomusical'
+    );
+
+    if (!fs.existsSync(folderPath)) {
+      fs.mkdirSync(folderPath, { recursive: true });
+      return []; // ⬅️ Esto hace que retorne vacío la primera vez, ¡lo cual está bien!
+    }
+
+    const files = fs.readdirSync(folderPath);
+    const audioFiles = files.filter((file) => /\.mp3$/i.test(file));
+
+    return audioFiles;
+  } catch (error) {
+    console.error('Error leyendo carpeta fondomusical:', error);
+    return [];
+  }
+});

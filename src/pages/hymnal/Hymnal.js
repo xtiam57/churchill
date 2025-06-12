@@ -166,16 +166,27 @@ export default function HymnalPage() {
       setSearch([hymnal]);
     }
   };
-
   const handleTogglePlay = () => {
     if (isMP3Loaded) {
-      isPlaying ? stop() : play();
-    }
-    if (isOnlineMP3Loaded) {
-      isOnlinePlaying ? onlineStop() : onlinePlay();
+      if (isPlaying) {
+        stop();
+        clearInterval(intervalRef.current);
+      } else {
+        play();
+        sound?.seek(trackProgress);
+        startTimer();
+      }
+    } else if (isOnlineMP3Loaded) {
+      if (isOnlinePlaying) {
+        onlineStop();
+        clearInterval(intervalRef.current);
+      } else {
+        onlinePlay();
+        onlineSound?.seek(trackProgress);
+        startTimer();
+      }
     }
   };
-
   const handleOpenPath = (e) => {
     e.preventDefault();
     folder.open();
