@@ -20,4 +20,5 @@ contextBridge.exposeInMainWorld('electronAPI', {
     ipcRenderer.invoke('save-resource', relativePath, fileName, dataBase64),
   deleteResource: (relativePath, fileName) =>
     ipcRenderer.invoke('delete-resource', relativePath, fileName),
+  getBackgroundAudios: () => ipcRenderer.invoke('get-background-audios'),
 });
