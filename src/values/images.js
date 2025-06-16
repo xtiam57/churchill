@@ -101,19 +101,41 @@ import b7 from 'assets/images/bg/7.jpg';
 import b8 from 'assets/images/bg/8.jpg';
 import b9 from 'assets/images/bg/9.jpg';
 
+import abs1 from 'assets/images/bg/abs1.jpg';
+import abs2 from 'assets/images/bg/abs2.jpg';
+import abs3 from 'assets/images/bg/abs3.jpg';
+import abs4 from 'assets/images/bg/abs4.jpg';
+import abs5 from 'assets/images/bg/abs5.jpg';
+import abs6 from 'assets/images/bg/abs6.jpg';
+import abs7 from 'assets/images/bg/abs7.jpg';
+import abs8 from 'assets/images/bg/abs8.jpg';
+import abs9 from 'assets/images/bg/abs9.jpg';
+import flo1 from 'assets/images/bg/flo1.jpg';
+import sky1 from 'assets/images/bg/sky1.jpg';
+
 export const BACKGROUNDS = [
   { label: 'Color Sólido', value: '' },
   // { label: 'Animado', value: 'gradient' },
   { divider: true },
   { label: 'Abstracto 1', value: bg27 },
-  { label: 'Abstracto 10', value: bg97 },
-  { label: 'Abstracto 11', value: bg99 },
   { label: 'Abstracto 2', value: bg28 },
   { label: 'Abstracto 3', value: bg29 },
   { label: 'Abstracto 4', value: bg30 },
   { label: 'Abstracto 5', value: bg31 },
   { label: 'Abstracto 7', value: bg33 },
   { label: 'Abstracto 9', value: bg96 },
+  { label: 'Abstracto 10', value: bg97 },
+  { label: 'Abstracto 11', value: bg99 },
+  { label: 'Abstracto 10', value: abs1 },
+  { label: 'Abstracto 11', value: abs2 },
+  { label: 'Abstracto 12', value: abs3 },
+  { label: 'Abstracto 13', value: abs4 },
+  { label: 'Abstracto 14', value: abs5 },
+  { label: 'Abstracto 15', value: abs6 },
+  { label: 'Abstracto 16', value: abs7 },
+  { label: 'Abstracto 17', value: abs8 },
+  { label: 'Abstracto 18', value: abs9 },
+
   { label: 'Amanecer 1', value: bg02 },
   { label: 'Amanecer 2', value: bg37 },
   { label: 'Amanecer 3', value: bg38 },
@@ -135,7 +157,8 @@ export const BACKGROUNDS = [
   { label: 'Celebración 1', value: bg80 },
   { label: 'Celebración 2', value: bg81 },
   { label: 'Celebración 3', value: bg07 },
-  { label: 'Cielo', value: bg59 },
+  { label: 'Cielo 1', value: bg59 },
+  { label: 'Cielo 2', value: sky1 },
   { label: 'Cruz 1', value: bg05 },
   { label: 'Cruz 2', value: bg72 },
   { label: 'Cruz 3', value: b4 },
@@ -201,6 +224,7 @@ export const BACKGROUNDS = [
   { label: 'Rocas 2', value: bg77 },
   { label: 'Rosa 1', value: bg92 },
   { label: 'Rosa 2', value: bg93 },
+  { label: 'Rosa 3', value: flo1 },
   { label: 'San Valentín', value: bg04 },
   { label: 'Tierra', value: bg40 },
   { label: 'Mapa 1', value: bg300 },
