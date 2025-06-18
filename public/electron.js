@@ -44,7 +44,7 @@ function createWindow() {
   mainWindow.loadURL(startUrl);
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools();
+  mainWindow.webContents.openDevTools();
 
   // Hide menu
   mainWindow.removeMenu();
@@ -221,6 +221,12 @@ ipcMain.handle('toggle-presenter', (event, selectedMonitorId) => {
       fullscreen: true,
       show: false,
       parent,
+      webPreferences: {
+        preload: path.join(__dirname, 'preload.js'),
+        contextIsolation: true,
+        nodeIntegration: true,
+        enableRemoteModule: true,
+      },
     });
 
     presenterWindow.loadURL(url.replace(/#.*$/, '#/cast-screen'));
@@ -229,7 +235,7 @@ ipcMain.handle('toggle-presenter', (event, selectedMonitorId) => {
       presenterWindow.show();
     });
 
-    // presenterWindow.webContents.openDevTools();
+    presenterWindow.webContents.openDevTools();
 
     return true;
   }
@@ -354,6 +360,7 @@ ipcMain.handle('get-resources', async (_, relativePath) => {
         extension,
         bg,
         birthtimeMs,
+        filePath,
       };
     });
 
@@ -411,6 +418,94 @@ ipcMain.handle('save-resource', (_, relativePath, fileName, dataBase64) => {
   } catch (err) {
     // Muestra alerta al usuario si falla
     console.error('Error al guardar la imagen', err.message);
+  }
+});
+ipcMain.handle('get-videos', async (_, relativePath) => {
+  try {
+    const documentsPath = app.getPath('documents');
+    const folderPath = path.join(documentsPath, relativePath);
+
+    // Crear la carpeta si no existe
+    if (!fs.existsSync(folderPath)) {
+      fs.mkdirSync(folderPath, { recursive: true });
+      return [];
+    }
+
+    const files = fs.readdirSync(folderPath);
+    const videoFiles = files.filter((file) =>
+      /\.(mp4|mov|avi|mkv|webm)$/i.test(file)
+    );
+
+    const videos = videoFiles.map((file) => {
+      const filePath = path.join(folderPath, file);
+      const extension = path.extname(file).replace('.', '');
+      const title = path.basename(file, `.${extension}`);
+      let id = title;
+      let birthtimeMs = 0;
+      let createdAt = '';
+      try {
+        const stats = fs.statSync(filePath);
+        birthtimeMs = stats.birthtimeMs;
+        id = `${title}-${Math.floor(birthtimeMs)}`;
+        // Formatear fecha de creación a dd/MMM/yyyy HH:mm
+        const date = new Date(birthtimeMs);
+        const months = [
+          'Ene',
+          'Feb',
+          'Mar',
+          'Abr',
+          'May',
+          'Jun',
+          'Jul',
+          'Ago',
+          'Sep',
+          'Oct',
+          'Nov',
+          'Dic',
+        ];
+        const day = String(date.getDate()).padStart(2, '0');
+        const month = months[date.getMonth()];
+        const year = date.getFullYear();
+        const hours = String(date.getHours()).padStart(2, '0');
+        const minutes = String(date.getMinutes()).padStart(2, '0');
+        createdAt = `${day}/${month}/${year} ${hours}:${minutes}`;
+      } catch (e) {
+        console.error(`Error leyendo el video: ${filePath}`, e);
+      }
+
+      return {
+        id,
+        title,
+        createdAt,
+        extension,
+        filePath,
+        birthtimeMs,
+      };
+    });
+
+    // Ordenar por fecha de creación
+    videos.sort((a, b) => a.birthtimeMs - b.birthtimeMs);
+
+    return videos;
+  } catch (error) {
+    console.error('Error leyendo el directorio de videos:', error);
+    return [];
+  }
+});
+ipcMain.on('video-control', (event, data) => {
+  if (presenterWindow) {
+    presenterWindow.webContents.send('video-control-cast', data);
+  }
+});
+ipcMain.handle('get-image-base64', async (_, filePath) => {
+  try {
+    if (!fs.existsSync(filePath)) return null;
+    const ext = path.extname(filePath).replace('.', '');
+    const base64 = fs.readFileSync(filePath, { encoding: 'base64' });
+    return `data:image/${ext};base64,${base64}`;
+  } catch (e) {
+    console.error('Error leyendo imagen:', e);
+    return null;
   }
 });
 ipcMain.handle('get-background-audios', async () => {
