@@ -70,11 +70,9 @@ export default function VideosPage() {
     window.electronAPI.sendVideoControl({ action, time });
   };
 
-  // Abrir carpeta de videos
-  const handleOpenFolder = () => {
-    window.electronAPI.invoke('open-directory', VIDEOS_PATH);
-  };
-
+  const handleOpenFolder = useCallback(() => {
+    window.electronAPI?.openDirectory(VIDEOS_PATH);
+  }, []);
   return (
     <Wrapper>
       <Sidebar>
