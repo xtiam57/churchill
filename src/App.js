@@ -5,11 +5,12 @@ import {
   HymnalProvider,
   PresenterProvider,
   ScripturesProvider,
+  BackgroundAudioProvider,
 } from 'providers';
 import { HashRouter as Router } from 'react-router-dom';
 import { RouteMapper } from 'router';
 import styled from 'styled-components';
-
+import { BackgroundAudio } from 'components/navbar/BackgroundAudio';
 // CSS
 import 'react-bootstrap-typeahead/css/Typeahead.css';
 import './assets/styles/custom.scss';
@@ -23,19 +24,22 @@ function App() {
           <ScripturesProvider>
             <HymnalProvider>
               <BirthdaysProvider>
-                <GridStyled>
-                  {/* Nav */}
-                  <Routesbar />
-                  {/* Top navbar */}
-                  <Navbar />
-                  {/* Routes */}
-                  <RouteMapper />
-                  {/* Sidebar settings */}
-                </GridStyled>
+                <BackgroundAudioProvider>
+                  <GridStyled>
+                    {/* Nav */}
+                    <Routesbar />
+                    {/* Top navbar */}
+                    <Navbar />
+                    {/* Routes */}
+                    <RouteMapper />
+                    {/* Sidebar settings */}
+                  </GridStyled>
 
-                <Schedule />
+                  <Schedule />
 
-                <Settings />
+                  <Settings />
+                  <BackgroundAudio />
+                </BackgroundAudioProvider>
               </BirthdaysProvider>
             </HymnalProvider>
           </ScripturesProvider>

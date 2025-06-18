@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { generateGUID } from 'utils';
 import { process, resizeText } from './helper';
 import { PresenterStyled } from './styled';
+import { useGetImage } from 'hooks';
 
 const textMotion = {
   initial: { opacity: 0, y: '-100%' },
@@ -61,7 +62,7 @@ export function Presenter({
 }) {
   const divRef = useRef(null);
   const [divWidth, setDivWidth] = useState(1024);
-
+  const { bgBase64 } = useGetImage({ filepath: rest.bg });
   const handleFontScale = () => {
     setTimeout(() => {
       resizeText({
@@ -79,8 +80,9 @@ export function Presenter({
 
   useEffect(handleFontScale, []);
 
+  const restWithBg = { ...rest, bg: bgBase64 };
   return (
-    <PresenterStyled ref={divRef} {...rest}>
+    <PresenterStyled ref={divRef} {...restWithBg}>
       <AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
         <motion.p
           key={id}

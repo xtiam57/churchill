@@ -32,7 +32,6 @@ export default function MiscPage() {
   const [current, setCurrent] = useState(null);
   const { presenting } = usePresenter();
   const [isLoading, setIsLoading] = useState(true);
-
   const applyOrder = useCallback(
     (resources) => {
       if (!resourceOrder.length) {
@@ -115,9 +114,13 @@ export default function MiscPage() {
     setResources(reordered);
     setResourceOrder(reordered.map((r) => r.id));
   };
-
   useEffect(() => {
-    setMessage(showLogo ? null : current);
+    if (showLogo) {
+      setMessage(null);
+    } else if (current) {
+      const { bg, ...rest } = current;
+      setMessage(rest);
+    }
   }, [current, showLogo, setMessage]);
 
   useEffect(() => {
@@ -243,7 +246,7 @@ export default function MiscPage() {
         <Presenter
           id={current?.id ?? 'MISC_404'}
           live={!showLogo}
-          bg={current?.bg}
+          bg={current?.filePath}
           type="resource"
           text={!!current ? undefined : 'No hay recursos que mostrar.'}
           grayscale={presenting && showLogo}

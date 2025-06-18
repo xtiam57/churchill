@@ -1,4 +1,6 @@
 import { Corner, Logo, Presenter, Wrapper } from 'components';
+import { useEffect } from 'react';
+import { useRef } from 'react';
 import { useCallback } from 'react';
 import createPersistedState from 'use-persisted-state';
 import { BROADCAST } from 'values';
@@ -17,7 +19,37 @@ export default function CastPage() {
   const [alert] = useAlert(BROADCAST.INITIAL_ALERT);
   const [countdown] = useBroadcastCountdown(BROADCAST.INITIAL_COUNTDOWN);
   const [isFullCountdown] = useBroadcastIsFullCountdown(false);
+  const videoRef = useRef(null);
+  const isVideoFile = (filePath) => {
+    if (!filePath) return false;
+    return /\.(mp4|mov|avi|mkv|webm)$/i.test(filePath);
+  };
 
+  useEffect(() => {
+    if (!window.electronAPI) return;
+    const handler = (_, { action, time }) => {
+      if (!videoRef.current) return;
+      switch (action) {
+        case 'play':
+          videoRef.current.play();
+          break;
+        case 'pause':
+          videoRef.current.pause();
+          break;
+        case 'seek':
+          videoRef.current.currentTime = time || 0;
+          break;
+        case 'stop':
+          videoRef.current.pause();
+          videoRef.current.currentTime = 0;
+          break;
+        default:
+          break;
+      }
+    };
+    window.electronAPI.onVideoControl(handler);
+    return () => window.electronAPI.removeVideoControl(handler);
+  }, []);
   const renderLogo = useCallback(() => {
     if (countdown && isFullCountdown) {
       return (
@@ -65,15 +97,42 @@ export default function CastPage() {
 
       <Wrapper style={{ gridArea: 'content' }} bare centered {...settings}>
         {message ? (
-          <Presenter
-            id={message.id}
-            subtext={message.subtext}
-            book={message.book}
-            processedText={message.processedText}
-            bg={message.bg}
-            castScreen
-            {...settings}
-          />
+          isVideoFile(message.filePath) ? (
+            <div
+              style={{
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+              <video
+                ref={videoRef} // <-- ¡Agrega esto!
+                src={`file:///${encodeURI(
+                  message.filePath.replace(/\\/g, '/')
+                )}`}
+                controls
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'contain',
+                  marginBottom: 8,
+                  background: '#000',
+                }}
+              />
+            </div>
+          ) : (
+            <Presenter
+              id={message.id}
+              subtext={message.subtext}
+              book={message.book}
+              processedText={message.processedText}
+              bg={message.filePath}
+              castScreen
+              {...settings}
+            />
+          )
         ) : (
           renderLogo()
         )}

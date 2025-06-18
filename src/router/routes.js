@@ -4,6 +4,7 @@ import {
   Cake,
   Image,
   Newspaper,
+  VideoCall,
 } from '@mui/icons-material';
 import BirthdaysPage from 'pages/birthdays';
 import CastPage from 'pages/cast';
@@ -11,6 +12,7 @@ import HomePage from 'pages/home';
 import HymnalPage from 'pages/hymnal';
 import MiscPage from 'pages/misc';
 import ScripturesPage from 'pages/scriptures';
+import VideosPage from 'pages/videos';
 
 export const PATHS = {
   ROOT: '/',
@@ -22,6 +24,7 @@ export const PATHS = {
   TRIVIA_PAGE: '/trivia',
   EXPORT_PAGE: '/export',
   RESOURCES_PAGE: '/resources',
+  VIDEOS_PAGE: '/videos',
 };
 
 export const routes = flatten([
@@ -62,6 +65,16 @@ export const routes = flatten([
     component: MiscPage,
     icon: <Image />,
     label: 'Recursos',
+    menu: true,
+    showLabel: false,
+  },
+  {
+    key: PATHS.VIDEOS_PAGE,
+    exact: true,
+    path: PATHS.VIDEOS_PAGE,
+    component: VideosPage,
+    icon: <VideoCall />,
+    label: 'Videos',
     menu: true,
     showLabel: false,
   },
