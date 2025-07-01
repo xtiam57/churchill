@@ -27,7 +27,7 @@ const MiniPlayerContainer = styled.div`
   left: 55px;
   background-color: #ffffff;
   color: #20232a;
-  z-index: 5;
+  z-index: 4;
   overflow: visible;
   width: 320px;
   max-height: 40vh;
@@ -61,6 +61,7 @@ const PlayerHeader = styled.div`
   padding: 12px 16px;
   position: relative;
   min-height: 60px;
+  background-color: var(--primary);
   ${(props) =>
     props.expanded &&
     `
@@ -69,9 +70,9 @@ const PlayerHeader = styled.div`
 `;
 
 const PlayPauseButton = styled(Button)`
-  width: 60px !important;
-  height: 60px !important;
-  min-width: 60px !important;
+  width: 63px !important;
+  height: 63px !important;
+  min-width: 63px !important;
   padding: 0 !important;
   border: 1px solid rgba(32, 35, 42, 0.3) !important;
   border-radius: 8px !important;
@@ -80,32 +81,6 @@ const PlayPauseButton = styled(Button)`
   justify-content: center !important;
   font-size: 1.5rem !important;
   flex-shrink: 0;
-
-  &.btn-primary {
-    background-color: #233d57 !important;
-    border-color: #233d57 !important;
-
-    &:hover {
-      background-color: #1a2e42 !important;
-      border-color: #1a2e42 !important;
-    }
-
-    &:active {
-      background-color: #152133 !important;
-      border-color: #152133 !important;
-    }
-  }
-
-  &.btn-secondary {
-    background-color: rgba(108, 117, 125, 0.8) !important;
-    border-color: rgba(108, 117, 125, 0.8) !important;
-    color: #ffffff !important;
-
-    &:hover {
-      background-color: #6c757d !important;
-      border-color: #6c757d !important;
-    }
-  }
 `;
 
 const ContentArea = styled.div`
@@ -129,21 +104,12 @@ const TitleContainer = styled.div`
   height: 20px; /* Altura fija para evitar saltos */
 `;
 
-const WavesContainer = styled.div`
-  display: flex;
-  align-items: center;
-  height: 28px;
-  width: 32px;
-  flex-shrink: 0;
-  margin: 0 4px;
-`;
-
 const MarqueeTitle = styled.div`
-  font-weight: bold;
-  font-size: 14px;
+  font-size: 18px;
   white-space: nowrap;
   flex: 1;
   position: relative;
+  color: #fff;
   animation: ${(props) =>
     props.shouldAnimate ? 'marqueeScroll 15s linear infinite' : 'none'};
 
@@ -246,7 +212,6 @@ const TrackItem = ({ track, index, currentIndex, isPlaying, onClick }) => (
           style={{ fontSize: '12px', color: 'var(--secondary)' }}
         >
           <span>Reproduciendo</span>
-          <AudioWaves isPlaying={isPlaying} />
         </div>
       )}
     </div>
@@ -313,71 +278,33 @@ export function MiniPlayer({
     >
       {/* Header del reproductor */}
       <PlayerHeader expanded={isExpanded}>
-        {/* Botón de play/pause grande a la izquierda */}
-        {currentTrack ? (
-          <OverlayTrigger
-            placement="top"
-            overlay={<Tooltip>{isPlaying ? 'Pausar' : 'Reproducir'}</Tooltip>}
-          >
-            <PlayPauseButton variant="primary" onClick={onPlayPause}>
-              {isPlaying ? <Pause /> : <PlayArrow />}
-            </PlayPauseButton>
-          </OverlayTrigger>
-        ) : (
-          <PlayPauseButton variant="secondary" disabled>
-            <PlayArrow />
-          </PlayPauseButton>
-        )}
-
         {/* Área de contenido a la derecha */}
         <ContentArea>
           {/* Título de la canción con efecto marquee */}
           <TitleContainer>
             {/* Título con marquee */}
-            <MarqueeTitle shouldAnimate={isPlaying && currentTrack?.name?.length > 30}>
+            <MarqueeTitle
+              shouldAnimate={isPlaying && currentTrack?.name?.length > 30}
+            >
               {currentTrack?.name || 'Sin título'}
             </MarqueeTitle>
           </TitleContainer>
 
           {/* Fila de controles */}
           <ControlsRow>
+            <AudioWaves isPlaying={isPlaying} />
+
             {/* Controles principales a la izquierda */}
             <Controls>
-              <OverlayTrigger
-                placement="top"
-                overlay={
-                  <Tooltip>
-                    {shuffleMode
-                      ? 'Desactivar modo aleatorio'
-                      : 'Activar modo aleatorio'}
-                  </Tooltip>
-                }
-              >
-                <ControlButton
-                  variant={shuffleMode ? 'secondary' : 'dark'}
-                  size="sm"
-                  onClick={onToggleShuffle}
-                >
-                  {shuffleMode ? <ShuffleOn /> : <Shuffle />}
-                </ControlButton>
-              </OverlayTrigger>
-
               <OverlayTrigger
                 placement="top"
                 overlay={<Tooltip>Siguiente canción</Tooltip>}
               >
                 <ControlButton variant="dark" size="sm" onClick={onNext}>
-                  <SkipNext />
+                  <SkipNext fontSize="small" />
                 </ControlButton>
               </OverlayTrigger>
             </Controls>
-
-            {/* Ondas de audio como indicador visual */}
-            {isPlaying && currentTrack && (
-              <WavesContainer>
-                <AudioWaves isPlaying={isPlaying} />
-              </WavesContainer>
-            )}
 
             {/* Controles de navegación a la derecha */}
             <Controls>
@@ -390,11 +317,15 @@ export function MiniPlayer({
                 }
               >
                 <ControlButton
-                  variant="secondary"
+                  variant="dark"
                   size="sm"
                   onClick={handleToggleExpand}
                 >
-                  {isExpanded ? <ExpandMore /> : <ExpandLess />}
+                  {isExpanded ? (
+                    <ExpandMore fontSize="small" />
+                  ) : (
+                    <ExpandLess fontSize="small" />
+                  )}
                 </ControlButton>
               </OverlayTrigger>
 
@@ -403,31 +334,54 @@ export function MiniPlayer({
                 overlay={<Tooltip>Cerrar reproductor</Tooltip>}
               >
                 <ControlButton variant="light" size="sm" onClick={handleClose}>
-                  <Close />
+                  <Close fontSize="small" />
                 </ControlButton>
               </OverlayTrigger>
             </Controls>
           </ControlsRow>
-
-          {/* Mensaje cuando no hay track */}
-          {!currentTrack && (
-            <div
-              style={{
-                textAlign: 'center',
-                fontSize: '12px',
-                color: '#6c757d',
-                fontStyle: 'italic',
-              }}
-            >
-              No hay música seleccionada
-            </div>
-          )}
         </ContentArea>
+
+        {/* Botón de play/pause grande a la izquierda */}
+        <OverlayTrigger
+          placement="top"
+          overlay={<Tooltip>{isPlaying ? 'Pausar' : 'Reproducir'}</Tooltip>}
+        >
+          <PlayPauseButton
+            variant={isPlaying ? 'secondary' : 'dark'}
+            onClick={onPlayPause}
+            disabled={!currentTrack}
+          >
+            {isPlaying ? <Pause /> : <PlayArrow />}
+          </PlayPauseButton>
+        </OverlayTrigger>
       </PlayerHeader>
 
       {/* Controles adicionales cuando está expandido */}
       {isExpanded && (
         <HeaderControls className="bg-dark">
+          <OverlayTrigger
+            placement="top"
+            overlay={
+              <Tooltip>
+                {shuffleMode
+                  ? 'Desactivar modo aleatorio'
+                  : 'Activar modo aleatorio'}
+              </Tooltip>
+            }
+          >
+            <ControlButton
+              variant={shuffleMode ? 'secondary' : 'light'}
+              size="sm"
+              onClick={onToggleShuffle}
+            >
+              {shuffleMode ? (
+                <ShuffleOn fontSize="small" />
+              ) : (
+                <Shuffle fontSize="small" />
+              )}
+            </ControlButton>
+          </OverlayTrigger>
+
           <OverlayTrigger
             placement="top"
             overlay={<Tooltip>Abrir directorio de canciones</Tooltip>}
@@ -437,7 +391,7 @@ export function MiniPlayer({
               size="sm"
               onClick={() => folder?.open()}
             >
-              <FolderCopy />
+              <FolderCopy fontSize="small" />
             </ControlButton>
           </OverlayTrigger>
 
@@ -446,13 +400,9 @@ export function MiniPlayer({
             overlay={<Tooltip>Refrescar lista de canciones</Tooltip>}
           >
             <ControlButton variant="light" size="sm" onClick={refreshPlaylist}>
-              <Refresh />
+              <Refresh fontSize="small" />
             </ControlButton>
           </OverlayTrigger>
-
-          <small className="text-light ms-2">
-            Agrega archivos .mp3 para reproducirlos.
-          </small>
         </HeaderControls>
       )}
 
@@ -464,8 +414,7 @@ export function MiniPlayer({
               className="text-center p-4"
               style={{ color: '#20232a', opacity: 0.7 }}
             >
-              <p>No hay pistas de audio disponibles</p>
-              <p>Agrega archivos MP3 al directorio de pistas</p>
+              <p className="m-0">No hay pistas de audio disponibles.</p>
             </div>
           ) : (
             <ListGroup variant="flush">

@@ -2,7 +2,7 @@ import {
   CalendarMonth,
   CancelPresentation,
   Chat,
-  PlayArrow,
+  LibraryMusic,
   Settings,
   Slideshow,
 } from '@mui/icons-material';
@@ -105,7 +105,7 @@ export function Navbar() {
                   className={presenting ? 'text-dark' : 'text-light'}
                   variant="link"
                 >
-                  <PlayArrow />
+                  <LibraryMusic />
                 </Button>
               </OverlayTrigger>
             </li>

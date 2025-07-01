@@ -12,16 +12,16 @@ const wave = keyframes`
 const WaveContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   gap: 1px;
-  height: 100%;
+  height: 32px;
   width: 100%;
 `;
 
 const WaveBar = styled.div`
   width: 2px;
   height: 85%;
-  background-color: var(--light);
+  background-color: var(--secondary);
   border-radius: 1px;
   animation: ${(props) => (props.isPlaying ? wave : 'none')}
     ${(props) => props.duration}ms ease-in-out infinite;
@@ -31,7 +31,7 @@ const WaveBar = styled.div`
   opacity: ${(props) => (props.isPlaying ? 1 : 0.6)};
 `;
 
-export function AudioWaves({ isPlaying = false, bars = 4 }) {
+export function AudioWaves({ isPlaying = false, bars = 32 }) {
   return (
     <WaveContainer>
       {Array.from({ length: bars }).map((_, index) => (

@@ -41,7 +41,7 @@ export function BackgroundMusic() {
   const [shouldPlay, setShouldPlay] = useState(false);
   const [pendingIndex, setPendingIndex] = useState(null);
 
-  const [play, { stop, isPlaying }] = useSound(localUrl, {
+  const [play, { stop, pause, isPlaying }] = useSound(localUrl, {
     ...SOUND_CONFIG,
     onload: () => setIsReady(true),
     onloaderror: (err) => {
@@ -65,10 +65,10 @@ export function BackgroundMusic() {
   }, [isPlaying, updatePlayingState]);
 
   const handlePause = useCallback(() => {
-    stop();
+    pause();
     setShouldPlay(false);
     updatePlayingState(false);
-  }, [stop, updatePlayingState]);
+  }, [pause, updatePlayingState]);
 
   useEffect(() => {
     if (shouldPlay && localUrl && playlist.length > 0) {

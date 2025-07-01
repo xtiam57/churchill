@@ -93,12 +93,9 @@ export function BackgroundMusicProvider({ children }) {
   const refreshPlaylist = useCallback(() => {
     window.electronAPI?.getBackgroundMusic().then((tracks) => {
       setPlaylist(tracks);
-      // Resetear el índice si no hay tracks o el índice actual es inválido
-      if (tracks.length === 0 || index >= tracks.length) {
-        setIndex(0);
-      }
+      setIndex(0);
     });
-  }, [index]);
+  }, []);
 
   return (
     <BackgroundMusicContext.Provider

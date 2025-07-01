@@ -17,6 +17,7 @@ export function useBackgroundMusic() {
     isVisible,
     showPlayer,
     hidePlayer,
+    refreshPlaylist,
   } = useContext(BackgroundMusicContext);
   return {
     localUrl,
@@ -33,5 +34,6 @@ export function useBackgroundMusic() {
     isVisible,
     showPlayer,
     hidePlayer,
+    refreshPlaylist,
   };
 }
