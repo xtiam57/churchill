@@ -23,7 +23,7 @@ const useSettings = createPersistedState(BROADCAST.SETTINGS);
 export function Navbar() {
   const [alert, setAlert] = useAlert(BROADCAST.INITIAL_ALERT);
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
-  const { setShowOptions } = useContext(BackgroundAudioContext);
+  const { showOptions, setShowOptions } = useContext(BackgroundAudioContext);
   const location = useLocation();
   const { toggleSettings, toggleSchedule } = useApp();
   const { toggle, presenting } = usePresenter();
@@ -101,7 +101,7 @@ export function Navbar() {
                 overlay={<Tooltip>Fondos musicales</Tooltip>}
               >
                 <Button
-                  onClick={() => setShowOptions(true)}
+                  onClick={() => setShowOptions(!showOptions)}
                   className={presenting ? 'text-dark' : 'text-light'}
                   variant="link"
                 >
