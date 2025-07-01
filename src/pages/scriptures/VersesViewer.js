@@ -40,6 +40,10 @@ const VersesViewerContainerStyled = styled.aside`
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.8);
   border-radius: 8px;
   overflow: hidden;
+
+  &.closed {
+    box-shadow: none;
+  }
 `;
 
 const VersesViewerStyled = styled.div`
@@ -117,7 +121,7 @@ export const VersesViewer = ({
 
   return (
     <VersesWrapperStyled className={open ? '' : 'closed'}>
-      <VersesViewerContainerStyled>
+      <VersesViewerContainerStyled className={open ? '' : 'closed'}>
         <VersesViewerTitle>{title}</VersesViewerTitle>
         <VersesViewerStyled>
           {verses.map((verse, index) => (

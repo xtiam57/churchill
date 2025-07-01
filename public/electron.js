@@ -15,7 +15,8 @@ let presenterWindow = null;
 
 const MAX_IMAGE_SIZE = 1.5 * 1024 * 1024; // 1.5 MB en bytes
 const HYMNS_PATH = 'Churchill/Pistas';
-const BACKGROUNDS_PATH = 'Churchill/Fondos';
+const BACKGROUND_IMAGES_PATH = 'Churchill/Imágenes de fondo';
+const BACKGROUND_MUSIC_PATH = 'Churchill/Fondos musicales';
 const RESOURCES_PATH = 'Churchill/Recursos';
 
 function createWindow() {
@@ -67,8 +68,12 @@ function createWindow() {
   fs.mkdirSync(path.join(app.getPath('documents'), HYMNS_PATH), {
     recursive: true,
   });
-  // Creando carpeta para los fondos
-  fs.mkdirSync(path.join(app.getPath('documents'), BACKGROUNDS_PATH), {
+  // Creando carpeta para los fondos de pantalla
+  fs.mkdirSync(path.join(app.getPath('documents'), BACKGROUND_IMAGES_PATH), {
+    recursive: true,
+  });
+  // Creando carpeta para los fondos de música
+  fs.mkdirSync(path.join(app.getPath('documents'), BACKGROUND_MUSIC_PATH), {
     recursive: true,
   });
   // Creando carpeta para los recursos
@@ -132,10 +137,37 @@ app.on('activate', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
-ipcMain.handle('get-background-images', async (_, relativePath) => {
+ipcMain.handle('get-background-music', async (_) => {
   try {
     const documentsPath = app.getPath('documents'); // Ruta base "Mis Documentos"
-    const folderPath = path.join(documentsPath, relativePath); // Ruta completa
+    const folderPath = path.join(documentsPath, BACKGROUND_MUSIC_PATH); // Ruta completa
+
+    // Verificar si la carpeta existe, si no, crearla
+    if (!fs.existsSync(folderPath)) {
+      fs.mkdirSync(folderPath, { recursive: true });
+      return []; // Retorna vacío ya que la carpeta estaba vacía
+    }
+
+    const files = fs.readdirSync(folderPath);
+    const audioFiles = files.filter((file) => /\.mp3$/i.test(file));
+
+    return audioFiles.map((file) => {
+      const filePath = path.join(folderPath, file);
+      const extension = path.extname(file).replace('.', '');
+      const name = path.basename(file, `.${extension}`);
+      const fileUrl = `file://${filePath.replace(/\\/g, '/')}`;
+      return { name, extension, path: fileUrl };
+    });
+  } catch (error) {
+    console.error('Error leyendo directorio:', error);
+    return [];
+  }
+});
+
+ipcMain.handle('get-background-images', async (_) => {
+  try {
+    const documentsPath = app.getPath('documents'); // Ruta base "Mis Documentos"
+    const folderPath = path.join(documentsPath, BACKGROUND_IMAGES_PATH); // Ruta completa
 
     // Verificar si la carpeta existe, si no, crearla
     if (!fs.existsSync(folderPath)) {
@@ -282,10 +314,10 @@ ipcMain.on('open-link', (event, url) => {
   shell.openExternal(url); // Abre el enlace en el navegador predeterminado
 });
 
-ipcMain.handle('get-resources', async (_, relativePath) => {
+ipcMain.handle('get-resources', async (_) => {
   try {
     const documentsPath = app.getPath('documents'); // Ruta base "Mis Documentos"
-    const folderPath = path.join(documentsPath, relativePath); // Ruta completa
+    const folderPath = path.join(documentsPath, RESOURCES_PATH); // Ruta completa
 
     // Verificar si la carpeta existe, si no, crearla
     if (!fs.existsSync(folderPath)) {
@@ -367,10 +399,10 @@ ipcMain.handle('get-resources', async (_, relativePath) => {
   }
 });
 
-ipcMain.handle('delete-resource', (_, relativePath, fileName) => {
+ipcMain.handle('delete-resource', (_, fileName) => {
   try {
     const documentsPath = app.getPath('documents');
-    const folderPath = path.join(documentsPath, relativePath);
+    const folderPath = path.join(documentsPath, RESOURCES_PATH);
     const filePath = path.join(folderPath, fileName);
 
     if (fs.existsSync(filePath)) {
@@ -385,10 +417,10 @@ ipcMain.handle('delete-resource', (_, relativePath, fileName) => {
   }
 });
 
-ipcMain.handle('save-resource', (_, relativePath, fileName, dataBase64) => {
+ipcMain.handle('save-resource', (_, fileName, dataBase64) => {
   try {
     const documentsPath = app.getPath('documents');
-    const folderPath = path.join(documentsPath, relativePath);
+    const folderPath = path.join(documentsPath, RESOURCES_PATH);
     const filePath = path.join(folderPath, fileName);
 
     // Crear la carpeta si no existe
@@ -412,4 +444,14 @@ ipcMain.handle('save-resource', (_, relativePath, fileName, dataBase64) => {
     // Muestra alerta al usuario si falla
     console.error('Error al guardar la imagen', err.message);
   }
+});
+
+// Exponer las rutas de las carpetas
+ipcMain.handle('get-paths', () => {
+  return {
+    HYMNS_PATH,
+    BACKGROUND_IMAGES_PATH,
+    BACKGROUND_MUSIC_PATH,
+    RESOURCES_PATH,
+  };
 });

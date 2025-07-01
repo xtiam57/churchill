@@ -1,6 +1,13 @@
-import { Navbar, Routesbar, Schedule, Settings } from 'components';
+import {
+  BackgroundMusic,
+  Navbar,
+  Routesbar,
+  Schedule,
+  Settings,
+} from 'components';
 import {
   AppProvider,
+  BackgroundMusicProvider,
   BirthdaysProvider,
   HymnalProvider,
   PresenterProvider,
@@ -20,25 +27,28 @@ function App() {
     <AppProvider>
       <Router>
         <PresenterProvider>
-          <ScripturesProvider>
-            <HymnalProvider>
-              <BirthdaysProvider>
-                <GridStyled>
-                  {/* Nav */}
-                  <Routesbar />
-                  {/* Top navbar */}
-                  <Navbar />
-                  {/* Routes */}
-                  <RouteMapper />
-                  {/* Sidebar settings */}
-                </GridStyled>
+          <BackgroundMusicProvider>
+            <ScripturesProvider>
+              <HymnalProvider>
+                <BirthdaysProvider>
+                  <GridStyled>
+                    {/* Nav */}
+                    <Routesbar />
+                    {/* Top navbar */}
+                    <Navbar />
+                    {/* Routes */}
+                    <RouteMapper />
+                    {/* Sidebar settings */}
+                  </GridStyled>
 
-                <Schedule />
+                  <Schedule />
 
-                <Settings />
-              </BirthdaysProvider>
-            </HymnalProvider>
-          </ScripturesProvider>
+                  <Settings />
+                  <BackgroundMusic />
+                </BirthdaysProvider>
+              </HymnalProvider>
+            </ScripturesProvider>
+          </BackgroundMusicProvider>
         </PresenterProvider>
       </Router>
     </AppProvider>

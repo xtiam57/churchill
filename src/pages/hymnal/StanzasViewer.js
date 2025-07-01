@@ -10,7 +10,6 @@ const StanzasWrapperStyled = styled.div`
   z-index: 3;
   display: flex;
   align-items: start;
-
   transform: translate3d(0px, 0px, 0px);
   transition: transform 0.5s ease 0s;
 
@@ -22,6 +21,7 @@ const StanzasWrapperStyled = styled.div`
 
   &.closed {
     transform: translate3d(calc(-100% + 30px), 0px, 0px);
+    box-shadow: none;
     /* visibility: hidden; */
   }
 `;
@@ -34,6 +34,11 @@ const StanzasViewerStyled = styled.aside`
   overflow-y: auto;
   overflow-x: hidden;
   border-radius: 8px;
+  transition: transform 0.5s ease 0s;
+
+  &.closed {
+    box-shadow: none;
+  }
 
   > div {
     padding: 10px 20px;
@@ -97,7 +102,7 @@ export const StanzasViewer = ({ slides = [], onGoto = () => {}, ...rest }) => {
 
   return (
     <StanzasWrapperStyled className={open ? '' : 'closed'}>
-      <StanzasViewerStyled>
+      <StanzasViewerStyled className={open ? '' : 'closed'}>
         {slides
           .filter((slide) => slide.id !== 'AEOHAmen')
           .map((slide, index) =>

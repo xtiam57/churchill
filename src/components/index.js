@@ -1,4 +1,5 @@
 export * from './alert';
+export * from './backgroundMusic';
 export * from './bookmark';
 export * from './bookmarkList';
 export * from './controls';

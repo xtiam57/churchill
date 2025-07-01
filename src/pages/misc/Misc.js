@@ -20,8 +20,6 @@ const useSettings = createPersistedState(BROADCAST.SETTINGS);
 const useBroadcast = createPersistedState(BROADCAST.CHANNEL);
 const useResourceOrder = createPersistedState('RESOURCE_ORDER');
 
-const FOLDER_PATH = 'Churchill\\Recursos';
-
 export default function MiscPage() {
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const [, setMessage] = useBroadcast(BROADCAST.INITIAL_CHANNEL);
@@ -51,7 +49,7 @@ export default function MiscPage() {
   const handleLoad = useCallback(() => {
     setIsLoading(true);
 
-    window.electronAPI?.getResources(FOLDER_PATH).then((images) => {
+    window.electronAPI?.getResources().then((images) => {
       if (images?.length) {
         const ordered = applyOrder(images);
         setResources(ordered);
@@ -67,7 +65,6 @@ export default function MiscPage() {
 
       try {
         window.electronAPI?.saveResource(
-          FOLDER_PATH,
           `${data.title}.${data.extension}`,
           data.base64
         );
@@ -83,10 +80,7 @@ export default function MiscPage() {
     async (data) => {
       const fileName = `${data.title}.${data.extension}`;
       try {
-        const result = await window.electronAPI?.deleteResource(
-          FOLDER_PATH,
-          fileName
-        );
+        const result = await window.electronAPI?.deleteResource(fileName);
         if (result.success) {
           setResources((state) => {
             const newState = state.filter((item) => item.id !== data.id);
@@ -103,8 +97,9 @@ export default function MiscPage() {
     [setResourceOrder]
   );
 
-  const handleOpenFolder = useCallback(() => {
-    window.electronAPI?.openDirectory(FOLDER_PATH);
+  const handleOpenFolder = useCallback(async () => {
+    const paths = await window.electronAPI.getPaths();
+    window.electronAPI?.openDirectory(paths.RESOURCES_PATH);
   }, []);
 
   const handleDragEnd = (result) => {

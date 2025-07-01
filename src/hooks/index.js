@@ -1,4 +1,5 @@
 export { useApp } from './useApp';
+export { useBackgroundMusic } from './useBackgroundMusic';
 export { useBirthday } from './useBirthday';
 export { useClickOutside } from './useClickOutside';
 export { useClock } from './useClock';

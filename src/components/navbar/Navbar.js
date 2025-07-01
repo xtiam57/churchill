@@ -2,11 +2,12 @@ import {
   CalendarMonth,
   CancelPresentation,
   Chat,
+  PlayArrow,
   Settings,
   Slideshow,
 } from '@mui/icons-material';
 import { Countdown, Logo } from 'components';
-import { useApp, usePresenter } from 'hooks';
+import { useApp, useBackgroundMusic, usePresenter } from 'hooks';
 import { useCallback, useState } from 'react';
 import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
@@ -26,6 +27,7 @@ export function Navbar() {
   const { toggleSettings, toggleSchedule } = useApp();
   const { toggle, presenting } = usePresenter();
   const [showModal, setShowModal] = useState(false);
+  const { showPlayer } = useBackgroundMusic();
 
   const handleSendMessage = useCallback(
     ({ message }) => {
@@ -90,6 +92,20 @@ export function Navbar() {
                   variant="link"
                 >
                   <CalendarMonth />
+                </Button>
+              </OverlayTrigger>
+            </li>
+            <li className="nav-item">
+              <OverlayTrigger
+                placement="bottom"
+                overlay={<Tooltip>Fondos musicales</Tooltip>}
+              >
+                <Button
+                  onClick={() => showPlayer()}
+                  className={presenting ? 'text-dark' : 'text-light'}
+                  variant="link"
+                >
+                  <PlayArrow />
                 </Button>
               </OverlayTrigger>
             </li>

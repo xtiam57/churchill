@@ -1,26 +1,17 @@
 import { useMemo } from 'react';
 
 export function useFolder() {
-  // const folder = useMemo(() => {
-  //   const { app, shell } = window.require('electron').remote;
-  //   const { protocol } = window.location;
-  //   const path = `${
-  //     protocol === 'file:' ? app.getPath('documents') : ''
-  //   }\\Churchill\\Pistas`;
-
-  //   return {
-  //     open: () => shell.openPath(path),
-  //     getPath: (file) => `${path}\\${file}.mp3`,
-  //   };
-  // }, []);
-
   const folder = useMemo(() => {
-    const subPath = 'Churchill\\Pistas';
-
     return {
-      open: () => window.electronAPI?.openDirectory(subPath),
+      open: async () => {
+        const paths = await window.electronAPI.getPaths();
+        window.electronAPI?.openDirectory(paths.HYMNS_PATH);
+      },
       getPath: async () => {
-        const basePath = await window.electronAPI?.getDirectoryPath(subPath);
+        const paths = await window.electronAPI.getPaths();
+        const basePath = await window.electronAPI?.getDirectoryPath(
+          paths.HYMNS_PATH
+        );
         return `file://${basePath}`;
       },
     };

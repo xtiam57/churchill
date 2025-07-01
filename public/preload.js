@@ -1,8 +1,8 @@
 const { contextBridge, ipcRenderer } = require('electron');
 
 contextBridge.exposeInMainWorld('electronAPI', {
-  getBackgroundImages: (relativePath) =>
-    ipcRenderer.invoke('get-background-images', relativePath),
+  getBackgroundImages: () => ipcRenderer.invoke('get-background-images'),
+  getBackgroundMusic: () => ipcRenderer.invoke('get-background-music'),
   getDirectoryPath: (subPath) =>
     ipcRenderer.invoke('get-directory-path', subPath),
   openDirectory: (subPath) => ipcRenderer.invoke('open-directory', subPath),
@@ -14,10 +14,9 @@ contextBridge.exposeInMainWorld('electronAPI', {
   getDisplays: () => ipcRenderer.invoke('get-displays'),
   getScreenSources: () => ipcRenderer.invoke('get-screen-sources'),
   openLink: (url) => ipcRenderer.send('open-link', url),
-  getResources: (relativePath) =>
-    ipcRenderer.invoke('get-resources', relativePath),
-  saveResource: (relativePath, fileName, dataBase64) =>
-    ipcRenderer.invoke('save-resource', relativePath, fileName, dataBase64),
-  deleteResource: (relativePath, fileName) =>
-    ipcRenderer.invoke('delete-resource', relativePath, fileName),
+  getResources: () => ipcRenderer.invoke('get-resources'),
+  saveResource: (fileName, dataBase64) =>
+    ipcRenderer.invoke('save-resource', fileName, dataBase64),
+  deleteResource: (fileName) => ipcRenderer.invoke('delete-resource', fileName),
+  getPaths: () => ipcRenderer.invoke('get-paths'),
 });
