@@ -25,13 +25,14 @@ const MiniPlayerContainer = styled.div`
   position: fixed;
   bottom: 0;
   left: 55px;
-  background-color: #ffffff;
   color: #20232a;
   z-index: 4;
-  overflow: visible;
-  width: 320px;
+  width: 300px;
   max-height: 40vh;
-  padding: 0;
+  margin: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
 
   /* Estado inicial: oculto debajo */
   transform: translate3d(0px, 100%, 0px);
@@ -75,11 +76,9 @@ const PlayPauseButton = styled(Button)`
   min-width: 63px !important;
   padding: 0 !important;
   border: 1px solid rgba(32, 35, 42, 0.3) !important;
-  border-radius: 8px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  font-size: 1.5rem !important;
   flex-shrink: 0;
 `;
 
@@ -135,13 +134,14 @@ const ControlsRow = styled.div`
 const PlaylistContainer = styled.div`
   flex: 1;
   overflow-y: auto;
+  background-color: #fff;
   max-height: calc(
-    40vh - 120px
+    40vh - 138px
   ); /* 40vh total - header (~60px) - controls (~60px) */
 
   &::-webkit-scrollbar {
     background-color: transparent;
-    width: 8px;
+    width: 14px;
   }
 
   &::-webkit-scrollbar-track {
@@ -149,18 +149,20 @@ const PlaylistContainer = styled.div`
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: rgba(32, 35, 42, 0.3);
-    border-radius: 4px;
+    background-color: var(--gray);
+    border-radius: 14px;
+    border: 4px solid #fff;
+  }
 
-    &:hover {
-      background-color: rgba(32, 35, 42, 0.5);
-    }
+  &::-webkit-scrollbar-button {
+    display: none;
   }
 `;
 
 const HeaderControls = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 8px;
   padding: 8px 16px;
   border-bottom: 1px solid rgba(32, 35, 42, 0.15);
@@ -178,6 +180,17 @@ const ControlButton = styled(Button)`
   padding: 4px 6px !important;
   min-width: auto !important;
   font-size: 0.8rem !important;
+`;
+
+const CloseButton = styled(Button)`
+  padding: 4px 6px !important;
+  min-width: auto !important;
+  font-size: 0.8rem !important;
+  position: absolute;
+  top: -31px;
+  right: 16px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 `;
 
 // Componente para cada pista de audio en la lista expandida
@@ -236,7 +249,7 @@ export function MiniPlayer({
   isVisible,
   refreshPlaylist,
 }) {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(true);
   const [hasBeenVisible, setHasBeenVisible] = useState(false);
 
   const handleToggleExpand = useCallback(() => {
@@ -278,14 +291,26 @@ export function MiniPlayer({
     >
       {/* Header del reproductor */}
       <PlayerHeader expanded={isExpanded}>
+        {/* Botón de play/pause grande a la izquierda */}
+        <OverlayTrigger
+          placement="top"
+          overlay={<Tooltip>{isPlaying ? 'Pausar' : 'Reproducir'}</Tooltip>}
+        >
+          <PlayPauseButton
+            variant={isPlaying ? 'secondary' : 'dark'}
+            onClick={onPlayPause}
+            disabled={!currentTrack}
+          >
+            {isPlaying ? <Pause /> : <PlayArrow />}
+          </PlayPauseButton>
+        </OverlayTrigger>
+
         {/* Área de contenido a la derecha */}
         <ContentArea>
           {/* Título de la canción con efecto marquee */}
           <TitleContainer>
             {/* Título con marquee */}
-            <MarqueeTitle
-              shouldAnimate={isPlaying && currentTrack?.name?.length > 30}
-            >
+            <MarqueeTitle shouldAnimate={isPlaying}>
               {currentTrack?.name || 'Sin título'}
             </MarqueeTitle>
           </TitleContainer>
@@ -328,79 +353,71 @@ export function MiniPlayer({
                   )}
                 </ControlButton>
               </OverlayTrigger>
-
-              <OverlayTrigger
-                placement="top"
-                overlay={<Tooltip>Cerrar reproductor</Tooltip>}
-              >
-                <ControlButton variant="light" size="sm" onClick={handleClose}>
-                  <Close fontSize="small" />
-                </ControlButton>
-              </OverlayTrigger>
             </Controls>
           </ControlsRow>
         </ContentArea>
-
-        {/* Botón de play/pause grande a la izquierda */}
-        <OverlayTrigger
-          placement="top"
-          overlay={<Tooltip>{isPlaying ? 'Pausar' : 'Reproducir'}</Tooltip>}
-        >
-          <PlayPauseButton
-            variant={isPlaying ? 'secondary' : 'dark'}
-            onClick={onPlayPause}
-            disabled={!currentTrack}
-          >
-            {isPlaying ? <Pause /> : <PlayArrow />}
-          </PlayPauseButton>
-        </OverlayTrigger>
       </PlayerHeader>
 
       {/* Controles adicionales cuando está expandido */}
       {isExpanded && (
         <HeaderControls className="bg-dark">
-          <OverlayTrigger
-            placement="top"
-            overlay={
-              <Tooltip>
-                {shuffleMode
-                  ? 'Desactivar modo aleatorio'
-                  : 'Activar modo aleatorio'}
-              </Tooltip>
-            }
-          >
-            <ControlButton
-              variant={shuffleMode ? 'secondary' : 'light'}
-              size="sm"
-              onClick={onToggleShuffle}
+          <div className="d-flex align-items-center" style={{ gap: '8px' }}>
+            <OverlayTrigger
+              placement="top"
+              overlay={
+                <Tooltip>
+                  {shuffleMode
+                    ? 'Desactivar modo aleatorio'
+                    : 'Activar modo aleatorio'}
+                </Tooltip>
+              }
             >
-              {shuffleMode ? (
-                <ShuffleOn fontSize="small" />
-              ) : (
-                <Shuffle fontSize="small" />
-              )}
-            </ControlButton>
-          </OverlayTrigger>
+              <ControlButton
+                variant={shuffleMode ? 'secondary' : 'light'}
+                size="sm"
+                onClick={onToggleShuffle}
+              >
+                {shuffleMode ? (
+                  <ShuffleOn fontSize="small" />
+                ) : (
+                  <Shuffle fontSize="small" />
+                )}
+              </ControlButton>
+            </OverlayTrigger>
+
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Abrir directorio de canciones</Tooltip>}
+            >
+              <ControlButton
+                variant="light"
+                size="sm"
+                onClick={() => folder?.open()}
+              >
+                <FolderCopy fontSize="small" />
+              </ControlButton>
+            </OverlayTrigger>
+
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Refrescar lista de canciones</Tooltip>}
+            >
+              <ControlButton
+                variant="light"
+                size="sm"
+                onClick={refreshPlaylist}
+              >
+                <Refresh fontSize="small" />
+              </ControlButton>
+            </OverlayTrigger>
+          </div>
 
           <OverlayTrigger
             placement="top"
-            overlay={<Tooltip>Abrir directorio de canciones</Tooltip>}
+            overlay={<Tooltip>Cerrar reproductor</Tooltip>}
           >
-            <ControlButton
-              variant="light"
-              size="sm"
-              onClick={() => folder?.open()}
-            >
-              <FolderCopy fontSize="small" />
-            </ControlButton>
-          </OverlayTrigger>
-
-          <OverlayTrigger
-            placement="top"
-            overlay={<Tooltip>Refrescar lista de canciones</Tooltip>}
-          >
-            <ControlButton variant="light" size="sm" onClick={refreshPlaylist}>
-              <Refresh fontSize="small" />
+            <ControlButton variant="secondary" size="sm" onClick={handleClose}>
+              <Close fontSize="small" />
             </ControlButton>
           </OverlayTrigger>
         </HeaderControls>

@@ -5,7 +5,7 @@ body {
 }
 
 .button {
-  background-color: #ff8a65;
+  background-color: #ff6859;
   color: #333;
   padding: 20px 50px;
   border: none;
@@ -37,7 +37,7 @@ h1 {
 }
 
 .text-secondary {
-  color: #ff8a65 !important;
+  color: #ff6859 !important;
 }
 
 .text-light {
@@ -61,7 +61,7 @@ h1 {
 }
 
 ::selection {
-  color: #20232a;
+  color: #1d3b5d;
   background-color: #8be1f0;
 }
 

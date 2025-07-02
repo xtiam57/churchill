@@ -20,18 +20,19 @@ const WaveContainer = styled.div`
 
 const WaveBar = styled.div`
   width: 2px;
-  height: 85%;
-  background-color: var(--secondary);
+  height: 100%;
+  background-color: ${(props) =>
+    props.isPlaying ? 'var(--secondary)' : 'var(--light)'};
   border-radius: 1px;
   animation: ${(props) => (props.isPlaying ? wave : 'none')}
     ${(props) => props.duration}ms ease-in-out infinite;
   animation-delay: ${(props) => props.delay}ms;
   transform-origin: center;
   transform: scaleY(1);
-  opacity: ${(props) => (props.isPlaying ? 1 : 0.6)};
+  opacity: ${(props) => (props.isPlaying ? 1 : 0.2)};
 `;
 
-export function AudioWaves({ isPlaying = false, bars = 32 }) {
+export function AudioWaves({ isPlaying = false, bars = 38 }) {
   return (
     <WaveContainer>
       {Array.from({ length: bars }).map((_, index) => (

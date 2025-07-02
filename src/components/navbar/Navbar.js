@@ -2,7 +2,7 @@ import {
   CalendarMonth,
   CancelPresentation,
   Chat,
-  LibraryMusic,
+  GraphicEq,
   Settings,
   Slideshow,
 } from '@mui/icons-material';
@@ -98,14 +98,14 @@ export function Navbar() {
             <li className="nav-item">
               <OverlayTrigger
                 placement="bottom"
-                overlay={<Tooltip>Fondos musicales</Tooltip>}
+                overlay={<Tooltip>Reproductor de fondos musicales</Tooltip>}
               >
                 <Button
                   onClick={() => showPlayer()}
                   className={presenting ? 'text-dark' : 'text-light'}
                   variant="link"
                 >
-                  <LibraryMusic />
+                  <GraphicEq />
                 </Button>
               </OverlayTrigger>
             </li>
