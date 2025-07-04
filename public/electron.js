@@ -25,6 +25,7 @@ function createWindow() {
     width: 1024,
     height: 768,
     show: false,
+    icon: path.join(__dirname, 'icon.png'), // Usar icono desde public
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,

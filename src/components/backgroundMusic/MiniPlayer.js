@@ -136,7 +136,7 @@ const PlaylistContainer = styled.div`
   overflow-y: auto;
   background-color: #fff;
   max-height: calc(
-    40vh - 138px
+    40vh - 160px
   ); /* 40vh total - header (~60px) - controls (~60px) */
 
   &::-webkit-scrollbar {
@@ -182,15 +182,18 @@ const ControlButton = styled(Button)`
   font-size: 0.8rem !important;
 `;
 
-const CloseButton = styled(Button)`
-  padding: 4px 6px !important;
+const ExpandButton = styled(Button)`
+  padding: 0px 6px !important;
   min-width: auto !important;
-  font-size: 0.8rem !important;
-  position: absolute;
-  top: -31px;
-  right: 16px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  font-size: 0.5rem !important;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+
+  &.expanded {
+    border-radius: 0 !important;
+  }
 `;
 
 // Componente para cada pista de audio en la lista expandida
@@ -329,28 +332,17 @@ export function MiniPlayer({
                   <SkipNext fontSize="small" />
                 </ControlButton>
               </OverlayTrigger>
-            </Controls>
 
-            {/* Controles de navegación a la derecha */}
-            <Controls>
               <OverlayTrigger
                 placement="top"
-                overlay={
-                  <Tooltip>
-                    {isExpanded ? 'Contraer lista' : 'Ver lista completa'}
-                  </Tooltip>
-                }
+                overlay={<Tooltip>Cerrar reproductor</Tooltip>}
               >
                 <ControlButton
-                  variant="dark"
+                  variant="secondary"
                   size="sm"
-                  onClick={handleToggleExpand}
+                  onClick={handleClose}
                 >
-                  {isExpanded ? (
-                    <ExpandMore fontSize="small" />
-                  ) : (
-                    <ExpandLess fontSize="small" />
-                  )}
+                  <Close fontSize="small" />
                 </ControlButton>
               </OverlayTrigger>
             </Controls>
@@ -358,39 +350,62 @@ export function MiniPlayer({
         </ContentArea>
       </PlayerHeader>
 
+      <OverlayTrigger
+        placement="top"
+        overlay={
+          <Tooltip>
+            {isExpanded ? 'Contraer lista' : 'Ver lista completa'}
+          </Tooltip>
+        }
+      >
+        <ExpandButton
+          block
+          variant="light"
+          size="sm"
+          className={isExpanded ? 'expanded' : ''}
+          onClick={handleToggleExpand}
+        >
+          {isExpanded ? (
+            <ExpandMore fontSize="small" />
+          ) : (
+            <ExpandLess fontSize="small" />
+          )}
+        </ExpandButton>
+      </OverlayTrigger>
+
       {/* Controles adicionales cuando está expandido */}
       {isExpanded && (
         <HeaderControls className="bg-dark">
-          <div className="d-flex align-items-center" style={{ gap: '8px' }}>
-            <OverlayTrigger
-              placement="top"
-              overlay={
-                <Tooltip>
-                  {shuffleMode
-                    ? 'Desactivar modo aleatorio'
-                    : 'Activar modo aleatorio'}
-                </Tooltip>
-              }
+          <OverlayTrigger
+            placement="top"
+            overlay={
+              <Tooltip>
+                {shuffleMode
+                  ? 'Desactivar modo aleatorio'
+                  : 'Activar modo aleatorio'}
+              </Tooltip>
+            }
+          >
+            <ControlButton
+              variant={shuffleMode ? 'secondary' : 'light'}
+              size="sm"
+              onClick={onToggleShuffle}
             >
-              <ControlButton
-                variant={shuffleMode ? 'secondary' : 'light'}
-                size="sm"
-                onClick={onToggleShuffle}
-              >
-                {shuffleMode ? (
-                  <ShuffleOn fontSize="small" />
-                ) : (
-                  <Shuffle fontSize="small" />
-                )}
-              </ControlButton>
-            </OverlayTrigger>
+              {shuffleMode ? (
+                <ShuffleOn fontSize="small" />
+              ) : (
+                <Shuffle fontSize="small" />
+              )}
+            </ControlButton>
+          </OverlayTrigger>
 
+          <div className="d-flex align-items-center" style={{ gap: '8px' }}>
             <OverlayTrigger
               placement="top"
               overlay={<Tooltip>Abrir directorio de canciones</Tooltip>}
             >
               <ControlButton
-                variant="light"
+                variant="success"
                 size="sm"
                 onClick={() => folder?.open()}
               >
@@ -403,7 +418,7 @@ export function MiniPlayer({
               overlay={<Tooltip>Refrescar lista de canciones</Tooltip>}
             >
               <ControlButton
-                variant="light"
+                variant="outline-light"
                 size="sm"
                 onClick={refreshPlaylist}
               >
@@ -411,15 +426,6 @@ export function MiniPlayer({
               </ControlButton>
             </OverlayTrigger>
           </div>
-
-          <OverlayTrigger
-            placement="top"
-            overlay={<Tooltip>Cerrar reproductor</Tooltip>}
-          >
-            <ControlButton variant="secondary" size="sm" onClick={handleClose}>
-              <Close fontSize="small" />
-            </ControlButton>
-          </OverlayTrigger>
         </HeaderControls>
       )}
 

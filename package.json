@@ -1,14 +1,19 @@
 {
   "name": "churchill",
-  "version": "5.6.0",
+  "version": "5.7.0",
   "description": "Sistema de proyección para Iglesias.",
   "author": "xtiam57",
   "private": true,
   "main": "./public/electron.js",
   "build": {
     "appId": "com.churchill.app",
+    "productName": "Churchill",
+    "directories": {
+      "output": "dist"
+    },
     "win": {
-      "icon": "build/icon.ico"
+      "icon": "build/icon.ico",
+      "publisherName": "Christiam Mena"
     },
     "asarUnpack": [],
     "files": [

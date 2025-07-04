@@ -22,7 +22,7 @@ const ImageWrapperStyled = styled.div`
       color: #999;
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
-      color: var(--dark);
+      color: #fff;
       outline: none;
     }
   }
