@@ -245,6 +245,7 @@ export default function MiscPage() {
           id={current?.id ?? 'MISC_404'}
           live={!showLogo}
           type="resource"
+          bg={current?.bg}
           text={!!current ? undefined : 'No hay recursos que mostrar.'}
           grayscale={presenting && showLogo}
           {...settings}
