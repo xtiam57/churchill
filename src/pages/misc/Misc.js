@@ -119,6 +119,12 @@ export default function MiscPage() {
     handleLoad();
   }, [handleLoad]);
 
+  useEffect(() => {
+    if (!presenting) {
+      setShowLogo(true);
+    }
+  }, [presenting]);
+
   return (
     <Wrapper>
       <Sidebar>

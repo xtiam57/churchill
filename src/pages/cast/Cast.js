@@ -12,12 +12,12 @@ const useBroadcastIsFullCountdown = createPersistedState(
 );
 
 export default function CastPage() {
+  const videoRef = useRef(null);
   const [message] = useBroadcast(BROADCAST.INITIAL_CHANNEL);
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const [alert] = useAlert(BROADCAST.INITIAL_ALERT);
   const [countdown] = useBroadcastCountdown(BROADCAST.INITIAL_COUNTDOWN);
   const [isFullCountdown] = useBroadcastIsFullCountdown(false);
-  const videoRef = useRef(null);
 
   const renderLogo = useCallback(() => {
     if (countdown && isFullCountdown) {
@@ -100,16 +100,13 @@ export default function CastPage() {
           message.isVideo ? (
             <div className="d-flex flex-column justify-content-center align-items-center w-100 h-100">
               <video
-                className="m-0 d-block"
+                className="d-block w-100 h-100"
                 ref={videoRef}
                 src={message.path}
                 muted
                 style={{
-                  width: '100%',
-                  height: '100%',
                   objectFit: 'contain',
-                  marginBottom: 8,
-                  background: '#000',
+                  background: '#111',
                 }}
               />
             </div>

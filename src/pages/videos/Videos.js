@@ -94,38 +94,38 @@ export default function VideosPage() {
   };
 
   useEffect(() => {
-    if (videoRef.current && !videoRef.current.paused) {
+    if (videoRef.current) {
       window.electronAPI?.setVideoControl({
-        action: 'play',
+        action: videoRef.current.paused ? 'pause' : 'play',
         time: videoRef.current.currentTime,
       });
-    }
-    if (videoRef.current && videoRef.current.paused) {
+
+      setMessage(showLogo ? null : current);
+
+      // Fix para actualizar la sync con el reproductor
       window.electronAPI?.setVideoControl({
-        action: 'pause',
+        action: 'seek',
         time: videoRef.current.currentTime,
       });
+    } else {
+      setMessage(showLogo ? null : current);
     }
-
-    window.electronAPI?.setVideoControl({
-      action: 'seek',
-      time: videoRef.current?.currentTime || 0,
-    });
-
-    setMessage(showLogo ? null : current);
   }, [current, showLogo, setMessage]);
 
   useEffect(() => {
     handleLoad();
   }, [handleLoad]);
 
-  // Controles de reproducción
-  const handleControl = useCallback((action) => {
+  useEffect(() => {
+    if (!presenting) {
+      setShowLogo(true);
+    }
+  }, [presenting]);
+
+  const handleControls = useCallback((action) => {
     if (!videoRef.current) {
       return;
     }
-
-    console.log('Control action:', action, videoRef.current.currentTime);
 
     window.electronAPI?.setVideoControl({
       action,
@@ -254,20 +254,17 @@ export default function VideosPage() {
               `}
             </style>
             <video
-              className="d-block m-0"
+              className="d-block w-100 h-100"
               ref={videoRef}
               src={current.path}
               controls
               preload="metadata"
-              onPlay={() => handleControl('play')}
-              onPause={() => handleControl('pause')}
-              onSeeked={() => handleControl('seek')}
+              onPlay={() => handleControls('play')}
+              onPause={() => handleControls('pause')}
+              onSeeked={() => handleControls('seek')}
               style={{
-                width: '100%',
-                height: '100%',
                 objectFit: 'contain',
-                marginBottom: 8,
-                background: '#000',
+                background: '#111',
               }}
             />
           </div>
