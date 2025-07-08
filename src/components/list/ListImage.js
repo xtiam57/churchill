@@ -78,22 +78,41 @@ export function ListImage({
   onDelete,
   active = false,
   disabled = false,
+  icon,
 }) {
   return (
     <ImageWrapperStyled title={title} className={active ? 'active' : ''}>
       <ImageStyled onClick={onClick} className={active ? 'active' : ''}>
-        <div
-          className="image"
-          style={{
-            backgroundImage: `url(${src})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            width: 55,
-            height: 55,
-            borderRadius: 8,
-            flex: '0 1 55px',
-          }}
-        />
+        {src && (
+          <div
+            className="image"
+            style={{
+              backgroundImage: `url(${src})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              width: 55,
+              height: 55,
+              borderRadius: 8,
+              flex: '0 1 55px',
+            }}
+          />
+        )}
+        {icon && (
+          <div
+            className="d-flex align-items-center justify-content-center"
+            style={{
+              width: 55,
+              height: 55,
+              flex: '0 1 55px',
+              borderRadius: 8,
+              backgroundColor: 'var(--light)',
+              color: 'var(--dark)',
+              fontSize: '3rem',
+            }}
+          >
+            {icon}
+          </div>
+        )}
         <div
           style={{
             flex: '1 0',

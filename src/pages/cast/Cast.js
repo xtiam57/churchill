@@ -1,5 +1,5 @@
 import { Corner, Logo, Presenter, Wrapper } from 'components';
-import { useCallback } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 import createPersistedState from 'use-persisted-state';
 import { BROADCAST } from 'values';
 
@@ -17,6 +17,7 @@ export default function CastPage() {
   const [alert] = useAlert(BROADCAST.INITIAL_ALERT);
   const [countdown] = useBroadcastCountdown(BROADCAST.INITIAL_COUNTDOWN);
   const [isFullCountdown] = useBroadcastIsFullCountdown(false);
+  const videoRef = useRef(null);
 
   const renderLogo = useCallback(() => {
     if (countdown && isFullCountdown) {
@@ -55,6 +56,37 @@ export default function CastPage() {
     return null;
   }, [countdown, isFullCountdown, message, settings]);
 
+  const handler = useCallback((_, { action, time }) => {
+    if (!videoRef.current) {
+      return;
+    }
+
+    videoRef.current.currentTime = time || 0;
+
+    switch (action) {
+      case 'play':
+        videoRef.current.play();
+        break;
+      case 'pause':
+        videoRef.current.pause();
+        break;
+      default:
+        break;
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!window.electronAPI) {
+      return;
+    }
+
+    window.electronAPI.onVideoControl(handler);
+
+    return () => {
+      window.electronAPI.removeVideoControl(handler);
+    };
+  }, [handler]);
+
   return (
     <>
       {alert && (
@@ -65,15 +97,33 @@ export default function CastPage() {
 
       <Wrapper style={{ gridArea: 'content' }} bare centered {...settings}>
         {message ? (
-          <Presenter
-            id={message.id}
-            subtext={message.subtext}
-            book={message.book}
-            processedText={message.processedText}
-            bg={message.bg}
-            castScreen
-            {...settings}
-          />
+          message.isVideo ? (
+            <div className="d-flex flex-column justify-content-center align-items-center w-100 h-100">
+              <video
+                className="m-0 d-block"
+                ref={videoRef}
+                src={message.path}
+                muted
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'contain',
+                  marginBottom: 8,
+                  background: '#000',
+                }}
+              />
+            </div>
+          ) : (
+            <Presenter
+              id={message.id}
+              subtext={message.subtext}
+              book={message.book}
+              processedText={message.processedText}
+              bg={message.bg}
+              castScreen
+              {...settings}
+            />
+          )
         ) : (
           renderLogo()
         )}

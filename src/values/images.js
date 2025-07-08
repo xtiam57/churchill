@@ -55,7 +55,10 @@ import bg17 from 'assets/images/bg/paper1.jpg';
 import bg16 from 'assets/images/bg/paper2.jpg';
 import bg15 from 'assets/images/bg/paper3.jpg';
 import bg52 from 'assets/images/bg/pattern.jpg';
-import bg18 from 'assets/images/bg/peru.jpg';
+import peru from 'assets/images/bg/peru.jpg';
+import peru1 from 'assets/images/bg/peru1.jpg';
+import peru3 from 'assets/images/bg/peru3.jpg';
+import peru4 from 'assets/images/bg/peru4.jpg';
 import bg75 from 'assets/images/bg/piano.jpg';
 import bg300 from 'assets/images/bg/planet1.jpg';
 import bg301 from 'assets/images/bg/planet2.jpg';
@@ -202,7 +205,7 @@ export const BACKGROUNDS = [
   { label: 'Patrón Azul', value: bg13 },
   { label: 'Patrón Negro', value: bg14 },
   { label: 'Patrón', value: bg52 },
-  { label: 'Perú 1', value: bg18 },
+  { label: 'Perú 1', value: peru },
   { label: 'Perú 2', value: b7 },
   { label: 'Perú 3', value: b8 },
   { label: 'Perú 4', value: b9 },
@@ -210,6 +213,9 @@ export const BACKGROUNDS = [
   { label: 'Perú 6', value: b11 },
   { label: 'Perú 7', value: b12 },
   { label: 'Perú 8', value: b13 },
+  { label: 'Perú 9', value: peru1 },
+  { label: 'Perú 10', value: peru3 },
+  { label: 'Perú 11', value: peru4 },
   { label: 'Piano', value: bg75 },
   { label: 'Plantas 1', value: bg53 },
   { label: 'Plantas 2', value: bg54 },

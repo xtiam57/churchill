@@ -19,4 +19,11 @@ contextBridge.exposeInMainWorld('electronAPI', {
     ipcRenderer.invoke('save-resource', fileName, dataBase64),
   deleteResource: (fileName) => ipcRenderer.invoke('delete-resource', fileName),
   getPaths: () => ipcRenderer.invoke('get-paths'),
+  getVideos: () => ipcRenderer.invoke('get-videos'),
+  deleteVideo: (fileName) => ipcRenderer.invoke('delete-video', fileName),
+  setVideoControl: ({ action, time }) =>
+    ipcRenderer.send('set-video-control', { action, time }),
+  onVideoControl: (callback) => ipcRenderer.on('video-control-cast', callback),
+  removeVideoControl: (callback) =>
+    ipcRenderer.removeListener('video-control-cast', callback),
 });

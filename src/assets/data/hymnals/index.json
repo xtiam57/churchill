@@ -17899,7 +17899,7 @@
     "title": "VENID, GLORIFICAD A DIOS",
     "chorus": "Te daremos la gloria,/nPor Tu gracia, bondad y amor,/nTe daremos la gloria,/n¡Eres el Salvador!",
     "stanzas": [
-      "1) Venid, glorificad a Dios, el Padre del Señor;/nEn Cristo Él no derramó Su eterna bendición./nSin manchas, puros, en Su luz, nos destinó a ser/nSus hijos adoptados por la sangre de Jesús.",
+      "1) Venid, glorificad a Dios, el Padre del Señor;/nEn Cristo Él nos derramó Su eterna bendición./nSin manchas, puros, en Su luz, nos destinó a ser/nSus hijos adoptados por la sangre de Jesús.",
       "2) Venid, glorificad a Dios, que en Cristo gracia da;/nLavadas nuestras culpas son, tenemos redención./nEn Él Dios ya nos reveló Su eterna voluntad:/nQue sea Cristo el Señor; Su plan se cumplirá.",
       "3) Venid, glorificad a Dios, creyentes del Señor;/nEl sello de Su Espíritu por fe tenemos hoy./nÉl garantiza nuestra fe hasta el día final;/nNos uniremos a alabar a nuestro trino Dios."
     ],
@@ -18421,7 +18421,7 @@
     "title": "SOLO EN JESÙS",
     "chorus": null,
     "stanzas": [
-      "1) Solo en Jesús está mi fe, esperanza y mi canción./nPiedra angular, firme sostén, inconmovible en la aflicción./nCuán grande amor, inmensa paz, en el temor o adversidad./nConsolador, amigo fiel, yo en Su amor me sostendré.",
+      "1) Solo en Jesús está mi fe, mi esperanza y mi canción./nPiedra angular, firme sostén, inconmovible en la aflicción./nCuán grande amor, inmensa paz, en el temor o adversidad./nConsolador, amigo fiel, yo en Su amor me sostendré.",
       "2) Solo en Jesús, Hijo de Dios, quien se humilló por nuestro bien./nCordero de mi salvación, por este mundo herido fue./nEn una cruz fue a morir, y Dios mostró Su gracia ahí./nPues mi pecado Él llevó, en Su aflicción vida me dio.",
       "3) En un sepulcro, Él yació, el cuerpo inerte del Señor./nMas el tercer día llegó: ¡resucitó en gloriosa luz!/nY al triunfar sobre el mal, perdió el pecado potestad./nDe Él suyo soy, Él mío es, pues con Su sangre me compró.",
       "4) Desde el nacer hasta el morir, sea el poder de Cristo en mí./nNo temeré, seguro estoy, mi vida yo a Él le doy./nNingún poder, ningún afán de Él me arrebatará./nHasta que Él venga otra vez, en Su poder me sostendrá."
@@ -24740,6 +24740,21 @@
     "repeatChorusAtEnd": false,
     "authors": null,
     "tags": "Himno Nacional",
+    "book": "Apéndice"
+  },
+  {
+    "number": 58,
+    "title": "ÉL ME SOSTENDRÁ (CON PUENTE)",
+    "chorus": "Él me sostendrá,/nÉl me sostendrá;/nMe ama tanto el Salvador,/nÉl me sostendrá.",
+    "stanzas": [
+      "1) Si mi fe ha de caer,/nÉl me sostendrá;/nen la tentación yo sé,/nÉl me sostendrá./nNo podría estar de pie,/nen la oscuridad;/npues mi amor muy frágil es,/nÉl me sostendrá.",
+      "2) Él se goza en quien salvó,/nÉl me sostendrá;/nante Él precioso soy,/nÉl me sostendrá./nSus promesas fieles son,/nmi alma guardará;/nalto precio Él pagó,/nÉl me sostendrá.",
+      "3) Él sufrió y por mí murió,/nÉl me sostendrá;/nla justicia Él cumplió,/nÉl me sostendrá./nVida eterna tengo en Él,/nÉl me sostendrá;/nhasta que le pueda ver/n¡Él regresará!/n_Él regresará,__/n_Él regresará;__/n_Me ama tanto el Salvador,__/n_Él regresará.__"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
     "book": "Apéndice"
   }
 ]

@@ -18,6 +18,7 @@ const HYMNS_PATH = 'Churchill/Pistas';
 const BACKGROUND_IMAGES_PATH = 'Churchill/Imágenes de fondo';
 const BACKGROUND_MUSIC_PATH = 'Churchill/Fondos musicales';
 const RESOURCES_PATH = 'Churchill/Recursos';
+const VIDEOS_PATH = 'Churchill/Videos';
 
 function createWindow() {
   // Create the browser window.
@@ -75,6 +76,10 @@ function createWindow() {
   });
   // Creando carpeta para los fondos de música
   fs.mkdirSync(path.join(app.getPath('documents'), BACKGROUND_MUSIC_PATH), {
+    recursive: true,
+  });
+  // Creando carpeta para los videos
+  fs.mkdirSync(path.join(app.getPath('documents'), VIDEOS_PATH), {
     recursive: true,
   });
   // Creando carpeta para los recursos
@@ -162,6 +167,106 @@ ipcMain.handle('get-background-music', async (_) => {
   } catch (error) {
     console.error('Error leyendo directorio:', error);
     return [];
+  }
+});
+
+ipcMain.handle('get-videos', async (_) => {
+  try {
+    const documentsPath = app.getPath('documents'); // Ruta base "Mis Documentos"
+    const folderPath = path.join(documentsPath, VIDEOS_PATH); // Ruta completa
+
+    // Verificar si la carpeta existe, si no, crearla
+    if (!fs.existsSync(folderPath)) {
+      fs.mkdirSync(folderPath, { recursive: true });
+      return []; // Retorna vacío ya que la carpeta estaba vacía
+    }
+
+    const files = fs.readdirSync(folderPath);
+    const videoFiles = files.filter((file) =>
+      /\.(mp4|mov|avi|mkv|webm)$/i.test(file)
+    );
+
+    const videos = videoFiles.map((file) => {
+      const filePath = path.join(folderPath, file);
+      const extension = path.extname(file).replace('.', '');
+      const title = path.basename(file, `.${extension}`);
+      const fileUrl = `file://${filePath.replace(/\\/g, '/')}`;
+      let id = title;
+      let birthtimeMs = 0;
+      let createdAt = '';
+
+      try {
+        const stats = fs.statSync(filePath);
+        birthtimeMs = stats.birthtimeMs;
+        id = `${title}-${Math.floor(birthtimeMs)}`;
+        // Formatear fecha de creación a dd/MMM/yyyy HH:mm
+        const date = new Date(birthtimeMs);
+        const months = [
+          'Ene',
+          'Feb',
+          'Mar',
+          'Abr',
+          'May',
+          'Jun',
+          'Jul',
+          'Ago',
+          'Sep',
+          'Oct',
+          'Nov',
+          'Dic',
+        ];
+        const day = String(date.getDate()).padStart(2, '0');
+        const month = months[date.getMonth()];
+        const year = date.getFullYear();
+        const hours = String(date.getHours()).padStart(2, '0');
+        const minutes = String(date.getMinutes()).padStart(2, '0');
+        createdAt = `${day}/${month}/${year} ${hours}:${minutes}`;
+      } catch (e) {
+        console.error(`Error leyendo el video: ${filePath}`, e);
+      }
+
+      return {
+        id,
+        title,
+        createdAt,
+        extension,
+        path: fileUrl,
+        birthtimeMs,
+        isVideo: true,
+      };
+    });
+
+    // Ordenar por fecha de creación
+    videos.sort((a, b) => a.birthtimeMs - b.birthtimeMs);
+
+    return videos;
+  } catch (error) {
+    console.error('Error leyendo el directorio de videos:', error);
+    return [];
+  }
+});
+
+ipcMain.handle('delete-video', (_, fileName) => {
+  try {
+    const documentsPath = app.getPath('documents');
+    const folderPath = path.join(documentsPath, VIDEOS_PATH);
+    const filePath = path.join(folderPath, fileName);
+
+    if (fs.existsSync(filePath)) {
+      fs.unlinkSync(filePath);
+      return { success: true, message: 'Video eliminado correctamente.' };
+    } else {
+      return { success: false, message: 'El archivo no existe.' };
+    }
+  } catch (error) {
+    console.error('Error eliminando video:', error);
+    return { success: false, message: 'Error eliminando video.' };
+  }
+});
+
+ipcMain.on('set-video-control', (_, { action, time }) => {
+  if (presenterWindow) {
+    presenterWindow.webContents.send('video-control-cast', { action, time });
   }
 });
 
@@ -254,6 +359,12 @@ ipcMain.handle('toggle-presenter', (event, selectedMonitorId) => {
       fullscreen: true,
       show: false,
       parent,
+      webPreferences: {
+        preload: path.join(__dirname, 'preload.js'),
+        contextIsolation: true,
+        nodeIntegration: true,
+        enableRemoteModule: true,
+      },
     });
 
     presenterWindow.loadURL(url.replace(/#.*$/, '#/cast-screen'));
@@ -387,6 +498,7 @@ ipcMain.handle('get-resources', async (_) => {
         extension,
         bg,
         birthtimeMs,
+        isImage: true,
       };
     });
 
@@ -453,6 +565,7 @@ ipcMain.handle('get-paths', () => {
     HYMNS_PATH,
     BACKGROUND_IMAGES_PATH,
     BACKGROUND_MUSIC_PATH,
+    VIDEOS_PATH,
     RESOURCES_PATH,
   };
 });

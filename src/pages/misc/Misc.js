@@ -238,7 +238,6 @@ export default function MiscPage() {
         <Presenter
           id={current?.id ?? 'MISC_404'}
           live={!showLogo}
-          bg={current?.bg}
           type="resource"
           text={!!current ? undefined : 'No hay recursos que mostrar.'}
           grayscale={presenting && showLogo}
