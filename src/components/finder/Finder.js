@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { Modal } from 'react-bootstrap';
 import { Typeahead } from 'react-bootstrap-typeahead';
 
@@ -33,6 +33,7 @@ export function Finder({
           placeholder="Buscar una palabra..."
           ref={typeaheadRef}
           highlightOnlyResult={true}
+          ignoreDiacritics
           size="large"
           renderMenuItemChildren={render}
         />

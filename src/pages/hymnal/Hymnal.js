@@ -36,7 +36,7 @@ import {
 import { Typeahead } from 'react-bootstrap-typeahead';
 import createPersistedState from 'use-persisted-state';
 import useSound from 'use-sound';
-import { Storage, getBookmarkedItems } from 'utils';
+import { Storage, customFilterBy, getBookmarkedItems } from 'utils';
 import { BROADCAST, MOVEMENT } from 'values';
 import { HymnalBooks } from './HymnalBooks';
 import { HymnalIndex } from './HymnalIndex';
@@ -221,6 +221,7 @@ export default function HymnalPage() {
           ref={typeaheadRef}
           selected={search}
           size="large"
+          filterBy={customFilterBy}
           renderMenuItemChildren={typeaheadRender}
         />
 

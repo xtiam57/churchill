@@ -113,7 +113,7 @@ function ScripturesView() {
           placeholder="Selecciona un versículo..."
           ref={typeaheadRef}
           selected={search}
-          size="large"
+          ignoreDiacritics
           renderMenuItemChildren={typeaheadRender}
         />
 
