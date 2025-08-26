@@ -24756,5 +24756,20 @@
     "authors": null,
     "tags": null,
     "book": "Apéndice"
+  },
+  {
+    "number": 59,
+    "title": "DANOS UN FELIZ HOGAR",
+    "chorus": "Danos un feliz hogar,/nlleno de tu santo amor./nCristo, reina en nuestro hogar,/ny en mi corazón, Señor.",
+    "stanzas": [
+      "1) Gran felicidad se goza en el hogar/ndonde el amor es dulce cual la miel;/nPorque Cristo tiene el primer lugar/ndonde cada familiar le sigue fiel.",
+      "2) Padres, a sus hijos deben educar,/nexplicando los preceptos del Señor;/nEn la corrección no deben provocar ira/nen los hijos sino el amor.",
+      "3) Hijos, a sus padres deben respetar,/nsiempre obedientes y con gratitud;/nEl vivir así produce bienestar,/nlargos Días de alegría y salud."
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
   }
 ]
