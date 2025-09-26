@@ -116,10 +116,20 @@ import abs9 from 'assets/images/bg/abs9.jpg';
 import flo1 from 'assets/images/bg/flo1.jpg';
 import sky1 from 'assets/images/bg/sky1.jpg';
 
+import ch1 from 'assets/images/churchill-bg/ch1.jpg';
+import ch2 from 'assets/images/churchill-bg/ch2.jpg';
+import ch3 from 'assets/images/churchill-bg/ch3.jpg';
+import ch4 from 'assets/images/churchill-bg/ch4.jpg';
+import ch5 from 'assets/images/churchill-bg/ch5.jpg';
+import ch6 from 'assets/images/churchill-bg/ch6.jpg';
+import ch7 from 'assets/images/churchill-bg/ch7.jpg';
+import ch8 from 'assets/images/churchill-bg/ch8.jpg';
+
 export const BACKGROUNDS = [
   { label: 'Color Sólido', value: '' },
   // { label: 'Animado', value: 'gradient' },
   { divider: true },
+
   { label: 'Abstracto 1', value: bg27 },
   { label: 'Abstracto 2', value: bg28 },
   { label: 'Abstracto 3', value: bg29 },
@@ -127,18 +137,17 @@ export const BACKGROUNDS = [
   { label: 'Abstracto 5', value: bg31 },
   { label: 'Abstracto 7', value: bg33 },
   { label: 'Abstracto 9', value: bg96 },
-  { label: 'Abstracto 10', value: bg97 },
-  { label: 'Abstracto 11', value: bg99 },
   { label: 'Abstracto 10', value: abs1 },
-  { label: 'Abstracto 11', value: abs2 },
-  { label: 'Abstracto 12', value: abs3 },
-  { label: 'Abstracto 13', value: abs4 },
-  { label: 'Abstracto 14', value: abs5 },
-  { label: 'Abstracto 15', value: abs6 },
-  { label: 'Abstracto 16', value: abs7 },
-  { label: 'Abstracto 17', value: abs8 },
-  { label: 'Abstracto 18', value: abs9 },
-
+  { label: 'Abstracto 11', value: bg97 },
+  { label: 'Abstracto 12', value: abs2 },
+  { label: 'Abstracto 13', value: bg99 },
+  { label: 'Abstracto 14', value: abs3 },
+  { label: 'Abstracto 15', value: abs4 },
+  { label: 'Abstracto 16', value: abs5 },
+  { label: 'Abstracto 17', value: abs6 },
+  { label: 'Abstracto 18', value: abs7 },
+  { label: 'Abstracto 19', value: abs8 },
+  { label: 'Abstracto 10', value: abs9 },
   { label: 'Amanecer 1', value: bg02 },
   { label: 'Amanecer 2', value: bg37 },
   { label: 'Amanecer 3', value: bg38 },
@@ -160,6 +169,14 @@ export const BACKGROUNDS = [
   { label: 'Celebración 1', value: bg80 },
   { label: 'Celebración 2', value: bg81 },
   { label: 'Celebración 3', value: bg07 },
+  { label: 'Churchill 1', value: ch1 },
+  { label: 'Churchill 2', value: ch2 },
+  { label: 'Churchill 3', value: ch3 },
+  { label: 'Churchill 4', value: ch4 },
+  { label: 'Churchill 5', value: ch5 },
+  { label: 'Churchill 6', value: ch6 },
+  { label: 'Churchill 7', value: ch7 },
+  { label: 'Churchill 8', value: ch8 },
   { label: 'Cielo 1', value: bg59 },
   { label: 'Cielo 2', value: sky1 },
   { label: 'Cruz 1', value: bg05 },
@@ -181,6 +198,9 @@ export const BACKGROUNDS = [
   { label: 'Mamá 1', value: bg87 },
   { label: 'Mamá 2', value: bg94 },
   { label: 'Mamá 3', value: bg95 },
+  { label: 'Mapa 1', value: bg300 },
+  { label: 'Mapa 2', value: bg301 },
+  { label: 'Mapa 3', value: bg302 },
   { label: 'Montañas 1', value: bg26 },
   { label: 'Montañas 2', value: bg46 },
   { label: 'Montañas 3', value: bg47 },
@@ -206,6 +226,8 @@ export const BACKGROUNDS = [
   { label: 'Patrón Negro', value: bg14 },
   { label: 'Patrón', value: bg52 },
   { label: 'Perú 1', value: peru },
+  { label: 'Perú 10', value: peru3 },
+  { label: 'Perú 11', value: peru4 },
   { label: 'Perú 2', value: b7 },
   { label: 'Perú 3', value: b8 },
   { label: 'Perú 4', value: b9 },
@@ -214,8 +236,6 @@ export const BACKGROUNDS = [
   { label: 'Perú 7', value: b12 },
   { label: 'Perú 8', value: b13 },
   { label: 'Perú 9', value: peru1 },
-  { label: 'Perú 10', value: peru3 },
-  { label: 'Perú 11', value: peru4 },
   { label: 'Piano', value: bg75 },
   { label: 'Plantas 1', value: bg53 },
   { label: 'Plantas 2', value: bg54 },
@@ -233,7 +253,4 @@ export const BACKGROUNDS = [
   { label: 'Rosa 3', value: flo1 },
   { label: 'San Valentín', value: bg04 },
   { label: 'Tierra', value: bg40 },
-  { label: 'Mapa 1', value: bg300 },
-  { label: 'Mapa 2', value: bg301 },
-  { label: 'Mapa 3', value: bg302 },
 ];
