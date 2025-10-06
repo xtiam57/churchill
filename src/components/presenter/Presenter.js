@@ -10,43 +10,45 @@ const textMotion = {
   exit: { opacity: 0, scale: 0.25 },
 };
 
+const PLUS = 110;
+
 function getConf(width) {
   // 4K screens
   if (width > 2560) {
     return {
-      minSize: 180,
-      maxSize: 500,
+      minSize: 180 + PLUS,
+      maxSize: 500 + PLUS,
     };
   }
 
   // 2K screens
   if (width > 1920) {
     return {
-      minSize: 140,
-      maxSize: 460,
+      minSize: 140 + PLUS,
+      maxSize: 560 + PLUS,
     };
   }
 
   // HD screens
   if (width > 1280) {
     return {
-      minSize: 100,
-      maxSize: 400,
+      minSize: 100 + PLUS,
+      maxSize: 400 + PLUS,
     };
   }
 
   // 720p screens
   if (width > 1024) {
     return {
-      minSize: 50,
-      maxSize: 340,
+      minSize: 50 + PLUS,
+      maxSize: 340 + PLUS,
     };
   }
 
   // Small screens
   return {
-    minSize: 30,
-    maxSize: 300,
+    minSize: 30 + PLUS,
+    maxSize: 300 + PLUS,
   };
 }
 
