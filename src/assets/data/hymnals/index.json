@@ -24771,5 +24771,20 @@
     "authors": null,
     "tags": null,
     "book": "Apéndice"
+  },
+  {
+    "number": 60,
+    "title": "MI ROCA ES CRISTO",
+    "chorus": "Mi Roca es Cristo,/nEl ancla de mi ser;/nDel universo es Regidor,/nsolo Él está en control./nMe salva y Él me guarda hasta el final;/nRefugio de mi alma, en Cristo confiaré./nMi Roca es Cristo.",
+    "stanzas": [
+      "1) Mi fe fundada está en Jesús,/nY en la obra de su cruz./nÉl es mi Roca y mi canción;/n¡Fuera de él no hay salvación!",
+      "2) Cuando no puedo ver su faz,/nSu gracia infunde dulce paz;/nAún cuando enfrente turbación,/nYo cantaré su salvación.",
+      "3) Ya la trompeta sonará/n_(ya sonará)__;/nCristo en las nubes ya vendrá/n_(vendrá)__./n¡Oh pueda ser hallado fiel/n_(ser hallado fiel)__,/nVestido de justicia y bien!"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
   }
 ]
