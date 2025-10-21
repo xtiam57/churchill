@@ -81,7 +81,7 @@ export function Presenter({
     <PresenterStyled ref={divRef} {...rest}>
       <AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
         <motion.p
-          key={id}
+          key={`${id}-${currentAnimation.name}`} // Incluye la animación en la key
           id="presenter-html"
           dangerouslySetInnerHTML={{
             __html: processedText
