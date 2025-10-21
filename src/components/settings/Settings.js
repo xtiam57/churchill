@@ -1,6 +1,6 @@
 import { Close, Download, Favorite, FileUpload } from '@mui/icons-material';
 import { Logo, LogoPreview, Sidebar, TextPreview, Title } from 'components';
-import { useApp, usePresenter } from 'hooks';
+import { useApp, useNewAnimation, usePresenter } from 'hooks';
 import { useState } from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
@@ -15,6 +15,7 @@ export function Settings() {
   const [settings, setSettings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const [file, setFile] = useState(null);
   const { reload } = usePresenter();
+  const { animations, animationIndex, setAnimationIndex } = useNewAnimation();
 
   const handleChangeValue = ({ target }) => {
     const { name, value } = target;
@@ -629,6 +630,27 @@ export function Settings() {
                 </option>
               )
             )}
+          </Form.Control>
+        </Form.Group>
+      </Row>
+
+      <Row>
+        <Form.Group as={Col} xs={12} className="mb-1">
+          <Form.Label className=" small mb-1">
+            Animación de transición del texto
+          </Form.Label>
+          <Form.Control
+            size="sm"
+            as="select"
+            name="animation"
+            value={animationIndex}
+            onChange={(e) => setAnimationIndex(parseInt(e.target.value, 10))}
+          >
+            {animations.map((animation, index) => (
+              <option key={index} value={index}>
+                {animation.name}
+              </option>
+            ))}
           </Form.Control>
         </Form.Group>
       </Row>

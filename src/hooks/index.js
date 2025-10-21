@@ -11,3 +11,4 @@ export { useKeyUp } from './useKeyUp';
 export { usePresenter } from './usePresenter';
 export { useScriptures } from './useScriptures';
 export { useSemaphore } from './useSemaphore';
+export { useNewAnimation } from './useNewAnimation';
