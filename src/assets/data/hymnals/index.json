@@ -5514,7 +5514,7 @@
     "stanzas": [
       "1) Vivo por Cristo, confiando en su amor,/nVida me imparte, poder y valor;/nGrande es el gozo que tengo por Él,/nEs de mi senda, Jesús, guía fiel.",
       "2) Vivo por Cristo; murió Él por mí./nSiempre servirle mi alma anheló;/nPorque me ha dado tal prueba de amor,/nYo hoy me rindo por siempre al Señor.",
-      "3) Vivo sirviendo, siguiendo al Señor;/nQuiero imitar a mi buen Salvador./nBusco a las almas hablandoles de Él,/nY es mi deseo ser constante y fiel."
+      "3) Vivo sirviendo, siguiendo al Señor;/nQuiero imitar a mi buen Salvador./nBusco a las almas habiéndoles de Él,/nY es mi deseo ser constante y fiel."
     ],
     "startsWithChorus": false,
     "repeatChorusAtEnd": false,
@@ -17189,7 +17189,9 @@
     "number": 606,
     "title": "MELODÍAS DE SALVACIÓN",
     "chorus": null,
-    "stanzas": ["1) Incluye: Gracias, Dios mi corazón hay una fuente."],
+    "stanzas": [
+      "1) Incluye: Gracias, Dios mi corazón hay una fuente."
+    ],
     "startsWithChorus": false,
     "repeatChorusAtEnd": false,
     "authors": null,
@@ -23691,7 +23693,9 @@
     "number": 323,
     "title": "POR ESTOS ALIMENTOS",
     "chorus": null,
-    "stanzas": ["1) Por estos alimentos/nDios te damos gracias hoy"],
+    "stanzas": [
+      "1) Por estos alimentos/nDios te damos gracias hoy"
+    ],
     "startsWithChorus": false,
     "repeatChorusAtEnd": false,
     "authors": null,
@@ -24771,11 +24775,11 @@
   {
     "number": 60,
     "title": "MI ROCA ES CRISTO",
-    "chorus": "Mi Roca es Cristo,/nEl ancla de mi ser;/nDel universo es Regidor,/nsolo Él está en control./nMe salva y Él me guarda hasta el final;/nRefugio de mi alma, en Cristo confiaré./nMi Roca es Cristo.",
+    "chorus": "Mi Roca es Cristo,/nEl ancla de mi ser;/nDel universo es Regidor,/nsolo Él está en control./nMe salva y Él me guarda/nhasta el final;/nRefugio de mi alma,/nen Cristo confiaré./n//Mi Roca es Cristo.//",
     "stanzas": [
       "1) Mi fe fundada está en Jesús,/nY en la obra de su cruz./nÉl es mi Roca y mi canción;/n¡Fuera de él no hay salvación!",
       "2) Cuando no puedo ver su faz,/nSu gracia infunde dulce paz;/nAún cuando enfrente turbación,/nYo cantaré su salvación.",
-      "3) Ya la trompeta sonará/n_(ya sonará)__;/nCristo en las nubes ya vendrá/n_(vendrá)__./n¡Oh pueda ser hallado fiel/n_(ser hallado fiel)__,/nVestido de justicia y bien!"
+      "3) Él es la roca y mi canción,/nFuera de Él no hay salvación./nYa la trompeta sonará/n_(ya sonará)__;/nCristo en las nubes ya vendrá/n_(vendrá)__./n¡Oh pueda ser hallado fiel/n_(ser hallado fiel)__,/nVestido de justicia y bien!"
     ],
     "startsWithChorus": false,
     "repeatChorusAtEnd": false,
