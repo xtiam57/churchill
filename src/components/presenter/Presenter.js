@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
 import { useNewAnimation } from 'hooks/useNewAnimation';
+import { useEffect, useRef, useState } from 'react';
 import { generateGUID } from 'utils';
 import { process, resizeText } from './helper';
 import { PresenterStyled } from './styled';
@@ -11,7 +11,7 @@ function getConf(width) {
   // 4K screens
   if (width > 2560) {
     return {
-      minSize: 180 + PLUS,
+      minSize: 180,
       maxSize: 500 + PLUS,
     };
   }
@@ -19,7 +19,7 @@ function getConf(width) {
   // 2K screens
   if (width > 1920) {
     return {
-      minSize: 140 + PLUS,
+      minSize: 140,
       maxSize: 560 + PLUS,
     };
   }
@@ -27,7 +27,7 @@ function getConf(width) {
   // HD screens
   if (width > 1280) {
     return {
-      minSize: 100 + PLUS,
+      minSize: 100,
       maxSize: 400 + PLUS,
     };
   }
@@ -35,14 +35,14 @@ function getConf(width) {
   // 720p screens
   if (width > 1024) {
     return {
-      minSize: 50 + PLUS,
+      minSize: 50,
       maxSize: 340 + PLUS,
     };
   }
 
   // Small screens
   return {
-    minSize: 30 + PLUS,
+    minSize: 30,
     maxSize: 300 + PLUS,
   };
 }

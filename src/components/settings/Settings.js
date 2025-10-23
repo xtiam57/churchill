@@ -586,7 +586,7 @@ export function Settings() {
           </Form.Control>
         </Form.Group>
 
-        <Form.Group as={Col} xs={6} className="mb-0">
+        <Form.Group as={Col} xs={6} className="mb-2">
           <Form.Label className=" small mb-1">
             Rango para detectar cumpleaños
           </Form.Label>
@@ -610,7 +610,7 @@ export function Settings() {
           </Form.Control>
         </Form.Group>
 
-        <Form.Group as={Col} xs={6} className="mb-0">
+        <Form.Group as={Col} xs={6} className="mb-2">
           <Form.Label className=" small mb-1">
             Posición del temporizador
           </Form.Label>
@@ -635,7 +635,7 @@ export function Settings() {
       </Row>
 
       <Row>
-        <Form.Group as={Col} xs={12} className="mb-1">
+        <Form.Group as={Col} xs={12} className="mb-0">
           <Form.Label className=" small mb-1">
             Animación de transición del texto
           </Form.Label>

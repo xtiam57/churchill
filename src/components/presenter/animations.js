@@ -1,6 +1,6 @@
 // Animación original
 export const defaultAnimation = {
-  name: 'Deslizar Vertical',
+  name: 'Normal',
   motion: {
     initial: { opacity: 0, y: '-100%' },
     animate: { opacity: 1, y: 0 },
@@ -49,7 +49,7 @@ export const wipeAnimation = {
 };
 
 export const fromBackAnimation = {
-  name: 'Desde el Fondo',
+  name: 'Zoom hacia Adelante',
   motion: {
     initial: { opacity: 0, scale: 0.2 },
     animate: {
@@ -70,7 +70,7 @@ export const slideUpAnimation = {
 };
 
 export const flipAnimation = {
-  name: 'Girar 3D',
+  name: 'Giro 3D',
   motion: {
     initial: { opacity: 0, rotateY: 90 },
     animate: { opacity: 1, rotateY: 0 },
