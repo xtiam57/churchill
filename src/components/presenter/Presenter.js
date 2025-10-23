@@ -1,14 +1,9 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
+import { useNewAnimation } from 'hooks/useNewAnimation';
 import { generateGUID } from 'utils';
 import { process, resizeText } from './helper';
 import { PresenterStyled } from './styled';
-
-const textMotion = {
-  initial: { opacity: 0, y: '-100%' },
-  animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, scale: 0.25 },
-};
 
 const PLUS = 110;
 
@@ -63,6 +58,7 @@ export function Presenter({
 }) {
   const divRef = useRef(null);
   const [divWidth, setDivWidth] = useState(1024);
+  const { currentAnimation } = useNewAnimation();
 
   const handleFontScale = () => {
     setTimeout(() => {
@@ -85,14 +81,14 @@ export function Presenter({
     <PresenterStyled ref={divRef} {...rest}>
       <AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
         <motion.p
-          key={id}
+          key={`${id}-${currentAnimation.name}`} // Incluye la animación en la key
           id="presenter-html"
           dangerouslySetInnerHTML={{
             __html: processedText
               ? processedText
               : process(text, subtext, book),
           }}
-          {...textMotion}
+          {...currentAnimation.motion}
         />
       </AnimatePresence>
     </PresenterStyled>

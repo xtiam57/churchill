@@ -5514,7 +5514,7 @@
     "stanzas": [
       "1) Vivo por Cristo, confiando en su amor,/nVida me imparte, poder y valor;/nGrande es el gozo que tengo por Él,/nEs de mi senda, Jesús, guía fiel.",
       "2) Vivo por Cristo; murió Él por mí./nSiempre servirle mi alma anheló;/nPorque me ha dado tal prueba de amor,/nYo hoy me rindo por siempre al Señor.",
-      "3) Vivo sirviendo, siguiendo al Señor;/nQuiero imitar a mi buen Salvador./nBusco a las almas habiéndoles de Él,/nY es mi deseo ser constante y fiel."
+      "3) Vivo sirviendo, siguiendo al Señor;/nQuiero imitar a mi buen Salvador./nBusco a las almas hablandoles de Él,/nY es mi deseo ser constante y fiel."
     ],
     "startsWithChorus": false,
     "repeatChorusAtEnd": false,
@@ -17189,9 +17189,7 @@
     "number": 606,
     "title": "MELODÍAS DE SALVACIÓN",
     "chorus": null,
-    "stanzas": [
-      "1) Incluye: Gracias, Dios mi corazón hay una fuente."
-    ],
+    "stanzas": ["1) Incluye: Gracias, Dios mi corazón hay una fuente."],
     "startsWithChorus": false,
     "repeatChorusAtEnd": false,
     "authors": null,
@@ -23693,9 +23691,7 @@
     "number": 323,
     "title": "POR ESTOS ALIMENTOS",
     "chorus": null,
-    "stanzas": [
-      "1) Por estos alimentos/nDios te damos gracias hoy"
-    ],
+    "stanzas": ["1) Por estos alimentos/nDios te damos gracias hoy"],
     "startsWithChorus": false,
     "repeatChorusAtEnd": false,
     "authors": null,
