@@ -12,6 +12,7 @@ const resourcesBase64 = require('./resources-sample');
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow = null;
 let presenterWindow = null;
+let preacherWindow = null;
 
 const MAX_IMAGE_SIZE = 1.5 * 1024 * 1024; // 1.5 MB en bytes
 const HYMNS_PATH = 'Churchill/Pistas';
@@ -337,8 +338,10 @@ ipcMain.handle('toggle-presenter', (event, selectedMonitorId) => {
   if (presenterWindow) {
     if (presenterWindow.isVisible()) {
       presenterWindow.hide();
+      if (preacherWindow) preacherWindow.hide();
     } else {
       presenterWindow.show();
+      if (preacherWindow) preacherWindow.show();
     }
     return presenterWindow.isVisible();
   }
@@ -351,7 +354,8 @@ ipcMain.handle('toggle-presenter', (event, selectedMonitorId) => {
     return false;
   }
 
-  if (extDisplay) {
+  if (displays.length === 3 && selectedMonitorId === 1) {
+    // Ventana del cast (presenter)
     presenterWindow = new BrowserWindow({
       x: extDisplay.bounds.x + 50,
       y: extDisplay.bounds.y + 50,
@@ -373,18 +377,66 @@ ipcMain.handle('toggle-presenter', (event, selectedMonitorId) => {
       presenterWindow.show();
     });
 
-    // presenterWindow.webContents.openDevTools();
+    const preacherDisplay = displays[2];
+    preacherWindow = new BrowserWindow({
+      x: preacherDisplay.bounds.x + 50,
+      y: preacherDisplay.bounds.y + 50,
+      frame: false,
+      fullscreen: true,
+      show: false,
+      parent,
+      webPreferences: {
+        preload: path.join(__dirname, 'preload.js'),
+        contextIsolation: true,
+        nodeIntegration: true,
+        enableRemoteModule: true,
+      },
+    });
+
+    preacherWindow.loadURL(url.replace(/#.*$/, '#/preacher-screen'));
+
+    preacherWindow.once('ready-to-show', () => {
+      preacherWindow.show();
+    });
 
     return true;
   }
 
-  return false;
+  // Comportamiento normal
+  presenterWindow = new BrowserWindow({
+    x: extDisplay.bounds.x + 50,
+    y: extDisplay.bounds.y + 50,
+    frame: false,
+    fullscreen: true,
+    show: false,
+    parent,
+    webPreferences: {
+      preload: path.join(__dirname, 'preload.js'),
+      contextIsolation: true,
+      nodeIntegration: true,
+      enableRemoteModule: true,
+    },
+  });
+
+  presenterWindow.loadURL(url.replace(/#.*$/, '#/cast-screen'));
+
+  presenterWindow.once('ready-to-show', () => {
+    presenterWindow.show();
+  });
+
+  return true;
 });
 
 ipcMain.handle('close-presenter', () => {
   if (presenterWindow) {
     presenterWindow.close();
     presenterWindow = null;
+  }
+  if (preacherWindow) {
+    preacherWindow.close();
+    preacherWindow = null;
+  }
+  if (!presenterWindow || !preacherWindow) {
     return false;
   }
   return true;
