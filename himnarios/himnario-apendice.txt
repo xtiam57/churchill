@@ -1646,45 +1646,69 @@ Vestido de justicia y bien!
 ## 200. TEATRO: INICIO
 ***
 Efecto de sonido
+***
+@TAGS
+Teatro
 
 ---
 
-## 201. TEATRO: AULA DE CLASE INICI0
+## 201. TEATRO: AULA DE CLASE INICIO
 ***
 Efecto de sonido
+***
+@TAGS
+Teatro
 
 ---
 
 ## 202. TEATRO: EVA
 ***
 Efecto de sonido
+***
+@TAGS
+Teatro
 
 ---
 
 ## 203. TEATRO: ABRAHAM
 ***
 Efecto de sonido
+***
+@TAGS
+Teatro
 
 ---
 
 ## 204. TEATRO: DAVID
 ***
 Efecto de sonido
+***
+@TAGS
+Teatro
 
 ---
 
 ## 205. TEATRO: AULA DE CLASE FINAL
 ***
 Efecto de sonido
+***
+@TAGS
+Teatro
 
 ---
 
-## 206. TEATRO: REFLEXION CON LA MAESTRA
+## 206. TEATRO: REFLEXIÓN CON LA MAESTRA
 ***
 Efecto de sonido
+***
+@TAGS
+Teatro
 
 ---
 
 ## 207. TEATRO: VIAJE EN EL TIEMPO
 ***
 Efecto de sonido
+***
+@TAGS
+Teatro

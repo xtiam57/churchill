@@ -24797,12 +24797,12 @@
     "startsWithChorus": false,
     "repeatChorusAtEnd": false,
     "authors": null,
-    "tags": null,
+    "tags": "Teatro",
     "book": "Apéndice"
   },
   {
     "number": 62,
-    "title": "TEATRO: AULA DE CLASE INICI0",
+    "title": "TEATRO: AULA DE CLASE INICIO",
     "chorus": null,
     "stanzas": [
       "1) Efecto de sonido"
@@ -24810,7 +24810,7 @@
     "startsWithChorus": false,
     "repeatChorusAtEnd": false,
     "authors": null,
-    "tags": null,
+    "tags": "Teatro",
     "book": "Apéndice"
   },
   {
@@ -24823,7 +24823,7 @@
     "startsWithChorus": false,
     "repeatChorusAtEnd": false,
     "authors": null,
-    "tags": null,
+    "tags": "Teatro",
     "book": "Apéndice"
   },
   {
@@ -24836,7 +24836,7 @@
     "startsWithChorus": false,
     "repeatChorusAtEnd": false,
     "authors": null,
-    "tags": null,
+    "tags": "Teatro",
     "book": "Apéndice"
   },
   {
@@ -24849,7 +24849,7 @@
     "startsWithChorus": false,
     "repeatChorusAtEnd": false,
     "authors": null,
-    "tags": null,
+    "tags": "Teatro",
     "book": "Apéndice"
   },
   {
@@ -24862,12 +24862,12 @@
     "startsWithChorus": false,
     "repeatChorusAtEnd": false,
     "authors": null,
-    "tags": null,
+    "tags": "Teatro",
     "book": "Apéndice"
   },
   {
     "number": 67,
-    "title": "TEATRO: REFLEXION CON LA MAESTRA",
+    "title": "TEATRO: REFLEXIÓN CON LA MAESTRA",
     "chorus": null,
     "stanzas": [
       "1) Efecto de sonido"
@@ -24875,7 +24875,7 @@
     "startsWithChorus": false,
     "repeatChorusAtEnd": false,
     "authors": null,
-    "tags": null,
+    "tags": "Teatro",
     "book": "Apéndice"
   },
   {
@@ -24888,7 +24888,7 @@
     "startsWithChorus": false,
     "repeatChorusAtEnd": false,
     "authors": null,
-    "tags": null,
+    "tags": "Teatro",
     "book": "Apéndice"
   }
 ]
