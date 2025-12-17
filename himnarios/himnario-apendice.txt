@@ -145,24 +145,29 @@ Eres mi todo, Dios.
 ¿Puedes ver, su poder?
 Él eclipsa el sol hasta opacar,
 La más densa noche hace brillar,
-Todo lo transforma en su designio soberano
+Todo lo transforma
+en su designio soberano
 Porque es Dios, solo Él es Dios.
 ***
 @CORO
-Creo en Dios, su voz levanta el viento y mar en tempestad,
+Creo en Dios, su voz levanta
+el viento y mar en tempestad,
 Y por su mano alzada pronto acallarán
 Aun cuando todo esté perdido yo,
-Creo en Dios, porque Él es mi esperanza en medio del dolor,
+Creo en Dios, porque Él es mi
+esperanza en medio del dolor,
 Confiado cantaré su grande salvación,
 Porque vivo y creo en Dios.
 ***
 2) Dios al mundo envuelve con su amor
 Su justicia y tierna compasión,
-Más su gracia alcanza todo aquel que arrepentido
+Más su gracia alcanza todo
+aquel que arrepentido
 Clama a Él, solo a Él.
 Y aunque no lo puedas vislumbrar
 Dios es siempre fiel hasta el final,
-Porque ha prometido caminar a nuestro lado
+Porque ha prometido
+caminar a nuestro lado
 Cerca está, porque Él es Dios.
 ***
 @REPETIR_CORO_AL_FINAL
@@ -1634,3 +1639,52 @@ _(vendrá)__.
 ¡Oh pueda ser hallado fiel
 _(ser hallado fiel)__,
 Vestido de justicia y bien!
+
+
+---
+
+## 200. TEATRO: INICIO
+***
+Efecto de sonido
+
+---
+
+## 201. TEATRO: AULA DE CLASE INICI0
+***
+Efecto de sonido
+
+---
+
+## 202. TEATRO: EVA
+***
+Efecto de sonido
+
+---
+
+## 203. TEATRO: ABRAHAM
+***
+Efecto de sonido
+
+---
+
+## 204. TEATRO: DAVID
+***
+Efecto de sonido
+
+---
+
+## 205. TEATRO: AULA DE CLASE FINAL
+***
+Efecto de sonido
+
+---
+
+## 206. TEATRO: REFLEXION CON LA MAESTRA
+***
+Efecto de sonido
+
+---
+
+## 207. TEATRO: VIAJE EN EL TIEMPO
+***
+Efecto de sonido

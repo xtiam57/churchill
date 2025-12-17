@@ -11357,9 +11357,9 @@
     "title": "GLORIA A DIOS EN LAS ALTURAS",
     "chorus": null,
     "stanzas": [
-      "1) Gloria a Dios en las alturas,/nque mostró su gran amor,/ndando a humanas criaturas un potente salvador./nCon los himnos de los santos hagan/ncoro nuestros cantos de alabanza y gratitud,/npor la divinal salud; y digamos a una voz:/n¡En los cielos gloria a Dios!",
-      "2) Gloria a Dios la tierra cante al gozar de su bondad,/npues le brinda paz constante en su buena voluntad./nToda tribu y lenguas todas al excelso eleven odas,/npor el Rey Emanuel que les vino de Israel;/ny prorrumpan a una voz;/n¡En los cielos gloria a Dios!",
-      "3) Gloria a Dios la Iglesia entona,/nrota al ver su esclavitud por Jesús,/nque es su corona, su cabeza y plenitud./nVigilante siempre vive y a la lucha se apercibe,/nmientras llega su solaz en la gloria y plena paz;/ndonde exclama a una voz;/n¡En los cielos gloria a Dios!"
+      "1) Gloria a Dios en las alturas,/nque mostró su gran amor,/ndando a humanas criaturas/nun potente salvador./nCon los himnos de los santos/nhagan coro nuestros cantos/nde alabanza y gratitud,/npor la divinal salud;/ny digamos a una voz:/n¡En los cielos gloria a Dios!",
+      "2) Gloria a Dios la tierra/ncante al gozar de su bondad,/npues le brinda paz constante/nen su buena voluntad./nToda tribu y lenguas todas/nal excelso eleven odas,/npor el Rey Emanuel/nque les vino de Israel;/ny prorrumpan a una voz;/n¡En los cielos gloria a Dios!",
+      "3) Gloria a Dios la Iglesia entona,/nrota al ver su esclavitud por Jesús,/nque es su corona,/nsu cabeza y plenitud./nVigilante siempre vive/ny a la lucha se apercibe,/nmientras llega su solaz/nen la gloria y plena paz;/ndonde exclama a una voz;/n¡En los cielos gloria a Dios!"
     ],
     "startsWithChorus": false,
     "repeatChorusAtEnd": false,
@@ -15620,7 +15620,7 @@
   {
     "number": 499,
     "title": "VI A CRISTO EN TI",
-    "chorus": "Vi a Cristo en ti, vi a Cristo en ti;/nescuché su voz cuando hablaste tú, vi a Cristo en ti./n_(Cristo en ti)__ en tus ojos vi al Señor, puede ver su gran amor;/nfuiste ejemplo porque vi a Cristo en ti.",
+    "chorus": "Vi a Cristo en ti, vi a Cristo en ti;/nescuché su voz cuando hablaste tú, vi a Cristo en ti./n_(Cristo en ti)__ en tus ojos vi al Señor, pude ver su gran amor;/nfuiste ejemplo porque vi a Cristo en ti.",
     "stanzas": [
       "1) Cuando llegue a la gloria y contemple al Señor,/nle daré diez miles de años de loor./nY entonces buscaré al que me enseñó la fe,/ny entre lágrimas de gozo le explicaré:",
       "2) Cuando ante Dios la hora llegue de comparecer,/ndonde nunca habrá ni un anochecer;/nal cesar lo terrenal, y Dios juzgue el bien y el mal,/nyo anhelo de mi padre sólo escuchar."
@@ -23955,10 +23955,10 @@
   {
     "number": 6,
     "title": "CREO EN DIOS",
-    "chorus": "Creo en Dios, su voz levanta el viento y mar en tempestad,/nY por su mano alzada pronto acallarán/nAun cuando todo esté perdido yo,/nCreo en Dios, porque Él es mi esperanza en medio del dolor,/nConfiado cantaré su grande salvación,/nPorque vivo y creo en Dios.",
+    "chorus": "Creo en Dios, su voz levanta/nel viento y mar en tempestad,/nY por su mano alzada pronto acallarán/nAun cuando todo esté perdido yo,/nCreo en Dios, porque Él es mi/nesperanza en medio del dolor,/nConfiado cantaré su grande salvación,/nPorque vivo y creo en Dios.",
     "stanzas": [
-      "1) ¿Cómo puedes no creer en Dios?/n¿Cómo intentas ignorar su voz?/nÉl ha dado muestras De sus grandes maravillas/n¿Puedes ver, su poder?/nÉl eclipsa el sol hasta opacar,/nLa más densa noche hace brillar,/nTodo lo transforma en su designio soberano/nPorque es Dios, solo Él es Dios.",
-      "2) Dios al mundo envuelve con su amor/nSu justicia y tierna compasión,/nMás su gracia alcanza todo aquel que arrepentido/nClama a Él, solo a Él./nY aunque no lo puedas vislumbrar/nDios es siempre fiel hasta el final,/nPorque ha prometido caminar a nuestro lado/nCerca está, porque Él es Dios."
+      "1) ¿Cómo puedes no creer en Dios?/n¿Cómo intentas ignorar su voz?/nÉl ha dado muestras De sus grandes maravillas/n¿Puedes ver, su poder?/nÉl eclipsa el sol hasta opacar,/nLa más densa noche hace brillar,/nTodo lo transforma/nen su designio soberano/nPorque es Dios, solo Él es Dios.",
+      "2) Dios al mundo envuelve con su amor/nSu justicia y tierna compasión,/nMás su gracia alcanza todo/naquel que arrepentido/nClama a Él, solo a Él./nY aunque no lo puedas vislumbrar/nDios es siempre fiel hasta el final,/nPorque ha prometido/ncaminar a nuestro lado/nCerca está, porque Él es Dios."
     ],
     "startsWithChorus": false,
     "repeatChorusAtEnd": true,
@@ -24780,6 +24780,110 @@
       "1) Mi fe fundada está en Jesús,/nY en la obra de su cruz./nÉl es mi Roca y mi canción;/n¡Fuera de él no hay salvación!",
       "2) Cuando no puedo ver su faz,/nSu gracia infunde dulce paz;/nAún cuando enfrente turbación,/nYo cantaré su salvación.",
       "3) Él es la roca y mi canción,/nFuera de Él no hay salvación./nYa la trompeta sonará/n_(ya sonará)__;/nCristo en las nubes ya vendrá/n_(vendrá)__./n¡Oh pueda ser hallado fiel/n_(ser hallado fiel)__,/nVestido de justicia y bien!"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 61,
+    "title": "TEATRO: INICIO",
+    "chorus": null,
+    "stanzas": [
+      "1) Efecto de sonido"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 62,
+    "title": "TEATRO: AULA DE CLASE INICI0",
+    "chorus": null,
+    "stanzas": [
+      "1) Efecto de sonido"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 63,
+    "title": "TEATRO: EVA",
+    "chorus": null,
+    "stanzas": [
+      "1) Efecto de sonido"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 64,
+    "title": "TEATRO: ABRAHAM",
+    "chorus": null,
+    "stanzas": [
+      "1) Efecto de sonido"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 65,
+    "title": "TEATRO: DAVID",
+    "chorus": null,
+    "stanzas": [
+      "1) Efecto de sonido"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 66,
+    "title": "TEATRO: AULA DE CLASE FINAL",
+    "chorus": null,
+    "stanzas": [
+      "1) Efecto de sonido"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 67,
+    "title": "TEATRO: REFLEXION CON LA MAESTRA",
+    "chorus": null,
+    "stanzas": [
+      "1) Efecto de sonido"
+    ],
+    "startsWithChorus": false,
+    "repeatChorusAtEnd": false,
+    "authors": null,
+    "tags": null,
+    "book": "Apéndice"
+  },
+  {
+    "number": 68,
+    "title": "TEATRO: VIAJE EN EL TIEMPO",
+    "chorus": null,
+    "stanzas": [
+      "1) Efecto de sonido"
     ],
     "startsWithChorus": false,
     "repeatChorusAtEnd": false,
