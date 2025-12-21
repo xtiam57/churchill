@@ -24789,106 +24789,32 @@
   },
   {
     "number": 61,
-    "title": "TEATRO: INICIO",
+    "title": "RODOLFO EL RENO",
     "chorus": null,
     "stanzas": [
-      "1) Efecto de sonido"
+      "1) Era Rodolfo un reno/nque tenía la nariz/nRoja como la grana/ny de un brillo singular/nTodos sus compañeros/nse reían sin parar/nY nuestro buen amigo/nsolo y triste se quedó",
+      "2) Pero Navidad llegó,/nSanta Claus bajó/nY a Rodolfo lo eligió/npor su singular nariz/nTirando del trineo,/nfue Rodolfo sensación/nY desde aquel momento,/ntoda burla se acabó"
     ],
     "startsWithChorus": false,
     "repeatChorusAtEnd": false,
     "authors": null,
-    "tags": "Teatro",
+    "tags": "Navidad",
     "book": "Apéndice"
   },
   {
     "number": 62,
-    "title": "TEATRO: AULA DE CLASE INICIO",
-    "chorus": null,
+    "title": "MI BURRITO SABANERO",
+    "chorus": "//Si me ven, si me ven,/nvoy camino de Belén//",
     "stanzas": [
-      "1) Efecto de sonido"
+      "1) //Con mi burrito sabanero,/nvoy camino de Belén//",
+      "2) //El lucerito mañanero/nilumina mi sendero//",
+      "3) //Con mi cuatrico, voy cantando,/nmi burrito va trotando//",
+      "4) Tuki tuki tuki tuki,/ntuki tuki tuki ta/nApúrate, mi burrito,/nque ya vamos a llegar/nTuki tuki tuki tuki,/ntuki tuki tuki tu/nApúrate, mi burrito,/nvamos a ver a Jesús."
     ],
     "startsWithChorus": false,
     "repeatChorusAtEnd": false,
     "authors": null,
-    "tags": "Teatro",
-    "book": "Apéndice"
-  },
-  {
-    "number": 63,
-    "title": "TEATRO: EVA",
-    "chorus": null,
-    "stanzas": [
-      "1) Efecto de sonido"
-    ],
-    "startsWithChorus": false,
-    "repeatChorusAtEnd": false,
-    "authors": null,
-    "tags": "Teatro",
-    "book": "Apéndice"
-  },
-  {
-    "number": 64,
-    "title": "TEATRO: ABRAHAM",
-    "chorus": null,
-    "stanzas": [
-      "1) Efecto de sonido"
-    ],
-    "startsWithChorus": false,
-    "repeatChorusAtEnd": false,
-    "authors": null,
-    "tags": "Teatro",
-    "book": "Apéndice"
-  },
-  {
-    "number": 65,
-    "title": "TEATRO: DAVID",
-    "chorus": null,
-    "stanzas": [
-      "1) Efecto de sonido"
-    ],
-    "startsWithChorus": false,
-    "repeatChorusAtEnd": false,
-    "authors": null,
-    "tags": "Teatro",
-    "book": "Apéndice"
-  },
-  {
-    "number": 66,
-    "title": "TEATRO: AULA DE CLASE FINAL",
-    "chorus": null,
-    "stanzas": [
-      "1) Efecto de sonido"
-    ],
-    "startsWithChorus": false,
-    "repeatChorusAtEnd": false,
-    "authors": null,
-    "tags": "Teatro",
-    "book": "Apéndice"
-  },
-  {
-    "number": 67,
-    "title": "TEATRO: REFLEXIÓN CON LA MAESTRA",
-    "chorus": null,
-    "stanzas": [
-      "1) Efecto de sonido"
-    ],
-    "startsWithChorus": false,
-    "repeatChorusAtEnd": false,
-    "authors": null,
-    "tags": "Teatro",
-    "book": "Apéndice"
-  },
-  {
-    "number": 68,
-    "title": "TEATRO: VIAJE EN EL TIEMPO",
-    "chorus": null,
-    "stanzas": [
-      "1) Efecto de sonido"
-    ],
-    "startsWithChorus": false,
-    "repeatChorusAtEnd": false,
-    "authors": null,
-    "tags": "Teatro",
+    "tags": "Navidad",
     "book": "Apéndice"
   }
 ]

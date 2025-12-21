@@ -1643,72 +1643,54 @@ Vestido de justicia y bien!
 
 ---
 
-## 200. TEATRO: INICIO
+## 200. RODOLFO EL RENO
 ***
-Efecto de sonido
+Era Rodolfo un reno
+que tenía la nariz
+Roja como la grana
+y de un brillo singular
+Todos sus compañeros
+se reían sin parar
+Y nuestro buen amigo
+solo y triste se quedó
+***
+Pero Navidad llegó,
+Santa Claus bajó
+Y a Rodolfo lo eligió
+por su singular nariz
+Tirando del trineo,
+fue Rodolfo sensación
+Y desde aquel momento,
+toda burla se acabó
 ***
 @TAGS
-Teatro
+Navidad
 
 ---
 
-## 201. TEATRO: AULA DE CLASE INICIO
+## 201. MI BURRITO SABANERO
 ***
-Efecto de sonido
+//Con mi burrito sabanero,
+voy camino de Belén//
 ***
-@TAGS
-Teatro
-
----
-
-## 202. TEATRO: EVA
+@CORO
+//Si me ven, si me ven,
+voy camino de Belén//
 ***
-Efecto de sonido
+//El lucerito mañanero
+ilumina mi sendero//
 ***
-@TAGS
-Teatro
-
----
-
-## 203. TEATRO: ABRAHAM
+//Con mi cuatrico, voy cantando,
+mi burrito va trotando//
 ***
-Efecto de sonido
-***
-@TAGS
-Teatro
-
----
-
-## 204. TEATRO: DAVID
-***
-Efecto de sonido
+Tuki tuki tuki tuki,
+tuki tuki tuki ta
+Apúrate, mi burrito,
+que ya vamos a llegar
+Tuki tuki tuki tuki,
+tuki tuki tuki tu
+Apúrate, mi burrito,
+vamos a ver a Jesús.
 ***
 @TAGS
-Teatro
-
----
-
-## 205. TEATRO: AULA DE CLASE FINAL
-***
-Efecto de sonido
-***
-@TAGS
-Teatro
-
----
-
-## 206. TEATRO: REFLEXIÓN CON LA MAESTRA
-***
-Efecto de sonido
-***
-@TAGS
-Teatro
-
----
-
-## 207. TEATRO: VIAJE EN EL TIEMPO
-***
-Efecto de sonido
-***
-@TAGS
-Teatro
+Navidad
