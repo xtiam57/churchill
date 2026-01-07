@@ -1,0 +1,107 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: windows-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '16'
+          cache: 'yarn'
+          
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+        
+      - name: Generate hymnals data
+        run: yarn generate
+        
+      - name: Build React app
+        run: yarn react-build
+        env:
+          REACT_APP_VERSION: ${{ github.ref_name }}-${{ github.sha }}
+          
+      - name: Build Electron app (Windows)
+        run: yarn electron-builder --win
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Run post-build script
+        run: node post-build.js
+        
+      - name: Upload artifact for GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './docs'
+          
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        
+      - name: Create Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            dist/*.exe
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Generate build summary
+        if: always()
+        run: |
+          echo "## 🚀 Build Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Status**: ${{ job.status }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Branch**: ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Commit**: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Author**: ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ job.status }}" == "success" ]; then
+            echo "✅ Build completado exitosamente" >> $GITHUB_STEP_SUMMARY
+            echo "📦 Ejecutable generado y publicado en GitHub Pages" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ Build falló" >> $GITHUB_STEP_SUMMARY
+          fi
+        shell: bash
+          
+      - name: Create issue on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue = await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '❌ Build falló en ' + context.ref,
+              body: `## Build falló\n\n` +
+                    `- **Workflow**: ${context.workflow}\n` +
+                    `- **Run**: ${context.runNumber}\n` +
+                    `- **Commit**: ${context.sha}\n` +
+                    `- **Actor**: ${context.actor}\n\n` +
+                    `[Ver detalles](${context.payload.repository.html_url}/actions/runs/${context.runId})`,
+              labels: ['bug', 'ci/cd']
+            });
+            console.log('Issue creado:', issue.data.html_url);
+            
+      - name: Notify success
+        if: success()
+        run: |
+          echo "✅ Build completado exitosamente"
+          echo "📦 Ejecutable disponible en: https://github.com/${{ github.repository }}/tree/main/docs"
+          echo "🌐 GitHub Pages: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
