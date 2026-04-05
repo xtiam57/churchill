@@ -12,7 +12,7 @@ export function Routesbar() {
 
   useEffect(() => {
     fetch(
-      'https://raw.githubusercontent.com/xtiam57/churchill/refs/heads/main/docs/version.json'
+      'https://raw.githubusercontent.com/xtiam57/churchill/refs/heads/main/docs/version.json',
     )
       .then((response) => {
         try {
@@ -74,7 +74,7 @@ export function Routesbar() {
             <Button
               onClick={() =>
                 window.electronAPI?.openLink(
-                  'https://xtiam57.github.io/churchill/'
+                  'https://xtiam57.github.io/churchill/',
                 )
               }
               variant="secondary"
