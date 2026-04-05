@@ -11,9 +11,7 @@ export function Routesbar() {
   const [isNewVersion, setIsNewVersion] = useState(false);
 
   useEffect(() => {
-    fetch(
-      'https://raw.githubusercontent.com/xtiam57/churchill/refs/heads/main/docs/version.json',
-    )
+    fetch('https://xtiam57.github.io/churchill/version.json')
       .then((response) => {
         try {
           if (!response.ok) {
