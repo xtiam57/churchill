@@ -32,10 +32,15 @@ jobs:
       - name: Generate hymnals data
         run: yarn generate
 
+      - name: Get package version
+        id: pkg
+        shell: bash
+        run: echo "version=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
+
       - name: Build React app
         run: yarn react-build
         env:
-          REACT_APP_VERSION: ${{ github.ref_name }}-${{ github.sha }}
+          REACT_APP_VERSION: ${{ steps.pkg.outputs.version }}
           CI: false
 
       - name: Build Electron app (Windows)

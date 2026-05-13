@@ -24,11 +24,12 @@ export function Routesbar() {
       })
       .then((result) => {
         if (result?.version && result?.version !== version) {
-          const currentVersion = version?.replaceAll('.', '');
+          if (!/^\d+\.\d+\.\d+$/.test(version)) return;
+
+          const currentVersion = version.replaceAll('.', '');
           const newVersion = result.version.replaceAll('.', '');
 
           if (+newVersion > +currentVersion) {
-            console.log('new version', newVersion, currentVersion);
             setIsNewVersion(true);
           }
         }
