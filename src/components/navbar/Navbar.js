@@ -15,6 +15,7 @@ import { PATHS } from 'router';
 import createPersistedState from 'use-persisted-state';
 import { BROADCAST } from 'values';
 import { AlertMessageModal } from './modal';
+import { ModalPreacher } from './ModalPreacher';
 
 const useAlert = createPersistedState(BROADCAST.ALERT);
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
@@ -28,7 +29,7 @@ export function Navbar() {
   const { toggle, presenting } = usePresenter();
   const [showModal, setShowModal] = useState(false);
   const { showPlayer } = useBackgroundMusic();
-
+  const [showPreacherModal, setShowPreacherModal] = useState(false);
   const handleSendMessage = useCallback(
     ({ message }) => {
       setShowModal(false);
@@ -41,7 +42,10 @@ export function Navbar() {
     [setAlert, settings]
   );
 
-  if (location.pathname === PATHS.CAST_PAGE) {
+  if (
+    location.pathname === PATHS.CAST_PAGE ||
+    location.pathname === PATHS.PREACHER_SCREEN
+  ) {
     return null;
   }
 
@@ -110,20 +114,37 @@ export function Navbar() {
               </OverlayTrigger>
             </li>
             {presenting && (
-              <li className="nav-item">
-                <OverlayTrigger
-                  placement="bottom"
-                  overlay={<Tooltip>Aviso en pantalla</Tooltip>}
-                >
-                  <Button
-                    onClick={() => setShowModal(true)}
-                    className={presenting ? 'text-dark' : 'text-light'}
-                    variant="link"
+              <>
+                {' '}
+                <li className="nav-item">
+                  <OverlayTrigger
+                    placement="bottom"
+                    overlay={<Tooltip>Aviso en pantalla</Tooltip>}
                   >
-                    <Chat />
-                  </Button>
-                </OverlayTrigger>
-              </li>
+                    <Button
+                      onClick={() => setShowModal(true)}
+                      className={presenting ? 'text-dark' : 'text-light'}
+                      variant="link"
+                    >
+                      <Chat />
+                    </Button>
+                  </OverlayTrigger>
+                </li>
+                <li className="nav-item">
+                  <OverlayTrigger
+                    placement="bottom"
+                    overlay={<Tooltip>Mensajes al predicador</Tooltip>}
+                  >
+                    <Button
+                      onClick={() => setShowPreacherModal(true)}
+                      className={presenting ? 'text-dark' : 'text-light'}
+                      variant="link"
+                    >
+                      <Chat />
+                    </Button>
+                  </OverlayTrigger>
+                </li>
+              </>
             )}
           </ul>
           {alert ? (
@@ -163,6 +184,10 @@ export function Navbar() {
         show={showModal}
         handleClose={() => setShowModal(false)}
         handleSave={handleSendMessage}
+      />
+      <ModalPreacher
+        show={showPreacherModal}
+        handleClose={() => setShowPreacherModal(false)}
       />
     </>
   );

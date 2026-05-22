@@ -13,6 +13,7 @@ import HymnalPage from 'pages/hymnal';
 import MiscPage from 'pages/misc';
 import ScripturesPage from 'pages/scriptures';
 import VideosPage from 'pages/videos';
+import PreacherScreen from 'pages/PreacherScreen';
 
 export const PATHS = {
   ROOT: '/',
@@ -25,6 +26,7 @@ export const PATHS = {
   EXPORT_PAGE: '/export',
   RESOURCES_PAGE: '/resources',
   VIDEOS_PAGE: '/videos',
+  PREACHER_SCREEN: '/preacher-screen',
 };
 
 export const routes = flatten([
@@ -105,6 +107,14 @@ export const routes = flatten([
     component: CastPage,
     label: 'Proyectar',
   },
+  {
+    key: PATHS.PREACHER_SCREEN,
+    exact: true,
+    path: PATHS.PREACHER_SCREEN,
+    component: PreacherScreen,
+    label: 'Predicador',
+  },
+
   // {
   //   key: PATHS.COUNTDOWN_PAGE,
   //   exact: true,
