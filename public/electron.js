@@ -1,6 +1,6 @@
 const electron = require('electron');
 // Module to control application life.
-const { app, ipcMain, BrowserWindow, shell, screen, desktopCapturer } =
+const { app, ipcMain, BrowserWindow, protocol, shell, screen, desktopCapturer } =
   electron;
 
 const path = require('path');
@@ -19,6 +19,45 @@ const BACKGROUND_IMAGES_PATH = 'Churchill/Imágenes de fondo';
 const BACKGROUND_MUSIC_PATH = 'Churchill/Fondos musicales';
 const RESOURCES_PATH = 'Churchill/Recursos';
 const VIDEOS_PATH = 'Churchill/Videos';
+
+// Esquema propio para servir videos/audio locales como src de <video>/<audio>.
+// En desarrollo la app se sirve desde http://localhost (CRA) y un documento
+// con ese origen no tiene registrado ningún loader para file://, así que
+// cargar file:///... directamente falla con ERR_UNKNOWN_URL_SCHEME. Al
+// registrar este esquema como "privileged" evitamos el problema tanto en
+// desarrollo como en producción.
+const MEDIA_SCHEME = 'churchill-media';
+
+protocol.registerSchemesAsPrivileged([
+  {
+    scheme: MEDIA_SCHEME,
+    privileges: {
+      standard: true,
+      secure: true,
+      supportFetchAPI: true,
+      stream: true,
+      bypassCSP: true,
+    },
+  },
+]);
+
+function toMediaUrl(filePath) {
+  return `${MEDIA_SCHEME}://${encodeURI(filePath.replace(/\\/g, '/'))}`;
+}
+
+function registerMediaProtocol() {
+  protocol.registerFileProtocol(MEDIA_SCHEME, (request, callback) => {
+    try {
+      const filePath = decodeURI(
+        request.url.replace(`${MEDIA_SCHEME}://`, '')
+      );
+      callback({ path: filePath });
+    } catch (error) {
+      console.error(`Error sirviendo ${MEDIA_SCHEME}:`, error);
+      callback({ error: -2 }); // net::FAILED
+    }
+  });
+}
 
 function createWindow() {
   // Create the browser window.
@@ -122,7 +161,10 @@ function createWindow() {
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
-app.on('ready', createWindow);
+app.on('ready', () => {
+  registerMediaProtocol();
+  createWindow();
+});
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {
@@ -161,7 +203,7 @@ ipcMain.handle('get-background-music', async (_) => {
       const filePath = path.join(folderPath, file);
       const extension = path.extname(file).replace('.', '');
       const name = path.basename(file, `.${extension}`);
-      const fileUrl = `file://${filePath.replace(/\\/g, '/')}`;
+      const fileUrl = toMediaUrl(filePath);
       return { name, extension, path: fileUrl };
     });
   } catch (error) {
@@ -190,7 +232,7 @@ ipcMain.handle('get-videos', async (_) => {
       const filePath = path.join(folderPath, file);
       const extension = path.extname(file).replace('.', '');
       const title = path.basename(file, `.${extension}`);
-      const fileUrl = `file://${filePath.replace(/\\/g, '/')}`;
+      const fileUrl = toMediaUrl(filePath);
       let id = title;
       let birthtimeMs = 0;
       let createdAt = '';

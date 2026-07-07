@@ -45,7 +45,8 @@ export default function PlaylistPage() {
   const [newListName, setNewListName] = useState('');
   const { presenting } = usePresenter();
 
-  const playlist = playlists.find((p) => p.id === selectedId) || playlists[0] || null;
+  const playlist =
+    playlists.find((p) => p.id === selectedId) || playlists[0] || null;
 
   const [items, setItems] = useState(playlist?.items ?? []);
 
@@ -130,7 +131,7 @@ export default function PlaylistPage() {
     updatePlaylist(playlist.id, (p) => ({
       ...p,
       items: p.items.map((item) =>
-        item.entryId === entryId ? { ...item, enabled: !item.enabled } : item
+        item.entryId === entryId ? { ...item, enabled: !item.enabled } : item,
       ),
     }));
   };
@@ -150,7 +151,8 @@ export default function PlaylistPage() {
     items,
     onChange: setItems,
     onDrop: (ordered) =>
-      playlist && updatePlaylist(playlist.id, (p) => ({ ...p, items: ordered })),
+      playlist &&
+      updatePlaylist(playlist.id, (p) => ({ ...p, items: ordered })),
   });
 
   const activeItems = useMemo(
@@ -158,7 +160,7 @@ export default function PlaylistPage() {
       items
         .filter((item) => item.enabled)
         .map((item) => ({ ...item, id: item.entryId })),
-    [items]
+    [items],
   );
 
   const player = usePlaylistPlayer({
@@ -173,11 +175,14 @@ export default function PlaylistPage() {
       <Sidebar>
         <Title>Presentación</Title>
 
-        <div className="d-flex align-items-center mb-4" style={{ gap: '.5rem' }}>
+        <div
+          className="d-flex align-items-center mb-4"
+          style={{ gap: '.5rem' }}
+        >
           <Form.Control
             value={newListName}
             onChange={(e) => setNewListName(e.target.value)}
-            placeholder="Nombre de la nueva lista"
+            placeholder="Nombre de la nueva presentación"
           />
           <Button
             variant="success"
@@ -194,7 +199,10 @@ export default function PlaylistPage() {
           onToggle={setShowLogo}
         />
 
-        <div className="d-flex align-items-center mb-2" style={{ gap: '.5rem' }}>
+        <div
+          className="d-flex align-items-center mb-2"
+          style={{ gap: '.5rem' }}
+        >
           <Form.Control
             as="select"
             value={playlist?.id ?? ''}
@@ -209,7 +217,10 @@ export default function PlaylistPage() {
           </Form.Control>
 
           {playlist ? (
-            <OverlayTrigger placement="top" overlay={<Tooltip>Eliminar lista</Tooltip>}>
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Eliminar lista</Tooltip>}
+            >
               <Button variant="outline-light" onClick={handleDeleteList}>
                 <Delete fontSize="small" />
               </Button>
@@ -334,13 +345,19 @@ export default function PlaylistPage() {
         <Controls centered>
           <ButtonGroup className="mx-2">
             {player.playing ? (
-              <OverlayTrigger placement="top" overlay={<Tooltip>Pausar</Tooltip>}>
+              <OverlayTrigger
+                placement="top"
+                overlay={<Tooltip>Pausar</Tooltip>}
+              >
                 <Button onClick={player.togglePlay} variant="secondary">
                   <Pause />
                 </Button>
               </OverlayTrigger>
             ) : (
-              <OverlayTrigger placement="top" overlay={<Tooltip>Reproducir</Tooltip>}>
+              <OverlayTrigger
+                placement="top"
+                overlay={<Tooltip>Reproducir</Tooltip>}
+              >
                 <Button
                   onClick={player.togglePlay}
                   variant="dark"
@@ -353,13 +370,19 @@ export default function PlaylistPage() {
           </ButtonGroup>
 
           <ButtonGroup>
-            <OverlayTrigger placement="top" overlay={<Tooltip>Anterior</Tooltip>}>
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Anterior</Tooltip>}
+            >
               <Button onClick={player.prev} variant="primary">
                 <West />
               </Button>
             </OverlayTrigger>
 
-            <OverlayTrigger placement="top" overlay={<Tooltip>Siguiente</Tooltip>}>
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Siguiente</Tooltip>}
+            >
               <Button onClick={player.next}>
                 <East />
               </Button>
@@ -367,7 +390,10 @@ export default function PlaylistPage() {
           </ButtonGroup>
 
           <ButtonGroup className="mx-2">
-            <OverlayTrigger placement="top" overlay={<Tooltip>Repetir lista</Tooltip>}>
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Repetir lista</Tooltip>}
+            >
               <Button
                 onClick={handleToggleLoop}
                 variant={playlist?.loop ? 'secondary' : 'dark'}
