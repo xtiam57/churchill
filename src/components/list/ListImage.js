@@ -8,7 +8,7 @@ const ImageWrapperStyled = styled.div`
   margin-bottom: 5px;
   border-radius: 8px;
   overflow: hidden;
-  background-color: var(--dark);
+  background-color: ${({ light }) => (light ? '#f1f1f1' : 'var(--dark)')};
 
   .settings {
     display: flex;
@@ -37,7 +37,7 @@ const ImageStyled = styled.div`
   background-color: transparent;
   border: none;
   text-align: left;
-  color: #999;
+  color: ${({ light }) => (light ? '#666' : '#999')};
   cursor: pointer;
   overflow: hidden;
   font-size: 0.9em;
@@ -47,6 +47,10 @@ const ImageStyled = styled.div`
   flex: 1 0;
   align-items: center;
   gap: 10px;
+
+  strong {
+    color: ${({ light }) => (light ? '#222' : 'inherit')};
+  }
 
   p {
     font-size: 0.8rem;
@@ -79,10 +83,16 @@ export function ListImage({
   active = false,
   disabled = false,
   icon,
+  light = false,
+  badge,
 }) {
   return (
-    <ImageWrapperStyled title={title} className={active ? 'active' : ''}>
-      <ImageStyled onClick={onClick} className={active ? 'active' : ''}>
+    <ImageWrapperStyled
+      title={title}
+      className={active ? 'active' : ''}
+      light={light}
+    >
+      <ImageStyled onClick={onClick} className={active ? 'active' : ''} light={light}>
         {src && (
           <div
             className="image"
@@ -105,8 +115,8 @@ export function ListImage({
               height: 55,
               flex: '0 1 55px',
               borderRadius: 8,
-              backgroundColor: 'var(--light)',
-              color: 'var(--dark)',
+              backgroundColor: light ? 'var(--dark)' : 'var(--light)',
+              color: light ? 'var(--light)' : 'var(--dark)',
               fontSize: '3rem',
             }}
           >
@@ -145,6 +155,12 @@ export function ListImage({
             {description}
           </p>
         </div>
+
+        {badge && (
+          <div className="d-flex align-items-center flex-shrink-0">
+            {badge}
+          </div>
+        )}
       </ImageStyled>
 
       {active && !disabled && (

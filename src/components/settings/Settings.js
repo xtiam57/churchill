@@ -109,9 +109,11 @@ export function Settings() {
                 value={settings?.logo}
                 onChange={handleChangeValue}
               >
-                {SETTINGS_OPTIONS.LOGOS.map(({ value, label, divider }) =>
+                {SETTINGS_OPTIONS.LOGOS.map(({ value, label, divider }, index) =>
                   divider ? (
-                    <hr key={value} />
+                    <option key={`divider-${index}`} disabled>
+                      ────────
+                    </option>
                   ) : (
                     <option key={value} value={value}>
                       {label}
@@ -241,9 +243,11 @@ export function Settings() {
                 name="image"
                 onChange={handleChangeValue}
               >
-                {SETTINGS_OPTIONS.BACKGROUNDS.map(({ value, label, divider }) =>
+                {SETTINGS_OPTIONS.BACKGROUNDS.map(({ value, label, divider }, index) =>
                   divider ? (
-                    <hr key={value} />
+                    <option key={`divider-${index}`} disabled>
+                      ────────
+                    </option>
                   ) : (
                     <option key={value} value={value}>
                       {label}
@@ -621,9 +625,11 @@ export function Settings() {
             value={settings?.clockposition}
             onChange={handleChangeValue}
           >
-            {SETTINGS_OPTIONS.CLOCK_POSITIONS.map(({ value, label, divider }) =>
+            {SETTINGS_OPTIONS.CLOCK_POSITIONS.map(({ value, label, divider }, index) =>
               divider ? (
-                <hr key={value} />
+                <option key={`divider-${index}`} disabled>
+                  ────────
+                </option>
               ) : (
                 <option key={value} value={value}>
                   {label}

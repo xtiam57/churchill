@@ -19,7 +19,7 @@ const useSettings = createPersistedState(BROADCAST.SETTINGS);
 const useBroadcast = createPersistedState(BROADCAST.CHANNEL);
 const useResourceOrder = createPersistedState('RESOURCE_ORDER');
 
-export default function MiscPage() {
+export default function ImagesPage() {
   const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
   const [, setMessage] = useBroadcast(BROADCAST.INITIAL_CHANNEL);
   const [resources, setResources] = useState([]);
@@ -124,7 +124,7 @@ export default function MiscPage() {
   return (
     <Wrapper>
       <Sidebar>
-        <Title>Recursos</Title>
+        <Title>Imágenes</Title>
 
         <DisplayButton
           value={showLogo}
@@ -151,7 +151,7 @@ export default function MiscPage() {
             <OverlayTrigger
               placement="top"
               size="lg"
-              overlay={<Tooltip>Recargar recursos</Tooltip>}
+              overlay={<Tooltip>Recargar imágenes</Tooltip>}
             >
               <Button size="lg" variant="outline-light" onClick={handleLoad}>
                 <Refresh />
@@ -166,13 +166,13 @@ export default function MiscPage() {
           onClick={handleOpenFolder}
         >
           <FolderCopy fontSize="small" />{' '}
-          <small>Abrir directorio de recursos</small>
+          <small>Abrir directorio de imágenes</small>
         </Button>
 
         <List>
           {resources.length ? (
             <List.Item className="mb-1">
-              <List.Title>listado de recursos</List.Title>
+              <List.Title>listado de imágenes</List.Title>
             </List.Item>
           ) : null}
 
@@ -184,7 +184,7 @@ export default function MiscPage() {
             }}
           >
             {isLoading ? (
-              <small className="text-secondary">Cargando recursos...</small>
+              <small className="text-secondary">Cargando imágenes...</small>
             ) : (
               resources.map((resource, index) => (
                 <div key={resource.id} {...getItemProps(index)}>
@@ -207,7 +207,7 @@ export default function MiscPage() {
       {presenting ? (
         <Alert
           presenting={!showLogo}
-          label={current?.title ?? 'No hay recursos que mostrar.'}
+          label={current?.title ?? 'No hay imágenes que mostrar.'}
         />
       ) : null}
 
@@ -217,7 +217,7 @@ export default function MiscPage() {
           live={!showLogo}
           type="resource"
           bg={current?.bg}
-          text={!!current ? undefined : 'No hay recursos que mostrar.'}
+          text={!!current ? undefined : 'No hay imágenes que mostrar.'}
           grayscale={presenting && showLogo}
           {...settings}
         />

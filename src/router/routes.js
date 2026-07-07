@@ -4,13 +4,15 @@ import {
   Cake,
   Image,
   Newspaper,
+  PlaylistPlay,
   SmartDisplay,
 } from '@mui/icons-material';
 import BirthdaysPage from 'pages/birthdays';
 import CastPage from 'pages/cast';
 import HomePage from 'pages/home';
 import HymnalPage from 'pages/hymnal';
-import MiscPage from 'pages/misc';
+import ImagesPage from 'pages/images';
+import PlaylistPage from 'pages/playlist';
 import ScripturesPage from 'pages/scriptures';
 import VideosPage from 'pages/videos';
 
@@ -23,8 +25,9 @@ export const PATHS = {
   COUNTDOWN_PAGE: '/countdown',
   TRIVIA_PAGE: '/trivia',
   EXPORT_PAGE: '/export',
-  RESOURCES_PAGE: '/resources',
+  IMAGES_PAGE: '/images',
   VIDEOS_PAGE: '/videos',
+  PLAYLIST_PAGE: '/playlist',
 };
 
 export const routes = flatten([
@@ -59,6 +62,16 @@ export const routes = flatten([
     showLabel: true,
   },
   {
+    key: PATHS.PLAYLIST_PAGE,
+    exact: true,
+    path: PATHS.PLAYLIST_PAGE,
+    component: PlaylistPage,
+    icon: <PlaylistPlay />,
+    label: 'Presentación',
+    menu: true,
+    showLabel: false,
+  },
+  {
     key: PATHS.VIDEOS_PAGE,
     exact: true,
     path: PATHS.VIDEOS_PAGE,
@@ -69,12 +82,12 @@ export const routes = flatten([
     showLabel: false,
   },
   {
-    key: PATHS.RESOURCES_PAGE,
+    key: PATHS.IMAGES_PAGE,
     exact: true,
-    path: PATHS.RESOURCES_PAGE,
-    component: MiscPage,
+    path: PATHS.IMAGES_PAGE,
+    component: ImagesPage,
     icon: <Image />,
-    label: 'Recursos',
+    label: 'Imágenes',
     menu: true,
     showLabel: false,
   },

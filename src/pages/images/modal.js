@@ -55,7 +55,7 @@ export function ResourceModal({ show, resource, handleClose, handleSave }) {
       <Modal.Header closeButton className="border-0">
         <Modal.Title>
           {resource ? 'Editar ' : 'Agregar '}
-          Recurso
+          imagen
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>

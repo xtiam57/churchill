@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-function Logo({ height = 500, color = 'default', logo = 'default', ...rest }) {
+function Logo({ height = 500, color = 'default', logo = 'default' }) {
   switch (logo) {
     // Churchill logos
     case 'small':
@@ -9,7 +9,6 @@ function Logo({ height = 500, color = 'default', logo = 'default', ...rest }) {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 497.27 367.98"
           height={height}
-          {...rest}
         >
           <path
             fill={color === 'default' ? '#ff8a65' : color}
@@ -23,7 +22,6 @@ function Logo({ height = 500, color = 'default', logo = 'default', ...rest }) {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 481.19 82.14"
           height={height}
-          {...rest}
         >
           <path
             fill={color === 'default' ? '#ff8a65' : color}
@@ -40,7 +38,6 @@ function Logo({ height = 500, color = 'default', logo = 'default', ...rest }) {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 471.21 469.83"
           height={height}
-          {...rest}
         >
           <path
             fill={color === 'default' ? '#fff' : color}
