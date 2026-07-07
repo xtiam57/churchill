@@ -8,9 +8,8 @@ import {
   Title,
   Wrapper,
 } from 'components';
-import { usePresenter } from 'hooks';
+import { useDragReorder, usePresenter } from 'hooks';
 import { useCallback, useEffect, useState } from 'react';
-import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
 import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
 import { BROADCAST } from 'values';
@@ -102,14 +101,11 @@ export default function MiscPage() {
     window.electronAPI?.openDirectory(paths.RESOURCES_PATH);
   }, []);
 
-  const handleDragEnd = (result) => {
-    if (!result.destination) return;
-    const reordered = Array.from(resources);
-    const [removed] = reordered.splice(result.source.index, 1);
-    reordered.splice(result.destination.index, 0, removed);
-    setResources(reordered);
-    setResourceOrder(reordered.map((r) => r.id));
-  };
+  const { isDraggingOver, getItemProps } = useDragReorder({
+    items: resources,
+    onChange: setResources,
+    onDrop: (ordered) => setResourceOrder(ordered.map((r) => r.id)),
+  });
 
   useEffect(() => {
     setMessage(showLogo ? null : current);
@@ -180,56 +176,31 @@ export default function MiscPage() {
             </List.Item>
           ) : null}
 
-          <DragDropContext onDragEnd={handleDragEnd}>
-            <Droppable droppableId="resources">
-              {(provided, snapshot) => (
-                <div
-                  ref={provided.innerRef}
-                  {...provided.droppableProps}
-                  style={{
-                    borderRadius: '0.5rem',
-                    padding: snapshot.isDraggingOver ? '.5rem' : 0,
-                    backgroundColor: snapshot.isDraggingOver
-                      ? '#111111'
-                      : 'var(--dark)',
-                  }}
-                >
-                  {isLoading ? (
-                    <small className="text-secondary">
-                      Cargando recursos...
-                    </small>
-                  ) : (
-                    resources.map((resource, index) => (
-                      <Draggable
-                        key={resource.id}
-                        draggableId={resource.id}
-                        index={index}
-                      >
-                        {(providedDraggable) => (
-                          <div
-                            ref={providedDraggable.innerRef}
-                            {...providedDraggable.draggableProps}
-                            {...providedDraggable.dragHandleProps}
-                          >
-                            <List.Image
-                              onClick={() => setCurrent(resource)}
-                              onDelete={() => handleDelete(resource)}
-                              src={resource.bg}
-                              title={resource.title}
-                              description={resource.createdAt}
-                              active={current?.id === resource.id}
-                              disabled={!showLogo && presenting}
-                            />
-                          </div>
-                        )}
-                      </Draggable>
-                    ))
-                  )}
-                  {provided.placeholder}
+          <div
+            style={{
+              borderRadius: '0.5rem',
+              padding: isDraggingOver ? '.5rem' : 0,
+              backgroundColor: isDraggingOver ? '#111111' : 'var(--dark)',
+            }}
+          >
+            {isLoading ? (
+              <small className="text-secondary">Cargando recursos...</small>
+            ) : (
+              resources.map((resource, index) => (
+                <div key={resource.id} {...getItemProps(index)}>
+                  <List.Image
+                    onClick={() => setCurrent(resource)}
+                    onDelete={() => handleDelete(resource)}
+                    src={resource.bg}
+                    title={resource.title}
+                    description={resource.createdAt}
+                    active={current?.id === resource.id}
+                    disabled={!showLogo && presenting}
+                  />
                 </div>
-              )}
-            </Droppable>
-          </DragDropContext>
+              ))
+            )}
+          </div>
         </List>
       </Sidebar>
 

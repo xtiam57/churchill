@@ -12,6 +12,14 @@
       "icon": "build/icon.ico",
       "publisherName": "Christiam Mena"
     },
+    "mac": {
+      "icon": "public/512x512.png",
+      "category": "public.app-category.utilities",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
     "asarUnpack": [],
     "files": [
       "!node_modules/**/*",
@@ -26,6 +34,9 @@
     "generate": "node generate.js",
     "build": "rimraf dist && cross-env REACT_APP_VERSION=$npm_package_version yarn react-build && electron-builder && yarn post-build",
     "start": "concurrently \"set BROWSER=none && cross-env REACT_APP_VERSION=$npm_package_version yarn run react-start\" \"wait-on http://localhost:3006 && set ELECTRON_START_URL=http://localhost:3006 && electron .\"",
+    "start-mac": "concurrently \"cross-env BROWSER=none PORT=3006 REACT_APP_VERSION=$npm_package_version react-scripts start\" \"wait-on http://localhost:3006 && cross-env ELECTRON_START_URL=http://localhost:3006 ELECTRON_RUN_AS_NODE= electron .\"",
+    "preview-mac": "cross-env REACT_APP_VERSION=$npm_package_version yarn react-build && electron-builder --mac --dir && open dist/mac*/Churchill.app",
+    "build-mac": "cross-env REACT_APP_VERSION=$npm_package_version yarn react-build && electron-builder --mac",
     "post-build": "node post-build.js"
   },
   "dependencies": {
@@ -44,7 +55,6 @@
     "framer-motion": "^3.7.0",
     "fs-extra": "^11.2.0",
     "react": "^17.0.1",
-    "react-beautiful-dnd": "^13.1.1",
     "react-bootstrap": "^1.4.3",
     "react-bootstrap-typeahead": "^5.1.4",
     "react-dom": "^17.0.1",

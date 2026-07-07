@@ -33,7 +33,7 @@ function process(data, book, keepNum = false) {
   const songs = data.split('---').filter((song) => song !== '');
 
   songs.forEach((song, index) => {
-    const parts = song.split('***\r\n').filter((part) => part !== '');
+    const parts = song.split('***\n').filter((part) => part !== '');
 
     const item = {
       number: 1 + index,
@@ -48,7 +48,7 @@ function process(data, book, keepNum = false) {
     };
 
     parts.forEach((part, index) => {
-      const lines = part.split('\r\n').filter((line) => line !== '');
+      const lines = part.split('\n').filter((line) => line !== '');
 
       if (index === 0) {
         let title = lines.join().replace('## ', '').replace('.', '');
@@ -87,7 +87,7 @@ function process(data, book, keepNum = false) {
 }
 
 FILES.forEach((file, index) => {
-  const data = fs.readFileSync(file.path, 'utf8');
+  const data = fs.readFileSync(file.path, 'utf8').replace(/\r\n/g, '\n');
 
   process(data, file.book, file.keepNum);
 

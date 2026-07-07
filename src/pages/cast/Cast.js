@@ -98,7 +98,10 @@ export default function CastPage() {
       <Wrapper style={{ gridArea: 'content' }} bare centered {...settings}>
         {message ? (
           message.isVideo ? (
-            <div className="d-flex flex-column justify-content-center align-items-center w-100 h-100">
+            <div
+              className="d-flex flex-column justify-content-center align-items-center w-100 h-100"
+              style={{ position: 'relative', zIndex: 0 }}
+            >
               <video
                 className="d-block w-100 h-100"
                 ref={videoRef}

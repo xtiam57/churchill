@@ -9,7 +9,7 @@ export const CountdownStyled = styled.div`
   height: 38px;
 
   .display {
-    font-size: 90%;
+    font-variant-numeric: tabular-nums;
     padding: 0 1rem;
     background-color: var(--dark);
     color: #fff;

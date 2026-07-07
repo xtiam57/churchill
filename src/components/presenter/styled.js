@@ -169,6 +169,7 @@ export const CornerStyled = styled.section`
   bottom: 4%;
   right: 4%;
   font-weight: bold;
+  z-index: 10;
 
   p {
     font-size: calc(0.5em + 2.5vh);

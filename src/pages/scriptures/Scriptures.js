@@ -113,6 +113,7 @@ function ScripturesView() {
           placeholder="Selecciona un versículo..."
           ref={typeaheadRef}
           selected={search}
+          size="large"
           ignoreDiacritics
           renderMenuItemChildren={typeaheadRender}
         />
@@ -132,8 +133,8 @@ function ScripturesView() {
                     navigator.clipboard.writeText(
                       `${current.title}:\n${current.text}`.replaceAll(
                         '/n',
-                        '\n'
-                      )
+                        '\n',
+                      ),
                     );
                   }}
                   title="Abrir Himnario"
@@ -165,7 +166,7 @@ function ScripturesView() {
         verses={scriptures.filter(
           (e) =>
             e.bookNumber === current.bookNumber &&
-            e.chapterNumber === current.chapterNumber
+            e.chapterNumber === current.chapterNumber,
         )}
         current={current}
         onGoto={(verse) => setCurrent(verse)}
@@ -200,7 +201,7 @@ function ScripturesView() {
             <strong className="text-light">
               {Math.round(
                 ((current.index / scriptures.length) * 100 + Number.EPSILON) *
-                  100
+                  100,
               ) / 100}
               %
             </strong>

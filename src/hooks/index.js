@@ -4,6 +4,7 @@ export { useBirthday } from './useBirthday';
 export { useClickOutside } from './useClickOutside';
 export { useClock } from './useClock';
 export { useCountdown } from './useCountdown';
+export { useDragReorder } from './useDragReorder';
 export { useFolder } from './useFolder';
 export { useHymnal } from './useHymnal';
 export { useIterate } from './useIterate';

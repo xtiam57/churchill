@@ -8,9 +8,8 @@ import {
   Title,
   Wrapper,
 } from 'components';
-import { usePresenter } from 'hooks';
+import { useDragReorder, usePresenter } from 'hooks';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
 import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import createPersistedState from 'use-persisted-state';
 import { BROADCAST } from 'values';
@@ -84,14 +83,11 @@ export default function VideosPage() {
     window.electronAPI?.openDirectory(paths.VIDEOS_PATH);
   }, []);
 
-  const handleDragEnd = (result) => {
-    if (!result.destination) return;
-    const reordered = Array.from(videos);
-    const [removed] = reordered.splice(result.source.index, 1);
-    reordered.splice(result.destination.index, 0, removed);
-    setVideos(reordered);
-    setVideosOrder(reordered.map((r) => r.id));
-  };
+  const { isDraggingOver, getItemProps } = useDragReorder({
+    items: videos,
+    onChange: setVideos,
+    onDrop: (ordered) => setVideosOrder(ordered.map((r) => r.id)),
+  });
 
   useEffect(() => {
     if (videoRef.current) {
@@ -179,54 +175,31 @@ export default function VideosPage() {
             </List.Item>
           ) : null}
 
-          <DragDropContext onDragEnd={handleDragEnd}>
-            <Droppable droppableId="resources">
-              {(provided, snapshot) => (
-                <div
-                  ref={provided.innerRef}
-                  {...provided.droppableProps}
-                  style={{
-                    borderRadius: '0.5rem',
-                    padding: snapshot.isDraggingOver ? '.5rem' : 0,
-                    backgroundColor: snapshot.isDraggingOver
-                      ? '#111111'
-                      : 'var(--dark)',
-                  }}
-                >
-                  {isLoading ? (
-                    <small className="text-secondary">Cargando videos...</small>
-                  ) : (
-                    videos.map((video, index) => (
-                      <Draggable
-                        key={video.id}
-                        draggableId={video.id}
-                        index={index}
-                      >
-                        {(providedDraggable) => (
-                          <div
-                            ref={providedDraggable.innerRef}
-                            {...providedDraggable.draggableProps}
-                            {...providedDraggable.dragHandleProps}
-                          >
-                            <List.Image
-                              onClick={() => setCurrent(video)}
-                              onDelete={() => handleDelete(video)}
-                              title={video.title}
-                              description={video.createdAt}
-                              active={current?.id === video.id}
-                              icon={<PlayArrow />}
-                              disabled={!showLogo && presenting}
-                            />
-                          </div>
-                        )}
-                      </Draggable>
-                    ))
-                  )}
-                  {provided.placeholder}
+          <div
+            style={{
+              borderRadius: '0.5rem',
+              padding: isDraggingOver ? '.5rem' : 0,
+              backgroundColor: isDraggingOver ? '#111111' : 'var(--dark)',
+            }}
+          >
+            {isLoading ? (
+              <small className="text-secondary">Cargando videos...</small>
+            ) : (
+              videos.map((video, index) => (
+                <div key={video.id} {...getItemProps(index)}>
+                  <List.Image
+                    onClick={() => setCurrent(video)}
+                    onDelete={() => handleDelete(video)}
+                    title={video.title}
+                    description={video.createdAt}
+                    active={current?.id === video.id}
+                    icon={<PlayArrow />}
+                    disabled={!showLogo && presenting}
+                  />
                 </div>
-              )}
-            </Droppable>
-          </DragDropContext>
+              ))
+            )}
+          </div>
         </List>
       </Sidebar>
 
