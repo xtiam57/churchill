@@ -35,6 +35,10 @@ export const resizeText = ({
   unit = '%',
   vh = 3.565,
 }) => {
+  if (!element) {
+    return;
+  }
+
   try {
     element.style.opacity = 0;
 

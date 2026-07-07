@@ -163,6 +163,7 @@ export const CornerStyled = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-variant-numeric: tabular-nums;
   font-family: ${({ font }) =>
     font === 'Roca + Poppins' ? 'Poppins' : font || DEFAULT_SYSTEM_FONT};
   position: absolute;
@@ -177,8 +178,10 @@ export const CornerStyled = styled.section`
     color: ${({ titlecolor }) => titlecolor || '#007bff'};
     width: 100%;
     line-height: 1;
-    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.5),
-      0px 0px 2px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-shadow:
+      0.5px 0.5px 1px rgba(0, 0, 0, 0.5),
+      0px 0px 2px rgba(0, 0, 0, 0.2),
+      0px 0px 10px rgba(0, 0, 0, 0.1);
   }
 
   &.bottom-left {
