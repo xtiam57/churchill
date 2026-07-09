@@ -125,9 +125,23 @@ import ch6 from 'assets/images/churchill-bg/ch6.jpg';
 import ch7 from 'assets/images/churchill-bg/ch7.jpg';
 import ch8 from 'assets/images/churchill-bg/ch8.jpg';
 
+import conf1 from 'assets/images/conf/1.jpg';
+import conf2 from 'assets/images/conf/2.jpg';
+import conf3 from 'assets/images/conf/3.jpg';
+import conf4 from 'assets/images/conf/4.jpg';
+import conf5 from 'assets/images/conf/5.jpg';
+
 export const BACKGROUNDS = [
   { label: 'Color Sólido', value: '' },
   // { label: 'Animado', value: 'gradient' },
+  { divider: true },
+
+  { label: 'Bomberos 1', value: conf1 },
+  { label: 'Bomberos 2', value: conf2 },
+  { label: 'Bomberos 3', value: conf3 },
+  { label: 'Bomberos 4', value: conf4 },
+  { label: 'Bomberos 5', value: conf5 },
+
   { divider: true },
 
   { label: 'Abstracto 1', value: bg27 },
