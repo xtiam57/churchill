@@ -1,7 +1,14 @@
 const electron = require('electron');
 // Module to control application life.
-const { app, ipcMain, BrowserWindow, protocol, shell, screen, desktopCapturer } =
-  electron;
+const {
+  app,
+  ipcMain,
+  BrowserWindow,
+  protocol,
+  shell,
+  screen,
+  desktopCapturer,
+} = electron;
 
 const path = require('path');
 const url = require('url');
@@ -41,16 +48,22 @@ protocol.registerSchemesAsPrivileged([
   },
 ]);
 
+// Reutilizamos file:// <-> ruta de Node porque ya resuelve bien las
+// particularidades de Windows (letra de unidad, barras invertidas, espacios).
+// Un reemplazo manual de string aquí rompía las rutas de Windows: al ser un
+// esquema "standard", el parser de URL interpreta lo que sigue a "://" como
+// host, así que "C:" en "churchill-media://C:/Users/..." se interpretaba
+// como host "C" con puerto vacío y la letra de unidad se perdía.
 function toMediaUrl(filePath) {
-  return `${MEDIA_SCHEME}://${encodeURI(filePath.replace(/\\/g, '/'))}`;
+  const fileUrl = url.pathToFileURL(filePath).href;
+  return fileUrl.replace(/^file:/, `${MEDIA_SCHEME}:`);
 }
 
 function registerMediaProtocol() {
   protocol.registerFileProtocol(MEDIA_SCHEME, (request, callback) => {
     try {
-      const filePath = decodeURI(
-        request.url.replace(`${MEDIA_SCHEME}://`, '')
-      );
+      const fileUrl = request.url.replace(`${MEDIA_SCHEME}:`, 'file:');
+      const filePath = url.fileURLToPath(fileUrl);
       callback({ path: filePath });
     } catch (error) {
       console.error(`Error sirviendo ${MEDIA_SCHEME}:`, error);
@@ -225,7 +238,7 @@ ipcMain.handle('get-videos', async (_) => {
 
     const files = fs.readdirSync(folderPath);
     const videoFiles = files.filter((file) =>
-      /\.(mp4|mov|avi|mkv|webm)$/i.test(file)
+      /\.(mp4|mov|avi|mkv|webm)$/i.test(file),
     );
 
     const videos = videoFiles.map((file) => {
@@ -342,7 +355,7 @@ ipcMain.handle('get-background-images', async (_) => {
       const name = path.basename(file, `.${extension}`);
       const base64 = `data:image/${extension};base64,${fs.readFileSync(
         filePath,
-        { encoding: 'base64' }
+        { encoding: 'base64' },
       )}`;
 
       return { name, extension, base64 };
