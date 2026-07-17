@@ -48,22 +48,21 @@ protocol.registerSchemesAsPrivileged([
   },
 ]);
 
-// Reutilizamos file:// <-> ruta de Node porque ya resuelve bien las
-// particularidades de Windows (letra de unidad, barras invertidas, espacios).
-// Un reemplazo manual de string aquí rompía las rutas de Windows: al ser un
-// esquema "standard", el parser de URL interpreta lo que sigue a "://" como
-// host, así que "C:" en "churchill-media://C:/Users/..." se interpretaba
-// como host "C" con puerto vacío y la letra de unidad se perdía.
+// La ruta va como query param (no como path de la URL) para no depender de
+// cómo el parser de URL interpreta lo que sigue a "://": cualquier esquema
+// con "//" entra en modo "authority" y trata lo que está antes de la
+// siguiente "/" como host, así que una ruta de Windows como "C:/Users/..."
+// se interpretaba como host "C" con puerto vacío, perdiendo la letra de
+// unidad (ej. "churchill-media://C:/Users/x.mp4" -> host "C", path
+// "/Users/x.mp4"). Yendo por query string ese problema no existe.
 function toMediaUrl(filePath) {
-  const fileUrl = url.pathToFileURL(filePath).href;
-  return fileUrl.replace(/^file:/, `${MEDIA_SCHEME}:`);
+  return `${MEDIA_SCHEME}://file?path=${encodeURIComponent(filePath)}`;
 }
 
 function registerMediaProtocol() {
   protocol.registerFileProtocol(MEDIA_SCHEME, (request, callback) => {
     try {
-      const fileUrl = request.url.replace(`${MEDIA_SCHEME}:`, 'file:');
-      const filePath = url.fileURLToPath(fileUrl);
+      const filePath = new URL(request.url).searchParams.get('path');
       callback({ path: filePath });
     } catch (error) {
       console.error(`Error sirviendo ${MEDIA_SCHEME}:`, error);
