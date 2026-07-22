@@ -288,6 +288,12 @@ select {
   font-size: calc(0.6em + 3vh);
 }
 
+.cast-fullcountdown-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+}
+
 /* Animations */
 
 @keyframes marquee {

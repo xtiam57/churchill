@@ -8,7 +8,7 @@ const useSettings = createPersistedState(BROADCAST.SETTINGS);
 const useAlert = createPersistedState(BROADCAST.ALERT);
 const useBroadcastCountdown = createPersistedState(BROADCAST.COUNTDOWN);
 const useBroadcastIsFullCountdown = createPersistedState(
-  BROADCAST.FULL_COUNTDOWN
+  BROADCAST.FULL_COUNTDOWN,
 );
 
 export default function CastPage() {
@@ -43,7 +43,7 @@ export default function CastPage() {
   }, [countdown, isFullCountdown, settings]);
 
   const renderCountdown = useCallback(() => {
-    if (countdown && (!isFullCountdown || message)) {
+    if (countdown && !isFullCountdown) {
       return (
         <Corner
           id={countdown.id}
@@ -54,7 +54,7 @@ export default function CastPage() {
     }
 
     return null;
-  }, [countdown, isFullCountdown, message, settings]);
+  }, [countdown, isFullCountdown, settings]);
 
   const handler = useCallback((_, { action, time }) => {
     if (!videoRef.current) {
@@ -87,6 +87,9 @@ export default function CastPage() {
     };
   }, [handler]);
 
+  const hasMedia = Boolean(message && (message.isVideo || message.bg));
+  const fullCountdownActive = Boolean(countdown && isFullCountdown);
+
   return (
     <>
       {alert && (
@@ -96,7 +99,7 @@ export default function CastPage() {
       )}
 
       <Wrapper style={{ gridArea: 'content' }} bare centered {...settings}>
-        {message ? (
+        {message && (hasMedia || !fullCountdownActive) ? (
           message.isVideo ? (
             <div
               className="d-flex flex-column justify-content-center align-items-center w-100 h-100"
@@ -126,6 +129,17 @@ export default function CastPage() {
           )
         ) : (
           renderLogo()
+        )}
+
+        {hasMedia && fullCountdownActive && (
+          <div className="cast-fullcountdown-overlay">
+            <Presenter
+              id={countdown.id}
+              processedText={countdown.processedText}
+              castScreen
+              {...settings}
+            />
+          </div>
         )}
 
         {renderCountdown()}
