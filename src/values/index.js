@@ -84,6 +84,7 @@ const SETTINGS_INITIAL_STATE = {
   clockposition: 'bottom-right',
   textshadow: false,
   tint: 0,
+  countdownsound: 'beep',
   ...THEMES['dark'],
 };
 
@@ -272,6 +273,10 @@ export const SETTINGS_OPTIONS = {
     { value: 10, label: '10 minutos' },
     { value: 5, label: '5 minutos' },
     { value: 0, label: '0 minutos' },
+  ],
+  COUNTDOWN_SOUNDS: [
+    { value: 'none', label: 'Sin sonido' },
+    { value: 'beep', label: 'Beep', file: './audio/beep.mp3' },
   ],
   BACKGROUNDS,
   DAYS: [

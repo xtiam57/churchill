@@ -109,16 +109,17 @@ export function Settings() {
                 value={settings?.logo}
                 onChange={handleChangeValue}
               >
-                {SETTINGS_OPTIONS.LOGOS.map(({ value, label, divider }, index) =>
-                  divider ? (
-                    <option key={`divider-${index}`} disabled>
-                      ────────
-                    </option>
-                  ) : (
-                    <option key={value} value={value}>
-                      {label}
-                    </option>
-                  )
+                {SETTINGS_OPTIONS.LOGOS.map(
+                  ({ value, label, divider }, index) =>
+                    divider ? (
+                      <option key={`divider-${index}`} disabled>
+                        ────────
+                      </option>
+                    ) : (
+                      <option key={value} value={value}>
+                        {label}
+                      </option>
+                    ),
                 )}
               </Form.Control>
             </Form.Group>
@@ -243,16 +244,17 @@ export function Settings() {
                 name="image"
                 onChange={handleChangeValue}
               >
-                {SETTINGS_OPTIONS.BACKGROUNDS.map(({ value, label, divider }, index) =>
-                  divider ? (
-                    <option key={`divider-${index}`} disabled>
-                      ────────
-                    </option>
-                  ) : (
-                    <option key={value} value={value}>
-                      {label}
-                    </option>
-                  )
+                {SETTINGS_OPTIONS.BACKGROUNDS.map(
+                  ({ value, label, divider }, index) =>
+                    divider ? (
+                      <option key={`divider-${index}`} disabled>
+                        ────────
+                      </option>
+                    ) : (
+                      <option key={value} value={value}>
+                        {label}
+                      </option>
+                    ),
                 )}
               </Form.Control>
             </Form.Group>
@@ -346,7 +348,7 @@ export function Settings() {
                     <option key={value} value={value}>
                       {label}
                     </option>
-                  )
+                  ),
                 )}
               </Form.Control>
             </Form.Group>
@@ -379,7 +381,7 @@ export function Settings() {
                       <option key={value} value={value}>
                         {label}
                       </option>
-                    )
+                    ),
                 )}
               </Form.Control>
             </Form.Group>
@@ -561,7 +563,7 @@ export function Settings() {
                 <option key={value} value={value}>
                   {label}
                 </option>
-              )
+              ),
             )}
           </Form.Control>
         </Form.Group>
@@ -585,7 +587,7 @@ export function Settings() {
                   <option key={value} value={value}>
                     {label}
                   </option>
-                )
+                ),
             )}
           </Form.Control>
         </Form.Group>
@@ -609,7 +611,7 @@ export function Settings() {
                   <option key={value} value={value}>
                     {label}
                   </option>
-                )
+                ),
             )}
           </Form.Control>
         </Form.Group>
@@ -625,23 +627,41 @@ export function Settings() {
             value={settings?.clockposition}
             onChange={handleChangeValue}
           >
-            {SETTINGS_OPTIONS.CLOCK_POSITIONS.map(({ value, label, divider }, index) =>
-              divider ? (
-                <option key={`divider-${index}`} disabled>
-                  ────────
-                </option>
-              ) : (
-                <option key={value} value={value}>
-                  {label}
-                </option>
-              )
+            {SETTINGS_OPTIONS.CLOCK_POSITIONS.map(
+              ({ value, label, divider }, index) =>
+                divider ? (
+                  <option key={`divider-${index}`} disabled>
+                    ────────
+                  </option>
+                ) : (
+                  <option key={value} value={value}>
+                    {label}
+                  </option>
+                ),
             )}
           </Form.Control>
         </Form.Group>
-      </Row>
 
-      <Row>
-        <Form.Group as={Col} xs={12} className="mb-0">
+        <Form.Group as={Col} xs={6} className="mb-2">
+          <Form.Label className=" small mb-1">
+            Sonido del temporizador
+          </Form.Label>
+          <Form.Control
+            size="sm"
+            as="select"
+            name="countdownsound"
+            value={settings?.countdownsound}
+            onChange={handleChangeValue}
+          >
+            {SETTINGS_OPTIONS.COUNTDOWN_SOUNDS.map(({ value, label }) => (
+              <option key={value} value={value}>
+                {label}
+              </option>
+            ))}
+          </Form.Control>
+        </Form.Group>
+
+        <Form.Group as={Col} xs={6} className="mb-2">
           <Form.Label className=" small mb-1">
             Animación de transición del texto
           </Form.Label>

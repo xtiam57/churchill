@@ -1,5 +1,15 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import createPersistedState from 'use-persisted-state';
 import { Time } from 'utils';
+import { BROADCAST, SETTINGS_OPTIONS } from 'values';
+
+const useSettings = createPersistedState(BROADCAST.SETTINGS);
+
+function getSoundFile(countdownsound) {
+  return SETTINGS_OPTIONS.COUNTDOWN_SOUNDS.find(
+    ({ value }) => value === countdownsound
+  )?.file;
+}
 
 function getMessage(time) {
   return {
@@ -16,10 +26,16 @@ function buildState(minutes, seconds, running) {
 }
 
 export function useCountdown(disabled) {
-  const audio = useMemo(() => new Audio('./audio/beep.mp3'), []);
+  const [settings] = useSettings(BROADCAST.INITIAL_SETTINGS);
+  const audioRef = useRef(null);
   const deadlineRef = useRef(null);
+  const soundRef = useRef(settings?.countdownsound);
 
   const [state, setState] = useState(() => buildState(0, 0, false));
+
+  useEffect(() => {
+    soundRef.current = settings?.countdownsound;
+  }, [settings?.countdownsound]);
 
   // Driven by an absolute deadline (Date.now()) instead of counting ticks,
   // so a throttled/paused interval (e.g. minimized window) self-corrects
@@ -36,7 +52,14 @@ export function useCountdown(disabled) {
 
     if (remaining === 0) {
       deadlineRef.current = null;
-      audio.play();
+
+      const file = getSoundFile(soundRef.current);
+      if (file) {
+        const audio = new Audio(file);
+        audioRef.current = audio;
+        audio.play();
+      }
+
       setState(buildState(0, 0, false));
       return;
     }
@@ -56,8 +79,10 @@ export function useCountdown(disabled) {
   }, [tick]);
 
   const stop = useCallback(() => {
-    audio.pause();
-    audio.currentTime = 0;
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
     deadlineRef.current = null;
 
     setState(buildState(0, 0, false));
@@ -65,8 +90,10 @@ export function useCountdown(disabled) {
   }, []);
 
   const start = useCallback((initialMinutes = 0, initialSeconds = 0) => {
-    audio.pause();
-    audio.currentTime = 0;
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
 
     const totalSeconds = initialMinutes * 60 + initialSeconds;
     deadlineRef.current = Date.now() + totalSeconds * 1000;
