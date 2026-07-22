@@ -276,7 +276,36 @@ export const SETTINGS_OPTIONS = {
   ],
   COUNTDOWN_SOUNDS: [
     { value: 'none', label: 'Sin sonido' },
-    { value: 'beep', label: 'Beep', file: './audio/beep.mp3' },
+    { divider: true },
+    { value: 'beep', label: 'Beep clásico', file: './audio/beep.mp3' },
+    { value: 'beep2', label: 'Beep moderno', file: './audio/beep2.mp3' },
+    { divider: true },
+    {
+      value: 'fire_alarm',
+      label: 'Alerta de incendio',
+      file: './audio/fire_alarm.mp3',
+    },
+    { value: 'siren', label: 'Sirena', file: './audio/siren.mp3' },
+    {
+      value: 'school_ring',
+      label: 'Timbre escolar',
+      file: './audio/school_ring.mp3',
+    },
+    {
+      value: 'fire_bell',
+      label: 'Campana de incendio',
+      file: './audio/fire_bell.mp3',
+    },
+    {
+      value: 'alarmaaaaaaaa',
+      label: 'Alarmaaaaaaaa',
+      file: './audio/alarmaaaaaaaa.mp3',
+    },
+    {
+      value: 'clock_alarm',
+      label: 'Alarma de reloj',
+      file: './audio/clock_alarm.mp3',
+    },
   ],
   BACKGROUNDS,
   DAYS: [

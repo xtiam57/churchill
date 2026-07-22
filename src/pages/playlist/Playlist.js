@@ -31,6 +31,7 @@ import { BROADCAST } from 'values';
 import { AddResourceModal } from './AddResourceModal';
 import { PlaylistItemRow } from './PlaylistItemRow';
 import { usePlaylistPlayer } from './usePlaylistPlayer';
+import { VideoStyled } from './styled';
 
 const useSettings = createPersistedState(BROADCAST.SETTINGS);
 const usePlaylists = createPersistedState('PLAYLISTS');
@@ -297,11 +298,14 @@ export default function PlaylistPage() {
             className="d-flex flex-column justify-content-center align-items-center w-100 h-100"
             style={{ outline: 'none', minHeight: 0, minWidth: 0 }}
           >
-            <video
+            <VideoStyled
               className="d-block w-100 h-100"
               ref={player.videoRef}
               src={player.current.path}
               preload="metadata"
+              controls
+              controlsList="nodownload nofullscreen noremoteplayback"
+              disablePictureInPicture
               onPlay={() => player.handleControls('play')}
               onPause={() => player.handleControls('pause')}
               onSeeked={() => player.handleControls('seek')}

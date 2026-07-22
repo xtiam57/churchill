@@ -653,11 +653,18 @@ export function Settings() {
             value={settings?.countdownsound}
             onChange={handleChangeValue}
           >
-            {SETTINGS_OPTIONS.COUNTDOWN_SOUNDS.map(({ value, label }) => (
-              <option key={value} value={value}>
-                {label}
-              </option>
-            ))}
+            {SETTINGS_OPTIONS.COUNTDOWN_SOUNDS.map(
+              ({ value, label, divider }, index) =>
+                divider ? (
+                  <option key={`divider-${index}`} disabled>
+                    ────────
+                  </option>
+                ) : (
+                  <option key={value} value={value}>
+                    {label}
+                  </option>
+                ),
+            )}
           </Form.Control>
         </Form.Group>
 

@@ -1,4 +1,4 @@
-import { Add, PlayArrow, Refresh } from '@mui/icons-material';
+import { Add, FolderCopy, PlayArrow, Refresh } from '@mui/icons-material';
 import {
   Alert,
   DisplayButton,
@@ -41,7 +41,7 @@ export default function VideosPage() {
       const rest = videos.filter((r) => !videosOrder.includes(r.id));
       return [...ordered, ...rest];
     },
-    [videosOrder]
+    [videosOrder],
   );
 
   const handleLoad = useCallback(() => {
@@ -75,7 +75,7 @@ export default function VideosPage() {
         console.error('Error deleting video:', e);
       }
     },
-    [setVideosOrder]
+    [setVideosOrder],
   );
 
   const handleOpenFolder = useCallback(async () => {
@@ -141,7 +141,7 @@ export default function VideosPage() {
         />
 
         <div
-          className="d-flex align-items-center mb-4"
+          className="d-flex align-items-center mb-2"
           style={{ gap: '.5rem' }}
         >
           <div style={{ flex: 1 }}>
@@ -167,6 +167,15 @@ export default function VideosPage() {
             </OverlayTrigger>
           </div>
         </div>
+
+        <Button
+          variant="link"
+          className="text-muted p-0 text-small mb-4"
+          onClick={handleOpenFolder}
+        >
+          <FolderCopy fontSize="small" />{' '}
+          <small>Abrir directorio de videos</small>
+        </Button>
 
         <List>
           {videos.length ? (
@@ -231,6 +240,8 @@ export default function VideosPage() {
               ref={videoRef}
               src={current.path}
               controls
+              controlsList="nodownload nofullscreen noremoteplayback"
+              disablePictureInPicture
               preload="metadata"
               onPlay={() => handleControls('play')}
               onPause={() => handleControls('pause')}
