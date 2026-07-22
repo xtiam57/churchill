@@ -295,23 +295,12 @@ export default function PlaylistPage() {
         {player.current?.type === 'video' ? (
           <div
             className="d-flex flex-column justify-content-center align-items-center w-100 h-100"
-            style={{ outline: 'none' }}
+            style={{ outline: 'none', minHeight: 0, minWidth: 0 }}
           >
-            <style>
-              {`
-                video::-webkit-media-controls-fullscreen-button {
-                  display: none !important;
-                }
-                video::-moz-media-controls-fullscreen-button {
-                  display: none !important;
-                }
-              `}
-            </style>
             <video
               className="d-block w-100 h-100"
               ref={player.videoRef}
               src={player.current.path}
-              controls
               preload="metadata"
               onPlay={() => player.handleControls('play')}
               onPause={() => player.handleControls('pause')}
@@ -320,6 +309,8 @@ export default function PlaylistPage() {
               style={{
                 objectFit: 'contain',
                 background: '#111',
+                minHeight: 0,
+                minWidth: 0,
               }}
             />
           </div>
@@ -342,7 +333,7 @@ export default function PlaylistPage() {
           />
         )}
 
-        <Controls centered>
+        <Controls centered style={{ flexShrink: 0 }}>
           <ButtonGroup className="mx-2">
             {player.playing ? (
               <OverlayTrigger

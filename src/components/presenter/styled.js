@@ -25,7 +25,7 @@ export const PresenterStyled = styled.section`
   background-image: ${({ bg }) => (bg ? `url(${bg})` : 'none')};
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: ${({ imagefit }) => imagefit || 'cover'};
   animation: gradient 15s ease infinite;
   z-index: 0;
 

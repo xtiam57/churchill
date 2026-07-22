@@ -57,13 +57,14 @@ export function Presenter({
   ...rest
 }) {
   const divRef = useRef(null);
+  const textRef = useRef(null);
   const [divWidth, setDivWidth] = useState(1024);
   const { currentAnimation } = useNewAnimation();
 
   const handleFontScale = () => {
     setTimeout(() => {
       resizeText({
-        element: document.getElementById('presenter-html'),
+        element: textRef.current,
         ...getConf(divWidth),
       });
     });
@@ -82,7 +83,7 @@ export function Presenter({
       <AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
         <motion.p
           key={`${id}-${currentAnimation.name}`} // Incluye la animación en la key
-          id="presenter-html"
+          ref={textRef}
           dangerouslySetInnerHTML={{
             __html: processedText
               ? processedText

@@ -42,7 +42,7 @@ export default function ImagesPage() {
       const rest = resources.filter((r) => !resourceOrder.includes(r.id));
       return [...ordered, ...rest];
     },
-    [resourceOrder]
+    [resourceOrder],
   );
 
   const handleLoad = useCallback(() => {
@@ -65,14 +65,14 @@ export default function ImagesPage() {
       try {
         window.electronAPI?.saveResource(
           `${data.title}.${data.extension}`,
-          data.base64
+          data.base64,
         );
         handleLoad();
       } catch (error) {
         console.error('Error saving resource:', error);
       }
     },
-    [handleLoad, setShowModal]
+    [handleLoad, setShowModal],
   );
 
   const handleDelete = useCallback(
@@ -93,7 +93,7 @@ export default function ImagesPage() {
         console.error('Error deleting resource:', e);
       }
     },
-    [setResourceOrder]
+    [setResourceOrder],
   );
 
   const handleOpenFolder = useCallback(async () => {
